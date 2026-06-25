@@ -26,6 +26,8 @@ if os.path.exists(_env_file):
 
 AK = os.environ.get("ALIBABA_AK", "")
 SK = os.environ.get("ALIBABA_SK", "")
+BAIDU_APP_ID = os.environ.get("BAIDU_APP_ID", "")
+BAIDU_SECRET = os.environ.get("BAIDU_SECRET", "")
 
 # ── Language config ──
 LANGUAGES = OrderedDict([
@@ -46,18 +48,35 @@ CNC_TERMS = {
 def post_process_html(html_str, lang_key):
     """Apply CNC term corrections after API translation."""
     import re as _re
+    
+    # Baidu/Alibaba-specific bad translations -> correct CNC terms
+    BAD_TERMS = {
+        "de": {
+            "Futtermittel": "Vorschub", "Futter": "Vorschub",
+            "Schnellgeschwindigkeit": "Schnittgeschwindigkeit",
+            "Schnell- und Vorschub": "Schnittgeschwindigkeit & Vorschub",
+            "Schnell und Vorschub": "Schnittgeschwindigkeit und Vorschub",
+            "End mühlen": "Schaftfräser", "Endmühlen": "Schaftfräser",
+            "Chip-Last": "Spanbelastung", "Chip last": "Spanbelastung",
+            "Zufuhr": "Vorschub",
+        },
+        "ja": {},
+        "es": {},
+        "vi": {},
+    }
+    
+    # Apply bad translation fixes
+    bad = BAD_TERMS.get(lang_key, {})
+    for bad_term, good_term in sorted(bad.items(), key=lambda x: -len(x[0])):
+        html_str = html_str.replace(bad_term, good_term)
+    
+    # Apply CNC_TERMS (catch any remaining English terms in translated output)
     terms = CNC_TERMS.get(lang_key, {})
     for en_term, translated_term in sorted(terms.items(), key=lambda x: -len(x[0])):
         html_str = html_str.replace(en_term, translated_term)
-    # Fix specific bad general-model translations
-    if lang_key == "de":
-        html_str = html_str.replace("Schnell- und Vorschub", "Schnittgeschwindigkeit & Vorschub")
-        html_str = html_str.replace("Schnell und Vorschub", "Schnittgeschwindigkeit und Vorschub")
-    # Fix missing spaces around CNC (API often merges "CNCSpeed" etc.)
+    
+    # Fix missing spaces around CNC
     html_str = _re.sub(r'(?<=[a-z0-9])CNC(?=[A-Za-z])', r' CNC', html_str)
-    html_str = _re.sub(r'(?<=[a-z0-9])Schnittgeschwindigkeit', r' Schnittgeschwindigkeit', html_str)
-    html_str = _re.sub(r'(?<=[a-z0-9])Tốc độ', r' Tốc độ', html_str)
-    # Normalize multiple spaces (but not inside pre/code)
     html_str = _re.sub(r'  +', ' ', html_str)
     return html_str
 
@@ -69,58 +88,57 @@ def percent_encode(s):
     return urllib.parse.quote(s, safe='~')
 
 def translate_text(text, source_lang="en", target_lang="de"):
-    """Translate a single text string via Alibaba Cloud MT API."""
+    """Translate text via Baidu Translate API (with Alibaba Cloud fallback)."""
     if not text or not text.strip():
         return text
-    # Pre-process: ensure space between merged words (API sometimes merges "CNCSpeed")
     text = re.sub(r'(?<=[a-z0-9])(?=[A-Z])', ' ', text)
     
-    params = {
-        "Action": "TranslateGeneral",
-        "FormatType": "text",
-        "SourceLanguage": source_lang,
-        "TargetLanguage": target_lang,
-        "SourceText": text,
-        "Scene": "general",  # Could use "domain" for technical CNC content
-        "Version": "2018-10-12",
-        "Format": "JSON",
-        "AccessKeyId": AK,
-        "Timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "SignatureMethod": "HMAC-SHA1",
-        "SignatureNonce": str(uuid.uuid4()),
-        "SignatureVersion": "1.0",
-    }
-    sorted_keys = sorted(params.keys())
-    canonical = "&".join(
-        f"{percent_encode(k)}={percent_encode(str(params[k]))}" for k in sorted_keys
-    )
-    string_to_sign = f"POST&{percent_encode('/')}&{percent_encode(canonical)}"
-    signature = base64.b64encode(
-        hmac.new(
-            (SK + "&").encode("utf-8"),
-            string_to_sign.encode("utf-8"),
-            hashlib.sha1,
-        ).digest()
-    ).decode()
-    params["Signature"] = signature
+    baidu_lang = {"en": "en", "de": "de", "ja": "jp", "es": "spa", "vi": "vie"}
+    src = baidu_lang.get(source_lang, "en")
+    dst = baidu_lang.get(target_lang, "de")
     
-    for attempt in range(3):
-        try:
-            r = requests.post("https://mt.aliyuncs.com/", data=params, timeout=30)
-            data = r.json()
-            if "Data" in data:
-                return data["Data"]["Translated"]
-            elif "Message" in data:
-                print(f"  ⚠ API error: {data['Message']}, retrying...")
+    if BAIDU_APP_ID and BAIDU_SECRET:
+        salt = str(uuid.uuid4().int)[:10]
+        sign = hashlib.md5((BAIDU_APP_ID + text + salt + BAIDU_SECRET).encode()).hexdigest()
+        params = {"q": text, "from": src, "to": dst, "appid": BAIDU_APP_ID, "salt": salt, "sign": sign}
+        for attempt in range(3):
+            try:
+                r = requests.get("https://fanyi-api.baidu.com/api/trans/vip/translate", params=params, timeout=30)
+                data = r.json()
+                if "trans_result" in data:
+                    return data["trans_result"][0]["dst"]
+                elif data.get("error_code") == "54003":
+                    time.sleep(1)
+                    continue
+                elif data.get("error_code"):
+                    print(f"  \u26a0 Baidu error {data['error_code']}: {data.get('error_msg','')}")
+                    time.sleep(2)
+                else:
+                    return text
+            except Exception as e:
+                print(f"  \u26a0 Request failed: {e}, retrying...")
                 time.sleep(2)
-            else:
-                print(f"  ⚠ Unexpected response: {json.dumps(data, ensure_ascii=False)[:200]}")
-                return text
-        except Exception as e:
-            print(f"  ⚠ Request failed: {e}, retrying...")
-            time.sleep(2)
-    print(f"  ✗ Failed after 3 retries, keeping original")
-    return text
+    
+    # Fallback: try Alibaba Cloud
+    params = {
+        "Action": "TranslateGeneral", "FormatType": "text",
+        "SourceLanguage": source_lang, "TargetLanguage": target_lang,
+        "SourceText": text, "Scene": "general",
+        "Version": "2018-10-12", "Format": "JSON",
+        "AccessKeyId": AK, "Timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "SignatureMethod": "HMAC-SHA1", "SignatureNonce": str(uuid.uuid4()), "SignatureVersion": "1.0",
+    }
+    sk = sorted(params.keys())
+    c = "&".join(f"{percent_encode(k)}={percent_encode(str(params[k]))}" for k in sk)
+    s = f"POST&{percent_encode('/')}&{percent_encode(c)}"
+    sig = base64.b64encode(hmac.new((SK+"&").encode(), s.encode(), hashlib.sha1).digest()).decode()
+    params["Signature"] = sig
+    try:
+        r = requests.post("https://mt.aliyuncs.com/", data=params, timeout=30)
+        data = r.json()
+        return data.get("Data", {}).get("Translated", text)
+    except:
+        return text
 
 def translate_batch(texts, source_lang="en", target_lang="de", max_workers=5):
     """Translate multiple texts in parallel."""
