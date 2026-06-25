@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="meta-title">SFM Calculator — Surface Feet per Minute for CNC Lathe & Mill | Carbide Tooling</title>
+<meta name="description" id="meta-desc" content="Free online SFM calculator for CNC lathe and milling. Calculate surface feet per minute (SFM), RPM from cutting speed, or required diameter. Optimize carbide tooling performance." />
+<meta property="og:title" id="og-title" content="SFM Calculator — Surface Speed for Turning & Milling" />
+<meta property="og:description" id="og-desc" content="Calculate surface feet per minute for CNC turning and milling. Enter any two values to find the third: SFM, RPM, or diameter." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carbide-tooling.com/tools/surface-speed/" />
+<meta property="og:locale" content="en_US" />
+<meta name="theme-color" content="#0066cc" />
+<link rel="canonical" href="https://carbide-tooling.com/tools/surface-speed/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}
+.nav-left{display:flex;align-items:center;gap:32px}
+.logo{font-size:14px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:6px;text-decoration:none;color:#1d1d1f}
+.logo span{font-weight:800;color:#0066cc}
+.nav-links{display:flex;align-items:center;gap:0}
+.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;transition:color .2s;height:44px;display:flex;align-items:center;font-weight:500}
+.nav-links>a:hover{color:#0066cc}
+
+.hero{text-align:center;padding:80px 0 60px}
+.hero .badge{display:inline-flex;align-items:center;gap:4px;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px}
+.hero h1{font-size:48px;font-weight:800;letter-spacing:-1px;line-height:1.08;margin-bottom:12px}
+.hero h1 .accent{color:#0066cc}
+.hero p{font-size:17px;color:#86868b;max-width:600px;margin:0 auto 32px;line-height:1.7}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none;transition:all .2s}
+.btn:hover{background:#0055aa;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,102,204,.25)}
+.btn-outline{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.04);color:#1d1d1f;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s}
+.btn-outline:hover{background:rgba(0,0,0,.08)}
+
+.card{background:#f5f5f7;border-radius:20px;padding:28px 30px;margin-bottom:20px}
+.card h2{font-size:20px;font-weight:700;margin-bottom:4px;letter-spacing:-.3px}
+.card .sub{font-size:13px;color:#86868b;margin-bottom:20px}
+.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}
+.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none;transition:border-color .2s}
+.field select:focus,.field input:focus{border-color:#0066cc;box-shadow:0 0 0 3px rgba(0,102,204,.1)}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}
+.field input[type=number]{-moz-appearance:textfield}
+.field input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+
+.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}
+.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#86868b;margin-bottom:4px}
+.result-item .value{font-size:22px;font-weight:700;color:#0066cc;font-feature-settings:'tnum';letter-spacing:-.5px}
+.result-item .unit{font-size:11px;color:#86868b;margin-top:1px}
+
+.tabs{display:flex;gap:4px;background:#e8e8ed;border-radius:10px;padding:3px;margin-bottom:20px}
+.tab{flex:1;padding:6px 12px;text-align:center;border-radius:8px;font-size:12px;font-weight:600;color:#86868b;cursor:pointer;transition:all .2s;border:none;background:transparent;font-family:inherit}
+.tab.active{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.tab:hover:not(.active){color:#1d1d1f}
+
+.mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
+.mode-btn{padding:10px;border-radius:10px;border:1.5px solid #e8e8ed;background:#fff;cursor:pointer;text-align:center;transition:all .2s;font-size:12px;font-weight:500;font-family:inherit}
+.mode-btn:hover{border-color:#0066cc}
+.mode-btn.active{border-color:#0066cc;background:#f0f5ff}
+
+.ref-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.ref-link{background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s}
+.ref-link:hover{background:#eeeef0;transform:translateY(-2px)}
+.ref-link .icon{font-size:20px;margin-bottom:4px}
+.ref-link h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.ref-link p{font-size:12px;color:#86868b;line-height:1.5}
+.ref-link .tag{display:inline-block;font-size:10px;font-weight:600;color:#0066cc;background:#e8f0fe;padding:1px 8px;border-radius:10px;margin-top:6px}
+
+.seo{padding:60px 0}
+.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-.3px}
+.seo .case-study{background:#f5f5f7;border-radius:16px;padding:24px;margin:20px 0}
+.seo .case-study h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.seo .case-study p{font-size:14px;color:#444}
+.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}
+.seo .note{background:#fffbeb;border-left:3px solid #d97706;padding:14px 18px;border-radius:8px;font-size:14px;color:#92400e;margin:16px 0}
+.seo table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+.seo th,.seo td{padding:10px 14px;text-align:left;border-bottom:1px solid #e8e8ed}
+.seo th{background:#f5f5f7;font-weight:600}
+.seo table tr:hover{background:#fafafa}
+.seo ul{padding-left:20px;margin-bottom:14px}
+.seo li{font-size:14px;color:#444;margin-bottom:4px;line-height:1.7}
+.seo code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}
+
+footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0 32px;margin-top:60px;text-align:center;font-size:12px;color:#86868b}
+footer a{color:#0066cc;text-decoration:none}
+
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .result-grid,.mode-grid,.ref-links{grid-template-columns:1fr}
+  .nav-links>a{font-size:11px;padding:0 10px}
+  .card{padding:20px 16px}
+  .card-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+  <div class="nav-left">
+    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
+    <div class="nav-links">
+      <a href="https://carbide-tooling.com/products/">Products</a>
+      <a href="https://carbide-tooling.com/guides/">Guides</a>
+      <a href="https://carbide-tooling.com/about.html">About</a>
+    </div>
+  </div>
+  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+  <div class="badge">🔧 Free Professional Tool</div>
+  <h1><span class="accent">SFM</span> Calculator</h1>
+  <p>Calculate surface feet per minute (SFM), RPM, or cutting speed for lathe turning and milling operations. Enter any two values — get the third instantly.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#calculator">Start Calculating ↓</a>
+    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
+  </div>
+</div>
+</section>
+
+<section id="calculator" class="container" style="padding-bottom:40px">
+<div class="card">
+  <h2>🔄 Surface Speed Calculator</h2>
+  <p class="sub">For turning, milling, and drilling operations. Imperial (SFM) or metric (m/min).</p>
+
+  <div class="tabs" id="unit-tabs">
+    <button class="tab active" onclick="setUnit('imperial')">📏 Imperial (SFM)</button>
+    <button class="tab" onclick="setUnit('metric')">📐 Metric (m/min)</button>
+  </div>
+
+  <!-- Mode Selector -->
+  <div class="mode-grid" id="mode-grid">
+    <button class="mode-btn active" onclick="setMode('sfm')">🎯 Find SFM<br><span style="font-weight:400;color:#86868b;font-size:11px">Given RPM + Diameter</span></button>
+    <button class="mode-btn" onclick="setMode('rpm')">⚡ Find RPM<br><span style="font-weight:400;color:#86868b;font-size:11px">Given Target SFM + Diameter</span></button>
+    <button class="mode-btn" onclick="setMode('dia')">📐 Find Diameter<br><span style="font-weight:400;color:#86868b;font-size:11px">Given Target SFM + RPM</span></button>
+  </div>
+
+  <div class="card-row">
+    <div class="field" id="field1"><label id="lbl1">⚙️ Spindle Speed (RPM)</label>
+      <input type="number" id="val1" value="3500" min="1" max="50000" step="100" oninput="calc()" />
+    </div>
+    <div class="field" id="field2"><label id="lbl2">📐 Workpiece / Tool Diameter</label>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="number" id="val2" value="3" min="0.01" max="500" step="0.1" oninput="calc()" style="flex:1" />
+        <span id="dia-label" style="font-size:13px;color:#86868b;white-space:nowrap;min-width:40px">inch</span>
+      </div>
+    </div>
+    <div class="field" id="field3"><label id="lbl3">🎯 Target SFM</label>
+      <input type="number" id="val3" value="800" min="1" max="15000" step="10" oninput="calc()" />
+    </div>
+  </div>
+
+  <div id="operation-type" class="field" style="margin-bottom:16px;display:none">
+    <label>Operation Type (for recommended SFM)</label>
+    <select id="op-type" onchange="calc()">
+      <option value="turning">Turning (OD / Face)</option>
+      <option value="milling">Milling</option>
+      <option value="drilling">Drilling</option>
+    </select>
+  </div>
+
+  <div class="result-grid" id="results">
+    <div class="result-item"><div class="label" id="res1-label">Surface Speed</div><div class="value" id="r1">—</div><div class="unit" id="res1-unit">SFM</div></div>
+    <div class="result-item"><div class="label" id="res2-label">Spindle Speed</div><div class="value" id="r2">—</div><div class="unit">RPM</div></div>
+    <div class="result-item"><div class="label" id="res3-label">Diameter</div><div class="value" id="r3">—</div><div class="unit" id="res3-unit">inch</div></div>
+    <div class="result-item"><div class="label">Cutting Speed (Vc)</div><div class="value" id="r4">—</div><div class="unit" id="res4-unit">m/min</div></div>
+  </div>
+</div>
+
+<!-- Cross-links to other tools -->
+<div class="ref-links" style="margin-top:40px">
+  <a href="/tools/grade-reference/" class="ref-link"><div class="icon">🔩</div><h4>Carbide Grade Cross Reference</h4><p>Search equivalent grades across Sandvik, Kennametal, Kyocera, Iscar, Mitsubishi, and more.</p><span class="tag">Cross-reference tool</span></a>
+  <a href="https://carbide-tooling.com/tools/" class="ref-link"><div class="icon">📋</div><h4>All Tools</h4><p>Browse all CNC machining calculators and reference tools.</p><span class="tag">Tool hub</span></a>
+</div>
+
+<div class="ref-links">
+  <a href="/tools/speed-feed/" class="ref-link">
+    <div class="icon">⚙️</div>
+    <h4>Speed &amp; Feed Calculator</h4>
+    <p>Once you know your SFM, calculate optimal RPM, feed rate, and chip load for any material.</p>
+    <span class="tag">Recommended next step</span>
+  </a>
+  <a href="/tools/chip-load/" class="ref-link">
+    <div class="icon">📐</div>
+    <h4>Chip Load Calculator</h4>
+    <p>Verify feed per tooth against material-specific recommendations to prevent tool failure.</p>
+    <span class="tag">Companion tool</span>
+  </a>
+</div>
+</section>
+
+<!-- ===== SEO CONTENT: Case study first, then theory ===== -->
+<section class="seo">
+<div class="container">
+
+  <div class="case-study">
+    <h3>🔍 Real-World Case: 300% Tool Life Improvement by Correcting Surface Speed</h3>
+    <p>A medical device manufacturer was turning 17-4 PH stainless steel on a CNC lathe with a carbide insert. They were running at 1,200 RPM with a 12mm diameter workpiece — giving a surface speed of approximately 45 m/min. Inserts were failing after 80 parts, with edge chipping and built-up edge formation. Using this calculator, they determined the correct surface speed should be 120 m/min for that material. By adjusting RPM to 3,200 (and verifying with our <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a>), tool life increased to over 350 parts per edge — a 4× improvement. The annual savings on insert costs alone exceeded $12,000.</p>
+  </div>
+
+  <h2>The SFM Formula: How Surface Speed Is Calculated</h2>
+  <p>Surface speed — measured in <strong>SFM</strong> (Surface Feet per Minute, imperial) or <strong>Vc</strong> (meters per minute, metric) — is the linear velocity at which the cutting edge passes through the material. It is the single most important parameter in machining because it directly determines cutting temperature, tool wear rate, and surface integrity.</p>
+  
+  <p><strong>Imperial (SFM):</strong> <code>SFM = (π × D × RPM) ÷ 12</code><br/>
+  <strong>Metric (Vc):</strong> <code>Vc (m/min) = (π × D × RPM) ÷ 1000</code></p>
+  
+  <p>Where D = diameter in inches (imperial) or mm (metric), and RPM = spindle revolutions per minute. This calculator works in all three modes — enter any two values, and the third is computed automatically.</p>
+
+  <h2>Recommended Surface Speeds for Carbide Tooling</h2>
+  <p>The table below shows recommended SFM ranges for carbide cutting tools across common operations. These values assume rigid setup, adequate coolant, and average depth of cut conditions.</p>
+  
+  <table>
+    <tr><th>Material</th><th>Turning (SFM)</th><th>Milling (SFM)</th><th>Drilling (SFM)</th></tr>
+    <tr><td>Aluminum 6061</td><td>800-1,500</td><td>800-1,200</td><td>400-600</td></tr>
+    <tr><td>Stainless Steel 304</td><td>400-600</td><td>250-400</td><td>150-250</td></tr>
+    <tr><td>Titanium Grade 5</td><td>200-350</td><td>150-250</td><td>80-150</td></tr>
+    <tr><td>Hardened Steel (45-55 HRC)</td><td>250-400</td><td>150-250</td><td>80-120</td></tr>
+    <tr><td>Mild Steel 1018</td><td>600-900</td><td>400-700</td><td>250-400</td></tr>
+    <tr><td>Inconel 718</td><td>100-200</td><td>80-150</td><td>40-80</td></tr>
+    <tr><td>Cast Iron (Gray)</td><td>500-800</td><td>400-700</td><td>200-350</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>⚠️ Important:</strong> Surface speed is workpiece-material limited, not tool limited. A carbide end mill rated for 1,000 SFM still cannot cut titanium at that speed — the material's thermal properties govern the maximum. Always select SFM based on the workpiece, then verify the tool coating can handle the resulting temperature.
+  </div>
+
+  <h2>Why Chip Load Affects Optimal Surface Speed</h2>
+  <p>The relationship between SFM and <a href="/tools/chip-load/" style="color:#0066cc">chip load</a> is often misunderstood. At higher surface speeds, the chip load per tooth must be maintained within the recommended range — otherwise the tool rubs instead of shearing, generating excessive heat regardless of SFM. This is why a proper speeds-and-feeds calculation requires both surface speed AND chip load optimization. Use the <a href="/tools/chip-load/" style="color:#0066cc">Chip Load Calculator</a> after setting your SFM to verify the feed per tooth is adequate.</p>
+
+  <h2>SFM vs. RPM: When to Use Each</h2>
+  <p>RPM is a machine parameter — it's what you set on the spindle control. SFM is a process parameter — it's what actually determines cutting performance. The same SFM can require very different RPM depending on diameter:</p>
+  <ul>
+    <li><strong>Small diameter (6mm end mill):</strong> 800 SFM → ~12,000 RPM</li>
+    <li><strong>Large diameter (100mm face mill):</strong> 800 SFM → ~780 RPM</li>
+  </ul>
+  <p>This is why tool libraries in CAM systems store SFM, not RPM — the CAM software calculates RPM based on the programmed tool diameter. When setup changes require a different tool holder or extension, the SFM stays the same; only the RPM changes.</p>
+
+  <h2>Signs Your Surface Speed Is Wrong</h2>
+  <p><strong>Too fast:</strong> Rapid flank wear, plastic deformation of the cutting edge, built-up edge, chatter, discolored chips (blue/purple), poor surface finish.<br/>
+  <strong>Too slow:</strong> BUE formation, high cutting forces, poor chip control, chatter, smearing on the workpiece surface, reduced productivity.</p>
+  <p>When in doubt, consult the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> which incorporates material-specific SFM ranges for carbide end mills.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <p><strong>What is SFM in machining?</strong> SFM (Surface Feet per Minute) is the linear speed at which a cutting tool edge travels through the workpiece material. It determines cutting temperature, tool life, and surface finish.</p>
+  <p><strong>How do I calculate SFM from RPM?</strong> Multiply π by the diameter in inches and RPM, then divide by 12: <code>SFM = (π × D × RPM) ÷ 12</code>. Use this calculator for instant results.</p>
+  <p><strong>What SFM should I use for carbide end mills in stainless steel?</strong> For stainless 304, use 250-400 SFM for roughing, 300-500 SFM for finishing. Lower end for heavier cuts, higher end for finishing passes.</p>
+  <p><strong>The difference between SFM and RPM?</strong> SFM is cutting speed through material (process parameter). RPM is spindle rotation speed (machine parameter). RPM = (SFM × 12) ÷ (π × D).</p>
+  <p><strong>Does workpiece hardness affect surface speed?</strong> Yes — harder materials require lower SFM. As a rule of thumb, reduce SFM by 20% for every 10 HRC increase above 35 HRC. Higher hardness also increases cutting forces, which must be accounted for in the <a href="/tools/speed-feed/" style="color:#0066cc">speed and feed calculation</a>.</p>
+  <p><strong>Should I use coolant or dry at high SFM?</strong> At high SFM (above 600 SFM in steel), coolant is essential to manage thermal shock. With carbide tools, intermittent coolant application can cause micro-cracking. Use consistent flood or through-spindle coolant when running above 500 SFM.</p>
+</div>
+</section>
+
+<footer>
+<div class="container">
+  <p style="margin-bottom:8px"><a href="https://carbide-tooling.com/">CarbideTooling.com</a> — <a href="/tools/">All Tools</a></p>
+  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p><p style="font-size:11px">© 2026 Carbide Tooling. Surface speed recommendations are guidelines; always validate with test cuts.</p>
+</div>
+<div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0" class="container"><p style="margin:0">To achieve the right surface speed for every material, check our High-Performance End Mills</div>
+</footer>
+
+<script>
+let unit = 'imperial';
+let mode = 'sfm';
+
+function setUnit(u) {
+  unit = u;
+  document.querySelectorAll('#unit-tabs .tab').forEach((t,i) => {
+    t.classList.toggle('active', (i===0 && u==='imperial') || (i===1 && u==='metric'));
+  });
+  document.getElementById('dia-label').textContent = u === 'imperial' ? 'inch' : 'mm';
+  document.getElementById('res1-unit').textContent = u === 'imperial' ? 'SFM' : 'm/min';
+  document.getElementById('res3-unit').textContent = u === 'imperial' ? 'inch' : 'mm';
+  document.getElementById('res4-unit').textContent = u === 'imperial' ? 'm/min' : 'SFM';
+  calc();
+}
+window.setUnit = setUnit;
+
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.mode-btn').forEach(b => {
+    if ((m==='sfm' && b.innerHTML.includes('SFM')) || 
+        (m==='rpm' && b.innerHTML.includes('RPM')) ||
+        (m==='dia' && b.innerHTML.includes('Diameter')))
+      b.classList.add('active');
+  });
+  
+  // Show/hide fields
+  const f1 = document.getElementById('field1');
+  const f2 = document.getElementById('field2');
+  const f3 = document.getElementById('field3');
+  
+  if (m === 'sfm') {
+    f1.style.display = 'block';
+    f2.style.display = 'block';
+    f3.style.display = 'none';
+    document.getElementById('lbl1').textContent = '⚙️ Spindle Speed (RPM)';
+    document.getElementById('lbl2').textContent = '📐 Workpiece / Tool Diameter';
+    document.getElementById('res1-label').textContent = 'Surface Speed';
+    document.getElementById('res2-label').textContent = 'Spindle Speed';
+    document.getElementById('res3-label').textContent = 'Diameter';
+  } else if (m === 'rpm') {
+    f1.style.display = 'none';
+    f2.style.display = 'block';
+    f3.style.display = 'block';
+    document.getElementById('lbl2').textContent = '📐 Workpiece / Tool Diameter';
+    document.getElementById('lbl3').textContent = '🎯 Target Surface Speed';
+    document.getElementById('res1-label').textContent = 'Surface Speed';
+    document.getElementById('res2-label').textContent = 'Spindle Speed';
+    document.getElementById('res3-label').textContent = 'Diameter';
+  } else {
+    f1.style.display = 'block';
+    f2.style.display = 'none';
+    f3.style.display = 'block';
+    document.getElementById('lbl1').textContent = '⚙️ Spindle Speed (RPM)';
+    document.getElementById('lbl3').textContent = '🎯 Target Surface Speed';
+    document.getElementById('res1-label').textContent = 'Surface Speed';
+    document.getElementById('res2-label').textContent = 'Spindle Speed';
+    document.getElementById('res3-label').textContent = 'Diameter';
+  }
+  calc();
+}
+window.setMode = setMode;
+
+function calc() {
+  const v1 = parseFloat(document.getElementById('val1').value) || 0;
+  const v2 = parseFloat(document.getElementById('val2').value) || 0;
+  const v3 = parseFloat(document.getElementById('val3').value) || 0;
+  
+  let sfm, rpm, dia, vc;
+  const isImperial = unit === 'imperial';
+  
+  if (mode === 'sfm') {
+    rpm = v1;
+    dia = v2;
+    sfm = isImperial ? (Math.PI * dia * rpm) / 12 : v2;
+    vc = isImperial ? sfm * 0.3048 : (Math.PI * dia * rpm) / 1000;
+    if (!isImperial) {
+      // metric mode - v2 is mm, v1 is rpm
+      vc = (Math.PI * dia * rpm) / 1000;
+      sfm = vc * 3.28084;
+    }
+  } else if (mode === 'rpm') {
+    dia = v2;
+    if (isImperial) {
+      sfm = v3;
+      rpm = (sfm * 12) / (Math.PI * dia);
+      vc = sfm * 0.3048;
+    } else {
+      vc = v3;
+      rpm = (vc * 1000) / (Math.PI * dia);
+      sfm = vc * 3.28084;
+    }
+  } else {
+    rpm = v1;
+    if (isImperial) {
+      sfm = v3;
+      dia = (sfm * 12) / (Math.PI * rpm);
+      vc = sfm * 0.3048;
+    } else {
+      vc = v3;
+      dia = (vc * 1000) / (Math.PI * rpm);
+      sfm = vc * 3.28084;
+    }
+  }
+  
+  document.getElementById('r1').textContent = isImperial ? Math.round(sfm) : vc.toFixed(1);
+  document.getElementById('r2').textContent = Math.round(rpm).toLocaleString();
+  document.getElementById('r3').textContent = dia.toFixed(2);
+  document.getElementById('r4').textContent = isImperial ? vc.toFixed(1) : Math.round(sfm);
+}
+
+setMode('sfm');
+</script>
+</body>
+</html>

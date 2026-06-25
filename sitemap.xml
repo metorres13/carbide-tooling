@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
+  <url><loc>https://carbide-tooling.com/</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- Tool Hub -->
+  <url><loc>https://carbide-tooling.com/tools/</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Tool 1: Speed & Feed Calculator -->
+  <url><loc>https://carbide-tooling.com/tools/speed-feed/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Tool 2: Chip Load Calculator -->
+  <url><loc>https://carbide-tooling.com/tools/chip-load/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Tool 3: Surface Speed / SFM Calculator -->
+  <url><loc>https://carbide-tooling.com/tools/surface-speed/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/grade-reference/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/mrr-calculator/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <!-- Products -->
+  <url><loc>https://carbide-tooling.com/tools/horsepower-calculator/</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/force-calculator/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/end-mills.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/slot-milling-calculator/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/tools/cycle-time-calculator/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/turning-inserts.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/surface-roughness-calculator/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/drills.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/nose-radius-compensation/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/tool-holders.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/ramping-angle-calculator/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/boring-tools.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://carbide-tooling.com/tools/trochoidal-milling-calculator/</loc><lastmod>2026-06-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url><loc>https://carbide-tooling.com/products/threading-tools.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Guides -->
+  <url><loc>https://carbide-tooling.com/guides/</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://carbide-tooling.com/guides/end-mill-geometry.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://carbide-tooling.com/guides/carbide-grades.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://carbide-tooling.com/guides/coating-comparison.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://carbide-tooling.com/guides/sourcing-from-china.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Pages -->
+  <url><loc>https://carbide-tooling.com/about.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://carbide-tooling.com/quote.html</loc><lastmod>2026-06-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>
