@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Surface Velocidad de corte (m/min) Calculadora | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta name="description" id="meta-desc" content="Free online m/min calculator for CNC lathe and milling. Calcular surface feet per minute (m/min), RPM from cutting speed, or required diameter. Optimize carbide tooling performance." />
+<meta property="og:title" id="og-title" content="m/min Calculadora — Surface Velocidad de corte for Turning & Milling" />
+<meta property="og:description" id="og-desc" content="Calcular surface feet per minute for CNC turning and milling. Enter any two values to find the third: m/min, RPM, or diameter." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carbide-tooling.com/es/tools/surface-speed/" />
+<meta property="og:locale" content="en_US" />
+<meta name="theme-color" content="#0066cc" />
+<link rel="canonical" href="https://carbide-tooling.com/es/tools/surface-speed/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}
+.nav-left{display:flex;align-items:center;gap:32px}
+.logo{font-size:14px;font-weight:700;letter-spacing:-.3px;display:flex;align-items:center;gap:6px;text-decoration:none;color:#1d1d1f}
+.logo span{font-weight:800;color:#0066cc}
+.nav-links{display:flex;align-items:center;gap:0}
+.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;transition:color .2s;height:44px;display:flex;align-items:center;font-weight:500}
+.nav-links>a:hover{color:#0066cc}
+
+.hero{text-align:center;padding:80px 0 60px}
+.hero .badge{display:inline-flex;align-items:center;gap:4px;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px}
+.hero h1{font-size:48px;font-weight:800;letter-spacing:-1px;line-height:1.08;margin-bottom:12px}
+.hero h1 .accent{color:#0066cc}
+.hero p{font-size:17px;color:#86868b;max-width:600px;margin:0 auto 32px;line-height:1.7}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none;transition:all .2s}
+.btn:hover{background:#0055aa;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,102,204,.25)}
+.btn-outline{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.04);color:#1d1d1f;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none;transition:all .2s}
+.btn-outline:hover{background:rgba(0,0,0,.08)}
+
+.card{background:#f5f5f7;border-radius:20px;padding:28px 30px;margin-bottom:20px}
+.card h2{font-size:20px;font-weight:700;margin-bottom:4px;letter-spacing:-.3px}
+.card .sub{font-size:13px;color:#86868b;margin-bottom:20px}
+.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}
+.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none;transition:border-color .2s}
+.field select:focus,.field input:focus{border-color:#0066cc;box-shadow:0 0 0 3px rgba(0,102,204,.1)}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}
+.field input[type=number]{-moz-appearance:textfield}
+.field input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+
+.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}
+.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#86868b;margin-bottom:4px}
+.result-item .value{font-size:22px;font-weight:700;color:#0066cc;font-feature-settings:'tnum';letter-spacing:-.5px}
+.result-item .unit{font-size:11px;color:#86868b;margin-top:1px}
+
+.tabs{display:flex;gap:4px;background:#e8e8ed;border-radius:10px;padding:3px;margin-bottom:20px}
+.tab{flex:1;padding:6px 12px;text-align:center;border-radius:8px;font-size:12px;font-weight:600;color:#86868b;cursor:pointer;transition:all .2s;border:none;background:transparent;font-family:inherit}
+.tab.active{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.tab:hover:not(.active){color:#1d1d1f}
+
+.mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
+.mode-btn{padding:10px;border-radius:10px;border:1.5px solid #e8e8ed;background:#fff;cursor:pointer;text-align:center;transition:all .2s;font-size:12px;font-weight:500;font-family:inherit}
+.mode-btn:hover{border-color:#0066cc}
+.mode-btn.active{border-color:#0066cc;background:#f0f5ff}
+
+.ref-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.ref-link{background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s}
+.ref-link:hover{background:#eeeef0;transform:translateY(-2px)}
+.ref-link .icon{font-size:20px;margin-bottom:4px}
+.ref-link h4{font-size:14px;font-weight:600;margin-bottom:2px}
+.ref-link p{font-size:12px;color:#86868b;line-height:1.5}
+.ref-link .tag{display:inline-block;font-size:10px;font-weight:600;color:#0066cc;background:#e8f0fe;padding:1px 8px;border-radius:10px;margin-top:6px}
+
+.seo{padding:60px 0}
+.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-.3px}
+.seo .case-study{background:#f5f5f7;border-radius:16px;padding:24px;margin:20px 0}
+.seo .case-study h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.seo .case-study p{font-size:14px;color:#444}
+.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}
+.seo .note{background:#fffbeb;border-left:3px solid #d97706;padding:14px 18px;border-radius:8px;font-size:14px;color:#92400e;margin:16px 0}
+.seo table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+.seo th,.seo td{padding:10px 14px;text-align:left;border-bottom:1px solid #e8e8ed}
+.seo th{background:#f5f5f7;font-weight:600}
+.seo table tr:hover{background:#fafafa}
+.seo ul{padding-left:20px;margin-bottom:14px}
+.seo li{font-size:14px;color:#444;margin-bottom:4px;line-height:1.7}
+.seo code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}
+
+footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0 32px;margin-top:60px;text-align:center;font-size:12px;color:#86868b}
+footer a{color:#0066cc;text-decoration:none}
+
+@media(max-width:768px){
+  .hero h1{font-size:32px}
+  .result-grid,.mode-grid,.ref-links{grid-template-columns:1fr}
+  .nav-links>a{font-size:11px;padding:0 10px}
+  .card{padding:20px 16px}
+  .card-row{grid-template-columns:1fr}
+}
+.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
+</style>
+
+<link rel="stylesheet" href="/css/tool-style.css"/>
+<meta name="theme-color" content="#0066cc"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
+<meta property="og:title" content="Surface Velocidad de corte (m/min) Calculadora | Herramienta de mecanizado de precisión"/>
+<meta property="og:description" content=""/>
+<meta property="og:url" content="https://carbide-tooling.com/es/tools/surface-speed/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Surface Velocidad de corte (m/min) Calculadora | Precision Machining Tool"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Surface Velocidad de corte (m/min) Calculadora",
+      "url": "https://carbide-tooling.com/es/tools/surface-speed/",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Web",
+      "description": "Surface Velocidad de corte (m/min) Calculadora for CNC machining",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://carbide-tooling.com/es/tools/surface-speed/",
+      "name": "Surface Velocidad de corte (m/min) Calculadora",
+      "description": "Surface Velocidad de corte (m/min) Calculadora for CNC machining",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://carbide-tooling.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is m/min in machining?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "m/min (Surface Feet per Minute) is the linear speed at which a cutting tool edge travels through the workpiece material. It determines cutting temperature, tool life, and surface finish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate m/min from RPM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply π by the diameter in inches and RPM, then divide by 12: m/min = (π × D × RPM) ÷ 12. Use this calculator for instant results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What m/min should I use for carbide end mills in stainless steel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For stainless 304, use 250-400 m/min for roughing, 300-500 m/min for finishing. Lower end for heavier cuts, higher end for finishing passes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "The difference between m/min and RPM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "m/min is cutting speed through material (process parameter). RPM is spindle rotation speed (machine parameter). RPM = (m/min × 12) ÷ (π × D)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does workpiece hardness affect surface speed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — harder materials require lower m/min. As a rule of thumb, reduce m/min by 20% for every 10 HRC increase above 35 HRC. Higher hardness also increases cutting forces, which must be accounted for in the speed and feed calculation."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/surface-speed/"/>
+  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/surface-speed/"/>
+  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/surface-speed/"/>
+  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/surface-speed/"/>
+  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/surface-speed/"/>
+  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/surface-speed/"/>
+  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/surface-speed/"/>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+  <div class="nav-left">
+    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
+    <div class="nav-links">
+      <a href="https://carbide-tooling.com/products/">Productos</a>
+      <a href="https://carbide-tooling.com/guides/">Guías técnicas</a>
+      <a href="https://carbide-tooling.com/about.html">Nosotros</a>
+    </div>
+  </div>
+  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+  <div class="badge">🔧 Free Professional Herramienta</div>
+  <h1><span class="accent">m/min</span> Calculadora</h1>
+  <p>Calcular surface feet per minute (m/min), RPM, or cutting speed for lathe turning and milling operations. Enter any two values — get the third instantly.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#calculator">Start Calculating ↓</a>
+    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
+  </div>
+</div>
+</section>
+
+<section id="calculator" class="container" style="padding-bottom:40px">
+<div class="card">
+  <h2>🔄 Surface Velocidad de corte Calculadora</h2>
+  <p class="sub">For turning, milling, and drilling operations. Imperial (m/min) or metric (m/min).</p>
+
+  <div class="tabs" id="unit-tabs">
+    <button class="tab active" onclick="setUnit('imperial')">📏 Imperial (m/min)</button>
+    <button class="tab" onclick="setUnit('metric')">📐 Metric (m/min)</button>
+  </div>
+
+  <!-- Mode Selector -->
+  <div class="mode-grid" id="mode-grid">
+    <button class="mode-btn active" onclick="setMode('sfm')">🎯 Find m/min<br><span style="font-weight:400;color:#86868b;font-size:11px">Given RPM + Diámetro</span></button>
+    <button class="mode-btn" onclick="setMode('rpm')">⚡ Find RPM<br><span style="font-weight:400;color:#86868b;font-size:11px">Given Target m/min + Diámetro</span></button>
+    <button class="mode-btn" onclick="setMode('dia')">📐 Find Diámetro<br><span style="font-weight:400;color:#86868b;font-size:11px">Given Target m/min + RPM</span></button>
+  </div>
+
+  <div class="card-row">
+    <div class="field" id="field1"><label id="lbl1">⚙️ Spindle Velocidad de corte (RPM)</label>
+      <input type="number" id="val1" value="3500" min="1" max="50000" step="100" oninput="calc()" />
+    </div>
+    <div class="field" id="field2"><label id="lbl2">📐 Workpiece / Herramienta Diámetro</label>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="number" id="val2" value="3" min="0.01" max="500" step="0.1" oninput="calc()" style="flex:1" />
+        <span id="dia-label" style="font-size:13px;color:#86868b;white-space:nowrap;min-width:40px">inch</span>
+      </div>
+    </div>
+    <div class="field" id="field3"><label id="lbl3">🎯 Target m/min</label>
+      <input type="number" id="val3" value="800" min="1" max="15000" step="10" oninput="calc()" />
+    </div>
+  </div>
+
+  <div id="operation-type" class="field" style="margin-bottom:16px;display:none">
+    <label>Operación Type (for recommended m/min)</label>
+    <select id="op-type" onchange="calc()">
+      <option value="turning">Turning (OD / Face)</option>
+      <option value="milling">Milling</option>
+      <option value="drilling">Drilling</option>
+    </select>
+  </div>
+
+  <div class="result-grid" id="results">
+    <div class="result-item"><div class="label" id="res1-label">Surface Velocidad de corte</div><div class="value" id="r1">—</div><div class="unit" id="res1-unit">m/min</div></div>
+    <div class="result-item"><div class="label" id="res2-label">Spindle Velocidad de corte</div><div class="value" id="r2">—</div><div class="unit">RPM</div></div>
+    <div class="result-item"><div class="label" id="res3-label">Diámetro</div><div class="value" id="r3">—</div><div class="unit" id="res3-unit">inch</div></div>
+    <div class="result-item"><div class="label">Cutting Velocidad de corte (Vc)</div><div class="value" id="r4">—</div><div class="unit" id="res4-unit">m/min</div></div>
+  </div>
+</div>
+
+<!-- Cross-links to other tools -->
+<div class="ref-links" style="margin-top:40px">
+  <a href="/tools/grade-reference/" class="ref-link"><div class="icon">🔩</div><h4>Carbide Grade Cross Reference</h4><p>Search equivalent grades across Sandvik, Kennametal, Kyocera, Iscar, Mitsubishi, and more.</p><span class="tag">Cross-reference tool</span></a>
+  <a href="https://carbide-tooling.com/es/tools/" class="ref-link"><div class="icon">📋</div><h4>Todas las herramientas</h4><p>Browse all CNC machining calculators and reference tools.</p><span class="tag">Herramienta hub</span></a>
+</div>
+
+<div class="ref-links">
+  <a href="/tools/speed-feed/" class="ref-link">
+    <div class="icon">⚙️</div>
+    <h4>Velocidad de corte &amp; Avance Calculadora</h4>
+    <p>Once you know your m/min, calculate optimal RPM, feed rate, and chip load for any material.</p>
+    <span class="tag">Recomendado next step</span>
+  </a>
+  <a href="/tools/chip-load/" class="ref-link">
+    <div class="icon">📐</div>
+    <h4>Chip Load Calculadora</h4>
+    <p>Verify feed per tooth against material-specific recommendations to prevent tool failure.</p>
+    <span class="tag">Companion tool</span>
+  </a>
+</div>
+</section>
+
+<!-- ===== SEO CONTENT: Case study first, then theory ===== -->
+
+<footer class="tool-footer">
+<div class="container">
+  <div class="footer-links">
+    <a href="/">Inicio</a>
+    <a href="/tools/">Todas las herramientas</a>
+    <a href="/products/">Productos</a>
+    <a href="/guides/">Guías técnicas</a>
+    <a href="/about.html">Nosotros</a>
+    <a href="/quote.html">Solicitar cotización</a>
+    <a href="/privacy.html">Privacidad</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
+  </div>
+  <p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Todas las herramientas</a></p>
+  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
+  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+</div>
+
+<div class="lang-switcher">
+  <span class="lang-label">🌐</span>
+  <a href="https://carbide-tooling.com/es/tools/surface-speed/" class="lang-link active">EN</a>
+  <a href="https://carbide-tooling.com/de/tools/surface-speed/" class="lang-link">DE</a>
+  <a href="https://carbide-tooling.com/jp/tools/surface-speed/" class="lang-link">JP</a>
+  <a href="https://carbide-tooling.com/es/tools/surface-speed/" class="lang-link">ES</a>
+  <a href="https://carbide-tooling.com/vi/tools/surface-speed/" class="lang-link">VI</a>
+  <a href="https://carbide-tooling.com/zh/tools/surface-speed/" class="lang-link">中</a>
+</div>
+</footer>
+
+<script>
+let unit = 'imperial';
+let mode = 'sfm';
+
+function setUnit(u) {
+  unit = u;
+  document.querySelectorAll('#unit-tabs .tab').forEach((t,i) => {
+    t.classList.toggle('active', (i===0 && u==='imperial') || (i===1 && u==='metric'));
+  });
+  document.getElementById('dia-label').textContent = u === 'imperial' ? 'inch' : 'mm';
+  document.getElementById('res1-unit').textContent = u === 'imperial' ? 'm/min' : 'm/min';
+  document.getElementById('res3-unit').textContent = u === 'imperial' ? 'inch' : 'mm';
+  document.getElementById('res4-unit').textContent = u === 'imperial' ? 'm/min' : 'm/min';
+  calc();
+}
+window.setUnit = setUnit;
+
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.mode-btn').forEach(b => {
+    if ((m==='sfm' && b.innerHTML.includes('m/min')) || 
+        (m==='rpm' && b.innerHTML.includes('RPM')) ||
+        (m==='dia' && b.innerHTML.includes('Diameter')))
+      b.classList.add('active');
+  });
+  
+  // Show/hide fields
+  const f1 = document.getElementById('field1');
+  const f2 = document.getElementById('field2');
+  const f3 = document.getElementById('field3');
+  
+  if (m === 'sfm') {
+    f1.style.display = 'block';
+    f2.style.display = 'block';
+    f3.style.display = 'none';
+    document.getElementById('lbl1').textContent = '⚙️ Spindle Velocidad de corte (RPM)';
+    document.getElementById('lbl2').textContent = '📐 Workpiece / Herramienta Diameter';
+    document.getElementById('res1-label').textContent = 'Surface Speed';
+    document.getElementById('res2-label').textContent = 'Spindle Speed';
+    document.getElementById('res3-label').textContent = 'Diameter';
+  } else if (m === 'rpm') {
+    f1.style.display = 'none';
+    f2.style.display = 'block';
+    f3.style.display = 'block';
+    document.getElementById('lbl2').textContent = '📐 Workpiece / Herramienta Diameter';
+    document.getElementById('lbl3').textContent = '🎯 Target Surface Speed';
+    document.getElementById('res1-label').textContent = 'Surface Speed';
+    document.getElementById('res2-label').textContent = 'Spindle Speed';
+    document.getElementById('res3-label').textContent = 'Diameter';
+  } else {
+    f1.style.display = 'block';
+    f2.style.display = 'none';
+    f3.style.display = 'block';
+    document.getElementById('lbl1').textContent = '⚙️ Spindle Velocidad de corte (RPM)';
+    document.getElementById('lbl3').textContent = '🎯 Target Surface Speed';
+    document.getElementById('res1-label').textContent = 'Surface Speed';
+    document.getElementById('res2-label').textContent = 'Spindle Speed';
+    document.getElementById('res3-label').textContent = 'Diameter';
+  }
+  calc();
+}
+window.setMode = setMode;
+
+function calc() {
+  const v1 = parseFloat(document.getElementById('val1').value) || 0;
+  const v2 = parseFloat(document.getElementById('val2').value) || 0;
+  const v3 = parseFloat(document.getElementById('val3').value) || 0;
+  
+  let sfm, rpm, dia, vc;
+  const isImperial = unit === 'imperial';
+  
+  if (mode === 'sfm') {
+    rpm = v1;
+    dia = v2;
+    sfm = isImperial ? (Math.PI * dia * rpm) / 12 : v2;
+    vc = isImperial ? sfm * 0.3048 : (Math.PI * dia * rpm) / 1000;
+    if (!isImperial) {
+      // metric mode - v2 is mm, v1 is rpm
+      vc = (Math.PI * dia * rpm) / 1000;
+      sfm = vc * 3.28084;
+    }
+  } else if (mode === 'rpm') {
+    dia = v2;
+    if (isImperial) {
+      sfm = v3;
+      rpm = (sfm * 12) / (Math.PI * dia);
+      vc = sfm * 0.3048;
+    } else {
+      vc = v3;
+      rpm = (vc * 1000) / (Math.PI * dia);
+      sfm = vc * 3.28084;
+    }
+  } else {
+    rpm = v1;
+    if (isImperial) {
+      sfm = v3;
+      dia = (sfm * 12) / (Math.PI * rpm);
+      vc = sfm * 0.3048;
+    } else {
+      vc = v3;
+      dia = (vc * 1000) / (Math.PI * rpm);
+      sfm = vc * 3.28084;
+    }
+  }
+  
+  document.getElementById('r1').textContent = isImperial ? Math.round(sfm) : vc.toFixed(1);
+  document.getElementById('r2').textContent = Math.round(rpm).toLocaleString();
+  document.getElementById('r3').textContent = dia.toFixed(2);
+  document.getElementById('r4').textContent = isImperial ? vc.toFixed(1) : Math.round(sfm);
+}
+
+setMode('sfm');
+</script>
+<section class="seo-content">
+<div class="container">
+
+  <div class="case-study">
+    <h3>🔍 Real-World Case: 300% Herramienta Life Improvement by Correcting Surface Velocidad de corte</h3>
+    <p>A medical device manufacturer was turning 17-4 PH stainless steel on a CNC lathe with a carbide insert. They were running at 1,200 RPM with a 12mm diameter workpiece — giving a surface speed of approximately 45 m/min. Inserts were failing after 80 parts, with edge chipping and built-up edge formation. Using this calculator, they determined the correct surface speed should be 120 m/min for that material. By adjusting RPM to 3,200 (and verifying with our <a href="/tools/speed-feed/" style="color:#0066cc">Velocidad de corte &amp; Avance Calculadora</a>), tool life increased to over 350 parts per edge — a 4× improvement. The annual savings on insert costs alone exceeded $12,000.</p>
+  </div>
+
+  <h2>The m/min Formula: How Surface Velocidad de corte Is Calculard</h2>
+  <p>Surface speed — measured in <strong>m/min</strong> (Surface Feet per Minute, imperial) or <strong>Vc</strong> (meters per minute, metric) — is the linear velocity at which the cutting edge passes through the material. It is the single most important parameter in machining because it directly determines cutting temperature, tool wear rate, and surface integrity.</p>
+  
+  <p><strong>Imperial (m/min):</strong> <code>m/min = (π × D × RPM) ÷ 12</code><br/>
+  <strong>Metric (Vc):</strong> <code>Vc (m/min) = (π × D × RPM) ÷ 1000</code></p>
+  
+  <p>Where D = diameter in inches (imperial) or mm (metric), and RPM = spindle revolutions per minute. This calculator works in all three modes — enter any two values, and the third is computed automatically.</p>
+
+  <h2>Recomendado Surface Speeds for Carbide Tooling</h2>
+  <p>The table below shows recommended m/min ranges for carbide cutting tools across common operations. These values assume rigid setup, adequate coolant, and average depth of cut conditions.</p>
+  
+  <table>
+    <tr><th>Material</th><th>Turning (m/min)</th><th>Milling (m/min)</th><th>Drilling (m/min)</th></tr>
+    <tr><td>Aluminum 6061</td><td>800-1,500</td><td>800-1,200</td><td>400-600</td></tr>
+    <tr><td>Stainless Steel 304</td><td>400-600</td><td>250-400</td><td>150-250</td></tr>
+    <tr><td>Titanium Grade 5</td><td>200-350</td><td>150-250</td><td>80-150</td></tr>
+    <tr><td>Hardened Steel (45-55 HRC)</td><td>250-400</td><td>150-250</td><td>80-120</td></tr>
+    <tr><td>Mild Steel 1018</td><td>600-900</td><td>400-700</td><td>250-400</td></tr>
+    <tr><td>Inconel 718</td><td>100-200</td><td>80-150</td><td>40-80</td></tr>
+    <tr><td>Cast Iron (Gray)</td><td>500-800</td><td>400-700</td><td>200-350</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>⚠️ Important:</strong> Surface speed is workpiece-material limited, not tool limited. A carbide end mill rated for 1,000 m/min still cannot cut titanium at that speed — the material's thermal properties govern the maximum. Always select m/min based on the workpiece, then verify the tool coating can handle the resulting temperature.
+  </div>
+
+  <h2>Why Chip Load Affects Optimal Surface Velocidad de corte</h2>
+  <p>The relationship between m/min and <a href="/tools/chip-load/" style="color:#0066cc">chip load</a> is often misunderstood. At higher surface speeds, the chip load per tooth must be maintained within the recommended range — otherwise the tool rubs instead of shearing, generating excessive heat regardless of m/min. This is why a proper speeds-and-feeds calculation requires both surface speed AND chip load optimization. Use the <a href="/tools/chip-load/" style="color:#0066cc">Chip Load Calculadora</a> after setting your m/min to verify the feed per tooth is adequate.</p>
+
+  <h2>m/min vs. RPM: When to Use Each</h2>
+  <p>RPM is a machine parameter — it's what you set on the spindle control. m/min is a process parameter — it's what actually determines cutting performance. The same m/min can require very different RPM depending on diameter:</p>
+  <ul>
+    <li><strong>Small diameter (6mm end mill):</strong> 800 m/min → ~12,000 RPM</li>
+    <li><strong>Large diameter (100mm face mill):</strong> 800 m/min → ~780 RPM</li>
+  </ul>
+  <p>This is why tool libraries in CAM systems store m/min, not RPM — the CAM software calculates RPM based on the programmed tool diameter. When setup changes require a different tool holder or extension, the m/min stays the same; only the RPM changes.</p>
+
+  <h2>Signs Your Surface Velocidad de corte Is Wrong</h2>
+  <p><strong>Too fast:</strong> Rapid flank wear, plastic deformation of the cutting edge, built-up edge, chatter, discolored chips (blue/purple), poor surface finish.<br/>
+  <strong>Too slow:</strong> BUE formation, high cutting forces, poor chip control, chatter, smearing on the workpiece surface, reduced productivity.</p>
+  <p>When in doubt, consult the <a href="/tools/speed-feed/" style="color:#0066cc">Velocidad de corte &amp; Avance Calculadora</a> which incorporates material-specific m/min ranges for carbide end mills.</p>
+
+  <h2>Preguntas frecuentes</h2>
+  <p><strong>What is m/min in machining?</strong> m/min (Surface Feet per Minute) is the linear speed at which a cutting tool edge travels through the workpiece material. It determines cutting temperature, tool life, and surface finish.</p>
+  <p><strong>How do I calculate m/min from RPM?</strong> Multiply π by the diameter in inches and RPM, then divide by 12: <code>m/min = (π × D × RPM) ÷ 12</code>. Use this calculator for instant results.</p>
+  <p><strong>What m/min should I use for carbide end mills in stainless steel?</strong> For stainless 304, use 250-400 m/min for roughing, 300-500 m/min for finishing. Lower end for heavier cuts, higher end for finishing passes.</p>
+  <p><strong>The difference between m/min and RPM?</strong> m/min is cutting speed through material (process parameter). RPM is spindle rotation speed (machine parameter). RPM = (m/min × 12) ÷ (π × D).</p>
+  <p><strong>Does workpiece hardness affect surface speed?</strong> Yes — harder materials require lower m/min. As a rule of thumb, reduce m/min by 20% for every 10 HRC increase above 35 HRC. Higher hardness also increases cutting forces, which must be accounted for in the <a href="/tools/speed-feed/" style="color:#0066cc">speed and feed calculation</a>.</p>
+  <p><strong>Should I use coolant or dry at high m/min?</strong> At high m/min (above 600 m/min in steel), coolant is essential to manage thermal shock. With carbide tools, intermittent coolant application can cause micro-cracking. Use consistent flood or through-spindle coolant when running above 500 m/min.</p>
+</div>
+</section>
+<div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Velocidad de corte & Avance</a>
+<a href="/tools/hardness-converter/">Hardness Convertidor</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>
+<a href="/tools/mrr-calculator/">MRR Calculadora</a>
+<a href="/tools/feed-converter/">Avance Convertidor</a>
+<a href="/tools/surface-roughness-calculator/">Surface Roughness</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guía</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Convertidor</a>
+</div></div>
+
+<aside class="b2b-card">
+  <div class="b2b-icon">📦</div>
+  <div class="b2b-body">
+    <h3>¿Necesita herramientas profesionales?</h3>
+    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+  </div>
+  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+</aside>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Fresas de carburo sólido</a><a href="/products/tool-holders.html">Portaherramientas</a></div>
+<section class="more-tools">
+  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
+  <div class="tool-grid">
+<a href="/tools/wall-thickness-calculator/">Wall Thickness Calculadora</a>
+<a href="/tools/dia-circ-calculator/">Diámetro & Circumference Calculadora</a>
+<a href="/tools/batch-cost-calculator/">Batch Cost Calculadora</a>
+<a href="/tools/hardness-converter/">Hardness Convertidor</a>
+<a href="/tools/gear-parameter-calculator/">Gear Parameter Calculadora</a>
+<a href="/tools/cast-iron-machining/">Cast Iron Machining Calculadora</a>
+<a href="/tools/taper-calculator/">Taper Calculadora</a>
+<a href="/tools/feed-rate-override-calculator/">Avance Rate Override Calculadora</a>
+
+  </div>
+</section>
+<div class="share-bar">
+  <span class="share-label">↗ Compartir con ingenieros</span>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/surface-speed/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/surface-speed/&text=Surface Velocidad de corte (m/min) Calculadora" target="_blank" rel="noopener">𝕏</a>
+  <a href="mailto:subject=Surface Velocidad de corte (m/min) Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/surface-speed/">Email</a>
+</div>
+
+</body>
+</html>

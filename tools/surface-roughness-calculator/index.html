@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title id="meta-title">Surface Roughness Calculator — Ra Surface Finish for Turning & Milling | Carbide Tooling</title>
+<title>Surface Roughness Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta name="description" id="meta-desc" content="Free online surface roughness calculator. Calculate theoretical Ra and Rz surface finish for turning and milling operations based on feed rate and nose radius." />
 <meta property="og:title" content="Surface Roughness Calculator — Carbide Tooling" />
 <meta property="og:description" content="Calculate theoretical surface finish Ra and Rz for CNC turning and milling. Understand how feed rate and nose radius affect surface quality." />
@@ -75,7 +75,101 @@ footer a{color:#0066cc;text-decoration:none}
   .card{padding:20px 16px}
   .card-row{grid-template-columns:1fr}
 }
+.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 </style>
+
+<link rel="stylesheet" href="/css/tool-style.css"/>
+<meta name="theme-color" content="#0066cc"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
+<meta property="og:title" content="Surface Roughness Calculator | Precision Machining Tool"/>
+<meta property="og:description" content=""/>
+<meta property="og:url" content="https://carbide-tooling.com/tools/surface-roughness-calculator/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Surface Roughness Calculator | Precision Machining Tool"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Surface Roughness Calculator",
+      "url": "https://carbide-tooling.com/tools/surface-roughness-calculator/",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Web",
+      "description": "Surface Roughness Calculator for CNC machining",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://carbide-tooling.com/tools/surface-roughness-calculator/",
+      "name": "Surface Roughness Calculator",
+      "description": "Surface Roughness Calculator for CNC machining",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://carbide-tooling.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Ra surface finish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ra (Roughness Average) is the arithmetic mean of absolute profile deviations from the mean line over the evaluation length. It is the most commonly specified surface finish parameter in ISO engineering drawings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate surface finish from feed rate and nose radius?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the formula Ra = f² / (32 × R). This calculator does it instantly for both turning and milling operations. The result is the theoretical best possible finish — actual Ra will be 20-50% higher."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What feed rate gives 0.4 μm Ra in turning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a 0.8 mm nose radius: f = √(0.4 × 32 × 0.8 / 1000) = 0.10 mm/rev. For a 0.4 mm radius: f = 0.07 mm/rev. This calculator's \"Feed rate to achieve target\" field shows the answer for your specific parameters automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does cutting speed affect surface finish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indirectly, yes — through built-up edge formation. At low cutting speeds (below 150 SFM in steel), BUE forms and degrades surface finish. At very high speeds (above 800 SFM), thermal softening can improve finish. The Speed &amp; Feed Calculator helps select speeds that avoid the BUE formation range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does tool wear affect surface roughness?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As the tool wears, the nose radius changes (usually increases slightly before catastrophic failure), which should theoretically improve finish. However, micro-chipping and edge breakdown create irregular surface features that degrade finish significantly. Replace inserts when Ra increases by more than 30% at constant cutting parameters."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/surface-roughness-calculator/"/>
+  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/surface-roughness-calculator/"/>
+  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/surface-roughness-calculator/"/>
+  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/surface-roughness-calculator/"/>
+  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/surface-roughness-calculator/"/>
+  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/surface-roughness-calculator/"/>
+  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/surface-roughness-calculator/"/>
 </head>
 <body>
 <nav>
@@ -170,7 +264,93 @@ footer a{color:#0066cc;text-decoration:none}
 </div>
 </section>
 
-<section class="seo">
+<footer class="tool-footer">
+<div class="container">
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/tools/">All Tools</a>
+    <a href="/products/">Products</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about.html">About</a>
+    <a href="/quote.html">Get a Quote</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
+  </div>
+  <p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
+  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
+  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+</div>
+
+<div class="lang-switcher">
+  <span class="lang-label">🌐</span>
+  <a href="https://carbide-tooling.com/tools/surface-roughness-calculator/" class="lang-link active">EN</a>
+  <a href="https://carbide-tooling.com/de/tools/surface-roughness-calculator/" class="lang-link">DE</a>
+  <a href="https://carbide-tooling.com/jp/tools/surface-roughness-calculator/" class="lang-link">JP</a>
+  <a href="https://carbide-tooling.com/es/tools/surface-roughness-calculator/" class="lang-link">ES</a>
+  <a href="https://carbide-tooling.com/vi/tools/surface-roughness-calculator/" class="lang-link">VI</a>
+  <a href="https://carbide-tooling.com/zh/tools/surface-roughness-calculator/" class="lang-link">中</a>
+</div>
+</footer>
+
+<script>
+const N_GRADES = [
+  {n:'N1',ra:0.025},{n:'N2',ra:0.05},{n:'N3',ra:0.1},{n:'N4',ra:0.2},
+  {n:'N5',ra:0.4},{n:'N6',ra:0.8},{n:'N7',ra:1.6},{n:'N8',ra:3.2},
+  {n:'N9',ra:6.3},{n:'N10',ra:12.5},{n:'N11',ra:25},{n:'N12',ra:50}
+];
+
+function calc() {
+  const op = document.getElementById('op-type').value;
+  const feed = parseFloat(document.getElementById('feed').value) || 0.15;
+  const r = parseFloat(document.getElementById('radius').value) || 0.8;
+  const targetRa = parseFloat(document.getElementById('target').value) || 0.4;
+
+  // Ra = f² / (32 × R) — result in mm, convert to μm (*1000)
+  const ra = (feed * feed) / (32 * r) * 1000;
+  const rz = ra * 6; // approximate ratio for turning
+
+  // Find N grade
+  let ng = N_GRADES[0].n;
+  for (let i = N_GRADES.length - 1; i >= 0; i--) {
+    if (ra <= N_GRADES[i].ra) ng = N_GRADES[i].n;
+  }
+
+  // Status
+  let status, statusClass;
+  if (ra <= targetRa * 0.8) {
+    status = '✅ Achievable';
+    statusClass = 'good';
+  } else if (ra <= targetRa * 1.2) {
+    status = '⚠️ Marginal';
+    statusClass = 'warning';
+  } else {
+    status = '❌ Not achievable';
+    statusClass = '';
+  }
+
+  // Feed rate needed for target Ra
+  const feedTarget = targetRa > 0 ? Math.sqrt((targetRa * 32 * r) / 1000) : 0;
+
+  // Minimum nose radius for target
+  const minRadius = targetRa > 0 ? (feed * feed * 1000) / (32 * targetRa) : 0;
+
+  document.getElementById('r-ra').textContent = ra.toFixed(2);
+  document.getElementById('r-rz').textContent = rz.toFixed(2);
+  document.getElementById('r-ngrade').textContent = ng;
+  const st = document.getElementById('r-status');
+  st.textContent = status;
+  st.className = 'value ' + statusClass;
+  document.getElementById('x-feed-target').textContent = feedTarget.toFixed(3);
+  document.getElementById('x-radius-target').textContent = minRadius.toFixed(2);
+}
+
+calc();
+</script>
+<section class="seo-content">
 <div class="container">
 
   <h2>ISO Surface Finish Standards: What Ra, Rz, and N Grades Actually Mean</h2>
@@ -239,67 +419,48 @@ footer a{color:#0066cc;text-decoration:none}
   </div>
 </div>
 </section>
+<div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Speed & Feed</a>
+<a href="/tools/hardness-converter/">Hardness Converter</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>
+<a href="/tools/mrr-calculator/">MRR Calculator</a>
+<a href="/tools/feed-converter/">Feed Converter</a>
+<a href="/tools/surface-roughness-calculator/">Surface Roughness</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guide</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
+</div></div>
 
-<footer>
-<div class="container">
-  <p style="margin-bottom:8px"><a href="https://carbide-tooling.com/">CarbideTooling.com</a> — <a href="/tools/">All Tools</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p><p style="font-size:11px">© 2026 Carbide Tooling. Surface finish calculations are theoretical; validate with profilometer measurements.</p>
+<aside class="b2b-card">
+  <div class="b2b-icon">📦</div>
+  <div class="b2b-body">
+    <h3>Need Professional Tooling?</h3>
+    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+  </div>
+  <a href="/quote.html" class="b2b-btn">Request Bulk Quote →</a>
+</aside>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/tool-holders.html">Tool Holders</a></div>
+<section class="more-tools">
+  <h3>🔧 Explore 100+ Professional Machining Tools</h3>
+  <div class="tool-grid">
+<a href="/tools/aql-sampling-calculator/">AQL Sampling Calculator</a>
+<a href="/tools/threading-pass-calculator/">Threading Pass Calculator</a>
+<a href="/tools/thread-pitch-diameter-calculator/">Thread Pitch Diameter Calculator</a>
+<a href="/tools/superalloy-tool-life/">Superalloy Tool Life Estimator</a>
+<a href="/tools/coating-selector/">Coating Selector</a>
+<a href="/tools/horsepower-calculator/">Horsepower Calculator</a>
+<a href="/tools/countersink-depth-calculator/">Countersink Depth Calculator</a>
+<a href="/tools/slot-milling-calculator/">Slot Milling Calculator</a>
+
+  </div>
+</section>
+<div class="share-bar">
+  <span class="share-label">↗ Share with Engineers</span>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/tools/surface-roughness-calculator/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/surface-roughness-calculator/&text=Surface Roughness Calculator" target="_blank" rel="noopener">𝕏</a>
+  <a href="mailto:subject=Surface Roughness Calculator&body=Check this out: https://carbide-tooling.com/tools/surface-roughness-calculator/">Email</a>
 </div>
-</footer>
 
-<script>
-const N_GRADES = [
-  {n:'N1',ra:0.025},{n:'N2',ra:0.05},{n:'N3',ra:0.1},{n:'N4',ra:0.2},
-  {n:'N5',ra:0.4},{n:'N6',ra:0.8},{n:'N7',ra:1.6},{n:'N8',ra:3.2},
-  {n:'N9',ra:6.3},{n:'N10',ra:12.5},{n:'N11',ra:25},{n:'N12',ra:50}
-];
-
-function calc() {
-  const op = document.getElementById('op-type').value;
-  const feed = parseFloat(document.getElementById('feed').value) || 0.15;
-  const r = parseFloat(document.getElementById('radius').value) || 0.8;
-  const targetRa = parseFloat(document.getElementById('target').value) || 0.4;
-
-  // Ra = f² / (32 × R) — result in mm, convert to μm (*1000)
-  const ra = (feed * feed) / (32 * r) * 1000;
-  const rz = ra * 6; // approximate ratio for turning
-
-  // Find N grade
-  let ng = N_GRADES[0].n;
-  for (let i = N_GRADES.length - 1; i >= 0; i--) {
-    if (ra <= N_GRADES[i].ra) ng = N_GRADES[i].n;
-  }
-
-  // Status
-  let status, statusClass;
-  if (ra <= targetRa * 0.8) {
-    status = '✅ Achievable';
-    statusClass = 'good';
-  } else if (ra <= targetRa * 1.2) {
-    status = '⚠️ Marginal';
-    statusClass = 'warning';
-  } else {
-    status = '❌ Not achievable';
-    statusClass = '';
-  }
-
-  // Feed rate needed for target Ra
-  const feedTarget = targetRa > 0 ? Math.sqrt((targetRa * 32 * r) / 1000) : 0;
-
-  // Minimum nose radius for target
-  const minRadius = targetRa > 0 ? (feed * feed * 1000) / (32 * targetRa) : 0;
-
-  document.getElementById('r-ra').textContent = ra.toFixed(2);
-  document.getElementById('r-rz').textContent = rz.toFixed(2);
-  document.getElementById('r-ngrade').textContent = ng;
-  const st = document.getElementById('r-status');
-  st.textContent = status;
-  st.className = 'value ' + statusClass;
-  document.getElementById('x-feed-target').textContent = feedTarget.toFixed(3);
-  document.getElementById('x-radius-target').textContent = minRadius.toFixed(2);
-}
-
-calc();
-</script>
 </body>
 </html>

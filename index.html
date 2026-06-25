@@ -64,6 +64,26 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 .section-title h2{font-size:40px;font-weight:700;letter-spacing:-.5px;margin-bottom:8px;line-height:1.15}
 .section-title p{font-size:17px;color:#86868b;max-width:480px;line-height:1.7}
 
+/* Industrial Intelligence Hub */
+.hub-featured{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.hub-card{position:relative;border-radius:20px;padding:32px 28px;text-decoration:none;color:#1d1d1f;overflow:hidden;transition:all .3s;min-height:200px;display:flex;gap:20px;align-items:center}
+.hub-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.hub-primary{grid-column:1/-1;background:linear-gradient(135deg,#f0f7ff,#e3efff);border:1px solid rgba(0,102,204,.12)}
+.hub-secondary{background:#f5f5f7;border:1px solid #e8e8ed}
+.hub-secondary:hover{background:#eeeef0}
+.hub-card-bg{position:absolute;right:-20px;top:-20px;width:160px;height:160px;background:radial-gradient(circle,rgba(0,102,204,.06) 0%,transparent 70%);border-radius:50%}
+.hub-icon{font-size:36px;flex-shrink:0;width:60px;height:60px;background:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.hub-info{flex:1;position:relative;z-index:1}
+.hub-info h3{font-size:18px;font-weight:700;margin-bottom:4px;letter-spacing:-.3px}
+.hub-info p{font-size:13px;color:#86868b;line-height:1.6;margin-bottom:8px}
+.hub-cta{font-size:12px;font-weight:600;color:#0066cc}
+.hub-categories{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.hub-cat{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 14px;background:#f5f5f7;border-radius:16px;text-decoration:none;color:#1d1d1f;transition:all .2s;text-align:center}
+.hub-cat:hover{background:#eeeef0;transform:translateY(-2px)}
+.hub-cat-icon{font-size:24px}
+.hub-cat-name{font-size:12px;font-weight:600}
+.hub-cat-count{font-size:10px;color:#86868b}
+
 /* Cards */
 .card{background:#f5f5f7;border-radius:18px;overflow:hidden;transition:all .25s;cursor:default}
 .card:hover{background:#eeeef0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
@@ -129,9 +149,13 @@ footer .bottom{border-top:1px solid #e8e8ed;margin-top:32px;padding-top:20px;tex
   .section{padding:60px 0}
   .section-title h2{font-size:28px}
   .section-title p{max-width:100%}
-  .grid3,.grid2,.toolbox-grid{grid-template-columns:1fr}
-  .toolbox{padding:40px 24px;border-radius:20px;margin:40px 0}
-  .toolbox-title h2{font-size:26px}
+	  .hub-featured{grid-template-columns:1fr}
+	  .hub-categories{grid-template-columns:repeat(2,1fr)}
+	  .hub-info h3{font-size:16px}
+	  .hub-card{padding:22px 18px;min-height:auto}
+	  .grid3,.grid2,.toolbox-grid{grid-template-columns:1fr}
+	  .toolbox{padding:40px 24px;border-radius:20px;margin:40px 0}
+	  .toolbox-title h2{font-size:26px}
   .cta-block{padding:48px 24px;border-radius:20px}
   .cta-block h2{font-size:24px}
   .footer-grid{grid-template-columns:1fr;gap:24px}
@@ -158,38 +182,113 @@ footer .bottom{border-top:1px solid #e8e8ed;margin-top:32px;padding-top:20px;tex
       <a href="/products/">Products</a>
       <div class="nav-drop">
         <span>Calculators &amp; Tools</span>
-        <div class="mega-menu">
-	          <div class="mega-grid">
-	            <div class="mega-cat">⚡ Material Removal</div>
-	            <a href="/tools/mrr-calculator/" class="mega-item"><span class="icon">⚡</span> MRR Calculator</a>
-	            <a href="/tools/horsepower-calculator/" class="mega-item"><span class="icon">🔌</span> Spindle Horsepower</a>
-	            <a href="/tools/force-calculator/" class="mega-item"><span class="icon">💪</span> Milling Force</a>
-            <a href="/tools/peck-drilling-calculator/" class="mega-item"><span class="icon">🔄</span> Peck Drilling</a>
-            <a href="/tools/threading-pass-calculator/" class="mega-item"><span class="icon">🔧</span> Threading Pass</a>
-            <a href="/tools/feed-rate-override-calculator/" class="mega-item"><span class="icon">📊</span> Feed Override</a>
-            <a href="/tools/slot-milling-calculator/" class="mega-item"><span class="icon">🔧</span> Slot Milling</a>
-            <a href="/tools/step-milling-calculator/" class="mega-item"><span class="icon">🔧</span> Step Milling</a>
-	            <div class="mega-cat">📐 Speeds &amp; Feeds</div>
-	            <a href="/tools/speed-feed/" class="mega-item"><span class="icon">⚙️</span> Speed &amp; Feed</a>
-	            <a href="/tools/chip-load/" class="mega-item"><span class="icon">📐</span> Chip Load</a>
-	            <a href="/tools/surface-speed/" class="mega-item"><span class="icon">🔄</span> SFM / Surface Speed</a>
-            <a href="/tools/cycle-time-calculator/" class="mega-item"><span class="icon">⏱️</span> Cycle Time</a>
-            <a href="/tools/surface-roughness-calculator/" class="mega-item"><span class="icon">🔬</span> Surface Roughness</a>
-            <a href="/tools/nose-radius-compensation/" class="mega-item"><span class="icon">📐</span> Nose Radius Comp</a>
-            <a href="/tools/ramping-angle-calculator/" class="mega-item"><span class="icon">📐</span> Ramping Angle</a>
-            <a href="/tools/trochoidal-milling-calculator/" class="mega-item"><span class="icon">🌀</span> Trochoidal Milling</a>
-            <a href="/tools/ball-nose-effective-diameter/" class="mega-item"><span class="icon">🔘</span> Ball Nose Eff Dia</a>
-            <a href="/tools/helical-interpolation-calculator/" class="mega-item"><span class="icon">🔄</span> Helical Interp</a>
-            <a href="/tools/heat-expansion-calculator/" class="mega-item"><span class="icon">🌡️</span> Heat Expansion</a>
-            <a href="/tools/tool-runout-calculator/" class="mega-item"><span class="icon">🔍</span> Tool Runout</a>
-	            <div class="mega-cat">🔩 Reference &amp; Tooling</div>
-	            <a href="/tools/grade-reference/" class="mega-item"><span class="icon">🔩</span> Grade Cross Reference</a>
-	            <a href="/guides/carbide-grades.html" class="mega-item"><span class="icon">📋</span> Carbide Grade Selector</a>
-	            <a href="/guides/coating-comparison.html" class="mega-item"><span class="icon">🧪</span> Coating Comparison</a>
-	            <a href="/guides/end-mill-geometry.html" class="mega-item"><span class="icon">🔬</span> End Mill Geometry</a>
+	          <div class="mega-menu">
+	          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;min-width:620px">
+	            <!-- Category 1 -->
+	            <div class="mega-cat-block">
+	              <div class="mega-cat" style="cursor:pointer" onclick="toggleCat(this)">
+		                ⚡ Cutting Parameters <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+	              </div>
+	              <div class="mega-sub" style="display:none">
+	                <a href="/tools/speed-feed/" class="mega-item"><span class="icon">⚙️</span> Speed & Feed</a>
+	                <a href="/tools/chip-load/" class="mega-item"><span class="icon">📐</span> Chip Load</a>
+	                <a href="/tools/surface-speed/" class="mega-item"><span class="icon">🔄</span> SFM / Surface Speed</a>
+	                <a href="/tools/mrr-calculator/" class="mega-item"><span class="icon">⚡</span> MRR Calculator</a>
+	                <a href="/tools/horsepower-calculator/" class="mega-item"><span class="icon">🔌</span> Spindle Horsepower</a>
+	                <a href="/tools/force-calculator/" class="mega-item"><span class="icon">💪</span> Milling Force</a>
+	                <a href="/tools/cycle-time-calculator/" class="mega-item"><span class="icon">⏱️</span> Cycle Time</a>
+	                <a href="/tools/surface-roughness-calculator/" class="mega-item"><span class="icon">🔬</span> Surface Roughness</a>
+	                <a href="/tools/nose-radius-compensation/" class="mega-item"><span class="icon">📐</span> Nose Radius Comp</a>
+	                <a href="/tools/ramping-angle-calculator/" class="mega-item"><span class="icon">📐</span> Ramping Angle</a>
+	                <a href="/tools/trochoidal-milling-calculator/" class="mega-item"><span class="icon">🌀</span> Trochoidal Milling</a>
+	                <a href="/tools/slot-milling-calculator/" class="mega-item"><span class="icon">🔧</span> Slot Milling</a>
+	                <a href="/tools/step-milling-calculator/" class="mega-item"><span class="icon">🔧</span> Step Milling</a>
+	                <a href="/tools/ball-nose-effective-diameter/" class="mega-item"><span class="icon">🔘</span> Ball Nose Eff Dia</a>
+	                <a href="/tools/helical-interpolation-calculator/" class="mega-item"><span class="icon">🔄</span> Helical Interp</a>
+	                <a href="/tools/heat-expansion-calculator/" class="mega-item"><span class="icon">🌡️</span> Heat Expansion</a>
+	                <a href="/tools/tool-runout-calculator/" class="mega-item"><span class="icon">🔍</span> Tool Runout</a>
+	                <a href="/tools/feed-rate-override-calculator/" class="mega-item"><span class="icon">📊</span> Feed Override</a>
+	              </div>
+	            </div>
+	            <!-- Category 2 -->
+	            <div class="mega-cat-block">
+	              <div class="mega-cat" style="cursor:pointer" onclick="toggleCat(this)">
+		                🔧 Drilling, Tapping & Threads <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+	              </div>
+	              <div class="mega-sub" style="display:none">
+	                <a href="/tools/tap-drill-size-calculator/" class="mega-item"><span class="icon">🔧</span> Tap Drill Size</a>
+	                <a href="/tools/tapping-feed-rate-calculator/" class="mega-item"><span class="icon">⚡</span> Tapping Feed Rate</a>
+	                <a href="/tools/drill-point-length-calculator/" class="mega-item"><span class="icon">📐</span> Drill Point Length</a>
+	                <a href="/tools/thread-depth-torque-calculator/" class="mega-item"><span class="icon">🔩</span> Thread Depth & Torque</a>
+	                <a href="/tools/metric-imperial-thread-converter/" class="mega-item"><span class="icon">🔄</span> Metric-Imperial Thread</a>
+	                <a href="/tools/npt-pipe-thread-calculator/" class="mega-item"><span class="icon">🔧</span> NPT Pipe Thread</a>
+	                <a href="/tools/percentage-of-thread-calculator/" class="mega-item"><span class="icon">📊</span> Thread Percentage</a>
+	                <a href="/tools/form-tap-drill-calculator/" class="mega-item"><span class="icon">🔄</span> Form Tap Drill</a>
+	                <a href="/tools/thread-lead-angle-calculator/" class="mega-item"><span class="icon">📐</span> Thread Lead Angle</a>
+	                <a href="/tools/thread-pitch-diameter-calculator/" class="mega-item"><span class="icon">📐</span> Thread Pitch Dia</a>
+	                <a href="/tools/step-drill-design-calculator/" class="mega-item"><span class="icon">🔧</span> Step Drill Design</a>
+	                <a href="/tools/countersink-depth-calculator/" class="mega-item"><span class="icon">📐</span> Countersink Depth</a>
+	                <a href="/tools/reaming-allowance-calculator/" class="mega-item"><span class="icon">🔩</span> Reaming Allowance</a>
+	                <a href="/tools/gun-drill-calculator/" class="mega-item"><span class="icon">🕳️</span> Gun Drill</a>
+	                <a href="/tools/blind-hole-tapping-calculator/" class="mega-item"><span class="icon">⚠️</span> Blind Hole Tapping</a>
+	              </div>
+	            </div>
+	            <!-- Category 3 -->
+	            <div class="mega-cat-block">
+	              <div class="mega-cat" style="cursor:pointer" onclick="toggleCat(this)">
+		                🔩 Materials & Grades <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+	              </div>
+	              <div class="mega-sub" style="display:none">
+	                <a href="/tools/grade-reference/" class="mega-item"><span class="icon">🔩</span> Grade Cross Reference</a>
+	                <a href="/tools/carbide-grade-cross-ref-2/" class="mega-item"><span class="icon">🔩</span> Full Grade Chart</a>
+	                <a href="/tools/metal-weight-calculator/" class="mega-item"><span class="icon">⚖️</span> Carbide Weight</a>
+	                <a href="/tools/metal-cost-calculator/" class="mega-item"><span class="icon">💰</span> Metal Weight & Cost</a>
+	                <a href="/tools/hardness-converter/" class="mega-item"><span class="icon">📊</span> Hardness Converter</a>
+	                <a href="/tools/machinability-rating/" class="mega-item"><span class="icon">📊</span> Machinability Rating</a>
+	                <a href="/tools/stainless-properties/" class="mega-item"><span class="icon">🔩</span> Stainless Properties</a>
+	                <a href="/tools/titanium-machining-guide/" class="mega-item"><span class="icon">⚡</span> Titanium Guide</a>
+	                <a href="/tools/aluminum-alloy-table/" class="mega-item"><span class="icon">📋</span> Aluminum Alloys</a>
+	                <a href="/tools/tool-steel-heat-treat/" class="mega-item"><span class="icon">🔥</span> Tool Steel Heat Treat</a>
+	                <a href="/tools/cast-iron-machining/" class="mega-item"><span class="icon">🔩</span> Cast Iron Machining</a>
+	                <a href="/tools/coating-selector/" class="mega-item"><span class="icon">🧪</span> Coating Selector</a>
+	                <a href="/tools/tensile-strength-converter/" class="mega-item"><span class="icon">📊</span> Tensile Converter</a>
+	                <a href="/tools/plastic-machining/" class="mega-item"><span class="icon">🧩</span> Plastic Machining</a>
+	                <a href="/tools/graphite-machining/" class="mega-item"><span class="icon">✏️</span> Graphite Machining</a>
+	                <a href="/tools/brass-machining-parameters/" class="mega-item"><span class="icon">🟨</span> Brass/Copper</a>
+	                <a href="/tools/superalloy-tool-life/" class="mega-item"><span class="icon">🔥</span> Superalloy Life</a>
+	              </div>
+	            </div>
+	            <!-- Category 4 -->
+	            <div class="mega-cat-block">
+	              <div class="mega-cat" style="cursor:pointer" onclick="toggleCat(this)">
+		                📊 Cost, Tolerances & Reference <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+	              </div>
+	              <div class="mega-sub" style="display:none">
+	                <a href="/tools/cost-per-part-calculator/" class="mega-item"><span class="icon">💰</span> Cost Per Part</a>
+	                <a href="/tools/tool-life-economics/" class="mega-item"><span class="icon">📊</span> Tool Life Economics</a>
+	                <a href="/tools/cnc-roi-calculator/" class="mega-item"><span class="icon">📈</span> CNC ROI</a>
+	                <a href="/tools/batch-cost-calculator/" class="mega-item"><span class="icon">📦</span> Batch Cost</a>
+	                <a href="/tools/iso-fit-calculator/" class="mega-item"><span class="icon">📐</span> ISO Fit</a>
+	                <a href="/tools/bolt-circle-calculator/" class="mega-item"><span class="icon">⭕</span> Bolt Circle</a>
+	                <a href="/tools/flatness-calculator/" class="mega-item"><span class="icon">📐</span> Flatness</a>
+	                <a href="/tools/sine-bar-calculator/" class="mega-item"><span class="icon">📐</span> Sine Bar</a>
+	                <a href="/tools/coord-rotation-calculator/" class="mega-item"><span class="icon">🔄</span> Coord Rotation</a>
+	                <a href="/tools/chamfer-calculator/" class="mega-item"><span class="icon">📐</span> Chamfer</a>
+	                <a href="/tools/taper-calculator/" class="mega-item"><span class="icon">📐</span> Taper</a>
+	                <a href="/tools/gdt-symbols-reference/" class="mega-item"><span class="icon">📐</span> GD&T Symbols</a>
+	                <a href="/tools/keyway-depth-calculator/" class="mega-item"><span class="icon">🔧</span> Keyway Depth</a>
+	                <a href="/tools/dovetail-calculator/" class="mega-item"><span class="icon">📐</span> Dovetail</a>
+	                <a href="/tools/pythagorean-calculator/" class="mega-item"><span class="icon">◢</span> Pythagorean</a>
+	                <a href="/tools/gear-parameter-calculator/" class="mega-item"><span class="icon">⚙️</span> Gear Parameters</a>
+	                <a href="/tools/gcode-reference/" class="mega-item"><span class="icon">💻</span> G-Code Ref</a>
+	                <a href="/tools/pressure-converter/" class="mega-item"><span class="icon">📊</span> Pressure Converter</a>
+	                <a href="/tools/ultimate-unit-converter/" class="mega-item"><span class="icon">🔄</span> Unit Converter</a>
+	                <a href="/tools/aql-sampling-calculator/" class="mega-item"><span class="icon">📋</span> AQL Sampling</a>
+	              </div>
+	            </div>
 	          </div>
-          <div class="mega-btn"><a href="/tools/">View All Tools →</a></div>
-        </div>
+	          <div class="mega-btn" style="clear:both"><a href="/tools/">View All 100 Tools →</a></div>
+	        </div>
       </div>
       <a href="/guides/">Guides</a>
       <a href="/about.html">About</a>
@@ -217,6 +316,74 @@ footer .bottom{border-top:1px solid #e8e8ed;margin-top:32px;padding-top:20px;tex
 </div>
 </section>
 
+<!-- ===== INDUSTRIAL INTELLIGENCE HUB ===== -->
+<section class="section" style="padding-bottom:40px">
+<div class="container">
+  <div class="section-title">
+    <div class="label">🤖 Industrial Intelligence Hub</div>
+    <h2>Smart tools for smart machining.</h2>
+    <p>Free, professional-grade calculators and references used by engineers at Fortune 500 shops every day.</p>
+  </div>
+  
+  <!-- Featured 3 large tiles -->
+  <div class="hub-featured">
+    <a href="/tools/speed-feed/" class="hub-card hub-primary">
+      <div class="hub-card-bg"></div>
+      <div class="hub-icon">⚙️</div>
+      <div class="hub-info">
+        <h3>Speed &amp; Feed Calculator</h3>
+        <p>RPM, IPM, chip load, MRR — optimized for any tool-material combination.</p>
+        <span class="hub-cta">Calculate now →</span>
+      </div>
+    </a>
+    <a href="/tools/carbide-grade-cross-ref-2/" class="hub-card hub-secondary">
+      <div class="hub-icon">🔩</div>
+      <div class="hub-info">
+        <h3>Carbide Grade Cross Reference</h3>
+        <p>Compare ISO P/M/K/S/H grades across Sandvik, Kennametal, Iscar, and more.</p>
+        <span class="hub-cta">Match grades →</span>
+      </div>
+    </a>
+    <a href="/tools/hardness-converter/" class="hub-card hub-secondary">
+      <div class="hub-icon">📊</div>
+      <div class="hub-info">
+        <h3>Hardness Converter</h3>
+        <p>Instant HRC, HB, HV, and tensile strength conversions for all engineering materials.</p>
+        <span class="hub-cta">Convert now →</span>
+      </div>
+    </a>
+  </div>
+  
+  <!-- Category grid -->
+  <div class="hub-categories">
+    <a href="/tools/" class="hub-cat">
+      <span class="hub-cat-icon">⚡</span>
+      <span class="hub-cat-name">Cutting Parameters</span>
+      <span class="hub-cat-count">18 tools</span>
+    </a>
+    <a href="/tools/" class="hub-cat">
+      <span class="hub-cat-icon">🔧</span>
+      <span class="hub-cat-name">Drilling &amp; Threading</span>
+      <span class="hub-cat-count">15 tools</span>
+    </a>
+    <a href="/tools/" class="hub-cat">
+      <span class="hub-cat-icon">🔩</span>
+      <span class="hub-cat-name">Materials &amp; Grades</span>
+      <span class="hub-cat-count">17 tools</span>
+    </a>
+    <a href="/tools/" class="hub-cat">
+      <span class="hub-cat-icon">📊</span>
+      <span class="hub-cat-name">Cost, Tolerances &amp; Ref</span>
+      <span class="hub-cat-count">22+ tools</span>
+    </a>
+  </div>
+  
+  <div style="text-align:center;margin-top:24px">
+    <a href="/tools/" class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:24px;font-size:13px;font-weight:500;text-decoration:none;color:#1d1d1f;background:rgba(0,0,0,.05)">Browse All 100+ Tools →</a>
+  </div>
+</div>
+</section>
+
 <!-- ===== TOOLBOX ===== -->
 <section class="section">
 <div class="container">
@@ -235,11 +402,11 @@ footer .bottom{border-top:1px solid #e8e8ed;margin-top:32px;padding-top:20px;tex
         <div class="icon">📐</div>
         <div class="info"><h3>Chip Load Calculator</h3><p>Optimize feed per tooth for maximum MRR and tool life.</p></div>
       </a>
-      <a href="/guides/carbide-grades.html" class="toolbox-card">
+      <a href="/tools/carbide-grade-cross-ref-2/" class="toolbox-card">
         <div class="icon">🔩</div>
-        <div class="info"><h3>Carbide Grade Selector</h3><p>Match substrate and coating to your workpiece material.</p></div>
+        <div class="info"><h3>Carbide Grade Cross Ref</h3><p>ISO P/M/K/S/H grade comparison across all major brands.</p></div>
       </a>
-      <a href="#" class="toolbox-card">
+      <a href="/tools/hardness-converter/" class="toolbox-card">
         <div class="icon">📊</div>
         <div class="info"><h3>Hardness Converter</h3><p>Convert between HRC, HB, HV, and tensile strength instantly.</p></div>
       </a>
@@ -364,6 +531,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   // Re-trigger hover for desktop
 });
+
+// Toggle category expand in mega menu
+function toggleCat(el) {
+  const sub = el.nextElementSibling;
+  if (!sub) return;
+  const isOpen = sub.style.display === 'block';
+  // Close all others
+  document.querySelectorAll('.mega-sub').forEach(s => s.style.display = 'none');
+  document.querySelectorAll('.mega-cat span').forEach(s => s.textContent = '▶');
+  // Toggle this one
+  if (!isOpen) {
+    sub.style.display = 'block';
+    el.querySelector('span').textContent = '▼';
+  }
+}
 </script>
 </body>
 </html>

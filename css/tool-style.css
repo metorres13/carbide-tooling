@@ -1,0 +1,321 @@
+/* ═══════════════════════════════════════════════
+   Carbide-Tooling.com — Apple Industrial Design
+   Shared Component Styles for All Tool Pages
+   ═══════════════════════════════════════════════ */
+
+/* ── Design Tokens ── */
+:root {
+  --accent: #0066cc;
+  --accent-hover: #004999;
+  --surface: #f5f5f7;
+  --text: #1d1d1f;
+  --text-secondary: #86868b;
+  --border: #e8e8ed;
+  --nav-height: 44px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.08);
+  --font: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+
+/* ── B2B Inquiry Card ── */
+.b2b-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%);
+  border: 1px solid #cce4ff;
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.b2b-card .b2b-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,102,204,.1);
+}
+.b2b-card .b2b-body { flex: 1; }
+.b2b-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.b2b-card p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+.b2b-card .b2b-btn {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.b2b-card .b2b-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+@media (max-width: 640px) {
+  .b2b-card { flex-direction: column; text-align: center; }
+}
+
+/* ── Product Anchor Links ── */
+.product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 14px 18px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+.product-links span {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-right: 4px;
+  line-height: 28px;
+}
+.product-links a {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 4px 12px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: all .15s;
+}
+.product-links a:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ── Social Share Bar ── */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  margin: 20px 0 8px;
+  border-top: 1px solid var(--border);
+}
+.share-bar .share-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.share-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background: var(--surface);
+  transition: all .15s;
+}
+.share-bar a:hover {
+  color: var(--accent);
+  background: #e8f0fe;
+}
+
+/* ── Explore More Tools (Internal Linking) ── */
+.more-tools {
+  margin: 32px 0 20px;
+}
+.more-tools h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.more-tools .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.more-tools .tool-grid a {
+  display: block;
+  font-size: 11px;
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: all .15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.more-tools .tool-grid a:hover {
+  background: #e8f0fe;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+@media (max-width: 768px) {
+  .more-tools .tool-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .more-tools .tool-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Footer Enhancement ── */
+.tool-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 32px 0 24px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+.tool-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.tool-footer a:hover {
+  text-decoration: underline;
+}
+.tool-footer .footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+.tool-footer .footer-links a {
+  color: var(--text-secondary);
+}
+.tool-footer .footer-links a:hover {
+  color: var(--text);
+}
+.tool-footer .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.tool-footer .footer-social a {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e8e8ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+  transition: all .15s;
+}
+.tool-footer .footer-social a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Result Cards Enhancement ── */
+.result-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.result-card .result-label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.result-card .result-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.result-card .result-unit {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ── SEO Content Area (moved out of footer) ── */
+.seo-content {
+  padding: 32px 0 20px;
+}
+.seo-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.seo-content p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* ── Toolbox Widget ── */
+.toolbox-widget {
+  padding: 24px 0;
+  margin: 24px 0 8px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.toolbox-widget h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.toolbox-widget .toolbox-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.toolbox-widget .toolbox-links a {
+  font-size: 11px;
+  color: var(--text);
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all .15s;
+}
+.toolbox-widget .toolbox-links a:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}

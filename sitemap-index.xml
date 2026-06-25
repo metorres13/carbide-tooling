@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://carbide-tooling.com/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://carbide-tooling.com/sitemap-de.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://carbide-tooling.com/sitemap-jp.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://carbide-tooling.com/sitemap-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://carbide-tooling.com/sitemap-vi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://carbide-tooling.com/sitemap-zh.xml</loc>
+  </sitemap>
+</sitemapindex>

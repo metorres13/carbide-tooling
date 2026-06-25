@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title id="meta-title">Turning Cycle Time Calculator — CNC Cycle Time Estimation | Carbide Tooling</title>
+<title>Cycle Time Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta name="description" id="meta-desc" content="Free online turning cycle time calculator for CNC lathes. Estimate cutting time for OD turning, facing, boring, and parting operations. Optimize cycle time and cost per part." />
 <meta property="og:title" content="Turning Cycle Time Calculator — Carbide Tooling" />
 <meta property="og:description" content="Calculate CNC turning cycle time for OD turning, facing, boring, and parting. Estimate parts per hour and optimize production." />
@@ -77,7 +77,101 @@ footer a{color:#0066cc;text-decoration:none}
   .card{padding:20px 16px}
   .card-row,.seo .comparison{grid-template-columns:1fr}
 }
+.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 </style>
+
+<link rel="stylesheet" href="/css/tool-style.css"/>
+<meta name="theme-color" content="#0066cc"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
+<meta property="og:title" content="Cycle Time Calculator | Precision Machining Tool"/>
+<meta property="og:description" content=""/>
+<meta property="og:url" content="https://carbide-tooling.com/tools/cycle-time-calculator/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cycle Time Calculator | Precision Machining Tool"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Cycle Time Calculator",
+      "url": "https://carbide-tooling.com/tools/cycle-time-calculator/",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Web",
+      "description": "Cycle Time Calculator for CNC machining",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://carbide-tooling.com/tools/cycle-time-calculator/",
+      "name": "Cycle Time Calculator",
+      "description": "Cycle Time Calculator for CNC machining",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://carbide-tooling.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate cycle time for CNC turning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cutting time = length of cut ÷ (feed per revolution × RPM). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for turning time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (RPM). For multiple passes, multiply by the number of passes and add non-cutting time between passes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does depth of cut affect cycle time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good cycle time for CNC turning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does constant surface speed affect cycle time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant RPM. Always use G96 for facing operations."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/cycle-time-calculator/"/>
+  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/cycle-time-calculator/"/>
+  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cycle-time-calculator/"/>
+  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cycle-time-calculator/"/>
+  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/"/>
+  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cycle-time-calculator/"/>
+  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/cycle-time-calculator/"/>
 </head>
 <body>
 <nav>
@@ -187,66 +281,35 @@ footer a{color:#0066cc;text-decoration:none}
 </div>
 </section>
 
-<section class="seo">
+<footer class="tool-footer">
 <div class="container">
-
-  <h2>How Long Should Each Turning Operation Take?</h2>
-  <p>A 304 stainless steel shaft, 50mm diameter × 200mm long, with three roughing passes and one finishing pass — is 4 minutes reasonable? Or should it be 2? Without a structured calculation, estimates vary by 100% or more between experienced programmers. This variation directly impacts quoting accuracy, production scheduling, and shop profitability. The turning cycle time formula eliminates guesswork by breaking each operation down into its geometric and kinematic components.</p>
-
-  <p>The difference between a well-optimized turning cycle and a conservative one is typically 30-50% of cycle time — which translates directly into cost per part. A job that runs 500 parts per year at $12 each versus $8 each represents a $2,000 annual difference for a single part number. Across an entire production schedule, the savings from accurate cycle time optimization fund significant investments in tooling and equipment.</p>
-
-  <h2>The Turning Time Formula</h2>
-  <p>For any single turning pass, the cutting time is derived from the fundamental relationship between tool travel distance and feed rate:</p>
-  <p><strong>Cutting time (min):</strong> <code>t = L / (f × n)</code><br/>
-  Where <strong>L</strong> = total tool travel including approach and overrun (mm), <strong>f</strong> = feed per revolution (mm/rev), and <strong>n</strong> = spindle speed (RPM).</p>
-
-  <p>For <strong>OD turning</strong>, tool travel L = length of cut + approach distance. For <strong>facing</strong>, the average diameter is used: <code>L = (Dinitial + Dfinal) / 4</code> combined with the radial travel distance. For <strong>boring</strong>, the calculation is identical to OD turning but with internal diameter considerations. For <strong>parting</strong>, the travel distance equals the radius of the bar stock.</p>
-
-  <h2>Where Cycle Time Gets Lost: The Hidden Factors</h2>
-  <p>Cutting time is only part of the total cycle time. The non-cutting components — tool positioning, indexing, part loading/unloading, and inspection — often account for 30-60% of the total cycle on small parts. This calculator includes a non-cutting time parameter so you can model the total cycle accurately.</p>
-  <p>The most commonly overlooked factor is the <strong>number of passes</strong>. A single roughing pass at 3mm DOC removes more material per minute than two passes at 1.5mm each, but the cutting forces may exceed the insert's capability. The <a href="/tools/force-calculator/" style="color:#0066cc">Milling Force Calculator</a> can help determine the maximum DOC for your specific operation, enabling you to minimize pass count while staying within safe force limits.</p>
-
-  <h3>Cost Impact of Cycle Time Reduction</h3>
-  <p>Every second saved on cycle time reduces cost proportionally. At a shop rate of $85/hour, a 10-second reduction on a 3-minute cycle saves $0.47 per part. On a run of 10,000 parts, that's $4,700. The table below shows how small improvements compound:</p>
-
-  <div class="comparison">
-    <div><h4>🟢 Current: 180 sec/part</h4><p>200 parts/month → 10 hours machining → $850/month → $10,200/year</p></div>
-    <div><h4>🔵 Optimized: 120 sec/part</h4><p>200 parts/month → 6.7 hours → $567/month → $6,800/year<br/><strong>Save: $3,400/year</strong></p></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/tools/">All Tools</a>
+    <a href="/products/">Products</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about.html">About</a>
+    <a href="/quote.html">Get a Quote</a>
+    <a href="/privacy.html">Privacy</a>
   </div>
-
-  <h2>Operation-Specific Strategies to Reduce Cycle Time</h2>
-  <p><strong>OD Turning:</strong> The most direct lever is increasing DOC to reduce the number of passes. Each eliminated pass saves the full cutting time plus approach/retract motion. Verify force limits with the <a href="/tools/force-calculator/" style="color:#0066cc">Force Calculator</a> before increasing DOC.</p>
-  <p><strong>Facing:</strong> Constant surface speed (CSS) mode is essential. Without CSS, the RPM stays fixed and the cutting speed drops to zero at the center — dramatically increasing cycle time for facing operations. Always program facing with G96 (CSS) rather than G97 (constant RPM).</p>
-  <p><strong>Boring:</strong> Internal boring cycles are limited by tool overhang and vibration. The cycle time is often determined by the need to take light passes to control chatter. Using a tuned boring bar with a higher natural frequency can allow deeper DOC and reduce pass count.</p>
-  <p><strong>Parting:</strong> Parting is feed-limited, not speed-limited. Increasing feed from 0.05 mm/rev to 0.12 mm/rev can cut cycle time by 60% on the parting operation. However, higher feeds increase the risk of jamming the insert in the cut. Use a parting tool with chip-forming geometry designed for high feed rates.</p>
-
-  <h2>How Cutting Parameters Affect Cycle Time vs. Tool Life</h2>
-  <p>There is a direct trade-off between cycle time and tool life. Increasing feed by 20% reduces cycle time by 17% but reduces tool life by approximately 35% (per the Taylor equation extended to feed rate effects). The optimal economic operating point balances the cost of increased tool consumption against the savings from reduced cycle time. For high-volume production (10,000+ parts), the optimal feed rate is typically higher than for low-volume runs, because tool change time is amortized across more parts.</p>
-  <p>Using the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> to find the material-specific recommended chip load ensures you operate in the efficient zone where small feed increases give large cycle time reductions without disproportionate tool life penalties.</p>
-
-  <div class="comparison">
-    <div><h4>⚡ High Feed Strategy</h4><p>f=0.4 mm/rev → 90 sec cycle<br/>Tool life: 80 parts/edge<br/>Cost: optimized for volume</p></div>
-    <div><h4>🎯 Balanced Strategy</h4><p>f=0.25 mm/rev → 125 sec cycle<br/>Tool life: 180 parts/edge<br/>Cost: optimized for mixed runs</p></div>
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
   </div>
-
-  <h2>Frequently Asked Questions</h2>
-  <p><strong>How do you calculate cycle time for CNC turning?</strong> Cutting time = length of cut ÷ (feed per revolution × RPM). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically.</p>
-  <p><strong>What is the formula for turning time?</strong> T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (RPM). For multiple passes, multiply by the number of passes and add non-cutting time between passes.</p>
-  <p><strong>How does depth of cut affect cycle time?</strong> DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction.</p>
-  <p><strong>What is a good cycle time for CNC turning?</strong> For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count.</p>
-  <p><strong>Does constant surface speed affect cycle time?</strong> Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant RPM. Always use G96 for facing operations.</p>
-  <p><strong>How do I reduce cycle time without reducing tool life?</strong> Increase RPM rather than feed — higher RPM reduces cycle time without increasing chip load (which is the primary driver of tool wear). Verify that the higher RPM stays within the recommended cutting speed range for the material using the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a>.</p>
-
-  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
-    <p style="margin:0">To reduce cycle time without compromising quality, check our High-Performance End Mills</p>
-  </div>
+  <p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
+  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
+  <p style="font-size:11px">© 2026 Carbide Tooling</p>
 </div>
-</section>
 
-<footer>
-<div class="container">
-  <p style="margin-bottom:8px"><a href="https://carbide-tooling.com/">CarbideTooling.com</a> — <a href="/tools/">All Tools</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p><p style="font-size:11px">© 2026 Carbide Tooling. Cycle time estimates exclude non-cutting operations; validate with actual machining.</p>
+<div class="lang-switcher">
+  <span class="lang-label">🌐</span>
+  <a href="https://carbide-tooling.com/tools/cycle-time-calculator/" class="lang-link active">EN</a>
+  <a href="https://carbide-tooling.com/de/tools/cycle-time-calculator/" class="lang-link">DE</a>
+  <a href="https://carbide-tooling.com/jp/tools/cycle-time-calculator/" class="lang-link">JP</a>
+  <a href="https://carbide-tooling.com/es/tools/cycle-time-calculator/" class="lang-link">ES</a>
+  <a href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" class="lang-link">VI</a>
+  <a href="https://carbide-tooling.com/zh/tools/cycle-time-calculator/" class="lang-link">中</a>
 </div>
 </footer>
 
@@ -324,5 +387,103 @@ function calc() {
 
 calc();
 </script>
+<section class="seo-content">
+<div class="container">
+
+  <h2>How Long Should Each Turning Operation Take?</h2>
+  <p>A 304 stainless steel shaft, 50mm diameter × 200mm long, with three roughing passes and one finishing pass — is 4 minutes reasonable? Or should it be 2? Without a structured calculation, estimates vary by 100% or more between experienced programmers. This variation directly impacts quoting accuracy, production scheduling, and shop profitability. The turning cycle time formula eliminates guesswork by breaking each operation down into its geometric and kinematic components.</p>
+
+  <p>The difference between a well-optimized turning cycle and a conservative one is typically 30-50% of cycle time — which translates directly into cost per part. A job that runs 500 parts per year at $12 each versus $8 each represents a $2,000 annual difference for a single part number. Across an entire production schedule, the savings from accurate cycle time optimization fund significant investments in tooling and equipment.</p>
+
+  <h2>The Turning Time Formula</h2>
+  <p>For any single turning pass, the cutting time is derived from the fundamental relationship between tool travel distance and feed rate:</p>
+  <p><strong>Cutting time (min):</strong> <code>t = L / (f × n)</code><br/>
+  Where <strong>L</strong> = total tool travel including approach and overrun (mm), <strong>f</strong> = feed per revolution (mm/rev), and <strong>n</strong> = spindle speed (RPM).</p>
+
+  <p>For <strong>OD turning</strong>, tool travel L = length of cut + approach distance. For <strong>facing</strong>, the average diameter is used: <code>L = (Dinitial + Dfinal) / 4</code> combined with the radial travel distance. For <strong>boring</strong>, the calculation is identical to OD turning but with internal diameter considerations. For <strong>parting</strong>, the travel distance equals the radius of the bar stock.</p>
+
+  <h2>Where Cycle Time Gets Lost: The Hidden Factors</h2>
+  <p>Cutting time is only part of the total cycle time. The non-cutting components — tool positioning, indexing, part loading/unloading, and inspection — often account for 30-60% of the total cycle on small parts. This calculator includes a non-cutting time parameter so you can model the total cycle accurately.</p>
+  <p>The most commonly overlooked factor is the <strong>number of passes</strong>. A single roughing pass at 3mm DOC removes more material per minute than two passes at 1.5mm each, but the cutting forces may exceed the insert's capability. The <a href="/tools/force-calculator/" style="color:#0066cc">Milling Force Calculator</a> can help determine the maximum DOC for your specific operation, enabling you to minimize pass count while staying within safe force limits.</p>
+
+  <h3>Cost Impact of Cycle Time Reduction</h3>
+  <p>Every second saved on cycle time reduces cost proportionally. At a shop rate of $85/hour, a 10-second reduction on a 3-minute cycle saves $0.47 per part. On a run of 10,000 parts, that's $4,700. The table below shows how small improvements compound:</p>
+
+  <div class="comparison">
+    <div><h4>🟢 Current: 180 sec/part</h4><p>200 parts/month → 10 hours machining → $850/month → $10,200/year</p></div>
+    <div><h4>🔵 Optimized: 120 sec/part</h4><p>200 parts/month → 6.7 hours → $567/month → $6,800/year<br/><strong>Save: $3,400/year</strong></p></div>
+  </div>
+
+  <h2>Operation-Specific Strategies to Reduce Cycle Time</h2>
+  <p><strong>OD Turning:</strong> The most direct lever is increasing DOC to reduce the number of passes. Each eliminated pass saves the full cutting time plus approach/retract motion. Verify force limits with the <a href="/tools/force-calculator/" style="color:#0066cc">Force Calculator</a> before increasing DOC.</p>
+  <p><strong>Facing:</strong> Constant surface speed (CSS) mode is essential. Without CSS, the RPM stays fixed and the cutting speed drops to zero at the center — dramatically increasing cycle time for facing operations. Always program facing with G96 (CSS) rather than G97 (constant RPM).</p>
+  <p><strong>Boring:</strong> Internal boring cycles are limited by tool overhang and vibration. The cycle time is often determined by the need to take light passes to control chatter. Using a tuned boring bar with a higher natural frequency can allow deeper DOC and reduce pass count.</p>
+  <p><strong>Parting:</strong> Parting is feed-limited, not speed-limited. Increasing feed from 0.05 mm/rev to 0.12 mm/rev can cut cycle time by 60% on the parting operation. However, higher feeds increase the risk of jamming the insert in the cut. Use a parting tool with chip-forming geometry designed for high feed rates.</p>
+
+  <h2>How Cutting Parameters Affect Cycle Time vs. Tool Life</h2>
+  <p>There is a direct trade-off between cycle time and tool life. Increasing feed by 20% reduces cycle time by 17% but reduces tool life by approximately 35% (per the Taylor equation extended to feed rate effects). The optimal economic operating point balances the cost of increased tool consumption against the savings from reduced cycle time. For high-volume production (10,000+ parts), the optimal feed rate is typically higher than for low-volume runs, because tool change time is amortized across more parts.</p>
+  <p>Using the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> to find the material-specific recommended chip load ensures you operate in the efficient zone where small feed increases give large cycle time reductions without disproportionate tool life penalties.</p>
+
+  <div class="comparison">
+    <div><h4>⚡ High Feed Strategy</h4><p>f=0.4 mm/rev → 90 sec cycle<br/>Tool life: 80 parts/edge<br/>Cost: optimized for volume</p></div>
+    <div><h4>🎯 Balanced Strategy</h4><p>f=0.25 mm/rev → 125 sec cycle<br/>Tool life: 180 parts/edge<br/>Cost: optimized for mixed runs</p></div>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+  <p><strong>How do you calculate cycle time for CNC turning?</strong> Cutting time = length of cut ÷ (feed per revolution × RPM). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically.</p>
+  <p><strong>What is the formula for turning time?</strong> T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (RPM). For multiple passes, multiply by the number of passes and add non-cutting time between passes.</p>
+  <p><strong>How does depth of cut affect cycle time?</strong> DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction.</p>
+  <p><strong>What is a good cycle time for CNC turning?</strong> For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count.</p>
+  <p><strong>Does constant surface speed affect cycle time?</strong> Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant RPM. Always use G96 for facing operations.</p>
+  <p><strong>How do I reduce cycle time without reducing tool life?</strong> Increase RPM rather than feed — higher RPM reduces cycle time without increasing chip load (which is the primary driver of tool wear). Verify that the higher RPM stays within the recommended cutting speed range for the material using the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a>.</p>
+
+  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
+    <p style="margin:0">To reduce cycle time without compromising quality, check our High-Performance End Mills</p>
+  </div>
+</div>
+</section>
+<div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Speed & Feed</a>
+<a href="/tools/hardness-converter/">Hardness Converter</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>
+<a href="/tools/mrr-calculator/">MRR Calculator</a>
+<a href="/tools/feed-converter/">Feed Converter</a>
+<a href="/tools/surface-roughness-calculator/">Surface Roughness</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guide</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
+</div></div>
+
+<aside class="b2b-card">
+  <div class="b2b-icon">📦</div>
+  <div class="b2b-body">
+    <h3>Need Professional Tooling?</h3>
+    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+  </div>
+  <a href="/quote.html" class="b2b-btn">Request Bulk Quote →</a>
+</aside>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/tool-holders.html">Tool Holders</a></div>
+<section class="more-tools">
+  <h3>🔧 Explore 100+ Professional Machining Tools</h3>
+  <div class="tool-grid">
+<a href="/tools/chamfer-calculator/">Chamfer Calculator</a>
+<a href="/tools/coolant-concentration/">Coolant Concentration Calculator</a>
+<a href="/tools/round-bar-weight/">Round Bar Weight Calculator</a>
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/threading-pass-calculator/">Threading Pass Calculator</a>
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/titanium-machining-guide/">Titanium Machining Guide</a>
+<a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
+
+  </div>
+</section>
+<div class="share-bar">
+  <span class="share-label">↗ Share with Engineers</span>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/tools/cycle-time-calculator/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/cycle-time-calculator/&text=Cycle Time Calculator" target="_blank" rel="noopener">𝕏</a>
+  <a href="mailto:subject=Cycle Time Calculator&body=Check this out: https://carbide-tooling.com/tools/cycle-time-calculator/">Email</a>
+</div>
+
 </body>
 </html>
