@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Dovetail Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
-<meta name="description" content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for male and female dovetails."/>
-<link rel="canonical" href="https://carbide-tooling.com/tools/dovetail-calculator/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<meta content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for male and female dovetails." name="description"/>
+<link href="https://carbide-tooling.com/tools/dovetail-calculator/" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}
 nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}
@@ -36,17 +37,29 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Dovetail Calculator | Precision Machining Tool"/>
-<meta property="og:description" content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for "/>
-<meta property="og:url" content="https://carbide-tooling.com/tools/dovetail-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dovetail Calculator | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Dovetail Calculator | Precision Machining Tool" property="og:title"/>
+<meta content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for " property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/dovetail-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Dovetail Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -106,17 +119,16 @@ footer a{color:#0066cc;text-decoration:none}
   ]
 }
 </script>
-
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Dovetail Calculator | Precision Machining Tool"/>
-<meta property="og:description" content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for "/>
-<meta property="og:url" content="https://carbide-tooling.com/tools/dovetail-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dovetail Calculator | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Dovetail Calculator | Precision Machining Tool" property="og:title"/>
+<meta content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for " property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/dovetail-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Dovetail Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -176,17 +188,16 @@ footer a{color:#0066cc;text-decoration:none}
   ]
 }
 </script>
-
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Dovetail Calculator | Precision Machining Tool"/>
-<meta property="og:description" content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for "/>
-<meta property="og:url" content="https://carbide-tooling.com/tools/dovetail-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dovetail Calculator | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Dovetail Calculator | Precision Machining Tool" property="og:title"/>
+<meta content="Free online dovetail calculator for CNC machinists and quality inspectors. Calculate dovetail geometry: angle, width, and depth, cutter selection for " property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/dovetail-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Dovetail Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -246,72 +257,63 @@ footer a{color:#0066cc;text-decoration:none}
   ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/dovetail-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/dovetail-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/dovetail-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/dovetail-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/dovetail-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/dovetail-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/dovetail-calculator"/>
+<link href="https://carbide-tooling.com/tools/dovetail-calculator/" hreflang="en" rel="alternate"/>
+<link href="https://carbide-tooling.com/de/tools/dovetail-calculator/" hreflang="de" rel="alternate"/>
+<link href="https://carbide-tooling.com/jp/tools/dovetail-calculator/" hreflang="ja" rel="alternate"/>
+<link href="https://carbide-tooling.com/es/tools/dovetail-calculator/" hreflang="es" rel="alternate"/>
+<link href="https://carbide-tooling.com/vi/tools/dovetail-calculator/" hreflang="vi" rel="alternate"/> <link href="https://carbide-tooling.com/tools/dovetail-calculator" hreflang="x-default" rel="alternate"/>
 </head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">Products</a><a href="/guides/">Guides</a><a href="/about.html">About</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a><div class="lang-nav"><a href="#" class="active" onclick="return false">EN</a><span class="sep">|</span><a href="/de/tools/dovetail-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/dovetail-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/dovetail-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/dovetail-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/dovetail-calculator/">中</a></div></div></nav>
-
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">Products</a><a href="/guides/">Guides</a><a href="/about.html">About</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/dovetail-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/dovetail-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/dovetail-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/dovetail-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/dovetail-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Home</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc">Tools</a> <span style="color:#d2d2d6">›</span> Dovetail Calculator</div>
-
 <section class="hero"><div class="container"><h1><span class="accent">Dovetail</span> Calculator</h1><p>A dovetail cutter with a 60° included angle cuts both sides of the dovetail simultaneously. The relationship between the top width, angle, and depth determines whether the mating part fits.</p></div></section>
-
-<div class="container"><div class="card"><h3>⚙️ Calculator</h3><div class="row2"><div><label>Input Value</label><input type="number" id="v1" value="10" oninput="go()"/></div><div><label>Parameter</label><input type="number" id="v2" value="20" oninput="go()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
-
+<div class="container"><div class="card"><h3>⚙️ Calculator</h3><div class="row2"><div><label>Input Value</label><input id="v1" oninput="go()" type="number" value="10"/></div><div><label>Parameter</label><input id="v2" oninput="go()" type="number" value="20"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Need Professional Tooling?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Request Bulk Quote →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Need Professional Tooling?</h3>
+<p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
 <div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
-
 <section class="more-tools">
-  <h3>🔧 Explore 100+ Professional Machining Tools</h3>
-  <div class="tool-grid">
-<a href="/tools/thread-depth-torque-calculator/">Thread Depth & Torque</a><a href="/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/tools/arc-r-to-ij-converter/">Arc R to IJ Converter</a><a href="/tools/coord-rotation-calculator/">Coordinate Rotation</a><a href="/tools/gun-drill-calculator/">Gun Drill Calculator</a><a href="/tools/hardness-converter/">Hardness Converter</a><a href="/tools/metric-imperial-thread-converter/">Metric/Imperial Thread</a><a href="/tools/countersink-depth-calculator/">Countersink Depth</a>
-  </div>
-</section>
-
-<footer class="tool-footer">
-<div class="container">
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/tools/">All Tools</a>
-    <a href="/products/">Products</a>
-    <a href="/guides/">Guides</a>
-    <a href="/about.html">About</a>
-    <a href="/quote.html">Get a Quote</a>
-    <a href="/privacy.html">Privacy</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<h3>🔧 Explore 100+ Professional Machining Tools</h3>
+<div class="tool-grid">
+<a href="/tools/thread-depth-torque-calculator/">Thread Depth &amp; Torque</a><a href="/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/tools/arc-r-to-ij-converter/">Arc R to IJ Converter</a><a href="/tools/coord-rotation-calculator/">Coordinate Rotation</a><a href="/tools/gun-drill-calculator/">Gun Drill Calculator</a><a href="/tools/hardness-converter/">Hardness Converter</a><a href="/tools/metric-imperial-thread-converter/">Metric/Imperial Thread</a><a href="/tools/countersink-depth-calculator/">Countersink Depth</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/tools/dovetail-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/dovetail-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/dovetail-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/dovetail-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/dovetail-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/dovetail-calculator/" class="lang-link">中</a>
+</section>
+<div style="margin:24px 0 40px"><h3 style="font-size:13px;font-weight:600;color:#86868b;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:0.05em">Related Precision Tools</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px"><a href="/tools/dia-circ-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Dia Circ Calculator</a><a href="/tools/die-steel-thermal-conductivity/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Die Steel Thermal Conductivity</a><a href="/tools/drill-point-length-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Drill Point Length Calculator</a><a href="/tools/pythagorean-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Pythagorean Calculator</a><a href="/tools/tapping-feed-rate-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Tapping Feed Rate Calculator</a><a href="/tools/feed-converter/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Feed Converter</a></div></div><footer class="tool-footer">
+<div class="container">
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/tools/">All Tools</a>
+<a href="/products/">Products</a>
+<a href="/guides/">Guides</a>
+<a href="/about.html">About</a>
+<a href="/quote.html">Get a Quote</a>
+<a href="/privacy.html">Privacy</a>
+</div>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">in</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
+<p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
+<p style="font-size:11px">© 2026 Carbide Tooling</p>
 </div>
 </footer>
-
 <script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script>
 <section class="seo-content"><div class="container">
 <h2>Dovetail Geometry: Angle, Width, and Depth</h2>
@@ -327,7 +329,7 @@ footer a{color:#0066cc;text-decoration:none}
 <p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">View Catalog →</a></p>
 </div></section>
 <div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
-<a href="/tools/speed-feed/">Speed & Feed</a>
+<a href="/tools/speed-feed/">Speed &amp; Feed</a>
 <a href="/tools/hardness-converter/">Hardness Converter</a>
 <a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>
 <a href="/tools/mrr-calculator/">MRR Calculator</a>
@@ -338,19 +340,17 @@ footer a{color:#0066cc;text-decoration:none}
 <a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
 <a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Need Professional Tooling?</h3>
+<p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 
-
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Need Professional Tooling?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Request Bulk Quote →</a>
-</aside>
 <div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ Professional Machining Tools</h3>
-  <div class="tool-grid">
+<h3>🔧 Explore 100+ Professional Machining Tools</h3>
+<div class="tool-grid">
 <a href="/tools/keyway-depth-calculator/">Keyway Depth Calculator</a>
 <a href="/tools/taper-calculator/">Taper Calculator</a>
 <a href="/tools/titanium-machining-guide/">Titanium Machining Guide</a>
@@ -359,14 +359,12 @@ footer a{color:#0066cc;text-decoration:none}
 <a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
 <a href="/tools/reaming-allowance-calculator/">Reaming Allowance Calculator</a>
 <a href="/tools/mcode-reference/">M-Code Reference</a>
-
-  </div>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Share with Engineers</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/tools/dovetail-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/dovetail-calculator/&text=Dovetail Calculator" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Dovetail Calculator&body=Check this out: https://carbide-tooling.com/tools/dovetail-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/dovetail-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/dovetail-calculator/&amp;text=Dovetail Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Dovetail Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/dovetail-calculator/">Email</a>
 </div>
-
 </body></html>

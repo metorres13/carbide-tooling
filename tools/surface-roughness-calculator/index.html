@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Surface Roughness Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
-<meta name="description" id="meta-desc" content="Free online surface roughness calculator. Calculate theoretical Ra and Rz surface finish for turning and milling operations based on feed rate and nose radius." />
-<meta property="og:title" content="Surface Roughness Calculator — Carbide Tooling" />
-<meta property="og:description" content="Calculate theoretical surface finish Ra and Rz for CNC turning and milling. Understand how feed rate and nose radius affect surface quality." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://carbide-tooling.com/tools/surface-roughness-calculator/" />
-<link rel="canonical" href="https://carbide-tooling.com/tools/surface-roughness-calculator/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<meta content="Free online surface roughness calculator. Calculate theoretical Ra and Rz surface finish for turning and milling operations based on feed rate and nose radius." id="meta-desc" name="description"/>
+<meta content="Surface Roughness Calculator — Carbide Tooling" property="og:title"/>
+<meta content="Calculate theoretical surface finish Ra and Rz for CNC turning and milling. Understand how feed rate and nose radius affect surface quality." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://carbide-tooling.com/tools/surface-roughness-calculator/" property="og:url"/>
+<link href="https://carbide-tooling.com/tools/surface-roughness-calculator/" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -84,18 +85,29 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Surface Roughness Calculator | Precision Machining Tool"/>
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://carbide-tooling.com/tools/surface-roughness-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Surface Roughness Calculator | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Surface Roughness Calculator | Precision Machining Tool" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/surface-roughness-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Surface Roughness Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -171,139 +183,127 @@ footer a{color:#0066cc;text-decoration:none}
   ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/surface-roughness-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/surface-roughness-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/surface-roughness-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/surface-roughness-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/surface-roughness-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/surface-roughness-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/surface-roughness-calculator"/>
+<link href="https://carbide-tooling.com/tools/surface-roughness-calculator/" hreflang="en" rel="alternate"/>
+<link href="https://carbide-tooling.com/de/tools/surface-roughness-calculator/" hreflang="de" rel="alternate"/>
+<link href="https://carbide-tooling.com/jp/tools/surface-roughness-calculator/" hreflang="ja" rel="alternate"/>
+<link href="https://carbide-tooling.com/es/tools/surface-roughness-calculator/" hreflang="es" rel="alternate"/>
+<link href="https://carbide-tooling.com/vi/tools/surface-roughness-calculator/" hreflang="vi" rel="alternate"/> <link href="https://carbide-tooling.com/tools/surface-roughness-calculator" hreflang="x-default" rel="alternate"/>
 </head>
 <body>
 <nav>
 <div class="nav-inner">
-  <div class="nav-left">
-    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
-    <div class="nav-links">
-      <a href="https://carbide-tooling.com/products/">Products</a>
-      <a href="https://carbide-tooling.com/guides/">Guides</a>
-      <a href="https://carbide-tooling.com/about.html">About</a>
-    </div>
-  </div>
-  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a><div class="lang-nav"><a href="#" class="active" onclick="return false">EN</a><span class="sep">|</span><a href="/de/tools/surface-roughness-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/surface-roughness-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/surface-roughness-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/surface-roughness-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/surface-roughness-calculator/">中</a></div>
+<div class="nav-left">
+<a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="https://carbide-tooling.com/products/">Products</a>
+<a href="https://carbide-tooling.com/guides/">Guides</a>
+<a href="https://carbide-tooling.com/about.html">About</a>
 </div>
-</nav>
-
+</div>
+<a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/surface-roughness-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/surface-roughness-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/surface-roughness-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/surface-roughness-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/surface-roughness-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <section class="hero">
 <div class="container">
-  <div class="badge">🔬 Free Professional Tool</div>
-  <h1>Surface <span class="accent">Roughness</span> Calculator</h1>
-  <p>Calculate theoretical Ra and Rz surface finish for turning and milling operations. Understand how feed rate and nose radius determine surface quality.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#calculator">Start Calculating ↓</a>
-    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
-  </div>
+<div class="badge">🔬 Free Professional Tool</div>
+<h1>Surface <span class="accent">Roughness</span> Calculator</h1>
+<p>Calculate theoretical Ra and Rz surface finish for turning and milling operations. Understand how feed rate and nose radius determine surface quality.</p>
+<div class="hero-actions">
+<a class="btn" href="#calculator">Start Calculating ↓</a>
+<a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
+</div>
 </div>
 </section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
+<section class="container" id="calculator" style="padding-bottom:40px">
 <div class="card">
-  <h2>🔬 Surface Finish Calculator</h2>
-  <p class="sub">Based on theoretical roughness model. Actual results may vary due to built-up edge, vibration, and tool wear.</p>
-
-  <div class="card-row">
-    <div class="field"><label>🔧 Operation</label>
-      <select id="op-type" onchange="calc()">
-        <option value="turning">Turning (OD / Face)</option>
-        <option value="milling">Milling (peripheral)</option>
-      </select>
-    </div>
-    <div class="field"><label>📊 Feed Rate</label>
-      <input type="number" id="feed" value="0.15" min="0.01" max="2" step="0.005" oninput="calc()" />
-      <span id="feed-unit" style="font-size:10px;color:#86868b">mm/rev (turning) or mm/tooth (milling)</span>
-    </div>
-    <div class="field"><label>🔘 Nose / Corner Radius (mm)</label>
-      <input type="number" id="radius" value="0.8" min="0.05" max="6" step="0.1" oninput="calc()" />
-      <span style="font-size:10px;color:#86868b">Insert nose radius (turning) or corner radius (milling)</span>
-    </div>
-    <div class="field"><label>⚙️ Material</label>
-      <select id="material" onchange="calc()">
-        <option value="al6061">Aluminum 6061</option>
-        <option value="ss304" selected>Stainless Steel 304</option>
-        <option value="mild_steel">Mild Steel 1018</option>
-        <option value="ti6al4v">Titanium Grade 5</option>
-      </select>
-    </div>
-    <div class="field"><label>🎯 Target Ra Requirement</label>
-      <select id="target" onchange="calc()">
-        <option value="0.1">0.1 μm — Mirror finish</option>
-        <option value="0.4" selected>0.4 μm — Precision ground</option>
-        <option value="0.8">0.8 μm — Fine machining</option>
-        <option value="1.6">1.6 μm — Standard machining</option>
-        <option value="3.2">3.2 μm — Rough machining</option>
-        <option value="6.3">6.3 μm — Very rough</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="result-grid">
-    <div class="result-item"><div class="label">Theoretical Ra</div><div class="value" id="r-ra">—</div><div class="unit">μm</div></div>
-    <div class="result-item"><div class="label">Theoretical Rz</div><div class="value" id="r-rz">—</div><div class="unit">μm</div></div>
-    <div class="result-item"><div class="label">N Grade</div><div class="value" id="r-ngrade">—</div><div class="unit">ISO 1302</div></div>
-    <div class="result-item"><div class="label">Status vs. Target</div><div class="value" id="r-status">—</div><div class="unit" id="r-status-unit"></div></div>
-  </div>
-
-  <div class="extra-info">
-    <span>Feed rate to achieve target Ra: <span class="val" id="x-feed-target">—</span> mm/rev</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Minimum nose radius for target: <span class="val" id="x-radius-target">—</span> mm</span>
-  </div>
+<h2>🔬 Surface Finish Calculator</h2>
+<p class="sub">Based on theoretical roughness model. Actual results may vary due to built-up edge, vibration, and tool wear.</p>
+<div class="card-row">
+<div class="field"><label>🔧 Operation</label>
+<select id="op-type" onchange="calc()">
+<option value="turning">Turning (OD / Face)</option>
+<option value="milling">Milling (peripheral)</option>
+</select>
 </div>
-
+<div class="field"><label>📊 Feed Rate</label>
+<input id="feed" max="2" min="0.01" oninput="calc()" step="0.005" type="number" value="0.15"/>
+<span id="feed-unit" style="font-size:10px;color:#86868b">mm/rev (turning) or mm/tooth (milling)</span>
+</div>
+<div class="field"><label>🔘 Nose / Corner Radius (mm)</label>
+<input id="radius" max="6" min="0.05" oninput="calc()" step="0.1" type="number" value="0.8"/>
+<span style="font-size:10px;color:#86868b">Insert nose radius (turning) or corner radius (milling)</span>
+</div>
+<div class="field"><label>⚙️ Material</label>
+<select id="material" onchange="calc()">
+<option value="al6061">Aluminum 6061</option>
+<option selected="" value="ss304">Stainless Steel 304</option>
+<option value="mild_steel">Mild Steel 1018</option>
+<option value="ti6al4v">Titanium Grade 5</option>
+</select>
+</div>
+<div class="field"><label>🎯 Target Ra Requirement</label>
+<select id="target" onchange="calc()">
+<option value="0.1">0.1 μm — Mirror finish</option>
+<option selected="" value="0.4">0.4 μm — Precision ground</option>
+<option value="0.8">0.8 μm — Fine machining</option>
+<option value="1.6">1.6 μm — Standard machining</option>
+<option value="3.2">3.2 μm — Rough machining</option>
+<option value="6.3">6.3 μm — Very rough</option>
+</select>
+</div>
+</div>
+<div class="result-grid">
+<div class="result-item"><div class="label">Theoretical Ra</div><div class="value" id="r-ra">—</div><div class="unit">μm</div></div>
+<div class="result-item"><div class="label">Theoretical Rz</div><div class="value" id="r-rz">—</div><div class="unit">μm</div></div>
+<div class="result-item"><div class="label">N Grade</div><div class="value" id="r-ngrade">—</div><div class="unit">ISO 1302</div></div>
+<div class="result-item"><div class="label">Status vs. Target</div><div class="value" id="r-status">—</div><div class="unit" id="r-status-unit"></div></div>
+</div>
+<div class="extra-info">
+<span>Feed rate to achieve target Ra: <span class="val" id="x-feed-target">—</span> mm/rev</span>
+<span style="color:#d2d2d6">|</span>
+<span>Minimum nose radius for target: <span class="val" id="x-radius-target">—</span> mm</span>
+</div>
+</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
-  <a href="/tools/speed-feed/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
-    <div style="font-size:20px;margin-bottom:4px">⚙️</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Speed &amp; Feed Calculator</h4>
-    <p style="font-size:12px;color:#86868b">Find the balance between surface finish and productivity.</p>
-  </a>
-  <a href="/tools/cycle-time-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
-    <div style="font-size:20px;margin-bottom:4px">⏱️</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Cycle Time Calculator</h4>
-    <p style="font-size:12px;color:#86868b">Lower feed = finer finish but longer cycle time.</p>
-  </a>
+<a href="/tools/speed-feed/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
+<div style="font-size:20px;margin-bottom:4px">⚙️</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Speed &amp; Feed Calculator</h4>
+<p style="font-size:12px;color:#86868b">Find the balance between surface finish and productivity.</p>
+</a>
+<a href="/tools/cycle-time-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
+<div style="font-size:20px;margin-bottom:4px">⏱️</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Cycle Time Calculator</h4>
+<p style="font-size:12px;color:#86868b">Lower feed = finer finish but longer cycle time.</p>
+</a>
 </div>
 </section>
-
-<footer class="tool-footer">
+<div style="margin:24px 0 40px"><h3 style="font-size:13px;font-weight:600;color:#86868b;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:0.05em">Related Precision Tools</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px"><a href="/tools/scrap-value-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Scrap Value Calculator</a><a href="/tools/sfm-m-min-converter/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Sfm M Min Converter</a><a href="/tools/shipping-duty-estimator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Shipping Duty Estimator</a><a href="/tools/grade-reference/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Grade Reference</a><a href="/tools/brass-machining-parameters/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Brass Machining Parameters</a><a href="/tools/aluminum-alloy-table/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Aluminum Alloy Table</a></div></div><footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/tools/">All Tools</a>
-    <a href="/products/">Products</a>
-    <a href="/guides/">Guides</a>
-    <a href="/about.html">About</a>
-    <a href="/quote.html">Get a Quote</a>
-    <a href="/privacy.html">Privacy</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/tools/">All Tools</a>
+<a href="/products/">Products</a>
+<a href="/guides/">Guides</a>
+<a href="/about.html">About</a>
+<a href="/quote.html">Get a Quote</a>
+<a href="/privacy.html">Privacy</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/tools/surface-roughness-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/surface-roughness-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/surface-roughness-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/surface-roughness-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/surface-roughness-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/surface-roughness-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">in</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
+<p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
+<p style="font-size:11px">© 2026 Carbide Tooling</p>
 </div>
 </footer>
-
 <script>
 const N_GRADES = [
   {n:'N1',ra:0.025},{n:'N2',ra:0.05},{n:'N3',ra:0.1},{n:'N4',ra:0.2},
@@ -360,75 +360,66 @@ calc();
 </script>
 <section class="seo-content">
 <div class="container">
-
-  <h2>ISO Surface Finish Standards: What Ra, Rz, and N Grades Actually Mean</h2>
-  <p>Surface finish is specified on engineering drawings using standardized parameters defined by ISO 1302 and ISO 4287. The three most commonly specified parameters are <strong>Ra</strong> (arithmetic average roughness), <strong>Rz</strong> (average maximum height), and <strong>N grade</strong> (ISO roughness grade number). Understanding the relationship between these parameters and the cutting conditions that produce them is essential for meeting print specifications without over-machining.</p>
-  <p>Ra is the most universally specified parameter — it represents the arithmetic average of the absolute profile height deviations from the mean line. Rz is the average of the five highest peaks and five lowest valleys over the evaluation length. The N grade system (N1 through N12) provides a standardized roughness grade number where each step represents approximately a 50% change in surface roughness. A part that calls out N5 (0.4 μm Ra) is fundamentally different to manufacture than one calling out N7 (1.6 μm Ra) — the feed rate must be halved, doubling the cycle time.</p>
-
-  <div class="std-table">
-    <table>
-      <tr><th>N Grade</th><th>Ra (μm)</th><th>Rz (μm)</th><th>Typical Application</th></tr>
-      <tr><td>N1</td><td>0.025</td><td>0.15</td><td>Gauge blocks, optical components</td></tr>
-      <tr><td>N3</td><td>0.1</td><td>0.6</td><td>Precision spindles, bearing journals</td></tr>
-      <tr><td>N5</td><td>0.4</td><td>2.5</td><td>Precision shafts, seal surfaces</td></tr>
-      <tr><td>N6</td><td>0.8</td><td>5.0</td><td>General machined fits</td></tr>
-      <tr><td>N7</td><td>1.6</td><td>10.0</td><td>Standard machining (most common)</td></tr>
-      <tr><td>N8</td><td>3.2</td><td>16.0</td><td>Commercial machined surfaces</td></tr>
-      <tr><td>N9</td><td>6.3</td><td>32.0</td><td>Rough machining, non-critical</td></tr>
-    </table>
-  </div>
-
-  <h2>The Theoretical Roughness Formula</h2>
-  <p>The theoretical surface roughness for a turning operation is determined by the geometry of the cutting tool's nose radius and the feed rate. The tool leaves a series of helical ridges on the workpiece surface — the height of these ridges is the theoretical roughness:</p>
-  <p><code>Ra (μm) = (f² × 1000) ÷ (32 × R)</code><br/>
-  <code>Rz (μm) = (f² × 1000) ÷ (8 × R)</code></p>
-  <p>Where <strong>f</strong> = feed per revolution (mm/rev) and <strong>R</strong> = insert nose radius (mm). For milling, the corner radius of the end mill replaces the nose radius, and the feed per tooth replaces feed per revolution.</p>
-  <p>The critical insight from these formulas is that roughness increases with the <strong>square of the feed rate</strong> — doubling the feed quadruples the surface roughness. Conversely, increasing the nose radius reduces roughness linearly — doubling the radius halves the roughness. This makes nose radius selection the most powerful lever for controlling surface finish without sacrificing cycle time.</p>
-
-  <h2>Nose Radius Selection: Balancing Roughness and Productivity</h2>
-  <p>The relationship between feed rate, nose radius, and surface roughness creates a three-way optimization problem. A larger nose radius (1.2 mm vs. 0.4 mm) allows four times higher feed rate for the same Ra, directly reducing cycle time. However, larger nose radii increase cutting forces and can cause chatter in long-overhang operations — a problem analyzed in detail by the <a href="/tools/force-calculator/" style="color:#0066cc">Milling Force Calculator</a>.</p>
-  <p>Practical nose radius selection guidelines: For finishing passes requiring Ra ≤ 0.8 μm, use a 0.8 mm or 1.2 mm nose radius with feed rates between 0.08-0.15 mm/rev. For roughing where Ra ≤ 3.2 μm is acceptable, use a 0.4 mm radius with feeds up to 0.35 mm/rev. The <a href="/tools/cycle-time-calculator/" style="color:#0066cc">Cycle Time Calculator</a> can help quantify the productivity impact of switching to a larger nose radius.</p>
-
-  <h2>Why Actual Roughness Differs from Theoretical</h2>
-  <p>The theoretical model assumes perfect geometry — a sharp tool with an ideal nose radius cutting without vibration, built-up edge, or tool wear. In production, actual Ra is typically 20-50% higher than theoretical due to several factors:</p>
-  <ul>
-    <li><strong>Built-up edge (BUE):</strong> Material adhering to the cutting edge creates an irregular surface. Most common in aluminum and low-carbon steel at moderate cutting speeds. Increasing cutting speed by 20% or using a polished insert reduces BUE.</li>
-    <li><strong>Chatter vibration:</strong> Even mild chatter (amplitude < 10 μm) can double the actual Ra. The problem is mechanical, not geometric — use the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> to find a stable RPM range.</li>
-    <li><strong>Tool wear:</strong> A worn tool produces a degraded surface finish. As flank wear reaches 0.2 mm, actual Ra can increase by 50-80% compared to a fresh edge. The increase in cutting forces from tool wear can be monitored using the <a href="/tools/horsepower-calculator/" style="color:#0066cc">Spindle Horsepower Calculator</a> — a power increase of 15%+ at constant parameters indicates tool wear.</li>
-    <li><strong>Material smearing:</strong> Ductile materials like aluminum and low-carbon steel can smear across the machined surface, creating peaks and valleys not predicted by the geometric model. Using coolant with EP additives reduces smearing.</li>
-  </ul>
-
-  <h2>Economic Implications of Surface Finish Requirements</h2>
-  <p>The cost of achieving a specific surface finish is not linear with the Ra value. Reducing Ra from 1.6 μm to 0.8 μm typically requires halving the feed rate — which doubles the cycle time for the finishing pass. Reducing from 0.8 μm to 0.4 μm requires halving the feed again, doubling cycle time once more. This exponential relationship means that over-specifying surface finish is one of the most common and costly mistakes in part design.</p>
-  <p>For comparison: a shaft requiring 1.6 μm Ra (N7) can be rough-turned at 0.3 mm/rev feed. The same shaft requiring 0.4 μm Ra (N5) requires finishing at 0.12 mm/rev feed — a 2.5× increase in finishing time. On a shaft with 100mm turning length, this adds 15-20 seconds per part. On 10,000 parts, that's approximately 50 hours of additional machine time — at $85/hour, an unnecessary $4,250 in machining cost.</p>
-
-  <h2>Feed Rate and Nose Radius Optimization Table</h2>
-  <p>The table below shows the maximum feed rate that can be used to achieve a target Ra for common nose radii:</p>
-  <div class="std-table">
-    <table>
-      <tr><th>Target Ra</th><th>R=0.2mm</th><th>R=0.4mm</th><th>R=0.8mm</th><th>R=1.2mm</th></tr>
-      <tr><td>0.4 μm (N5)</td><td>0.05 mm/rev</td><td>0.07 mm/rev</td><td>0.10 mm/rev</td><td>0.12 mm/rev</td></tr>
-      <tr><td>0.8 μm (N6)</td><td>0.07 mm/rev</td><td>0.10 mm/rev</td><td>0.14 mm/rev</td><td>0.17 mm/rev</td></tr>
-      <tr><td>1.6 μm (N7)</td><td>0.10 mm/rev</td><td>0.14 mm/rev</td><td>0.20 mm/rev</td><td>0.25 mm/rev</td></tr>
-      <tr><td>3.2 μm (N8)</td><td>0.14 mm/rev</td><td>0.20 mm/rev</td><td>0.28 mm/rev</td><td>0.35 mm/rev</td></tr>
-    </table>
-  </div>
-
-  <h2>Frequently Asked Questions</h2>
-  <p><strong>What is Ra surface finish?</strong> Ra (Roughness Average) is the arithmetic mean of absolute profile deviations from the mean line over the evaluation length. It is the most commonly specified surface finish parameter in ISO engineering drawings.</p>
-  <p><strong>How do I calculate surface finish from feed rate and nose radius?</strong> Use the formula Ra = f² / (32 × R). This calculator does it instantly for both turning and milling operations. The result is the theoretical best possible finish — actual Ra will be 20-50% higher.</p>
-  <p><strong>What feed rate gives 0.4 μm Ra in turning?</strong> For a 0.8 mm nose radius: f = √(0.4 × 32 × 0.8 / 1000) = 0.10 mm/rev. For a 0.4 mm radius: f = 0.07 mm/rev. This calculator's "Feed rate to achieve target" field shows the answer for your specific parameters automatically.</p>
-  <p><strong>Does cutting speed affect surface finish?</strong> Indirectly, yes — through built-up edge formation. At low cutting speeds (below 150 SFM in steel), BUE forms and degrades surface finish. At very high speeds (above 800 SFM), thermal softening can improve finish. The <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> helps select speeds that avoid the BUE formation range.</p>
-  <p><strong>How does tool wear affect surface roughness?</strong> As the tool wears, the nose radius changes (usually increases slightly before catastrophic failure), which should theoretically improve finish. However, micro-chipping and edge breakdown create irregular surface features that degrade finish significantly. Replace inserts when Ra increases by more than 30% at constant cutting parameters.</p>
-  <p><strong>What is the difference between Ra and Rz?</strong> Ra is the average deviation across the entire profile. Rz is the average of the five highest peaks minus the five lowest valleys. Rz is typically 5-7 times larger than Ra for turned surfaces. ISO 1302 allows specifying either parameter; Rz is preferred for sealing surfaces and joints where peak heights matter most.</p>
-
-  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
-    <p style="margin:0">For consistent surface finish at higher feed rates, check our High-Performance End Mills</p>
-  </div>
+<h2>ISO Surface Finish Standards: What Ra, Rz, and N Grades Actually Mean</h2>
+<p>Surface finish is specified on engineering drawings using standardized parameters defined by ISO 1302 and ISO 4287. The three most commonly specified parameters are <strong>Ra</strong> (arithmetic average roughness), <strong>Rz</strong> (average maximum height), and <strong>N grade</strong> (ISO roughness grade number). Understanding the relationship between these parameters and the cutting conditions that produce them is essential for meeting print specifications without over-machining.</p>
+<p>Ra is the most universally specified parameter — it represents the arithmetic average of the absolute profile height deviations from the mean line. Rz is the average of the five highest peaks and five lowest valleys over the evaluation length. The N grade system (N1 through N12) provides a standardized roughness grade number where each step represents approximately a 50% change in surface roughness. A part that calls out N5 (0.4 μm Ra) is fundamentally different to manufacture than one calling out N7 (1.6 μm Ra) — the feed rate must be halved, doubling the cycle time.</p>
+<div class="std-table">
+<table>
+<tr><th>N Grade</th><th>Ra (μm)</th><th>Rz (μm)</th><th>Typical Application</th></tr>
+<tr><td>N1</td><td>0.025</td><td>0.15</td><td>Gauge blocks, optical components</td></tr>
+<tr><td>N3</td><td>0.1</td><td>0.6</td><td>Precision spindles, bearing journals</td></tr>
+<tr><td>N5</td><td>0.4</td><td>2.5</td><td>Precision shafts, seal surfaces</td></tr>
+<tr><td>N6</td><td>0.8</td><td>5.0</td><td>General machined fits</td></tr>
+<tr><td>N7</td><td>1.6</td><td>10.0</td><td>Standard machining (most common)</td></tr>
+<tr><td>N8</td><td>3.2</td><td>16.0</td><td>Commercial machined surfaces</td></tr>
+<tr><td>N9</td><td>6.3</td><td>32.0</td><td>Rough machining, non-critical</td></tr>
+</table>
+</div>
+<h2>The Theoretical Roughness Formula</h2>
+<p>The theoretical surface roughness for a turning operation is determined by the geometry of the cutting tool's nose radius and the feed rate. The tool leaves a series of helical ridges on the workpiece surface — the height of these ridges is the theoretical roughness:</p>
+<p><code>Ra (μm) = (f² × 1000) ÷ (32 × R)</code><br/>
+<code>Rz (μm) = (f² × 1000) ÷ (8 × R)</code></p>
+<p>Where <strong>f</strong> = feed per revolution (mm/rev) and <strong>R</strong> = insert nose radius (mm). For milling, the corner radius of the end mill replaces the nose radius, and the feed per tooth replaces feed per revolution.</p>
+<p>The critical insight from these formulas is that roughness increases with the <strong>square of the feed rate</strong> — doubling the feed quadruples the surface roughness. Conversely, increasing the nose radius reduces roughness linearly — doubling the radius halves the roughness. This makes nose radius selection the most powerful lever for controlling surface finish without sacrificing cycle time.</p>
+<h2>Nose Radius Selection: Balancing Roughness and Productivity</h2>
+<p>The relationship between feed rate, nose radius, and surface roughness creates a three-way optimization problem. A larger nose radius (1.2 mm vs. 0.4 mm) allows four times higher feed rate for the same Ra, directly reducing cycle time. However, larger nose radii increase cutting forces and can cause chatter in long-overhang operations — a problem analyzed in detail by the <a href="/tools/force-calculator/" style="color:#0066cc">Milling Force Calculator</a>.</p>
+<p>Practical nose radius selection guidelines: For finishing passes requiring Ra ≤ 0.8 μm, use a 0.8 mm or 1.2 mm nose radius with feed rates between 0.08-0.15 mm/rev. For roughing where Ra ≤ 3.2 μm is acceptable, use a 0.4 mm radius with feeds up to 0.35 mm/rev. The <a href="/tools/cycle-time-calculator/" style="color:#0066cc">Cycle Time Calculator</a> can help quantify the productivity impact of switching to a larger nose radius.</p>
+<h2>Why Actual Roughness Differs from Theoretical</h2>
+<p>The theoretical model assumes perfect geometry — a sharp tool with an ideal nose radius cutting without vibration, built-up edge, or tool wear. In production, actual Ra is typically 20-50% higher than theoretical due to several factors:</p>
+<ul>
+<li><strong>Built-up edge (BUE):</strong> Material adhering to the cutting edge creates an irregular surface. Most common in aluminum and low-carbon steel at moderate cutting speeds. Increasing cutting speed by 20% or using a polished insert reduces BUE.</li>
+<li><strong>Chatter vibration:</strong> Even mild chatter (amplitude &lt; 10 μm) can double the actual Ra. The problem is mechanical, not geometric — use the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> to find a stable RPM range.</li>
+<li><strong>Tool wear:</strong> A worn tool produces a degraded surface finish. As flank wear reaches 0.2 mm, actual Ra can increase by 50-80% compared to a fresh edge. The increase in cutting forces from tool wear can be monitored using the <a href="/tools/horsepower-calculator/" style="color:#0066cc">Spindle Horsepower Calculator</a> — a power increase of 15%+ at constant parameters indicates tool wear.</li>
+<li><strong>Material smearing:</strong> Ductile materials like aluminum and low-carbon steel can smear across the machined surface, creating peaks and valleys not predicted by the geometric model. Using coolant with EP additives reduces smearing.</li>
+</ul>
+<h2>Economic Implications of Surface Finish Requirements</h2>
+<p>The cost of achieving a specific surface finish is not linear with the Ra value. Reducing Ra from 1.6 μm to 0.8 μm typically requires halving the feed rate — which doubles the cycle time for the finishing pass. Reducing from 0.8 μm to 0.4 μm requires halving the feed again, doubling cycle time once more. This exponential relationship means that over-specifying surface finish is one of the most common and costly mistakes in part design.</p>
+<p>For comparison: a shaft requiring 1.6 μm Ra (N7) can be rough-turned at 0.3 mm/rev feed. The same shaft requiring 0.4 μm Ra (N5) requires finishing at 0.12 mm/rev feed — a 2.5× increase in finishing time. On a shaft with 100mm turning length, this adds 15-20 seconds per part. On 10,000 parts, that's approximately 50 hours of additional machine time — at $85/hour, an unnecessary $4,250 in machining cost.</p>
+<h2>Feed Rate and Nose Radius Optimization Table</h2>
+<p>The table below shows the maximum feed rate that can be used to achieve a target Ra for common nose radii:</p>
+<div class="std-table">
+<table>
+<tr><th>Target Ra</th><th>R=0.2mm</th><th>R=0.4mm</th><th>R=0.8mm</th><th>R=1.2mm</th></tr>
+<tr><td>0.4 μm (N5)</td><td>0.05 mm/rev</td><td>0.07 mm/rev</td><td>0.10 mm/rev</td><td>0.12 mm/rev</td></tr>
+<tr><td>0.8 μm (N6)</td><td>0.07 mm/rev</td><td>0.10 mm/rev</td><td>0.14 mm/rev</td><td>0.17 mm/rev</td></tr>
+<tr><td>1.6 μm (N7)</td><td>0.10 mm/rev</td><td>0.14 mm/rev</td><td>0.20 mm/rev</td><td>0.25 mm/rev</td></tr>
+<tr><td>3.2 μm (N8)</td><td>0.14 mm/rev</td><td>0.20 mm/rev</td><td>0.28 mm/rev</td><td>0.35 mm/rev</td></tr>
+</table>
+</div>
+<h2>Frequently Asked Questions</h2>
+<p><strong>What is Ra surface finish?</strong> Ra (Roughness Average) is the arithmetic mean of absolute profile deviations from the mean line over the evaluation length. It is the most commonly specified surface finish parameter in ISO engineering drawings.</p>
+<p><strong>How do I calculate surface finish from feed rate and nose radius?</strong> Use the formula Ra = f² / (32 × R). This calculator does it instantly for both turning and milling operations. The result is the theoretical best possible finish — actual Ra will be 20-50% higher.</p>
+<p><strong>What feed rate gives 0.4 μm Ra in turning?</strong> For a 0.8 mm nose radius: f = √(0.4 × 32 × 0.8 / 1000) = 0.10 mm/rev. For a 0.4 mm radius: f = 0.07 mm/rev. This calculator's "Feed rate to achieve target" field shows the answer for your specific parameters automatically.</p>
+<p><strong>Does cutting speed affect surface finish?</strong> Indirectly, yes — through built-up edge formation. At low cutting speeds (below 150 SFM in steel), BUE forms and degrades surface finish. At very high speeds (above 800 SFM), thermal softening can improve finish. The <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> helps select speeds that avoid the BUE formation range.</p>
+<p><strong>How does tool wear affect surface roughness?</strong> As the tool wears, the nose radius changes (usually increases slightly before catastrophic failure), which should theoretically improve finish. However, micro-chipping and edge breakdown create irregular surface features that degrade finish significantly. Replace inserts when Ra increases by more than 30% at constant cutting parameters.</p>
+<p><strong>What is the difference between Ra and Rz?</strong> Ra is the average deviation across the entire profile. Rz is the average of the five highest peaks minus the five lowest valleys. Rz is typically 5-7 times larger than Ra for turned surfaces. ISO 1302 allows specifying either parameter; Rz is preferred for sealing surfaces and joints where peak heights matter most.</p>
+<div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
+<p style="margin:0">For consistent surface finish at higher feed rates, check our High-Performance End Mills</p>
+</div>
 </div>
 </section>
 <div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
-<a href="/tools/speed-feed/">Speed & Feed</a>
+<a href="/tools/speed-feed/">Speed &amp; Feed</a>
 <a href="/tools/hardness-converter/">Hardness Converter</a>
 <a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>
 <a href="/tools/mrr-calculator/">MRR Calculator</a>
@@ -439,19 +430,18 @@ calc();
 <a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
 <a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Need Professional Tooling?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Request Bulk Quote →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Need Professional Tooling?</h3>
+<p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
 <div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/tool-holders.html">Tool Holders</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ Professional Machining Tools</h3>
-  <div class="tool-grid">
+<h3>🔧 Explore 100+ Professional Machining Tools</h3>
+<div class="tool-grid">
 <a href="/tools/aql-sampling-calculator/">AQL Sampling Calculator</a>
 <a href="/tools/threading-pass-calculator/">Threading Pass Calculator</a>
 <a href="/tools/thread-pitch-diameter-calculator/">Thread Pitch Diameter Calculator</a>
@@ -460,15 +450,13 @@ calc();
 <a href="/tools/horsepower-calculator/">Horsepower Calculator</a>
 <a href="/tools/countersink-depth-calculator/">Countersink Depth Calculator</a>
 <a href="/tools/slot-milling-calculator/">Slot Milling Calculator</a>
-
-  </div>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Share with Engineers</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/tools/surface-roughness-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/surface-roughness-calculator/&text=Surface Roughness Calculator" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Surface Roughness Calculator&body=Check this out: https://carbide-tooling.com/tools/surface-roughness-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/surface-roughness-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/surface-roughness-calculator/&amp;text=Surface Roughness Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Surface Roughness Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/surface-roughness-calculator/">Email</a>
 </div>
-
 </body>
 </html>

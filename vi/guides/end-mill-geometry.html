@@ -27,8 +27,11 @@ a:hover{text-decoration:underline}
 .breadcrumb a{color:#0066cc}
 code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}
 @media(max-width:768px){h1{font-size:28px;padding-top:48px}}
-</style>
-<link href="https://carbide-tooling.com/vi/guides/end-mill-geometry.html" rel="canonical"/><link href="https://carbide-tooling.com/guides/end-mill-geometry.html" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/guides/end-mill-geometry.html" hreflang="en" rel="alternate"/><link href="https://carbide-tooling.com/de/guides/end-mill-geometry.html" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/guides/end-mill-geometry.html" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/guides/end-mill-geometry.html" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/guides/end-mill-geometry.html" hreflang="vi" rel="alternate"/></head>
+
+.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
+.lang-nav{display:flex;align-items:center;gap:2px;margin-left:12px;padding-left:12px;border-left:1px solid #e8e8ed}.lang-nav a{font-size:11px;font-weight:500;color:#86868b;text-decoration:none;padding:2px 5px;border-radius:4px;transition:all .15s}.lang-nav a:hover{color:#1d1d1f;background:#f5f5f7}.lang-nav a.active{color:#0066cc;font-weight:600}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}.lang-menu.show{display:block}.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}.lang-menu a:hover{background:#f5f5f7}.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}.lang-menu a .flag{font-size:16px}</style>
+<link href="https://carbide-tooling.com/vi/guides/end-mill-geometry.html" rel="canonical"/><link href="https://carbide-tooling.com/guides/end-mill-geometry.html" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/guides/end-mill-geometry.html" hreflang="en" rel="alternate"/><link href="https://carbide-tooling.com/de/guides/end-mill-geometry.html" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/guides/end-mill-geometry.html" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/guides/end-mill-geometry.html" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/guides/end-mill-geometry.html" hreflang="vi" rel="alternate"/><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script></head>
 <body>
 <nav>
 <div class="nav-inner">
@@ -59,7 +62,7 @@ code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}
 </div>
 </div>
 <a href="../quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;transition:all .2s">Nhận báo giá →</a>
-</div>
+<div class="lang-dropdown"><button class="lang-btn" onclick="toggleLang(event)"> 🇻🇳<span class="arrow">▼</span></button><div class="lang-menu" id="lang-menu"><a href="/guides/end-mill-geometry.html"><span class="flag">🇬🇧</span> EN</a><a href="/de/guides/end-mill-geometry.html"><span class="flag">🇩🇪</span> DE</a><a href="/jp/guides/end-mill-geometry.html"><span class="flag">🇯🇵</span> JP</a><a href="/es/guides/end-mill-geometry.html"><span class="flag">🇪🇸</span> ES</a><a class="active" href="/vi/guides/end-mill-geometry.html"><span class="flag">🇻🇳</span> VI</a></div></div></div>
 </nav>
 <main>
 <div class="container" style="min-height:60vh">
@@ -147,6 +150,6 @@ code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}
 </div>
 </div>
 <div class="bottom">© 2026 Carbide Tooling. Precision sourcing for precision machining.</div>
-</footer>
+<div class="lang-switcher"><span class="lang-label">Ngôn ngữ:</span><a class="lang-link" href="/guides/end-mill-geometry.html">EN</a><a class="lang-link" href="/de/guides/end-mill-geometry.html">DE</a><a class="lang-link" href="/jp/guides/end-mill-geometry.html">JP</a><a class="lang-link" href="/es/guides/end-mill-geometry.html">ES</a><a class="lang-link active" href="/vi/guides/end-mill-geometry.html">VI</a></div></footer>
 </body>
 </html>

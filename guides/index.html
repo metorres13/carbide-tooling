@@ -4,7 +4,6 @@
 <head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Technical Guides — Carbide Tooling</title>
 <meta content="Technical guides on carbide cutting tools: end mill geometry, carbide grades, coatings comparison, and sourcing tips." name="description"/>
-
 <link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22&gt;&lt;rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%2306c%22/&gt;&lt;text x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22white%22&gt;◆&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 <meta content="index, follow" name="robots"/>
 <meta content="https://carbide-tooling.com/images/hero.jpg" property="og:image"/>
@@ -31,7 +30,10 @@ h1{font-size:40px;font-weight:700;letter-spacing:-0.5px;padding-top:80px;margin-
 .tag{display:inline-block;font-size:11px;color:#06c;background:#e8f0fe;padding:2px 8px;border-radius:4px;margin-top:6px}
 footer{margin-top:80px;padding:32px 0;border-top:1px solid #f0f0f0;text-align:center;font-size:12px;color:#86868b}
 @media(max-width:768px){h1{font-size:28px;padding-top:48px}}
-</style>
+
+.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
+.lang-nav{display:flex;align-items:center;gap:2px;margin-left:12px;padding-left:12px;border-left:1px solid #e8e8ed}.lang-nav a{font-size:11px;font-weight:500;color:#86868b;text-decoration:none;padding:2px 5px;border-radius:4px;transition:all .15s}.lang-nav a:hover{color:#1d1d1f;background:#f5f5f7}.lang-nav a.active{color:#0066cc;font-weight:600}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}.lang-menu.show{display:block}.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}.lang-menu a:hover{background:#f5f5f7}.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}.lang-menu a .flag{font-size:16px}</style>
 <script type="application/ld+json">
 [
   {
@@ -73,9 +75,9 @@ footer{margin-top:80px;padding:32px 0;border-top:1px solid #f0f0f0;text-align:ce
 ]
   </script>
 <!-- GOOGLE ANALYTICS ID: 填入 GA ID 后启用 -->
-<link href="https://carbide-tooling.com/guides/" rel="canonical"/><link href="https://carbide-tooling.com/guides/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/guides/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/guides/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/guides/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/guides/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/guides/" hreflang="en" rel="alternate"/></head>
+<link href="https://carbide-tooling.com/guides/" rel="canonical"/><link href="https://carbide-tooling.com/guides/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/guides/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/guides/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/guides/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/guides/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/guides/" hreflang="en" rel="alternate"/><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script></head>
 <body>
-<nav><div class="container nav-inner"><div class="logo"><span>◆</span> Carbide Tooling</div><div><a href="/">Home</a><a href="/products/">Products</a><a href="/guides/">Guides</a><a href="/about.html">About</a><a href="/quote.html">Quote</a></div></div></nav>
+<nav><div class="container nav-inner"><div class="logo"><span>◆</span> Carbide Tooling</div><div><a href="/">Home</a><a href="/products/">Products</a><a href="/guides/">Guides</a><a href="/about.html">About</a><a href="/quote.html">Quote</a></div><div class="lang-dropdown"><button class="lang-btn" onclick="toggleLang(event)"> 🇬🇧<span class="arrow">▼</span></button><div class="lang-menu" id="lang-menu"><a class="active" href="/guides/index.html"><span class="flag">🇬🇧</span> EN</a><a href="/de/guides/index.html"><span class="flag">🇩🇪</span> DE</a><a href="/jp/guides/index.html"><span class="flag">🇯🇵</span> JP</a><a href="/es/guides/index.html"><span class="flag">🇪🇸</span> ES</a><a href="/vi/guides/index.html"><span class="flag">🇻🇳</span> VI</a></div></div></div></nav>
 <div class="container">
 <h1>Technical guides.</h1>
 <p class="sub">Practical information on tool selection, machining parameters, and supplier evaluation.</p>
@@ -87,6 +89,6 @@ footer{margin-top:80px;padding:32px 0;border-top:1px solid #f0f0f0;text-align:ce
 <li><a href="/guides/insert-grade-selection.html"><h3>Turning Insert Grade Selection</h3><p>How to choose the right insert grade and geometry for steel, stainless, and superalloys.</p><span class="tag">Turning</span></a></li>
 </ul>
 </div>
-<footer><div class="container"><p>© 2026 Carbide Tooling</p></div></footer>
+<footer><div class="container"><p>© 2026 Carbide Tooling</p></div><div class="lang-switcher"><span class="lang-label">Language:</span><a class="lang-link active" href="/guides/index.html">EN</a><a class="lang-link" href="/de/guides/index.html">DE</a><a class="lang-link" href="/jp/guides/index.html">JP</a><a class="lang-link" href="/es/guides/index.html">ES</a><a class="lang-link" href="/vi/guides/index.html">VI</a></div></footer>
 </body>
 </html>

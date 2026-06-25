@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Speed & Feed Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
-<meta name="description" id="meta-desc" content="Free online CNC speed and feed calculator for carbide end mills. Calculate RPM, IPM, chip load for aluminum, stainless, titanium, and hardened steel." />
-<meta property="og:title" id="og-title" content="CNC Speed and Feed Calculator — Carbide Tooling" />
-<meta property="og:description" id="og-desc" content="Professional CNC speed and feed calculator for carbide end mills. Used by machinists worldwide." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://carbide-tooling.com/tools/speed-feed/" />
-<meta property="og:locale" content="en_US" />
-<meta name="theme-color" content="#0066cc" />
-<link rel="canonical" href="https://carbide-tooling.com/tools/speed-feed/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Speed &amp; Feed Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
+<meta content="Free online CNC speed and feed calculator for carbide end mills. Calculate RPM, IPM, chip load for aluminum, stainless, titanium, and hardened steel." id="meta-desc" name="description"/>
+<meta content="CNC Speed and Feed Calculator — Carbide Tooling" id="og-title" property="og:title"/>
+<meta content="Professional CNC speed and feed calculator for carbide end mills. Used by machinists worldwide." id="og-desc" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://carbide-tooling.com/tools/speed-feed/" property="og:url"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="https://carbide-tooling.com/tools/speed-feed/" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -111,18 +112,29 @@ footer a:hover{text-decoration:underline}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Speed & Feed Calculator | Precision Machining Tool"/>
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://carbide-tooling.com/tools/speed-feed/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Speed & Feed Calculator | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Speed &amp; Feed Calculator | Precision Machining Tool" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/speed-feed/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Speed &amp; Feed Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -198,161 +210,146 @@ footer a:hover{text-decoration:underline}
   ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/speed-feed/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/speed-feed/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/speed-feed/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/speed-feed/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/speed-feed/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/speed-feed/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/speed-feed"/>
+<link href="https://carbide-tooling.com/tools/speed-feed/" hreflang="en" rel="alternate"/>
+<link href="https://carbide-tooling.com/de/tools/speed-feed/" hreflang="de" rel="alternate"/>
+<link href="https://carbide-tooling.com/jp/tools/speed-feed/" hreflang="ja" rel="alternate"/>
+<link href="https://carbide-tooling.com/es/tools/speed-feed/" hreflang="es" rel="alternate"/>
+<link href="https://carbide-tooling.com/vi/tools/speed-feed/" hreflang="vi" rel="alternate"/> <link href="https://carbide-tooling.com/tools/speed-feed" hreflang="x-default" rel="alternate"/>
 </head>
 <body>
-
 <!-- ===== NAV ===== -->
 <nav>
 <div class="nav-inner">
-  <div class="nav-left">
-    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
-    <div class="nav-links">
-      <a href="https://carbide-tooling.com/products/">Products</a>
-      <a href="https://carbide-tooling.com/guides/">Guides</a>
-      <a href="https://carbide-tooling.com/about.html">About</a>
-    </div>
-  </div>
-  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a><div class="lang-nav"><a href="#" class="active" onclick="return false">EN</a><span class="sep">|</span><a href="/de/tools/speed-feed/">DE</a><span class="sep">|</span><a href="/jp/tools/speed-feed/">JP</a><span class="sep">|</span><a href="/es/tools/speed-feed/">ES</a><span class="sep">|</span><a href="/vi/tools/speed-feed/">VI</a><span class="sep">|</span><a href="/zh/tools/speed-feed/">中</a></div>
+<div class="nav-left">
+<a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="https://carbide-tooling.com/products/">Products</a>
+<a href="https://carbide-tooling.com/guides/">Guides</a>
+<a href="https://carbide-tooling.com/about.html">About</a>
 </div>
-</nav>
-
+</div>
+<a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Get a Quote</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/speed-feed/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/speed-feed/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/speed-feed/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/speed-feed/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/speed-feed/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <!-- ===== HERO ===== -->
 <section class="hero">
 <div class="container">
-  <div class="badge">⚙️ Free Professional Tool</div>
-  <h1>CNC <span class="accent">Speed &amp; Feed</span> Calculator</h1>
-  <p>Calculate optimal RPM, feed rate, and chip load for carbide end mills. Select your material, enter tool dimensions, and get instant results — no sign-up required.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#calculator">Start Calculating ↓</a>
-    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
-  </div>
+<div class="badge">⚙️ Free Professional Tool</div>
+<h1>CNC <span class="accent">Speed &amp; Feed</span> Calculator</h1>
+<p>Calculate optimal RPM, feed rate, and chip load for carbide end mills. Select your material, enter tool dimensions, and get instant results — no sign-up required.</p>
+<div class="hero-actions">
+<a class="btn" href="#calculator">Start Calculating ↓</a>
+<a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
+</div>
 </div>
 </section>
-
 <!-- ===== CALCULATOR ===== -->
-<section id="calculator" class="container" style="padding-bottom:40px">
+<section class="container" id="calculator" style="padding-bottom:40px">
 <div class="card">
-  <h2>🔄 Speeds &amp; Feeds</h2>
-  <p class="sub">Based on SFM data from Metcut Machining Data Handbook and ISO 1832 standards</p>
-  
-  <!-- Unit Toggle -->
-  <div class="tabs" id="unit-tabs">
-    <button class="tab active" onclick="setUnit('metric')">📐 Metric (mm)</button>
-    <button class="tab" onclick="setUnit('imperial')">📏 Imperial (inch)</button>
-  </div>
-
-  <!-- Inputs -->
-  <div class="card-row">
-    <div class="field"><label>🔩 Material</label>
-      <select id="material" onchange="calc()">
-        <option value="al6061">Aluminum 6061</option>
-        <option value="ss304" selected>Stainless Steel 304</option>
-        <option value="ss316">Stainless Steel 316</option>
-        <option value="ti6al4v">Titanium Grade 5</option>
-        <option value="hardened_steel">Hardened Steel (45-55 HRC)</option>
-        <option value="mild_steel">Mild Steel 1018</option>
-        <option value="tool_steel">Tool Steel A2/D2</option>
-        <option value="inconel">Inconel 718</option>
-        <option value="cast_iron">Cast Iron</option>
-        <option value="brass">Brass / Copper</option>
-      </select>
-    </div>
-    <div class="field"><label>⚙️ Operation</label>
-      <select id="operation" onchange="calc()">
-        <option value="roughing">Roughing</option>
-        <option value="finishing" selected>Finishing</option>
-      </select>
-    </div>
-    <div class="field"><label>📐 Tool Diameter</label>
-      <input type="number" id="tool-dia" value="12" min="0.1" max="50" step="0.5" oninput="calc()" />
-    </div>
-    <div class="field"><label>🦷 Flutes</label>
-      <select id="flutes" onchange="calc()">
-        <option value="2">2</option><option value="3">3</option><option value="4" selected>4</option><option value="5">5</option><option value="6">6</option>
-      </select>
-    </div>
-    <div class="field"><label>⏬ Depth of Cut (ap)</label>
-      <input type="number" id="doc" value="0.5" min="0.01" max="5" step="0.1" oninput="calc()" />
-    </div>
-    <div class="field"><label>↔️ Width of Cut (ae)</label>
-      <input type="number" id="woc" value="0.5" min="0.01" max="5" step="0.1" oninput="calc()" />
-    </div>
-  </div>
-
-  <!-- Results -->
-  <div class="result-grid" id="results">
-    <div class="result-item"><div class="label">Spindle Speed</div><div class="value accent" id="r-rpm">—</div><div class="unit">RPM</div></div>
-    <div class="result-item"><div class="label">Feed Rate</div><div class="value accent" id="r-feed">—</div><div class="unit" id="feed-unit">mm/min</div></div>
-    <div class="result-item"><div class="label">Chip Load</div><div class="value accent" id="r-ipt">—</div><div class="unit" id="ipt-unit">mm/tooth</div></div>
-    <div class="result-item"><div class="label">Material Removal</div><div class="value accent" id="r-mrr">—</div><div class="unit" id="mrr-unit">cm³/min</div></div>
-  </div>
-
-  <!-- Extra Info -->
-  <div class="extra-info" style="margin-top:14px">
-    <span>SFM: <span class="val" id="x-sfm">—</span></span>
-    <span class="hidden sm:inline" style="color:#d2d2d6">|</span>
-    <span>Vc: <span class="val" id="x-vc">—</span> m/min</span>
-    <span class="hidden sm:inline" style="color:#d2d2d6">|</span>
-    <span>fz: <span class="val" id="x-fz">—</span> mm/tooth</span>
-    <span class="hidden sm:inline" style="color:#d2d2d6">|</span>
-    <span>Power: <span class="val" id="x-pwr">—</span> kW</span>
-    <span style="margin-left:auto"><button onclick="copyResults()" style="background:none;border:none;color:#0066cc;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">📋 Copy Results</button></span>
-  </div>
+<h2>🔄 Speeds &amp; Feeds</h2>
+<p class="sub">Based on SFM data from Metcut Machining Data Handbook and ISO 1832 standards</p>
+<!-- Unit Toggle -->
+<div class="tabs" id="unit-tabs">
+<button class="tab active" onclick="setUnit('metric')">📐 Metric (mm)</button>
+<button class="tab" onclick="setUnit('imperial')">📏 Imperial (inch)</button>
 </div>
-
+<!-- Inputs -->
+<div class="card-row">
+<div class="field"><label>🔩 Material</label>
+<select id="material" onchange="calc()">
+<option value="al6061">Aluminum 6061</option>
+<option selected="" value="ss304">Stainless Steel 304</option>
+<option value="ss316">Stainless Steel 316</option>
+<option value="ti6al4v">Titanium Grade 5</option>
+<option value="hardened_steel">Hardened Steel (45-55 HRC)</option>
+<option value="mild_steel">Mild Steel 1018</option>
+<option value="tool_steel">Tool Steel A2/D2</option>
+<option value="inconel">Inconel 718</option>
+<option value="cast_iron">Cast Iron</option>
+<option value="brass">Brass / Copper</option>
+</select>
+</div>
+<div class="field"><label>⚙️ Operation</label>
+<select id="operation" onchange="calc()">
+<option value="roughing">Roughing</option>
+<option selected="" value="finishing">Finishing</option>
+</select>
+</div>
+<div class="field"><label>📐 Tool Diameter</label>
+<input id="tool-dia" max="50" min="0.1" oninput="calc()" step="0.5" type="number" value="12"/>
+</div>
+<div class="field"><label>🦷 Flutes</label>
+<select id="flutes" onchange="calc()">
+<option value="2">2</option><option value="3">3</option><option selected="" value="4">4</option><option value="5">5</option><option value="6">6</option>
+</select>
+</div>
+<div class="field"><label>⏬ Depth of Cut (ap)</label>
+<input id="doc" max="5" min="0.01" oninput="calc()" step="0.1" type="number" value="0.5"/>
+</div>
+<div class="field"><label>↔️ Width of Cut (ae)</label>
+<input id="woc" max="5" min="0.01" oninput="calc()" step="0.1" type="number" value="0.5"/>
+</div>
+</div>
+<!-- Results -->
+<div class="result-grid" id="results">
+<div class="result-item"><div class="label">Spindle Speed</div><div class="value accent" id="r-rpm">—</div><div class="unit">RPM</div></div>
+<div class="result-item"><div class="label">Feed Rate</div><div class="value accent" id="r-feed">—</div><div class="unit" id="feed-unit">mm/min</div></div>
+<div class="result-item"><div class="label">Chip Load</div><div class="value accent" id="r-ipt">—</div><div class="unit" id="ipt-unit">mm/tooth</div></div>
+<div class="result-item"><div class="label">Material Removal</div><div class="value accent" id="r-mrr">—</div><div class="unit" id="mrr-unit">cm³/min</div></div>
+</div>
+<!-- Extra Info -->
+<div class="extra-info" style="margin-top:14px">
+<span>SFM: <span class="val" id="x-sfm">—</span></span>
+<span class="hidden sm:inline" style="color:#d2d2d6">|</span>
+<span>Vc: <span class="val" id="x-vc">—</span> m/min</span>
+<span class="hidden sm:inline" style="color:#d2d2d6">|</span>
+<span>fz: <span class="val" id="x-fz">—</span> mm/tooth</span>
+<span class="hidden sm:inline" style="color:#d2d2d6">|</span>
+<span>Power: <span class="val" id="x-pwr">—</span> kW</span>
+<span style="margin-left:auto"><button onclick="copyResults()" style="background:none;border:none;color:#0066cc;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">📋 Copy Results</button></span>
+</div>
+</div>
 <!-- Quote CTA -->
 <div class="quote-cta">
-  <h3>📦 Need production quantities?</h3>
-  <p>Get factory-direct pricing on premium carbide end mills. Tell us your material, quantities, and target tolerances.</p>
-  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-    <a href="https://carbide-tooling.com/quote.html" class="btn">📩 Request a Precision Quote</a>
-    <a href="https://carbide-tooling.com/tools/" class="btn-outline" style="font-size:13px">← All Tools</a>
-  </div>
+<h3>📦 Need production quantities?</h3>
+<p>Get factory-direct pricing on premium carbide end mills. Tell us your material, quantities, and target tolerances.</p>
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+<a class="btn" href="https://carbide-tooling.com/quote.html">📩 Request a Precision Quote</a>
+<a class="btn-outline" href="https://carbide-tooling.com/tools/" style="font-size:13px">← All Tools</a>
 </div>
+</div><p style="text-align:center;font-size:11px;color:#86868b;margin:16px 0 0;letter-spacing:0.02em">Verified by Carbide-Tooling Engineering Team</p>
 </section>
-
 <!-- ===== SEO CONTENT ===== -->
-
 <!-- ===== FOOTER ===== -->
-<footer class="tool-footer">
+<div style="margin:24px 0 40px"><h3 style="font-size:13px;font-weight:600;color:#86868b;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:0.05em">Related Precision Tools</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px"><a href="/tools/scrap-value-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Scrap Value Calculator</a><a href="/tools/sfm-m-min-converter/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Sfm M Min Converter</a><a href="/tools/shipping-duty-estimator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Shipping Duty Estimator</a><a href="/tools/pressure-converter/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Pressure Converter</a><a href="/tools/tool-runout-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Tool Runout Calculator</a><a href="/tools/thread-depth-torque-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Thread Depth Torque Calculator</a></div></div><footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/tools/">All Tools</a>
-    <a href="/products/">Products</a>
-    <a href="/guides/">Guides</a>
-    <a href="/about.html">About</a>
-    <a href="/quote.html">Get a Quote</a>
-    <a href="/privacy.html">Privacy</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/tools/">All Tools</a>
+<a href="/products/">Products</a>
+<a href="/guides/">Guides</a>
+<a href="/about.html">About</a>
+<a href="/quote.html">Get a Quote</a>
+<a href="/privacy.html">Privacy</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/tools/speed-feed/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/speed-feed/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/speed-feed/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/speed-feed/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/speed-feed/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/speed-feed/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">in</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">All Tools</a></p>
+<p style="font-size:11px;margin-bottom:6px">Results are for reference only. Consult tool manufacturers for specific applications.</p>
+<p style="font-size:11px">© 2026 Carbide Tooling</p>
 </div>
 </footer>
-
 <script>
 const MATS = {
   al6061:{sfm_min:800,sfm_max:1500,ipt_rough:0.0045,ipt_finish:0.002,coeff:0.25},
@@ -424,33 +421,30 @@ calc();
 </script>
 <section class="seo-content">
 <div class="container">
-  <h2>How to Calculate CNC Speeds and Feeds for Carbide End Mills</h2>
-  <p>Accurate speed and feed calculation is the foundation of profitable CNC machining. For carbide tooling, getting the parameters right means the difference between a competitive operation and constant tool failures. This guide provides machinists and manufacturing engineers with the formulas, data, and strategies needed to optimize cutting parameters for carbide end mills across common workpiece materials.</p>
-  
-  <h3>The Fundamental Formulas</h3>
-  <p><strong>Spindle Speed (RPM)</strong> is calculated from the desired surface speed:<br/>
+<h2>How to Calculate CNC Speeds and Feeds for Carbide End Mills</h2>
+<p>Accurate speed and feed calculation is the foundation of profitable CNC machining. For carbide tooling, getting the parameters right means the difference between a competitive operation and constant tool failures. This guide provides machinists and manufacturing engineers with the formulas, data, and strategies needed to optimize cutting parameters for carbide end mills across common workpiece materials.</p>
+<h3>The Fundamental Formulas</h3>
+<p><strong>Spindle Speed (RPM)</strong> is calculated from the desired surface speed:<br/>
   Imperial: <code>RPM = (SFM × 12) ÷ (π × D)</code><br/>
   Metric: <code>RPM = (Vc × 1000) ÷ (π × D)</code></p>
-  <p><strong>Feed Rate</strong> determines how fast the tool moves through material:<br/>
-  <code>Feed Rate = RPM × N × IPT</code> where N = number of flutes and IPT = inches per tooth (chip load).</p>
-  
-  <h3>Material-Specific Recommendations</h3>
-  <p><strong>Aluminum 6061:</strong> SFM 800-1,500. Use polished flute geometries and 2-3 flute designs. High RPM with moderate chip loads maximizes material removal without built-up edge.</p>
-  <p><strong>Stainless Steel 304/316:</strong> SFM 250-500. Use 4-6 flute variable helix geometries to reduce chatter. Maintain minimum chip thickness to avoid work-hardening — the most common cause of edge chipping in stainless steel.</p>
-  <p><strong>Titanium Grade 5:</strong> SFM 150-300. Low thermal conductivity concentrates heat at the cutting edge. Climb milling and through-spindle coolant are essential for tool life.</p>
-  <p><strong>Hardened Steel (45-55 HRC):</strong> SFM 150-250. Use 6+ flute end mills with AlTiN or AlCrN coatings. Trochoidal milling with light radial engagement (5-15%) maximizes material removal while protecting the tool.</p>
-
-  <h2>Frequently Asked Questions</h2>
-  <p><strong>How do I calculate speed and feed for a carbide end mill?</strong> Use the calculator above. Select your material, tool diameter, flute count, and operation type. The calculator applies the standard formulas automatically.</p>
-  <p><strong>What happens if the feed rate is too high?</strong> Tool deflection, poor surface finish, accelerated wear, and potential tool breakage. Reduce feed by 20-30% if you observe these symptoms.</p>
-  <p><strong>How does cutting speed affect tool life?</strong> Per the Taylor equation, doubling cutting speed typically reduces tool life by 50-80%. Optimal speed balances productivity and tool cost.</p>
-  <p><strong>Why is my carbide tool chipping in stainless steel?</strong> Most common cause is insufficient chip load — the tool rubs instead of cutting, causing work-hardening. Ensure minimum chip thickness is maintained.</p>
-  <p><strong>What is the difference between SFM and RPM?</strong> SFM (Surface Feet per Minute) is the speed at which the cutting edge travels through material. RPM is the spindle speed calculated from SFM and tool diameter.</p>
-  <p><strong>Why carbide over HSS?</strong> Carbide offers 3-5× higher cutting speeds, maintains hardness at high temperatures (800-1000°C), and enables machining of hardened materials up to 65 HRC.</p>
+<p><strong>Feed Rate</strong> determines how fast the tool moves through material:<br/>
+<code>Feed Rate = RPM × N × IPT</code> where N = number of flutes and IPT = inches per tooth (chip load).</p>
+<h3>Material-Specific Recommendations</h3>
+<p><strong>Aluminum 6061:</strong> SFM 800-1,500. Use polished flute geometries and 2-3 flute designs. High RPM with moderate chip loads maximizes material removal without built-up edge.</p>
+<p><strong>Stainless Steel 304/316:</strong> SFM 250-500. Use 4-6 flute variable helix geometries to reduce chatter. Maintain minimum chip thickness to avoid work-hardening — the most common cause of edge chipping in stainless steel.</p>
+<p><strong>Titanium Grade 5:</strong> SFM 150-300. Low thermal conductivity concentrates heat at the cutting edge. Climb milling and through-spindle coolant are essential for tool life.</p>
+<p><strong>Hardened Steel (45-55 HRC):</strong> SFM 150-250. Use 6+ flute end mills with AlTiN or AlCrN coatings. Trochoidal milling with light radial engagement (5-15%) maximizes material removal while protecting the tool.</p>
+<h2>Frequently Asked Questions</h2>
+<p><strong>How do I calculate speed and feed for a carbide end mill?</strong> Use the calculator above. Select your material, tool diameter, flute count, and operation type. The calculator applies the standard formulas automatically.</p>
+<p><strong>What happens if the feed rate is too high?</strong> Tool deflection, poor surface finish, accelerated wear, and potential tool breakage. Reduce feed by 20-30% if you observe these symptoms.</p>
+<p><strong>How does cutting speed affect tool life?</strong> Per the Taylor equation, doubling cutting speed typically reduces tool life by 50-80%. Optimal speed balances productivity and tool cost.</p>
+<p><strong>Why is my carbide tool chipping in stainless steel?</strong> Most common cause is insufficient chip load — the tool rubs instead of cutting, causing work-hardening. Ensure minimum chip thickness is maintained.</p>
+<p><strong>What is the difference between SFM and RPM?</strong> SFM (Surface Feet per Minute) is the speed at which the cutting edge travels through material. RPM is the spindle speed calculated from SFM and tool diameter.</p>
+<p><strong>Why carbide over HSS?</strong> Carbide offers 3-5× higher cutting speeds, maintains hardness at high temperatures (800-1000°C), and enables machining of hardened materials up to 65 HRC.</p>
 </div>
 </section>
 <div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
-<a href="/tools/speed-feed/">Speed & Feed</a>
+<a href="/tools/speed-feed/">Speed &amp; Feed</a>
 <a href="/tools/hardness-converter/">Hardness Converter</a>
 <a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>
 <a href="/tools/mrr-calculator/">MRR Calculator</a>
@@ -461,36 +455,33 @@ calc();
 <a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
 <a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Need Professional Tooling?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Request Bulk Quote →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Need Professional Tooling?</h3>
+<p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
 <div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/tool-holders.html">Tool Holders</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ Professional Machining Tools</h3>
-  <div class="tool-grid">
+<h3>🔧 Explore 100+ Professional Machining Tools</h3>
+<div class="tool-grid">
 <a href="/tools/gun-drill-calculator/">Gun Drill Calculator</a>
 <a href="/tools/tensile-strength-converter/">Tensile Strength Converter</a>
 <a href="/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Reference</a>
 <a href="/tools/feed-converter/">Feed Converter</a>
-<a href="/tools/thread-depth-torque-calculator/">Thread Depth & Torque Calculator</a>
+<a href="/tools/thread-depth-torque-calculator/">Thread Depth &amp; Torque Calculator</a>
 <a href="/tools/chip-load/">Chip Load Calculator</a>
 <a href="/tools/round-bar-weight/">Round Bar Weight Calculator</a>
 <a href="/tools/chamfer-calculator/">Chamfer Calculator</a>
-
-  </div>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Share with Engineers</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/tools/speed-feed/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/speed-feed/&text=Speed & Feed Calculator" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Speed & Feed Calculator&body=Check this out: https://carbide-tooling.com/tools/speed-feed/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/speed-feed/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/speed-feed/&amp;text=Speed &amp; Feed Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Speed &amp; Feed Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/speed-feed/">Email</a>
 </div>
-
 </body>
 </html>
