@@ -26,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -159,7 +164,7 @@
 <script>
 const MATS={al6061:{p1:4,p2:2},ss304:{p1:1.5,p2:0.5},mild_steel:{p1:2,p2:1}};
 function calc(){const m=MATS[document.getElementById('material').value];const d=parseFloat(document.getElementById('dia').value)||8;const dep=parseFloat(document.getElementById('depth').value)||40;const vc=parseFloat(document.getElementById('vc').value)||60;const feed=parseFloat(document.getElementById('feed').value)||0.12;const rpm=d>0?(vc*1000)/(Math.PI*d):1000;const minPeck=1.5;const p1=Math.min(dep,d*m.p1);const pn=Math.max(minPeck,d*m.p2);let remaining=dep-p1;let pecks=1;if(remaining>0){pecks+=Math.ceil(remaining/pn);}document.getElementById('r-peck1').textContent=p1.toFixed(1);document.getElementById('r-peckn').textContent=pn.toFixed(1);document.getElementById('r-pecks').textContent=pecks;document.getElementById('r-rpm').textContent=Math.round(rpm);}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>Quy Tắc khoan peck: 25 năm làm lỗ đã dạy chúng tôi</h2>
 <p>Mổ đầu tiên luôn sâu nhất. Một mũi khoan cacbua sắc bén đi vào vật liệu rắn ở bề mặt có thể mất một peck ban đầu đường kính 2-3 × vì di tản chip dễ dàng thoát ra ngay lập tức. Sau khi lỗ đạt đến độ sâu đường kính 3-4 ×, chip phải di chuyển lên sáo, và độ sâu peck phải được giảm xuống để tránh đóng gói.</p>
 <p>Đối với mũi khoan cacbua 10 mm bằng thép 4140 ở độ sâu 40mm, mũi khoan đầu tiên có thể là 20-25mm. Mỏ mổ thứ hai nên là 10-12mm. đến mổ thứ ba, độ sâu sẽ giảm xuống 5-6mm. Mô hình peck giảm này Tối đa hóa năng suất đồng thời ngăn chặn việc đóng gói chip gây ra sự cố khoan.</p>

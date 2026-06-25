@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -238,7 +243,7 @@
 <script>
 const MATS={mild:{den:7.85,cost:0.8},ss304:{den:8.0,cost:3.2},al6061:{den:2.7,cost:2.8},ti:{den:4.43,cost:35}};
 function calc(){const m=MATS[document.getElementById('mat').value];const shape=document.getElementById('shape').value;const d1=parseFloat(document.getElementById('d1').value)||50;const len=parseFloat(document.getElementById('len').value)||200;const qty=parseInt(document.getElementById('qty').value)||100;let vol=shape==='bar'?Math.PI*(d1/2)**2*len:d1*100*len;const wt=vol*m.den/1e6;const cost=wt*m.cost;document.getElementById('r-wt').textContent=wt.toFixed(3);document.getElementById('r-cost').textContent='$'+cost.toFixed(2);document.getElementById('r-total').textContent='$'+(cost*qty).toFixed(2);document.getElementById('r-scrap').textContent='$'+(cost*qty*0.2).toFixed(2);}
-calc();</script><div class="toolbox-widget"><h3>Produkte</h3><div class="toolbox-links">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>Produkte</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Vollhartmetall-Schaftfräser</a>
 <a href="/tools/hardness-converter/">Drehplatten</a>
 <a href="/tools/tap-drill-size-calculator/">Getriebeparameterrechner</a>

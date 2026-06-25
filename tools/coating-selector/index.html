@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Coating Selector | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta content="Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation." name="description"/>
@@ -25,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -232,7 +238,7 @@
 <p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">View Catalog →</a></p>
 </div></section>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Speed &amp; Feed</a>
 <a href="/tools/hardness-converter/">Hardness Converter</a>
 <a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>

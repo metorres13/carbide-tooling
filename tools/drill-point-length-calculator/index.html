@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Drill Point Length Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta content="Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles." name="description"/>
@@ -25,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -217,7 +223,7 @@
 </section>
 <script>
 function calc(){const d=parseFloat(document.getElementById('dia').value)||10;const ang=parseFloat(document.getElementById('angle').value)||135;const dep=parseFloat(document.getElementById('depth').value)||25;const point=(d/2)/Math.tan(ang/2*Math.PI/180);const total=dep+point;const thru=dep+point+0.5;document.getElementById('r-point').textContent=point.toFixed(2);document.getElementById('r-total').textContent=total.toFixed(2);document.getElementById('r-ratio').textContent=(point/d).toFixed(2);document.getElementById('r-thru').textContent=thru.toFixed(2);}
-calc();</script>
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script>
 <div style="margin:24px 0 40px"><h3 style="font-size:13px;font-weight:600;color:#86868b;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:0.05em">Related Precision Tools</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px"><a href="/tools/dia-circ-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Dia Circ Calculator</a><a href="/tools/die-steel-thermal-conductivity/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Die Steel Thermal Conductivity</a><a href="/tools/dovetail-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Dovetail Calculator</a><a href="/tools/production-efficiency-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Production Efficiency Calculator</a><a href="/tools/step-milling-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Step Milling Calculator</a><a href="/tools/shipping-duty-estimator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Shipping Duty Estimator</a></div></div><footer class="tool-footer">
 <div class="container">
 <div class="footer-links">

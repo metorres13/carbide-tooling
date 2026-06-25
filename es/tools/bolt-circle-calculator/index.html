@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -234,7 +239,7 @@
 </footer>
 <script>function go(){const d=parseFloat(document.getElementById('d').value)||100;const n=parseInt(document.getElementById('n').value)||4;const a=parseFloat(document.getElementById('a').value)||0;const cx=parseFloat(document.getElementById('cx').value)||0;const cy=parseFloat(document.getElementById('cy').value)||0;const r=d/2;let html='';let chord=0;for(let i=0;i<n;i++){const angle=(a+i*360/n)*Math.PI/180;const x=Math.round((cx+r*Math.cos(angle))*1000)/1000;const y=Math.round((cy+r*Math.sin(angle))*1000)/1000;html+=`H${i+1}: X${x>=0?' ':''}${x.toFixed(3)} Y${y>=0?' ':''}${y.toFixed(3)}\n`;if(i>0){const dx1=r*Math.cos((a)*Math.PI/180);const dy1=r*Math.sin((a)*Math.PI/180);const dx2=r*Math.cos((a+i*360/n)*Math.PI/180);const dy2=r*Math.sin((a+i*360/n)*Math.PI/180);chord=Math.sqrt((dx2-dx1)**2+(dy2-dy1)**2);}}
 document.getElementById('coords').textContent=html;document.getElementById('chord').textContent=chord>0?chord.toFixed(3)+' mm':'—';}
-go();</script><div class="toolbox-widget"><h3>Guías</h3><div class="toolbox-links">
+go();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>Guías</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Pistola Taladro Calculadora</a>
 <a href="/tools/hardness-converter/">Calculadora de la sobremedida para escariado</a>
 <a href="/tools/tap-drill-size-calculator/">Calculadora del parámetro del engranaje</a>

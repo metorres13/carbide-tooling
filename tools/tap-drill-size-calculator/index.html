@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Tap Drill Size Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta content="Free online tap drill size calculator. Find the correct drill bit for any thread size. Metric coarse/fine, UNC, UNF, BSP threads. Calculate thread percentage." name="description"/>
@@ -25,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -313,7 +319,7 @@ const METRIC_SIZES={3:{pitch:0.5},4:{pitch:0.7},5:{pitch:0.8},6:{pitch:1.0},8:{p
 const UNC_SIZES={'#4-40':{d:0.112,pitch:40},'#6-32':{d:0.138,pitch:32},'#8-32':{d:0.164,pitch:32},'#10-24':{d:0.19,pitch:24},'1/4-20':{d:0.25,pitch:20},'5/16-18':{d:0.3125,pitch:18},'3/8-16':{d:0.375,pitch:16},'1/2-13':{d:0.5,pitch:13}};
 function calc(){const std=document.getElementById('standard').value;const size=document.getElementById('size').value;const pct=parseFloat(document.getElementById('pct').value)/100;let d,pitch;if(std==='metric'){const s=METRIC_SIZES[size];d=parseFloat(size);pitch=s.pitch;}else if(std==='unc'){const s=UNC_SIZES[size];d=s.d*25.4;pitch=25.4/s.pitch;}else{const s=UNC_SIZES[size];d=s.d*25.4;pitch=25.4/s.pitch;}
 const drill=d-(0.013*pitch*pct*100)/1.299;const achieved=drill>0?((d-drill)/(0.013*pitch)*100):0;const frac=drill/25.4;document.getElementById('r-drill').textContent=drill.toFixed(2);document.getElementById('r-pct').textContent=Math.round(Math.min(100,achieved))+'%';document.getElementById('r-frac').textContent=frac.toFixed(3)+'"';}
-document.getElementById('standard').addEventListener('change',function(){const s=document.getElementById('size');const std=this.value;const opts={'metric':['M6×1.0','M8×1.25','M10×1.5','M12×1.75','M16×2.0','M20×2.5'],'unc':['#6-32','#8-32','#10-24','1/4-20','5/16-18','3/8-16','1/2-13'],'unf':['#10-32','1/4-28','5/16-24','3/8-24','1/2-20']}[std]||['M10×1.5'];s.innerHTML=opts.map(v=>`<option value="${v.split('×')[0]||v}">${v}</option>`).join('');calc();});calc();</script><section class="seo-content"><div class="container">
+document.getElementById('standard').addEventListener('change',function(){const s=document.getElementById('size');const std=this.value;const opts={'metric':['M6×1.0','M8×1.25','M10×1.5','M12×1.75','M16×2.0','M20×2.5'],'unc':['#6-32','#8-32','#10-24','1/4-20','5/16-18','3/8-16','1/2-13'],'unf':['#10-32','1/4-28','5/16-24','3/8-24','1/2-20']}[std]||['M10×1.5'];s.innerHTML=opts.map(v=>`<option value="${v.split('×')[0]||v}">${v}</option>`).join('');calc();});calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>How to Pick the Right Tap Drill Size</h2>
 <p>Thread strength and tapping difficulty are a direct trade-off. A 65% thread is standard for general use — strong enough for most applications without breaking taps. For soft materials like aluminum, 75% thread is common. For hardened steel, 50-60% thread reduces tap breakage risk. The formula is simple: drill diameter = major diameter − (0.013 × pitch × %thread). Get it right the first time and you avoid broken taps and scrapped parts.</p>
 <p>On a Haas or Mazak machining center, a broken tap in a $500 part is a bad day. The cost of the tap is nothing compared to the rework time. Use the recommended drill size above and you'll be in the safe range.</p>
@@ -344,7 +350,6 @@ document.getElementById('standard').addEventListener('change',function(){const s
 <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
 </div>
 <a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
-
 <div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Carbide Drills</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
 <h3>🔧 Explore 100+ Professional Machining Tools</h3>

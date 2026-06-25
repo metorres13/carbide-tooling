@@ -26,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -157,7 +162,7 @@
 </footer>
 <script>
 function calc(){const d=parseFloat(document.getElementById('dia').value)||12;const r=parseFloat(document.getElementById('runout').value)||20;const z=parseInt(document.getElementById('flutes').value)||4;const fz=parseFloat(document.getElementById('fz').value)||0.05;const rMm=r/1000;const maxFz=fz+rMm>0?fz+rMm:0;const minFz=Math.max(0,fz-rMm);const imbalance=maxFz>0?((maxFz-minFz)/maxFz)*100:0;const lifeRed=Math.min(80,r*2);document.getElementById('r-max').textContent=maxFz.toFixed(4);document.getElementById('r-min').textContent=minFz.toFixed(4);document.getElementById('r-imbalance').textContent=Math.round(imbalance)+'%';document.getElementById('r-life').textContent=Math.round(lifeRed)+'%';}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <div class="diag"><p><strong>🔴 Symptom:</strong> One flute always wears faster than the others. Tool life is half of what it should be. Surface finish varies from part to part. <strong>→ Likely cause: excessive runout.</strong></p></div>
 <h2>ランアウトがツールライフを不当に破壊する方法</h2>
 <p>ツールホルダーに20μmの振れがある場合、カットへの最初のフルートは他のフルートよりも多くの材料を取ります。20μmのランアウトと1歯あたり0.05mmのプログラムされたチップ負荷を備えた4フルートエンドミルでは、最初のフルートは実際には0.07mmでカットします-推奨負荷を40% 超えています。残りの3つのフルートのカットは次第に少なくなり、最後のフルートのカットはわずか0.03mmで、チップの最小厚さを下回る可能性があり、カットではなく摩擦が発生します。</p>

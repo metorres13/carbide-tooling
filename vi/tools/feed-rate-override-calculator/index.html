@@ -26,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -156,7 +161,7 @@
 </footer>
 <script>
 function calc(){const pr=parseFloat(document.getElementById('prog-rpm').value)||8000;const ar=parseFloat(document.getElementById('actual-rpm').value)||6500;const pf=parseFloat(document.getElementById('prog-feed').value)||1200;const ratio=pr>0?ar/pr:0;const corrected=pf*ratio;const pctOver=Math.round(ratio*100);const sOver=Math.round(ratio*100);const impact=ar>0?((pf/(ar))-pf/(pr))/(pf/(pr))*100:0;let impactText='Stable';if(impact>15&&impact<40)impactText='⚠️ Elevated load';else if(impact>=40)impactText='🔴 Overload risk';else if(impact<-15)impactText='Reduced productivity';document.getElementById('r-corrected').textContent=Math.round(corrected);document.getElementById('r-ratio').textContent=pctOver+'%';document.getElementById('r-spindle').textContent=sOver+'%';document.getElementById('r-impact').textContent=impactText;}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>Vấn đề ghi đè tỷ lệ Nguồn cấp dữ liệu: sai lầm $5,000/tháng</h2>
 <p>Một cửa hàng chạy VF-2 Haas với trục chính 10K bằng nhôm sử dụng máy nghiền 8 mm được lập trình ở tốc độ 10,000 vòng/phút và nguồn cấp dữ liệu 1,500 mm/phút. Người vận hành nghe thấy tiếng nói và giảm mức ghi đè trục chính xuống 70%-bây giờ trục chính đang chạy ở tốc độ 7,000 vòng/phút. Nhưng thức ăn vẫn ở mức 1,500 mm/phút. Tải Chip trên mỗi răng tăng từ 0.047mm đến 0.067mm-tăng 42%. Trên một máy nghiền 4 sáo bằng nhôm, tải Chip này vẫn chấp nhận được, nhưng hầu như không. Bằng thép hoặc không gỉ, việc ghi đè tương tự sẽ làm quá tải dụng cụ và có nguy cơ bị vỡ.</p>
 <p>Hành động chính xác: giảm tỷ lệ thức ăn tương ứng. Ở tốc độ trục chính 70%, thức ăn cũng nên ở tốc độ 70%-1,050mm/phút. Điều này duy trì tải chip được lập trình và giữ lực cắt ở mức thiết kế. Máy Tính ở trên tự động tính toán tốc độ nạp chính xác cho bất kỳ thiết lập ghi đè trục chính nào.</p>

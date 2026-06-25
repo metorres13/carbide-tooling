@@ -49,7 +49,12 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -309,7 +314,7 @@ footer a{color:#0066cc;text-decoration:none}
 <p style="font-size:11px">Dù bạn làm việc trên một chiếc Haas VF-2, một chiếc Mazak Integrex hay một chiếc Okuma MB-5000, việc nắm vững phép tính này là điều thiết yếu để đảm bảo chất lượng đồng nhất. Nhiều hệ thống CAM xử lý tự động, nhưng việc biết cách kiểm tra đầu ra sẽ giúp ngăn ngừa các lỗi lập trình tốn kém.</p>
 </div>
 </footer>
-<script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script>
+<script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script>
 <section class="seo-content"><div class="container">
 <h2>Trig cho các tính năng thon</h2>
 <p>Việc áp dụng thực tiễn thay đổi tùy theo môi trường của từng cửa hàng. Đối với các xưởng gia công theo đơn hàng nhỏ, một bảng tra cứu nhanh là đủ. Đối với các xưởng sản xuất có đơn hàng lặp lại, việc ghi chú các thông số này vào phiếu thiết lập sẽ giúp tiết kiệm thời gian cho mỗi lần chạy lại.</p>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Threading Pass Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
@@ -26,7 +27,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -162,7 +168,7 @@
 </footer>
 <script>
 function calc(){const m=document.getElementById('material').value;const p=parseFloat(document.getElementById('pitch').value)||1.5;const maj=parseFloat(document.getElementById('major').value)||20;const t=document.getElementById('type').value;const depth=t==='ext'?0.6134*p:0.5413*p;const passFactors={steel:[0.35,0.25,0.18,0.13,0.07,0.03],ss:[0.28,0.2,0.15,0.12,0.09,0.06,0.03,0.02],al:[0.4,0.28,0.18,0.08]};const factors=passFactors[m]||passFactors.steel;const firstPass=depth*factors[0];let remaining=depth;let passes=0;for(let f of factors){if(remaining<=0)break;const thisPass=depth*f;remaining-=thisPass;passes++;}if(remaining>0){passes+=Math.ceil(remaining/0.02);}const lastPass=depth*factors[factors.length-1];document.getElementById('r-depth').textContent=depth.toFixed(3);document.getElementById('r-passes').textContent=passes;document.getElementById('r-first').textContent=firstPass.toFixed(3);document.getElementById('r-last').textContent=lastPass.toFixed(3);}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>Programming G76: How Many Passes for a 1.5 mm Pitch Thread?</h2>
 <p>A 20 mm × 1.5 external thread on a steel shaft needs a total thread depth of approximately 0.92 mm (0.61 × pitch for standard 60° thread form). The G76 cycle needs to distribute this depth across multiple passes with decreasing depth per pass — the first pass takes the heaviest cut, and subsequent passes get progressively lighter.</p>
 <p>For a 1.5 mm pitch thread in steel, use 5-6 passes. The first pass removes about 0.35 mm, the second 0.25 mm, the third 0.15 mm, and so on down to a 0.03 mm finishing pass. In aluminum, the same thread can be cut in 3-4 passes because the material is more forgiving. In stainless, increase to 7-8 passes to distribute the cutting load and prevent work-hardening at the thread root.</p>

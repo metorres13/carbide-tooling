@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Metal Weight Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta content="Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades." name="description"/>
@@ -24,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -239,7 +245,7 @@ const DENS={6:15.2,10:14.8,15:14.5};
 function calc(){const shape=document.getElementById('shape').value;const co=parseInt(document.getElementById('grade').value);const d1=parseFloat(document.getElementById('d1').value)||20;const d2=parseFloat(document.getElementById('d2').value)||100;const den=DENS[co]||15;let vol=0;if(shape==='round'){vol=Math.PI*(d1/2)**2*d2;}else if(shape==='block'){vol=d1*d2*parseFloat(document.getElementById('d3').value||5);}else{const wall=parseFloat(document.getElementById('d3').value||5);vol=Math.PI*((d1/2)**2-((d1-2*wall)/2)**2)*d2;}
 document.getElementById('r-weight').textContent=(vol*den/1000).toFixed(2);}
 document.getElementById('shape').addEventListener('change',function(){const s=this.value;document.getElementById('l2').textContent=s==='round'?'Length (mm)':'Width (mm)';const l3=document.getElementById('l3');const d3=document.getElementById('d3');if(s==='block'){l3.textContent='Height (mm)';l3.style.display='block';d3.style.display='block';}else if(s==='ring'){l3.textContent='Wall thickness (mm)';l3.style.display='block';d3.style.display='block';}else{l3.style.display='none';d3.style.display='none';}
-calc();});calc();</script><div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
+calc();});calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>🔧 Precision Engineering Toolbox</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Speed &amp; Feed</a>
 <a href="/tools/hardness-converter/">Hardness Converter</a>
 <a href="/tools/tap-drill-size-calculator/">Tap Drill Size</a>

@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -234,7 +239,7 @@
 const GRADES=[{iso:'P',sandvik:'GC4325',kennametal:'KCU10',kyocera:'CA510P',iscar:'IC8250',mitsubishi:'UE6020',sumitomo:'AC6030P',walter:'WPP25S'},{iso:'P',sandvik:'GC3330',kennametal:'KCP25',kyocera:'PR1535',iscar:'IC8300',mitsubishi:'UE6110',sumitomo:'AC700P',walter:'WSM43S'},{iso:'P',sandvik:'GC4425',kennametal:'KC9110',kyocera:'CA100P',iscar:'IC328',mitsubishi:'MP9030',sumitomo:'AC820P',walter:'WPP10S'},{iso:'M',sandvik:'GC2025',kennametal:'KC9225',kyocera:'CA125M',iscar:'IC8300',mitsubishi:'MP6130',sumitomo:'AC6030M',walter:'WSM35S'},{iso:'M',sandvik:'GC2015',kennametal:'KC9240',kyocera:'CA525M',iscar:'IC808',mitsubishi:'MP7030',sumitomo:'AC700M',walter:'WSM43S'},{iso:'M',sandvik:'GC3330',kennametal:'KCM25',kyocera:'PR1605',iscar:'IC504',mitsubishi:'MP9120',sumitomo:'AC820M',walter:'WPP15S'},{iso:'K',sandvik:'GC3215',kennametal:'KCK20B',kyocera:'CA310K',iscar:'IC8250',mitsubishi:'UE6020',sumitomo:'AC300K',walter:'WKM25S'},{iso:'K',sandvik:'GC3220',kennametal:'KCK15B',kyocera:'CA510K',iscar:'IC8300',mitsubishi:'UE6105',sumitomo:'AC600K',walter:'WKM15S'},{iso:'K',sandvik:'GC4230',kennametal:'KCP25B',kyocera:'PR1535',iscar:'IC808',mitsubishi:'MC9020',sumitomo:'AC800K',walter:'WPP20S'},{iso:'S',sandvik:'GC1105',kennametal:'KCS10',kyocera:'CA115S',iscar:'IC804',mitsubishi:'MP9120',sumitomo:'AC500S',walter:'WTT10S'},{iso:'S',sandvik:'GC1115',kennametal:'KCS15',kyocera:'CA525S',iscar:'IC806',mitsubishi:'MP9130',sumitomo:'AC600S',walter:'WSM35S'},{iso:'S',sandvik:'S205',kennametal:'KCM25',kyocera:'CA510S',iscar:'IC806R',mitsubishi:'MP7140',sumitomo:'AC800S',walter:'WSM43S'}];
 let currentISO='all';function filterISO(iso){currentISO=iso;document.querySelectorAll('.chips .chip').forEach(c=>c.classList.toggle('active',c.textContent.trim()===(iso==='all'?'All':iso)));filter();}window.filterISO=filterISO;function filter(){const q=document.getElementById('search').value.toLowerCase();const rows=GRADES.filter(g=>{if(currentISO!=='all'&&g.iso!==currentISO)return false;if(q){const vals=Object.values(g).filter(v=>typeof v==='string');if(!vals.some(v=>v.toLowerCase().includes(q)))return false;}return true;});const tbody=document.getElementById('tbody');const isoCls={P:'p',M:'m',K:'k',S:'s',H:'h'};tbody.innerHTML=rows.map(r=>`<tr><td><span class="iso-t ${isoCls[r.iso]}">${r.iso}</span></td><td>${r.sandvik}</td><td>${r.kennametal}</td><td>${r.kyocera}</td><td>${r.iscar}</td><td>${r.mitsubishi}</td><td>${r.sumitomo}</td><td>${r.walter}</td></tr>`).join('');document.getElementById('count').textContent=rows.length+' grades displayed';}
 filter();
-</script><div class="toolbox-widget"><h3>Produkte</h3><div class="toolbox-links">
+</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>Produkte</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Notenabfrage einfügen</a>
 <a href="/tools/hardness-converter/">Schrittfräsen</a>
 <a href="/tools/tap-drill-size-calculator/">Steigungswinkelrechner</a>

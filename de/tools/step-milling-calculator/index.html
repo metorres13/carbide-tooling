@@ -28,7 +28,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -163,7 +168,7 @@
 <script>
 const MATS={al6061:{docMult:1.5,fzMult:1.0},ss304:{docMult:0.8,fzMult:0.7},mild_steel:{docMult:1.0,fzMult:0.85},ti6al4v:{docMult:0.5,fzMult:0.6}};
 function calc(){const m=MATS[document.getElementById('material').value];const d=parseFloat(document.getElementById('dia').value)||12;const z=parseInt(document.getElementById('flutes').value)||4;const h=parseFloat(document.getElementById('height').value)||20;const vc=parseFloat(document.getElementById('vc').value)||150;const fz=parseFloat(document.getElementById('fz').value)||0.05;const rpm=d>0?(vc*1000)/(Math.PI*d):1000;const maxDpp=d*m.docMult;const passes=Math.ceil(h/maxDpp);const dpp=h/passes;const feed=rpm*z*fz*m.fzMult;document.getElementById('r-passes').textContent=passes;document.getElementById('r-dpp').textContent=dpp.toFixed(1);document.getElementById('r-rpm').textContent=Math.round(rpm);document.getElementById('r-feed').textContent=Math.round(feed);}
-calc();</script>
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script>
 <section class="seo-content"><div class="container">
 <h2>Schulter fräsen auf einem Haas oder Mazak: Was Sie wissen müssen</h2>
 <p>Das Schneiden einer Schulter an einem VF-2 oder VC-5 bedeutet, die richtige Anzahl von Pässen zu nehmen. Zu wenige und Sie überlasten die Spindel. Zu viele und Sie verbrennen die Zykluszeit. Die Tiefe pro Durchgang für das Schulter fräsen hängt von der Schulterhöhe, dem Werkzeug durchmesser und dem Material ab. Für eine 20-mm-Schulter in 304 Edelstahl mit einer 12-mm-Endmühle sind drei Durchgänge mit jeweils 6-7mm der Sweet Spot bei den meisten 40-Verjüngung maschinen. Bei einer leichteren Maschine wie einer Mini-Mühle benötigen Sie möglicher weise fünf Durchgänge. Der Rechner oben passt dies automatisch an.</p>

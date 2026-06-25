@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -157,7 +162,7 @@
 <script>
 const MATS={al6061:{a:23,label:'Aluminum'},ss304:{a:17,label:'Stainless'},mild_steel:{a:12,label:'Steel'},ti6al4v:{a:8.6,label:'Titanium'}};
 function calc(){const m=MATS[document.getElementById('material').value];const l=parseFloat(document.getElementById('length').value)||200;const d=parseFloat(document.getElementById('dia').value)||50;const dt=parseFloat(document.getElementById('dt').value)||25;const lenExp=m.a*l*dt/1000;const diaExp=m.a*d*dt/1000;const warmUp=Math.min(30,5+dt*1.2);const driftRate=lenExp/warmUp;document.getElementById('r-length').textContent=lenExp.toFixed(1);document.getElementById('r-dia').textContent=diaExp.toFixed(1);document.getElementById('r-time').textContent=Math.round(warmUp);document.getElementById('r-impact').textContent=driftRate.toFixed(1);}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>Tại sao phần đầu của bạn luôn khác với phần năm mươi của bạn</h2>
 <p>Mỗi thợ máy đã nhìn thấy nó: Phần đầu tiên của buổi sáng đo hoàn hảo ở nhiệt độ cửa hàng 20 ° C. Đến phần 30, chương trình tương tự sản xuất các bộ phận quá khổ 20-50 micron. Máy không thay đổi-Nhiệt độ có. Chất lỏng cắt làm ấm lên, vòng bi trục chính đạt được cân bằng nhiệt, và phôi hấp thụ nhiệt từ quá trình cắt. Trên trục 200 mm bằng thép không gỉ 304, nhiệt độ tăng 25 ° C Thêm 85 micron chiều dài-đủ để đẩy một tính năng dung sai gần ra khỏi Thông số kỹ thuật.</p>
 <p>Giãn nở nhiệt hoàn toàn có thể đảo ngược và có thể dự đoán được. Công thức là tuyến tính: mỗi mức độ thay đổi nhiệt độ mở rộng thép 12 micron mỗi mét, nhôm 23 và titan 8.6. Một khi bạn biết nhiệt độ tăng, bạn có thể tính toán độ trôi chiều và bù đắp trong chương trình hoặc trong bảng bù công cụ.</p>

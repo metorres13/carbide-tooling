@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -235,7 +240,7 @@ const DATA={304:{name:'304',prop:{density:'8.0 g/cm³',tensile:'515 MPa',yield:'
 let current='304';function switchSS(g){current=g;render();document.querySelectorAll('.sel-btn').forEach(b=>b.classList.toggle('active',b.textContent===g));}
 window.switchSS=switchSS;function render(){const d=DATA[current];const a=document.getElementById('comp-a');const b=document.getElementById('comp-b');a.innerHTML=`<div class="prop-card"><h3>${d.name} — Mechanical</h3><div class="row"><span class="lbl">Density</span><span class="val">${d.prop.density}</span></div><div class="row"><span class="lbl">Tensile</span><span class="val">${d.prop.tensile}</span></div><div class="row"><span class="lbl">Yield</span><span class="val">${d.prop.yield}</span></div><div class="row"><span class="lbl">Hardness</span><span class="val">${d.prop.hardness}</span></div><div class="row"><span class="lbl">Elongation</span><span class="val">${d.prop.elong}</span></div></div><div class="prop-card"><h3>🧪 Chemical Composition</h3><div class="row"><span class="lbl">Cr</span><span class="val">${d.chem.cr}</span></div><div class="row"><span class="lbl">Ni</span><span class="val">${d.chem.ni}</span></div><div class="row"><span class="lbl">Mo</span><span class="val">${d.chem.mo||'—'}</span></div><div class="row"><span class="lbl">C</span><span class="val">${d.chem.c}</span></div></div>`;b.innerHTML=`<div class="prop-card"><h3>⚙️ Cutting Parameters (Carbide)</h3><div class="row"><span class="lbl">SFM</span><span class="val">${d.cut.sfm}</span></div><div class="row"><span class="lbl">Avance</span><span class="val">${d.cut.feed}</span></div><div class="row"><span class="lbl">Max DOC</span><span class="val">${d.cut.doc}</span></div><div class="row"><span class="lbl">Coolant</span><span class="val">${d.cut.coolant}</span></div></div><div class="prop-card"><h3>🔬 Corrosion Resistance</h3><div style="font-size:14px;padding:8px 0;font-weight:500">${d.corr}</div><div style="font-size:12px;color:#86868b;padding-top:8px;border-top:1px solid #e8e8ed">${d.name} is ${d.name==='316'?'recommended for marine environments':'suitable for general industrial use'}.</div></div>`;}
 render();
-</script><div class="toolbox-widget"><h3>Guías</h3><div class="toolbox-links">
+</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>Guías</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Calculadora de mecanizado de hierro fundido</a>
 <a href="/tools/hardness-converter/">Calculadora de peso del metal</a>
 <a href="/tools/tap-drill-size-calculator/">Calculadora de costos por lote</a>

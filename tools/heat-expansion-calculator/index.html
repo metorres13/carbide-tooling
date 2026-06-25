@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Heat Expansion Calculator | Precision Machining Tool | Carbide-Tooling.com</title>
 <meta content="Free online thermal expansion calculator for CNC machining. Calculate workpiece and tool growth from cutting heat. Compensate for dimensional drift during production runs." name="description"/>
@@ -25,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -162,7 +168,7 @@
 <script>
 const MATS={al6061:{a:23,label:'Aluminum'},ss304:{a:17,label:'Stainless'},mild_steel:{a:12,label:'Steel'},ti6al4v:{a:8.6,label:'Titanium'}};
 function calc(){const m=MATS[document.getElementById('material').value];const l=parseFloat(document.getElementById('length').value)||200;const d=parseFloat(document.getElementById('dia').value)||50;const dt=parseFloat(document.getElementById('dt').value)||25;const lenExp=m.a*l*dt/1000;const diaExp=m.a*d*dt/1000;const warmUp=Math.min(30,5+dt*1.2);const driftRate=lenExp/warmUp;document.getElementById('r-length').textContent=lenExp.toFixed(1);document.getElementById('r-dia').textContent=diaExp.toFixed(1);document.getElementById('r-time').textContent=Math.round(warmUp);document.getElementById('r-impact').textContent=driftRate.toFixed(1);}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>Why Your First Part Is Always Different from Your Fiftieth</h2>
 <p>Every machinist has seen it: the first part of the morning measures perfectly at 20°C shop temperature. By part 30, the same program is producing parts 20-50 microns oversize. The machine hasn't changed — the temperature has. Cutting fluid warms up, the spindle bearings reach thermal equilibrium, and the workpiece absorbs heat from the cutting process. On a 200 mm shaft in 304 stainless, a 25°C temperature rise adds 85 microns of length — enough to push a close-tolerance feature out of spec.</p>
 <p>Thermal expansion is fully reversible and predictable. The formula is linear: each degree of temperature change expands steel by 12 microns per meter, aluminum by 23, and titanium by 8.6. Once you know the temperature rise, you can calculate the dimensional drift and compensate in the program or in the tool offset table.</p>

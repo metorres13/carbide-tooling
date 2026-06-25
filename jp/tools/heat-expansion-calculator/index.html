@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -157,7 +162,7 @@
 <script>
 const MATS={al6061:{a:23,label:'Aluminum'},ss304:{a:17,label:'Stainless'},mild_steel:{a:12,label:'Steel'},ti6al4v:{a:8.6,label:'Titanium'}};
 function calc(){const m=MATS[document.getElementById('material').value];const l=parseFloat(document.getElementById('length').value)||200;const d=parseFloat(document.getElementById('dia').value)||50;const dt=parseFloat(document.getElementById('dt').value)||25;const lenExp=m.a*l*dt/1000;const diaExp=m.a*d*dt/1000;const warmUp=Math.min(30,5+dt*1.2);const driftRate=lenExp/warmUp;document.getElementById('r-length').textContent=lenExp.toFixed(1);document.getElementById('r-dia').textContent=diaExp.toFixed(1);document.getElementById('r-time').textContent=Math.round(warmUp);document.getElementById('r-impact').textContent=driftRate.toFixed(1);}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>あなたの最初の部分が常にあなたの50と異なる理由</h2>
 <p>すべての機械工はそれを見ました: 朝の最初の部分は20 °Cの店の温度で完全に測定します。パート30によって、同じプログラムは部品20-50ミクロンのオーバーサイズを作り出しています。機械は変わっていません-温度は変わっています。切削液が温まり、スピンドルベアリングが熱平衡に達し、ワークピースが切断プロセスから熱を吸収します。304ステンレス製の200 mmシャフトでは、25 °Cの温度上昇により85ミクロンの長さが追加されます。これは、公差の近い機能を仕様から押し出すのに十分です。</p>
 <p>熱膨張は完全に可逆的で予測可能です。式は線形です。温度変化の程度ごとに、鋼は1メートルあたり12ミクロン、アルミニウムは23ミクロン、チタンは8.6膨張します。温度上昇がわかったら、寸法ドリフトを計算し、プログラムまたはツールオフセットテーブルで補正できます。</p>

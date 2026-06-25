@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -195,7 +200,7 @@
 <a href="/tools/percentage-of-thread-calculator/">超合金ツールライフ</a><a href="/tools/batch-cost-calculator/">Gコードリファレンス</a><a href="/tools/flatness-calculator/">MRR計算ツール</a><a href="/tools/thread-lead-angle-calculator/">見積もりを取得する</a><a href="/tools/iso-fit-calculator/">プライバシー</a><a href="/tools/superalloy-tool-life/">の中で</a><a href="/tools/gcode-reference/">カタログを表示する →</a><a href="/tools/mrr-calculator/">速度と送り量</a>
 </div>
 </section>
-<script>function calc(){const h=parseFloat(document.getElementById('head').value)||8;const a=parseFloat(document.getElementById('angle').value)||90;const depth=(h/2)/Math.tan(a/2*Math.PI/180);document.getElementById('r-depth').textContent=depth.toFixed(2);document.getElementById('r-total').textContent=(depth+2).toFixed(2);document.getElementById('r-flat').textContent=h.toFixed(1);document.getElementById('r-chamfer').textContent=(h/2).toFixed(1);}calc();</script>
+<script>function calc(){const h=parseFloat(document.getElementById('head').value)||8;const a=parseFloat(document.getElementById('angle').value)||90;const depth=(h/2)/Math.tan(a/2*Math.PI/180);document.getElementById('r-depth').textContent=depth.toFixed(2);document.getElementById('r-total').textContent=(depth+2).toFixed(2);document.getElementById('r-flat').textContent=h.toFixed(1);document.getElementById('r-chamfer').textContent=(h/2).toFixed(1);}calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script>
 <div style="margin:24px 0 40px"><h3 style="font-size:13px;font-weight:600;color:#86868b;margin-bottom:12px;text-align:center;text-transform:uppercase;letter-spacing:0.05em">関連精密工具</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px"><a href="/jp/tools/carbide-grade-cross-ref-2/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Carbide Grade Cross Ref 2</a><a href="/jp/tools/cast-iron-machining/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Cast Iron Machining</a><a href="/jp/tools/chamfer-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Chamfer Calculator</a><a href="/jp/tools/step-milling-calculator/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Step Milling Calculator</a><a href="/jp/tools/tool-steel-heat-treat/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Tool Steel Heat Treat</a><a href="/jp/tools/gcode-reference/" style="display:block;background:#f5f5f7;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:500;color:#1d1d1f;text-decoration:none;text-align:center;transition:all .15s">Gcode Reference</a></div></div><footer class="tool-footer">
 <div class="container">
 <div class="footer-links">

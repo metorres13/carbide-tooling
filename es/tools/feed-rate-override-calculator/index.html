@@ -26,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -156,7 +161,7 @@
 </footer>
 <script>
 function calc(){const pr=parseFloat(document.getElementById('prog-rpm').value)||8000;const ar=parseFloat(document.getElementById('actual-rpm').value)||6500;const pf=parseFloat(document.getElementById('prog-feed').value)||1200;const ratio=pr>0?ar/pr:0;const corrected=pf*ratio;const pctOver=Math.round(ratio*100);const sOver=Math.round(ratio*100);const impact=ar>0?((pf/(ar))-pf/(pr))/(pf/(pr))*100:0;let impactText='Stable';if(impact>15&&impact<40)impactText='⚠️ Elevated load';else if(impact>=40)impactText='🔴 Overload risk';else if(impact<-15)impactText='Reduced productivity';document.getElementById('r-corrected').textContent=Math.round(corrected);document.getElementById('r-ratio').textContent=pctOver+'%';document.getElementById('r-spindle').textContent=sOver+'%';document.getElementById('r-impact').textContent=impactText;}
-calc();</script><section class="seo-content"><div class="container">
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><section class="seo-content"><div class="container">
 <h2>El problema de anulación de la tasa de alimentación: un error de $5.000/mes</h2>
 <p>Un taller que ejecuta un VF-2 Haas con un husillo de 10k en aluminio utiliza un molino de extremo de 8 mm programado a 10.000 RPM y 1.500 mm/min de alimentación. El operador oye la charla y cae la anulación del husillo al 70%-ahora el husillo está funcionando a 7.000 RPM. Pero la alimentación se mantiene a 1.500 mm/min. La carga de viruta por diente aumenta de 0.047mm a 0.067mm, un aumento del 42%. En un molino de extremo de 4-flauta en aluminio, esta carga de viruta todavía es aceptable, pero apenas. En acero o inoxidable, la misma anulación sobrecargaría la herramienta y correría el riesgo de rotura.</p>
 <p>La acción correcta: reducir la velocidad de alimentación proporcionalmente. A una velocidad del husillo del 70%, la alimentación también debe ser del 70%-1.050 mm/min. Esto mantiene la carga de viruta programada y mantiene las fuerzas de corte en el nivel diseñado. La calculadora anterior calcula la velocidad de alimentación corregida automáticamente para cualquier ajuste de anulación del husillo.</p>

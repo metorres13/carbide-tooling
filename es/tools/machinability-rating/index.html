@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -226,7 +231,7 @@
 <script>
 const DATA=[{g:'B1112',r:100,c:'Free-machining'},{g:'1215',r:98,c:'Free-machining'},{g:'12L14',r:105,c:'Highest leaded'},{g:'1018',r:70,c:'Low carbon'},{g:'1045',r:60,c:'Medium carbon'},{g:'1117',r:85,c:'Carburizing'},{g:'4140',r:55,c:'Alloy, annealed'},{g:'4140HT',r:35,c:'Hardened to 30HRC'},{g:'4340',r:45,c:'High-strength alloy'},{g:'8620',r:60,c:'Carburizing alloy'},{g:'316',r:35,c:'Stainless'},{g:'304',r:40,c:'Stainless'},{g:'440C',r:25,c:'Hardened stainless'},{g:'D2',r:25,c:'Tool steel'},{g:'A2',r:35,c:'Tool steel'},{g:'O1',r:40,c:'Tool steel'},{g:'H13',r:30,c:'Hot work'},{g:'Ti6Al4V',r:15,c:'Titanium alloy'}];function filter(){const q=document.querySelector('.search').value.toLowerCase();const rows=DATA.filter(d=>d.g.toLowerCase().includes(q));const e=document.getElementById('table-wrap');e.innerHTML='<table class="rate-table"><tr><th>Grade</th><th>Rating</th><th>Bar</th><th>Category</th></tr>'+rows.map(r=>`<tr><td><b>${r.g}</b></td><td>${r.r}%</td><td><span class="bar ${r.r>=70?'good':r.r>=40?'avg':'poor'}" style="width:${r.r*1.2}px"></span></td><td>${r.c}</td></tr>`).join('')+'</table>';document.getElementById('count').textContent=rows.length+' grades';}
 filter();
-</script><div class="toolbox-widget"><h3>Productos</h3><div class="toolbox-links">
+</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>Productos</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">Guía de selección de grado</a>
 <a href="/tools/hardness-converter/">Insertar consulta de calificaciones</a>
 <a href="/tools/tap-drill-size-calculator/">Calculadora de caballos de fuerza</a>

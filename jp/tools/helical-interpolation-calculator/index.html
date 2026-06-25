@@ -26,7 +26,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -161,7 +166,7 @@
 </footer>
 <script>
 function calc(){const d=parseFloat(document.getElementById('dia').value)||12;const b=parseFloat(document.getElementById('bore').value)||25;const dep=parseFloat(document.getElementById('depth').value)||20;const zper=parseFloat(document.getElementById('zper').value)||0.5;const fl=parseInt(document.getElementById('flutes').value)||4;const vc=parseFloat(document.getElementById('vc').value)||180;const fz=parseFloat(document.getElementById('fz').value)||0.05;const effDia=(b-d)/2+d;const rpm=effDia>0?(vc*1000)/(Math.PI*effDia):1000;const feed=rpm*fl*fz;const circ=Math.PI*b;const angle=circ>0?Math.atan2(zper,circ)*180/Math.PI:0;const revs=dep>0&&zper>0?dep/zper:0;document.getElementById('r-rpm').textContent=Math.round(rpm);document.getElementById('r-feed').textContent=Math.round(feed);document.getElementById('r-angle').textContent=angle.toFixed(2);document.getElementById('r-revs').textContent=revs.toFixed(1);}
-calc();</script>
+calc();</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script>
 <section class="seo-content"><div class="container">
 <div class="case"><h3>📋ケーススタディ: ハースVF-2の304 SSで25 mmボア</h3><p>ある店は、12 mmの4フルートエンドミルを1,200mm/分のフィードで使用して、304ステンレスの25 mmスルーボアを補間していました。ツールはすべてのボアでチャタリングし、15μmの表面仕上げを生み出しました。CAMはデフォルトで1回あたり0.7mm Zになりました。回転数あたりZを0.35mmに減らし、スピンドル速度を5,500 RPM (有効切断直径から計算) に上げることで、仕上げが2.5μm Raに改善され、工具寿命が2倍になりました。サイクルタイムは12% 増加しました。これは、二次リーミングを排除するための許容できるトレードオフです。</p></div>
 <h2>ヘリカル補間フィードレート: ツールの中心が低下する理由</h2>

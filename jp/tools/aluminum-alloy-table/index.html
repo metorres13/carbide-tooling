@@ -25,7 +25,12 @@
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -233,7 +238,7 @@
 const ALUM=[{g:'2024',s:'2',ts:'470',y:'325',el:'10%',hb:'120',use:'Aerospace structures'},{g:'2014',s:'2',ts:'485',y:'415',el:'13%',hb:'135',use:'Heavy-duty forgings'},{g:'5052',s:'5',ts:'230',y:'170',el:'12%',hb:'60',use:'Marine, fuel tanks'},{g:'5083',s:'5',ts:'300',y:'228',el:'16%',hb:'89',use:'Shipbuilding, pressure'},{g:'6061',s:'6',ts:'310',y:'276',el:'12%',hb:'95',use:'General structural'},{g:'6063',s:'6',ts:'240',y:'210',el:'12%',hb:'80',use:'Extrusions, profiles'},{g:'6082',s:'6',ts:'330',y:'280',el:'10%',hb:'100',use:'European structural'},{g:'7075',s:'7',ts:'570',y:'505',el:'11%',hb:'150',use:'Aerospace, molds'},{g:'7050',s:'7',ts:'510',y:'455',el:'10%',hb:'140',use:'Aerospace plate'}];
 function filterAl(s){document.querySelectorAll('.series button').forEach(b=>b.classList.toggle('active',b.textContent===s||(s==='all'&&b.textContent==='All')));const rows=s==='all'?ALUM:ALUM.filter(a=>a.s===s);document.getElementById('al-table-wrap').innerHTML=`<table class="al-table"><tr><th>Grade</th><th>Series</th><th>Tensile (MPa)</th><th>Yield (MPa)</th><th>Elong</th><th>HB</th><th>Use</th></tr>${rows.map(r=>`<tr><td><b>${r.g}</b></td><td>${r.s}xxx</td><td>${r.ts}</td><td>${r.y}</td><td>${r.el}</td><td>${r.hb}</td><td>${r.use}</td></tr>`).join('')}</table>`;}
 filterAl('all');
-</script><div class="toolbox-widget"><h3>ガイド</h3><div class="toolbox-links">
+</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script><div class="toolbox-widget"><h3>ガイド</h3><div class="toolbox-links">
 <a href="/tools/speed-feed/">金属コスト計算機</a>
 <a href="/tools/hardness-converter/">コーティングセレクター</a>
 <a href="/tools/tap-drill-size-calculator/">ランピング角度电卓</a>

@@ -123,7 +123,12 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-menu a:hover{background:#f5f5f7}
 .lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
 .lang-menu a .flag{font-size:16px}
-</style>
+
+.nav-left{gap:16px}.nav-links>a{padding:0 12px;font-size:12px}.logo{font-size:13px;white-space:nowrap}
+body{overflow-x:hidden!important}
+@media(max-width:768px){.nav-links{display:none}.logo{font-size:14px;white-space:nowrap}.lang-btn{margin-left:4px;padding:2px 6px;font-size:12px}}
+@media(min-width:769px){.nav-left{gap:20px}}
+.logo{cursor:pointer!important}.btn{cursor:pointer!important}.btn-outline{cursor:pointer!important}.lang-link{cursor:pointer!important}</style>
 <link href="/css/tool-style.css" rel="stylesheet"/>
 <meta content="#0066cc" name="theme-color"/>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
@@ -446,7 +451,7 @@ function calc() {
 }
 
 setMode('sfm');
-</script>
+</script><script>function toggleLang(e){e.stopPropagation();document.getElementById('lang-menu').classList.toggle('show')}document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});</script>
 <section class="seo-content">
 <div class="container">
 <div class="case-study">
@@ -455,8 +460,8 @@ setMode('sfm');
 </div>
 <h2>The SFM Formula: How Surface Speed Is Calculated</h2>
 <p>Surface speed — measured in <strong>SFM</strong> (Surface Feet per Minute, imperial) or <strong>Vc</strong> (meters per minute, metric) — is the linear velocity at which the cutting edge passes through the material. It is the single most important parameter in machining because it directly determines cutting temperature, tool wear rate, and surface integrity.</p>
-<p><strong>Imperial (SFM):</strong> <code>SFM = (π × D × RPM) ÷ 12</code><br>
-<strong>Metric (Vc):</strong> <code>Vc (m/min) = (π × D × RPM) ÷ 1000</code></br></p>
+<p><strong>Imperial (SFM):</strong> <code>SFM = (π × D × RPM) ÷ 12</code><br/>
+<strong>Metric (Vc):</strong> <code>Vc (m/min) = (π × D × RPM) ÷ 1000</code></p>
 <p>Where D = diameter in inches (imperial) or mm (metric), and RPM = spindle revolutions per minute. This calculator works in all three modes — enter any two values, and the third is computed automatically.</p>
 <h2>Recommended Surface Speeds for Carbide Tooling</h2>
 <p>The table below shows recommended SFM ranges for carbide cutting tools across common operations. These values assume rigid setup, adequate coolant, and average depth of cut conditions.</p>
@@ -483,8 +488,8 @@ setMode('sfm');
 </ul>
 <p>This is why tool libraries in CAM systems store SFM, not RPM — the CAM software calculates RPM based on the programmed tool diameter. When setup changes require a different tool holder or extension, the SFM stays the same; only the RPM changes.</p>
 <h2>Signs Your Surface Speed Is Wrong</h2>
-<p><strong>Too fast:</strong> Rapid flank wear, plastic deformation of the cutting edge, built-up edge, chatter, discolored chips (blue/purple), poor surface finish.<br>
-<strong>Too slow:</strong> BUE formation, high cutting forces, poor chip control, chatter, smearing on the workpiece surface, reduced productivity.</br></p>
+<p><strong>Too fast:</strong> Rapid flank wear, plastic deformation of the cutting edge, built-up edge, chatter, discolored chips (blue/purple), poor surface finish.<br/>
+<strong>Too slow:</strong> BUE formation, high cutting forces, poor chip control, chatter, smearing on the workpiece surface, reduced productivity.</p>
 <p>When in doubt, consult the <a href="/tools/speed-feed/" style="color:#0066cc">Speed &amp; Feed Calculator</a> which incorporates material-specific SFM ranges for carbide end mills.</p>
 <h2>Frequently Asked Questions</h2>
 <p><strong>What is SFM in machining?</strong> SFM (Surface Feet per Minute) is the linear speed at which a cutting tool edge travels through the workpiece material. It determines cutting temperature, tool life, and surface finish.</p>
