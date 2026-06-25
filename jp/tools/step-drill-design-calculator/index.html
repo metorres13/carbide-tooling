@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Step Drill Design 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Free online step drill design 計算機. 計算 step lengths, 直径s, and chamfer dimensions for cusへm step drill design."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>ステップドリル設計計算機 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="无料オンラインステップドリルデザイン计算机。カスタムステップドリル設計のステップ長、直径、および面取り寸法を計算します。" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:36px;font-weight:800;letter-spacing:-1px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:18px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,260 +12,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Drill Design | 精密加工ツール"/>
-<meta property="og:description" content="Free online step drill design 計算機. 計算 step lengths, 直径s, and chamfer dimensions for cusへm step drill design."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Drill Design | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ステップドリルデザイン | 精密加工ツール" property="og:title"/>
+<meta content="无料オンラインステップドリルデザイン计算机。カスタムステップドリル設計のステップ長、直径、および面取り寸法を計算します。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-drill-design-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Drill Design | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Drill Design",
-      "url": "https://carbide-tooling.com/jp/tools/step-drill-design-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step drill design calculator. 計算 step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/step-drill-design-calculator/",
-      "name": "Step Drill Design",
-      "description": "Free online step drill design calculator. 計算 step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I grind a standard drill into a step drill?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, on a universal tool and cutter grinder. Use a diamond wheel for carbide and avoid overheating during grinding. The step transitions must be concentric within 0.002 inches TIR. For critical step dimensions, use a CNC tool grinder for repeatable geometry."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum number of steps for a single tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Practical limit is 3–4 steps for manual tool grinding and 5–7 steps for CNC-ground tools. Beyond this, chip evacuation becomes ineffective, and the tool's cross-sectional rigidity is compromised. For holes requiring more than 4 steps, consider using a step reamer instead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I prevent step drill chattering?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Chatter at step transitions is caused by interrupted cut forces. Reduce feed rate by 30% during step transitions. Ensure the toolholder has minimal runout (under 0.0005 inches TIR). Use a stub-length step drill where possible — a shorter tool is exponentially more rigid.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Drill Design",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "name": "Step Drill Design",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Can I grind a standard drill into a step drill?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, on a universal tool and cutter grinder. Use a diamond wheel for carbide and avoid overheating during grinding. The step transitions must be concentric within 0.002 inches TIR. For critical step dimensions, use a CNC tool grinder for repeatable geometry."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the maximum number of steps for a single tool?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Practical limit is 3–4 steps for manual tool grinding and 5–7 steps for CNC-ground tools. Beyond this, chip evacuation becomes ineffective, and the tool's cross-sectional rigidity is compromised. For holes requiring more than 4 steps, consider using a step reamer instead."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I prevent step drill chattering?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Chatter at step transitions is caused by interrupted cut forces. Reduce feed rate by 30% during step transitions. Ensure the toolholder has minimal runout (under 0.0005 inches TIR). Use a stub-length step drill where possible — a shorter tool is exponentially more rigid.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ステップドリルデザイン | 精密加工ツール" property="og:title"/>
+<meta content="无料オンラインステップドリルデザイン计算机。カスタムステップドリル設計のステップ長、直径、および面取り寸法を計算します。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-drill-design-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Drill Design | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Drill Design",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "name": "Step Drill Design",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="カウンターボアと階段状の穴のための設計ステップドリル。安全なステップ遷移とチップクリアランスを計算します。" property="og:title"/>
+<meta content="无料オンラインステップドリルデザイン计算机。カスタムステップドリル設計のステップ長、直径、および面取り寸法を計算します。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-drill-design-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Drill Design Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Drill Design Calculator",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "name": "Step Drill Design Calculator",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Drill Design | 精密加工ツール"/>
-<meta property="og:description" content="Free online step drill design 計算機. 計算 step lengths, 直径s, and chamfer dimensions for cusへm step drill design."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Drill Design | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Drill Design",
-      "url": "https://carbide-tooling.com/jp/tools/step-drill-design-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step drill design calculator. 計算 step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/step-drill-design-calculator/",
-      "name": "Step Drill Design",
-      "description": "Free online step drill design calculator. 計算 step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Drill Design 計算機 | Precision Machining Tool"/>
-<meta property="og:description" content="Free online step drill design 計算機. 計算 step lengths, 直径s, and chamfer dimensions for cusへm step drill design."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Drill Design 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Drill Design 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/step-drill-design-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step drill design calculator. 計算 step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/step-drill-design-calculator/",
-      "name": "Step Drill Design 計算機",
-      "description": "Free online step drill design calculator. 計算 step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/step-drill-design-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/step-drill-design-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/step-drill-design-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/step-drill-design-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/step-drill-design-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/step-drill-design-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Step Drill Design 計算機</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Design ガイド</div><h1>Step Drill <span class="accent">Design 計算機</span></h1><p>Design step drills for counterbores and stepped holes. 計算 safe step transitions and chip clearance.</p><a class="btn" href="#calculator">計算 ↓</a></div></section>
-<section id="calculator" class="container" style="padding-bottom:40px"><div class="card"><h2>📐 Step Drill Design</h2><p class="sub">Safe step depth is approximately 0.5-1× the step diameter per step.</p><div class="card-row"><div class="field"><label>📐 Small 直径 (mm)</label><input type="number" id="d1" value="6" min="1" max="30" step="0.5" oninput="calc()"/></div><div class="field"><label>📐 Large 直径 (mm)</label><input type="number" id="d2" value="12" min="1" max="50" step="0.5" oninput="calc()"/></div><div class="field"><label>📏 Total 切込み深さ (mm)</label><input type="number" id="depth" value="25" min="1" max="100" step="1" oninput="calc()"/></div><div class="field"><label>🔧 被削材</label><select id="mat" onchange="calc()"><option value="steel">Steel</option><option value="al">Aluminum</option></select></div></div><div class="result-grid"><div class="result-item"><div class="label">Max Step 切込み深さ</div><div class="value" id="r-step">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chamfer 切込み幅</div><div class="value" id="r-chamfer">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Min Pilot 切込み深さ</div><div class="value" id="r-pilot">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chip Clearance</div><div class="value" id="r-clear">—</div><div class="unit">mm</div></div></div></div><div style="text-align:center;margin:16px 0"><a href="/jp/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← 全ツール</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/step-drill-design-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/step-drill-design-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/step-drill-design-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪ドイツ</a><a href="https://carbide-tooling.com/guides/">🇯🇵ジェイピー</a><a href="https://carbide-tooling.com/about.html">🇪🇸エスイー</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/step-drill-design-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/step-drill-design-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/step-drill-design-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/step-drill-design-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/step-drill-design-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ねじのリード角</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">CNC ROI計算ツール</a> <span style="color:#d2d2d6">›</span> Step Drill Design Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Design Guide</div><h1>📐小さい直径 (mm)</h1><p>📐大径 (mm)</p><a class="btn" href="#calculator">キー溝の深さ</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px"><div class="card"><h2>📏総深さ (mm)</h2><p class="sub">🔧材料</p><div class="card-row"><div class="field"><label>🔧100種類のプロ向け切削工具をチェック</label><input id="d1" max="30" min="1" oninput="calc()" step="0.5" type="number" value="6"/></div><div class="field"><label>すべてのツール</label><input id="d2" max="50" min="1" oninput="calc()" step="0.5" type="number" value="12"/></div><div class="field"><label>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</label><input id="depth" max="100" min="1" oninput="calc()" step="1" type="number" value="25"/></div><div class="field"><label>©2026年用超硬工具</label><select id="mat" onchange="calc()"><option value="steel">Steel</option><option value="al">Aluminum</option></select></div></div><div class="result-grid"><div class="result-item"><div class="label">Max Step Depth</div><div class="value" id="r-step">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chamfer Width</div><div class="value" id="r-chamfer">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Min Pilot Depth</div><div class="value" id="r-pilot">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chip Clearance</div><div class="value" id="r-clear">—</div><div class="unit">mm</div></div></div></div><div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">ドリル先端長</a></div></section>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a><a href="/jp/tools/thread-lead-angle-calculator/">Thread Lead Angle</a><a href="/jp/tools/cnc-roi-calculator/">CNC ROI 計算機</a><a href="/jp/tools/keyway-depth-calculator/">Keyway 切込み深さ</a><a href="/jp/tools/drill-point-length-calculator/">Drill Point Length</a><a href="/jp/tools/hardness-converter/">Hardness 換算</a><a href="/jp/tools/thread-depth-torque-calculator/">Thread 切込み深さ & Torque</a><a href="/jp/tools/scrap-value-calculator/">Scrap 値 計算機</a>
-  </div>
+<h3>ステップドリルジオメトリ: 直径と長さの仕様</h3>
+<div class="tool-grid">
+<a href="/tools/surface-roughness-calculator/">硬度変換器</a><a href="/tools/thread-lead-angle-calculator/">ねじ山の深さとトルク</a><a href="/tools/cnc-roi-calculator/">スクラップ価値計算ツール</a><a href="/tools/keyway-depth-calculator/">見積もりを取得する</a><a href="/tools/drill-point-length-calculator/">プライバシー</a><a href="/tools/hardness-converter/">の中で</a><a href="/tools/thread-depth-torque-calculator/">カタログを表示する →</a><a href="/tools/scrap-value-calculator/">速度と送り量</a>
+</div>
 </section>
 <script>function calc(){const d1=parseFloat(document.getElementById('d1').value)||6;const d2=parseFloat(document.getElementById('d2').value)||12;const dep=parseFloat(document.getElementById('depth').value)||25;const mat=document.getElementById('mat').value;const step=Math.min(d2*0.5,dep);const chamfer=(d2-d1)*0.5;const pilot=Math.min(d1*1.5,dep*0.3);const clear=dep-pilot-step;document.getElementById('r-step').textContent=step.toFixed(1);document.getElementById('r-chamfer').textContent=chamfer.toFixed(1);document.getElementById('r-pilot').textContent=pilot.toFixed(1);document.getElementById('r-clear').textContent=clear.toFixed(1);}calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">ねじのリード角</a>
+<a href="/tools/">ステップドリルは、単一のツールに複数の直径を組み合わせて、ツールの変更とサイクルタイムを短縮します。各ステップは、直径 (D) 、ステップ長 (L) 、および遷移半径 (R) の3つの重要な寸法を有する。標準的な方法: 応力集中を減らし、ステップ破損を防ぐために、最小0.015インチの遷移半径を維持します。フルート全体の長さは、最も深いステッププラス20% のクリアランスに対応する必要があります。</a>
+<a href="/products/">🇩🇪ドイツ</a>
+<a href="/guides/">🇯🇵ジェイピー</a>
+<a href="/about.html">🇪🇸エスイー</a>
+<a href="/quote.html">部品当たりのコスト</a>
+<a href="/privacy.html">トルクコンバーター</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">一括見積もりを依頼する →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">ステップドリルは、単一のツールに複数の直径を組み合わせて、ツールの変更とサイクルタイムを短縮します。各ステップは、直径 (D) 、ステップ長 (L) 、および遷移半径 (R) の3つの重要な寸法を有する。標準的な方法: 応力集中を減らし、ステップ破損を防ぐために、最小0.015インチの遷移半径を維持します。フルート全体の長さは、最も深いステッププラス20% のクリアランスに対応する必要があります。</a></p>
+<p style="font-size:11px;margin-bottom:6px">ステップ間隔と移行角度のデザイン</p>
+<p style="font-size:11px">ステップ間の移行には、鋭い90 ° のコーナーではなく、面取りまたは半径を含める必要があります。推奨される移行角度: 鋼の階段状の穴の場合は30〜45 ° 、バリの形成を減らすためのアルミニウムの場合は15〜30 °。スルーホールステップの場合、移行はより積極的になる可能性があります。ブラインドホールステップの場合、ステップ長にパイロット直径のポイント長のクリアランスが含まれていることを確認してください。</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Step Drill Geometry: 直径 and Length Specifications</h2><p>Step drills combine multiple diameters in a single tool, reducing tool changes and cycle times. Each step has three critical dimensions: diameter (D), step length (L), and transition radius (R). Standard practice: maintain a minimum 0.015-inch transition radius to reduce stress concentration and prevent step breakage. The overall flute length must accommodate the deepest step plus 20% clearance.</p>
-<h2>Step Spacing and Transition Angle Design</h2><p>The transition between steps should include a chamfer or radius rather than a sharp 90° corner. おすすめ transition angle: 30–45° chamfer for stepped holes in steel, 15–30° for aluminum to reduce burr formation. For through-hole steps, the transition can be more aggressive. For blind hole steps, ensure the step length includes clearance for the pilot diameter's point length.</p>
-<h2>工具 被削材 Selection for Multi-Step Operations</h2><p>Step drills experience higher torsional loads than single-diameter drills due to the varying cutting action along the tool. For step drills, use micro-grain carbide grades (K20–K30) for toughness. For high-production step drilling in steel, TiAlN-coated carbide extends tool life 2–3× over uncoated. In aluminum, DLC-coated step drills prevent built-up edge on the step transitions.</p>
-<h2>よくある質問</h2>
+<h2>マルチステップ操作のためのツール素材の選択</h2><p>ステップドリルは、ツールに沿ったさまざまな切削作用により、単径ドリルよりも高いねじり荷重を受けます。ステップドリルの場合、靭性のためにマイクログレインカーバイドグレード (K20-K30) を使用します。鋼の高生産ステップ掘削の場合、Ti Al Nコーティングされたカーバイドは、コーティングされていない状態で工具の寿命を2〜3倍延長します。アルミニウムでは、DLCコーティングされたステップドリルがステップトランジションのエッジの構築を防ぎます。</p>
+<h2>よくある質問</h2><p>標準的なドリルをステップドリルに挽くことはできますか?はい、ユニバーサルツールとカッターグラインダーで。カーバイドにはダイヤモンドホイールを使用し、研削中の過熱を避けてください。ステップ遷移は、0.002インチTIR内で同心でなければならない。重要なステップ寸法については、再現性のあるジオメトリにCNCツールグラインダーを使用します。</p>
+<h2>1つのツールの最大ステップ数はいくつですか?実用的な制限は、手動工具研削の場合は3〜4ステップ、CNC接地工具の場合は5〜7ステップです。これを超えると、チップの排気が無効になり、ツールの断面剛性が低下します。4ステップ以上を必要とする穴の場合は、代わりにステップリーマーを使用することを検討してください。</h2><p>ステップドリルチャタリングを防ぐにはどうすればよいですか?ステップトランジションでのチャタリングは、切断力の中断によって引き起こされます。ステップ移行中にフィードレートを30% 削減します。ツールホルダーに最小のランアウト (0.0005インチTIR未満) があることを確認します。可能な場合はスタブ長のステップドリルを使用します。短いツールは指数関数的に剛性が高くなります。</p>
+<h2>⚡カーバイド・ツーリング・ドットコムの高性能シリーズ用に算出済み。カタログを表示する →</h2>
 <p><strong>Can I grind a standard drill into a step drill?</strong> Yes, on a universal tool and cutter grinder. Use a diamond wheel for carbide and avoid overheating during grinding. The step transitions must be concentric within 0.002 inches TIR. For critical step dimensions, use a CNC tool grinder for repeatable geometry.</p>
 <p><strong>What is the maximum number of steps for a single tool?</strong> Practical limit is 3–4 steps for manual tool grinding and 5–7 steps for CNC-ground tools. Beyond this, chip evacuation becomes ineffective, and the tool's cross-sectional rigidity is compromised. For holes requiring more than 4 steps, consider using a step reamer instead.</p>
 <p><strong>How do I prevent step drill chattering?</strong> Chatter at step transitions is caused by interrupted cut forces. Reduce feed rate by 30% during step transitions. Ensure the toolholder has minimal runout (under 0.0005 inches TIR). Use a stub-length step drill where possible — a shorter tool is exponentially more rigid.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ 計算d for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">カタログを見る →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">工具ホルダー</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/step-drill-design-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/step-drill-design-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<div class="toolbox-widget"><h3>製品</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">成形タップ用穴あけドリル計算ツール</a>
+<a href="/tools/hardness-converter/">の中で</a>
+<a href="/tools/tap-drill-size-calculator/">ペック掘削計算機</a>
+<a href="/tools/mrr-calculator/">テーパー計算機</a>
+<a href="/tools/feed-converter/">ポモドーロタイマー</a>
+<a href="/tools/surface-roughness-calculator/">硬度変換器</a>
+<a href="/tools/titanium-machining-guide/">ISOフィット計算機</a>
+<a href="/tools/carbide-grade-cross-ref-2/">接点計算機</a>
+<a href="/tools/cost-per-part-calculator/">リンクドイン</a>
+<a href="/tools/torque-unit-converter/">電子メール</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>ガイド</h3>
+<p>について</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/tool-holders.html">ツールホルダー</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/tool-holders.html">Tool Holders</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/form-tap-drill-calculator/">Form Tap Drill 計算機</a>
-<a href="/jp/tools/tool-runout-calculator/">工具 Runout 計算機</a>
-<a href="/jp/tools/peck-drilling-calculator/">Peck Drilling 計算機</a>
-<a href="/jp/tools/taper-calculator/">Taper 計算機</a>
-<a href="/jp/tools/pomodoro-timer/">Pomodoro Timer</a>
-<a href="/jp/tools/automation-vs-manual-calculator/">Automation vs Manual</a>
-<a href="/jp/tools/iso-fit-calculator/">ISO Fit 計算機</a>
-<a href="/jp/tools/tangent-point-calculator/">Tangent Point 計算機</a>
-
-  </div>
+<h3>ステップドリルジオメトリ: 直径と長さの仕様</h3>
+<div class="tool-grid">
+<a href="/tools/form-tap-drill-calculator/">Form Tap Drill Calculator</a>
+<a href="/tools/tool-runout-calculator/">Tool Runout Calculator</a>
+<a href="/tools/peck-drilling-calculator/">Peck Drilling Calculator</a>
+<a href="/tools/taper-calculator/">Taper Calculator</a>
+<a href="/tools/pomodoro-timer/">Pomodoro Timer</a>
+<a href="/tools/automation-vs-manual-calculator/">Automation vs Manual</a>
+<a href="/tools/iso-fit-calculator/">ISO Fit Calculator</a>
+<a href="/tools/tangent-point-calculator/">Tangent Point Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/step-drill-design-calculator/&text=Step Drill Design 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Step Drill Design 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/step-drill-design-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/step-drill-design-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/step-drill-design-calculator/&amp;text=Step Drill Design Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Step Drill Design Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/step-drill-design-calculator/">Email</a>
 </div>
-
 </body></html>

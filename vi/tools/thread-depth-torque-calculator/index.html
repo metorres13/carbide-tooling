@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Thread Chiều sâu cắt Torque Máy tính | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Free online thread Chiều sâu cắt and Đếnrque Máy tính. Tính Đếnán minimum engagement length and tapping Đếnrque for internal threads in various Vật liệus."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Máy tính mô-men xoắn độ sâu ren | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Máy tính Mô men xoắn và độ sâu ren trực tuyến miễn phí. Tính độ dài tương tác tối thiểu và mô-men xoắn cho các sợi bên trong bằng các vật liệu khác nhau." name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:38px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:18px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,181 +13,198 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Chiều sâu cắt & Đếnrque | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online thread Chiều sâu cắt and Đếnrque Máy tính. Tính Đếnán minimum engagement length and tapping Đếnrque for internal threads in various Vật liệus."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Chiều sâu cắt & Torque | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Độ sâu &amp; mô-men xoắn | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính Mô men xoắn và độ sâu ren trực tuyến miễn phí. Tính độ dài tương tác tối thiểu và mô-men xoắn cho các sợi bên trong bằng các vật liệu khác nhau." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/thread-depth-torque-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Depth &amp; Torque | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Chiều sâu cắt & Torque",
-      "url": "https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread depth and torque calculator. Tính toán minimum engagement length and tapping torque for internal threads in various materials.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/",
-      "name": "Thread Chiều sâu cắt & Torque",
-      "description": "Free online thread depth and torque calculator. Tính toán minimum engagement length and tapping torque for internal threads in various materials.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the maximum thread engagement for strength?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Beyond 2.0× diameter of engagement, the screw will typically break before the internal threads strip. Extending engagement beyond 2.5× provides no meaningful strength increase but may be required for sealing (NPT) or adjustment purposes. Design for 1.5× diameter engagement as a practical maximum for most applications."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do thread lubricants affect torque-to-tension?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Thread lubricants reduce the nut factor (K) from ~0.22 dry to ~0.12 with moly-based lubricants. For the same torque value, a lubricated joint generates approximately 80% more clamp load. Calibrate torque values specifically for lubricated or dry assembly conditions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does thread coating affect torque requirements?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Zinc-plated threads have a K factor of approximately 0.19, while phosphate-coated threads are around 0.22. Cadmium-plated threads (now restricted) had a K factor of 0.15. Always use the K factor specific to your thread coating for accurate torque calculations.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Depth & Torque",
+ "url": "https://carbide-tooling.com/tools/thread-depth-torque-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread depth and torque calculator. Calculate minimum engagement length and tapping torque for internal threads in various materials.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/thread-depth-torque-calculator/",
+ "name": "Thread Depth & Torque",
+ "description": "Free online thread depth and torque calculator. Calculate minimum engagement length and tapping torque for internal threads in various materials.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the maximum thread engagement for strength?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Beyond 2.0× diameter of engagement, the screw will typically break before the internal threads strip. Extending engagement beyond 2.5× provides no meaningful strength increase but may be required for sealing (NPT) or adjustment purposes. Design for 1.5× diameter engagement as a practical maximum for most applications."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do thread lubricants affect torque-to-tension?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Thread lubricants reduce the nut factor (K) from ~0.22 dry to ~0.12 with moly-based lubricants. For the same torque value, a lubricated joint generates approximately 80% more clamp load. Calibrate torque values specifically for lubricated or dry assembly conditions."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does thread coating affect torque requirements?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. Zinc-plated threads have a K factor of approximately 0.19, while phosphate-coated threads are around 0.22. Cadmium-plated threads (now restricted) had a K factor of 0.15. Always use the K factor specific to your thread coating for accurate torque calculations.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Độ sâu &amp; mô-men xoắn | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính Mô men xoắn và độ sâu ren trực tuyến miễn phí. Tính độ dài tương tác tối thiểu và mô-men xoắn cho các sợi bên trong bằng các vật liệu khác nhau." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/thread-depth-torque-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Depth &amp; Torque | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Depth & Torque",
+ "url": "https://carbide-tooling.com/tools/thread-depth-torque-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread depth and torque calculator. Calculate minimum engagement length and tapping torque for internal threads in various materials.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/thread-depth-torque-calculator/",
+ "name": "Thread Depth & Torque",
+ "description": "Free online thread depth and torque calculator. Calculate minimum engagement length and tapping torque for internal threads in various materials.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Đính hôn với sợi chỉ Bao Nhiêu Là Đủ? Tính độ dài tương tác tối thiểu và mô-men xoắn dự kiến cho thiết kế khớp nối của bạn." property="og:title"/>
+<meta content="Máy tính Mô men xoắn và độ sâu ren trực tuyến miễn phí. Tính độ dài tương tác tối thiểu và mô-men xoắn cho các sợi bên trong bằng các vật liệu khác nhau." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/thread-depth-torque-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Depth &amp; Torque Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Depth & Torque Calculator",
+ "url": "https://carbide-tooling.com/tools/thread-depth-torque-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread depth and torque calculator. Calculate minimum engagement length and tapping torque for internal threads in various materials.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/thread-depth-torque-calculator/",
+ "name": "Thread Depth & Torque Calculator",
+ "description": "Free online thread depth and torque calculator. Calculate minimum engagement length and tapping torque for internal threads in various materials.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Chiều sâu cắt & Đếnrque | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online thread Chiều sâu cắt and Đếnrque Máy tính. Tính Đếnán minimum engagement length and tapping Đếnrque for internal threads in various Vật liệus."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Chiều sâu cắt & Torque | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Chiều sâu cắt & Torque",
-      "url": "https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread depth and torque calculator. Tính toán minimum engagement length and tapping torque for internal threads in various materials.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/",
-      "name": "Thread Chiều sâu cắt & Torque",
-      "description": "Free online thread depth and torque calculator. Tính toán minimum engagement length and tapping torque for internal threads in various materials.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Chiều sâu cắt & Torque Máy tính | Precision Machining Tool"/>
-<meta property="og:description" content="Free online thread Chiều sâu cắt and Đếnrque Máy tính. Tính Đếnán minimum engagement length and tapping Đếnrque for internal threads in various Vật liệus."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Chiều sâu cắt & Torque Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Chiều sâu cắt & Torque Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread depth and torque calculator. Tính toán minimum engagement length and tapping torque for internal threads in various materials.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/",
-      "name": "Thread Chiều sâu cắt & Torque Máy tính",
-      "description": "Free online thread depth and torque calculator. Tính toán minimum engagement length and tapping torque for internal threads in various materials.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/thread-depth-torque-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/thread-depth-torque-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/thread-depth-torque-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/thread-depth-torque-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/thread-depth-torque-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/thread-depth-torque-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Sản phẩm</a><a href="https://carbide-tooling.com/guides/">Hướng dẫn kỹ thuật</a><a href="https://carbide-tooling.com/about.html">Về chúng tôi</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/thread-depth-torque-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/thread-depth-torque-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/thread-depth-torque-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/thread-depth-torque-calculator/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/thread-depth-torque-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Thread Chiều sâu cắt Torque Máy tính</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">🔩 Engineering Data</div><h1>Thread Chiều sâu cắt & <span class="accent">Torque</span></h1><p>How much thread engagement is enough? Tính toán minimum engagement length and expected tapping torque for your joint design.</p><a class="btn" href="#calculator">Tính toán ↓</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/thread-depth-torque-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/thread-depth-torque-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/thread-depth-torque-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/thread-depth-torque-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/thread-depth-torque-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪Đức</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/thread-depth-torque-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/thread-depth-torque-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/thread-depth-torque-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/thread-depth-torque-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/thread-depth-torque-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Máy tính Pythagore</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Máy tính thanh sin</a> <span style="color:#d2d2d6">›</span> Thread Depth Torque Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">🔩 Engineering Data</div><h1>Độ bám tối thiểu = 1.5 × đường kính thép, 2 × cho nhôm, 2.5 × cho thép không gỉ.</h1><p>🔩Kích thước chốt</p><a class="btn" href="#calculator">Quay tọa độ</a></div></section>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/mcode-reference/">M-Code Reference</a><a href="/vi/tools/ball-nose-effective-diameter/">Ball Nose Effective Đường kính</a><a href="/vi/tools/pythagorean-calculator/">Pythagorean Máy tính</a><a href="/vi/tools/sine-bar-calculator/">Sine Bar Máy tính</a><a href="/vi/tools/coord-rotation-calculator/">Coordinate Rotation</a><a href="/vi/tools/tool-wear-cost-calculator/">Dụng cụ Wear Cost</a><a href="/vi/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a><a href="/vi/tools/gdt-symbols-reference/">GD&T Symbols Reference</a>
-  </div>
+<h3>🔩Cấp chốt</h3>
+<div class="tool-grid">
+<a href="/tools/mcode-reference/">Chi phí mài mòn dụng cụ</a><a href="/tools/ball-nose-effective-diameter/">Chi phí vòng đời của chất làm mát</a><a href="/tools/pythagorean-calculator/">Tham khảo các ký hiệu GD&amp;T</a><a href="/tools/sine-bar-calculator/">← Tất cả công cụ</a><a href="/tools/coord-rotation-calculator/">Nhận báo giá</a><a href="/tools/tool-wear-cost-calculator/">Quyền riêng tư</a><a href="/tools/coolant-lifecycle-cost/">trong</a><a href="/tools/gdt-symbols-reference/">Xem danh mục →</a>
+</div>
 </section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>🔩 Engagement & Torque</h2><p class="sub">Minimum engagement = 1.5× diameter for steel, 2× for aluminum, 2.5× for stainless.</p>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>🔧Vật liệu đai ốc</h2><p class="sub">Tất cả công cụ</p>
 <div class="card-row">
-<div class="field"><label>🔩 Fastener Size</label><select id="size" onchange="calc()"><option value="6">M6</option><option value="8">M8</option><option value="10" selected>M10</option><option value="12">M12</option><option value="16">M16</option></select></div>
-<div class="field"><label>🔩 Fastener Grade</label><select id="grade" onchange="calc()"><option value="8.8">8.8 (Medium carbon)</option><option value="10.9" selected>10.9 (Alloy steel)</option><option value="12.9">12.9 (High tensile)</option></select></div>
-<div class="field"><label>🔧 Nut Vật liệu</label><select id="mat" onchange="calc()"><option value="steel">Steel / Cast Iron</option><option value="al">Aluminum</option><option value="ss">Stainless</option></select></div>
+<div class="field"><label>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</label><select id="size" onchange="calc()"><option value="6">M6</option><option value="8">M8</option><option selected="" value="10">M10</option><option value="12">M12</option><option value="16">M16</option></select></div>
+<div class="field"><label>©Dụng cụ cắt gọt bằng cacbua năm 2026</label><select id="grade" onchange="calc()"><option value="8.8">8.8 (Medium carbon)</option><option selected="" value="10.9">10.9 (Alloy steel)</option><option value="12.9">12.9 (High tensile)</option></select></div>
+<div class="field"><label>Gắn ren tối thiểu cho sức mạnh khớp tối đa</label><select id="mat" onchange="calc()"><option value="steel">Steel / Cast Iron</option><option value="al">Aluminum</option><option value="ss">Stainless</option></select></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Min Engagement (Steel)</div><div class="value" id="r-min">—</div><div class="unit">mm</div></div>
@@ -195,7 +213,7 @@
 <div class="result-item"><div class="label">Threads Engaged</div><div class="value" id="r-threads">—</div><div class="unit">threads</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:16px 0"><a href="/vi/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Tất cả công cụ</a></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Tốc độ và Lượng ăn dao</a></div>
 </section>
 <script>
 const PITCHES={6:1.0,8:1.25,10:1.5,12:1.75,16:2.0};
@@ -203,87 +221,73 @@ function calc(){const sz=parseInt(document.getElementById('size').value);const g
 calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Máy tính Pythagore</a>
+<a href="/tools/">Độ dài tương tác của ren xác định khả năng chịu tải của khớp ren. Quy tắc chung: khớp nối ren trong phải có ít nhất 1.0 × Đường kính vít cho thép trên thép, 1.5 × cho nhôm, 2.0 × cho gang, và 1.25 × cho thép không gỉ. Đối với các lỗ khoan trong vật liệu mềm hơn vít (ví dụ: Vít Thép bằng nhôm), tăng độ bám dính lên đường kính 2.0 ×.</a>
+<a href="/products/">🇩🇪Đức</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Hướng dẫn về Titan</a>
+<a href="/privacy.html">Phân loại tham chiếu</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Chi phí trên mỗi bộ phận</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Độ dài tương tác của ren xác định khả năng chịu tải của khớp ren. Quy tắc chung: khớp nối ren trong phải có ít nhất 1.0 × Đường kính vít cho thép trên thép, 1.5 × cho nhôm, 2.0 × cho gang, và 1.25 × cho thép không gỉ. Đối với các lỗ khoan trong vật liệu mềm hơn vít (ví dụ: Vít Thép bằng nhôm), tăng độ bám dính lên đường kính 2.0 ×.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Tính toán độ bền Dải ren trong</p>
+<p style="font-size:11px">Độ bền của dải ren bên trong phụ thuộc vào diện tích cắt, được tính như: Diện tích cắt = &amp; quot; × đường kính cao độ × chiều dài của sự gắn kết × hệ số cắt ren. Đối với các sợi số liệu ở độ tương tác 70%, hệ số cắt là khoảng 0.88. Một sợi UNC 1/2-13 bằng nhôm 6061 với độ tương tác 0.75 inch cung cấp độ bền Dải ren Khoảng 4,800 lbs.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Minimum Thread Engagement for Maximum Joint Strength</h2><p>Thread engagement length determines the load capacity of a threaded joint. General rule: internal thread engagement should be at least 1.0× the screw diameter for steel-on-steel, 1.5× for aluminum, 2.0× for cast iron, and 1.25× for stainless. For tapped holes in materials softer than the screw (e.g., steel screw in aluminum), increase engagement to 2.0× diameter.</p>
-<h2>Calculating Internal Thread Strip Strength</h2><p>Internal thread strip strength depends on shear area, which is calculated as: Shear Area = π × Pitch Đường kính × Length of Engagement × Thread Shear Factor. For metric threads at 70% engagement, the shear factor is approximately 0.88. A 1/2-13 UNC thread in 6061 aluminum with 0.75 inches engagement provides approximately 4,800 lbs of thread strip strength.</p>
-<h2>Torque-to-Tension Relationships in Threaded Assemblies</h2><p>Applied torque relates to clamp load through: T = K × D × F, where K = nut factor (0.15–0.20 for lubricated, 0.20–0.30 for dry), D = nominal diameter, F = clamp load. Only 10–15% of applied torque generates clamp load; the rest overcomes friction under the head and in the threads. For critical joints, torque + angle control provides more accurate preload than torque-only methods.</p>
-<h2>Câu hỏi thường gặp</h2>
+<h2>Mối Quan Hệ mô-men xoắn đến căng thẳng trong các cụm ren</h2><p>Mô-men xoắn áp dụng liên quan đến Tải trọng của kẹp thông qua: t = K × D × F, trong đó hệ số đai ốc K = (0.15-0.20 cho bôi trơn, 0.20-0.30 cho khô), D = Đường kính danh nghĩa, f = Tải trọng kẹp. Chỉ có 10-15% mô-men xoắn ứng dụng tạo ra tải trọng kẹp; phần còn lại vượt qua ma sát dưới đầu và trong các sợi chỉ. Đối với các khớp quan trọng, mô-men xoắn + điều khiển góc Cung cấp tải trước chính xác hơn các phương pháp Chỉ có mô-men xoắn.</p>
+<h2>Câu hỏi thường gặp</h2><p>Độ bền của ren tối đa là bao nhiêu? vượt quá đường kính gắn kết 2.0 ×, vít thường sẽ bị đứt trước Dải ren trong. Mở rộng sự tham gia vượt quá 2.5 × không cung cấp sức mạnh có ý nghĩa tăng lên nhưng có thể cần thiết cho mục đích niêm phong (NPT) hoặc điều chỉnh. Thiết kế phù hợp với đường kính 1.5 × là tối đa thiết thực cho hầu hết các ứng dụng.</p>
+<h2>Chất bôi trơn ren ảnh hưởng thế nào đến lực xoắn đến lực căng? chất bôi trơn ren làm giảm hệ số đai ốc (K) từ ~ 0.22 khô đến ~ 0.12 với chất bôi trơn Moly. Đối với cùng một giá trị Mô-men xoắn, một khớp bôi trơn tạo ra tải trọng kẹp thêm khoảng 80%. Hiệu chỉnh các giá trị mô-men xoắn đặc biệt cho các điều kiện lắp ráp bôi trơn hoặc khô.</h2><p>Lớp phủ ren có ảnh hưởng đến yêu cầu mô-men xoắn không? vâng. Chỉ mạ kẽm có hệ số K Khoảng 0.19, trong khi chỉ được phủ photphat Khoảng 0.22. Chỉ mạ Cadmium (Hiện đang bị hạn chế) có hệ số K là 0.15. Luôn sử dụng hệ số K cụ thể cho lớp phủ ren của bạn để tính toán mô-men xoắn chính xác.</p>
+<h2>⚡Được tính toán cho Dòng sản phẩm Hiệu suất Cao của Carbide-Tooling.com. Xem danh mục →</h2>
 <p><strong>What is the maximum thread engagement for strength?</strong> Beyond 2.0× diameter of engagement, the screw will typically break before the internal threads strip. Extending engagement beyond 2.5× provides no meaningful strength increase but may be required for sealing (NPT) or adjustment purposes. Design for 1.5× diameter engagement as a practical maximum for most applications.</p>
 <p><strong>How do thread lubricants affect torque-to-tension?</strong> Thread lubricants reduce the nut factor (K) from ~0.22 dry to ~0.12 with moly-based lubricants. For the same torque value, a lubricated joint generates approximately 80% more clamp load. Calibrate torque values specifically for lubricated or dry assembly conditions.</p>
 <p><strong>Does thread coating affect torque requirements?</strong> Yes. Zinc-plated threads have a K factor of approximately 0.19, while phosphate-coated threads are around 0.22. Cadmium-plated threads (now restricted) had a K factor of 0.15. Always use the K factor specific to your thread coating for accurate torque calculations.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Yêu cầu báo giá số lượng lớn →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/thread-depth-torque-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/thread-depth-torque-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/thread-depth-torque-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/thread-depth-torque-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<div class="toolbox-widget"><h3>Sản phẩm</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Mũi khoan cacbua</a>
+<a href="/tools/hardness-converter/">Dao phay ren &amp; Tarô</a>
+<a href="/tools/tap-drill-size-calculator/">Hướng dẫn gia công titan</a>
+<a href="/tools/mrr-calculator/">Máy tính nội suy xoắn ốc</a>
+<a href="/tools/feed-converter/">Công cụ tính trọng lượng kim loại</a>
+<a href="/tools/surface-roughness-calculator/">Máy tính Tốc độ bề mặt (SFM)</a>
+<a href="/tools/titanium-machining-guide/">Công cụ tính toán lượng dư khoan rộng</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Máy tính điều chỉnh tốc độ cấp liệu</a>
+<a href="/tools/cost-per-part-calculator/">Bộ chuyển đổi cung R sang IJ</a>
+<a href="/tools/torque-unit-converter/">Công cụ tính chiều dài mũi khoan</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Hướng dẫn</h3>
+<p>Về chúng tôi</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Mũi khoan hợp kim</a><a href="/products/threading-tools.html">Dao phay ren & tarô</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Thư điện tử</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/titanium-machining-guide/">Titanium Machining Hướng dẫn</a>
-<a href="/vi/tools/helical-interpolation-calculator/">Helical Interpolation Máy tính</a>
-<a href="/vi/tools/metal-weight-calculator/">Metal Weight Máy tính</a>
-<a href="/vi/tools/surface-speed/">Surface Tốc độ cắt (m/phút) Máy tính</a>
-<a href="/vi/tools/reaming-allowance-calculator/">Reaming Allowance Máy tính</a>
-<a href="/vi/tools/feed-rate-override-calculator/">Lượng chạy dao Rate Override Máy tính</a>
-<a href="/vi/tools/arc-r-to-ij-converter/">Arc R to IJ Bộ chuyển đổi</a>
-<a href="/vi/tools/drill-point-length-calculator/">Drill Point Length Máy tính</a>
-
-  </div>
+<h3>🔩Cấp chốt</h3>
+<div class="tool-grid">
+<a href="/tools/titanium-machining-guide/">Titanium Machining Guide</a>
+<a href="/tools/helical-interpolation-calculator/">Helical Interpolation Calculator</a>
+<a href="/tools/metal-weight-calculator/">Metal Weight Calculator</a>
+<a href="/tools/surface-speed/">Surface Tốc độ cắt (SFM) Calculator</a>
+<a href="/tools/reaming-allowance-calculator/">Reaming Allowance Calculator</a>
+<a href="/tools/feed-rate-override-calculator/">Lượng chạy dao Rate Override Calculator</a>
+<a href="/tools/arc-r-to-ij-converter/">Arc R to IJ Converter</a>
+<a href="/tools/drill-point-length-calculator/">Drill Point Length Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/&text=Thread Chiều sâu cắt & Torque Máy tính" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Thread Chiều sâu cắt & Torque Máy tính&body=Check this out: https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/thread-depth-torque-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/thread-depth-torque-calculator/&amp;text=Thread Depth &amp; Torque Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Thread Depth &amp; Torque Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/thread-depth-torque-calculator/">Email</a>
 </div>
-
 </body></html>

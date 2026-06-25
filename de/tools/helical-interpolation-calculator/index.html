@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="de"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Helical Interpolation Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Free online helical interpolation Rechner for CNC circle milling. Berechnen Vorschub rate adjustment for helical Werkzeugpaths, ramp angle per revolution, and bore milling parameters."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Helical Interpolation Calculator | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Kostenloser Online-Helix-Interpolation rechner für CNC-Kreis fräsen. Berechnen Sie die Vorschub geschwindigkeit anpassung für helikale Werkzeug wege, Rampen winkel pro Umdrehung und Bohrung fräs parameter." name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:80px 0 60px;background:linear-gradient(180deg,#fff,#f5f5f7)}.hero .badge{display:inline-flex;background:#fff;border:1px solid #e8e8ed;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px}.hero h1{font-size:44px;font-weight:800;letter-spacing:-1px;margin-bottom:12px}.hero h1 .accent{color:#0066cc}.hero p{font-size:17px;color:#86868b;max-width:600px;margin:0 auto 32px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#fff;border-radius:20px;padding:28px 30px;margin-bottom:20px;border:1px solid #e8e8ed}.card h2{font-size:20px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:20px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#f5f5f7;border-radius:14px;padding:16px;text-align:center}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b;margin-top:1px}.seo{padding:60px 0}.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;margin-top:40px}.seo h3{font-size:16px;font-weight:600;margin-top:28px;margin-bottom:6px}.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}.seo code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}.seo .case{background:#f5f5f7;border-radius:16px;padding:24px;margin:20px 0}.seo .case h3{font-size:16px;font-weight:600;margin-bottom:4px;margin-top:0}.seo .case p{font-size:14px;color:#444;margin:0 0 6px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.hero h1{font-size:32px}.result-grid{grid-template-columns:1fr 1fr}.card{padding:20px 16px}.card-row{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -13,207 +14,208 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Helical Interpolation Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free online helical interpolation calculator for CNC circle milling. Berechnen feed rate adjustment for helical toolpaths, ramp angle per revolution, "/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Helical Interpolation Rechner | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Helical Interpolation Calculator | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Online-Helix-Interpolation rechner für CNC-Kreis fräsen. Berechnen Sie die Vorschub geschwindigkeit anpassung für helikale Werkzeug wege, Rampen winkel pro Umdrehung," property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/helical-interpolation-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Helical Interpolation Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Helical Interpolation Rechner",
-      "url": "https://carbide-tooling.com/de/tools/helical-interpolation-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online helical interpolation calculator for CNC circle milling. Berechnen feed rate adjustment for helical toolpaths, ramp angle per revolution, and bore milling parameters.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/helical-interpolation-calculator/",
-      "name": "Helical Interpolation Rechner",
-      "description": "Free online helical interpolation calculator for CNC circle milling. Berechnen feed rate adjustment for helical toolpaths, ramp angle per revolution, and bore milling parameters.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is helical interpolation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A G02/G03 circular interpolation move with simultaneous Z-axis movement, creating a helical toolpath. Used for bore milling, thread milling, and spiral entry."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you calculate feed rate for helical milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Feed at the cutter = U/min × flutes × fz. The Z-axis feed = feed × tan(ramp angle). Use the calculator above for exact values."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a safe Z per revolution for helical interpolation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "0.2-0.8 mm per revolution depending on material and tool diameter. Lower values for stainless and titanium; higher values for aluminum. The maximum Z per rev should never exceed the tool's corner radius."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When should I use helical interpolation instead of drilling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For bores over 20 mm diameter, helical milling with a standard end mill is more versatile than using a dedicated drill or boring head. The tool can machine multiple bore sizes, and the process is not affected by coolant pressure or chip packing."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Helical Interpolation Calculator",
+ "url": "https://carbide-tooling.com/tools/helical-interpolation-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online helical interpolation calculator for CNC circle milling. Calculate feed rate adjustment for helical toolpaths, ramp angle per revolution, and bore milling parameters.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/helical-interpolation-calculator/",
+ "name": "Helical Interpolation Calculator",
+ "description": "Free online helical interpolation calculator for CNC circle milling. Calculate feed rate adjustment for helical toolpaths, ramp angle per revolution, and bore milling parameters.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is helical interpolation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A G02/G03 circular interpolation move with simultaneous Z-axis movement, creating a helical toolpath. Used for bore milling, thread milling, and spiral entry."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do you calculate feed rate for helical milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Vorschub at the cutter = RPM × flutes × fz. The Z-axis feed = feed × tan(ramp angle). Use the calculator above for exact values."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is a safe Z per revolution for helical interpolation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "0.2-0.8 mm per revolution depending on material and tool diameter. Lower values for stainless and titanium; higher values for aluminum. The maximum Z per rev should never exceed the tool's corner radius."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "When should I use helical interpolation instead of drilling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For bores over 20 mm diameter, helical milling with a standard end mill is more versatile than using a dedicated drill or boring head. The tool can machine multiple bore sizes, and the process is not affected by coolant pressure or chip packing."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/helical-interpolation-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/helical-interpolation-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/helical-interpolation-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/helical-interpolation-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/helical-interpolation-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/helical-interpolation-calculator"/>
-</head>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/helical-interpolation-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/helical-interpolation-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/helical-interpolation-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/helical-interpolation-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/helical-interpolation-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Produkte</a><a href="https://carbide-tooling.com/guides/">Leitfäden</a><a href="https://carbide-tooling.com/about.html">Über uns</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/helical-interpolation-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/helical-interpolation-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/helical-interpolation-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/helical-interpolation-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/helical-interpolation-calculator/">中</a></div></div></nav>
-
-<section class="hero"><div class="container"><div class="badge">🔄 Case Study Werkzeug</div><h1>Helical Interpolation <span class="accent">Rechner</span></h1><p>Berechnen bore milling parameters: feed rate adjustments, ramp angle per revolution, and helical path geometry for interpolated holes.</p><a class="btn" href="#calculator">Berechnen ↓</a></div></section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>🔄 Circle Milling / Helical Bore</h2><p class="sub">For programming helical interpolation toolpaths on machining centers.</p>
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Produkte</a><a href="https://carbide-tooling.com/guides/">Führer</a><a href="https://carbide-tooling.com/about.html">Über</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩Erhalten Sie ein Angebot</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/helical-interpolation-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/helical-interpolation-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/helical-interpolation-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/helical-interpolation-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/helical-interpolation-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<section class="hero"><div class="container"><div class="badge">🔄 Case Study Tool</div><h1>Helixinterpolationsrechner</h1><p>Berechnen Sie die Bohr parameter: Anpassungen der Vorschub geschwindigkeit, Rampen winkel pro Umdrehung und Schrauben weg geometrie für interpolierte Löcher.</p><a class="btn" href="#calculator">Berechnen ↓</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>🔄Kreis Fräsen/Helical Bohrung</h2><p class="sub">Zur Programmierung von Helix-Interpolation werkzeug pfaden auf Bearbeitungs zentren.</p>
 <div class="card-row">
-<div class="field"><label>📐 Cutter Durchmesser (mm)</label><input type="number" id="dia" value="12" min="1" max="50" step="0.5" oninput="calc()"/></div>
-<div class="field"><label>🕳️ Bore Durchmesser (mm)</label><input type="number" id="bore" value="25" min="5" max="200" step="1" oninput="calc()"/></div>
-<div class="field"><label>⏬ Bore Schnitttiefe (mm)</label><input type="number" id="depth" value="20" min="1" max="200" step="1" oninput="calc()"/></div>
-<div class="field"><label>⏱️ Z per Revolution (mm)</label><input type="number" id="zper" value="0.5" min="0.05" max="5" step="0.05" oninput="calc()"/></div>
-<div class="field"><label>🦷 Flutes</label><select id="flutes" onchange="calc()"><option>2</option><option selected>4</option><option>6</option></select></div>
-<div class="field"><label>⚡ Cutting Schnittgeschwindigkeit Vc (m/min)</label><input type="number" id="vc" value="180" min="10" max="2000" step="10" oninput="calc()"/></div>
-<div class="field"><label>📊 Spanbelastung fz (mm)</label><input type="number" id="fz" value="0.05" min="0.001" max="1" step="0.005" oninput="calc()"/></div>
+<div class="field"><label>📐Cutter Durchmesser (mm)</label><input id="dia" max="50" min="1" oninput="calc()" step="0.5" type="number" value="12"/></div>
+<div class="field"><label>🕳️ Bohrung durchmesser (mm)</label><input id="bore" max="200" min="5" oninput="calc()" step="1" type="number" value="25"/></div>
+<div class="field"><label>⏬Bohrung tiefe (mm)</label><input id="depth" max="200" min="1" oninput="calc()" step="1" type="number" value="20"/></div>
+<div class="field"><label>⏱️ Z pro Revolution (mm)</label><input id="zper" max="5" min="0.05" oninput="calc()" step="0.05" type="number" value="0.5"/></div>
+<div class="field"><label>🦷Flöten</label><select id="flutes" onchange="calc()"><option>2</option><option selected="">4</option><option>6</option></select></div>
+<div class="field"><label>⚡Schnittgeschwindigkeit Vc (m/min)</label><input id="vc" max="2000" min="10" oninput="calc()" step="10" type="number" value="180"/></div>
+<div class="field"><label>📊Spanbelastung fz (mm)</label><input id="fz" max="1" min="0.001" oninput="calc()" step="0.005" type="number" value="0.05"/></div>
 </div>
 <div class="result-grid">
-<div class="result-item"><div class="label">U/min at Cutter</div><div class="value" id="r-rpm">—</div><div class="unit">U/min</div></div>
+<div class="result-item"><div class="label">RPM at Cutter</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div>
 <div class="result-item"><div class="label">Vorschub Rate (Cutter)</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div>
 <div class="result-item"><div class="label">Ramp Angle</div><div class="value" id="r-angle">—</div><div class="unit">degrees</div></div>
-<div class="result-item"><div class="label">Revolutions to Schnitttiefe</div><div class="value" id="r-revs">—</div><div class="unit">revolutions</div></div>
+<div class="result-item"><div class="label">Revolutions to Depth</div><div class="value" id="r-revs">—</div><div class="unit">revolutions</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:20px 0"><a href="/de/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Alle Werkzeuge</a></div>
+<div style="text-align:center;margin:20px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Alle Tools</a></div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Startseite</a>
+<a href="/tools/">Alle Werkzeuge</a>
+<a href="/products/">Produkte</a>
+<a href="/guides/">Führer</a>
+<a href="/about.html">Über</a>
+<a href="/quote.html">Härtekonverter</a>
+<a href="/privacy.html">Bohrergröße für Gewindebohrungen</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/helical-interpolation-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/helical-interpolation-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/helical-interpolation-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/helical-interpolation-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/helical-interpolation-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">MRR-Rechner</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
+<p style="font-size:11px;margin-bottom:6px">Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</p>
+<p style="font-size:11px">©2026 Hartmetallwerkzeuge</p>
 </div>
 </footer>
 <script>
 function calc(){const d=parseFloat(document.getElementById('dia').value)||12;const b=parseFloat(document.getElementById('bore').value)||25;const dep=parseFloat(document.getElementById('depth').value)||20;const zper=parseFloat(document.getElementById('zper').value)||0.5;const fl=parseInt(document.getElementById('flutes').value)||4;const vc=parseFloat(document.getElementById('vc').value)||180;const fz=parseFloat(document.getElementById('fz').value)||0.05;const effDia=(b-d)/2+d;const rpm=effDia>0?(vc*1000)/(Math.PI*effDia):1000;const feed=rpm*fl*fz;const circ=Math.PI*b;const angle=circ>0?Math.atan2(zper,circ)*180/Math.PI:0;const revs=dep>0&&zper>0?dep/zper:0;document.getElementById('r-rpm').textContent=Math.round(rpm);document.getElementById('r-feed').textContent=Math.round(feed);document.getElementById('r-angle').textContent=angle.toFixed(2);document.getElementById('r-revs').textContent=revs.toFixed(1);}
 calc();</script>
 <section class="seo-content"><div class="container">
-<div class="case"><h3>📋 Case Study: 25 mm Bore in 304 SS on a Haas VF-2</h3><p>A shop was interpolating a 25 mm through-bore in 304 stainless using a 12 mm 4-flute end mill at 1,200 mm/min feed. The tool chattered on every bore, producing a 15 μm surface finish. The CAM defaulted to 0.7 mm Z per rev. By reducing Z per rev to 0.35 mm and increasing spindle speed to 5,500 U/min (calculated from effective cutting diameter), the finish improved to 2.5 μm Ra and tool life doubled. The cycle time increased by 12% — an acceptable trade-off for eliminating secondary reaming.</p></div>
-
-<h2>Helical Interpolation Vorschub Rate: Why the Center of the Werkzeug Cuts Slower</h2>
-<p>In helical interpolation, the cutting speed varies across the tool diameter. The outer edge of the tool (closest to the bore wall) cuts at the programmed Vc. The inner edge (closest to the bore center) cuts at a lower speed proportional to the ratio of the inner radius to the outer radius. This means the chip load is not uniform across the cutting edge — the inner edge produces thinner chips, which increases the specific cutting force locally.</p>
-<p>For helical paths on a Mazak or Okuma, reduce the feed rate by 10-20% compared to linear feed at the same chip load to account for this uneven chip distribution. The feed rate adjustment is most significant when the bore diameter is less than 2× the cutter diameter. For bores over 3× cutter diameter, the effect is minor and can be ignored.</p>
-
+<div class="case"><h3>📋Fallstudie: 25 mm Bohrung in 304 SS auf einem Haas-VF-2</h3><p>Ein Geschäft interpolierte eine 25-mm-Durchbohrung in Edelstahl 304 mit einer 12-mm-4-Flöten-Endmühle mit 1.200mm/min Vorschub. Das Werkzeug klapperte an jeder Bohrung und erzeugte eine Oberflächen beschaffenheit von 15 μm. Das CAM wurde standard mäßig auf 0,7mm Z pro Umdrehung eingestellt. Durch Reduzieren der Z pro Umdrehung auf 0,35mm und Erhöhen der Spindel drehzahl auf 5.500 U/min (berechnet aus dem effektiven Schnitt durchmesser) verbesserte sich das Finish auf 2,5 μm Ra und die Werkzeug lebensdauer verdoppelte sich. Die Zykluszeit stieg um 12%-ein akzeptabler Kompromiss zur Eliminierung von sekundärem Reaming.</p></div>
+<h2>Helical Interpolation Vorschub Rate: Warum die Mitte des Werkzeugs schneidet</h2>
+<p>Bei der helikalen Interpolation variiert die Schnitt geschwindigkeit über den Werkzeug durchmesser. Die Außenkante des Werkzeugs (am nächsten an der Bohrwand) schneidet am programmierten Vc. Die Innenkante (der Bohrung mitte am nächsten liegt) schneidet mit einer niedrigeren Geschwindigkeit proportional zum Verhältnis des inneren Radius zum äußeren Radius. Dies bedeutet, dass die Spanbelastung über die Schneide nicht gleichmäßig ist-die Innenkante erzeugt dünnere Späne, was die spezifische Schnitt kraft lokal erhöht.</p>
+<p>Reduzieren Sie für helikale Pfade auf einem Mazak oder Okuma die Vorschub rate um 10-20% im Vergleich zur linearen Zufuhr bei gleicher Spanbelastung, um diese ungleich mäßige Chip verteilung zu berücksichtigen. Die Anpassung der Vorschub geschwindigkeit ist am bedeutendsten, wenn der Bohrung durchmesser weniger als 2 × des Fräser durchmessers beträgt. Bei Bohrungen über 3 × Fräser durchmesser ist der Effekt gering und kann ignoriert werden.</p>
 <h2>Häufig gestellte Fragen</h2>
 <p><strong>What is helical interpolation?</strong> A G02/G03 circular interpolation move with simultaneous Z-axis movement, creating a helical toolpath. Used for bore milling, thread milling, and spiral entry.</p>
-<p><strong>How do you calculate feed rate for helical milling?</strong> Vorschub at the cutter = U/min × flutes × fz. The Z-axis feed = feed × tan(ramp angle). Use the calculator above for exact values.</p>
+<p><strong>How do you calculate feed rate for helical milling?</strong> Vorschub at the cutter = RPM × flutes × fz. The Z-axis feed = feed × tan(ramp angle). Use the calculator above for exact values.</p>
 <p><strong>What is a safe Z per revolution for helical interpolation?</strong> 0.2-0.8 mm per revolution depending on material and tool diameter. Lower values for stainless and titanium; higher values for aluminum. The maximum Z per rev should never exceed the tool's corner radius.</p>
 <p><strong>When should I use helical interpolation instead of drilling?</strong> For bores over 20 mm diameter, helical milling with a standard end mill is more versatile than using a dedicated drill or boring head. The tool can machine multiple bore sizes, and the process is not affected by coolant pressure or chip packing.</p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+<div class="toolbox-widget"><h3>🔧Werkzeugkasten der Präzisionstechnik</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Oberflächenrauheit</a>
+<a href="/tools/hardness-converter/">Titanführung</a>
+<a href="/tools/tap-drill-size-calculator/">Notenübereinstimmung</a>
+<a href="/tools/mrr-calculator/">Kosten pro Teil</a>
+<a href="/tools/feed-converter/">Drehmomentwandler</a>
+<a href="/tools/surface-roughness-calculator/">Massenanfrage stellen →</a>
+<a href="/tools/titanium-machining-guide/">Vollhartmetall-Schaftfräser</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Werkzeughalter</a>
+<a href="/tools/cost-per-part-calculator/">Peck-Bohrrechner</a>
+<a href="/tools/torque-unit-converter/">Flachheitsrechner</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Benötigen Sie professionelle Werkzeuge?</h3>
+<p>Erhalten Sie werkseitige Direktpreise, speziell entwickelte Hartmetallqualitäten und eine schnelle technische Unterstützung – alles aus einer Hand.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Bogen R zu IJ Konverter</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/tool-holders.html">Werkzeughalter</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Wärmeleitfähigkeit von Stahl</a><a href="/products/tool-holders.html">Chargenkostenrechner</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/peck-drilling-calculator/">Peck Drilling Rechner</a>
-<a href="/de/tools/flatness-calculator/">Flatness Rechner</a>
-<a href="/de/tools/arc-r-to-ij-converter/">Arc R to IJ Umrechner</a>
-<a href="/de/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a>
-<a href="/de/tools/batch-cost-calculator/">Batch Cost Rechner</a>
-<a href="/de/tools/machine-power-calculator/">Machine Power Rechner</a>
-<a href="/de/tools/metal-cost-calculator/">Metal Cost Rechner</a>
-<a href="/de/tools/coolant-concentration/">Coolant Concentration Rechner</a>
-
-  </div>
+<h3>🔧Entdecken Sie 100 professionelle Zerspanungswerkzeuge</h3>
+<div class="tool-grid">
+<a href="/tools/peck-drilling-calculator/">Maschinenleistungsrechner</a>
+<a href="/tools/flatness-calculator/">Metallkostenrechner</a>
+<a href="/tools/arc-r-to-ij-converter/">Kühlmittelkonzentrationsrechner</a>
+<a href="/tools/die-steel-thermal-conductivity/">LinkedIn</a>
+<a href="/tools/batch-cost-calculator/">E-Mail</a>
+<a href="/tools/machine-power-calculator/">Machine Power Calculator</a>
+<a href="/tools/metal-cost-calculator/">Metal Cost Calculator</a>
+<a href="/tools/coolant-concentration/">Coolant Concentration Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/helical-interpolation-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/helical-interpolation-calculator/&text=Helical Interpolation Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Helical Interpolation Rechner&body=Check this out: https://carbide-tooling.com/de/tools/helical-interpolation-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/helical-interpolation-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/helical-interpolation-calculator/&amp;text=Helical Interpolation Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Helical Interpolation Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/helical-interpolation-calculator/">Email</a>
 </div>
-
 </body></html>

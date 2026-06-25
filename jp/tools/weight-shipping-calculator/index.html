@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Weight Shipping 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="pallet weight 計算機, freight class"/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>重量出荷計算機 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="パレット重量計算機、貨物クラス" name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:750px;margin:0 auto;padding:0 20px}nav{height:44px;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{padding:28px 0 20px;text-align:center}.hero h1{font-size:26px;font-weight:800}.accent{color:#0066cc}.badge{display:inline-block;background:#f5f5f7;padding:2px 10px;border-radius:10px;font-size:10px;color:#86868b;margin-bottom:4px}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:4px auto}.panel{border:1px solid #e8e8ed;border-radius:14px;padding:14px 16px;margin:10px 0}.panel h3{font-size:14px;font-weight:700;margin-bottom:8px}.panel label{font-size:10px;font-weight:600;color:#86868b;display:block;margin-bottom:2px}.panel input,.panel select{width:100%;padding:6px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:6px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.res-item{background:#f5f5f7;border-radius:10px;padding:10px;text-align:center}.res-item .lbl{font-size:9px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.note{background:#fef3c7;border-left:3px solid #d97706;padding:10px 14px;margin:10px 0;font-size:12px;border-radius:6px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,265 +12,267 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Weight & Shipping | 精密加工ツール"/>
-<meta property="og:description" content="pallet weight 計算機, freight class"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Weight & Shipping | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="重量 &amp; 出荷 | 精密加工ツール" property="og:title"/>
+<meta content="パレット重量計算機、貨物クラス" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/weight-shipping-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Weight &amp; Shipping | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Weight & Shipping",
-      "url": "https://carbide-tooling.com/jp/tools/weight-shipping-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "pallet weight calculator, freight class",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/weight-shipping-calculator/",
-      "name": "Weight & Shipping",
-      "description": "pallet weight calculator, freight class",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is freight class determined?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is dimensional weight?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I calculate pallet load efficiency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Weight & Shipping",
+ "url": "https://carbide-tooling.com/tools/weight-shipping-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "pallet weight calculator, freight class",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/weight-shipping-calculator/",
+ "name": "Weight & Shipping",
+ "description": "pallet weight calculator, freight class",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How is freight class determined?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is dimensional weight?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I calculate pallet load efficiency?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="重量 &amp; 出荷 | 精密加工ツール" property="og:title"/>
+<meta content="パレット重量計算機、貨物クラス" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/weight-shipping-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Weight &amp; Shipping | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Weight & Shipping",
+ "url": "https://carbide-tooling.com/tools/weight-shipping-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "pallet weight calculator, freight class",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/weight-shipping-calculator/",
+ "name": "Weight & Shipping",
+ "description": "pallet weight calculator, freight class",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ページ説明" property="og:title"/>
+<meta content="パレット重量計算機、貨物クラス" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/weight-shipping-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Weight &amp; Shipping Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Weight & Shipping Calculator",
+ "url": "https://carbide-tooling.com/tools/weight-shipping-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "pallet weight calculator, freight class",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/weight-shipping-calculator/",
+ "name": "Weight & Shipping Calculator",
+ "description": "pallet weight calculator, freight class",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Weight & Shipping | 精密加工ツール"/>
-<meta property="og:description" content="pallet weight 計算機, freight class"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Weight & Shipping | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Weight & Shipping",
-      "url": "https://carbide-tooling.com/jp/tools/weight-shipping-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "pallet weight calculator, freight class",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/weight-shipping-calculator/",
-      "name": "Weight & Shipping",
-      "description": "pallet weight calculator, freight class",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Weight & Shipping 計算機 | Precision Machining Tool"/>
-<meta property="og:description" content="pallet weight 計算機, freight class"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Weight & Shipping 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Weight & Shipping 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/weight-shipping-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "pallet weight calculator, freight class",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/weight-shipping-calculator/",
-      "name": "Weight & Shipping 計算機",
-      "description": "pallet weight calculator, freight class",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/weight-shipping-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/weight-shipping-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/weight-shipping-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/weight-shipping-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/weight-shipping-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/weight-shipping-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/weight-shipping-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/weight-shipping-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/weight-shipping-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/weight-shipping-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/weight-shipping-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Weight Shipping 計算機</div>
-<section class="hero"><div class="container"><div class="badge">📊 Business 工具</div><h1>PAGE_TITLE</h1><p>PAGE_DESC</p></div></section>
 
 
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/weight-shipping-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/weight-shipping-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/weight-shipping-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/weight-shipping-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/weight-shipping-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪ドイツ</a><a href="https://carbide-tooling.com/guides/">🇯🇵ジェイピー</a><a href="https://carbide-tooling.com/about.html">🇪🇸エスイー</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/weight-shipping-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/weight-shipping-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/weight-shipping-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/weight-shipping-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/weight-shipping-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">熱膨張</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">ランプの角度</a> <span style="color:#d2d2d6">›</span> Weight Shipping Calculator</div>
+<section class="hero"><div class="container"><div class="badge">📊 Business Tool</div><h1>CNC工作における実用的な応用</h1><p>日常の店舗運営では、Weight Shipping Calculatorは、機械工、プログラマー、製造エンジニアのクイックリファレンスとして機能します。セットアップ時やプログラミング時、あるいは品質検査時に使用して、パラメーターを確認し、製造ロット間で一貫した結果を確保してください。</p></div></section>
 <section class="seo-content">
 <div class="container">
-<h2>How the Weight Shipping 計算機 Works</h2>
-<p>The Weight Shipping 計算機 provides instant, accurate results for CNC machining professionals. Whether you're programming a Haas, Mazak, or Okuma, having the right reference data helps you make better decisions on the shop floor. This tool eliminates guesswork and reduces setup time.</p>
-<h2>Practical Applications in CNC Machining</h2>
-<p>In daily shop operations, the Weight Shipping 計算機 serves as a quick reference for machinists, programmers, and manufacturing engineers. Use it during setup, programming, or quality inspection to verify your parameters and ensure consistent results across production runs.</p>
-<h2>Best Practices for Accurate 結果s</h2>
-<p>For best results with the Weight Shipping 計算機, always verify your input values against known material specifications and machine capabilities. Document your settings in the setup sheet for repeatability. When in doubt, consult tool manufacturer recommendations for optimal performance.</p>
+<h2>正確な結果を得るためのベストプラクティス</h2>
+<p>重量出荷計算機で最良の結果を得るには、常に既知の材料仕様と機械機能に対して入力値を確認してください。再現性を確保するため、設定内容をセットアップシートに記録してください。迷ったときは、最適な性能を発揮するための工具メーカーの推奨事項をご参照ください。</p>
 <h2>よくある質問</h2>
-<p><strong>How accurate is this tool?</strong> 結果s are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
+<p>このツールの精度はどの程度ですか。結果は標準的な工学式に基づいて算出されており、参考情報として提供されています。生産前に、重要な寸法は必ず校正済みの測定機器で確認してください。</p>
+<h2>これらの結果はすべての材料に適用できますか。計算は標準的な材料に対して有効です。特殊な合金や非標準的な使用条件下では、具体的な推奨事項については工具メーカーにご相談ください。</h2>
+<p>このデータを活用して、加工プロセスをどのように改善すればよいでしょうか。この参照データを出発点として、お客様の機械・工具・材料の組み合わせに応じて調整してください。将来の参照用に、設定が正常に完了したことを記録してください。</p>
+<h2>🔧100種類のプロ向け切削工具をチェック</h2>
+<p><strong>How accurate is this tool?</strong> Results are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
 <p><strong>Can I use these results for all materials?</strong> The calculations apply to standard materials. For specialized alloys or non-standard conditions, consult the tool manufacturer for specific recommendations.</p>
 <p><strong>How do I improve my machining process with this data?</strong> Use this reference data as a starting point and adjust based on your specific machine, tooling, and material combination. Document successful settings for future reference.</p>
 </div>
 </section>
-
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/gun-drill-calculator/">Gun Drill 計算機</a><a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a><a href="/jp/tools/superalloy-tool-life/">Superalloy 工具 Life</a><a href="/jp/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/jp/tools/ramping-angle-calculator/">Ramping Angle</a><a href="/jp/tools/thread-depth-torque-calculator/">Thread 切込み深さ & Torque</a><a href="/jp/tools/taper-calculator/">Taper 計算機</a><a href="/jp/tools/surface-speed/">Surface 切削速度 (m/min)</a>
-  </div>
+<h3>すべてのツール</h3>
+<div class="tool-grid">
+<a href="/tools/gun-drill-calculator/">ねじ山の深さとトルク</a><a href="/tools/tap-drill-size-calculator/">テーパー計算機</a><a href="/tools/superalloy-tool-life/">表面速度（SFM）</a><a href="/tools/heat-expansion-calculator/">← すべてのツール</a><a href="/tools/ramping-angle-calculator/">見積もりを取得する</a><a href="/tools/thread-depth-torque-calculator/">プライバシー</a><a href="/tools/taper-calculator/">の中で</a><a href="/tools/surface-speed/">速度と送り量</a>
+</div>
 </section>
-<div class="container"><div class="panel"><h3>⚙️ 入力</h3><div class="row2"><div><label>入力 1</label><input type="number" id="v1" value="50" oninput="calc()"/></div><div><label>入力 2</label><input type="number" id="v2" value="100" oninput="calc()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="res-item"><div class="lbl">結果</div><div class="val" id="r1">—</div></div><div class="res-item"><div class="lbl">Cost Impact</div><div class="val" id="r2">—</div></div></div></div>
-<div style="text-align:center;margin:20px 0"><a href="/jp/tools/" style="color:#0066cc;font-size:13px">← 全ツール</a></div></div>
+<div class="container"><div class="panel"><h3>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</h3><div class="row2"><div><label>©2026年用超硬工具</label><input id="v1" oninput="calc()" type="number" value="50"/></div><div><label>🔧精密工学ツールボックス</label><input id="v2" oninput="calc()" type="number" value="100"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="res-item"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="res-item"><div class="lbl">Cost Impact</div><div class="val" id="r2">—</div></div></div></div>
+<div style="text-align:center;margin:20px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">硬度変換器</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">熱膨張</a>
+<a href="/tools/">専門的なツールが必要ですか？</a>
+<a href="/products/">🇩🇪ドイツ</a>
+<a href="/guides/">🇯🇵ジェイピー</a>
+<a href="/about.html">🇪🇸エスイー</a>
+<a href="/quote.html">部品当たりのコスト</a>
+<a href="/privacy.html">トルクコンバーター</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/weight-shipping-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/weight-shipping-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/weight-shipping-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/weight-shipping-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">一括見積もりを依頼する →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">専門的なツールが必要ですか？</a></p>
+<p style="font-size:11px;margin-bottom:6px">工場直送価格、最適化された超硬材種、そして迅速な技術サポートを、すべてワンストップでご提供します。</p>
+<p style="font-size:11px">◆超硬工具</p>
 </div>
 </footer>
-<script>function calc(){const a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent='$'+(a*b).toFixed(2);document.getElementById('r2').textContent='$'+(a*0.1+b*0.05).toFixed(2);}calc();</script><div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<script>function calc(){const a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent='$'+(a*b).toFixed(2);document.getElementById('r2').textContent='$'+(a*0.1+b*0.05).toFixed(2);}calc();</script><div class="toolbox-widget"><h3>製品</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">旋削用インサート</a>
+<a href="/tools/hardness-converter/">熱膨張計算ツール</a>
+<a href="/tools/tap-drill-size-calculator/">テーパー計算機</a>
+<a href="/tools/mrr-calculator/">冷却液濃度計算ツール</a>
+<a href="/tools/feed-converter/">ISOフィット計算機</a>
+<a href="/tools/surface-roughness-calculator/">タップ穴径計算ツール</a>
+<a href="/tools/titanium-machining-guide/">金属コスト計算機</a>
+<a href="/tools/carbide-grade-cross-ref-2/">トロコイド加工計算ツール</a>
+<a href="/tools/cost-per-part-calculator/">究極の単位変換ツール</a>
+<a href="/tools/torque-unit-converter/">リンクドイン</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>ガイド</h3>
+<p>について</p>
+</div>
+<a class="b2b-btn" href="/quote.html">電子メール</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/turning-inserts.html">旋削インサート</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/heat-expansion-calculator/">Heat Expansion 計算機</a>
-<a href="/jp/tools/reaming-allowance-calculator/">Reaming Allowance 計算機</a>
-<a href="/jp/tools/coolant-concentration/">Coolant Concentration 計算機</a>
-<a href="/jp/tools/iso-fit-calculator/">ISO Fit 計算機</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size 計算機</a>
-<a href="/jp/tools/metal-cost-calculator/">Metal Cost 計算機</a>
-<a href="/jp/tools/trochoidal-milling-calculator/">Trochoidal Milling 計算機</a>
-<a href="/jp/tools/ultimate-unit-converter/">Ultimate 単位 換算</a>
-
-  </div>
+<h3>すべてのツール</h3>
+<div class="tool-grid">
+<a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
+<a href="/tools/reaming-allowance-calculator/">Reaming Allowance Calculator</a>
+<a href="/tools/coolant-concentration/">Coolant Concentration Calculator</a>
+<a href="/tools/iso-fit-calculator/">ISO Fit Calculator</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size Calculator</a>
+<a href="/tools/metal-cost-calculator/">Metal Cost Calculator</a>
+<a href="/tools/trochoidal-milling-calculator/">Trochoidal Milling Calculator</a>
+<a href="/tools/ultimate-unit-converter/">Ultimate Unit Converter</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/weight-shipping-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/weight-shipping-calculator/&text=Weight & Shipping 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Weight & Shipping 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/weight-shipping-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/weight-shipping-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/weight-shipping-calculator/&amp;text=Weight &amp; Shipping Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Weight &amp; Shipping Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/weight-shipping-calculator/">Email</a>
 </div>
-
 </body></html>

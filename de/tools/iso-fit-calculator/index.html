@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Iso Fit Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Free ISO Nachlerance Rechner for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/iso-fit-calculator/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Iso Fit Taschen rechner | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Kostenloser ISO-Toleranz rechner für Loch-und Schaft passt. Berechnen Sie Grenzwerte für H7/g6, H7/p6, H7/k6, H8/f7. Bestimmen Sie die maximale/min-Freigabe und Interferenz gemäß ISO 286." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:0 auto}.card{border:1px solid #e8e8ed;border-radius:14px;padding:16px 18px;margin:14px 0}.card h3{font-size:14px;font-weight:700;margin-bottom:8px}.card label{font-size:11px;font-weight:600;color:#86868b;display:block;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.res-item{background:#f5f5f7;border-radius:10px;padding:10px;text-align:center}.res-item .lbl{font-size:9px;font-weight:600;color:#86868b}.res-item .val{font-size:16px;font-weight:700;color:#0066cc}.fit-table{width:100%;border-collapse:collapse;font-size:12px;margin:10px 0}.fit-table th,.fit-table td{padding:6px 8px;text-align:left;border-bottom:1px solid #e8e8ed}.fit-table th{background:#f5f5f7;font-size:10px;font-weight:600}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,231 +12,236 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="ISO Fit Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference p"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/iso-fit-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ISO Fit Rechner | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ISO Fit Taschen rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser ISO-Toleranz rechner für Loch-und Schaft passt. Berechnen Sie Grenzwerte für H7/g6, H7/p6, H7/k6, H8/f7. Bestimmen Sie max/min Clearance und Interferenz p" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/iso-fit-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="ISO Fit Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "ISO Fit Rechner",
-      "url": "https://carbide-tooling.com/de/tools/iso-fit-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/iso-fit-calculator/",
-      "name": "ISO Fit Rechner",
-      "description": "Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What does H7/g6 mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I read an ISO tolerance table?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between clearance, transition, and interference fits?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "ISO Fit Calculator",
+ "url": "https://carbide-tooling.com/tools/iso-fit-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free ISO tolerance calculator for hole and shaft fits. Calculate limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/iso-fit-calculator/",
+ "name": "ISO Fit Calculator",
+ "description": "Free ISO tolerance calculator for hole and shaft fits. Calculate limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What does H7/g6 mean?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I read an ISO tolerance table?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the difference between clearance, transition, and interference fits?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ISO Fit Taschen rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser ISO-Toleranz rechner für Loch-und Schaft passt. Berechnen Sie Grenzwerte für H7/g6, H7/p6, H7/k6, H8/f7. Bestimmen Sie max/min Clearance und Interferenz p" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/iso-fit-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="ISO Fit Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "ISO Fit Calculator",
+ "url": "https://carbide-tooling.com/tools/iso-fit-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free ISO tolerance calculator for hole and shaft fits. Calculate limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/iso-fit-calculator/",
+ "name": "ISO Fit Calculator",
+ "description": "Free ISO tolerance calculator for hole and shaft fits. Calculate limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ISO Fit Taschen rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser ISO-Toleranz rechner für Loch-und Schaft passt. Berechnen Sie Grenzwerte für H7/g6, H7/p6, H7/k6, H8/f7. Bestimmen Sie max/min Clearance und Interferenz p" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/iso-fit-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="ISO Fit Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "ISO Fit Calculator",
+ "url": "https://carbide-tooling.com/tools/iso-fit-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free ISO tolerance calculator for hole and shaft fits. Calculate limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/iso-fit-calculator/",
+ "name": "ISO Fit Calculator",
+ "description": "Free ISO tolerance calculator for hole and shaft fits. Calculate limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="ISO Fit Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference p"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/iso-fit-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ISO Fit Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "ISO Fit Rechner",
-      "url": "https://carbide-tooling.com/de/tools/iso-fit-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/iso-fit-calculator/",
-      "name": "ISO Fit Rechner",
-      "description": "Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="ISO Fit Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference p"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/iso-fit-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ISO Fit Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "ISO Fit Rechner",
-      "url": "https://carbide-tooling.com/de/tools/iso-fit-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/iso-fit-calculator/",
-      "name": "ISO Fit Rechner",
-      "description": "Free ISO tolerance calculator for hole and shaft fits. Berechnen limits for H7/g6, H7/p6, H7/k6, H8/f7. Determine max/min clearance and interference per ISO 286.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/iso-fit-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/iso-fit-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/iso-fit-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/iso-fit-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/iso-fit-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/iso-fit-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/iso-fit-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Produkte</a><a href="https://carbide-tooling.com/guides/">Leitfäden</a><a href="https://carbide-tooling.com/about.html">Über uns</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/iso-fit-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/iso-fit-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/iso-fit-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/iso-fit-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/iso-fit-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Startseite</a> <span style="color:#d2d2d6">›</span> <a href="/de/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Iso Fit Rechner</div>
-<section class="hero"><div class="container"><div class="badge">📐 Standards Reference — ISO 286</div><h1>ISO Fit & Tolerance <span class="accent">Rechner</span></h1><p>Select hole and shaft tolerance classes, get the fit limits in microns.</p></div></section>
 
 
+
+ 
+<link href="https://carbide-tooling.com/de/tools/iso-fit-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/iso-fit-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/iso-fit-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/iso-fit-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/iso-fit-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/iso-fit-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/iso-fit-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇪🇸ES</a><a href="https://carbide-tooling.com/guides/">🇻🇳VI</a><a href="https://carbide-tooling.com/about.html">Startseite</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">Werkzeuge</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/iso-fit-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/iso-fit-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/iso-fit-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/iso-fit-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/iso-fit-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Blindlochgewindeschneiden</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Metallkostenrechner</a> <span style="color:#d2d2d6">›</span> Iso Fit Calculator</div>
+<section class="hero"><div class="container"><div class="badge">📐 Standards Reference — ISO 286</div><h1>Praktische Anwendungen in der CNC-Bearbeitung</h1><p>Im täglichen Shop-Betrieb dient der Iso Fit-Rechner als Kurz referenz für Maschinisten, Programmierer und Fertigungs ingenieure. Verwenden Sie es während der Einrichtung, der Programmierung oder der Qualitätsprüfung, um Ihre Parameter zu überprüfen und konsistente Ergebnisse über alle Produktionsdurchläufe hinweg sicherzustellen.</p></div></section>
 <section class="seo-content">
 <div class="container">
-<h2>How the Iso Fit Rechner Works</h2>
-<p>The Iso Fit Rechner provides instant, accurate results for CNC machining professionals. Whether you're programming a Haas, Mazak, or Okuma, having the right reference data helps you make better decisions on the shop floor. This tool eliminates guesswork and reduces setup time.</p>
-<h2>Practical Applications in CNC Machining</h2>
-<p>In daily shop operations, the Iso Fit Rechner serves as a quick reference for machinists, programmers, and manufacturing engineers. Use it during setup, programming, or quality inspection to verify your parameters and ensure consistent results across production runs.</p>
-<h2>Best Practices for Accurate Ergebniss</h2>
-<p>For best results with the Iso Fit Rechner, always verify your input values against known material specifications and machine capabilities. Document your settings in the setup sheet for repeatability. When in doubt, consult tool manufacturer recommendations for optimal performance.</p>
+<h2>Bewährte Verfahren für präzise Ergebnisse</h2>
+<p>Um die besten Ergebnisse mit dem Iso Fit-Rechner zu erzielen, überprüfen Sie Ihre Eingabe werte immer anhand bekannter Materials pezifi kationen und Maschinen funktionen. Dokumentieren Sie Ihre Einstellungen im Setup-Blatt, um die Wiederholgenauigkeit sicherzustellen. Im Zweifelsfall beachten Sie die Empfehlungen des Werkzeugherstellers, um eine optimale Leistung zu gewährleisten.</p>
 <h2>Häufig gestellte Fragen</h2>
-<p><strong>How accurate is this tool?</strong> Ergebniss are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
+<p>Wie genau ist dieses Werkzeug? Die Ergebnisse beruhen auf gängigen ingenieurtechnischen Formeln und dienen ausschließlich als Orientierungshilfe. Kritische Abmessungen vor Beginn der Produktion stets mit geeichten Messgeräten überprüfen.</p>
+<h2>Kann ich diese Ergebnisse für alle Materialien verwenden? Die Berechnungen gelten für Standardwerkstoffe. Bei speziellen Legierungen oder nicht standardmäßigen Einsatzbedingungen wenden Sie sich bitte an den Werkzeughersteller, um konkrete Empfehlungen zu erhalten.</h2>
+<p>Wie kann ich meinen Bearbeitungsprozess mithilfe dieser Daten optimieren? Verwenden Sie diese Referenzdaten als Ausgangspunkt und passen Sie sie an Ihre konkrete Maschine, Werkzeugausstattung und Materialkombination an. Speichern Sie die erfolgreichen Einstellungen zur späteren Verwendung.</p>
+<h2>🔧Entdecken Sie 100 professionelle Zerspanungswerkzeuge</h2>
+<p><strong>How accurate is this tool?</strong> Results are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
 <p><strong>Can I use these results for all materials?</strong> The calculations apply to standard materials. For specialized alloys or non-standard conditions, consult the tool manufacturer for specific recommendations.</p>
 <p><strong>How do I improve my machining process with this data?</strong> Use this reference data as a starting point and adjust based on your specific machine, tooling, and material combination. Document successful settings for future reference.</p>
 </div>
 </section>
-
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/npt-pipe-thread-calculator/">NPT Pipe Thread</a><a href="/de/tools/grade-reference/">Grade Reference</a><a href="/de/tools/gcode-reference/">G-Code Reference</a><a href="/de/tools/thread-depth-torque-calculator/">Thread Schnitttiefe & Torque</a><a href="/de/tools/force-calculator/">Force Rechner</a><a href="/de/tools/blind-hole-tapping-calculator/">Blind Hole Tapping</a><a href="/de/tools/metal-cost-calculator/">Metal Cost Rechner</a><a href="/de/tools/tool-steel-heat-treat/">Werkzeug Steel Heat Treat</a>
-  </div>
+<h3>Grund größe (mm)</h3>
+<div class="tool-grid">
+<a href="/tools/npt-pipe-thread-calculator/">Wärmebehandlung von Werkzeugstahl</a><a href="/tools/grade-reference/">← Alle Tools</a><a href="/tools/gcode-reference/">Erhalten Sie ein Angebot</a><a href="/tools/thread-depth-torque-calculator/">Datenschutz</a><a href="/tools/force-calculator/">in</a><a href="/tools/blind-hole-tapping-calculator/">Geschwindigkeit &amp; Vorschub</a><a href="/tools/metal-cost-calculator/">Härtekonverter</a><a href="/tools/tool-steel-heat-treat/">Bohrergröße für Gewindebohrungen</a>
+</div>
 </section>
-<div class="container"><div class="card"><h3>🔧 Hole & Shaft Selection</h3><div class="row2"><div><label>Hole Tolerance</label><select id="hole" onchange="calc()"><option>H6</option><option selected>H7</option><option>H8</option><option>H9</option></select></div><div><label>Shaft Tolerance</label><select id="shaft" onchange="calc()"><option>f7</option><option selected>g6</option><option>h6</option><option>h7</option><option>k6</option><option>p6</option><option>s6</option></select></div></div>
-<label>Basic Size (mm)</label><input type="number" id="size" value="50" oninput="calc()"/>
+<div class="container"><div class="card"><h3>Gemeinsame Fit-Empfehlungen</h3><div class="row2"><div><label>Anwendung</label><select id="hole" onchange="calc()"><option>H6</option><option selected="">H7</option><option>H8</option><option>H9</option></select></div><div><label>Fit</label><select id="shaft" onchange="calc()"><option>f7</option><option selected="">g6</option><option>h6</option><option>h7</option><option>k6</option><option>p6</option><option>s6</option></select></div></div>
+<label>Typ</label><input id="size" oninput="calc()" type="number" value="50"/>
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px">
 <div class="res-item"><div class="lbl">Fit Type</div><div class="val" id="r-type" style="font-size:14px">—</div></div>
 <div class="res-item"><div class="lbl">Max Clearance</div><div class="val" id="r-max">—</div><div class="unit" style="font-size:9px;color:#86868b">μm</div></div>
 <div class="res-item"><div class="lbl">Min Clearance</div><div class="val" id="r-min">—</div><div class="unit" style="font-size:9px;color:#86868b">μm</div></div>
 <div class="res-item"><div class="lbl">Max Interference</div><div class="val" id="r-int">—</div><div class="unit" style="font-size:9px;color:#86868b">μm</div></div>
 </div></div>
-<h2 style="font-size:15px;font-weight:700;margin:20px 0 8px">Common Fit Recommendations</h2>
-<table class="fit-table"><tr><th>Application</th><th>Fit</th><th>Type</th><th>Typical Use</th></tr><tr><td>Sliding fit</td><td>H7/g6</td><td>Clearance</td><td>Spools, guides</td></tr><tr><td>Precision sliding</td><td>H7/h6</td><td>Clearance</td><td>Bearings in housing</td></tr><tr><td>Light press</td><td>H7/k6</td><td>Transition</td><td>Gears on shafts</td></tr><tr><td>Press fit</td><td>H7/p6</td><td>Interference</td><td>Bushings, sleeves</td></tr><tr><td>Heavy press</td><td>H7/s6</td><td>Interference</td><td>Permanent assemblies</td></tr></table>
-<div style="text-align:center;margin:24px 0"><a href="/de/tools/" style="color:#0066cc;font-size:13px">← Alle Werkzeuge</a></div></div>
+<h2 style="font-size:15px;font-weight:700;margin:20px 0 8px">Typische Verwendung</h2>
+<table class="fit-table"><tr><th>Schiebe passform</th><th>H7/g6</th><th>Abfertigung</th><th>Spulen, Führer</th></tr><tr><td>Präzisions gleiten</td><td>H7/h6</td><td>Lager im Gehäuse</td><td>Licht presse</td></tr><tr><td>H7/k6</td><td>Übergang</td><td>Lager im Gehäuse</td><td>Presse fit</td></tr><tr><td>H7/p6</td><td>Einmischung</td><td>Buchsen, Ärmel</td><td>Schwere Presse</td></tr><tr><td>H7/s6</td><td>Permanente Baugruppen</td><td>Alle Werkzeuge</td><td>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</td></tr><tr><td>©2026 Hartmetallwerkzeuge</td><td>🔧Werkzeugkasten der Präzisionstechnik</td><td>Alle Werkzeuge</td><td>Erhalten Sie werkseitige Direktpreise, speziell entwickelte Hartmetallqualitäten und eine schnelle technische Unterstützung – alles aus einer Hand.</td></tr></table>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">MRR-Rechner</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Blindlochgewindeschneiden</a>
+<a href="/tools/">◆Hartmetallwerkzeuge</a>
+<a href="/products/">🇪🇸ES</a>
+<a href="/guides/">🇻🇳VI</a>
+<a href="/about.html">Startseite</a>
+<a href="/quote.html">Drehmomentwandler</a>
+<a href="/privacy.html">Massenanfrage stellen →</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/iso-fit-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/iso-fit-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/iso-fit-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/iso-fit-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/iso-fit-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/iso-fit-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Vollhartmetall-Schaftfräser</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">◆Hartmetallwerkzeuge</a></p>
+<p style="font-size:11px;margin-bottom:6px">Produkte</p>
+<p style="font-size:11px">Führer</p>
 </div>
 </footer>
 <script>
@@ -243,47 +249,44 @@ const TOL={H6:[0,0.016],H7:[0,0.025],H8:[0,0.039],H9:[0,0.062],f7:[-0.025,-0.050
 function calc(){const h=document.getElementById('hole').value;const s=document.getElementById('shaft').value;const sz=parseFloat(document.getElementById('size').value)||50;const hole=TOL[h];const shaft=TOL[s];const maxClear=hole[0]-shaft[1];const minClear=hole[1]-shaft[0];let type='Clearance',intf='—';if(minClear<0&&maxClear<0){type='Interference';intf=Math.abs(maxClear);}else if(minClear<0&&maxClear>0){type='Transition';intf=Math.abs(minClear);}
 document.getElementById('r-type').textContent=type;document.getElementById('r-max').textContent=Math.max(maxClear,intf)>0?Math.round(Math.max(maxClear,intf))+' μm':'—';document.getElementById('r-min').textContent=minClear>0?Math.round(minClear)+' μm':'—';document.getElementById('r-int').textContent=intf!=='—'?Math.round(Math.abs(minClear))+' μm':'—';}
 calc();
-</script><div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+</script><div class="toolbox-widget"><h3>Über</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Werkzeugkisten-Organizer</a>
+<a href="/tools/hardness-converter/">Vorschubübersteuerungsrechner</a>
+<a href="/tools/tap-drill-size-calculator/">Graphitbearbeitungsrechner</a>
+<a href="/tools/mrr-calculator/">Bogen R zu IJ Konverter</a>
+<a href="/tools/feed-converter/">Rundstabgewichtsrechner</a>
+<a href="/tools/surface-roughness-calculator/">Flachheitsrechner</a>
+<a href="/tools/titanium-machining-guide/">Getriebeparameterrechner</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Rechner für die Oberflächengeschwindigkeit (SFM)</a>
+<a href="/tools/cost-per-part-calculator/">LinkedIn</a>
+<a href="/tools/torque-unit-converter/">E-Mail</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>📩Erhalten Sie ein Angebot</h3>
+<p>🇬🇧EN</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/turning-inserts.html">Drehwendeschneidplatten</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/toolbox-organizer/">Toolbox Organizer</a>
-<a href="/de/tools/feed-rate-override-calculator/">Vorschub Rate Override Rechner</a>
-<a href="/de/tools/graphite-machining/">Graphite Machining Rechner</a>
-<a href="/de/tools/arc-r-to-ij-converter/">Arc R to IJ Umrechner</a>
-<a href="/de/tools/round-bar-weight/">Round Bar Weight Rechner</a>
-<a href="/de/tools/flatness-calculator/">Flatness Rechner</a>
-<a href="/de/tools/gear-parameter-calculator/">Gear Parameter Rechner</a>
-<a href="/de/tools/surface-speed/">Surface Schnittgeschwindigkeit (m/min) Rechner</a>
-
-  </div>
+<h3>Grund größe (mm)</h3>
+<div class="tool-grid">
+<a href="/tools/toolbox-organizer/">Toolbox Organizer</a>
+<a href="/tools/feed-rate-override-calculator/">Vorschub Rate Override Calculator</a>
+<a href="/tools/graphite-machining/">Graphite Machining Calculator</a>
+<a href="/tools/arc-r-to-ij-converter/">Arc R to IJ Converter</a>
+<a href="/tools/round-bar-weight/">Round Bar Weight Calculator</a>
+<a href="/tools/flatness-calculator/">Flatness Calculator</a>
+<a href="/tools/gear-parameter-calculator/">Gear Parameter Calculator</a>
+<a href="/tools/surface-speed/">Surface Schnittgeschwindigkeit (SFM) Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/iso-fit-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/iso-fit-calculator/&text=ISO Fit Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=ISO Fit Rechner&body=Check this out: https://carbide-tooling.com/de/tools/iso-fit-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/iso-fit-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/iso-fit-calculator/&amp;text=ISO Fit Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=ISO Fit Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/iso-fit-calculator/">Email</a>
 </div>
-
 </body></html>

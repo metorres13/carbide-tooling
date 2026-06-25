@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Stainless Properties | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/stainless-properties/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>ステンレスの特性 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="完全なステンレス鋼の特性比較: 304対316、303、17-4 PH、デュプレックス。機械的特性、耐食性、加工パラメータ。" name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:860px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:36px 0 20px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:30px;font-weight:800;letter-spacing:-.8px}.hero .accent{color:#0066cc}.hero p{font-size:14px;color:#86868b;max-width:500px;margin:6px auto 0}.selector{display:flex;gap:4px;background:#e8e8ed;border-radius:10px;padding:3px;max-width:300px;margin:0 auto 24px}.sel-btn{flex:1;padding:6px 12px;text-align:center;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;border:none;background:transparent;font-family:inherit;color:#86868b}.sel-btn.active{background:#fff;color:#1d1d1f;box-shadow:0 1px 3px rgba(0,0,0,.06)}.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}.prop-card{border:1px solid #e8e8ed;border-radius:14px;padding:16px 18px}.prop-card h3{font-size:13px;font-weight:700;margin-bottom:8px;color:#0066cc}.prop-card .row{display:flex;justify-content:space-between;padding:4px 0;font-size:12px;border-bottom:1px solid #f5f5f7}.prop-card .row:last-child{border-bottom:none}.prop-card .row .lbl{color:#86868b}.prop-card .row .val{font-weight:600}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.comp-grid{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,268 +12,271 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Stainless Steel Properties | 精密加工ツール"/>
-<meta property="og:description" content="Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/stainless-properties/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Stainless Steel Properties | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ステンレス钢の特性 | 精密加工ツール" property="og:title"/>
+<meta content="完全なステンレス鋼の特性比較: 304対316、303、17-4 PH、デュプレックス。機械的特性、耐食性、加工パラメータ。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/stainless-properties/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Stainless Steel Properties | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Stainless Steel Properties",
-      "url": "https://carbide-tooling.com/jp/tools/stainless-properties/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/stainless-properties/",
-      "name": "Stainless Steel Properties",
-      "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is 304 or 316 easier to machine?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "304 is easier to machine due to lower work-hardening rate and lower cutting forces. 316's higher strength and molybdenum content reduce tool life by approximately 20% under identical machining parameters. Adjust speeds down by 15–20% when switching from 304 to 316."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can stainless steel be heat treated for better machinability?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Austenitic stainless (304, 316) cannot be heat treated for hardness changes. However, solution annealing at 1,040°C followed by rapid quenching can soften material that has been cold-worked. Avoid purchasing cold-drawn 304/316 bar for machining-intensive work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What causes built-up edge when machining stainless steel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "BUE is common in stainless due to its high ductility and work-hardening. Increase cutting speed to above 250 m/min for 304 and 200 m/min for 316. Use TiAlN-coated tools with polished flutes to reduce material adhesion. Maintain chip load above 0.003 in/tooth to ensure clean shearing.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Stainless Steel Properties",
+ "url": "https://carbide-tooling.com/tools/stainless-properties/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/stainless-properties/",
+ "name": "Stainless Steel Properties",
+ "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Is 304 or 316 easier to machine?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "304 is easier to machine due to lower work-hardening rate and lower cutting forces. 316's higher strength and molybdenum content reduce tool life by approximately 20% under identical machining parameters. Adjust speeds down by 15–20% when switching from 304 to 316."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can stainless steel be heat treated for better machinability?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Austenitic stainless (304, 316) cannot be heat treated for hardness changes. However, solution annealing at 1,040°C followed by rapid quenching can soften material that has been cold-worked. Avoid purchasing cold-drawn 304/316 bar for machining-intensive work."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What causes built-up edge when machining stainless steel?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "BUE is common in stainless due to its high ductility and work-hardening. Increase cutting speed to above 250 SFM for 304 and 200 SFM for 316. Use TiAlN-coated tools with polished flutes to reduce material adhesion. Maintain chip load above 0.003 in/tooth to ensure clean shearing.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ステンレス钢の特性 | 精密加工ツール" property="og:title"/>
+<meta content="完全なステンレス鋼の特性比較: 304対316、303、17-4 PH、デュプレックス。機械的特性、耐食性、加工パラメータ。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/stainless-properties/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Stainless Steel Properties | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Stainless Steel Properties",
+ "url": "https://carbide-tooling.com/tools/stainless-properties/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/stainless-properties/",
+ "name": "Stainless Steel Properties",
+ "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ステンレス钢の特性 | 精密加工ツール" property="og:title"/>
+<meta content="完全なステンレス鋼の特性比較: 304対316、303、17-4 PH、デュプレックス。機械的特性、耐食性、加工パラメータ。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/stainless-properties/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Stainless Steel Properties | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Stainless Steel Properties",
+ "url": "https://carbide-tooling.com/tools/stainless-properties/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/stainless-properties/",
+ "name": "Stainless Steel Properties",
+ "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Stainless Steel Properties | 精密加工ツール"/>
-<meta property="og:description" content="Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/stainless-properties/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Stainless Steel Properties | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Stainless Steel Properties",
-      "url": "https://carbide-tooling.com/jp/tools/stainless-properties/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/stainless-properties/",
-      "name": "Stainless Steel Properties",
-      "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Stainless Steel Properties | 精密加工ツール"/>
-<meta property="og:description" content="Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/stainless-properties/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Stainless Steel Properties | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Stainless Steel Properties",
-      "url": "https://carbide-tooling.com/jp/tools/stainless-properties/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/stainless-properties/",
-      "name": "Stainless Steel Properties",
-      "description": "Complete stainless steel properties comparison: 304 vs 316, 303, 17-4PH, duplex. Mechanical properties, corrosion resistance, machining parameters.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/stainless-properties/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/stainless-properties/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/stainless-properties/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/stainless-properties/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/stainless-properties/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/stainless-properties/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/stainless-properties"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/stainless-properties/">EN</a><span class="sep">|</span><a href="/de/tools/stainless-properties/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/stainless-properties/">ES</a><span class="sep">|</span><a href="/vi/tools/stainless-properties/">VI</a><span class="sep">|</span><a href="/zh/tools/stainless-properties/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Stainless Properties</div>
-<section class="hero"><div class="container"><div class="badge">🔩 Side-by-Side Comparison</div><h1>Stainless Steel <span class="accent">Properties</span></h1><p>Compare chemistry, mechanical properties, and machinability of common stainless grades.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/stainless-properties/" rel="canonical"/><link href="https://carbide-tooling.com/tools/stainless-properties/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/stainless-properties/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/stainless-properties/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/stainless-properties/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/stainless-properties/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/stainless-properties/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇯🇵ジェイピー</a><a href="https://carbide-tooling.com/guides/">🇪🇸エスイー</a><a href="https://carbide-tooling.com/about.html">🇻🇳VI</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">ホーム</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/stainless-properties/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/stainless-properties/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/stainless-properties/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/stainless-properties/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/stainless-properties/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">サインバー計算機</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">ダブテール計算機</a> <span style="color:#d2d2d6">›</span> Stainless Properties</div>
+<section class="hero"><div class="container"><div class="badge">🔩 Side-by-Side Comparison</div><h1>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</h1><p>©2026年用超硬工具</p></div></section>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a><a href="/jp/tools/surface-speed/">Surface 切削速度 (m/min)</a><a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a><a href="/jp/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/jp/tools/sine-bar-calculator/">Sine Bar 計算機</a><a href="/jp/tools/dovetail-calculator/">Dovetail 計算機</a><a href="/jp/tools/metal-weight-calculator/">Metal Weight 計算機</a><a href="/jp/tools/reaming-allowance-calculator/">Reaming Allowance</a>
-  </div>
+<h3>304ステンレス钢: 组成と加工性</h3>
+<div class="tool-grid">
+<a href="/tools/hardness-converter/">金属重量計算ツール</a><a href="/tools/surface-speed/">リーミングアローワンス</a><a href="/tools/cost-per-part-calculator/">← すべてのツール</a><a href="/tools/heat-expansion-calculator/">見積もりを取得する</a><a href="/tools/sine-bar-calculator/">プライバシー</a><a href="/tools/dovetail-calculator/">の中で</a><a href="/tools/metal-weight-calculator/">カタログを表示する →</a><a href="/tools/reaming-allowance-calculator/">速度と送り量</a>
+</div>
 </section>
 <div class="container">
-<div class="selector"><button class="sel-btn active" onclick="switchSS('304')">304</button><button class="sel-btn" onclick="switchSS('316')">316</button><button class="sel-btn" onclick="switchSS('303')">303</button><button class="sel-btn" onclick="switchSS('17-4')">17-4PH</button></div>
+<div class="selector"><button class="sel-btn active" onclick="switchSS('304')">304</button><button class="sel-btn" onclick="switchSS('316')">316</button><button class="sel-btn" onclick="switchSS('303')">303</button><button class="sel-btn" onclick="switchSS('17-4')">タイプ304 (18-8) ステンレス鋼は18% のクロムと8% のニッケルを含み、食品加工、化学機器、建築用途で優れた耐食性を提供します。その機械加工性は、AISI1212鋼の約40% と評価されています。シャープでポジティブレーキカーバイド工具と寛大なクーラントフローを使用して200〜400 SFMで機械加工すると、許容できる結果が得られます。材料は急速に硬化するため、一貫した供給速度が不可欠です。</button></div>
 <div class="comp-grid" id="comp-a"></div>
 <div class="comp-grid" id="comp-b"></div>
-<div style="text-align:center;margin:24px 0"><a href="/jp/tools/" style="color:#0066cc;font-size:13px">← 全ツール</a></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">タップ穴径</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">サインバー計算機</a>
+<a href="/tools/">316ステンレス钢: 耐腐食性と加工差</a>
+<a href="/products/">🇯🇵ジェイピー</a>
+<a href="/guides/">🇪🇸エスイー</a>
+<a href="/about.html">🇻🇳VI</a>
+<a href="/quote.html">トルクコンバーター</a>
+<a href="/privacy.html">一括見積もりを依頼する →</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">成績選択ガイド</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">316ステンレス钢: 耐腐食性と加工差</a></p>
+<p style="font-size:11px;margin-bottom:6px">タイプ316は、304ベースに2〜3% のモリブデンを追加し、塩化物環境 (海洋、医薬品) での耐孔性を劇的に改善します。モリブデン含有量は、被削性を1212鋼の約35% に減らし、304よりも15〜20% 遅い切断速度を必要とします。316はまた、より高い加工硬化率を示します-切断中にためらうと、その後のパスで浸透するのが難しい硬化層が作成されます。</p>
+<p style="font-size:11px">304対316: アプリケーション選択ガイド</p>
+</div>
 <section class="seo"><div class="container">
-<h2>304 Stainless Steel: Composition and Machinability</h2><p>Type 304 (18-8) stainless steel contains 18% chromium and 8% nickel, providing excellent corrosion resistance in food processing, chemical equipment, and architectural applications. Its machinability is rated at approximately 40% of AISI 1212 steel. Machining at 200–400 m/min with sharp, positive-rake carbide tools and generous coolant flow produces acceptable results. The material work-hardens rapidly, so consistent feed rates are essential.</p>
-<h2>316 Stainless Steel: Corrosion Resistance and Machining Differences</h2><p>Type 316 adds 2–3% molybdenum to the 304 base, dramatically improving pitting resistance in chloride environments (marine, pharmaceutical). The molybdenum content reduces machinability to approximately 35% of 1212 steel and requires 15–20% slower cutting speeds than 304. 316 also exhibits higher work-hardening rates — any hesitation during cutting creates a hardened layer that is difficult to penetrate on subsequent passes.</p>
-<h2>304 vs. 316: Application Selection ガイド</h2><p>Choose 304 for general-purpose corrosion resistance in food, dairy, and interior architectural applications. Choose 316 when the component will be exposed to seawater, road salts, or chemical processing. The 40–60% cost premium of 316 is justified by its superior pitting resistance. For high-temperature applications (above 500°C), both grades lose corrosion resistance — consider 321 or 347 stabilized grades.</p>
-<h2>よくある質問</h2>
+<h2>食品、乳製品、およびインテリアの建築用途における汎用耐食性には、304を選択してください。コンポーネントが海水、道路の塩、または化学処理にさらされるときは、316を選択してください。316の40-60% のコストプレミアムは、その優れたピッチング耐性によって正当化されます。高温アプリケーション (500 °Cを超える) の場合、両方のグレードが耐食性を失います。321または347の安定化グレードを検討してください。</h2><p>よくある質問</p>
+<h2>304または316は機械加工が簡単ですか?304は、加工硬化率が低く、切断力が低いため、機械加工が簡単です。316のより高い強度とモリブデンの含有量は、同じ加工パラメータの下で工具の寿命を約20% 短縮します。304から316に切り替えるときは、速度を15〜20% 調整します。</h2><p>ステンレス鋼は、より良い機械加工性のために熱処理できますか?オーステナイト系ステンレス (304、316) は、硬度変化のために熱処理することはできません。ただし、1,040 °Cでの溶液アニーリングとそれに続く急速な焼入れは、冷間加工された材料を柔らかくする可能性があります。機械加工を多用する作業のために、冷間描画304/316バーを購入しないでください。</p>
+<h2>ステンレス鋼を加工するときに構築されたエッジの原因は何ですか?BUEは、その高い延性と加工硬化性のためにステンレスで一般的です。304のための250 SFMおよび316のための200 SFMの上に切断の速度を高めて下さい。材料の接着を減らすために、磨かれたフルートを備えたTi Al Nコーティングツールを使用してください。チップ荷重を0.003インチ/歯以上に維持して、きれいなせん断を確保します。</h2><p>⚡カーバイド・ツーリング・ドットコムの高性能シリーズ用に算出済み。カタログを表示する →</p>
+<h2>🔧精密工学ツールボックス</h2>
 <p><strong>Is 304 or 316 easier to machine?</strong> 304 is easier to machine due to lower work-hardening rate and lower cutting forces. 316's higher strength and molybdenum content reduce tool life by approximately 20% under identical machining parameters. Adjust speeds down by 15–20% when switching from 304 to 316.</p>
 <p><strong>Can stainless steel be heat treated for better machinability?</strong> Austenitic stainless (304, 316) cannot be heat treated for hardness changes. However, solution annealing at 1,040°C followed by rapid quenching can soften material that has been cold-worked. Avoid purchasing cold-drawn 304/316 bar for machining-intensive work.</p>
-<p><strong>What causes built-up edge when machining stainless steel?</strong> BUE is common in stainless due to its high ductility and work-hardening. Increase cutting speed to above 250 m/min for 304 and 200 m/min for 316. Use TiAlN-coated tools with polished flutes to reduce material adhesion. Maintain chip load above 0.003 in/tooth to ensure clean shearing.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ 計算d for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">カタログを見る →</a></p>
+<p><strong>What causes built-up edge when machining stainless steel?</strong> BUE is common in stainless due to its high ductility and work-hardening. Increase cutting speed to above 250 SFM for 304 and 200 SFM for 316. Use TiAlN-coated tools with polished flutes to reduce material adhesion. Maintain chip load above 0.003 in/tooth to ensure clean shearing.</p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">エンジニアリング利子計算機</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/stainless-properties/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/stainless-properties/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/stainless-properties/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/stainless-properties/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/stainless-properties/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/stainless-properties/" class="lang-link">中</a>
-</div>
 </footer>
 <script>
 const DATA={304:{name:'304',prop:{density:'8.0 g/cm³',tensile:'515 MPa',yield:'205 MPa',hardness:'150 HB',elong:'40%'},cut:{sfm:'250-400',feed:'0.002-0.005 IPT',doc:'≤1×D',coolant:'Flood'},chem:{cr:'18-20%',ni:'8-10.5%',mo:'—',c:'0.08% max'},corr:'Good general purpose'},316:{name:'316',prop:{density:'8.0 g/cm³',tensile:'515 MPa',yield:'205 MPa',hardness:'150 HB',elong:'40%'},cut:{sfm:'200-350',feed:'0.002-0.004 IPT',doc:'≤0.8×D',coolant:'Flood'},chem:{cr:'16-18%',ni:'10-14%',mo:'2-3%',c:'0.08% max'},corr:'Excellent (chloride)'},303:{name:'303',prop:{density:'8.0 g/cm³',tensile:'550 MPa',yield:'240 MPa',hardness:'160 HB',elong:'35%'},cut:{sfm:'300-450',feed:'0.003-0.006 IPT',doc:'≤1.2×D',coolant:'Flood'},chem:{cr:'17-19%',ni:'8-10%',mo:'0.6%',c:'0.15% max'},corr:'Reduced vs 304'},'17-4':{name:'17-4 PH',prop:{density:'7.8 g/cm³',tensile:'1000 MPa',yield:'725 MPa',hardness:'325 HB',elong:'15%'},cut:{sfm:'150-250',feed:'0.001-0.003 IPT',doc:'≤0.5×D',coolant:'Flood/TSC'},chem:{cr:'15-17.5%',ni:'3-5%',mo:'—',cu:'3-5%'},corr:'Good, high strength'}};
 let current='304';function switchSS(g){current=g;render();document.querySelectorAll('.sel-btn').forEach(b=>b.classList.toggle('active',b.textContent===g));}
-window.switchSS=switchSS;function render(){const d=DATA[current];const a=document.getElementById('comp-a');const b=document.getElementById('comp-b');a.innerHTML=`<div class="prop-card"><h3>${d.name} — Mechanical</h3><div class="row"><span class="lbl">Density</span><span class="val">${d.prop.density}</span></div><div class="row"><span class="lbl">Tensile</span><span class="val">${d.prop.tensile}</span></div><div class="row"><span class="lbl">Yield</span><span class="val">${d.prop.yield}</span></div><div class="row"><span class="lbl">Hardness</span><span class="val">${d.prop.hardness}</span></div><div class="row"><span class="lbl">Elongation</span><span class="val">${d.prop.elong}</span></div></div><div class="prop-card"><h3>🧪 Chemical Composition</h3><div class="row"><span class="lbl">Cr</span><span class="val">${d.chem.cr}</span></div><div class="row"><span class="lbl">Ni</span><span class="val">${d.chem.ni}</span></div><div class="row"><span class="lbl">Mo</span><span class="val">${d.chem.mo||'—'}</span></div><div class="row"><span class="lbl">C</span><span class="val">${d.chem.c}</span></div></div>`;b.innerHTML=`<div class="prop-card"><h3>⚙️ Cutting Parameters (Carbide)</h3><div class="row"><span class="lbl">m/min</span><span class="val">${d.cut.sfm}</span></div><div class="row"><span class="lbl">送り</span><span class="val">${d.cut.feed}</span></div><div class="row"><span class="lbl">Max DOC</span><span class="val">${d.cut.doc}</span></div><div class="row"><span class="lbl">Coolant</span><span class="val">${d.cut.coolant}</span></div></div><div class="prop-card"><h3>🔬 Corrosion Resistance</h3><div style="font-size:14px;padding:8px 0;font-weight:500">${d.corr}</div><div style="font-size:12px;color:#86868b;padding-top:8px;border-top:1px solid #e8e8ed">${d.name} is ${d.name==='316'?'recommended for marine environments':'suitable for general industrial use'}.</div></div>`;}
+window.switchSS=switchSS;function render(){const d=DATA[current];const a=document.getElementById('comp-a');const b=document.getElementById('comp-b');a.innerHTML=`<div class="prop-card"><h3>${d.name} — Mechanical</h3><div class="row"><span class="lbl">Density</span><span class="val">${d.prop.density}</span></div><div class="row"><span class="lbl">Tensile</span><span class="val">${d.prop.tensile}</span></div><div class="row"><span class="lbl">Yield</span><span class="val">${d.prop.yield}</span></div><div class="row"><span class="lbl">Hardness</span><span class="val">${d.prop.hardness}</span></div><div class="row"><span class="lbl">Elongation</span><span class="val">${d.prop.elong}</span></div></div><div class="prop-card"><h3>🧪 Chemical Composition</h3><div class="row"><span class="lbl">Cr</span><span class="val">${d.chem.cr}</span></div><div class="row"><span class="lbl">Ni</span><span class="val">${d.chem.ni}</span></div><div class="row"><span class="lbl">Mo</span><span class="val">${d.chem.mo||'—'}</span></div><div class="row"><span class="lbl">C</span><span class="val">${d.chem.c}</span></div></div>`;b.innerHTML=`<div class="prop-card"><h3>⚙️ Cutting Parameters (Carbide)</h3><div class="row"><span class="lbl">SFM</span><span class="val">${d.cut.sfm}</span></div><div class="row"><span class="lbl">送り</span><span class="val">${d.cut.feed}</span></div><div class="row"><span class="lbl">Max DOC</span><span class="val">${d.cut.doc}</span></div><div class="row"><span class="lbl">Coolant</span><span class="val">${d.cut.coolant}</span></div></div><div class="prop-card"><h3>🔬 Corrosion Resistance</h3><div style="font-size:14px;padding:8px 0;font-weight:500">${d.corr}</div><div style="font-size:12px;color:#86868b;padding-top:8px;border-top:1px solid #e8e8ed">${d.name} is ${d.name==='316'?'recommended for marine environments':'suitable for general industrial use'}.</div></div>`;}
 render();
-</script><div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+</script><div class="toolbox-widget"><h3>ガイド</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">鋳鉄加工用計算ツール</a>
+<a href="/tools/hardness-converter/">金属重量計算ツール</a>
+<a href="/tools/tap-drill-size-calculator/">バッチコスト計算機</a>
+<a href="/tools/mrr-calculator/">極座標から直交座標への変換器</a>
+<a href="/tools/feed-converter/">プラスチック加工ガイド</a>
+<a href="/tools/surface-roughness-calculator/">CNC ROI計算ツール</a>
+<a href="/tools/titanium-machining-guide/">NPTパイプねじ計算ツール</a>
+<a href="/tools/carbide-grade-cross-ref-2/">リンクドイン</a>
+<a href="/tools/cost-per-part-calculator/">← すべてのツール</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>について</h3>
+<p>📩見積もりを取得する</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">グレード選択ガイド</a><a href="/guides/insert-grade-selection.html">インサートグレードのお問い合わせ</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Grade Selection Guide</a><a href="/guides/insert-grade-selection.html">Insert Grade Inquiry</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/engineering-interest-calculator/">Engineering Interest 計算機</a>
-<a href="/jp/tools/cast-iron-machining/">Cast Iron Machining 計算機</a>
-<a href="/jp/tools/nose-radius-compensation/">Nose Radius Compensation</a>
-<a href="/jp/tools/batch-cost-calculator/">Batch Cost 計算機</a>
-<a href="/jp/tools/polar-rect-converter/">Polar to Rectangular 換算</a>
-<a href="/jp/tools/plastic-machining/">Plastic Machining ガイド</a>
-<a href="/jp/tools/cnc-roi-calculator/">CNC ROI 計算機</a>
-<a href="/jp/tools/npt-pipe-thread-calculator/">NPT Pipe Thread 計算機</a>
-
-  </div>
+<h3>304ステンレス钢: 组成と加工性</h3>
+<div class="tool-grid">
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/cast-iron-machining/">Cast Iron Machining Calculator</a>
+<a href="/tools/nose-radius-compensation/">Nose Radius Compensation</a>
+<a href="/tools/batch-cost-calculator/">Batch Cost Calculator</a>
+<a href="/tools/polar-rect-converter/">Polar to Rectangular Converter</a>
+<a href="/tools/plastic-machining/">Plastic Machining Guide</a>
+<a href="/tools/cnc-roi-calculator/">CNC ROI Calculator</a>
+<a href="/tools/npt-pipe-thread-calculator/">NPT Pipe Thread Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/stainless-properties/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/stainless-properties/&text=Stainless Steel Properties" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Stainless Steel Properties&body=Check this out: https://carbide-tooling.com/jp/tools/stainless-properties/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/stainless-properties/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/stainless-properties/&amp;text=Stainless Steel Properties" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Stainless Steel Properties&amp;body=Check this out: https://carbide-tooling.com/tools/stainless-properties/">Email</a>
 </div>
-
 </body></html>

@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Drill Point Length 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Free online drill point length 計算機. 計算 tip 切込み深さ for 118°, 135°, 140° drill points. Get accurate Z-切込み深さ for CNC drilling cycles."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>ドリルポイント長計算機 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="無料のオンラインドリルポイント長計算機。118 ° 、135 ° 、140 ° ドリルポイントの先端深さを計算します。CNC掘削サイクルの正確なZ深さを取得します。" name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}.seo{padding:40px 0}.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;margin-top:32px}.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,181 +13,198 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Drill Point Length | 精密加工ツール"/>
-<meta property="og:description" content="Free online drill point length 計算機. 計算 tip 切込み深さ for 118°, 135°, 140° drill points. Get accurate Z-切込み深さ for CNC drilling cycles."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Drill Point Length | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ドリルポイントの長さ | 精密加工ツール" property="og:title"/>
+<meta content="無料のオンラインドリルポイント長計算機。118 ° 、135 ° 、140 ° ドリルポイントの先端深さを計算します。CNC掘削サイクルの正確なZ深さを取得します。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/drill-point-length-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Drill Point Length | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Drill Point Length",
-      "url": "https://carbide-tooling.com/jp/tools/drill-point-length-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online drill point length calculator. 計算 tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/drill-point-length-calculator/",
-      "name": "Drill Point Length",
-      "description": "Free online drill point length calculator. 計算 tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much extra depth should I add for a through hole?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For through holes, add the full drill point length plus 0.5–1.0 mm to ensure the drill breaks through cleanly. This prevents a 'ring' from remaining at the breakthrough point. For thin materials ("
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does drill point angle affect hole straightness?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. A flatter point angle (135°) provides better self-centering and reduces walk on uneven surfaces. For deep holes exceeding 5× diameter, a 135° split point significantly improves hole straightness compared to a standard 118° point."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I measure drill point length accurately?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use a drill point gage or optical comparator for the most accurate measurement. For shop-floor measurement, the 'witness mark' method: drill into a flat plate, measure the depth to full diameter using a depth mic on the impression, and compare with your programmed depth.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Drill Point Length",
+ "url": "https://carbide-tooling.com/tools/drill-point-length-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/drill-point-length-calculator/",
+ "name": "Drill Point Length",
+ "description": "Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How much extra depth should I add for a through hole?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For through holes, add the full drill point length plus 0.5–1.0 mm to ensure the drill breaks through cleanly. This prevents a 'ring' from remaining at the breakthrough point. For thin materials ("
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does drill point angle affect hole straightness?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. A flatter point angle (135°) provides better self-centering and reduces walk on uneven surfaces. For deep holes exceeding 5× diameter, a 135° split point significantly improves hole straightness compared to a standard 118° point."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I measure drill point length accurately?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Use a drill point gage or optical comparator for the most accurate measurement. For shop-floor measurement, the 'witness mark' method: drill into a flat plate, measure the depth to full diameter using a depth mic on the impression, and compare with your programmed depth.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ドリルポイントの長さ | 精密加工ツール" property="og:title"/>
+<meta content="無料のオンラインドリルポイント長計算機。118 ° 、135 ° 、140 ° ドリルポイントの先端深さを計算します。CNC掘削サイクルの正確なZ深さを取得します。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/drill-point-length-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Drill Point Length | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Drill Point Length",
+ "url": "https://carbide-tooling.com/tools/drill-point-length-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/drill-point-length-calculator/",
+ "name": "Drill Point Length",
+ "description": "Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ドリルチップは、すべての穴の底に円錐形を残します。この計算機は、118 ° 、135 ° 、および140 ° のポイントに必要な余分なZ深度を示します。" property="og:title"/>
+<meta content="無料のオンラインドリルポイント長計算機。118 ° 、135 ° 、140 ° ドリルポイントの先端深さを計算します。CNC掘削サイクルの正確なZ深さを取得します。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/drill-point-length-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Drill Point Length Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Drill Point Length Calculator",
+ "url": "https://carbide-tooling.com/tools/drill-point-length-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/drill-point-length-calculator/",
+ "name": "Drill Point Length Calculator",
+ "description": "Free online drill point length calculator. Calculate tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Drill Point Length | 精密加工ツール"/>
-<meta property="og:description" content="Free online drill point length 計算機. 計算 tip 切込み深さ for 118°, 135°, 140° drill points. Get accurate Z-切込み深さ for CNC drilling cycles."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Drill Point Length | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Drill Point Length",
-      "url": "https://carbide-tooling.com/jp/tools/drill-point-length-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online drill point length calculator. 計算 tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/drill-point-length-calculator/",
-      "name": "Drill Point Length",
-      "description": "Free online drill point length calculator. 計算 tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Drill Point Length 計算機 | Precision Machining Tool"/>
-<meta property="og:description" content="Free online drill point length 計算機. 計算 tip 切込み深さ for 118°, 135°, 140° drill points. Get accurate Z-切込み深さ for CNC drilling cycles."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Drill Point Length 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Drill Point Length 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/drill-point-length-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online drill point length calculator. 計算 tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/drill-point-length-calculator/",
-      "name": "Drill Point Length 計算機",
-      "description": "Free online drill point length calculator. 計算 tip depth for 118°, 135°, 140° drill points. Get accurate Z-depth for CNC drilling cycles.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/drill-point-length-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/drill-point-length-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/drill-point-length-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/drill-point-length-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/drill-point-length-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/drill-point-length-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/drill-point-length-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/drill-point-length-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/drill-point-length-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/drill-point-length-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/drill-point-length-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Drill Point Length 計算機</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Geometry 工具</div><h1>Drill Point <span class="accent">Length 計算機</span></h1><p>The drill tip leaves a conical shape at the bottom of every hole. This calculator tells you how much extra Z-depth you need for 118°, 135°, and 140° points.</p><a class="btn" href="#calculator">計算 ↓</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/drill-point-length-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/drill-point-length-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/drill-point-length-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/drill-point-length-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/drill-point-length-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪ドイツ</a><a href="https://carbide-tooling.com/guides/">🇯🇵ジェイピー</a><a href="https://carbide-tooling.com/about.html">🇪🇸エスイー</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/drill-point-length-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/drill-point-length-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/drill-point-length-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/drill-point-length-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/drill-point-length-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">部品当たりのコスト</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">冷却液濃度</a> <span style="color:#d2d2d6">›</span> Drill Point Length Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Geometry Tool</div><h1>式: L = (D/2)/tan(point_angle/2)。これをスルーホールのZ深度に追加します。</h1><p>📐ドリル直径 (mm)</p><a class="btn" href="#calculator">送料・関税の見積もりツール</a></div></section>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/chamfer-calculator/">Chamfer 計算機</a><a href="/jp/tools/feed-converter/">送り 換算</a><a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a><a href="/jp/tools/coolant-concentration/">Coolant Concentration</a><a href="/jp/tools/shipping-duty-estimator/">Shipping Duty Estimator</a><a href="/jp/tools/gcode-reference/">G-Code Reference</a><a href="/jp/tools/weight-shipping-calculator/">Weight & Shipping</a><a href="/jp/tools/gdt-symbols-reference/">GD&T Symbols Reference</a>
-  </div>
+<h3>🔺ポイントアングル</h3>
+<div class="tool-grid">
+<a href="/tools/chamfer-calculator/">Gコードリファレンス</a><a href="/tools/feed-converter/">重量と配送</a><a href="/tools/cost-per-part-calculator/">GD&amp;T記号リファレンス</a><a href="/tools/coolant-concentration/">← すべてのツール</a><a href="/tools/shipping-duty-estimator/">見積もりを取得する</a><a href="/tools/gcode-reference/">プライバシー</a><a href="/tools/weight-shipping-calculator/">の中で</a><a href="/tools/gdt-symbols-reference/">カタログを表示する →</a>
+</div>
 </section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>📐 Point Length</h2><p class="sub">Formula: L = (D/2) / tan(point_angle/2). Add this to your Z-depth for through-holes.</p>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>📏必要な穴の深さ (mm)</h2><p class="sub">すべてのツール</p>
 <div class="card-row">
-<div class="field"><label>📐 Drill 直径 (mm)</label><input type="number" id="dia" value="10" min="0.5" max="50" step="0.5" oninput="calc()"/></div>
-<div class="field"><label>🔺 Point Angle</label><select id="angle" onchange="calc()"><option value="118">118° — Standard HSS</option><option value="135" selected>135° — Carbide / High-performance</option><option value="140">140° — Indexable drills</option></select></div>
-<div class="field"><label>📏 Hole 切込み深さ Required (mm)</label><input type="number" id="depth" value="25" min="1" max="500" step="0.5" oninput="calc()"/></div>
+<div class="field"><label>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</label><input id="dia" max="50" min="0.5" oninput="calc()" step="0.5" type="number" value="10"/></div>
+<div class="field"><label>©2026年用超硬工具</label><select id="angle" onchange="calc()"><option value="118">118° — Standard HSS</option><option selected="" value="135">135° — Carbide / High-performance</option><option value="140">140° — Indexable drills</option></select></div>
+<div class="field"><label>標準ドリルポイント角度とその応用</label><input id="depth" max="500" min="1" oninput="calc()" step="0.5" type="number" value="25"/></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Point Length</div><div class="value" id="r-point">—</div><div class="unit">mm</div></div>
@@ -195,94 +213,80 @@
 <div class="result-item"><div class="label">For Through-Hole</div><div class="value" id="r-thru">—</div><div class="unit">mm Z</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:16px 0"><a href="/jp/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← 全ツール</a></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">速度と送り量</a></div>
 </section>
 <script>
 function calc(){const d=parseFloat(document.getElementById('dia').value)||10;const ang=parseFloat(document.getElementById('angle').value)||135;const dep=parseFloat(document.getElementById('depth').value)||25;const point=(d/2)/Math.tan(ang/2*Math.PI/180);const total=dep+point;const thru=dep+point+0.5;document.getElementById('r-point').textContent=point.toFixed(2);document.getElementById('r-total').textContent=total.toFixed(2);document.getElementById('r-ratio').textContent=(point/d).toFixed(2);document.getElementById('r-thru').textContent=thru.toFixed(2);}
 calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">部品当たりのコスト</a>
+<a href="/tools/">標準の118 ° ドリルポイント角度は、スチール、アルミニウム、プラスチックなどのほとんどの材料に適しています。135 ° の点角は、多くの場合スプリットポイントウェブが薄くなり、ステンレス鋼やチタンなどの硬い材料には好まれます。角度が平らになると、ドリルの中央での切削力が減少し、機械加工が困難な材料でのチッピングや工具寿命の延長が防止されます。</a>
+<a href="/products/">🇩🇪ドイツ</a>
+<a href="/guides/">🇯🇵ジェイピー</a>
+<a href="/about.html">🇪🇸エスイー</a>
+<a href="/quote.html">グレード相互参照</a>
+<a href="/privacy.html">トルクコンバーター</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">一括見積もりを依頼する →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">標準の118 ° ドリルポイント角度は、スチール、アルミニウム、プラスチックなどのほとんどの材料に適しています。135 ° の点角は、多くの場合スプリットポイントウェブが薄くなり、ステンレス鋼やチタンなどの硬い材料には好まれます。角度が平らになると、ドリルの中央での切削力が減少し、機械加工が困難な材料でのチッピングや工具寿命の延長が防止されます。</a></p>
+<p style="font-size:11px;margin-bottom:6px">正確な深度制御のためのドリルポイント長の計算</p>
+<p style="font-size:11px">ドリルポイントの長さは、ドリルチップから全直径までの距離に等しく、次のように計算されます。ポイントの長さ = (ドリル直径/2)/tan (ポイント角度/2)。118 ° ドリルの場合、これは直径約0.3 × である。135 ° ドリルの場合、直径は約0.2 × です。これを必要な穴の深さに追加すると、適切なスルーホールまたはブラインドホールの深さが保証されます。</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Standard Drill Point Angles and Their Applications</h2><p>The standard 118° drill point angle is suitable for most materials including steel, aluminum, and plastics. A 135° point angle, often with split point web thinning, is preferred for harder materials like stainless steel and titanium. The flatter angle reduces the cutting force at the center of the drill, preventing chipping and extending tool life in difficult-to-machine materials.</p>
-<h2>Calculating Drill Point Length for Accurate 切込み深さ Control</h2><p>Drill point length equals the distance from the drill tip to the full diameter, calculated as: Point Length = (Drill 直径 / 2) / tan(Point Angle / 2). For a 118° drill, this is approximately 0.3 × diameter. For a 135° drill, approximately 0.2 × diameter. Adding this to the required hole depth ensures proper through-hole or blind-hole depth.</p>
-<h2>Adjusting for Split Point and Special Geometries</h2><p>Split point drills have a self-centering feature that reduces the chisel edge length, effectively shortening the functional point length by 10–15%. When programming depths for split point drills, reduce the calculated point length by 15% for more accurate depth control. Helical point geometries used on CNC drills can reduce thrust requirements by up to 50%.</p>
-<h2>よくある質問</h2>
-<p><strong>How much extra depth should I add for a through hole?</strong> For through holes, add the full drill point length plus 0.5–1.0 mm to ensure the drill breaks through cleanly. This prevents a 'ring' from remaining at the breakthrough point. For thin materials (< 3× diameter), use a reduced point angle or a specialized flat-bottom drill.</p>
+<h2>分割点と特別なジオメトリの調整</h2><p>スプリットポイントドリルには、チゼルエッジの長さを短縮する自己センタリング機能があり、機能ポイントの長さを10〜15% 効果的に短縮します。分割点ドリルの深さをプログラミングするときは、より正確な深さ制御のために、計算された点の長さを15% 短縮します。CNCドリルで使用されるヘリカルポイント形状は、推力要件を最大50% 削減できます。</p>
+<h2>よくある質問</h2><p>スルーホールには、どれだけの深さを追加する必要がありますか?スルーホールの場合は、ドリルポイント全体の長さに0.5〜1.0mmを加えて、ドリルがきれいに破損するようにします。これにより、「リング」がブレークスルーポイントに残ることが防止される。薄い材料 (直径 &lt;3 ×) の場合は、小角を小さくするか、特殊な平底ドリルを使用します。</p>
+<h2>ドリルポイントの角度は穴の真直度に影響しますか?はい。より平坦なポイント角度 (135 °) は、より良い自己センタリングを提供し、凹凸のある表面での歩行を減らします。直径5 × を超える深い穴の場合、135 ° の分割点は、標準の118 ° の点と比較して、穴の真直度を大幅に改善します。</h2><p>ドリルポイントの長さを正確に測定するにはどうすればよいですか?最も正確な測定には、ドリルポイントゲージまたは光学コンパレータを使用します。製造現場での測定の場合、「証人マーク」法: 平板にドリルで穴を開け、印象の深さマイクを使用して全直径までの深さを測定し、プログラムされた深さと比較します。</p>
+<h2>⚡カーバイド・ツーリング・ドットコムの高性能シリーズ用に算出済み。カタログを表示する →</h2>
+<p><strong>How much extra depth should I add for a through hole?</strong> For through holes, add the full drill point length plus 0.5–1.0 mm to ensure the drill breaks through cleanly. This prevents a 'ring' from remaining at the breakthrough point. For thin materials (&lt; 3× diameter), use a reduced point angle or a specialized flat-bottom drill.</p>
 <p><strong>Does drill point angle affect hole straightness?</strong> Yes. A flatter point angle (135°) provides better self-centering and reduces walk on uneven surfaces. For deep holes exceeding 5× diameter, a 135° split point significantly improves hole straightness compared to a standard 118° point.</p>
 <p><strong>How do I measure drill point length accurately?</strong> Use a drill point gage or optical comparator for the most accurate measurement. For shop-floor measurement, the 'witness mark' method: drill into a flat plate, measure the depth to full diameter using a depth mic on the impression, and compare with your programmed depth.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ 計算d for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">カタログを見る →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">ねじ切り用リーマおよびタップ</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/drill-point-length-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/drill-point-length-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/drill-point-length-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/drill-point-length-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<div class="toolbox-widget"><h3>製品</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">サイクルタイム計算機</a>
+<a href="/tools/hardness-converter/">ダブテール計算機</a>
+<a href="/tools/tap-drill-size-calculator/">切削速度・送り計算ツール</a>
+<a href="/tools/mrr-calculator/">Mコードリファレンス</a>
+<a href="/tools/feed-converter/">重量と配送</a>
+<a href="/tools/surface-roughness-calculator/">歯車パラメータ計算ツール</a>
+<a href="/tools/titanium-machining-guide/">在庫売上高計算機</a>
+<a href="/tools/carbide-grade-cross-ref-2/">熱膨張計算ツール</a>
+<a href="/tools/cost-per-part-calculator/">GD&amp;T記号リファレンス</a>
+<a href="/tools/torque-unit-converter/">電子メール</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>ガイド</h3>
+<p>について</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">超硬ドリル</a><a href="/products/threading-tools.html">スレッドミル＆タップ</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Carbide Drills</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/cycle-time-calculator/">Cycle Time 計算機</a>
-<a href="/jp/tools/dovetail-calculator/">Dovetail 計算機</a>
-<a href="/jp/tools/speed-feed/">切削速度 & 送り 計算機</a>
-<a href="/jp/tools/mcode-reference/">M-Code Reference</a>
-<a href="/jp/tools/horsepower-calculator/">Horsepower 計算機</a>
-<a href="/jp/tools/gear-parameter-calculator/">Gear Parameter 計算機</a>
-<a href="/jp/tools/inventory-turnover-calculator/">Inventory Turnover 計算機</a>
-<a href="/jp/tools/heat-expansion-calculator/">Heat Expansion 計算機</a>
-
-  </div>
+<h3>🔺ポイントアングル</h3>
+<div class="tool-grid">
+<a href="/tools/cycle-time-calculator/">Cycle Time Calculator</a>
+<a href="/tools/dovetail-calculator/">Dovetail Calculator</a>
+<a href="/tools/speed-feed/">切削速度 &amp; 送り Calculator</a>
+<a href="/tools/mcode-reference/">M-Code Reference</a>
+<a href="/tools/horsepower-calculator/">Horsepower Calculator</a>
+<a href="/tools/gear-parameter-calculator/">Gear Parameter Calculator</a>
+<a href="/tools/inventory-turnover-calculator/">Inventory Turnover Calculator</a>
+<a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/drill-point-length-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/drill-point-length-calculator/&text=Drill Point Length 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Drill Point Length 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/drill-point-length-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/drill-point-length-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/drill-point-length-calculator/&amp;text=Drill Point Length Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Drill Point Length Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/drill-point-length-calculator/">Email</a>
 </div>
-
 </body></html>

@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="de"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Sine Bar Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Free online sine bar Rechner for CNC machinists and quality inspecNachrs. Berechnen sine bar setup formula, common sine bar applications in Werkzeug making."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/sine-bar-calculator/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Sinus balken rechner | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Kostenloser Online-Sinus balken rechner für CNC-Maschinisten und Qualitäts inspektoren. Berechnen Sie die Setup-Formel für Sinus balken, gängige Sinus balken anwendungen im Werkzeugbau." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}
 nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}
@@ -36,337 +37,334 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Sine Bar Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool maki"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/sine-bar-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sine Bar Rechner | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Sinus balken rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Online-Sinus balken rechner für CNC-Maschinisten und Qualitäts inspektoren. Berechnen Sie die Setup-Formel für Sinus balken, gemeinsame Sinus leiste anwendungen im Tool Maki" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/sine-bar-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Sine Bar Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Sine Bar Rechner",
-      "url": "https://carbide-tooling.com/de/tools/sine-bar-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool making.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/sine-bar-calculator/",
-      "name": "Sine Bar Rechner",
-      "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool making.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Sine Bar Calculator",
+ "url": "https://carbide-tooling.com/tools/sine-bar-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Calculate sine bar setup formula, common sine bar applications in tool making.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/sine-bar-calculator/",
+ "name": "Sine Bar Calculator",
+ "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Calculate sine bar setup formula, common sine bar applications in tool making.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Sinus balken rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Online-Sinus balken rechner für CNC-Maschinisten und Qualitäts inspektoren. Berechnen Sie die Setup-Formel für Sinus balken, gemeinsame Sinus leiste anwendungen im Tool Maki" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/sine-bar-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Sine Bar Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Sine Bar Calculator",
+ "url": "https://carbide-tooling.com/tools/sine-bar-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Calculate sine bar setup formula, common sine bar applications in tool making.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/sine-bar-calculator/",
+ "name": "Sine Bar Calculator",
+ "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Calculate sine bar setup formula, common sine bar applications in tool making.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Sinus balken rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Online-Sinus balken rechner für CNC-Maschinisten und Qualitäts inspektoren. Berechnen Sie die Setup-Formel für Sinus balken, gemeinsame Sinus leiste anwendungen im Tool Maki" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/sine-bar-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Sine Bar Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Sine Bar Calculator",
+ "url": "https://carbide-tooling.com/tools/sine-bar-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Calculate sine bar setup formula, common sine bar applications in tool making.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/sine-bar-calculator/",
+ "name": "Sine Bar Calculator",
+ "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Calculate sine bar setup formula, common sine bar applications in tool making.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Sine Bar Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool maki"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/sine-bar-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sine Bar Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Sine Bar Rechner",
-      "url": "https://carbide-tooling.com/de/tools/sine-bar-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool making.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/sine-bar-calculator/",
-      "name": "Sine Bar Rechner",
-      "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool making.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Sine Bar Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool maki"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/sine-bar-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sine Bar Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Sine Bar Rechner",
-      "url": "https://carbide-tooling.com/de/tools/sine-bar-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool making.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/sine-bar-calculator/",
-      "name": "Sine Bar Rechner",
-      "description": "Free online sine bar calculator for CNC machinists and quality inspectors. Berechnen sine bar setup formula, common sine bar applications in tool making.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/sine-bar-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/sine-bar-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/sine-bar-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/sine-bar-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/sine-bar-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/sine-bar-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/sine-bar-calculator"/>
-</head>
+
+
+ 
+<link href="https://carbide-tooling.com/de/tools/sine-bar-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/sine-bar-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/sine-bar-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/sine-bar-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/sine-bar-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/sine-bar-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/sine-bar-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">Produkte</a><a href="/guides/">Leitfäden</a><a href="/about.html">Über uns</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/sine-bar-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/sine-bar-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/sine-bar-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/sine-bar-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/sine-bar-calculator/">中</a></div></div></nav>
-
-<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Startseite</a> <span style="color:#d2d2d6">›</span> <a href="/de/tools/" style="color:#0066cc">Tools</a> <span style="color:#d2d2d6">›</span> Sine Bar Rechner</div>
-
-<section class="hero"><div class="container"><h1><span class="accent">Sine</span> Rechner</h1><p>A sine bar is the most accurate method for setting up angles on a surface plate or in a CNC vise. The formula is straightforward: H = L × sin(θ). But the practical challenges — which gage blocks to combine, how to handle angles over 45°, and how to verify the setup — determine whether your part passes inspection.</p></div></section>
-
-<div class="container"><div class="card"><h3>⚙️ Rechner</h3><div class="row2"><div><label>Eingabe Wert</label><input type="number" id="v1" value="10" oninput="go()"/></div><div><label>Parameter</label><input type="number" id="v2" value="20" oninput="go()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Ergebnis</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
-
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">🇪🇸ES</a><a href="/guides/">🇻🇳VI</a><a href="/about.html">Startseite</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">Werkzeuge</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/sine-bar-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/sine-bar-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/sine-bar-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/sine-bar-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/sine-bar-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Wärmeausdehnung</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc">Metallgewichtsrechner</a> <span style="color:#d2d2d6">›</span> Sine Bar Calculator</div>
+<section class="hero"><div class="container"><h1>Parameter</h1><p>Benötigen Sie professionelle Werkzeuge?</p></div></section>
+<div class="container"><div class="card"><h3>Erhalten Sie werkseitige Direktpreise, speziell entwickelte Hartmetallqualitäten und eine schnelle technische Unterstützung – alles aus einer Hand.</h3><div class="row2"><div><label>🔧Entdecken Sie 100 professionelle Zerspanungswerkzeuge</label><input id="v1" oninput="go()" type="number" value="10"/></div><div><label>Alle Werkzeuge</label><input id="v2" oninput="go()" type="number" value="20"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</h3>
+<p>©2026 Hartmetallwerkzeuge</p>
+</div>
+<a class="b2b-btn" href="/quote.html">GD&amp;T-Symbole-Referenz</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/turning-inserts.html">Drehwendeschneidplatten</a></div>
-
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Steigungswinkel</a><a href="/products/turning-inserts.html">Schrittfräsen</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/bolt-circle-calculator/">Bolt Circle Rechner</a><a href="/de/tools/shipping-duty-estimator/">Shipping Duty Estimator</a><a href="/de/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/de/tools/metal-weight-calculator/">Metal Weight Rechner</a><a href="/de/tools/gdt-symbols-reference/">GD&T Symbols Reference</a><a href="/de/tools/ramping-angle-calculator/">Ramping Angle</a><a href="/de/tools/step-milling-calculator/">Step Milling</a><a href="/de/tools/titanium-machining-guide/">Titanium Machining Leitfaden</a>
-  </div>
+<h3>Sinus leiste Setup-Formel</h3>
+<div class="tool-grid">
+<a href="/tools/bolt-circle-calculator/">Leitfaden zur Titanbearbeitung</a><a href="/tools/shipping-duty-estimator/">Erhalten Sie ein Angebot</a><a href="/tools/heat-expansion-calculator/">Datenschutz</a><a href="/tools/metal-weight-calculator/">in</a><a href="/tools/gdt-symbols-reference/">Katalog ansehen →</a><a href="/tools/ramping-angle-calculator/">Geschwindigkeit &amp; Vorschub</a><a href="/tools/step-milling-calculator/">Härtekonverter</a><a href="/tools/titanium-machining-guide/">Bohrergröße für Gewindebohrungen</a>
+</div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Wärmeausdehnung</a>
+<a href="/tools/">Ein Sinus balken ist die genaueste Methode zum Einrichten von Winkeln auf einer Oberflächen platte oder in einem CNC-Schraubstock. Die Formel ist einfach: H = L × sin(θ). Die praktischen Herausforderungen-die zu kombinieren den Gage-Blöcke, der Umgang mit Winkeln über 45 ° und die Überprüfung des Setups-bestimmen jedoch, ob Ihr Teil die Inspektion besteht. Dieser Rechner vereinfacht den Prozess, sodass Sie sich auf die Fertigung der Teile konzentrieren können – statt im Werkstattbetrieb manuell Trigonometrie zu betreiben.</a>
+<a href="/products/">🇪🇸ES</a>
+<a href="/guides/">🇻🇳VI</a>
+<a href="/about.html">Startseite</a>
+<a href="/quote.html">Kosten pro Teil</a>
+<a href="/privacy.html">Drehmomentwandler</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/sine-bar-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/sine-bar-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/sine-bar-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/sine-bar-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/sine-bar-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/sine-bar-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Effektiver Durchmesser der Kugelkopffräse</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Ein Sinus balken ist die genaueste Methode zum Einrichten von Winkeln auf einer Oberflächen platte oder in einem CNC-Schraubstock. Die Formel ist einfach: H = L × sin(θ). Die praktischen Herausforderungen-die zu kombinieren den Gage-Blöcke, der Umgang mit Winkeln über 45 ° und die Überprüfung des Setups-bestimmen jedoch, ob Ihr Teil die Inspektion besteht. Dieser Rechner vereinfacht den Prozess, sodass Sie sich auf die Fertigung der Teile konzentrieren können – statt im Werkstattbetrieb manuell Trigonometrie zu betreiben.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Gemeinsame Sine Bar-Anwendungen in der Werkzeug herstellung</p>
+<p style="font-size:11px">Ganz gleich, ob Sie an einer Haas VF‑2, einer Mazak Integrex oder einer Okuma MB‑5000 arbeiten – das Verständnis dieser Berechnung ist entscheidend für eine konstante Qualität. Viele CAM‑Systeme verarbeiten dies automatisch, doch die Fähigkeit, die Ausgabe zu überprüfen, hilft, kostspielige Programmierfehler zu vermeiden.</p>
 </div>
 </footer>
-
 <script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script>
 <section class="seo-content"><div class="container">
-<h2>Sine Bar Setup Formula</h2>
-<p>A sine bar is the most accurate method for setting up angles on a surface plate or in a CNC vise. The formula is straightforward: H = L × sin(θ). But the practical challenges — which gage blocks to combine, how to handle angles over 45°, and how to verify the setup — determine whether your part passes inspection. This calculator simplifies the process so you can focus on making parts, not doing manual trig on the shop floor.</p>
-<h2>Common Sine Bar Applications in Werkzeug Making</h2>
-<p>Whether you work on a Haas VF-2, a Mazak Integrex, or an Okuma MB-5000, understanding this calculation is essential for consistent quality. Many CAM systems handle it automatically, but knowing how to verify the output prevents costly programming errors.</p>
-<h2>Why Gage Block Accuracy Matters</h2>
-<p>The practical application varies by shop environment. For job shops running short runs, a quick reference is sufficient. For production shops with repeat orders, documenting these parameters in the setup sheet saves time on every rerun.</p>
+<h2>Warum Gage Block genauigkeit wichtig ist</h2>
+<p>Die praktische Anwendung variiert je nach Betriebsumgebung. Für Lohnfertiger, die Kurzläufe abwickeln, genügt eine schnelle Referenz. In Produktionsbetrieben mit wiederkehrenden Aufträgen spart die Dokumentation dieser Parameter im Einrichtblatt bei jeder erneuten Durchführung Zeit.</p>
 <h2>Häufig gestellte Fragen</h2>
+<p>Wie genau ist diese Berechnung? Die Formel ist innerhalb der Grenzen Ihrer Eingabegenauigkeit exakt. Kritische Abmessungen stets mit geeichten Messgeräten überprüfen.</p>
+<h2>Kann ich dies an einer Mazak- oder Haas‑Steuerung verwenden? Die zugrunde liegende Mathematik ist universell. CAM-Systeme verwenden intern dieselben Formeln – dieser Rechner dient als Kontrollrechnung.</h2>
+<p>Welchen häufigen Fehler machen Maschinenschlosser? Sie vergessen, den Werkzeugradius oder den Durchmesser des Prüfstifts zu berücksichtigen. Überprüfen Sie stets sorgfältig, welchen Bezugspunkt der Ausdruck verwendet.</p>
+<h2>⚡Berechnet für die Hochleistungsserie von Carbide-Tooling.com. Katalog anzeigen →</h2>
 <p><strong>How accurate is this calculation?</strong> The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools.</p>
 <p><strong>Can I use this on a Mazak or Haas control?</strong> The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check.</p>
 <p><strong>What is the common mistake machinists make?</strong> Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Berechnend for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Katalog anzeigen →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Graphitbearbeitungsrechner</a></p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+<div class="toolbox-widget"><h3>Über</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Ultimativer Einheitenumrechner</a>
+<a href="/tools/hardness-converter/">Rohrgewichtsrechner</a>
+<a href="/tools/tap-drill-size-calculator/">Metallkostenrechner</a>
+<a href="/tools/mrr-calculator/">LinkedIn</a>
+<a href="/tools/feed-converter/">E-Mail</a>
+<a href="/tools/surface-roughness-calculator/">Surface Roughness</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guide</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</h3>
+<p>©2026 Hartmetallwerkzeuge</p>
+</div>
+<a class="b2b-btn" href="/quote.html">GD&amp;T-Symbole-Referenz</a>
 
-
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
-</aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/turning-inserts.html">Drehwendeschneidplatten</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Steigungswinkel</a><a href="/products/turning-inserts.html">Schrittfräsen</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/ball-nose-effective-diameter/">Ball Nose Effective Durchmesser</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size Rechner</a>
-<a href="/de/tools/metal-weight-calculator/">Metal Weight Rechner</a>
-<a href="/de/tools/graphite-machining/">Graphite Machining Rechner</a>
-<a href="/de/tools/ultimate-unit-converter/">Ultimate Einheit Umrechner</a>
-<a href="/de/tools/tube-weight-calculator/">Tube Weight Rechner</a>
-<a href="/de/tools/metal-cost-calculator/">Metal Cost Rechner</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-
-  </div>
+<h3>Sinus leiste Setup-Formel</h3>
+<div class="tool-grid">
+<a href="/tools/ball-nose-effective-diameter/">Ball Nose Effective Diameter</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size Calculator</a>
+<a href="/tools/metal-weight-calculator/">in</a>
+<a href="/tools/graphite-machining/">Graphite Machining Calculator</a>
+<a href="/tools/ultimate-unit-converter/">Ultimate Unit Converter</a>
+<a href="/tools/tube-weight-calculator/">Tube Weight Calculator</a>
+<a href="/tools/metal-cost-calculator/">Metal Cost Calculator</a>
+<a href="/tools/mrr-calculator/">LinkedIn</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/sine-bar-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/sine-bar-calculator/&text=Sine Bar Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Sine Bar Rechner&body=Check this out: https://carbide-tooling.com/de/tools/sine-bar-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/sine-bar-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/sine-bar-calculator/&amp;text=Sine Bar Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Sine Bar Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/sine-bar-calculator/">Email</a>
 </div>
-
 </body></html>

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Slot Milling Calculadora | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" id="meta-desc" content="Free online slot milling calculator. Calcular safe speeds and feeds for full-width slotting and keyway cutting. Reduce feed rates for chip evacuation and tool life." />
-<meta property="og:title" content="Slot Milling Calculadora — Carbide Herramientaing" />
-<meta property="og:description" content="Calcular safe speeds and feeds for slot milling operations. Optimize chip evacuation and tool life in full-width cuts." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/slot-milling-calculator/" />
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/slot-milling-calculator/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calculadora de fresado de ranura | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Calculadora de fresado de ranura en línea gratuita. Calcule velocidades y avances seguros para el ranurado de ancho completo y el corte de chavetero. Reduzca las tasas de alimentación para la evacuación de la viruta y la vida útil de la herramienta." id="meta-desc" name="description"/>
+<meta content="Calculadora de fresado de ranura-Herramientas de carburo" property="og:title"/>
+<meta content="Calcule velocidades y alimentaciones seguras para las operaciones de fresado de ranuras. Optimice la evacuación del chip y la vida útil de la herramienta en cortes de ancho completo." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://carbide-tooling.com/tools/slot-milling-calculator/" property="og:url"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -64,10 +65,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}
 footer a{color:#0066cc;text-decoration:none}
 @media(max-width:768px){
-  .hero h1{font-size:32px}
-  .result-grid{grid-template-columns:1fr 1fr}
-  .card{padding:20px 16px}
-  .card-row{grid-template-columns:1fr}
+ .hero h1{font-size:32px}
+ .result-grid{grid-template-columns:1fr 1fr}
+ .card{padding:20px 16px}
+ .card-row{grid-template-columns:1fr}
 }
 .lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
@@ -78,370 +79,359 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Slot Milling Calculadora | Precision Machining Tool"/>
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/slot-milling-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Slot Milling Calculadora | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora de fresado de ranura | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/slot-milling-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Slot Milling Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Slot Milling Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/slot-milling-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Slot Milling Calculadora for CNC machining",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/slot-milling-calculator/",
-      "name": "Slot Milling Calculadora",
-      "description": "Slot Milling Calculadora for CNC machining",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is slot milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A milling operation where the tool is engaged across its full diameter (180° engagement), cutting a slot in a single pass. It is the most demanding milling operation due to restricted chip evacuation and high cutting forces."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much should I reduce feed rate for slotting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Feed rate should be reduced by 40-60% compared to side milling at the same chip load. The exact reduction depends on material, slot depth, and tool geometry. This calculator computes the safe reduction automatically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use the same RPM for slotting as side milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "RPM should be slightly reduced (10-20%) for slotting to reduce heat generation at the tool center. The calculator's RPM value accounts for this reduction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How deep can I cut in one pass for slot milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For aluminum, up to 1.5× tool diameter in a single pass. For steel and stainless, limit single-pass depth to 1× tool diameter. For titanium, do not exceed 0.5× diameter per pass without through-spindle coolant."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best flute count for slot milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "2-3 flutes are preferred for slotting because they provide more chip evacuation space. 4-flute tools can be used for finishing passes where the depth per pass is low and chip volume is small."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Slot Milling Calculator",
+ "url": "https://carbide-tooling.com/tools/slot-milling-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Slot Milling Calculator for CNC machining",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/slot-milling-calculator/",
+ "name": "Slot Milling Calculator",
+ "description": "Slot Milling Calculator for CNC machining",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is slot milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A milling operation where the tool is engaged across its full diameter (180° engagement), cutting a slot in a single pass. It is the most demanding milling operation due to restricted chip evacuation and high cutting forces."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How much should I reduce feed rate for slotting?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Avance rate should be reduced by 40-60% compared to side milling at the same chip load. The exact reduction depends on material, slot depth, and tool geometry. This calculator computes the safe reduction automatically."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use the same RPM for slotting as side milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "RPM should be slightly reduced (10-20%) for slotting to reduce heat generation at the tool center. The calculator's RPM value accounts for this reduction."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How deep can I cut in one pass for slot milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For aluminum, up to 1.5× tool diameter in a single pass. For steel and stainless, limit single-pass depth to 1× tool diameter. For titanium, do not exceed 0.5× diameter per pass without through-spindle coolant."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the best flute count for slot milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "2-3 flutes are preferred for slotting because they provide more chip evacuation space. 4-flute tools can be used for finishing passes where the depth per pass is low and chip volume is small."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/slot-milling-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/slot-milling-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/slot-milling-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/slot-milling-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/slot-milling-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/slot-milling-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/slot-milling-calculator"/>
-</head>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/es/tools/slot-milling-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/slot-milling-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/slot-milling-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/slot-milling-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/slot-milling-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/slot-milling-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/slot-milling-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-  <div class="nav-left">
-    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
-    <div class="nav-links">
-      <a href="https://carbide-tooling.com/products/">Productos</a>
-      <a href="https://carbide-tooling.com/guides/">Guías técnicas</a>
-      <a href="https://carbide-tooling.com/about.html">Nosotros</a>
-    </div>
-  </div>
-  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/slot-milling-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/slot-milling-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/slot-milling-calculator/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/slot-milling-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/slot-milling-calculator/">中</a></div>
+<div class="nav-left">
+<a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="https://carbide-tooling.com/products/">Productos</a>
+<a href="https://carbide-tooling.com/guides/">Guías</a>
+<a href="https://carbide-tooling.com/about.html">Sobre</a>
 </div>
-</nav>
-
+</div>
+<a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩Obtener una cotización</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/slot-milling-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/slot-milling-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/slot-milling-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/slot-milling-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/slot-milling-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <section class="hero">
 <div class="container">
-  <div class="badge">🔧 Free Professional Herramienta</div>
-  <h1>Slot Milling <span class="accent">Calculadora</span></h1>
-  <p>Calcular safe speeds and feeds for full-width slotting and keyway cutting. Slot milling engages the tool at 180° — feed rates must be reduced to prevent tool failure.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#calculator">Start Calculating ↓</a>
-    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
-  </div>
+<div class="badge">🔧 Free Professional Tool</div>
+<h1>Calculadora de fresado de ranuras</h1>
+<p>Calcule velocidades y avances seguros para el ranurado de ancho completo y el corte de chavetero. El fresado de ranuras se acopla a la herramienta a 180 °-las velocidades de alimentación deben reducirse para evitar fallas de la herramienta.</p>
+<div class="hero-actions">
+<a class="btn" href="#calculator">Comenzar el cálculo ↓</a>
+<a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩Obtenga una cotización de precisión</a>
+</div>
 </div>
 </section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
+<section class="container" id="calculator" style="padding-bottom:40px">
 <div class="card">
-  <h2>🔧 Slot & Keyway Milling</h2>
-  <p class="sub">Full-width slotting (ae = D) is the most demanding milling operation. Avance rates must account for chip evacuation and heat concentration.</p>
-
-  <div class="card-row">
-    <div class="field"><label>🔩 Material</label>
-      <select id="material" onchange="calc()">
-        <option value="al6061">Aluminum 6061</option>
-        <option value="ss304" selected>Stainless Steel 304</option>
-        <option value="mild_steel">Mild Steel 1018</option>
-        <option value="ti6al4v">Titanium Grade 5</option>
-      </select>
-    </div>
-    <div class="field"><label>📐 Herramienta Diámetro (mm)</label>
-      <input type="number" id="dia" value="10" min="1" max="50" step="0.5" oninput="calc()" />
-      <span style="font-size:10px;color:#86868b">Slot width = tool diameter</span>
-    </div>
-    <div class="field"><label>🦷 Flutes</label>
-      <select id="flutes" onchange="calc()"><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option><option value="5">5</option><option value="6">6</option></select>
-    </div>
-    <div class="field"><label>⏬ Slot Profundidad (mm)</label>
-      <input type="number" id="depth" value="5" min="0.1" max="30" step="0.5" oninput="calc()" />
-    </div>
-    <div class="field"><label>📏 Slot Length (mm)</label>
-      <input type="number" id="length" value="50" min="1" max="1000" step="5" oninput="calc()" />
-    </div>
-    <div class="field"><label>🔧 Pass Type</label>
-      <select id="pass-type" onchange="calc()">
-        <option value="single">Single pass (full depth)</option>
-        <option value="multi" selected>Multiple passes (peck)</option>
-      </select>
-    </div>
-    <div class="field"><label>⚡ Cutting Velocidad de corte (Vc m/min)</label>
-      <input type="number" id="vc" value="120" min="10" max="2000" step="10" oninput="calc()" />
-    </div>
-    <div class="field"><label>📊 Chip Load — fz (mm)</label>
-      <input type="number" id="fz" value="0.04" min="0.001" max="1" step="0.005" oninput="calc()" />
-    </div>
-  </div>
-
-  <div class="result-grid">
-    <div class="result-item"><div class="label">RPM</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div>
-    <div class="result-item"><div class="label">Slotting Avance Rate</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div>
-    <div class="result-item"><div class="label">vs Side Milling Avance</div><div class="value warning" id="r-reduction">—</div><div class="unit">% reduction</div></div>
-    <div class="result-item"><div class="label">Cut Time (this slot)</div><div class="value" id="r-time">—</div><div class="unit">seconds</div></div>
-  </div>
-
-  <div class="extra-info">
-    <span>Side milling feed (for comparison): <span class="val" id="x-side">—</span> mm/min</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Material removed: <span class="val" id="x-mrr">—</span> cm³</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Max slot depth per pass: <span class="val" id="x-maxdepth">—</span> mm</span>
-  </div>
+<h2>🔧Fresado de ranura y chavetero</h2>
+<p class="sub">El ranurado de ancho completo (ae = D) es la operación de fresado más exigente. Las velocidades de alimentación deben tener en cuenta la evacuación de la viruta y la concentración de calor.</p>
+<div class="card-row">
+<div class="field"><label>🔩Material</label>
+<select id="material" onchange="calc()">
+<option value="al6061">Aluminum 6061</option>
+<option selected="" value="ss304">Stainless Steel 304</option>
+<option value="mild_steel">Mild Steel 1018</option>
+<option value="ti6al4v">Titanium Grade 5</option>
+</select>
 </div>
-
+<div class="field"><label>📐Diámetro de la herramienta (mm)</label>
+<input id="dia" max="50" min="1" oninput="calc()" step="0.5" type="number" value="10"/>
+<span style="font-size:10px;color:#86868b">Slot width = tool diameter</span>
+</div>
+<div class="field"><label>🦷Flautas</label>
+<select id="flutes" onchange="calc()"><option value="2">2</option><option value="3">3</option><option selected="" value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+</div>
+<div class="field"><label>⏬Profundidad de ranura (mm)</label>
+<input id="depth" max="30" min="0.1" oninput="calc()" step="0.5" type="number" value="5"/>
+</div>
+<div class="field"><label>📏Longitud de la ranura (mm)</label>
+<input id="length" max="1000" min="1" oninput="calc()" step="5" type="number" value="50"/>
+</div>
+<div class="field"><label>🔧Tipo de pase</label>
+<select id="pass-type" onchange="calc()">
+<option value="single">Single pass (full depth)</option>
+<option selected="" value="multi">Multiple passes (peck)</option>
+</select>
+</div>
+<div class="field"><label>⚡Velocidad de corte (Vc m/min)</label>
+<input id="vc" max="2000" min="10" oninput="calc()" step="10" type="number" value="120"/>
+</div>
+<div class="field"><label>📊Chip de Carga-fz (mm)</label>
+<input id="fz" max="1" min="0.001" oninput="calc()" step="0.005" type="number" value="0.04"/>
+</div>
+</div>
+<div class="result-grid">
+<div class="result-item"><div class="label">RPM</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div>
+<div class="result-item"><div class="label">Slotting Avance Rate</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div>
+<div class="result-item"><div class="label">vs Side Milling Avance</div><div class="value warning" id="r-reduction">—</div><div class="unit">% reduction</div></div>
+<div class="result-item"><div class="label">Cut Time (this slot)</div><div class="value" id="r-time">—</div><div class="unit">seconds</div></div>
+</div>
+<div class="extra-info">
+<span>Side milling feed (for comparison): <span class="val" id="x-side">—</span> mm/min</span>
+<span style="color:#d2d2d6">|</span>
+<span>Material removed: <span class="val" id="x-mrr">—</span> cm³</span>
+<span style="color:#d2d2d6">|</span>
+<span>Max slot depth per pass: <span class="val" id="x-maxdepth">—</span> mm</span>
+</div>
+</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
-  <a href="/es/tools/trochoidal-milling-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
-    <div style="font-size:20px">🌀</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Trochoidal Milling Calculadora</h4>
-    <p style="font-size:12px;color:#86868b">For wide slots, trochoidal paths can outperform conventional slotting.</p>
-  </a>
-  <a href="/es/tools/force-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
-    <div style="font-size:20px">💪</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Milling Force Calculadora</h4>
-    <p style="font-size:12px;color:#86868b">Slotting doubles cutting forces — verify tool limits.</p>
-  </a>
+<a href="/tools/trochoidal-milling-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
+<div style="font-size:20px">🌀</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Calculadora de fresado trocoide</h4>
+<p style="font-size:12px;color:#86868b">Para ranuras anchas, las trayectorias trocoidales pueden superar el ranurado convencional.</p>
+</a>
+<a href="/tools/force-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
+<div style="font-size:20px">💪</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Calculadora de fuerza de fresado</h4>
+<p style="font-size:12px;color:#86868b">Ranurado duplica las fuerzas de corte: verifique los límites de la herramienta.</p>
+</a>
 </div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Inicio</a>
+<a href="/tools/">Todas las herramientas</a>
+<a href="/products/">Productos</a>
+<a href="/guides/">Guías</a>
+<a href="/about.html">Sobre</a>
+<a href="/quote.html">Convertidor de dureza</a>
+<a href="/privacy.html">Tamaño del taladro de roscado</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/slot-milling-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/slot-milling-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/slot-milling-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/slot-milling-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/slot-milling-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/slot-milling-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Calculadora de MRR</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Todas las herramientas</a></p>
+<p style="font-size:11px;margin-bottom:6px">Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</p>
+<p style="font-size:11px">©Herramientas de carburo 2026</p>
 </div>
 </footer>
-
 <script>
 const MATS = {
-  al6061:{feedReduction:0.5,docMult:1.5,sideFeed:1.0,label:'Aluminum'},
-  ss304:{feedReduction:0.35,docMult:0.8,sideFeed:1.0,label:'Stainless 304'},
-  mild_steel:{feedReduction:0.45,docMult:1.0,sideFeed:1.0,label:'Mild Steel'},
-  ti6al4v:{feedReduction:0.3,docMult:0.5,sideFeed:1.0,label:'Titanium'},
+ al6061:{feedReduction:0.5,docMult:1.5,sideAvance:1.0,label:'Aluminum'},
+ ss304:{feedReduction:0.35,docMult:0.8,sideAvance:1.0,label:'Stainless 304'},
+ mild_steel:{feedReduction:0.45,docMult:1.0,sideAvance:1.0,label:'Mild Steel'},
+ ti6al4v:{feedReduction:0.3,docMult:0.5,sideAvance:1.0,label:'Titanium'},
 };
 
 function calc() {
-  const mat = MATS[document.getElementById('material').value];
-  const dia = parseFloat(document.getElementById('dia').value) || 10;
-  const z = parseInt(document.getElementById('flutes').value) || 4;
-  const depth = parseFloat(document.getElementById('depth').value) || 5;
-  const length = parseFloat(document.getElementById('length').value) || 50;
-  const passType = document.getElementById('pass-type').value;
-  const vc = parseFloat(document.getElementById('vc').value) || 120;
-  const fz = parseFloat(document.getElementById('fz').value) || 0.04;
+ const mat = MATS[document.getElementById('material').value];
+ const dia = parseFloat(document.getElementById('dia').value) || 10;
+ const z = parseInt(document.getElementById('flutes').value) || 4;
+ const depth = parseFloat(document.getElementById('depth').value) || 5;
+ const length = parseFloat(document.getElementById('length').value) || 50;
+ const passType = document.getElementById('pass-type').value;
+ const vc = parseFloat(document.getElementById('vc').value) || 120;
+ const fz = parseFloat(document.getElementById('fz').value) || 0.04;
 
-  const rpm = dia > 0 ? (vc * 1000) / (Math.PI * dia) : 1000;
+ const rpm = dia > 0 ? (vc * 1000) / (Math.PI * dia) : 1000;
 
-  // Side milling feed (full chip load)
-  const sideFeed = rpm * z * fz;
+ // Side milling feed (full chip load)
+ const sideAvance = rpm * z * fz;
 
-  // Slotting feed reduction
-  const reductionPct = mat.feedReduction;
-  const slotFeed = sideFeed * reductionPct;
+ // Slotting feed reduction
+ const reductionPct = mat.feedReduction;
+ const slotAvance = sideAvance * reductionPct;
 
-  // Avance reduction percentage display
-  const feedReductionDisplay = Math.round((1 - reductionPct) * 100);
+ // Avance reduction percentage display
+ const feedReductionDisplay = Math.round((1 - reductionPct) * 100);
 
-  // Max depth per pass
-  const maxDepth = dia * mat.docMult;
+ // Max depth per pass
+ const maxDepth = dia * mat.docMult;
 
-  // Number of passes
-  const numPasses = passType === 'single' ? 1 : Math.ceil(depth / (dia * 0.75));
+ // Number of passes
+ const numPasses = passType === 'single' ? 1 : Math.ceil(depth / (dia * 0.75));
 
-  // Actual depth per pass
-  const actDepthPerPass = Math.min(depth, numPasses > 0 ? depth / numPasses : depth);
+ // Actual depth per pass
+ const actDepthPerPass = Math.min(depth, numPasses > 0 ? depth / numPasses : depth);
 
-  // Cutting time per pass (with approach allowance)
-  const approachLen = dia * 1.5;
-  const cutDistPerPass = length + approachLen;
-  const cutTimePerPassMin = slotFeed > 0 ? cutDistPerPass / slotFeed : 0;
-  const retractTime = 2; // seconds per retract
-  const totalCutTimeSec = cutTimePerPassMin * 60 * numPasses + retractTime * (numPasses - 1);
+ // Cutting time per pass (with approach allowance)
+ const approachLen = dia * 1.5;
+ const cutDistPerPass = length + approachLen;
+ const cutTimePerPassMin = slotAvance > 0 ? cutDistPerPass / slotAvance : 0;
+ const retractTime = 2; // seconds per retract
+ const totalCutTimeSec = cutTimePerPassMin * 60 * numPasses + retractTime * (numPasses - 1);
 
-  // Material removed
-  const slotVol = (Math.PI * dia * dia / 4 * length / 1000); // cm³ (simplified)
+ // Material removed
+ const slotVol = (Math.PI * dia * dia / 4 * length / 1000); // cm³ (simplified)
 
-  // MRR
-  const mrr = (actDepthPerPass * dia * slotFeed) / 1000;
+ // MRR
+ const mrr = (actDepthPerPass * dia * slotAvance) / 1000;
 
-  document.getElementById('r-rpm').textContent = Math.round(rpm);
-  document.getElementById('r-feed').textContent = Math.round(slotFeed);
-  document.getElementById('r-reduction').textContent = feedReductionDisplay;
-  document.getElementById('r-time').textContent = totalCutTimeSec.toFixed(1);
-  document.getElementById('x-side').textContent = Math.round(sideFeed);
-  document.getElementById('x-mrr').textContent = slotVol.toFixed(1);
-  document.getElementById('x-maxdepth').textContent = maxDepth.toFixed(1);
+ document.getElementById('r-rpm').textContent = Math.round(rpm);
+ document.getElementById('r-feed').textContent = Math.round(slotAvance);
+ document.getElementById('r-reduction').textContent = feedReductionDisplay;
+ document.getElementById('r-time').textContent = totalCutTimeSec.toFixed(1);
+ document.getElementById('x-side').textContent = Math.round(sideAvance);
+ document.getElementById('x-mrr').textContent = slotVol.toFixed(1);
+ document.getElementById('x-maxdepth').textContent = maxDepth.toFixed(1);
 }
 
 calc();
 </script>
 <section class="seo-content">
 <div class="container">
-
-  <h2>Slot Milling Is Not Side Milling</h2>
-  <p>A programmer who treats slot milling like side milling will break tools. In side milling, the tool is engaged across 30-50% of its diameter — chips have room to form and exit, coolant reaches the cutting zone, and cutting forces are distributed across the engaged arc. In slot milling, the tool is buried in the cut at 180° engagement. Every flute is cutting from entry to exit. Chips must travel up both sides of the flutes simultaneously. Coolant struggles to reach the full cutting edge. Cutting forces are 2-3× higher than an equivalent side milling pass.</p>
-  <p>The fix is not complicated: reduce feed rate. But how much? Standard side milling feed rates must be reduced by 40-60% for slotting, depending on the material and slot depth. This calculator applies material-specific reduction factors so you don't have to guess.</p>
-
-  <h2>Why Chip Evacuation Limits Slot Milling Avance Rates</h2>
-  <p>In a full-width slot, the chip produced by each flute must travel the full length of the flute to exit the cut. In deep slots (depth > 2× diameter), the chip may travel 30-50 mm before clearing the tool. If the feed rate is too high, the chip volume exceeds the flute volume and the tool packs with chips. Packing causes the feed rate to stall, the spindle load to spike, and the tool to fracture at the flute root.</p>
-  <p>Two-flute tools evacuate chips better than four-flute tools in slotting because there is more physical space between cutting edges. For this reason, a 2-flute end mill at 60% of its normal feed rate may outperform a 4-flute end mill at 50% of its normal feed — the 2-flute tool clears chips more effectively and can sustain a higher effective feed.</p>
-
-  <h2>Pecking vs. Single-Pass Slotting</h2>
-  <p>For slots deeper than 1× tool diameter, pecking (multiple shallow passes) is recommended. Each peck should be 0.5-1× diameter deep, with a full retract between pecks to clear chips and allow coolant to reach the cutting zone. Single-pass slotting beyond 1.5× diameter depth requires reduced feed rates and should only be attempted with through-spindle coolant.</p>
-  <p>Pecking adds non-cutting time for retract and re-entry but allows higher feed rates during the cutting portion. The net cycle time often favors pecking for deep slots because the cutting feed can be 1.5-2× higher than single-pass feed. The Cycle Time Calculadora can help determine the optimal number of pecks for your specific slot geometry.</p>
-
-  <h2>Keyway Milling: Special Considerations</h2>
-  <p>Keyways are typically cut to tight tolerances (H7/h7 fits) and require a finish pass. The roughing pass should follow standard slot milling parameters with the finishing allowance of 0.2-0.5 mm per side. The finish pass takes 0.1-0.2 mm per side at 60-70% of the roughing feed rate to achieve the required surface finish and dimensional accuracy.</p>
-  <p>Keyway cutters (Woodruff cutters and keyseat cutters) have different geometry from standard end mills. They typically have fewer flutes (2-3) and a larger core diameter for rigidity. The feeds and speeds from this calculator are valid for standard end mills cutting keyways; for dedicated keyseat cutters, consult the manufacturer's recommendations.</p>
-
-  <h2>Coolant Strategy for Slot Milling</h2>
-  <p>Flood coolant at the tool entry point is the minimum requirement for slot milling in steel and stainless. The coolant stream must reach the cutting zone — not just the top surface of the workpiece. For slots deeper than 20 mm, through-spindle coolant at 20+ bar significantly improves chip evacuation and tool life. In aluminum, compressed air is often sufficient and preferred — coolant can cause thermal shock in aluminum at high feed rates.</p>
-  <p>MQL (minimum quantity lubrication) is effective for slotting in aluminum and mild steel. The oil mist reduces friction at the chip-tool interface without creating the thermal gradient that flood coolant produces. For stainless and titanium, high-pressure through-spindle coolant at 50+ bar is the only reliable coolant strategy for slotting.</p>
-
-  <h2>Preguntas frecuentes</h2>
-  <p><strong>What is slot milling?</strong> A milling operation where the tool is engaged across its full diameter (180° engagement), cutting a slot in a single pass. It is the most demanding milling operation due to restricted chip evacuation and high cutting forces.</p>
-  <p><strong>How much should I reduce feed rate for slotting?</strong> Avance rate should be reduced by 40-60% compared to side milling at the same chip load. The exact reduction depends on material, slot depth, and tool geometry. This calculator computes the safe reduction automatically.</p>
-  <p><strong>Can I use the same RPM for slotting as side milling?</strong> RPM should be slightly reduced (10-20%) for slotting to reduce heat generation at the tool center. The calculator's RPM value accounts for this reduction.</p>
-  <p><strong>How deep can I cut in one pass for slot milling?</strong> For aluminum, up to 1.5× tool diameter in a single pass. For steel and stainless, limit single-pass depth to 1× tool diameter. For titanium, do not exceed 0.5× diameter per pass without through-spindle coolant.</p>
-  <p><strong>What is the best flute count for slot milling?</strong> 2-3 flutes are preferred for slotting because they provide more chip evacuation space. 4-flute tools can be used for finishing passes where the depth per pass is low and chip volume is small.</p>
-  <p><strong>When should I use trochoidal milling instead of slotting?</strong> For slots wider than 2× tool diameter, trochoidal milling with a smaller tool produces higher MRR and better tool life than conventional slotting with a full-width tool. Use the <a href="/es/tools/trochoidal-milling-calculator/" style="color:#0066cc">Trochoidal Milling Calculadora</a> to compare both approaches.</p>
-
-  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
-    <p style="margin:0">For slotting end mills with optimized flute geometry, check our High-Performance End Mills</p>
-  </div>
+<h2>Fresado de ranura no es fresado lateral</h2>
+<p>Un programador que trata el fresado de ranuras como fresado lateral romperá las herramientas. En el fresado lateral, la herramienta se acopla a través del 30-50% de su diámetro: las virutas tienen espacio para formarse y salir, el refrigerante alcanza la zona de corte y las fuerzas de corte se distribuyen a través del arco acoplado. En el fresado de ranura, la herramienta está enterrada en el corte a un acoplamiento de 180 °. Cada flauta está cortando de entrada a salida. Las fichas deben viajar por ambos lados de las flautas simultáneamente. El refrigerante lucha para alcanzar el borde de corte completo. Las fuerzas de corte son 2-3 veces más altas que una pasada de fresado lateral equivalente.</p>
+<p>La solución no es complicada: reducir la velocidad de alimentación. ¿Pero cuánto? Las velocidades de alimentación de fresado lateral estándar deben reducirse en un 40-60% para el ranurado, dependiendo del material y la profundidad de la ranura. Esta calculadora aplica factores de reducción específicos del material para que no tenga que adivinar.</p>
+<h2>Por qué la evacuación del chip limita las tasas de alimentación de fresado de ranura</h2>
+<p>En una ranura de ancho completo, el chip producido por cada flauta debe recorrer toda la longitud de la flauta para salir del corte. En las ranuras profundas (profundidad&gt; 2 × diámetro), el chip puede recorrer 30-50mm antes de limpiar la herramienta. Si la velocidad de alimentación es demasiado alta, el volumen de la viruta excede el volumen de la flauta y los paquetes de herramientas con chips. El embalaje hace que la velocidad de alimentación se atasque, la carga del husillo se punte y la herramienta se fracture en la raíz de la flauta.</p>
+<p>Las herramientas de dos flautas evacuan las virutas mejor que las herramientas de cuatro flautas en el ranurado porque hay más espacio físico entre los bordes de corte. Por esta razón, un molino de extremo de 2 flautas al 60% de su velocidad de alimentación normal puede superar a un molino de extremo de 4 flautas al 50% de su alimentación normal: la herramienta de 2 flautas limpia las virutas de manera más efectiva y puede mantener una alimentación efectiva más alta.</p>
+<h2>Pecking vs. Slotting de paso único</h2>
+<p>Para ranuras más profundas que 1 × diámetro de la herramienta, se recomienda el pecteo (múltiples pasadas poco profundas). Cada picoteado debe tener una profundidad de 0.5-1 × de diámetro, con una retracción completa entre los picoteados para limpiar las virutas y permitir que el refrigerante llegue a la zona de corte. El ranurado de una sola pasada más allá de la profundidad del diámetro 1,5 × requiere velocidades de alimentación reducidas y solo debe intentarse con refrigerante a través del husillo.</p>
+<p>Picotar añade tiempo de no corte para retracción y reentrada, pero permite velocidades de alimentación más altas durante la porción de corte. El tiempo de ciclo neto a menudo favorece el uso de ranuras profundas porque la alimentación de corte puede ser 1, 5-2 veces más alta que la alimentación de una sola pasada. La calculadora de tiempo de ciclo puede ayudar a determinar el número óptimo de pecks para su geometría de ranura específica.</p>
+<h2>Fresado de chavetero: consideraciones especiales</h2>
+<p>Los chavetero se cortan típicamente a tolerancias apretadas (ajustes H7/h7) y requieren un pase final. El paso de desbaste debe seguir los parámetros de fresado de ranura estándar con el margen de acabado de 0,2-0,5mm por lado. La pasada de acabado toma 0,1-0,2mm por lado al 60-70% de la velocidad de alimentación de desbaste para lograr el acabado superficial requerido y la precisión dimensional.</p>
+<p>Los cortadores de chaveteros (cortadores Woodruff y cortadores keyseat) tienen una geometría diferente de los molinos de extremo estándar. Por lo general, tienen menos acanaladuras (2-3) y un diámetro de núcleo más grande para la rigidez. Las alimentaciones y velocidades de esta calculadora son válidas para fresadoras de extremo estándar cortando chaveteros; para cortadores de asiento de llave dedicados, consulte las recomendaciones del fabricante.</p>
+<h2>Estrategia de refrigerante para fresado de ranura</h2>
+<p>El refrigerante de inundación en el punto de entrada de la herramienta es el requisito mínimo para el fresado de ranuras en acero e inoxidable. La corriente de refrigerante debe alcanzar la zona de corte, no solo la superficie superior de la pieza de trabajo. Para ranuras de más de 20mm, el refrigerante a través del husillo a 20 bar mejora significativamente la evacuación de viruta y la vida útil de la herramienta. En el aluminio, el aire comprimido a menudo es suficiente y preferido: el refrigerante puede causar un choque térmico en el aluminio a altas velocidades de alimentación.</p>
+<p>MQL (lubricación de cantidad mínima) es eficaz para ranurar en aluminio y acero dulce. La neblina de aceite reduce la fricción en la interfaz viruta-herramienta sin crear el gradiente térmico que produce el refrigerante de inundación. Para acero inoxidable y titanio, el refrigerante de alta presión a través del husillo a 50 bar es la única estrategia de refrigerante confiable para el ranurado.</p>
+<h2>Preguntas frecuentes</h2>
+<p><strong>What is slot milling?</strong> A milling operation where the tool is engaged across its full diameter (180° engagement), cutting a slot in a single pass. It is the most demanding milling operation due to restricted chip evacuation and high cutting forces.</p>
+<p><strong>How much should I reduce feed rate for slotting?</strong> Avance rate should be reduced by 40-60% compared to side milling at the same chip load. The exact reduction depends on material, slot depth, and tool geometry. This calculator computes the safe reduction automatically.</p>
+<p><strong>Can I use the same RPM for slotting as side milling?</strong> RPM should be slightly reduced (10-20%) for slotting to reduce heat generation at the tool center. The calculator's RPM value accounts for this reduction.</p>
+<p><strong>How deep can I cut in one pass for slot milling?</strong> For aluminum, up to 1.5× tool diameter in a single pass. For steel and stainless, limit single-pass depth to 1× tool diameter. For titanium, do not exceed 0.5× diameter per pass without through-spindle coolant.</p>
+<p><strong>What is the best flute count for slot milling?</strong> 2-3 flutes are preferred for slotting because they provide more chip evacuation space. 4-flute tools can be used for finishing passes where the depth per pass is low and chip volume is small.</p>
+<p><strong>When should I use trochoidal milling instead of slotting?</strong> For slots wider than 2× tool diameter, trochoidal milling with a smaller tool produces higher MRR and better tool life than conventional slotting with a full-width tool. Use the <a href="/tools/trochoidal-milling-calculator/" style="color:#0066cc">Calculadora de fresado trocoide</a> to compare both approaches.</p>
+<div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
+<p style="margin:0">Para ranurar los molinos de extremo con geometría optimizada de la flauta, compruebe nuestros molinos de extremo de alto rendimiento</p>
+</div>
 </div>
 </section>
-<div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+<div class="toolbox-widget"><h3>🔧Caja de herramientas de ingeniería de precisión</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Guía de titanio</a>
+<a href="/tools/hardness-converter/">Referencia cruzada de calificaciones</a>
+<a href="/tools/tap-drill-size-calculator/">Costo por pieza</a>
+<a href="/tools/mrr-calculator/">Convertidor de par</a>
+<a href="/tools/feed-converter/">Solicitar cotización por volumen →</a>
+<a href="/tools/surface-roughness-calculator/">Fresas de extremo de carburo sólido</a>
+<a href="/tools/titanium-machining-guide/">Portaherramientas</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Referencia de calificación</a>
+<a href="/tools/cost-per-part-calculator/">Calculadora de valor de chatarra</a>
+<a href="/tools/torque-unit-converter/">Costo del ciclo de vida del refrigerante</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>¿Necesita herramientas profesionales?</h3>
+<p>Obtenga precios directos de fábrica, grados de carburo de ingeniería y soporte técnico ágil, todo desde una sola fuente.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Calculadora de brocas para roscar con machos de formar</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Fresas de carburo sólido</a><a href="/products/tool-holders.html">Portaherramientas</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Calculadora de mecanizado de hierro fundido</a><a href="/products/tool-holders.html">Estimador de vida útil de herramientas para superaleaciones</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/grade-reference/">Grade Reference</a>
-<a href="/es/tools/scrap-value-calculator/">Scrap Valor Calculadora</a>
-<a href="/es/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a>
-<a href="/es/tools/form-tap-drill-calculator/">Form Tap Drill Calculadora</a>
-<a href="/es/tools/cast-iron-machining/">Cast Iron Machining Calculadora</a>
-<a href="/es/tools/superalloy-tool-life/">Superalloy Herramienta Life Estimator</a>
-<a href="/es/tools/tapping-feed-rate-calculator/">Tapping Avance Rate Calculadora</a>
-<a href="/es/tools/percentage-of-thread-calculator/">Thread Percentage Calculadora</a>
-
-  </div>
+<h3>🔧Explore 100 herramientas de mecanizado profesionales</h3>
+<div class="tool-grid">
+<a href="/tools/grade-reference/">Acceder a la calculadora de velocidad de alimentación</a>
+<a href="/tools/scrap-value-calculator/">Calculadora de porcentaje de hilos</a>
+<a href="/tools/coolant-lifecycle-cost/">LinkedIn</a>
+<a href="/tools/form-tap-drill-calculator/">Correo electrónico</a>
+<a href="/tools/cast-iron-machining/">Cast Iron Machining Calculator</a>
+<a href="/tools/superalloy-tool-life/">Superalloy Tool Life Estimator</a>
+<a href="/tools/tapping-feed-rate-calculator/">Tapping Avance Rate Calculator</a>
+<a href="/tools/percentage-of-thread-calculator/">Thread Percentage Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/slot-milling-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/slot-milling-calculator/&text=Slot Milling Calculadora" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Slot Milling Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/slot-milling-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/slot-milling-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/slot-milling-calculator/&amp;text=Slot Milling Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Slot Milling Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/slot-milling-calculator/">Email</a>
 </div>
-
 </body>
 </html>

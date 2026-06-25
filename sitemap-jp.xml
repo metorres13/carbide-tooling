@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://carbide-tooling.com/jp/</loc>
     <priority>0.9</priority>
@@ -9,7 +8,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/</loc>
@@ -19,7 +17,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/aluminum-alloy-table/</loc>
@@ -29,7 +26,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/aluminum-alloy-table/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/aluminum-alloy-table/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/aluminum-alloy-table/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/aluminum-alloy-table/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/aql-sampling-calculator/</loc>
@@ -39,7 +35,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/aql-sampling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/aql-sampling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/aql-sampling-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/aql-sampling-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/arc-r-to-ij-converter/</loc>
@@ -49,7 +44,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/arc-r-to-ij-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/arc-r-to-ij-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/arc-r-to-ij-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/arc-r-to-ij-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/automation-vs-manual-calculator/</loc>
@@ -59,7 +53,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/automation-vs-manual-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/automation-vs-manual-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/automation-vs-manual-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/automation-vs-manual-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/ball-nose-effective-diameter/</loc>
@@ -69,7 +62,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/ball-nose-effective-diameter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/ball-nose-effective-diameter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/ball-nose-effective-diameter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/ball-nose-effective-diameter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/batch-cost-calculator/</loc>
@@ -79,7 +71,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/batch-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/batch-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/batch-cost-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/batch-cost-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/blind-hole-tapping-calculator/</loc>
@@ -89,7 +80,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/blind-hole-tapping-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/blind-hole-tapping-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/blind-hole-tapping-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/blind-hole-tapping-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/bolt-circle-calculator/</loc>
@@ -99,7 +89,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/bolt-circle-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/bolt-circle-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/bolt-circle-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/bolt-circle-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/brass-machining-parameters/</loc>
@@ -109,7 +98,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/brass-machining-parameters/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/brass-machining-parameters/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/brass-machining-parameters/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/brass-machining-parameters/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/bulk-discount-calculator/</loc>
@@ -119,7 +107,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/bulk-discount-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/bulk-discount-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/bulk-discount-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/bulk-discount-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/carbide-grade-cross-ref-2/</loc>
@@ -129,7 +116,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/carbide-grade-cross-ref-2/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/carbide-grade-cross-ref-2/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/carbide-grade-cross-ref-2/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/carbide-grade-cross-ref-2/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/cast-iron-machining/</loc>
@@ -139,7 +125,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cast-iron-machining/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cast-iron-machining/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cast-iron-machining/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cast-iron-machining/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/chamfer-calculator/</loc>
@@ -149,7 +134,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/chamfer-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/chamfer-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/chamfer-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/chamfer-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/chip-load/</loc>
@@ -159,7 +143,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/chip-load/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/chip-load/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/chip-load/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/chip-load/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/cnc-roi-calculator/</loc>
@@ -169,7 +152,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cnc-roi-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cnc-roi-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cnc-roi-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/coating-selector/</loc>
@@ -179,7 +161,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/coating-selector/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/coating-selector/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/coating-selector/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/coating-selector/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/coolant-concentration/</loc>
@@ -189,7 +170,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/coolant-concentration/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/coolant-concentration/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/coolant-concentration/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/coolant-concentration/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/coolant-lifecycle-cost/</loc>
@@ -199,7 +179,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/coolant-lifecycle-cost/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/coolant-lifecycle-cost/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/coolant-lifecycle-cost/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/coolant-lifecycle-cost/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/coord-rotation-calculator/</loc>
@@ -209,7 +188,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/coord-rotation-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/coord-rotation-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/coord-rotation-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/coord-rotation-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/cost-per-part-calculator/</loc>
@@ -219,7 +197,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cost-per-part-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cost-per-part-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cost-per-part-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cost-per-part-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/countersink-depth-calculator/</loc>
@@ -229,7 +206,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/countersink-depth-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/countersink-depth-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/countersink-depth-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/countersink-depth-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/cycle-time-calculator/</loc>
@@ -239,7 +215,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cycle-time-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cycle-time-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cycle-time-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/dia-circ-calculator/</loc>
@@ -249,7 +224,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/dia-circ-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/dia-circ-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/dia-circ-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/dia-circ-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/die-steel-thermal-conductivity/</loc>
@@ -259,7 +233,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/die-steel-thermal-conductivity/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/die-steel-thermal-conductivity/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/die-steel-thermal-conductivity/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/die-steel-thermal-conductivity/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/dovetail-calculator/</loc>
@@ -269,7 +242,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/dovetail-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/dovetail-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/dovetail-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/dovetail-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/drill-point-length-calculator/</loc>
@@ -279,7 +251,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/drill-point-length-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/drill-point-length-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/drill-point-length-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/drill-point-length-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/engineering-interest-calculator/</loc>
@@ -289,7 +260,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/engineering-interest-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/engineering-interest-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/engineering-interest-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/engineering-interest-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/feed-converter/</loc>
@@ -299,7 +269,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/feed-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/feed-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/feed-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/feed-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/feed-rate-override-calculator/</loc>
@@ -309,7 +278,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/feed-rate-override-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/feed-rate-override-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/feed-rate-override-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/feed-rate-override-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/flatness-calculator/</loc>
@@ -319,7 +287,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/flatness-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/flatness-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/flatness-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/flatness-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/force-calculator/</loc>
@@ -329,7 +296,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/force-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/force-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/force-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/force-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/form-tap-drill-calculator/</loc>
@@ -339,7 +305,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/form-tap-drill-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/form-tap-drill-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/form-tap-drill-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/form-tap-drill-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/gcode-reference/</loc>
@@ -349,7 +314,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/gcode-reference/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/gcode-reference/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/gcode-reference/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/gcode-reference/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/gdt-symbols-reference/</loc>
@@ -359,7 +323,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/gdt-symbols-reference/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/gdt-symbols-reference/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/gdt-symbols-reference/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/gdt-symbols-reference/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/gear-parameter-calculator/</loc>
@@ -369,7 +332,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/gear-parameter-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/gear-parameter-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/gear-parameter-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/gear-parameter-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/grade-reference/</loc>
@@ -379,7 +341,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/grade-reference/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/grade-reference/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/grade-reference/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/grade-reference/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/graphite-machining/</loc>
@@ -389,7 +350,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/graphite-machining/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/graphite-machining/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/graphite-machining/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/graphite-machining/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/gun-drill-calculator/</loc>
@@ -399,7 +359,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/gun-drill-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/gun-drill-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/gun-drill-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/gun-drill-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/hardness-converter/</loc>
@@ -409,7 +368,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/hardness-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/hardness-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/hardness-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/hardness-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/heat-expansion-calculator/</loc>
@@ -419,7 +377,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/heat-expansion-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/heat-expansion-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/heat-expansion-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/heat-expansion-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/helical-interpolation-calculator/</loc>
@@ -429,7 +386,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/helical-interpolation-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/helical-interpolation-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/helical-interpolation-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/helical-interpolation-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/horsepower-calculator/</loc>
@@ -439,7 +395,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/horsepower-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/horsepower-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/horsepower-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/horsepower-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/inventory-turnover-calculator/</loc>
@@ -449,7 +404,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/inventory-turnover-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/inventory-turnover-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/inventory-turnover-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/inventory-turnover-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/iso-fit-calculator/</loc>
@@ -459,7 +413,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/iso-fit-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/iso-fit-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/iso-fit-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/iso-fit-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/keyway-depth-calculator/</loc>
@@ -469,7 +422,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/keyway-depth-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/keyway-depth-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/keyway-depth-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/machinability-rating/</loc>
@@ -479,7 +431,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/machinability-rating/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/machinability-rating/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/machinability-rating/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/machinability-rating/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/machine-power-calculator/</loc>
@@ -489,7 +440,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/machine-power-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/machine-power-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/machine-power-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/machine-power-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/mcode-reference/</loc>
@@ -499,7 +449,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/mcode-reference/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/mcode-reference/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/mcode-reference/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/mcode-reference/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/metal-cost-calculator/</loc>
@@ -509,7 +458,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/metal-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/metal-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/metal-cost-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/metal-cost-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/metal-weight-calculator/</loc>
@@ -519,7 +467,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/metal-weight-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/metal-weight-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/metal-weight-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/metal-weight-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/metric-imperial-thread-converter/</loc>
@@ -529,7 +476,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/metric-imperial-thread-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/metric-imperial-thread-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/metric-imperial-thread-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/micron-inch-converter/</loc>
@@ -539,7 +485,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/micron-inch-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/micron-inch-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/micron-inch-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/micron-inch-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/mrr-calculator/</loc>
@@ -549,7 +494,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/mrr-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/mrr-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/mrr-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/mrr-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/nose-radius-compensation/</loc>
@@ -559,7 +503,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/nose-radius-compensation/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/nose-radius-compensation/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/nose-radius-compensation/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/npt-pipe-thread-calculator/</loc>
@@ -569,7 +512,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/npt-pipe-thread-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/npt-pipe-thread-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/npt-pipe-thread-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/npt-pipe-thread-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/peck-drilling-calculator/</loc>
@@ -579,7 +521,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/peck-drilling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/peck-drilling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/peck-drilling-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/peck-drilling-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/</loc>
@@ -589,7 +530,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/percentage-of-thread-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/plastic-machining/</loc>
@@ -599,7 +539,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/plastic-machining/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/plastic-machining/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/plastic-machining/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/plastic-machining/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/polar-rect-converter/</loc>
@@ -609,7 +548,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/polar-rect-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/polar-rect-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/polar-rect-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/polar-rect-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/pomodoro-timer/</loc>
@@ -619,7 +557,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/pomodoro-timer/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/pomodoro-timer/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/pomodoro-timer/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/pomodoro-timer/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/pressure-converter/</loc>
@@ -629,7 +566,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/pressure-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/pressure-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/pressure-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/pressure-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/production-efficiency-calculator/</loc>
@@ -639,7 +575,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/production-efficiency-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/production-efficiency-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/production-efficiency-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/production-efficiency-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/pythagorean-calculator/</loc>
@@ -649,7 +584,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/pythagorean-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/pythagorean-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/pythagorean-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/pythagorean-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/ramping-angle-calculator/</loc>
@@ -659,7 +593,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/ramping-angle-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/ramping-angle-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/ramping-angle-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/ramping-angle-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/reaming-allowance-calculator/</loc>
@@ -669,7 +602,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/reaming-allowance-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/reaming-allowance-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/reaming-allowance-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/reaming-allowance-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/round-bar-weight/</loc>
@@ -679,7 +611,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/round-bar-weight/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/round-bar-weight/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/round-bar-weight/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/round-bar-weight/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/scrap-value-calculator/</loc>
@@ -689,7 +620,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/scrap-value-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/scrap-value-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/scrap-value-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/scrap-value-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/sfm-m-min-converter/</loc>
@@ -699,7 +629,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/sfm-m-min-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/sfm-m-min-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/sfm-m-min-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/sfm-m-min-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/shipping-duty-estimator/</loc>
@@ -709,7 +638,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/shipping-duty-estimator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/shipping-duty-estimator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/shipping-duty-estimator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/shipping-duty-estimator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/sine-bar-calculator/</loc>
@@ -719,7 +647,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/sine-bar-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/sine-bar-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/sine-bar-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/sine-bar-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/slot-milling-calculator/</loc>
@@ -729,7 +656,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/slot-milling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/slot-milling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/slot-milling-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/slot-milling-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/speed-feed/</loc>
@@ -739,7 +665,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/speed-feed/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/speed-feed/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/speed-feed/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/speed-feed/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/stainless-properties/</loc>
@@ -749,7 +674,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/stainless-properties/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/stainless-properties/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/stainless-properties/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/stainless-properties/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/step-drill-design-calculator/</loc>
@@ -759,7 +683,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/step-drill-design-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/step-milling-calculator/</loc>
@@ -769,7 +692,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/step-milling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/step-milling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/step-milling-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/step-milling-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/superalloy-tool-life/</loc>
@@ -779,7 +701,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/superalloy-tool-life/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/superalloy-tool-life/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/superalloy-tool-life/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/superalloy-tool-life/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/surface-roughness-calculator/</loc>
@@ -789,7 +710,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/surface-roughness-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/surface-roughness-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/surface-roughness-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/surface-roughness-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/surface-speed/</loc>
@@ -799,7 +719,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/surface-speed/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/surface-speed/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/surface-speed/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/surface-speed/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tangent-point-calculator/</loc>
@@ -809,7 +728,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tangent-point-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tangent-point-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tangent-point-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tangent-point-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tap-drill-size-calculator/</loc>
@@ -819,7 +737,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tap-drill-size-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tap-drill-size-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tap-drill-size-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tap-drill-size-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/taper-calculator/</loc>
@@ -829,7 +746,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/taper-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/taper-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/taper-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/taper-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tapping-feed-rate-calculator/</loc>
@@ -839,7 +755,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tapping-feed-rate-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tapping-feed-rate-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tapping-feed-rate-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tapping-feed-rate-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/temp-converter/</loc>
@@ -849,7 +764,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/temp-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/temp-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/temp-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/temp-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tensile-strength-converter/</loc>
@@ -859,7 +773,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tensile-strength-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tensile-strength-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tensile-strength-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tensile-strength-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/thread-depth-torque-calculator/</loc>
@@ -869,7 +782,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/thread-depth-torque-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/thread-depth-torque-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/thread-depth-torque-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/thread-depth-torque-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/thread-lead-angle-calculator/</loc>
@@ -879,7 +791,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/thread-lead-angle-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/thread-lead-angle-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/thread-lead-angle-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/thread-lead-angle-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/thread-pitch-diameter-calculator/</loc>
@@ -889,7 +800,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/thread-pitch-diameter-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/thread-pitch-diameter-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/thread-pitch-diameter-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/thread-pitch-diameter-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/threading-pass-calculator/</loc>
@@ -899,7 +809,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/threading-pass-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/threading-pass-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/threading-pass-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/titanium-machining-guide/</loc>
@@ -909,7 +818,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/titanium-machining-guide/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/titanium-machining-guide/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/titanium-machining-guide/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/titanium-machining-guide/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tool-change-time-analyzer/</loc>
@@ -919,7 +827,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-change-time-analyzer/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-change-time-analyzer/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-change-time-analyzer/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-change-time-analyzer/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tool-life-economics/</loc>
@@ -929,7 +836,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-life-economics/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-life-economics/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-life-economics/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-life-economics/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tool-runout-calculator/</loc>
@@ -939,7 +845,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-runout-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-runout-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-runout-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-runout-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tool-steel-heat-treat/</loc>
@@ -949,7 +854,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-steel-heat-treat/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-steel-heat-treat/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-steel-heat-treat/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tool-wear-cost-calculator/</loc>
@@ -959,7 +863,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-wear-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-wear-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-wear-cost-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-wear-cost-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/toolbox-organizer/</loc>
@@ -969,7 +872,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/toolbox-organizer/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/toolbox-organizer/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/toolbox-organizer/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/toolbox-organizer/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/torque-unit-converter/</loc>
@@ -979,7 +881,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/torque-unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/torque-unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/torque-unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/torque-unit-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/trochoidal-milling-calculator/</loc>
@@ -989,7 +890,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/trochoidal-milling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/trochoidal-milling-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/trochoidal-milling-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/trochoidal-milling-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/tube-weight-calculator/</loc>
@@ -999,7 +899,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tube-weight-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tube-weight-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tube-weight-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/ultimate-unit-converter/</loc>
@@ -1009,7 +908,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/ultimate-unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/ultimate-unit-converter/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/ultimate-unit-converter/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/ultimate-unit-converter/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/wall-thickness-calculator/</loc>
@@ -1019,7 +917,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/wall-thickness-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/wall-thickness-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/wall-thickness-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/wall-thickness-calculator/"/>
   </url>
   <url>
     <loc>https://carbide-tooling.com/jp/tools/weight-shipping-calculator/</loc>
@@ -1029,6 +926,5 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/weight-shipping-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/weight-shipping-calculator/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/weight-shipping-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/weight-shipping-calculator/"/>
   </url>
 </urlset>

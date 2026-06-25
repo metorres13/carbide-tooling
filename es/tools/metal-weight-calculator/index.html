@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Metal Weight Calculadora | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="Free tungsten carbide weight Calculadora. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades."/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/metal-weight-calculator/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Calculadora de peso de metal | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Calculadora de peso de carburo de tungsteno gratis. Calcular el peso de las piezas de carburo por forma y grado. Tabla de densidad para los grados WWC-Co." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;margin-bottom:0}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{background:#1d1d1f;color:#fff;text-align:center;padding:48px 24px 36px;margin:0 -24px}.hero h1{font-size:32px;font-weight:800;letter-spacing:-.8px}.hero .accent{color:#fb923c}.hero p{color:#94a3b8;font-size:14px;margin-top:6px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:28px 0}.card{border:1px solid #e8e8ed;border-radius:16px;padding:20px 22px}.card h2{font-size:16px;font-weight:700;margin-bottom:12px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:10px}.card select:focus,.card input:focus{border-color:#0066cc}.dens-table{font-size:12px;width:100%;border-collapse:collapse}.dens-table th,.dens-table td{padding:6px 10px;text-align:left;border-bottom:1px solid #e8e8ed}.dens-table th{background:#f5f5f7;font-size:10px;font-weight:600}.result-box{background:#1d1d1f;color:#fff;border-radius:12px;padding:16px;text-align:center;margin:12px 0}.result-box .val{font-size:28px;font-weight:700;color:#fb923c}.result-box .unit{font-size:12px;color:#94a3b8}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.two-col{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,267 +12,271 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Metal Weight Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free tungsten carbide weight Calculadora. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/metal-weight-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Metal Weight Calculadora | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora de peso de metal | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calculadora de peso de carburo de tungsteno gratis. Calcular el peso de las piezas de carburo por forma y grado. Tabla de densidad para los grados WWC-Co." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/metal-weight-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Metal Weight Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Metal Weight Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/metal-weight-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free tungsten carbide weight calculator. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/metal-weight-calculator/",
-      "name": "Metal Weight Calculadora",
-      "description": "Free tungsten carbide weight calculator. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does a typical carbide end mill weigh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A 12-mm carbide end mill with 75-mm flute length weighs approximately 85–95 grams. A 6-mm end mill of same length weighs about 22–28 grams. The exact weight depends on flute geometry, shank diameter, and overall length."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does cobalt content affect carbide density?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Higher cobalt content (binder) reduces density slightly. Grade K10 (6% cobalt) has density ~15.0 g/cm³, while K30 (12% cobalt) has density ~14.3 g/cm³. The cobalt substitution for tungsten carbide reduces overall weight by approximately 5% across the range of common grades."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I calculate shipping weight for carbide tool orders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Count the number of inserts and their individual weights (typically 5–15 grams each), add the weight of toolholders (0.2–2.0 kg each), and packaging weight (0.1–0.5 kg). For bulk orders, factor in a 5% overage for packing materials. Carbide is dense but compact — small orders often weigh surprisingly little.\n⚡ Calculard for Carbide-Tooling.com High-Performance Series. Ver catálogo →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Metal Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/metal-weight-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/metal-weight-calculator/",
+ "name": "Metal Weight Calculator",
+ "description": "Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How much does a typical carbide end mill weigh?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A 12-mm carbide end mill with 75-mm flute length weighs approximately 85–95 grams. A 6-mm end mill of same length weighs about 22–28 grams. The exact weight depends on flute geometry, shank diameter, and overall length."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does cobalt content affect carbide density?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. Higher cobalt content (binder) reduces density slightly. Grade K10 (6% cobalt) has density ~15.0 g/cm³, while K30 (12% cobalt) has density ~14.3 g/cm³. The cobalt substitution for tungsten carbide reduces overall weight by approximately 5% across the range of common grades."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I calculate shipping weight for carbide tool orders?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Count the number of inserts and their individual weights (typically 5–15 grams each), add the weight of toolholders (0.2–2.0 kg each), and packaging weight (0.1–0.5 kg). For bulk orders, factor in a 5% overage for packing materials. Carbide is dense but compact — small orders often weigh surprisingly little.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora de peso de metal | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calculadora de peso de carburo de tungsteno gratis. Calcular el peso de las piezas de carburo por forma y grado. Tabla de densidad para los grados WWC-Co." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/metal-weight-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Metal Weight Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Metal Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/metal-weight-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/metal-weight-calculator/",
+ "name": "Metal Weight Calculator",
+ "description": "Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora de peso de metal | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calculadora de peso de carburo de tungsteno gratis. Calcular el peso de las piezas de carburo por forma y grado. Tabla de densidad para los grados WWC-Co." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/metal-weight-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Metal Weight Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Metal Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/metal-weight-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/metal-weight-calculator/",
+ "name": "Metal Weight Calculator",
+ "description": "Free tungsten carbide weight calculator. Calculate weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Metal Weight Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free tungsten carbide weight Calculadora. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/metal-weight-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Metal Weight Calculadora | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Metal Weight Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/metal-weight-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free tungsten carbide weight calculator. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/metal-weight-calculator/",
-      "name": "Metal Weight Calculadora",
-      "description": "Free tungsten carbide weight calculator. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Metal Weight Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free tungsten carbide weight Calculadora. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/metal-weight-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Metal Weight Calculadora | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Metal Weight Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/metal-weight-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free tungsten carbide weight calculator. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/metal-weight-calculator/",
-      "name": "Metal Weight Calculadora",
-      "description": "Free tungsten carbide weight calculator. Calcular weight of carbide parts by shape and grade. Density chart for WC-Co grades.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/metal-weight-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/metal-weight-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/metal-weight-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/metal-weight-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/metal-weight-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/metal-weight-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/metal-weight-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/metal-weight-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/metal-weight-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/metal-weight-calculator/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/metal-weight-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/metal-weight-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Inicio</a> <span style="color:#d2d2d6">›</span> <a href="/es/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Metal Weight Calculadora</div>
-<section class="hero"><h1>Tungsten Carbide <span class="accent">Weight Calculadora</span></h1><p>Density varies by cobalt content — from 14.5 g/cm³ (15% Co) to 15.2 g/cm³ (6% Co).</p></section>
+
+
+ 
+<link href="https://carbide-tooling.com/es/tools/metal-weight-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/metal-weight-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/metal-weight-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/metal-weight-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/metal-weight-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/metal-weight-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/metal-weight-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪DE</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/metal-weight-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/metal-weight-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/metal-weight-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/metal-weight-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/metal-weight-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">en</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Ver catálogo →</a> <span style="color:#d2d2d6">›</span> Metal Weight Calculator</div>
+<section class="hero"><h1>Dimensión 1 (mm)</h1><p>Dimensión 2 (mm)</p></section>
 <div class="container">
 <div class="two-col">
-<div class="card"><h2>⚖️ Weight by Shape</h2><label>Shape</label><select id="shape" onchange="calc()"><option value="round">Round rod</option><option value="block">Rectangular block</option><option value="ring">Ring / tube</option></select>
-<label>Grade (Co%)</label><select id="grade" onchange="calc()"><option value="6">6% Co — General purpose (15.2 g/cm³)</option><option value="10" selected>10% Co — Impact resistant (14.8 g/cm³)</option><option value="15">15% Co — Heavy duty (14.5 g/cm³)</option></select>
-<label>Dimension 1 (mm)</label><input type="number" id="d1" value="20" oninput="calc()"/>
-<label id="l2">Dimension 2 (mm)</label><input type="number" id="d2" value="100" oninput="calc()"/>
-<label id="l3" style="display:none">Dimension 3 / Wall (mm)</label><input type="number" id="d3" value="5" oninput="calc()" style="display:none"/>
+<div class="card"><h2>Dimensión 3/pared (mm)</h2><label>📊Densidad por grado</label><select id="shape" onchange="calc()"><option value="round">Round rod</option><option value="block">Rectangular block</option><option value="ring">Ring / tube</option></select>
+<label>Co %</label><select id="grade" onchange="calc()"><option value="6">6% Co — General purpose (15.2 g/cm³)</option><option selected="" value="10">10% Co — Impact resistant (14.8 g/cm³)</option><option value="15">15% Co — Heavy duty (14.5 g/cm³)</option></select>
+<label>Grupo ISO</label><input id="d1" oninput="calc()" type="number" value="20"/>
+<label id="l2">Densidad (g/cm³)</label><input id="d2" oninput="calc()" type="number" value="100"/>
+<label id="l3" style="display:none">Aplicación</label><input id="d3" oninput="calc()" style="display:none" type="number" value="5"/>
 <div class="result-box"><div class="val" id="r-weight">0.00</div><div class="unit">grams</div></div></div>
-<div class="card"><h2>📊 Density by Grade</h2><table class="dens-table"><tr><th>Co%</th><th>ISO Group</th><th>Density (g/cm³)</th><th>Application</th></tr>
-<tr><td>3</td><td>K01-K05</td><td>15.4</td><td>Finishing</td></tr><tr><td>6</td><td>K10-K20</td><td>15.2</td><td>General purpose</td></tr><tr><td>10</td><td>P25-P40</td><td>14.8</td><td>Roughing</td></tr><tr><td>15</td><td>M30-M40</td><td>14.5</td><td>Heavy impact</td></tr></table></div></div>
-<div style="text-align:center;margin:16px 0"><a href="/es/tools/" style="color:#0066cc;font-size:13px">← Todas las herramientas</a></div></div>
+<div class="card"><h2>K01-K05</h2><table class="dens-table"><tr><th>Terminando</th><th>K10-K20</th><th>Uso general</th><th>P25-P40</th></tr>
+<tr><td>3</td><td>El desbaste</td><td>15.4</td><td>M30-M40</td></tr><tr><td>6</td><td>Impacto pesado</td><td>15.2</td><td>Todas las herramientas</td></tr><tr><td>10</td><td>Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</td><td>14.8</td><td>©Herramientas de carburo 2026</td></tr><tr><td>15</td><td>Densidad de carburo de tungsteno vs. acero: comparación de peso</td><td>14.5</td><td>El carburo de tungsteno tiene una densidad de 14,5-15,5g/cm³, aproximadamente 2 veces la del acero (7,85g/cm³). Esta alta densidad proporciona a las herramientas de carburo una masa significativa para la amortiguación de vibraciones en el mecanizado. Una barra de perforación de carburo pesa el doble que una barra de acero equivalente, proporcionando una estabilidad dinámica superior para operaciones de perforación profunda y de precisión.</td></tr></table></div></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Velocidad y avance</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">en</a>
+<a href="/tools/">Cálculo del peso de carburo para aplicaciones de herramientas</a>
+<a href="/products/">🇩🇪DE</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Guía de titanio</a>
+<a href="/privacy.html">Referencia cruzada de calificaciones</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Costo por pieza</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Cálculo del peso de carburo para aplicaciones de herramientas</a></p>
+<p style="font-size:11px;margin-bottom:6px">Para piezas en bruto e insertos de carburo, peso = volumen × densidad. Un inserto de carburo CNMG432 estándar pesa aproximadamente 9,5 gramos. Un blanco de carburo redondo de 10mm de 50mm de largo pesa aproximadamente 57 gramos. La comprensión de los pesos precisos ayuda a calcular los costos de envío y los requisitos de equilibrio de herramientas para los portaherramientas giratorios de alta velocidad.</p>
+<p style="font-size:11px">Selección de materiales: Carburo vs. Acero vs. Cerámica</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Tungsten Carbide Density vs. Steel: Weight Comparison</h2><p>Tungsten carbide has a density of 14.5–15.5 g/cm³, approximately 2× that of steel (7.85 g/cm³). This high density gives carbide tooling significant mass for vibration damping in machining. A carbide boring bar weighs twice as much as an equivalent steel bar, providing superior dynamic stability for deep-hole and precision boring operations.</p>
-<h2>Calculating Carbide Weight for Tooling Applications</h2><p>For carbide blanks and inserts, weight = volume × density. A standard CNMG432 carbide insert weighs approximately 9.5 grams. A 10-mm round carbide blank 50-mm long weighs approximately 57 grams. Understanding accurate weights helps calculate shipping costs and tool-balancing requirements for high-speed rotating toolholders.</p>
-<h2>Material Selection: Carbide vs. Steel vs. Ceramic</h2><p>While carbide is heavier, its stiffness (Young's modulus of 600–650 GPa vs. 200 GPa for steel) provides 3× the rigidity at the same cross-section. For machining centers, using carbide toolholders can reduce vibration amplitude by 40% compared to steel. The weight penalty is offset by the performance gain in finishing operations requiring tight tolerances.</p>
-<h2>Preguntas frecuentes</h2>
+<h2>Mientras que el carburo es más pesado, su rigidez (módulo de Young de 600-650 GPa frente a 200 GPa para el acero) proporciona 3 veces la rigidez en la misma sección transversal. Para los centros de mecanizado, el uso de portaherramientas de carburo puede reducir la amplitud de vibración en un 40% en comparación con el acero. La penalización de peso se compensa con la ganancia de rendimiento en las operaciones de acabado que requieren tolerancias estrictas.</h2><p>Preguntas frecuentes</p>
+<h2>¿Cuánto pesa un molino de extremo de carburo típico? Un molino de extremo de carburo de 12mm con longitud de flauta de 75mm pesa aproximadamente 85-95 gramos. Un molino de extremo de 6mm de la misma longitud pesa aproximadamente 22-28 gramos. El peso exacto depende de la geometría de la flauta, el diámetro del vástago y la longitud total.</h2><p>¿El contenido de cobalto afecta la densidad del carburo? Un mayor contenido de cobalto (aglutinante) reduce ligeramente la densidad. El grado K10 (6% de cobalto) tiene densidad ~ 15,0g/cm³, mientras que K30 (12% de cobalto) tiene densidad ~ 14,3g/cm³. La sustitución de cobalto por carburo de tungsteno reduce el peso total en aproximadamente un 5% en toda la gama de grados comunes.</p>
+<h2>Cuente el número de insertos y sus pesos individuales (típicamente de 5 a 15 gramos cada uno), agregue el peso de los portaherramientas (0,2-2,0 kg cada uno) y el peso del empaque (0,1-0,5 kg). Para pedidos a granel, factor en un exceso de 5% para materiales de embalaje. El carburo es denso pero compacto: los pedidos pequeños a menudo pesan sorprendentemente poco.</h2><p>⚡Calculado para la Serie de Alto Rendimiento de Carbide-Tooling.com. Ver catálogo →</p>
+<h2>🔧Caja de herramientas de ingeniería de precisión</h2>
 <p><strong>How much does a typical carbide end mill weigh?</strong> A 12-mm carbide end mill with 75-mm flute length weighs approximately 85–95 grams. A 6-mm end mill of same length weighs about 22–28 grams. The exact weight depends on flute geometry, shank diameter, and overall length.</p>
 <p><strong>Does cobalt content affect carbide density?</strong> Yes. Higher cobalt content (binder) reduces density slightly. Grade K10 (6% cobalt) has density ~15.0 g/cm³, while K30 (12% cobalt) has density ~14.3 g/cm³. The cobalt substitution for tungsten carbide reduces overall weight by approximately 5% across the range of common grades.</p>
 <p><strong>How do I calculate shipping weight for carbide tool orders?</strong> Count the number of inserts and their individual weights (typically 5–15 grams each), add the weight of toolholders (0.2–2.0 kg each), and packaging weight (0.1–0.5 kg). For bulk orders, factor in a 5% overage for packing materials. Carbide is dense but compact — small orders often weigh surprisingly little.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculard for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Ver catálogo →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Solicitar cotización por volumen →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/metal-weight-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/metal-weight-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/metal-weight-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/metal-weight-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/metal-weight-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/metal-weight-calculator/" class="lang-link">中</a>
-</div>
 </footer>
 <script>
 const DENS={6:15.2,10:14.8,15:14.5};
 function calc(){const shape=document.getElementById('shape').value;const co=parseInt(document.getElementById('grade').value);const d1=parseFloat(document.getElementById('d1').value)||20;const d2=parseFloat(document.getElementById('d2').value)||100;const den=DENS[co]||15;let vol=0;if(shape==='round'){vol=Math.PI*(d1/2)**2*d2;}else if(shape==='block'){vol=d1*d2*parseFloat(document.getElementById('d3').value||5);}else{const wall=parseFloat(document.getElementById('d3').value||5);vol=Math.PI*((d1/2)**2-((d1-2*wall)/2)**2)*d2;}
 document.getElementById('r-weight').textContent=(vol*den/1000).toFixed(2);}
 document.getElementById('shape').addEventListener('change',function(){const s=this.value;document.getElementById('l2').textContent=s==='round'?'Length (mm)':'Width (mm)';const l3=document.getElementById('l3');const d3=document.getElementById('d3');if(s==='block'){l3.textContent='Height (mm)';l3.style.display='block';d3.style.display='block';}else if(s==='ring'){l3.textContent='Wall thickness (mm)';l3.style.display='block';d3.style.display='block';}else{l3.style.display='none';d3.style.display='none';}
-calc();});calc();</script><div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+calc();});calc();</script><div class="toolbox-widget"><h3>Productos</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Fresas de extremo de carburo sólido</a>
+<a href="/tools/hardness-converter/">Insertos de torneado</a>
+<a href="/tools/tap-drill-size-calculator/">Calculadora de intereses de ingeniería</a>
+<a href="/tools/mrr-calculator/">Calculadora de roscas de tubería NPT</a>
+<a href="/tools/feed-converter/">Convertidor de roscas métricas e imperiales</a>
+<a href="/tools/surface-roughness-calculator/">Calculadora de la profundidad de chaveta</a>
+<a href="/tools/titanium-machining-guide/">Calculadora de ajuste ISO</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Referencia de símbolos de GD&amp;T</a>
+<a href="/tools/cost-per-part-calculator/">Convertidor de SFM a m/min</a>
+<a href="/tools/torque-unit-converter/">Acceder a la calculadora de velocidad de alimentación</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Guías</h3>
+<p>Sobre</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Fresas de carburo sólido</a><a href="/products/turning-inserts.html">Insertos de torneado</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Correo electrónico</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/engineering-interest-calculator/">Engineering Interest Calculadora</a>
-<a href="/es/tools/npt-pipe-thread-calculator/">NPT Pipe Thread Calculadora</a>
-<a href="/es/tools/metric-imperial-thread-converter/">Metric/Imperial Thread Convertidor</a>
-<a href="/es/tools/keyway-depth-calculator/">Keyway Profundidad Calculadora</a>
-<a href="/es/tools/iso-fit-calculator/">ISO Fit Calculadora</a>
-<a href="/es/tools/gdt-symbols-reference/">GD&T Symbols Reference</a>
-<a href="/es/tools/sfm-m-min-converter/">m/min to m/min Convertidor</a>
-<a href="/es/tools/tapping-feed-rate-calculator/">Tapping Avance Rate Calculadora</a>
-
-  </div>
+<h3>📩Obtener una cotización</h3>
+<div class="tool-grid">
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/npt-pipe-thread-calculator/">NPT Pipe Thread Calculator</a>
+<a href="/tools/metric-imperial-thread-converter/">Metric/Imperial Thread Converter</a>
+<a href="/tools/keyway-depth-calculator/">Keyway Depth Calculator</a>
+<a href="/tools/iso-fit-calculator/">ISO Fit Calculator</a>
+<a href="/tools/gdt-symbols-reference/">GD&amp;T Symbols Reference</a>
+<a href="/tools/sfm-m-min-converter/">SFM to m/min Converter</a>
+<a href="/tools/tapping-feed-rate-calculator/">Tapping Avance Rate Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/metal-weight-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/metal-weight-calculator/&text=Metal Weight Calculadora" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Metal Weight Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/metal-weight-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/metal-weight-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/metal-weight-calculator/&amp;text=Metal Weight Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Metal Weight Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/metal-weight-calculator/">Email</a>
 </div>
-
 </body></html>

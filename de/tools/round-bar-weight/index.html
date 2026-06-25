@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Round Bar Weight | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Berechnen weight of round bar sNachck in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/round-bar-weight/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Rundstab gewicht | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Berechnen Sie das Gewicht des Rundstab bestands in Stahl, Edelstahl, Aluminium, Messing und Titan. Sofortiges Gewicht pro Meter und pro Stück." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.hero .accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:6px auto 0}.card{border:1px solid #e8e8ed;border-radius:14px;padding:18px 20px;margin:16px 0}.card h2{font-size:15px;font-weight:700;margin-bottom:10px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.card select:focus,.card input:focus{border-color:#0066cc}.res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.res-item{background:#f5f5f7;border-radius:10px;padding:12px;text-align:center}.res-item .lbl{font-size:10px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.res-item .unit{font-size:10px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.res{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,260 +13,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Round Bar Weight | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Berechnen weight of round bar sNachck in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/round-bar-weight/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Round Bar Weight | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rundstab gewicht | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Berechnen Sie das Gewicht des Rundstab bestands in Stahl, Edelstahl, Aluminium, Messing und Titan. Sofortiges Gewicht pro Meter und pro Stück." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/round-bar-weight/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Round Bar Weight | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Round Bar Weight",
-      "url": "https://carbide-tooling.com/de/tools/round-bar-weight/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Berechnen weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/round-bar-weight/",
-      "name": "Round Bar Weight",
-      "description": "Berechnen weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate are calculated round bar weights?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Theoretical weights assume nominal diameter and standard density. Actual mill tolerances introduce ±2–3% variation. For inventory valuation, theoretical weight is acceptable. For shipping or load calculation, use actual weigh scale reading."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does hex bar use the same formula?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Hex bar weight = (Width across flats² × 0.866 × 0.222) for steel, per foot. The 0.866 factor accounts for the hexagonal cross-section being 86.6% of the circumscribed circle area. Always use the specific hex formula rather than approximating as round bar."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I account for cut-off and saw kerf in length estimates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Subtract 0.125–0.250 inches per cut for saw kerf plus an additional 0.5–1.0 inch for end cleanup from the original bar length. For high-value materials like stainless or brass, marking and tracking cut-off drops can recover 2–5% of material cost.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Round Bar Weight",
+ "url": "https://carbide-tooling.com/tools/round-bar-weight/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/round-bar-weight/",
+ "name": "Round Bar Weight",
+ "description": "Calculate weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate are calculated round bar weights?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Theoretical weights assume nominal diameter and standard density. Actual mill tolerances introduce ±2–3% variation. For inventory valuation, theoretical weight is acceptable. For shipping or load calculation, use actual weigh scale reading."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does hex bar use the same formula?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. Hex bar weight = (Width across flats² × 0.866 × 0.222) for steel, per foot. The 0.866 factor accounts for the hexagonal cross-section being 86.6% of the circumscribed circle area. Always use the specific hex formula rather than approximating as round bar."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I account for cut-off and saw kerf in length estimates?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Subtract 0.125–0.250 inches per cut for saw kerf plus an additional 0.5–1.0 inch for end cleanup from the original bar length. For high-value materials like stainless or brass, marking and tracking cut-off drops can recover 2–5% of material cost.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rundstab gewicht | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Berechnen Sie das Gewicht des Rundstab bestands in Stahl, Edelstahl, Aluminium, Messing und Titan. Sofortiges Gewicht pro Meter und pro Stück." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/round-bar-weight/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Round Bar Weight | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Round Bar Weight",
+ "url": "https://carbide-tooling.com/tools/round-bar-weight/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/round-bar-weight/",
+ "name": "Round Bar Weight",
+ "description": "Calculate weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gewicht pro Meter Rundstab nach Material und Durchmesser." property="og:title"/>
+<meta content="Berechnen Sie das Gewicht des Rundstab bestands in Stahl, Edelstahl, Aluminium, Messing und Titan. Sofortiges Gewicht pro Meter und pro Stück." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/round-bar-weight/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Round Bar Weight Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Round Bar Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/round-bar-weight/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/round-bar-weight/",
+ "name": "Round Bar Weight Calculator",
+ "description": "Calculate weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Round Bar Weight | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Berechnen weight of round bar sNachck in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/round-bar-weight/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Round Bar Weight | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Round Bar Weight",
-      "url": "https://carbide-tooling.com/de/tools/round-bar-weight/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Berechnen weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/round-bar-weight/",
-      "name": "Round Bar Weight",
-      "description": "Berechnen weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Round Bar Weight Rechner | Precision Machining Tool"/>
-<meta property="og:description" content="Berechnen weight of round bar sNachck in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/round-bar-weight/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Round Bar Weight Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Round Bar Weight Rechner",
-      "url": "https://carbide-tooling.com/de/tools/round-bar-weight/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Berechnen weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/round-bar-weight/",
-      "name": "Round Bar Weight Rechner",
-      "description": "Berechnen weight of round bar stock in steel, stainless steel, aluminum, brass, and titanium. Instant weight per meter and per piece.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/round-bar-weight/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/round-bar-weight/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/round-bar-weight/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/round-bar-weight/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/round-bar-weight/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/round-bar-weight/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/round-bar-weight"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Produkte</a><a href="https://carbide-tooling.com/guides/">Leitfäden</a><a href="https://carbide-tooling.com/about.html">Über uns</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/round-bar-weight/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/round-bar-weight/">JP</a><span class="sep">|</span><a href="/es/tools/round-bar-weight/">ES</a><span class="sep">|</span><a href="/vi/tools/round-bar-weight/">VI</a><span class="sep">|</span><a href="/zh/tools/round-bar-weight/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Startseite</a> <span style="color:#d2d2d6">›</span> <a href="/de/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Round Bar Weight</div>
-<section class="hero"><div class="container"><div class="badge">🧰 Werkzeug</div><h1>Round Bar <span class="accent">Weight Rechner</span></h1><p>Weight per meter of round bar by material and diameter.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/de/tools/round-bar-weight/" rel="canonical"/><link href="https://carbide-tooling.com/tools/round-bar-weight/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/round-bar-weight/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/round-bar-weight/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/round-bar-weight/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/round-bar-weight/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/round-bar-weight/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪DE</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/round-bar-weight/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/round-bar-weight/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/round-bar-weight/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/round-bar-weight/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/round-bar-weight/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Senkungstiefe</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Werkzeugüberstandsberechner</a> <span style="color:#d2d2d6">›</span> Round Bar Weight</div>
+<section class="hero"><div class="container"><div class="badge">🧰 Tool</div><h1>Material</h1><p>Durchmesser (mm)</p></div></section>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/wall-thickness-calculator/">Wall Thickness</a><a href="/de/tools/gun-drill-calculator/">Gun Drill Rechner</a><a href="/de/tools/tool-life-economics/">Werkzeug Life Economics</a><a href="/de/tools/countersink-depth-calculator/">Countersink Schnitttiefe</a><a href="/de/tools/tool-runout-calculator/">Werkzeug Runout Rechner</a><a href="/de/tools/machine-power-calculator/">Machine Power</a><a href="/de/tools/stainless-properties/">Stainless Steel Properties</a><a href="/de/tools/tool-change-time-analyzer/">Werkzeug Change Time Analyzer</a>
-  </div>
+<h3>Länge (mm)</h3>
+<div class="tool-grid">
+<a href="/tools/wall-thickness-calculator/">Maschinenleistung</a><a href="/tools/gun-drill-calculator/">Eigenschaften von Edelstahl</a><a href="/tools/tool-life-economics/">Werkzeugwechselzeit-Analysator</a><a href="/tools/countersink-depth-calculator/">← Alle Tools</a><a href="/tools/tool-runout-calculator/">Erhalten Sie ein Angebot</a><a href="/tools/machine-power-calculator/">Datenschutz</a><a href="/tools/stainless-properties/">in</a><a href="/tools/tool-change-time-analyzer/">Katalog ansehen →</a>
+</div>
 </section>
-<div class="container"><div class="card"><h2>⚙️ Rechner</h2><label>Werkstoff</label><select id="mat" onchange="calc()"><option value="7.85">Steel (7.85 g/cm³)</option><option value="8.0">Stainless (8.0)</option><option value="2.7">Aluminum (2.7)</option><option value="8.5">Brass (8.5)</option></select><label>Durchmesser (mm)</label><input type="number" id="i1" value="10" oninput="calc()"/><label>Length (mm)</label><input type="number" id="i2" value="100" oninput="calc()"/><div class="res" style="grid-template-columns:repeat(4,1fr)"><div class="res-item"><div class="lbl">Weight (kg/part)</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">kg/meter</div><div class="val" id="r1">—</div></div></div></div>
-<div style="text-align:center;margin:24px 0"><a href="/de/tools/" style="color:#0066cc;font-size:13px">← Alle Werkzeuge</a></div></div>
+<div class="container"><div class="card"><h2>Alle Werkzeuge</h2><label>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</label><select id="mat" onchange="calc()"><option value="7.85">Steel (7.85 g/cm³)</option><option value="8.0">Stainless (8.0)</option><option value="2.7">Aluminum (2.7)</option><option value="8.5">Brass (8.5)</option></select><label>©2026 Hartmetallwerkzeuge</label><input id="i1" oninput="calc()" type="number" value="10"/><label>Berechnung des runden Stangen gewichts pro Fuß/Meter</label><input id="i2" oninput="calc()" type="number" value="100"/><div class="res" style="grid-template-columns:repeat(4,1fr)"><div class="res-item"><div class="lbl">Weight (kg/part)</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">kg/meter</div><div class="val" id="r1">—</div></div></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Geschwindigkeit &amp; Vorschub</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Senkungstiefe</a>
+<a href="/tools/">Standardformel: Gewicht (lbs/ft) = (D² × 0,222) für Stahl, wobei D einen Durchmesser in Zoll hat. Für metrisch: Gewicht (kg/m) = (D² × 0,00617) für Stahl mit D in mm. Beispiel: 2-Zoll-Stahlrundstab wiegt 2 ² × 0,222 = 0,888 lbs/ft. Für 50-mm-Stahls tange: 50 ² × 0,00617 = 15,43 kg/m. Berücksichtigen Sie die Strang gieß toleranz (± 0,5% auf den Durchmesser), die das tatsächliche Gewicht um ungefähr ± 1% beeinflusst.</a>
+<a href="/products/">🇩🇪DE</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Titanführung</a>
+<a href="/privacy.html">Notenübereinstimmung</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Kosten pro Teil</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Standardformel: Gewicht (lbs/ft) = (D² × 0,222) für Stahl, wobei D einen Durchmesser in Zoll hat. Für metrisch: Gewicht (kg/m) = (D² × 0,00617) für Stahl mit D in mm. Beispiel: 2-Zoll-Stahlrundstab wiegt 2 ² × 0,222 = 0,888 lbs/ft. Für 50-mm-Stahls tange: 50 ² × 0,00617 = 15,43 kg/m. Berücksichtigen Sie die Strang gieß toleranz (± 0,5% auf den Durchmesser), die das tatsächliche Gewicht um ungefähr ± 1% beeinflusst.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Gewichts unterschiede in Stahlst rängen</p>
+<p style="font-size:11px">Kohlenstoffs tahl: 7,85g/cm³. Edelstahl 304/316: 7,93g/cm³ (~ 1% schwerer). Aluminium 6061: 2,70g/cm³ (34% des Stahl gewichts). Messing: 8,53g/cm³ (9% schwerer als Stahl). Titan: 4,43g/cm³ (56% des Stahl gewichts). Diese Dichte unterschiede wirken sich erheblich auf die Versand kosten und das strukturelle Design aus. Eine rostfreie Komponente wiegt 11% mehr als die gleiche Kohlenstoffs tahl komponente.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Calculating Round Bar Weight Per Foot/Meter</h2><p>Standard formula: Weight (lbs/ft) = (D² × 0.222) for steel, where D is diameter in inches. For metric: Weight (kg/m) = (D² × 0.00617) for steel with D in mm. Example: 2-inch steel round bar weighs 2² × 0.222 = 0.888 lbs/ft. For 50-mm steel bar: 50² × 0.00617 = 15.43 kg/m. Account for the continuous casting tolerance (±0.5% on diameter) which affects actual weight by approximately ±1%.</p>
-<h2>Weight Differences Across Steel Grades</h2><p>Carbon steel: 7.85 g/cm³. Stainless 304/316: 7.93 g/cm³ (~1% heavier). Aluminum 6061: 2.70 g/cm³ (34% of steel weight). Brass: 8.53 g/cm³ (9% heavier than steel). Titanium: 4.43 g/cm³ (56% of steel weight). These density differences significantly impact shipping costs and structural design. A stainless component weighs 11% more than the same carbon steel component.</p>
-<h2>Estimating Bar Length from Weight</h2><p>When you know the total weight and bar size, you can estimate length: Length (ft) = Total Weight (lbs) / Weight per Foot. For plate and sheet: use thickness × width × length × density. This is valuable for inventory management — weighing a cut piece quickly confirms the remaining stock length without measuring it physically.</p>
-<h2>Häufig gestellte Fragen</h2>
+<h2>Messstab länge vom Gewicht abschätzen</h2><p>Wenn Sie das Gesamtgewicht und die Balken größe kennen, können Sie die Länge schätzen: Länge (ft) = Gesamtgewicht (lbs) /Gewicht pro Fuß. Für Platte und Blatt: Verwenden Sie Dicke × Breite × Länge × Dichte. Dies ist für die Bestands verwaltung wertvoll-das Wiegen eines geschnittenen Stücks bestätigt schnell die verbleibende Lager länge, ohne es physisch zu messen.</p>
+<h2>Häufig gestellte Fragen</h2><p>Wie genau werden Rundstab gewichte berechnet? Theoretische Gewichte gehen von Nenn durchmesser und Standard dichte aus. Tatsächliche Mühlen toleranzen führen zu einer Variation von ± 2-3%. Für die Bestands bewertung ist das theoretische Gewicht akzeptabel. Verwenden Sie für die Versand-oder Last berechnung den tatsächlichen Wiege maßstab.</p>
+<h2>Verwendet Hex Bar dieselbe Formel? Nein. Sechs kant gewicht = (Breite über flats² × 0,866 × 0,222) für Stahl pro Fuß. Der Faktor 0,866 macht aus, dass der sechseckige Querschnitt 86,6% der umschriebenen Kreisfläche beträgt. Verwenden Sie immer die spezifische Hex-Formel, anstatt sich als runder Balken zu approximieren.</h2><p>Wie berücksicht ige ich Cut-Off-und Säge-Kerf in Längen schätzungen? Subtrahieren Sie 0,125-0,250 Zoll pro Schnitt für Säge kerf plus weitere 0,5-1,0 Zoll für die End bereinigung von der ursprünglichen Balken länge. Bei hochwertigen Materialien wie Edelstahl oder Messing können durch das Markieren und Verfolgen von Cut-Off-Tropfen 2-5% der Material kosten wieder hergestellt werden.</p>
+<h2>⚡Berechnet für die Hochleistungsserie von Carbide-Tooling.com. Katalog anzeigen →</h2>
 <p><strong>How accurate are calculated round bar weights?</strong> Theoretical weights assume nominal diameter and standard density. Actual mill tolerances introduce ±2–3% variation. For inventory valuation, theoretical weight is acceptable. For shipping or load calculation, use actual weigh scale reading.</p>
 <p><strong>Does hex bar use the same formula?</strong> No. Hex bar weight = (Width across flats² × 0.866 × 0.222) for steel, per foot. The 0.866 factor accounts for the hexagonal cross-section being 86.6% of the circumscribed circle area. Always use the specific hex formula rather than approximating as round bar.</p>
 <p><strong>How do I account for cut-off and saw kerf in length estimates?</strong> Subtract 0.125–0.250 inches per cut for saw kerf plus an additional 0.5–1.0 inch for end cleanup from the original bar length. For high-value materials like stainless or brass, marking and tracking cut-off drops can recover 2–5% of material cost.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Berechnend for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Katalog anzeigen →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Massenanfrage stellen →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/round-bar-weight/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/round-bar-weight/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/round-bar-weight/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/round-bar-weight/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/round-bar-weight/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/round-bar-weight/" class="lang-link">中</a>
-</div>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>Produkte</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Vollhartmetall-Schaftfräser</a>
+<a href="/tools/hardness-converter/">Drehplatten</a>
+<a href="/tools/tap-drill-size-calculator/">Thread-Prozentsatz-Rechner</a>
+<a href="/tools/mrr-calculator/">Schlüsselkerbtiefenrechner</a>
+<a href="/tools/feed-converter/">G-Code-Referenz</a>
+<a href="/tools/surface-roughness-calculator/">Kraftrechner</a>
+<a href="/tools/titanium-machining-guide/">SFM zu m/min Konverter</a>
+<a href="/tools/carbide-grade-cross-ref-2/">M-Code-Referenz</a>
+<a href="/tools/cost-per-part-calculator/">Produktionseffizienzrechner</a>
+<a href="/tools/torque-unit-converter/">LinkedIn</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Führer</h3>
+<p>Über</p>
+</div>
+<a class="b2b-btn" href="/quote.html">E-Mail</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/turning-inserts.html">Drehwendeschneidplatten</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/percentage-of-thread-calculator/">Thread Percentage Rechner</a>
-<a href="/de/tools/keyway-depth-calculator/">Keyway Schnitttiefe Rechner</a>
-<a href="/de/tools/gcode-reference/">G-Code Reference</a>
-<a href="/de/tools/force-calculator/">Force Rechner</a>
-<a href="/de/tools/gun-drill-calculator/">Gun Drill Rechner</a>
-<a href="/de/tools/sfm-m-min-converter/">m/min to m/min Umrechner</a>
-<a href="/de/tools/mcode-reference/">M-Code Reference</a>
-<a href="/de/tools/production-efficiency-calculator/">Production Efficiency Rechner</a>
-
-  </div>
+<h3>Länge (mm)</h3>
+<div class="tool-grid">
+<a href="/tools/percentage-of-thread-calculator/">Thread Percentage Calculator</a>
+<a href="/tools/keyway-depth-calculator/">Keyway Depth Calculator</a>
+<a href="/tools/gcode-reference/">G-Code Reference</a>
+<a href="/tools/force-calculator/">Force Calculator</a>
+<a href="/tools/gun-drill-calculator/">Eigenschaften von Edelstahl</a>
+<a href="/tools/sfm-m-min-converter/">SFM to m/min Converter</a>
+<a href="/tools/mcode-reference/">M-Code Reference</a>
+<a href="/tools/production-efficiency-calculator/">Production Efficiency Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/round-bar-weight/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/round-bar-weight/&text=Round Bar Weight Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Round Bar Weight Rechner&body=Check this out: https://carbide-tooling.com/de/tools/round-bar-weight/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/round-bar-weight/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/round-bar-weight/&amp;text=Round Bar Weight Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Round Bar Weight Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/round-bar-weight/">Email</a>
 </div>
-
 </body></html>

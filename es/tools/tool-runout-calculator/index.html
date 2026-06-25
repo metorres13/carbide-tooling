@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="es"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Herramienta Runout Calculadora | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="Free online Herramienta runout Calculadora. Calcular how spindle runout affects Herramienta life, surface finish, and dimensional accuracy. Diagnose runout-related problems in CNC milling."/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/tool-runout-calculator/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Calculadora de destiempo de herramienta | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Herramienta gratuita en línea calculadora de runout. Calcule cómo afecta la deformación del husillo a la vida útil de la herramienta, el acabado superficial y la precisión dimensional. Diagnosticar problemas relacionados con el runout en fresado CNC." name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:80px 0 60px}.hero .badge{display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px}.hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;margin-bottom:12px}.hero h1 .accent{color:#0066cc}.hero p{font-size:17px;color:#86868b;max-width:600px;margin:0 auto 32px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:28px 30px;margin-bottom:20px}.card h2{font-size:20px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:20px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}.result-item .value.bad{color:#dc2626}.result-item .value.ok{color:#16a34a}.seo{padding:60px 0}.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;margin-top:40px}.seo h3{font-size:16px;font-weight:600;margin-top:28px;margin-bottom:6px}.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}.seo ul{padding-left:20px;margin-bottom:14px}.seo li{font-size:14px;color:#444;margin-bottom:4px}.seo .diag{background:#fef2f2;border-left:3px solid #dc2626;padding:16px 20px;border-radius:8px;margin:16px 0}.seo .diag p{margin:0;font-size:14px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.card-row{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -13,202 +14,206 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Herramienta Runout Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free online tool runout calculator. Calcular how spindle runout affects tool life, surface finish, and dimensional accuracy. Diagnose runout-related "/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/tool-runout-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tool Runout Calculadora | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Herramienta Runout Calculadora | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Herramienta gratuita en línea calculadora de runout. Calcule cómo afecta la deformación del husillo a la vida útil de la herramienta, el acabado superficial y la precisión dimensional. Diagnosticar el runout relacionado" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tool-runout-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tool Runout Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tool Runout Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/tool-runout-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online tool runout calculator. Calcular how spindle runout affects tool life, surface finish, and dimensional accuracy. Diagnose runout-related problems in CNC milling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/tool-runout-calculator/",
-      "name": "Tool Runout Calculadora",
-      "description": "Free online tool runout calculator. Calcular how spindle runout affects tool life, surface finish, and dimensional accuracy. Diagnose runout-related problems in CNC milling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is tool runout?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The eccentricity of the cutting tool relative to the spindle axis, measured in microns. Runout causes each flute to take an uneven cut."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much runout is acceptable?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Below 5 μm for finishing, below 15 μm for roughing. Above 20 μm, tool life drops by 50% or more regardless of material or cutting parameters."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I measure runout?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use a dial indicator at the tool tip. Rotate the spindle by hand and read the total indicated runout (TIR). Measure both at the tip and 50 mm down the tool to check for bent tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What holder type has the lowest runout?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Shrink-fit holders (2-4 μm), followed by hydraulic chucks (3-5 μm), then milling chucks (5-10 μm), and ER collets (10-30 μm depending on quality and condition)."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tool Runout Calculator",
+ "url": "https://carbide-tooling.com/tools/tool-runout-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online tool runout calculator. Calculate how spindle runout affects tool life, surface finish, and dimensional accuracy. Diagnose runout-related problems in CNC milling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tool-runout-calculator/",
+ "name": "Tool Runout Calculator",
+ "description": "Free online tool runout calculator. Calculate how spindle runout affects tool life, surface finish, and dimensional accuracy. Diagnose runout-related problems in CNC milling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is tool runout?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The eccentricity of the cutting tool relative to the spindle axis, measured in microns. Runout causes each flute to take an uneven cut."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How much runout is acceptable?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Below 5 μm for finishing, below 15 μm for roughing. Above 20 μm, tool life drops by 50% or more regardless of material or cutting parameters."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I measure runout?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Use a dial indicator at the tool tip. Rotate the spindle by hand and read the total indicated runout (TIR). Measure both at the tip and 50 mm down the tool to check for bent tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What holder type has the lowest runout?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Shrink-fit holders (2-4 μm), followed by hydraulic chucks (3-5 μm), then milling chucks (5-10 μm), and ER collets (10-30 μm depending on quality and condition)."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/tool-runout-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/tool-runout-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-runout-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-runout-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-runout-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-runout-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/tool-runout-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/tool-runout-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/tool-runout-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/tool-runout-calculator/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/tool-runout-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/tool-runout-calculator/">中</a></div></div></nav>
-<section class="hero"><div class="container"><div class="badge">🔍 Diagnostic Herramienta</div><h1>Herramienta Runout <span class="accent">Impact</span></h1><p>Runout is the #1 cause of uneven tool wear and inconsistent surface finish. Enter your measured runout and see how it affects each flute's chip load.</p><a class="btn" href="#calculator">Diagnose ↓</a></div></section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>🔍 Runout Impact Analysis</h2><p class="sub">Measures how runout distributes chip load unevenly across flutes.</p>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/es/tools/tool-runout-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/tool-runout-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/tool-runout-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/tool-runout-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/tool-runout-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/tool-runout-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/tool-runout-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías</a><a href="https://carbide-tooling.com/about.html">Sobre</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩Obtener una cotización</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/tool-runout-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/tool-runout-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/tool-runout-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/tool-runout-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/tool-runout-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<section class="hero"><div class="container"><div class="badge">🔍 Diagnostic Tool</div><h1>Herramienta Runout Impact</h1><p>Runout es la causa #1 del desgaste desigual de la herramienta y el acabado de la superficie inconsistente. Ingrese su runout medido y vea cómo afecta la carga de viruta de cada flauta.</p><a class="btn" href="#calculator">Diagnosticar ↓</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>🔍Análisis de impacto de Runout</h2><p class="sub">Mide cómo el runout distribuye la carga de chip de manera desigual a través de las flautas.</p>
 <div class="card-row">
-<div class="field"><label>📐 Herramienta Diámetro (mm)</label><input type="number" id="dia" value="12" min="0.5" max="50" step="0.5" oninput="calc()"/></div>
-<div class="field"><label>📏 Measured Runout (μm)</label><input type="number" id="runout" value="20" min="1" max="200" step="1" oninput="calc()"/></div>
-<div class="field"><label>🦷 Flutes</label><select id="flutes" onchange="calc()"><option>2</option><option selected>4</option><option>6</option></select></div>
-<div class="field"><label>📊 Programmed fz (mm)</label><input type="number" id="fz" value="0.05" min="0.001" max="1" step="0.005" oninput="calc()"/></div>
+<div class="field"><label>📐Diámetro de la herramienta (mm)</label><input id="dia" max="50" min="0.5" oninput="calc()" step="0.5" type="number" value="12"/></div>
+<div class="field"><label>📏Runout medido (μm)</label><input id="runout" max="200" min="1" oninput="calc()" step="1" type="number" value="20"/></div>
+<div class="field"><label>🦷Flautas</label><select id="flutes" onchange="calc()"><option>2</option><option selected="">4</option><option>6</option></select></div>
+<div class="field"><label>📊Fz programado (mm)</label><input id="fz" max="1" min="0.001" oninput="calc()" step="0.005" type="number" value="0.05"/></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Max Chip Load (Flute 1)</div><div class="value bad" id="r-max">—</div><div class="unit">mm</div></div>
 <div class="result-item"><div class="label">Min Chip Load (Flute N)</div><div class="value" id="r-min">—</div><div class="unit">mm</div></div>
 <div class="result-item"><div class="label">Load Imbalance</div><div class="value bad" id="r-imbalance">—</div><div class="unit">%</div></div>
-<div class="result-item"><div class="label">Herramienta Life Impact</div><div class="value" id="r-life">—</div><div class="unit">% reduction</div></div>
+<div class="result-item"><div class="label">Tool Life Impact</div><div class="value" id="r-life">—</div><div class="unit">% reduction</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:20px 0"><a href="/es/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Todas las herramientas</a></div>
+<div style="text-align:center;margin:20px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Todas las herramientas</a></div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Inicio</a>
+<a href="/tools/">Todas las herramientas</a>
+<a href="/products/">Productos</a>
+<a href="/guides/">Guías</a>
+<a href="/about.html">Sobre</a>
+<a href="/quote.html">Convertidor de dureza</a>
+<a href="/privacy.html">Tamaño del taladro de roscado</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/tool-runout-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/tool-runout-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/tool-runout-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/tool-runout-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/tool-runout-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/tool-runout-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Calculadora de MRR</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Todas las herramientas</a></p>
+<p style="font-size:11px;margin-bottom:6px">Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</p>
+<p style="font-size:11px">©Herramientas de carburo 2026</p>
 </div>
 </footer>
 <script>
 function calc(){const d=parseFloat(document.getElementById('dia').value)||12;const r=parseFloat(document.getElementById('runout').value)||20;const z=parseInt(document.getElementById('flutes').value)||4;const fz=parseFloat(document.getElementById('fz').value)||0.05;const rMm=r/1000;const maxFz=fz+rMm>0?fz+rMm:0;const minFz=Math.max(0,fz-rMm);const imbalance=maxFz>0?((maxFz-minFz)/maxFz)*100:0;const lifeRed=Math.min(80,r*2);document.getElementById('r-max').textContent=maxFz.toFixed(4);document.getElementById('r-min').textContent=minFz.toFixed(4);document.getElementById('r-imbalance').textContent=Math.round(imbalance)+'%';document.getElementById('r-life').textContent=Math.round(lifeRed)+'%';}
 calc();</script><section class="seo-content"><div class="container">
-<div class="diag"><p><strong>🔴 Symptom:</strong> One flute always wears faster than the others. Herramienta life is half of what it should be. Surface finish varies from part to part. <strong>→ Likely cause: excessive runout.</strong></p></div>
-<h2>How Runout Destroys Herramienta Life Unevenly</h2>
-<p>When a tool holder has 20 μm of runout, the first flute into the cut takes more material than the others. In a 4-flute end mill with 20 μm runout and a programmed chip load of 0.05 mm per tooth, the first flute actually cuts at 0.07 mm — 40% over the recommended load. The remaining three flutes cut progressively less, with the last flute cutting at only 0.03 mm — potentially below the minimum chip thickness, causing rubbing instead of cutting.</p>
-<p>The overloaded flute wears rapidly and develops edge chipping. Once the first flute fails, the remaining flutes are forced to take more than their share, creating a cascade failure that destroys the tool in a fraction of its expected life. This is why a 4-flute end mill in a 20 μm runout holder may last only 30-50% as long as the same tool in a 4 μm holder.</p>
-<p>On a standard ER collet holder, runout of 15-30 μm is common. On a precision hydraulic or shrink-fit holder, runout is typically below 5 μm. The cost difference between these holders is recovered in tool life within weeks for any shop running production quantities.</p>
-
-<h2>Diagnosing Runout-Related Problems</h2>
-<p>Runout produces a specific pattern of symptoms: chatter marks at regular intervals corresponding to the spindle rotation frequency, uneven tool wear with one or two flutes showing significantly more edge wear than others, and dimensional variation in features machined with different tool orientations. On a Haas VF-2 or similar VMC, checking runout with a dial indicator at the tool tip and 50 mm below the holder should be part of every tool change. Runout at the tip that exceeds 10 μm for finishing tools should be corrected before cutting material.</p>
-
+<div class="diag"><p><strong>🔴 Symptom:</strong> One flute always wears faster than the others. Tool life is half of what it should be. Surface finish varies from part to part. <strong>→ Likely cause: excessive runout.</strong></p></div>
+<h2>Cómo Runout destruye la vida de la herramienta de manera desuniformemente</h2>
+<p>Cuando un portaherramientas tiene 20 μm de salida, la primera flauta en el corte toma más material que los otros. En un molino de extremo de 4 flautas con 20 μm de salida y una carga de viruta programada de 0,05mm por diente, la primera flauta realmente corta a 0,07mm-40% sobre la carga recomendada. Las tres flautas restantes cortan progresivamente menos, con la última flauta cortando a solo 0,03mm, potencialmente por debajo del grosor mínimo de la viruta, causando frotamiento en lugar de corte.</p>
+<p>La flauta sobrecargada se desgasta rápidamente y desarrolla astillado de borde. Una vez que la primera flauta falla, las flautas restantes se obligan a tomar más que su parte, creando un fracaso de la cascada que destruye el instrumento en una fracción de su vida esperada. Esta es la razón por la cual una fresa de extremo de 4 flautas en un soporte de salida de 20 μm puede durar solo 30-50% mientras la misma herramienta en un soporte de 4 μm.</p>
+<p>En un soporte de collet ER estándar, es común una desviación de 15-30 μm. En un soporte hidráulico de precisión o de ajuste por contracción, el runout es típicamente inferior a 5 μm. La diferencia del coste entre estos tenedores se recupera en vida de la herramienta dentro de las semanas para cualquier tienda que corre cantidades de la producción.</p>
+<h2>Diagnosticar problemas relacionados con el runout</h2>
+<p>La desviación produce un patrón específico de síntomas: marcas de vibración a intervalos regulares correspondientes a la frecuencia de rotación del husillo, desgaste desigual de la herramienta con una o dos acanaladuras que muestran significativamente más desgaste de borde que otras, y variación dimensional en las características mecanizadas con diferentes orientaciones de herramienta. En un VF-2 Haas o VMC similar, la verificación de la desviación con un indicador de cuadrante en la punta de la herramienta y 50 mm por debajo del soporte debe ser parte de cada cambio de herramienta. La desviación en la punta que excede los 10 μm para las herramientas de acabado debe corregirse antes de cortar el material.</p>
 <h2>Preguntas frecuentes</h2>
 <p><strong>What is tool runout?</strong> The eccentricity of the cutting tool relative to the spindle axis, measured in microns. Runout causes each flute to take an uneven cut.</p>
 <p><strong>How much runout is acceptable?</strong> Below 5 μm for finishing, below 15 μm for roughing. Above 20 μm, tool life drops by 50% or more regardless of material or cutting parameters.</p>
 <p><strong>How do I measure runout?</strong> Use a dial indicator at the tool tip. Rotate the spindle by hand and read the total indicated runout (TIR). Measure both at the tip and 50 mm down the tool to check for bent tools.</p>
 <p><strong>What holder type has the lowest runout?</strong> Shrink-fit holders (2-4 μm), followed by hydraulic chucks (3-5 μm), then milling chucks (5-10 μm), and ER collets (10-30 μm depending on quality and condition).</p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+<div class="toolbox-widget"><h3>🔧Caja de herramientas de ingeniería de precisión</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Rugosidad de la superficie</a>
+<a href="/tools/hardness-converter/">Guía de titanio</a>
+<a href="/tools/tap-drill-size-calculator/">Referencia cruzada de calificaciones</a>
+<a href="/tools/mrr-calculator/">Costo por pieza</a>
+<a href="/tools/feed-converter/">Convertidor de par</a>
+<a href="/tools/surface-roughness-calculator/">Solicitar cotización por volumen →</a>
+<a href="/tools/titanium-machining-guide/">Fresas de extremo de carburo sólido</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Portaherramientas</a>
+<a href="/tools/cost-per-part-calculator/">Calculadora de parámetros de engranajes</a>
+<a href="/tools/torque-unit-converter/">Temporizador Pomodoro</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>¿Necesita herramientas profesionales?</h3>
+<p>Obtenga precios directos de fábrica, grados de carburo de ingeniería y soporte técnico ágil, todo desde una sola fuente.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Calculadora de interpolación helicoidal</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Fresas de carburo sólido</a><a href="/products/tool-holders.html">Portaherramientas</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Calculadora de profundidad de rosca y par de torsión</a><a href="/products/tool-holders.html">Seleccionador de recubrimientos</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/gear-parameter-calculator/">Gear Parameter Calculadora</a>
-<a href="/es/tools/pomodoro-timer/">Pomodoro Timer</a>
-<a href="/es/tools/helical-interpolation-calculator/">Helical Interpolation Calculadora</a>
-<a href="/es/tools/thread-depth-torque-calculator/">Thread Profundidad & Torque Calculadora</a>
-<a href="/es/tools/coating-selector/">Coating Selector</a>
-<a href="/es/tools/batch-cost-calculator/">Batch Cost Calculadora</a>
-<a href="/es/tools/horsepower-calculator/">Horsepower Calculadora</a>
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance Calculadora</a>
-
-  </div>
+<h3>🔧Explore 100 herramientas de mecanizado profesionales</h3>
+<div class="tool-grid">
+<a href="/tools/gear-parameter-calculator/">Calculadora de costos por lote</a>
+<a href="/tools/pomodoro-timer/">Calculadora de caballos de fuerza</a>
+<a href="/tools/helical-interpolation-calculator/">Calculadora de velocidad y avance</a>
+<a href="/tools/thread-depth-torque-calculator/">LinkedIn</a>
+<a href="/tools/coating-selector/">Correo electrónico</a>
+<a href="/tools/batch-cost-calculator/">Batch Cost Calculator</a>
+<a href="/tools/horsepower-calculator/">Horsepower Calculator</a>
+<a href="/tools/speed-feed/">Velocidad de corte &amp; Avance Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/tool-runout-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/tool-runout-calculator/&text=Tool Runout Calculadora" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Tool Runout Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/tool-runout-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/tool-runout-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/tool-runout-calculator/&amp;text=Tool Runout Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Tool Runout Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/tool-runout-calculator/">Email</a>
 </div>
-
 </body></html>

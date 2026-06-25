@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Coating Selector | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Interactive carbide coating selecĐếnr for cutting Dụng cụs. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your Vật liệu and Nguyên công."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/coating-selector/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Bộ chọn lớp phủ | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Bộ chọn lớp phủ cacbua tương tác cho dụng cụ cắt. So sánh ti N, ti AL n, AL ti N, ti si n, AL CR N, DLC, cvd AL2 o3. Tìm lớp phủ phù hợp cho vật liệu và hoạt động của bạn." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.hero .accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:6px auto 0}.card{border:1px solid #e8e8ed;border-radius:14px;padding:18px 20px;margin:16px 0}.card h2{font-size:15px;font-weight:700;margin-bottom:10px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.card select:focus,.card input:focus{border-color:#0066cc}.res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.res-item{background:#f5f5f7;border-radius:10px;padding:12px;text-align:center}.res-item .lbl{font-size:10px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.res-item .unit{font-size:10px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.res{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,260 +13,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Coating SelecĐếnr | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your mater"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/coating-selector/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Coating Selector | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Bộ chọn lớp phủ | công cụ gia công chính xác" property="og:title"/>
+<meta content="Bộ chọn lớp phủ cacbua tương tác cho dụng cụ cắt. So sánh ti N, ti AL n, AL ti N, ti si n, AL CR N, DLC, cvd AL2 o3. Tìm lớp phủ phù hợp cho người thân của bạn" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/coating-selector/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Coating Selector | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Coating Selector",
-      "url": "https://carbide-tooling.com/vi/tools/coating-selector/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/coating-selector/",
-      "name": "Coating Selector",
-      "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I PVD coat an already-coated carbide insert?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, coating over existing coating is not recommended. The adhesion layer requires a clean substrate surface. Any existing coating must be stripped before re-coating, which can damage the carbide substrate. Always apply coatings to fresh, uncoated carbide tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does coating thickness affect tool performance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Thicker coatings (8–15 μm for CVD) provide better crater wear resistance for continuous cutting but can cause edge rounding that increases cutting forces. Thinner coatings (1–4 μm for PVD) maintain sharper edges for finishing and threading. Select coating thickness based on your primary wear mode — crater wear or flank wear."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DLC coating worth the premium for machining aluminum?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, for high-production aluminum machining, DLC coatings reduce friction and prevent built-up edge, extending tool life by 2–5× over uncoated carbide. The reduced adhesion also improves surface finish consistency across long production runs.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Coating Selector",
+ "url": "https://carbide-tooling.com/tools/coating-selector/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/coating-selector/",
+ "name": "Coating Selector",
+ "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Can I PVD coat an already-coated carbide insert?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No, coating over existing coating is not recommended. The adhesion layer requires a clean substrate surface. Any existing coating must be stripped before re-coating, which can damage the carbide substrate. Always apply coatings to fresh, uncoated carbide tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How does coating thickness affect tool performance?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Thicker coatings (8–15 μm for CVD) provide better crater wear resistance for continuous cutting but can cause edge rounding that increases cutting forces. Thinner coatings (1–4 μm for PVD) maintain sharper edges for finishing and threading. Select coating thickness based on your primary wear mode — crater wear or flank wear."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is DLC coating worth the premium for machining aluminum?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, for high-production aluminum machining, DLC coatings reduce friction and prevent built-up edge, extending tool life by 2–5× over uncoated carbide. The reduced adhesion also improves surface finish consistency across long production runs.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Bộ chọn lớp phủ | công cụ gia công chính xác" property="og:title"/>
+<meta content="Bộ chọn lớp phủ cacbua tương tác cho dụng cụ cắt. So sánh ti N, ti AL n, AL ti N, ti si n, AL CR N, DLC, cvd AL2 o3. Tìm lớp phủ phù hợp cho người thân của bạn" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/coating-selector/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Coating Selector | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Coating Selector",
+ "url": "https://carbide-tooling.com/tools/coating-selector/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/coating-selector/",
+ "name": "Coating Selector",
+ "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Bộ chọn lớp phủ | công cụ gia công chính xác" property="og:title"/>
+<meta content="Bộ chọn lớp phủ cacbua tương tác cho dụng cụ cắt. So sánh ti N, ti AL n, AL ti N, ti si n, AL CR N, DLC, cvd AL2 o3. Tìm lớp phủ phù hợp cho người thân của bạn" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/coating-selector/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Coating Selector | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Coating Selector",
+ "url": "https://carbide-tooling.com/tools/coating-selector/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/coating-selector/",
+ "name": "Coating Selector",
+ "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Coating SelecĐếnr | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your mater"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/coating-selector/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Coating Selector | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Coating Selector",
-      "url": "https://carbide-tooling.com/vi/tools/coating-selector/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/coating-selector/",
-      "name": "Coating Selector",
-      "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Coating SelecĐếnr | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your mater"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/coating-selector/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Coating Selector | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Coating Selector",
-      "url": "https://carbide-tooling.com/vi/tools/coating-selector/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/coating-selector/",
-      "name": "Coating Selector",
-      "description": "Interactive carbide coating selector for cutting tools. Compare TiN, TiAlN, AlTiN, TiSiN, AlCrN, DLC, CVD Al2O3. Find the right coating for your material and operation.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/coating-selector/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/coating-selector/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/coating-selector/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/coating-selector/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/coating-selector/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/coating-selector/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/coating-selector"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Sản phẩm</a><a href="https://carbide-tooling.com/guides/">Hướng dẫn kỹ thuật</a><a href="https://carbide-tooling.com/about.html">Về chúng tôi</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/coating-selector/">EN</a><span class="sep">|</span><a href="/de/tools/coating-selector/">DE</a><span class="sep">|</span><a href="/jp/tools/coating-selector/">JP</a><span class="sep">|</span><a href="/es/tools/coating-selector/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/coating-selector/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Coating Selector</div>
-<section class="hero"><div class="container"><div class="badge">🧰 Dụng cụ</div><h1>Carbide <span class="accent">Coating Selector</span></h1><p>Select the right PVD or CVD coating based on your material and cutting conditions.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/coating-selector/" rel="canonical"/><link href="https://carbide-tooling.com/tools/coating-selector/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/coating-selector/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/coating-selector/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/coating-selector/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/coating-selector/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/coating-selector/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪Đức</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/coating-selector/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/coating-selector/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/coating-selector/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/coating-selector/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/coating-selector/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Tính chất của thép không gỉ</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Công cụ ước tính thuế vận chuyển</a> <span style="color:#d2d2d6">›</span> Coating Selector</div>
+<section class="hero"><div class="container"><div class="badge">🧰 Tool</div><h1>Vật liệu phôi</h1><p>Hoạt động</p></div></section>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a><a href="/vi/tools/thread-pitch-diameter-calculator/">Thread Pitch Đường kính</a><a href="/vi/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/vi/tools/stainless-properties/">Stainless Steel Properties</a><a href="/vi/tools/shipping-duty-estimator/">Shipping Duty Estimator</a><a href="/vi/tools/grade-reference/">Grade Reference</a><a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao Máy tính</a><a href="/vi/tools/taper-calculator/">Taper Máy tính</a>
-  </div>
+<h3>Nhiệt độ cắt</h3>
+<div class="tool-grid">
+<a href="/tools/die-steel-thermal-conductivity/">Tham chiếu điểm số</a><a href="/tools/thread-pitch-diameter-calculator/">Công cụ tính toán tốc độ và lượng ăn dao</a><a href="/tools/heat-expansion-calculator/">Công cụ tính giảm dần</a><a href="/tools/stainless-properties/">← Tất cả công cụ</a><a href="/tools/shipping-duty-estimator/">Nhận báo giá</a><a href="/tools/grade-reference/">Quyền riêng tư</a><a href="/tools/speed-feed/">trong</a><a href="/tools/taper-calculator/">Xem danh mục →</a>
+</div>
 </section>
-<div class="container"><div class="card"><h2>⚙️ Máy tính</h2><label>Workpiece Vật liệu</label><select id="mat" onchange="select()"><option value="steel">Steel / Alloy</option><option value="ss">Stainless</option><option value="ti">Titanium</option><option value="al">Aluminum</option><option value="inco">Inconel/Superalloys</option><option value="hrc">Hardened >45 HRC</option></select><label>Nguyên công</label><select id="op" onchange="select()"><option value="rough">Roughing</option><option value="finish">Finishing</option></select><input type="number" id="i1" value="10" oninput="calc()"/><label>Cutting Temperature</label><select id="temp" onchange="select()"><option value="low">Low (<500°C)</option><option value="med">Medium (500-800°C)</option><option value="high">High (>800°C)</option></select><input type="number" id="i2" value="100" oninput="calc()"/><div class="res"><div class="res-item"><div class="lbl">Đề xuất Coating</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">Why</div><div class="val" id="r3">—</div></div><div class="res-item"><div class="lbl">Coolant</div><div class="val" id="r1">—</div></div></div></div>
-<div style="text-align:center;margin:24px 0"><a href="/vi/tools/" style="color:#0066cc;font-size:13px">← Tất cả công cụ</a></div></div>
+<div class="container"><div class="card"><h2>Tất cả công cụ</h2><label>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</label><select id="mat" onchange="select()"><option value="steel">Steel / Alloy</option><option value="ss">Stainless</option><option value="ti">Titanium</option><option value="al">Aluminum</option><option value="inco">Inconel/Superalloys</option><option value="hrc">Hardened &gt;45 HRC</option></select><label>©Dụng cụ cắt gọt bằng cacbua năm 2026</label><select id="op" onchange="select()"><option value="rough">Roughing</option><option value="finish">Finishing</option></select><input id="i1" oninput="calc()" type="number" value="10"/><label>Lớp phủ PVD: Ti N, ti AL N, và AL ti N so sánh</label><select id="temp" onchange="select()"><option value="low">Low (&lt;500°C)</option><option value="med">Medium (500-800°C)</option><option value="high">High (&gt;800°C)</option></select><input id="i2" oninput="calc()" type="number" value="100"/><div class="res"><div class="res-item"><div class="lbl">Recommended Coating</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">Why</div><div class="val" id="r3">—</div></div><div class="res-item"><div class="lbl">Coolant</div><div class="val" id="r1">—</div></div></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Tốc độ và Lượng ăn dao</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Tính chất của thép không gỉ</a>
+<a href="/tools/">Lớp phủ PVD (lắng đọng hơi vật lý) được áp dụng ở nhiệt độ thấp hơn (400-500 ° C) và duy trì cấu hình cạnh sắc nét. Ti N (Vàng) là lớp phủ đa năng với tốc độ lên tới 400 sfm. Ti AL N (Violet-Gray) cung cấp khả năng chống oxy hóa đến 800 ° C, lý tưởng cho gia công khô. AL ti N (màu xám đậm) với hàm lượng nhôm cao hơn cung cấp độ cứng vượt trội ở nhiệt độ cao cho các ứng dụng tốc độ cao trên 1,000 sfm.</a>
+<a href="/products/">🇩🇪Đức</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Hướng dẫn về Titan</a>
+<a href="/privacy.html">Phân loại tham chiếu</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Chi phí trên mỗi bộ phận</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Lớp phủ PVD (lắng đọng hơi vật lý) được áp dụng ở nhiệt độ thấp hơn (400-500 ° C) và duy trì cấu hình cạnh sắc nét. Ti N (Vàng) là lớp phủ đa năng với tốc độ lên tới 400 sfm. Ti AL N (Violet-Gray) cung cấp khả năng chống oxy hóa đến 800 ° C, lý tưởng cho gia công khô. AL ti N (màu xám đậm) với hàm lượng nhôm cao hơn cung cấp độ cứng vượt trội ở nhiệt độ cao cho các ứng dụng tốc độ cao trên 1,000 sfm.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Lớp phủ cvd: Lớp dày cho các ứng dụng có độ mòn cao</p>
+<p style="font-size:11px">Lớp phủ cvd (lắng đọng hơi hóa học) được áp dụng ở nhiệt độ cao hơn (1,000 ° C) và tạo ra các lớp dày hơn, chịu mài mòn hơn. Lớp phủ cvd nhiều lớp với Oxit nhôm (alcome o₃) là tiêu chuẩn cho gang và thép quay ở tốc độ cao. Lớp phủ dày hơn mang lại khả năng chống mài mòn tuyệt vời nhưng có thể làm tròn cạnh, làm cho cvd không phù hợp với các ứng dụng cạnh sắc như xâu chuỗi.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>PVD Coatings: TiN, TiAlN, and AlTiN Comparison</h2><p>PVD (Physical Vapor Deposition) coatings are applied at lower temperatures (400–500°C) and maintain a sharp edge profile. TiN (gold) is a general-purpose coating for speeds up to 400 m/phút. TiAlN (violet-gray) offers oxidation resistance to 800°C, ideal for dry machining. AlTiN (dark gray) with higher aluminum content provides superior hardness at elevated temperatures for high-speed applications exceeding 1,000 m/phút.</p>
-<h2>CVD Coatings: Thick Layers for High-Wear Applications</h2><p>CVD (Chemical Vapor Deposition) coatings are applied at higher temperatures (1,000°C) and produce thicker, more wear-resistant layers. Multi-layer CVD coatings with aluminum oxide (Al₂O₃) are the standard for cast iron and steel turning at high speeds. The thicker coating provides excellent crater wear resistance but can cause edge rounding, making CVD unsuitable for sharp-edge applications like threading.</p>
-<h2>Matching Coating to Workpiece Vật liệu</h2><p>For aluminum and non-ferrous materials, uncoated or DLC (Diamond-Like Carbon) tools prevent built-up edge formation. For steels, TiAlN CVD coatings balance wear resistance and toughness. For cast iron, Al₂O₃-coated CVD grades excel. For superalloys, AlTiN PVD coatings with high hardness and oxidation resistance deliver the best tool life in high-temperature cutting.</p>
-<h2>Câu hỏi thường gặp</h2>
+<h2>Lớp phủ phù hợp với vật liệu phôi</h2><p>Đối với vật liệu nhôm và kim loại màu, các công cụ không tráng hoặc DLC (Carbon giống kim cương) ngăn ngừa sự hình thành cạnh tích hợp. Đối với thép, lớp phủ ti AL N cvd cân bằng khả năng chống mài mòn và độ dẻo dai. Đối với gang đúc, lớp cvd được phủ al₂o₃ vượt trội. Đối với các siêu hợp kim, lớp phủ AL ti N PVD có độ cứng cao và khả năng chống oxy hóa mang lại tuổi thọ công cụ tốt nhất trong việc cắt nhiệt độ cao.</p>
+<h2>Câu hỏi thường gặp</h2><p>Tôi có thể phủ lớp phủ PVD một lớp phủ cacbua đã được phủ không? không nên phủ lớp phủ trên lớp phủ hiện có. Lớp bám dính đòi hỏi phải có bề mặt chất nền sạch. Bất kỳ lớp phủ hiện có Nào Cũng Phải được lột trước khi phủ lại, có thể làm hỏng bề mặt cacbua. Luôn áp dụng lớp phủ cho các công cụ cacbua mới, không tráng.</p>
+<h2>Độ dày lớp phủ ảnh hưởng đến hiệu suất của dụng cụ như thế nào? lớp phủ dày hơn (8-15 μm cho cvd) cung cấp khả năng chống mài mòn tốt hơn để cắt liên tục nhưng có thể làm tròn cạnh làm tăng lực cắt. Lớp phủ mỏng hơn (1-4 μm cho PVD) duy trì các cạnh sắc nét hơn để hoàn thiện và xâu chuỗi. Chọn Độ dày lớp phủ dựa trên chế độ hao mòn chính của bạn-độ mòn miệng núi lửa hoặc độ mòn sườn.</h2><p>Lớp phủ DLC có đáng để gia công nhôm không? Vâng, đối với gia công nhôm sản xuất cao, lớp phủ DLC làm giảm ma sát và ngăn chặn cạnh tích tụ, kéo dài tuổi thọ dụng cụ bằng 2-5 × so với cacbua không tráng. Độ bám dính giảm cũng cải thiện tính nhất quán của bề mặt trong suốt quá trình sản xuất dài.</p>
+<h2>⚡Được tính toán cho Dòng sản phẩm Hiệu suất Cao của Carbide-Tooling.com. Xem danh mục →</h2>
 <p><strong>Can I PVD coat an already-coated carbide insert?</strong> No, coating over existing coating is not recommended. The adhesion layer requires a clean substrate surface. Any existing coating must be stripped before re-coating, which can damage the carbide substrate. Always apply coatings to fresh, uncoated carbide tools.</p>
 <p><strong>How does coating thickness affect tool performance?</strong> Thicker coatings (8–15 μm for CVD) provide better crater wear resistance for continuous cutting but can cause edge rounding that increases cutting forces. Thinner coatings (1–4 μm for PVD) maintain sharper edges for finishing and threading. Select coating thickness based on your primary wear mode — crater wear or flank wear.</p>
 <p><strong>Is DLC coating worth the premium for machining aluminum?</strong> Yes, for high-production aluminum machining, DLC coatings reduce friction and prevent built-up edge, extending tool life by 2–5× over uncoated carbide. The reduced adhesion also improves surface finish consistency across long production runs.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Yêu cầu báo giá số lượng lớn →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/coating-selector/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/coating-selector/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/coating-selector/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/coating-selector/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/coating-selector/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/coating-selector/" class="lang-link">中</a>
-</div>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>Sản phẩm</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Hướng dẫn lựa chọn lớp học</a>
+<a href="/tools/hardness-converter/">Chèn yêu cầu tra cứu điểm</a>
+<a href="/tools/tap-drill-size-calculator/">Máy tính bước phay</a>
+<a href="/tools/mrr-calculator/">Công cụ tính trọng lượng ống</a>
+<a href="/tools/feed-converter/">Công cụ tính toán quay tọa độ</a>
+<a href="/tools/surface-roughness-calculator/">Công cụ tính độ lệch của dụng cụ</a>
+<a href="/tools/titanium-machining-guide/">Bù trừ bán kính mũi dao</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Máy tính phay trocôit</a>
+<a href="/tools/cost-per-part-calculator/">Máy tính tốc độ nạp khai thác</a>
+<a href="/tools/torque-unit-converter/">Công cụ tính độ sâu của lỗ vát mép</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Hướng dẫn</h3>
+<p>Về chúng tôi</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Hướng dẫn chọn cấp độ</a><a href="/guides/insert-grade-selection.html">Yêu cầu cấp độ mảnh cắt</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Thư điện tử</a><a href="/guides/insert-grade-selection.html">Insert Grade Inquiry</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/step-milling-calculator/">Step Milling Máy tính</a>
-<a href="/vi/tools/tube-weight-calculator/">Tube Weight Máy tính</a>
-<a href="/vi/tools/coord-rotation-calculator/">Coordinate Rotation Máy tính</a>
-<a href="/vi/tools/tool-runout-calculator/">Dụng cụ Runout Máy tính</a>
-<a href="/vi/tools/nose-radius-compensation/">Nose Radius Compensation</a>
-<a href="/vi/tools/trochoidal-milling-calculator/">Trochoidal Milling Máy tính</a>
-<a href="/vi/tools/tapping-feed-rate-calculator/">Tapping Lượng chạy dao Rate Máy tính</a>
-<a href="/vi/tools/countersink-depth-calculator/">Countersink Chiều sâu cắt Máy tính</a>
-
-  </div>
+<h3>Nhiệt độ cắt</h3>
+<div class="tool-grid">
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/tube-weight-calculator/">Tube Weight Calculator</a>
+<a href="/tools/coord-rotation-calculator/">Coordinate Rotation Calculator</a>
+<a href="/tools/tool-runout-calculator/">Tool Runout Calculator</a>
+<a href="/tools/nose-radius-compensation/">Nose Radius Compensation</a>
+<a href="/tools/trochoidal-milling-calculator/">Trochoidal Milling Calculator</a>
+<a href="/tools/tapping-feed-rate-calculator/">Tapping Lượng chạy dao Rate Calculator</a>
+<a href="/tools/countersink-depth-calculator/">Countersink Depth Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/coating-selector/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/coating-selector/&text=Coating Selector" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Coating Selector&body=Check this out: https://carbide-tooling.com/vi/tools/coating-selector/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/coating-selector/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/coating-selector/&amp;text=Coating Selector" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Coating Selector&amp;body=Check this out: https://carbide-tooling.com/tools/coating-selector/">Email</a>
 </div>
-
 </body></html>

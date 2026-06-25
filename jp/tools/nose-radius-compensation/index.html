@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nose Radius Compensation | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" id="meta-desc" content="Free online tool nose radius compensation calculator for CNC lathes. 計算 X and Z compensation values for turning radii and chamfers with G41/G42." />
-<meta property="og:title" content="工具 Nose Radius Compensation 計算機 — Carbide 工具ing" />
-<meta property="og:description" content="計算 nose radius compensation for CNC turning. Determine correct G41/G42 values for radii, chamfers, and tapers." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/nose-radius-compensation/" />
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>鼻半径補償 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="CNC旋盤用の無料のオンラインツール鼻半径補償計算機。回転半径と面取りのXとZの補正値をG41/G42で計算します。" id="meta-desc" name="description"/>
+<meta content="ツール鼻半径補償計算機-カーバイドツーリング" property="og:title"/>
+<meta content="CNCターニングの鼻半径補正を計算します。半径、面取り、テーパーの正しいG41/G42値を決定します。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://carbide-tooling.com/tools/nose-radius-compensation/" property="og:url"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -67,10 +68,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}
 footer a{color:#0066cc;text-decoration:none}
 @media(max-width:768px){
-  .hero h1{font-size:32px}
-  .result-grid{grid-template-columns:1fr 1fr}
-  .card{padding:20px 16px}
-  .card-row{grid-template-columns:1fr}
+ .hero h1{font-size:32px}
+ .result-grid{grid-template-columns:1fr 1fr}
+ .card{padding:20px 16px}
+ .card-row{grid-template-columns:1fr}
 }
 .lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
@@ -81,364 +82,350 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Nose Radius Compensation | Precision Machining Tool"/>
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/nose-radius-compensation/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Nose Radius Compensation | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="鼻半径補償 | 精密加工ツール" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/nose-radius-compensation/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Nose Radius Compensation | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Nose Radius Compensation",
-      "url": "https://carbide-tooling.com/jp/tools/nose-radius-compensation/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Nose Radius Compensation for CNC machining",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/nose-radius-compensation/",
-      "name": "Nose Radius Compensation",
-      "description": "Nose Radius Compensation for CNC machining",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is nose radius compensation in CNC turning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It's the adjustment of the programmed tool path to account for the insert's nose radius. Without it, angled surfaces (chamfers, radii, tapers) are cut undersize by an amount proportional to the nose radius and the surface angle."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When do I use G41 vs G42?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "G42 (tool right of contour) for OD turning. G41 (tool left of contour) for ID boring. On most lathes, OD roughing and finishing use G42. Facing and back-turning may reverse the direction depending on tool orientation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much error does a 0.8 mm nose radius cause on a 45° chamfer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Approximately 0.47 mm in diameter (X) and 0.23 mm in length (Z). This calculator shows the exact values for your specific parameters."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I skip compensation for small chamfers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For chamfers under 0.5 mm wide with tolerances of ±0.1 mm, the uncompensated error may be acceptable. For any chamfer over 0.5 mm or any chamfer with a tolerance tighter than ±0.05 mm, compensation is required to hold the dimension."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does tool holder orientation affect compensation values?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Standard OD turning with a right-hand tool (cutting toward the headstock) uses the values shown here. Left-hand tools, back-turning tools, and tools with non-standard approach angles require different compensation vectors. Most CAM systems handle these variations automatically."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Nose Radius Compensation",
+ "url": "https://carbide-tooling.com/tools/nose-radius-compensation/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Nose Radius Compensation for CNC machining",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/nose-radius-compensation/",
+ "name": "Nose Radius Compensation",
+ "description": "Nose Radius Compensation for CNC machining",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is nose radius compensation in CNC turning?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "It's the adjustment of the programmed tool path to account for the insert's nose radius. Without it, angled surfaces (chamfers, radii, tapers) are cut undersize by an amount proportional to the nose radius and the surface angle."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "When do I use G41 vs G42?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "G42 (tool right of contour) for OD turning. G41 (tool left of contour) for ID boring. On most lathes, OD roughing and finishing use G42. Facing and back-turning may reverse the direction depending on tool orientation."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How much error does a 0.8 mm nose radius cause on a 45° chamfer?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Approximately 0.47 mm in diameter (X) and 0.23 mm in length (Z). This calculator shows the exact values for your specific parameters."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I skip compensation for small chamfers?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For chamfers under 0.5 mm wide with tolerances of ±0.1 mm, the uncompensated error may be acceptable. For any chamfer over 0.5 mm or any chamfer with a tolerance tighter than ±0.05 mm, compensation is required to hold the dimension."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does tool holder orientation affect compensation values?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. Standard OD turning with a right-hand tool (cutting toward the headstock) uses the values shown here. Left-hand tools, back-turning tools, and tools with non-standard approach angles require different compensation vectors. Most CAM systems handle these variations automatically."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/nose-radius-compensation/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/nose-radius-compensation/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/nose-radius-compensation/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/nose-radius-compensation/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/nose-radius-compensation/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/nose-radius-compensation"/>
-</head>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/" rel="canonical"/><link href="https://carbide-tooling.com/tools/nose-radius-compensation/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/nose-radius-compensation/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/nose-radius-compensation/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/nose-radius-compensation/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/nose-radius-compensation/" hreflang="en" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-  <div class="nav-left">
-    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
-    <div class="nav-links">
-      <a href="https://carbide-tooling.com/products/">製品</a>
-      <a href="https://carbide-tooling.com/guides/">技術ガイド</a>
-      <a href="https://carbide-tooling.com/about.html">会社概要</a>
-    </div>
-  </div>
-  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/nose-radius-compensation/">EN</a><span class="sep">|</span><a href="/de/tools/nose-radius-compensation/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/nose-radius-compensation/">ES</a><span class="sep">|</span><a href="/vi/tools/nose-radius-compensation/">VI</a><span class="sep">|</span><a href="/zh/tools/nose-radius-compensation/">中</a></div>
+<div class="nav-left">
+<a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="https://carbide-tooling.com/products/">製品</a>
+<a href="https://carbide-tooling.com/guides/">ガイド</a>
+<a href="https://carbide-tooling.com/about.html">について</a>
 </div>
-</nav>
-
+</div>
+<a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩見積もりを取得する</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/nose-radius-compensation/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/nose-radius-compensation/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/nose-radius-compensation/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/nose-radius-compensation/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/nose-radius-compensation/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <section class="hero">
 <div class="container">
-  <div class="badge">📐 Free Professional 工具</div>
-  <h1>工具 Nose Radius <span class="accent">Compensation</span></h1>
-  <p>計算 X and Z compensation values for CNC lathe turning operations. Generate correct G41/G42 offsets for radii, chamfers, and tapered surfaces.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#calculator">Start Calculating ↓</a>
-    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
-  </div>
+<div class="badge">📐 Free Professional Tool</div>
+<h1>ツール鼻半径補償</h1>
+<p>CNC旋盤回転操作のXおよびZ補正値を計算します。半径、面取り、テーパー面に対して正しいG41/G42オフセットを生成します。</p>
+<div class="hero-actions">
+<a class="btn" href="#calculator">計算を開始する ↓</a>
+<a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩精度に関するお見積りを取得する</a>
+</div>
 </div>
 </section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
+<section class="container" id="calculator" style="padding-bottom:40px">
 <div class="card">
-  <h2>📐 Nose Radius Compensation</h2>
-  <p class="sub">For CNC lathe G41/G42 tool path correction. 結果s update in real time.</p>
-
-  <div class="card-row">
-    <div class="field"><label>🔘 Nose Radius (mm)</label>
-      <input type="number" id="radius" value="0.8" min="0.05" max="6" step="0.05" oninput="calc()" />
-    </div>
-    <div class="field"><label>🔧 Cutting Direction</label>
-      <select id="direction" onchange="calc()">
-        <option value="od">OD Turning — G42 (right of cut)</option>
-        <option value="id">ID Boring — G41 (left of cut)</option>
-        <option value="face">Facing — G42</option>
-      </select>
-    </div>
-    <div class="field"><label>📐 Surface Angle α (°)</label>
-      <input type="number" id="angle" value="45" min="0" max="90" step="1" oninput="calc()" />
-      <span style="font-size:10px;color:#86868b">0° = straight turning, 90° = facing</span>
-    </div>
-    <div class="field"><label>🎯 Profile Feature</label>
-      <select id="feature" onchange="calc()">
-        <option value="chamfer">Chamfer / Taper</option>
-        <option value="radius">Radius (convex)</option>
-        <option value="radius-concave">Radius (concave / internal)</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="result-grid">
-    <div class="result-item"><div class="label">X-axis Compensation</div><div class="value" id="r-xcomp">—</div><div class="unit">mm (diametral)</div></div>
-    <div class="result-item"><div class="label">Z-axis Compensation</div><div class="value" id="r-zcomp">—</div><div class="unit">mm</div></div>
-    <div class="result-item"><div class="label">G Code</div><div class="value" id="r-gcode">—</div><div class="unit">ISO 6983</div></div>
-    <div class="result-item"><div class="label">Compensated Radius</div><div class="value" id="r-comp-rad">—</div><div class="unit">mm</div></div>
-  </div>
-
-  <div class="extra-info">
-    <span>Uncompensated error at this angle: <span class="val" id="x-error">—</span> mm</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Virtual tip offset: <span class="val" id="x-offset">—</span> mm</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Suggested TNR (for next run): <span class="val" id="x-tnr">—</span> mm</span>
-  </div>
+<h2>📐ノーズ半径補正</h2>
+<p class="sub">CNC旋盘G41/G42ツールパス補正用。結果をリアルタイムで更新します。</p>
+<div class="card-row">
+<div class="field"><label>🔘鼻の半径 (mm)</label>
+<input id="radius" max="6" min="0.05" oninput="calc()" step="0.05" type="number" value="0.8"/>
 </div>
-
+<div class="field"><label>🔧切削方向</label>
+<select id="direction" onchange="calc()">
+<option value="od">OD Turning — G42 (right of cut)</option>
+<option value="id">ID Boring — G41 (left of cut)</option>
+<option value="face">Facing — G42</option>
+</select>
+</div>
+<div class="field"><label>📐表面角度 α (°)</label>
+<input id="angle" max="90" min="0" oninput="calc()" step="1" type="number" value="45"/>
+<span style="font-size:10px;color:#86868b">0° = straight turning, 90° = facing</span>
+</div>
+<div class="field"><label>🎯プロフィールの特徴</label>
+<select id="feature" onchange="calc()">
+<option value="chamfer">Chamfer / Taper</option>
+<option value="radius">Radius (convex)</option>
+<option value="radius-concave">Radius (concave / internal)</option>
+</select>
+</div>
+</div>
+<div class="result-grid">
+<div class="result-item"><div class="label">X-axis Compensation</div><div class="value" id="r-xcomp">—</div><div class="unit">mm (diametral)</div></div>
+<div class="result-item"><div class="label">Z-axis Compensation</div><div class="value" id="r-zcomp">—</div><div class="unit">mm</div></div>
+<div class="result-item"><div class="label">G Code</div><div class="value" id="r-gcode">—</div><div class="unit">ISO 6983</div></div>
+<div class="result-item"><div class="label">Compensated Radius</div><div class="value" id="r-comp-rad">—</div><div class="unit">mm</div></div>
+</div>
+<div class="extra-info">
+<span>Uncompensated error at this angle: <span class="val" id="x-error">—</span> mm</span>
+<span style="color:#d2d2d6">|</span>
+<span>Virtual tip offset: <span class="val" id="x-offset">—</span> mm</span>
+<span style="color:#d2d2d6">|</span>
+<span>Suggested TNR (for next run): <span class="val" id="x-tnr">—</span> mm</span>
+</div>
+</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
-  <a href="/jp/tools/surface-roughness-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
-    <div style="font-size:20px">🔬</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Surface Roughness 計算機</h4>
-    <p style="font-size:12px;color:#86868b">Nose radius directly affects surface finish.</p>
-  </a>
-  <a href="/jp/tools/cycle-time-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
-    <div style="font-size:20px">⏱️</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Cycle Time 計算機</h4>
-    <p style="font-size:12px;color:#86868b">Estimate turning time with compensated tool paths.</p>
-  </a>
+<a href="/tools/surface-roughness-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
+<div style="font-size:20px">🔬</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">表面粗さ計算ツール</h4>
+<p style="font-size:12px;color:#86868b">鼻の半径は表面仕上げに直接影響します。</p>
+</a>
+<a href="/tools/cycle-time-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
+<div style="font-size:20px">⏱️</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">サイクルタイム計算機</h4>
+<p style="font-size:12px;color:#86868b">補償されたツールパスで回転時間を推定します。</p>
+</a>
 </div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">ホーム</a>
+<a href="/tools/">すべてのツール</a>
+<a href="/products/">製品</a>
+<a href="/guides/">ガイド</a>
+<a href="/about.html">について</a>
+<a href="/quote.html">硬度変換器</a>
+<a href="/privacy.html">タップ穴径</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/nose-radius-compensation/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/nose-radius-compensation/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/nose-radius-compensation/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/nose-radius-compensation/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/nose-radius-compensation/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">MRR計算ツール</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">すべてのツール</a></p>
+<p style="font-size:11px;margin-bottom:6px">結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</p>
+<p style="font-size:11px">©2026年用超硬工具</p>
 </div>
 </footer>
-
 <script>
 function calc() {
-  const r = parseFloat(document.getElementById('radius').value) || 0.8;
-  const dir = document.getElementById('direction').value;
-  const angle = parseFloat(document.getElementById('angle').value) || 45;
-  const feature = document.getElementById('feature').value;
-  const aRad = angle * Math.PI / 180;
+ const r = parseFloat(document.getElementById('radius').value) || 0.8;
+ const dir = document.getElementById('direction').value;
+ const angle = parseFloat(document.getElementById('angle').value) || 45;
+ const feature = document.getElementById('feature').value;
+ const aRad = angle * Math.PI / 180;
 
-  // Basic compensation values for a chamfer/taper
-  // ΔX (diametral) = 2 * R * (1 - cos(α))
-  // ΔZ = R * (1 - sin(α))
-  let xComp = 2 * r * (1 - Math.cos(aRad));
-  let zComp = r * (1 - Math.sin(aRad));
+ // Basic compensation values for a chamfer/taper
+ // ΔX (diametral) = 2 * R * (1 - cos(α))
+ // ΔZ = R * (1 - sin(α))
+ let xComp = 2 * r * (1 - Math.cos(aRad));
+ let zComp = r * (1 - Math.sin(aRad));
 
-  // For radius features, the compensation is the full radius
-  if (feature === 'radius') {
-    xComp = 2 * r;
-    zComp = r;
-  } else if (feature === 'radius-concave') {
-    xComp = -2 * r;
-    zComp = -r;
-  }
+ // For radius features, the compensation is the full radius
+ if (feature === 'radius') {
+ xComp = 2 * r;
+ zComp = r;
+ } else if (feature === 'radius-concave') {
+ xComp = -2 * r;
+ zComp = -r;
+ }
 
-  // Determine G-code
-  let gcode = dir === 'id' ? 'G41' : 'G42';
+ // Determine G-code
+ let gcode = dir === 'id' ? 'G41' : 'G42';
 
-  // Compensated radius for radius features
-  let compRad = 0;
-  if (feature === 'radius') {
-    compRad = parseFloat(document.getElementById('angle').value) - r;
-  } else if (feature === 'radius-concave') {
-    compRad = parseFloat(document.getElementById('angle').value) + r;
-  }
+ // Compensated radius for radius features
+ let compRad = 0;
+ if (feature === 'radius') {
+ compRad = parseFloat(document.getElementById('angle').value) - r;
+ } else if (feature === 'radius-concave') {
+ compRad = parseFloat(document.getElementById('angle').value) + r;
+ }
 
-  // Uncompensated error at the tip (the distance between programmed and actual)
-  const error = r - (r * Math.cos(aRad));
+ // Uncompensated error at the tip (the distance between programmed and actual)
+ const error = r - (r * Math.cos(aRad));
 
-  // Virtual tip offset from center of radius
-  const offset = r * Math.SQRT2;
+ // Virtual tip offset from center of radius
+ const offset = r * Math.SQRT2;
 
-  // Suggested TNR for this angle - max radius that keeps error under 0.05mm
-  const maxAllowedError = 0.05;
-  const suggestedTnr = error > 0 ? Math.min(2.4, Math.max(0.2, r * (maxAllowedError / error))) : r;
+ // Suggested TNR for this angle - max radius that keeps error under 0.05mm
+ const maxAllowedError = 0.05;
+ const suggestedTnr = error > 0 ? Math.min(2.4, Math.max(0.2, r * (maxAllowedError / error))) : r;
 
-  document.getElementById('r-xcomp').textContent = xComp.toFixed(3);
-  document.getElementById('r-zcomp').textContent = zComp.toFixed(3);
-  document.getElementById('r-gcode').textContent = gcode;
-  document.getElementById('r-comp-rad').textContent = compRad > 0 ? compRad.toFixed(2) : 'N/A';
-  document.getElementById('x-error').textContent = error.toFixed(3);
-  document.getElementById('x-offset').textContent = offset.toFixed(2);
-  document.getElementById('x-tnr').textContent = suggestedTnr.toFixed(2);
+ document.getElementById('r-xcomp').textContent = xComp.toFixed(3);
+ document.getElementById('r-zcomp').textContent = zComp.toFixed(3);
+ document.getElementById('r-gcode').textContent = gcode;
+ document.getElementById('r-comp-rad').textContent = compRad > 0 ? compRad.toFixed(2) : 'N/A';
+ document.getElementById('x-error').textContent = error.toFixed(3);
+ document.getElementById('x-offset').textContent = offset.toFixed(2);
+ document.getElementById('x-tnr').textContent = suggestedTnr.toFixed(2);
 }
 
 calc();
 </script>
 <section class="seo-content">
 <div class="container">
-
-  <h2>What Nose Radius Compensation Does to Your 工具 Path</h2>
-  <p>CNC lathe programmers specify tool position using the theoretical sharp tip of the insert. But real inserts have a radius — typically 0.2 to 2.4 mm. When cutting straight diameters or faces, this radius makes no difference. The moment you cut a chamfer, radius, or taper, the actual cutting point shifts along the radius, and the programmed sharp-tip path no longer matches the actual cut surface. The mismatch can be 0.2 mm or more — enough to scrap a precision part.</p>
-  <p>Nose radius compensation (G41/G42 in ISO code) adjusts the tool path by the nose radius so the actual cutting edge follows the programmed contour. This calculator computes the X and Z compensation values for any combination of nose radius, surface angle, and cutting direction.</p>
-
-  <h2>The Geometry of Nose Radius Compensation</h2>
-  <p>The cutting point on a round-nose insert moves along the nose radius as the surface angle changes. For a surface at angle α from the spindle axis:</p>
-  <p><code>ΔX = 2 × R × (1 − cos α)</code> (diametral)<br/>
-  <code>ΔZ = R × (1 − sin α)</code></p>
-  <p>Where R is the nose radius and α is the surface angle (0° for turning, 90° for facing). For a 45° chamfer with a 0.8 mm nose radius: ΔX = 0.47 mm, ΔZ = 0.23 mm. Without compensation, the chamfer would be undersized by nearly half a millimeter in diameter.</p>
-
-  <div class="fig">
-    <span class="label">Nose radius compensation geometry for a 45° chamfer. The shaded area shows material not removed without compensation.</span>
-  </div>
-
-  <h2>G41 and G42: When to Use Each</h2>
-  <p>G42 activates cutter radius compensation with the tool to the right of the programmed path. For OD turning (tool cutting on the front of the part, moving left to right), use G42. For ID boring (tool cutting on the back wall, moving left to right), use G41 — the tool is to the left of the cut. Getting this backward doubles the compensation error instead of correcting it.</p>
-  <p>Most CAM systems handle G41/G42 automatically. For manual programming, a simple rule: G42 for OD operations, G41 for ID operations. The calculator above defaults to OD/Direction and shows the correct G-code for your setup.</p>
-
-  <h2>Why the Virtual Tip Never Matches the Actual Cut</h2>
-  <p>The "virtual tool tip" — the intersection point of the tool's two theoretical straight edges — is a mathematical convenience that exists nowhere on the actual tool. Every insert has a radius that connects the side and front cutting edges. The virtual tip sits inside the radius, offset from the actual cutting edge by (R × √2) in both X and Z. When you program using the virtual tip without compensation, every angled surface is machined undersize.</p>
-  <p>This offset is constant for a given nose radius, which is why G41/G42 only needs to know the radius value in the tool offset register. The control calculates the compensation geometrically based on the instantaneous surface angle of the programmed path.</p>
-
-  <h2>Compensation for Internal vs. External Profiles</h2>
-  <p>For convex radii (external corners), the compensation increases the tool path radius by the nose radius. For concave radii (internal corners), the path radius decreases by the nose radius. Both cases produce the correct part profile — but the internal case is more critical because insufficient compensation causes the tool to gouge the internal corner.</p>
-  <p>On internal radii, always verify that the compensated path radius is positive. If the nose radius exceeds the programmed corner radius, the control cannot maintain the contour and generates an error or a sharp corner. A 0.8 mm nose radius cannot reproduce a 0.5 mm internal corner — the smallest programmable internal radius equals the nose radius plus a safety margin.</p>
-
-  <h2>How Nose Radius Affects Taper Turning</h2>
-  <p>When turning a taper, the uncompensated error has both X and Z components that vary with the taper angle. The error in the X direction is most critical because it's doubled (diametral measurement). A 10° taper with a 1.2 mm nose radius produces a diametral error of approximately 0.02 mm — negligible for most work. A 60° taper with the same radius produces a 0.6 mm error — catastrophic for any precision fit.</p>
-  <p>The tool's approach direction also matters. Right-hand tools with the cutting edge oriented toward the headstock behave differently in compensation than left-hand tools. Tools with a 90° approach angle (standard OD turning) use the compensation values shown in this calculator; tools with 45° or 75° approach angles require modified values.</p>
-
-  <h2>Practical Compensation Limits</h2>
-  <p>Standard insert nose radii are 0.2, 0.4, 0.8, 1.2, 1.6, and 2.4 mm. The smallest radius that can produce a given internal corner is equal to the corner radius. For external corners, there is no lower limit — any nose radius can produce any external corner, though larger radii require more compensation.</p>
-  <p>For general turning, a 0.8 mm nose radius offers the best balance of edge strength, surface finish capability, and compensation range. For finishing work requiring precise internal radii under 1.0 mm, switch to a 0.4 mm radius insert. The <a href="/jp/tools/surface-roughness-calculator/" style="color:#0066cc">Surface Roughness 計算機</a> helps quantify the surface finish trade-off when switching to a smaller nose radius.</p>
-
-  <h2>よくある質問</h2>
-  <p><strong>What is nose radius compensation in CNC turning?</strong> It's the adjustment of the programmed tool path to account for the insert's nose radius. Without it, angled surfaces (chamfers, radii, tapers) are cut undersize by an amount proportional to the nose radius and the surface angle.</p>
-  <p><strong>When do I use G41 vs G42?</strong> G42 (tool right of contour) for OD turning. G41 (tool left of contour) for ID boring. On most lathes, OD roughing and finishing use G42. Facing and back-turning may reverse the direction depending on tool orientation.</p>
-  <p><strong>How much error does a 0.8 mm nose radius cause on a 45° chamfer?</strong> Approximately 0.47 mm in diameter (X) and 0.23 mm in length (Z). This calculator shows the exact values for your specific parameters.</p>
-  <p><strong>Can I skip compensation for small chamfers?</strong> For chamfers under 0.5 mm wide with tolerances of ±0.1 mm, the uncompensated error may be acceptable. For any chamfer over 0.5 mm or any chamfer with a tolerance tighter than ±0.05 mm, compensation is required to hold the dimension.</p>
-  <p><strong>Does tool holder orientation affect compensation values?</strong> Yes. Standard OD turning with a right-hand tool (cutting toward the headstock) uses the values shown here. Left-hand tools, back-turning tools, and tools with non-standard approach angles require different compensation vectors. Most CAM systems handle these variations automatically.</p>
-  <p><strong>How does nose radius compensation interact with tool wear?</strong> As the nose radius wears, the effective radius increases, and the compensation becomes progressively less accurate. When tool wear causes the actual radius to change by more than 0.05 mm, the compensated path no longer produces the correct profile. This is detectable as a gradual shift in chamfer dimensions or corner radii over the life of the insert.</p>
-
-  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
-    <p style="margin:0">For inserts with consistent nose radius tolerances, check our High-Performance End Mills</p>
-  </div>
+<h2>鼻半径の補償がツールパスに何をするか</h2>
+<p>CNC旋盤プログラマーは、インサートの理論上の鋭い先端を使用してツールの位置を指定します。ただし、実際のインサートには半径があります (通常は0.2〜2.4mm)。まっすぐな直径または面を切断する場合、この半径に違いはありません。面取り、半径、またはテーパーを切断した瞬間、実際の切断点は半径に沿って移動し、プログラムされた鋭い先端経路は実際の切断面と一致しなくなります。ミスマッチは0.2mm以上にすることができます-精密部品を廃棄するのに十分です。</p>
+<p>鼻半径補正 (ISOコードではG41/G42) は、実際の刃先がプログラムされた輪郭に従うように、鼻半径によってツールパスを調整します。この計算機は、鼻の半径、表面の角度、および切断方向の任意の組み合わせのXおよびZ補正値を計算します。</p>
+<h2>鼻半径補償の幾何学</h2>
+<p>丸い鼻のインサートの切断点は、表面の角度が変化するにつれて鼻の半径に沿って移動します。スピンドル軸からの角度 α の表面の場合:</p>
+<p><code>ΔX = 2 × R × (1 − cos α)</code> (diametral)<br/>
+<code>ΔZ = R × (1 − sin α)</code></p>
+<p>ここで、Rは鼻の半径であり、 α は表面の角度です (回転の場合は0 ° 、向きの場合は90 °)。鼻半径0.8mmの45 ° の面取りの場合: Δ X = 0.47mm、 Δ Z = 0.23mm。補償がなければ、面取りの直径は約0.5ミリメートル小さくなります。</p>
+<div class="fig">
+<span class="label">Nose radius compensation geometry for a 45° chamfer. The shaded area shows material not removed without compensation.</span>
+</div>
+<h2>G41とG42: それぞれを使用するとき</h2>
+<p>G42は、プログラムされたパスの右側にあるツールでカッター半径補正をアクティブにします。ODターニング (部品前面の工具切断、左から右への移動) には、G42を使用します。IDボーリング (後壁のツールカット、左から右への移動) には、G41を使用します-ツールはカットの左側にあります。これを逆方向にすると、修正する代わりに補償エラーが2倍になります。</p>
+<p>ほとんどのCAMシステムはG41/G42を自動的に処理します。手動プログラミングの場合、簡単なルール: OD操作用のG42、ID操作用のG41。上記の計算機はデフォルトでOD/Directionになり、セットアップに適したGコードが表示されます。</p>
+<h2>仮想チップが実際のカットと一致しない理由</h2>
+<p>「仮想ツールチップ」 (ツールの2つの理論上の直線エッジの交点) は、実際のツールのどこにも存在しない数学的な利便性です。すべてのインサートには、サイドとフロントのカッティングエッジを接続する半径があります。仮想チップは半径の内側にあり、XとZの両方で実際の刃先から (R × √ 2) オフセットされています。補償なしで仮想チップを使用してプログラムすると、すべての角度の付いた表面が機械加工されているサイズが小さくなります。</p>
+<p>このオフセットは、与えられたノーズ半径に対して一定であるため、G41/G42はツールオフセットレジスタの半径値のみを知る必要があります。制御は、プログラムされた経路の瞬間的な表面角度に基づいて幾何学的に補償を計算します。</p>
+<h2>内部プロファイルと外部プロファイルの報酬</h2>
+<p>凸半径 (外部コーナー) の場合、補正によりツールパスの半径がノーズ半径だけ増加します。凹状半径 (内部コーナー) の場合、経路半径は鼻半径だけ減少します。どちらのケースも正しい部品プロファイルを生成しますが、補償が不十分なためにツールが内部コーナーを削るため、内部ケースがより重要です。</p>
+<p>内部半径では、常に補償されたパス半径が正であることを確認します。ノーズ半径がプログラムされたコーナー半径を超えると、コントロールは輪郭を維持できず、エラーまたは鋭いコーナーを生成します。0.8mmの鼻半径は0.5mmの内部コーナーを再現できません。プログラム可能な最小の内部半径は、鼻半径と安全マージンに等しくなります。</p>
+<h2>鼻の半径がテーパーの回転にどのように影響するか</h2>
+<p>テーパーを回すとき、補償されていないエラーには、テーパー角度によって変化するX成分とZ成分の両方があります。X方向の誤差は2倍になっているため、最も重要です (直径測定)。鼻半径1.2mmの10 ° テーパーは、約0.02mmの直径誤差を生成します。これは、ほとんどの作業ではごくわずかです。同じ半径の60 ° テーパーは、0.6mmの誤差を生成します。これは、あらゆる精度の適合に対して壊滅的です。</p>
+<p>ツールのアプローチ方向も重要です。ヘッドストックに向けられた最先端のツールは、左側のツールとは補償の動作が異なります。アプローチ角度が90 ° のツール (標準のODターニング) は、この計算機に示されている補償値を使用します。45 ° または75 ° のアプローチ角度のツールには、値を変更する必要があります。</p>
+<h2>実用的な報酬の制限</h2>
+<p>標準の挿入鼻半径は0.2、0.4、0.8、1.2、1.6、および2.4mmです。特定の内部コーナーを生成できる最小の半径は、コーナー半径に等しくなります。外部コーナーの場合、下限はありません。半径が大きいほど、より多くの補償が必要になりますが、鼻の半径があれば、任意の外部コーナーを生成できます。</p>
+<p>For general turning, a 0.8 mm nose radius offers the best balance of edge strength, surface finish capability, and compensation range. For finishing work requiring precise internal radii under 1.0 mm, switch to a 0.4 mm radius insert. The <a href="/tools/surface-roughness-calculator/" style="color:#0066cc">表面粗さ計算ツール</a> helps quantify the surface finish trade-off when switching to a smaller nose radius.</p>
+<h2>よくある質問</h2>
+<p><strong>What is nose radius compensation in CNC turning?</strong> It's the adjustment of the programmed tool path to account for the insert's nose radius. Without it, angled surfaces (chamfers, radii, tapers) are cut undersize by an amount proportional to the nose radius and the surface angle.</p>
+<p><strong>When do I use G41 vs G42?</strong> G42 (tool right of contour) for OD turning. G41 (tool left of contour) for ID boring. On most lathes, OD roughing and finishing use G42. Facing and back-turning may reverse the direction depending on tool orientation.</p>
+<p><strong>How much error does a 0.8 mm nose radius cause on a 45° chamfer?</strong> Approximately 0.47 mm in diameter (X) and 0.23 mm in length (Z). This calculator shows the exact values for your specific parameters.</p>
+<p><strong>Can I skip compensation for small chamfers?</strong> For chamfers under 0.5 mm wide with tolerances of ±0.1 mm, the uncompensated error may be acceptable. For any chamfer over 0.5 mm or any chamfer with a tolerance tighter than ±0.05 mm, compensation is required to hold the dimension.</p>
+<p><strong>Does tool holder orientation affect compensation values?</strong> Yes. Standard OD turning with a right-hand tool (cutting toward the headstock) uses the values shown here. Left-hand tools, back-turning tools, and tools with non-standard approach angles require different compensation vectors. Most CAM systems handle these variations automatically.</p>
+<p><strong>How does nose radius compensation interact with tool wear?</strong> As the nose radius wears, the effective radius increases, and the compensation becomes progressively less accurate. When tool wear causes the actual radius to change by more than 0.05 mm, the compensated path no longer produces the correct profile. This is detectable as a gradual shift in chamfer dimensions or corner radii over the life of the insert.</p>
+<div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
+<p style="margin:0">鼻半径公差が一貫しているインサートについては、高性能エンドミルを確認してください</p>
+</div>
 </div>
 </section>
-<div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<div class="toolbox-widget"><h3>🔧精密工学ツールボックス</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">チタンガイド</a>
+<a href="/tools/hardness-converter/">グレード相互参照</a>
+<a href="/tools/tap-drill-size-calculator/">部品当たりのコスト</a>
+<a href="/tools/mrr-calculator/">トルクコンバーター</a>
+<a href="/tools/feed-converter/">一括見積もりを依頼する →</a>
+<a href="/tools/surface-roughness-calculator/">ソリッドカーバイドエンドミル</a>
+<a href="/tools/titanium-machining-guide/">工具ホルダー</a>
+<a href="/tools/carbide-grade-cross-ref-2/">アルミ合金製テーブル</a>
+<a href="/tools/cost-per-part-calculator/">接点計算機</a>
+<a href="/tools/torque-unit-converter/">引張強度変換器</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>専門的なツールが必要ですか？</h3>
+<p>工場直送価格、最適化された超硬材種、そして迅速な技術サポートを、すべてワンストップでご提供します。</p>
+</div>
+<a class="b2b-btn" href="/quote.html">チタン加工ガイド</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/tool-holders.html">ツールホルダー</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">ステップミリング計算ツール</a><a href="/products/tool-holders.html">リーミング余裕量計算ツール</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/aluminum-alloy-table/">Aluminum Alloy Table</a>
-<a href="/jp/tools/tangent-point-calculator/">Tangent Point 計算機</a>
-<a href="/jp/tools/tensile-strength-converter/">Tensile Strength 換算</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium Machining ガイド</a>
-<a href="/jp/tools/step-milling-calculator/">Step Milling 計算機</a>
-<a href="/jp/tools/reaming-allowance-calculator/">Reaming Allowance 計算機</a>
-<a href="/jp/tools/weight-shipping-calculator/">Weight & Shipping 計算機</a>
-<a href="/jp/tools/pomodoro-timer/">Pomodoro Timer</a>
-
-  </div>
+<h3>🔧100種類のプロ向け切削工具をチェック</h3>
+<div class="tool-grid">
+<a href="/tools/aluminum-alloy-table/">重量・送料計算ツール</a>
+<a href="/tools/tangent-point-calculator/">ポモドーロタイマー</a>
+<a href="/tools/tensile-strength-converter/">リンクドイン</a>
+<a href="/tools/titanium-machining-guide/">電子メール</a>
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/reaming-allowance-calculator/">Reaming Allowance Calculator</a>
+<a href="/tools/weight-shipping-calculator/">Weight &amp; Shipping Calculator</a>
+<a href="/tools/pomodoro-timer/">Pomodoro Timer</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/nose-radius-compensation/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/nose-radius-compensation/&text=Nose Radius Compensation" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Nose Radius Compensation&body=Check this out: https://carbide-tooling.com/jp/tools/nose-radius-compensation/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/nose-radius-compensation/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/nose-radius-compensation/&amp;text=Nose Radius Compensation" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Nose Radius Compensation&amp;body=Check this out: https://carbide-tooling.com/tools/nose-radius-compensation/">Email</a>
 </div>
-
 </body>
 </html>

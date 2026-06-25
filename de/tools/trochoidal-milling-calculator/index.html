@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trochoidal Milling Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" id="meta-desc" content="Free online trochoidal milling calculator. Berechnen speeds, feeds, and stepover for high-efficiency peel milling. Maximize MRR with constant chip load trochoidal toolpaths." />
-<meta property="og:title" content="Trochoidal Milling Rechner — Carbide Werkzeuging" />
-<meta property="og:description" content="Optimize trochoidal milling parameters. Berechnen effective feed rates, chip thinning, and MRR for high-speed peel milling toolpaths." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" />
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Troch oidal Fräs rechner | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Kostenloser Online-Troch oidal Fräs rechner. Berechnen Sie Geschwindigkeiten, Vorschubs und Stepover für hoch effizientes Schäl fräsen. Maximieren Sie MRR mit troch oidalen Werkzeug wegen konstanter Spanbelastung." id="meta-desc" name="description"/>
+<meta content="Troch oidal Fräs rechner-Carbid-Werkzeuge" property="og:title"/>
+<meta content="Optimieren Sie troch oidale Fräs parameter. Berechnen Sie effektive Vorschub raten, Chip verdünnung und MRR für Hochgeschwindigkeits-Schäl fräs werkzeug wege." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://carbide-tooling.com/tools/trochoidal-milling-calculator/" property="og:url"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -65,10 +66,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}
 footer a{color:#0066cc;text-decoration:none}
 @media(max-width:768px){
-  .hero h1{font-size:32px}
-  .result-grid{grid-template-columns:1fr 1fr}
-  .card{padding:20px 16px}
-  .card-row{grid-template-columns:1fr}
+ .hero h1{font-size:32px}
+ .result-grid{grid-template-columns:1fr 1fr}
+ .card{padding:20px 16px}
+ .card-row{grid-template-columns:1fr}
 }
 .lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
@@ -79,364 +80,353 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Trochoidal Milling Rechner | Precision Machining Tool"/>
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Trochoidal Milling Rechner | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Troch oidal Fräs rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/trochoidal-milling-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Trochoidal Milling Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Trochoidal Milling Rechner",
-      "url": "https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Trochoidal Milling Rechner for CNC machining",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/",
-      "name": "Trochoidal Milling Rechner",
-      "description": "Trochoidal Milling Rechner for CNC machining",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is trochoidal milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A high-speed machining strategy where the tool follows a looping (trochoidal) path with low radial engagement (5-15%) and high axial depth. This maintains constant chip load and allows much higher feed rates than conventional roughing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you calculate feed rate for trochoidal milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Feed rate = U/min × flutes × programmed fz × chip thinning factor. The chip thinning factor compensates for the reduced chip thickness at low radial engagement. This calculator does all the math automatically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What stepover should I use for trochoidal milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "8-15% of tool diameter for most materials. 5-10% for difficult materials like titanium and stainless. Below 5% the tool spends too much time in air; above 20% the chip thinning benefit decreases and cutting forces rise sharply."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use trochoidal milling on any CNC machine?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Machine acceleration must be at least 3 m/s² to maintain programmed feed on the looping toolpath. Machines with acceleration below 2 m/s² will see reduced benefit. Newer machines with linear motors or dual-ball screws achieve 5-10 m/s² and maximize trochoidal performance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does trochoidal milling affect tool life?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Trochoidal toolpaths typically improve tool life by 20-50% compared to conventional roughing at the same MRR because the reduced radial engagement prevents thermal shock and distributes wear evenly across the cutting edge. The constant chip load also eliminates the impact loading that causes micro-chipping."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Trochoidal Milling Calculator",
+ "url": "https://carbide-tooling.com/tools/trochoidal-milling-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Trochoidal Milling Calculator for CNC machining",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/trochoidal-milling-calculator/",
+ "name": "Trochoidal Milling Calculator",
+ "description": "Trochoidal Milling Calculator for CNC machining",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is trochoidal milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A high-speed machining strategy where the tool follows a looping (trochoidal) path with low radial engagement (5-15%) and high axial depth. This maintains constant chip load and allows much higher feed rates than conventional roughing."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do you calculate feed rate for trochoidal milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Vorschub rate = RPM × flutes × programmed fz × chip thinning factor. The chip thinning factor compensates for the reduced chip thickness at low radial engagement. This calculator does all the math automatically."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What stepover should I use for trochoidal milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "8-15% of tool diameter for most materials. 5-10% for difficult materials like titanium and stainless. Below 5% the tool spends too much time in air; above 20% the chip thinning benefit decreases and cutting forces rise sharply."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use trochoidal milling on any CNC machine?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. Machine acceleration must be at least 3 m/s² to maintain programmed feed on the looping toolpath. Machines with acceleration below 2 m/s² will see reduced benefit. Newer machines with linear motors or dual-ball screws achieve 5-10 m/s² and maximize trochoidal performance."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How does trochoidal milling affect tool life?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Trochoidal toolpaths typically improve tool life by 20-50% compared to conventional roughing at the same MRR because the reduced radial engagement prevents thermal shock and distributes wear evenly across the cutting edge. The constant chip load also eliminates the impact loading that causes micro-chipping."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/trochoidal-milling-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/trochoidal-milling-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/trochoidal-milling-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/trochoidal-milling-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/trochoidal-milling-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/trochoidal-milling-calculator"/>
-</head>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/trochoidal-milling-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/trochoidal-milling-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/trochoidal-milling-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/trochoidal-milling-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/trochoidal-milling-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-  <div class="nav-left">
-    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
-    <div class="nav-links">
-      <a href="https://carbide-tooling.com/products/">Produkte</a>
-      <a href="https://carbide-tooling.com/guides/">Leitfäden</a>
-      <a href="https://carbide-tooling.com/about.html">Über uns</a>
-    </div>
-  </div>
-  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/trochoidal-milling-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/trochoidal-milling-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/trochoidal-milling-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/trochoidal-milling-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/trochoidal-milling-calculator/">中</a></div>
+<div class="nav-left">
+<a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="https://carbide-tooling.com/products/">Produkte</a>
+<a href="https://carbide-tooling.com/guides/">Führer</a>
+<a href="https://carbide-tooling.com/about.html">Über</a>
 </div>
-</nav>
-
+</div>
+<a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩Erhalten Sie ein Angebot</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/trochoidal-milling-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/trochoidal-milling-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/trochoidal-milling-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/trochoidal-milling-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/trochoidal-milling-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <section class="hero">
 <div class="container">
-  <div class="badge">🌀 Free Professional Werkzeug</div>
-  <h1>Trochoidal Milling <span class="accent">Rechner</span></h1>
-  <p>Berechnen effective feed rates, chip thinning, and MRR for trochoidal (peel milling) toolpaths. Optimize stepover and axial depth for maximum productivity.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#calculator">Start Calculating ↓</a>
-    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
-  </div>
+<div class="badge">🌀 Free Professional Tool</div>
+<h1>Trochoide Fräsberechnung</h1>
+<p>Berechnen Sie effektive Vorschub raten, Chip verdünnung und MRR für troch oidale Werkzeug wege (Peel Mahl). Optimieren Sie Stepover und axiale Tiefe für maximale Produktivität.</p>
+<div class="hero-actions">
+<a class="btn" href="#calculator">Berechnung starten ↓</a>
+<a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩Erhalten Sie ein Präzisionsangebot</a>
+</div>
 </div>
 </section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
+<section class="container" id="calculator" style="padding-bottom:40px">
 <div class="card">
-  <h2>🌀 Trochoidal Milling Parameters</h2>
-  <p class="sub">Based on chip thinning theory for low radial engagement HSM toolpaths. Ergebniss update in real time.</p>
-
-  <div class="card-row">
-    <div class="field"><label>🔩 Werkstoff</label>
-      <select id="material" onchange="calc()">
-        <option value="al6061">Aluminum 6061</option>
-        <option value="ss304" selected>Stainless Steel 304</option>
-        <option value="mild_steel">Mild Steel 1018</option>
-        <option value="ti6al4v">Titanium Grade 5</option>
-      </select>
-    </div>
-    <div class="field"><label>📐 Werkzeug Durchmesser (mm)</label>
-      <input type="number" id="dia" value="12" min="1" max="50" step="0.5" oninput="calc()" />
-    </div>
-    <div class="field"><label>🦷 Flutes</label>
-      <select id="flutes" onchange="calc()"><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option><option value="5">5</option><option value="6">6</option></select>
-    </div>
-    <div class="field"><label>↔️ Stepover — Radial (ae %)</label>
-      <input type="number" id="stepover" value="10" min="1" max="50" step="1" oninput="calc()" />
-      <span style="font-size:10px;color:#86868b">5-15% recommended for trochoidal</span>
-    </div>
-    <div class="field"><label>⏬ Axial Schnitttiefe (ap mm)</label>
-      <input type="number" id="doc" value="12" min="0.5" max="50" step="0.5" oninput="calc()" />
-    </div>
-    <div class="field"><label>⚡ Cutting Schnittgeschwindigkeit (Vc m/min)</label>
-      <input type="number" id="vc" value="180" min="10" max="2000" step="10" oninput="calc()" />
-    </div>
-    <div class="field"><label>📊 Spanbelastung — fz (mm)</label>
-      <input type="number" id="fz" value="0.06" min="0.001" max="1" step="0.005" oninput="calc()" />
-    </div>
-  </div>
-
-  <div class="result-grid">
-    <div class="result-item"><div class="label">U/min</div><div class="value" id="r-rpm">—</div><div class="unit">U/min</div></div>
-    <div class="result-item"><div class="label">Effective Vorschub</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div>
-    <div class="result-item"><div class="label">MRR (trochoidal)</div><div class="value" id="r-mrr">—</div><div class="unit">cm³/min</div></div>
-    <div class="result-item"><div class="label">vs. Conventional MRR</div><div class="value good" id="r-compare">—</div><div class="unit">× improvement</div></div>
-  </div>
-
-  <div class="extra-info">
-    <span>Chip thinning factor: <span class="val" id="x-thinning">—</span>×</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Effective chip load: <span class="val" id="x-eff-chip">—</span> mm</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Max stepover: <span class="val" id="x-max-step">—</span>%</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Werkzeug engagement angle: <span class="val" id="x-engage">—</span>°</span>
-  </div>
+<h2>🌀Troch oidale Fräs parameter</h2>
+<p class="sub">Basierend auf der Chip verdünnung theorie für HSM-Werkzeug wege mit geringem radialem Eingriff. Ergebnisaktualisierung in Echtzeit.</p>
+<div class="card-row">
+<div class="field"><label>🔩Material</label>
+<select id="material" onchange="calc()">
+<option value="al6061">Aluminum 6061</option>
+<option selected="" value="ss304">Stainless Steel 304</option>
+<option value="mild_steel">Mild Steel 1018</option>
+<option value="ti6al4v">Titanium Grade 5</option>
+</select>
 </div>
-
+<div class="field"><label>📐Werkzeugdurchmesser (mm)</label>
+<input id="dia" max="50" min="1" oninput="calc()" step="0.5" type="number" value="12"/>
+</div>
+<div class="field"><label>🦷Flöten</label>
+<select id="flutes" onchange="calc()"><option value="2">2</option><option value="3">3</option><option selected="" value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+</div>
+<div class="field"><label>↔️ Stepover - Radial (ae %)</label>
+<input id="stepover" max="50" min="1" oninput="calc()" step="1" type="number" value="10"/>
+<span style="font-size:10px;color:#86868b">5-15% recommended for trochoidal</span>
+</div>
+<div class="field"><label>⏬Axiale Tiefe (ap mm)</label>
+<input id="doc" max="50" min="0.5" oninput="calc()" step="0.5" type="number" value="12"/>
+</div>
+<div class="field"><label>⚡Schnittgeschwindigkeit (Vc m/min)</label>
+<input id="vc" max="2000" min="10" oninput="calc()" step="10" type="number" value="180"/>
+</div>
+<div class="field"><label>📊Spanabnahme pro Zahn – fz (mm)</label>
+<input id="fz" max="1" min="0.001" oninput="calc()" step="0.005" type="number" value="0.06"/>
+</div>
+</div>
+<div class="result-grid">
+<div class="result-item"><div class="label">RPM</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div>
+<div class="result-item"><div class="label">Effective Vorschub</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div>
+<div class="result-item"><div class="label">MRR (trochoidal)</div><div class="value" id="r-mrr">—</div><div class="unit">cm³/min</div></div>
+<div class="result-item"><div class="label">vs. Conventional MRR</div><div class="value good" id="r-compare">—</div><div class="unit">× improvement</div></div>
+</div>
+<div class="extra-info">
+<span>Chip thinning factor: <span class="val" id="x-thinning">—</span>×</span>
+<span style="color:#d2d2d6">|</span>
+<span>Effective chip load: <span class="val" id="x-eff-chip">—</span> mm</span>
+<span style="color:#d2d2d6">|</span>
+<span>Max stepover: <span class="val" id="x-max-step">—</span>%</span>
+<span style="color:#d2d2d6">|</span>
+<span>Tool engagement angle: <span class="val" id="x-engage">—</span>°</span>
+</div>
+</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
-  <a href="/de/tools/mrr-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
-    <div style="font-size:20px">⚡</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">MRR Rechner</h4>
-    <p style="font-size:12px;color:#86868b">Compare trochoidal MRR against conventional milling.</p>
-  </a>
-  <a href="/de/tools/ramping-angle-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
-    <div style="font-size:20px">📐</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Ramping Angle Rechner</h4>
-    <p style="font-size:12px;color:#86868b">Optimize entry strategies before trochoidal paths.</p>
-  </a>
+<a href="/tools/mrr-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
+<div style="font-size:20px">⚡</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">MRR-Rechner</h4>
+<p style="font-size:12px;color:#86868b">Vergleichen Sie troch oidales MRR gegen herkömmliches Mahlen.</p>
+</a>
+<a href="/tools/ramping-angle-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f">
+<div style="font-size:20px">📐</div><h4 style="font-size:14px;font-weight:600;margin:4px 0 2px">Steigungswinkelrechner</h4>
+<p style="font-size:12px;color:#86868b">Optimieren Sie Eintritts strategien vor Troch oidal pfaden.</p>
+</a>
 </div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Startseite</a>
+<a href="/tools/">Alle Werkzeuge</a>
+<a href="/products/">Produkte</a>
+<a href="/guides/">Führer</a>
+<a href="/about.html">Über</a>
+<a href="/quote.html">Geschwindigkeit &amp; Vorschub</a>
+<a href="/privacy.html">Härtekonverter</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/trochoidal-milling-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/trochoidal-milling-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/trochoidal-milling-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/trochoidal-milling-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Bohrergröße für Gewindebohrungen</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
+<p style="font-size:11px;margin-bottom:6px">Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</p>
+<p style="font-size:11px">©2026 Hartmetallwerkzeuge</p>
 </div>
 </footer>
-
 <script>
 const MATS = {
-  al6061:{label:'Aluminum 6061',maxStep:15,feedMult:2.5,docMult:1.5},
-  ss304:{label:'Stainless 304',maxStep:10,feedMult:1.6,docMult:0.8},
-  mild_steel:{label:'Mild Steel',maxStep:12,feedMult:2.0,docMult:1.2},
-  ti6al4v:{label:'Titanium Gr5',maxStep:8,feedMult:1.4,docMult:0.5},
+ al6061:{label:'Aluminum 6061',maxStep:15,feedMult:2.5,docMult:1.5},
+ ss304:{label:'Stainless 304',maxStep:10,feedMult:1.6,docMult:0.8},
+ mild_steel:{label:'Mild Steel',maxStep:12,feedMult:2.0,docMult:1.2},
+ ti6al4v:{label:'Titanium Gr5',maxStep:8,feedMult:1.4,docMult:0.5},
 };
 
 function calc() {
-  const mat = MATS[document.getElementById('material').value];
-  const dia = parseFloat(document.getElementById('dia').value) || 12;
-  const z = parseInt(document.getElementById('flutes').value) || 4;
-  const stepPct = parseFloat(document.getElementById('stepover').value) || 10;
-  const ap = parseFloat(document.getElementById('doc').value) || 12;
-  const vc = parseFloat(document.getElementById('vc').value) || 180;
-  const fz = parseFloat(document.getElementById('fz').value) || 0.06;
+ const mat = MATS[document.getElementById('material').value];
+ const dia = parseFloat(document.getElementById('dia').value) || 12;
+ const z = parseInt(document.getElementById('flutes').value) || 4;
+ const stepPct = parseFloat(document.getElementById('stepover').value) || 10;
+ const ap = parseFloat(document.getElementById('doc').value) || 12;
+ const vc = parseFloat(document.getElementById('vc').value) || 180;
+ const fz = parseFloat(document.getElementById('fz').value) || 0.06;
 
-  const rpm = dia > 0 ? (vc * 1000) / (Math.PI * dia) : 1000;
-  const ae = dia * stepPct / 100;
+ const rpm = dia > 0 ? (vc * 1000) / (Math.PI * dia) : 1000;
+ const ae = dia * stepPct / 100;
 
-  // Engagement angle
-  const engRatio = ae / dia;
-  const engAngle = engRatio > 0 ? Math.acos(1 - 2 * engRatio) * 180 / Math.PI : 0;
+ // Engagement angle
+ const engRatio = ae / dia;
+ const engAngle = engRatio > 0 ? Math.acos(1 - 2 * engRatio) * 180 / Math.PI : 0;
 
-  // Chip thinning factor
-  const thinning = engAngle > 0 && engAngle < 180 ? 1 / Math.sin(engAngle * Math.PI / 180) : 1;
+ // Chip thinning factor
+ const thinning = engAngle > 0 && engAngle < 180 ? 1 / Math.sin(engAngle * Math.PI / 180) : 1;
 
-  // Effective fz (programmed fz × thinning factor gives actual chip load)
-  const effFz = fz * thinning;
+ // Effective fz (programmed fz × thinning factor gives actual chip load)
+ const effFz = fz * thinning;
 
-  // Vorschub rate with chip thinning
-  const feed = rpm * z * effFz;
+ // Vorschub rate with chip thinning
+ const feed = rpm * z * effFz;
 
-  // MRR (trochoidal)
-  const mrrTroch = (ap * ae * feed) / 1000;
+ // MRR (trochoidal)
+ const mrrTroch = (ap * ae * feed) / 1000;
 
-  // Conventional comparison (using typical 40% stepover, 0.5× diameter DOC)
-  const convFeed = rpm * z * fz * 0.6; // 40% feed reduction for conventional
-  const convDoc = dia * 0.5;
-  const convAe = dia * 0.4;
-  const mrrConv = (convDoc * convAe * convFeed) / 1000;
+ // Conventional comparison (using typical 40% stepover, 0.5× diameter DOC)
+ const convVorschub = rpm * z * fz * 0.6; // 40% feed reduction for conventional
+ const convDoc = dia * 0.5;
+ const convAe = dia * 0.4;
+ const mrrConv = (convDoc * convAe * convVorschub) / 1000;
 
-  const improvement = mrrConv > 0 ? mrrTroch / mrrConv : 0;
+ const improvement = mrrConv > 0 ? mrrTroch / mrrConv : 0;
 
-  // Max recommended stepover for this material
-  const maxStep = mat.maxStep;
+ // Max recommended stepover for this material
+ const maxStep = mat.maxStep;
 
-  document.getElementById('r-rpm').textContent = Math.round(rpm);
-  document.getElementById('r-feed').textContent = Math.round(feed);
-  document.getElementById('r-mrr').textContent = mrrTroch.toFixed(1);
-  document.getElementById('r-compare').textContent = improvement.toFixed(1) + '×';
-  document.getElementById('x-thinning').textContent = thinning.toFixed(2);
-  document.getElementById('x-eff-chip').textContent = effFz.toFixed(4);
-  document.getElementById('x-max-step').textContent = maxStep;
-  document.getElementById('x-engage').textContent = engAngle.toFixed(1);
+ document.getElementById('r-rpm').textContent = Math.round(rpm);
+ document.getElementById('r-feed').textContent = Math.round(feed);
+ document.getElementById('r-mrr').textContent = mrrTroch.toFixed(1);
+ document.getElementById('r-compare').textContent = improvement.toFixed(1) + '×';
+ document.getElementById('x-thinning').textContent = thinning.toFixed(2);
+ document.getElementById('x-eff-chip').textContent = effFz.toFixed(4);
+ document.getElementById('x-max-step').textContent = maxStep;
+ document.getElementById('x-engage').textContent = engAngle.toFixed(1);
 }
 
 calc();
 </script>
 <section class="seo-content">
 <div class="container">
-
-  <h2>Why Trochoidal Milling Cuts 3× Faster Than Conventional Roughing</h2>
-  <p>A machinist running a 12mm end mill in a steel pocket with conventional roughing takes 0.5 mm radial passes at 4 mm axial depth. The tool lasts 90 minutes, the pocket takes 45 minutes to rough, and the machine rarely exceeds 60% spindle load. Switching to a trochoidal toolpath with 10% stepover (1.2 mm radial) and 12 mm axial depth (full flute length), the same pocket roughs in 14 minutes. The tool lasts 120 minutes. The difference is not incremental — it's structural.</p>
-  <p>Trochoidal milling works because it keeps the tool's radial engagement low enough that the cutting edge never fully engages with the material. The chip load is distributed across multiple teeth in a constant chip thickness profile. Heat is carried away by the chip rather than conducted into the tool. The machine spindle stays below 80% load even at 3× the MRR of conventional toolpaths. These numbers are not theoretical — they are measured daily in production shops running high-speed machining strategies.</p>
-
-  <h2>How Trochoidal Milling Changes the Vorschub Rate Calculation</h2>
-  <p>Conventional feed rate formulas assume the tool is engaged across a significant portion of its diameter. Trochoidal milling uses radial engagement of 5-15%, which creates a chip thinning effect — the chip produced at low radial engagement is thinner than the programmed feed per tooth. Nach maintain the recommended chip load, the feed rate must be increased by the chip thinning factor.</p>
-  <p>Chip thinning factor = 1 / sin(engagement angle). For a 10% stepover with a 12mm tool, the engagement angle is roughly 37°, giving a thinning factor of approximately 1.65×. This means the programmed feed per tooth can be 65% higher while maintaining the same actual chip load as conventional milling. Combined with the full axial depth typical of trochoidal toolpaths, the effective MRR increase is substantial.</p>
-
-  <h2>Material-Specific Trochoidal Strategies</h2>
-  <p><strong>Aluminum 6061:</strong> 2-3 flute tools with stepover of 10-15% and full axial depth (1-1.5× diameter). Vorschub rates can reach 2-3× conventional values. Chip evacuation becomes the limiting factor at high MRR — use compressed air or coolant through the spindle. MRR improvements of 4-6× over conventional are typical.</p>
-  <p><strong>Mild Steel 1018:</strong> 4-5 flute tools with stepover of 8-12% and axial depth of 1-1.5× diameter. Vorschub increase of 1.5-2× over conventional. The limiting factor is machine rigidity, not tool life. MRR improvement of 2-4× is achievable with a rigid machine.</p>
-  <p><strong>Stainless Steel 304:</strong> 5-6 flute tools with stepover of 5-10%. Axial depth limited to 0.75-1× diameter due to work-hardening at the depth-of-cut line. Vorschub increase of 1.3-1.8×. MRR improvement of 1.5-3×. The <a href="/de/tools/force-calculator/" style="color:#0066cc">Milling Force Rechner</a> can help verify that the reduced radial engagement keeps cutting forces within safe limits.</p>
-  <p><strong>Titanium Grade 5:</strong> 4-5 flute tools with stepover of 5-8%. Axial depth of 0.5-1× diameter. Vorschub increase is modest — 1.2-1.5× — because chip load is limited by thermal considerations. The main benefit of trochoidal milling in titanium is consistent tool life, not MRR. Through-spindle coolant at 50+ bar is essential.</p>
-
-  <h2>Trochoidal Toolpath Geometry: Stepover, Engagement Angle, and Chip Thinning</h2>
-  <p>The three parameters that define a trochoidal pass are stepover (radial engagement), axial depth, and the trochoidal step (the forward advance per loop). Stepover is the most critical — it determines the engagement angle, which in turn determines the chip thinning factor and the cutting forces.</p>
-  <p>The engagement angle θ for a given stepover ae with tool diameter D is: θ = arccos(1 - 2×ae/D). At 10% stepover, θ ≈ 37°; at 20%, θ ≈ 53°; at 40%, θ ≈ 79°. Below 10% stepover, the chip thinning effect becomes extreme — a 5% stepover gives a thinning factor of 2.5×, allowing very high feed rates but with diminishing returns on MRR because the tool spends most of its time in air. The sweet spot for most materials is 8-15% stepover.</p>
-
-  <h2>When Trochoidal Milling Doesn't Help</h2>
-  <p>Trochoidal toolpaths generate constant acceleration and deceleration in the machine axes. Machines with poor acceleration (below 3 m/s²) cannot maintain the programmed feed rate on the tight trochoidal loops — the actual average feed drops to 40-60% of programmed values, negating the MRR advantage. For these machines, conventional roughing with moderate radial engagement (30-40%) produces better results.</p>
-  <p>Short tools (under 3× diameter length) benefit most from trochoidal milling. Long tools (over 5× diameter) introduce deflection and chatter that limit the achievable MRR regardless of toolpath strategy. In these cases, reducing axial depth and using conventional stepover is more productive than struggling with trochoidal instability.</p>
-
-  <h2>Häufig gestellte Fragen</h2>
-  <p><strong>What is trochoidal milling?</strong> A high-speed machining strategy where the tool follows a looping (trochoidal) path with low radial engagement (5-15%) and high axial depth. This maintains constant chip load and allows much higher feed rates than conventional roughing.</p>
-  <p><strong>How do you calculate feed rate for trochoidal milling?</strong> Vorschub rate = U/min × flutes × programmed fz × chip thinning factor. The chip thinning factor compensates for the reduced chip thickness at low radial engagement. This calculator does all the math automatically.</p>
-  <p><strong>What stepover should I use for trochoidal milling?</strong> 8-15% of tool diameter for most materials. 5-10% for difficult materials like titanium and stainless. Below 5% the tool spends too much time in air; above 20% the chip thinning benefit decreases and cutting forces rise sharply.</p>
-  <p><strong>Can I use trochoidal milling on any CNC machine?</strong> No. Machine acceleration must be at least 3 m/s² to maintain programmed feed on the looping toolpath. Machines with acceleration below 2 m/s² will see reduced benefit. Newer machines with linear motors or dual-ball screws achieve 5-10 m/s² and maximize trochoidal performance.</p>
-  <p><strong>How does trochoidal milling affect tool life?</strong> Trochoidal toolpaths typically improve tool life by 20-50% compared to conventional roughing at the same MRR because the reduced radial engagement prevents thermal shock and distributes wear evenly across the cutting edge. The constant chip load also eliminates the impact loading that causes micro-chipping.</p>
-  <p><strong>What is chip thinning in trochoidal milling?</strong> At low radial engagement, the chip produced is thinner than the programmed feed per tooth. The ratio of programmed to actual chip thickness is the chip thinning factor. Vorschub rate must be increased by this factor to maintain the recommended chip load. This calculator computes the thinning factor for your specific stepover.</p>
-
-  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
-    <p style="margin:0">For end mills designed for trochoidal HSM toolpaths, check our High-Performance End Mills</p>
-  </div>
+<h2>Warum troch oidales Fräsen 3 × schneller schneidet als herkömmliches Rough ing</h2>
+<p>Ein Maschinist, der ein 12-mm-Schaftfräser in einer Stahl tasche mit herkömmlichem Schruppen betreibt, nimmt 0,5mm radiale Durchgänge in 4 mm axialer Tiefe. Das Werkzeug hält 90 Minuten, die Tasche braucht 45 Minuten, um zu rauhen, und die Maschine übers ch reitet selten 60% Spindel last. Umschalten auf einen troch oidalen Werkzeug weg mit 10% Step-Over (1,2mm radial) und 12mm axialer Tiefe (volle Flöten länge), die gleichen Taschen roughs in 14 Minuten. Das Werkzeug dauert 120 Minuten. Der Unterschied ist nicht inkrementell-es ist strukturell.</p>
+<p>Troch oid fräsen funktioniert, weil es den radialen Eingriff des Werkzeugs so niedrig hält, dass die Schneide nie vollständig in das Material eingrangt. Die Spanbelastung wird in einem konstanten Span dicken profil auf mehrere Zähne verteilt. Wärme wird vom Chip weggetragen und nicht in das Werkzeug geleitet. Die Maschinen spindel bleibt selbst bei 3 × MRR herkömmlicher Werkzeug wege unter 80% Last. Diese Zahlen sind nicht theoretisch-sie werden täglich in Produktions stätten gemessen, in denen Hoch geschwindigkeit bearbeitungs strategien durchgeführt werden.</p>
+<h2>Wie das Troch oidal Fräsen die Berechnung der Vorschub rate verändert</h2>
+<p>Herkömmliche Vorschub raten formeln gehen davon aus, dass das Werkzeug über einen erheblichen Teil seines Durchmessers aktiviert ist. Das troch idale Fräsen verwendet einen radialen Eingriff von 5-15%, wodurch ein Chip verdünnung effekt erzeugt wird. Der bei geringem radialen Eingriff erzeugte Chip ist dünner als der programmierte Vorschub pro Zahn. Um die empfohlene Spanbelastung aufrecht zu erhalten, muss die Vorschub rate um den Chip verdünnung faktor erhöht werden.</p>
+<p>Chip-Ausdünnung faktor = 1 / sin (Verlobung winkel). Bei einem 10% igen Übers teiger mit einem 12-mm-Werkzeug beträgt der Eingriffs winkel ungefähr 37 °, was einen Ausdünnung faktor von ungefähr 1,65 × ergibt. Dies bedeutet, dass der programmierte Vorschub pro Zahn 65% höher sein kann, während die gleiche tatsächliche Spanbelastung wie beim herkömmlichen Fräsen beibehalten wird. In Kombination mit der für troch oidale Werkzeug wege typischen vollen axialen Tiefe ist die effektive MRR-Erhöhung erheblich.</p>
+<h2>Materials pezi fische troch oide Strategien</h2>
+<p><strong>Aluminum 6061:</strong> 2-3 flute tools with stepover of 10-15% and full axial depth (1-1.5× diameter). Vorschub rates can reach 2-3× conventional values. Chip evacuation becomes the limiting factor at high MRR — use compressed air or coolant through the spindle. MRR improvements of 4-6× over conventional are typical.</p>
+<p><strong>Mild Steel 1018:</strong> 4-5 flute tools with stepover of 8-12% and axial depth of 1-1.5× diameter. Vorschub increase of 1.5-2× over conventional. The limiting factor is machine rigidity, not tool life. MRR improvement of 2-4× is achievable with a rigid machine.</p>
+<p><strong>Stainless Steel 304:</strong> 5-6 flute tools with stepover of 5-10%. Axial depth limited to 0.75-1× diameter due to work-hardening at the depth-of-cut line. Vorschub increase of 1.3-1.8×. MRR improvement of 1.5-3×. The <a href="/tools/force-calculator/" style="color:#0066cc">Oberflächenrauheit</a> can help verify that the reduced radial engagement keeps cutting forces within safe limits.</p>
+<p><strong>Titanium Grade 5:</strong> 4-5 flute tools with stepover of 5-8%. Axial depth of 0.5-1× diameter. Vorschub increase is modest — 1.2-1.5× — because chip load is limited by thermal considerations. The main benefit of trochoidal milling in titanium is consistent tool life, not MRR. Through-spindle coolant at 50+ bar is essential.</p>
+<h2>Troch oidal Toolpath-Geometrie: Stepover, Verlobung winkel und Chip ausdünnung</h2>
+<p>Die drei Parameter, die einen Troch oidal pass definieren, sind Step over (radialer Eingriff), axiale Tiefe und troch oidaler Schritt (Vorwärts fortschritt pro Schleife). Stepover ist am kritischsten-er bestimmt den Eingriffs winkel, der wiederum den Chip verdünnung faktor und die Schnitt kräfte bestimmt.</p>
+<p>Der Eingriffs winkel θ für einen gegebenen Schritt ae mit Werkzeug durchmesser D ist: θ = arccos (1-2 × ae/D). Bei 10% Step over, θ ≤ 37 °; bei 20% θ ≤ 53 °; bei 40% θ ≤ 79 °. Unterhalb von 10% wird der Chip verdünnung effekt extrem-ein 5-prozentiger Schritt ergibt einen Ausdünnung faktor von 2,5 ×, was sehr hohe Vorschub raten ermöglicht, jedoch mit sinkenden MRR-Erträgen, da das Werkzeug die meiste Zeit in der Luft verbringt. Der Sweet Spot für die meisten Materialien ist 8-15% Stepover.</p>
+<h2>Wenn Troch oidal Fräsen nicht hilft</h2>
+<p>Troch oidale Werkzeug wege erzeugen eine konstante Beschleunigung und Verzögerung in den Maschinen achsen. Maschinen mit schlechter Beschleunigung (unter 3 m/s²) können die programmierte Vorschub rate auf den engen Troch oid schleifen nicht aufrechterhalten-der tatsächliche Durchschnitts vorschub sinkt auf 40-60% der programmierten Werte, was den MRR-Vorteil zunichte macht. Bei diesen Maschinen führt herkömmliches Schruppen mit mäßigem radialen Eingriff (30-40%) zu besseren Ergebnissen.</p>
+<p>Kurze Werkzeuge (unter 3 × Durchmesser länge) profitieren am meisten vom Troch oid fräsen. Lange Werkzeuge (über 5 × Durchmesser) führen Ablenkung und Geschwätz ein, die die erreichbare MRR unabhängig von der Werkzeug wegs trategie einschränken. In diesen Fällen ist die Reduzierung der Axial tiefe und die Verwendung herkömmlicher Übertretung produktiver als der Kampf mit troch oidaler Instabilität.</p>
+<h2>Häufig gestellte Fragen</h2>
+<p><strong>What is trochoidal milling?</strong> A high-speed machining strategy where the tool follows a looping (trochoidal) path with low radial engagement (5-15%) and high axial depth. This maintains constant chip load and allows much higher feed rates than conventional roughing.</p>
+<p><strong>How do you calculate feed rate for trochoidal milling?</strong> Vorschub rate = RPM × flutes × programmed fz × chip thinning factor. The chip thinning factor compensates for the reduced chip thickness at low radial engagement. This calculator does all the math automatically.</p>
+<p><strong>What stepover should I use for trochoidal milling?</strong> 8-15% of tool diameter for most materials. 5-10% for difficult materials like titanium and stainless. Below 5% the tool spends too much time in air; above 20% the chip thinning benefit decreases and cutting forces rise sharply.</p>
+<p><strong>Can I use trochoidal milling on any CNC machine?</strong> No. Machine acceleration must be at least 3 m/s² to maintain programmed feed on the looping toolpath. Machines with acceleration below 2 m/s² will see reduced benefit. Newer machines with linear motors or dual-ball screws achieve 5-10 m/s² and maximize trochoidal performance.</p>
+<p><strong>How does trochoidal milling affect tool life?</strong> Trochoidal toolpaths typically improve tool life by 20-50% compared to conventional roughing at the same MRR because the reduced radial engagement prevents thermal shock and distributes wear evenly across the cutting edge. The constant chip load also eliminates the impact loading that causes micro-chipping.</p>
+<p><strong>What is chip thinning in trochoidal milling?</strong> At low radial engagement, the chip produced is thinner than the programmed feed per tooth. The ratio of programmed to actual chip thickness is the chip thinning factor. Vorschub rate must be increased by this factor to maintain the recommended chip load. This calculator computes the thinning factor for your specific stepover.</p>
+<div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
+<p style="margin:0">Für Schaftfräser, die für troch oidale HSM-Werkzeug wege ausgelegt sind, überprüfen Sie unsere Hochleistungs-Schaftfräser</p>
+</div>
 </div>
 </section>
-<div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+<div class="toolbox-widget"><h3>🔧Werkzeugkasten der Präzisionstechnik</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Titanführung</a>
+<a href="/tools/hardness-converter/">Notenübereinstimmung</a>
+<a href="/tools/tap-drill-size-calculator/">Kosten pro Teil</a>
+<a href="/tools/mrr-calculator/">MRR-Rechner</a>
+<a href="/tools/feed-converter/">Massenanfrage stellen →</a>
+<a href="/tools/surface-roughness-calculator/">Vollhartmetall-Schaftfräser</a>
+<a href="/tools/titanium-machining-guide/">Werkzeughalter</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Durchlaufzeitrechner</a>
+<a href="/tools/cost-per-part-calculator/">Rechner für die Länge der Bohrspitze</a>
+<a href="/tools/torque-unit-converter/">Hartmetall-Sorten-Querverweis</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Benötigen Sie professionelle Werkzeuge?</h3>
+<p>Erhalten Sie werkseitige Direktpreise, speziell entwickelte Hartmetallqualitäten und eine schnelle technische Unterstützung – alles aus einer Hand.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Bearbeitungsparameter für Messing</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/tool-holders.html">Werkzeughalter</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Leitfaden zur Kunststoffbearbeitung</a><a href="/products/tool-holders.html">Vorschubübersteuerungsrechner</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/cycle-time-calculator/">Cycle Time Rechner</a>
-<a href="/de/tools/drill-point-length-calculator/">Drill Point Length Rechner</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Reference</a>
-<a href="/de/tools/brass-machining-parameters/">Brass Machining Parameters</a>
-<a href="/de/tools/plastic-machining/">Plastic Machining Leitfaden</a>
-<a href="/de/tools/feed-rate-override-calculator/">Vorschub Rate Override Rechner</a>
-<a href="/de/tools/blind-hole-tapping-calculator/">Blind Hole Tapping Rechner</a>
-<a href="/de/tools/pythagorean-calculator/">Pythagorean Rechner</a>
-
-  </div>
+<h3>🔧Entdecken Sie 100 professionelle Zerspanungswerkzeuge</h3>
+<div class="tool-grid">
+<a href="/tools/cycle-time-calculator/">Rechner für das Gewindeschneiden in Sacklöchern</a>
+<a href="/tools/drill-point-length-calculator/">Pythagoreischer Rechner</a>
+<a href="/tools/carbide-grade-cross-ref-2/">LinkedIn</a>
+<a href="/tools/brass-machining-parameters/">E-Mail</a>
+<a href="/tools/plastic-machining/">Plastic Machining Guide</a>
+<a href="/tools/feed-rate-override-calculator/">Vorschub Rate Override Calculator</a>
+<a href="/tools/blind-hole-tapping-calculator/">Blind Hole Tapping Calculator</a>
+<a href="/tools/pythagorean-calculator/">Pythagorean Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/&text=Trochoidal Milling Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Trochoidal Milling Rechner&body=Check this out: https://carbide-tooling.com/de/tools/trochoidal-milling-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/trochoidal-milling-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/trochoidal-milling-calculator/&amp;text=Trochoidal Milling Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Trochoidal Milling Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/trochoidal-milling-calculator/">Email</a>
 </div>
-
 </body>
 </html>

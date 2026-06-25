@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Metric Imperial Thread Convertidor | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="Free online metric A imperial thread Convertidor. Convert M thread sizes A UNC, UNF, BSW. Find closest matching imperial tap and die sizes."/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Metric Imperial Thread Converter | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Convertidor de hilo métrico a imperial en línea gratuito. Convierta los tamaños del hilo de M a UNC, UNF, BSW. Encuentre los tamaños de grifo y troquel imperial más cercanos." name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:38px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:18px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b;margin-top:1px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,189 +13,206 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Metric/Imperial Thread | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free online metric A imperial thread Convertidor. Convert M thread sizes A UNC, UNF, BSW. Find closest matching imperial tap and die sizes."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Metric/Imperial Thread | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rosca métrica/imperial | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Convertidor de hilo métrico a imperial en línea gratuito. Convierta los tamaños del hilo de M a UNC, UNF, BSW. Encuentre los tamaños de grifo y troquel imperial más cercanos." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/metric-imperial-thread-converter/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Metric/Imperial Thread | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Metric/Imperial Thread",
-      "url": "https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/",
-      "name": "Metric/Imperial Thread",
-      "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I substitute a metric fastener for an imperial one?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not recommended. The 0.3–0.7 mm diameter differences create insufficient thread engagement or interference, which can cause joint failure. Substituting M10 for 3/8-16 may strip threads under load. Always machine parts to the specified thread system."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I convert thread class (6H vs. 2B)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ISO 6H metric tolerance approximates to UN 2B class for medium-fit applications. 4H6H (metric) ≈ 3B (UN) for precision fits, and 7H (metric) ≈ 1B (UN) for loose fits. These are approximations — for critical joints, use the standard specified by the design authority."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are metric and imperial drills compatible for threading?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Metric tap drills (e.g., 8.5 mm for M10×1.5) don't have exact imperial equivalents. Use the closest available drill size if needed, but preferred practice is to use the specified tap drill for the thread system being cut. For example, use a 'Q' drill (0.332 inch) for 3/8-16 UNC, not an 8.3 mm metric drill.\n⚡ Calculard for Carbide-Tooling.com High-Performance Series. Ver catálogo →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Metric/Imperial Thread",
+ "url": "https://carbide-tooling.com/tools/metric-imperial-thread-converter/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/metric-imperial-thread-converter/",
+ "name": "Metric/Imperial Thread",
+ "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Can I substitute a metric fastener for an imperial one?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Not recommended. The 0.3–0.7 mm diameter differences create insufficient thread engagement or interference, which can cause joint failure. Substituting M10 for 3/8-16 may strip threads under load. Always machine parts to the specified thread system."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I convert thread class (6H vs. 2B)?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "ISO 6H metric tolerance approximates to UN 2B class for medium-fit applications. 4H6H (metric) ≈ 3B (UN) for precision fits, and 7H (metric) ≈ 1B (UN) for loose fits. These are approximations — for critical joints, use the standard specified by the design authority."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Are metric and imperial drills compatible for threading?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Metric tap drills (e.g., 8.5 mm for M10×1.5) don't have exact imperial equivalents. Use the closest available drill size if needed, but preferred practice is to use the specified tap drill for the thread system being cut. For example, use a 'Q' drill (0.332 inch) for 3/8-16 UNC, not an 8.3 mm metric drill.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rosca métrica/imperial | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Convertidor de hilo métrico a imperial en línea gratuito. Convierta los tamaños del hilo de M a UNC, UNF, BSW. Encuentre los tamaños de grifo y troquel imperial más cercanos." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/metric-imperial-thread-converter/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Metric/Imperial Thread | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Metric/Imperial Thread",
+ "url": "https://carbide-tooling.com/tools/metric-imperial-thread-converter/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/metric-imperial-thread-converter/",
+ "name": "Metric/Imperial Thread",
+ "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Encuentre la coincidencia de hilo más cercana entre los estándares métrico (ISO) e imperial (UNC/UNF)." property="og:title"/>
+<meta content="Convertidor de hilo métrico a imperial en línea gratuito. Convierta los tamaños del hilo de M a UNC, UNF, BSW. Encuentre los tamaños de grifo y troquel imperial más cercanos." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/metric-imperial-thread-converter/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Metric/Imperial Thread Converter | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Metric/Imperial Thread Converter",
+ "url": "https://carbide-tooling.com/tools/metric-imperial-thread-converter/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/metric-imperial-thread-converter/",
+ "name": "Metric/Imperial Thread Converter",
+ "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Metric/Imperial Thread | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free online metric A imperial thread Convertidor. Convert M thread sizes A UNC, UNF, BSW. Find closest matching imperial tap and die sizes."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Metric/Imperial Thread | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Metric/Imperial Thread",
-      "url": "https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/",
-      "name": "Metric/Imperial Thread",
-      "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Metric/Imperial Thread Convertidor | Precision Machining Tool"/>
-<meta property="og:description" content="Free online metric A imperial thread Convertidor. Convert M thread sizes A UNC, UNF, BSW. Find closest matching imperial tap and die sizes."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Metric/Imperial Thread Convertidor | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Metric/Imperial Thread Converter",
-      "url": "https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/",
-      "name": "Metric/Imperial Thread Converter",
-      "description": "Free online metric to imperial thread converter. Convert M thread sizes to UNC, UNF, BSW. Find closest matching imperial tap and die sizes.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/metric-imperial-thread-converter/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/metric-imperial-thread-converter/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/metric-imperial-thread-converter/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/metric-imperial-thread-converter/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/metric-imperial-thread-converter/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/metric-imperial-thread-converter"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/metric-imperial-thread-converter/">EN</a><span class="sep">|</span><a href="/de/tools/metric-imperial-thread-converter/">DE</a><span class="sep">|</span><a href="/jp/tools/metric-imperial-thread-converter/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/metric-imperial-thread-converter/">VI</a><span class="sep">|</span><a href="/zh/tools/metric-imperial-thread-converter/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Inicio</a> <span style="color:#d2d2d6">›</span> <a href="/es/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Metric Imperial Thread Convertidor</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">🔄 Conversion Herramienta</div><h1>Metric ↔ Imperial <span class="accent">Thread Convertidor</span></h1><p>Find the closest thread match between metric (ISO) and imperial (UNC/UNF) standards.</p><a class="btn" href="#calculator">Convert ↓</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/" rel="canonical"/><link href="https://carbide-tooling.com/tools/metric-imperial-thread-converter/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/metric-imperial-thread-converter/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/metric-imperial-thread-converter/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/metric-imperial-thread-converter/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/metric-imperial-thread-converter/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪DE</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/metric-imperial-thread-converter/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/metric-imperial-thread-converter/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/metric-imperial-thread-converter/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/metric-imperial-thread-converter/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/metric-imperial-thread-converter/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Velocidad de corte (SFM)</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Analizador de tiempos de cambio de herramienta</a> <span style="color:#d2d2d6">›</span> Metric Imperial Thread Converter</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">🔄 Conversion Tool</div><h1>Compare diámetros y pasos a través de los estándares.</h1><p>📐Dirección</p><a class="btn" href="#calculator">Diámetro efectivo de la punta esférica</a></div></section>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/ultimate-unit-converter/">Ultimate Unidad Convertidor</a><a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a><a href="/es/tools/surface-speed/">Surface Velocidad de corte (m/min)</a><a href="/es/tools/tool-change-time-analyzer/">Herramienta Change Time Analyzer</a><a href="/es/tools/ball-nose-effective-diameter/">Ball Nose Effective Diámetro</a><a href="/es/tools/engineering-interest-calculator/">Engineering Interest</a><a href="/es/tools/coating-selector/">Coating Selector</a><a href="/es/tools/trochoidal-milling-calculator/">Trochoidal Milling</a>
-  </div>
+<h3>🔩Tamaño de la rosca</h3>
+<div class="tool-grid">
+<a href="/tools/ultimate-unit-converter/">Interés en la ingeniería</a><a href="/tools/tap-drill-size-calculator/">Seleccionador de recubrimientos</a><a href="/tools/surface-speed/">Fresado trocoide</a><a href="/tools/tool-change-time-analyzer/">← Todas las herramientas</a><a href="/tools/ball-nose-effective-diameter/">Obtener una cotización</a><a href="/tools/engineering-interest-calculator/">Privacidad</a><a href="/tools/coating-selector/">en</a><a href="/tools/trochoidal-milling-calculator/">Ver catálogo →</a>
+</div>
 </section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>🔄 Thread Conversion</h2><p class="sub">Compare diameters and pitches across standards.</p>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>Todas las herramientas</h2><p class="sub">Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</p>
 <div class="card-row">
-<div class="field"><label>📐 Direction</label><select id="dir" onchange="calc()"><option value="m2i">Metric → Imperial</option><option value="i2m">Imperial → Metric</option></select></div>
-<div class="field"><label>🔩 Thread Size</label><select id="size" onchange="calc()"><option value="M6">M6 × 1.0</option><option value="M8">M8 × 1.25</option><option value="M10" selected>M10 × 1.5</option><option value="M12">M12 × 1.75</option><option value="M16">M16 × 2.0</option><option value="M20">M20 × 2.5</option></select></div>
+<div class="field"><label>©Herramientas de carburo 2026</label><select id="dir" onchange="calc()"><option value="m2i">Metric → Imperial</option><option value="i2m">Imperial → Metric</option></select></div>
+<div class="field"><label>Conversión de pasos de rosca métrica a TPI</label><select id="size" onchange="calc()"><option value="M6">M6 × 1.0</option><option value="M8">M8 × 1.25</option><option selected="" value="M10">M10 × 1.5</option><option value="M12">M12 × 1.75</option><option value="M16">M16 × 2.0</option><option value="M20">M20 × 2.5</option></select></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Closest UNC</div><div class="value" id="r-unc">—</div><div class="unit" id="r-unc-note">UNC</div></div>
 <div class="result-item"><div class="label">Closest UNF</div><div class="value" id="r-unf">—</div><div class="unit">UNF</div></div>
-<div class="result-item"><div class="label">Diámetro Match</div><div class="value" id="r-match">—</div><div class="unit">%</div></div>
+<div class="result-item"><div class="label">Diameter Match</div><div class="value" id="r-match">—</div><div class="unit">%</div></div>
 <div class="result-item"><div class="label">Pitch Difference</div><div class="value" id="r-diff">—</div><div class="unit">mm</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:16px 0"><a href="/es/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Todas las herramientas</a></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Velocidad y avance</a></div>
 </section>
 <script>
 const CONV={M6:{d:6,p:1.0,unc:'1/4-20',unf:'1/4-28'},M8:{d:8,p:1.25,unc:'5/16-18',unf:'5/16-24'},M10:{d:10,p:1.5,unc:'3/8-16',unf:'3/8-24'},M12:{d:12,p:1.75,unc:'1/2-13',unf:'7/16-20'},M16:{d:16,p:2.0,unc:'5/8-11',unf:'5/8-18'},M20:{d:20,p:2.5,unc:'3/4-10',unf:'3/4-16'}};
@@ -203,87 +221,73 @@ function calc(){const sz=document.getElementById('size').value;const c=CONV[sz];
 calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Velocidad de corte (SFM)</a>
+<a href="/tools/">Las roscas métricas se especifican por paso (mm por rosca), mientras que las roscas imperiales (UN) se especifican por roscas por pulgada (TPI). La conversión: TPI = 25,4/paso (mm). M10 × 1,5 tiene un paso de 1,5mm = 16,9 TPI, lo más cercano a 5/16-18 UNC. M12 × 1,75 = 14,5 TPI ≈ 1/2-13 UNC. Para el fresado de roscas, la conversión correcta entre estos sistemas evita los costosos errores de la trayectoria de la herramienta.</a>
+<a href="/products/">🇩🇪DE</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Referencia cruzada de calificaciones</a>
+<a href="/privacy.html">Costo por pieza</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Convertidor de par</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Las roscas métricas se especifican por paso (mm por rosca), mientras que las roscas imperiales (UN) se especifican por roscas por pulgada (TPI). La conversión: TPI = 25,4/paso (mm). M10 × 1,5 tiene un paso de 1,5mm = 16,9 TPI, lo más cercano a 5/16-18 UNC. M12 × 1,75 = 14,5 TPI ≈ 1/2-13 UNC. Para el fresado de roscas, la conversión correcta entre estos sistemas evita los costosos errores de la trayectoria de la herramienta.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Comparaciones de diámetro: Roscas métricas vs. imperiales</p>
+<p style="font-size:11px">Los diámetros de rosca métricos se especifican como OD nominal en mm. Conversiones comunes: M6 ≈ 1/4 pulgada (6,35mm vs. 6,0mm), M8 ≈ 5/16 pulgadas (7,94mm vs. 8,0mm), M10 ≈ 3/8 pulgadas (9,53mm vs. 10,0mm), M12 ≈ 1/2 pulgada (12,7mm vs. 12,0mm). Mientras están cerca, estos NO son intercambiables: use siempre el sistema de sujeción correcto.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Converting Metric Thread Pitches to TPI</h2><p>Metric threads are specified by pitch (mm per thread), while imperial (UN) threads are specified by threads per inch (TPI). The conversion: TPI = 25.4 / Pitch (mm). M10×1.5 has a pitch of 1.5 mm = 16.9 TPI, closest to 5/16-18 UNC. M12×1.75 = 14.5 TPI ≈ 1/2-13 UNC. For thread milling, converting between these systems correctly avoids costly tool-path errors.</p>
-<h2>Diámetro Comparisons: Metric vs. Imperial Threads</h2><p>Metric thread diameters are specified as nominal OD in mm. Common conversions: M6 ≈ 1/4 inch (6.35 mm vs. 6.0 mm), M8 ≈ 5/16 inch (7.94 mm vs. 8.0 mm), M10 ≈ 3/8 inch (9.53 mm vs. 10.0 mm), M12 ≈ 1/2 inch (12.7 mm vs. 12.0 mm). While close, these are NOT interchangeable — always use the correct fastener system.</p>
-<h2>Practical Threading: When to Use Metric vs. Imperial</h2><p>Most modern CNC machines can cut both systems equally well. Use the system specified by your customer's drawings or the fastener standard in your supply chain. Converting existing imperial designs to metric can reduce tooling inventory, as metric drills and taps are more widely available globally. However, cost and lead time of specialty thread gages should be considered.</p>
-<h2>Preguntas frecuentes</h2>
+<h2>Threading práctico: cuándo usar métrico vs. imperial</h2><p>La mayoría de las máquinas CNC modernas pueden cortar ambos sistemas igualmente bien. Utilice el sistema especificado por los dibujos de su cliente o el estándar de fijación en su cadena de suministro. La conversión de diseños imperiales existentes a métricos puede reducir el inventario de herramientas, ya que los taladros métricos y los grifos están más ampliamente disponibles a nivel mundial. Sin embargo, se debe considerar el costo y el tiempo de entrega de los indicadores de rosca especiales.</p>
+<h2>Preguntas frecuentes</h2><p>¿Puedo sustituir un cierre métrico por uno imperial? Las diferencias de diámetro de 0,3-0,7mm crean un acoplamiento insuficiente de la rosca o interferencia, lo que puede causar fallas en la articulación. Sustituir M10 por 3/8-16 puede pelar los hilos bajo carga. Siempre mecanizar piezas al sistema de rosca especificado.</p>
+<h2>¿Cómo convierto la clase de rosca (6 H frente a 2 B)? La tolerancia métrica ISO 6 H se aproxima a la clase UN 2 B para aplicaciones de ajuste medio. 4 H6 H (métrico) ≈ 3 B (UN) para ajustes de precisión, y 7 H (métrico) ≈ 1 B (UN) para ajustes sueltos. Estas son aproximaciones: para las uniones críticas, use el estándar especificado por la autoridad de diseño.</h2><p>¿Son compatibles las brocas métricas e imperiales para roscar? Las brocas métricas (por ejemplo, 8,5mm para M10 × 1,5) no tienen equivalentes imperiales exactos. Use el tamaño de broca disponible más cercano si es necesario, pero la práctica preferida es usar el taladro de rosca especificado para el sistema de rosca que se está cortando. Por ejemplo, use un taladro 'Q' (0.332 pulgadas) para 3/8-16 UNC, no un taladro métrico de 8,3mm.</p>
+<h2>⚡Calculado para la Serie de Alto Rendimiento de Carbide-Tooling.com. Ver catálogo →</h2>
 <p><strong>Can I substitute a metric fastener for an imperial one?</strong> Not recommended. The 0.3–0.7 mm diameter differences create insufficient thread engagement or interference, which can cause joint failure. Substituting M10 for 3/8-16 may strip threads under load. Always machine parts to the specified thread system.</p>
 <p><strong>How do I convert thread class (6H vs. 2B)?</strong> ISO 6H metric tolerance approximates to UN 2B class for medium-fit applications. 4H6H (metric) ≈ 3B (UN) for precision fits, and 7H (metric) ≈ 1B (UN) for loose fits. These are approximations — for critical joints, use the standard specified by the design authority.</p>
 <p><strong>Are metric and imperial drills compatible for threading?</strong> Metric tap drills (e.g., 8.5 mm for M10×1.5) don't have exact imperial equivalents. Use the closest available drill size if needed, but preferred practice is to use the specified tap drill for the thread system being cut. For example, use a 'Q' drill (0.332 inch) for 3/8-16 UNC, not an 8.3 mm metric drill.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculard for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Ver catálogo →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Brocas de carburo</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/metric-imperial-thread-converter/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/metric-imperial-thread-converter/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/metric-imperial-thread-converter/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/metric-imperial-thread-converter/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+<div class="toolbox-widget"><h3>Productos</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Fresas de roscar y machos de roscar</a>
+<a href="/tools/hardness-converter/">Referencia de G-Code</a>
+<a href="/tools/tap-drill-size-calculator/">Seleccionador de recubrimientos</a>
+<a href="/tools/mrr-calculator/">Calculadora de diseño de brocas escalonadas</a>
+<a href="/tools/feed-converter/">Calculadora de brocas para roscar con machos de formar</a>
+<a href="/tools/surface-roughness-calculator/">Calculadora de mecanizado de hierro fundido</a>
+<a href="/tools/titanium-machining-guide/">Calculadora de desalineación de herramientas</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Convertidor de arco R a IJ</a>
+<a href="/tools/cost-per-part-calculator/">LinkedIn</a>
+<a href="/tools/torque-unit-converter/">Correo electrónico</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Guías</h3>
+<p>Sobre</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Brocas de carburo</a><a href="/products/threading-tools.html">Fresas de roscar y machos</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Carbide Drills</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/gcode-reference/">G-Code Reference</a>
-<a href="/es/tools/thread-pitch-diameter-calculator/">Thread Pitch Diámetro Calculadora</a>
-<a href="/es/tools/step-drill-design-calculator/">Step Drill Design Calculadora</a>
-<a href="/es/tools/form-tap-drill-calculator/">Form Tap Drill Calculadora</a>
-<a href="/es/tools/cast-iron-machining/">Cast Iron Machining Calculadora</a>
-<a href="/es/tools/tool-runout-calculator/">Herramienta Runout Calculadora</a>
-<a href="/es/tools/coating-selector/">Coating Selector</a>
-<a href="/es/tools/arc-r-to-ij-converter/">Arc R to IJ Convertidor</a>
-
-  </div>
+<h3>🔩Tamaño de la rosca</h3>
+<div class="tool-grid">
+<a href="/tools/gcode-reference/">G-Code Reference</a>
+<a href="/tools/thread-pitch-diameter-calculator/">Thread Pitch Diameter Calculator</a>
+<a href="/tools/step-drill-design-calculator/">Step Drill Design Calculator</a>
+<a href="/tools/form-tap-drill-calculator/">Form Tap Drill Calculator</a>
+<a href="/tools/cast-iron-machining/">Cast Iron Machining Calculator</a>
+<a href="/tools/tool-runout-calculator/">Tool Runout Calculator</a>
+<a href="/tools/coating-selector/">en</a>
+<a href="/tools/arc-r-to-ij-converter/">Arc R to IJ Converter</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/&text=Metric/Imperial Thread Converter" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Metric/Imperial Thread Converter&body=Check this out: https://carbide-tooling.com/es/tools/metric-imperial-thread-converter/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/metric-imperial-thread-converter/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/metric-imperial-thread-converter/&amp;text=Metric/Imperial Thread Converter" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Metric/Imperial Thread Converter&amp;body=Check this out: https://carbide-tooling.com/tools/metric-imperial-thread-converter/">Email</a>
 </div>
-
 </body></html>

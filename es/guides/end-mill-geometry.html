@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Guía de geometría del molino de extremo-Herramientas de carburo</title>
+<meta content="Guía completa para la geometría del molino final: recuento de flautas, ángulo de hélice, radio de esquina, recubrimientos y cómo cada uno afecta el rendimiento de corte." name="description"/>
+
+<meta content="index, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:700px;margin:0 auto;padding:0 24px}
+h1{font-size:40px;font-weight:800;letter-spacing:-.8px;padding-top:80px;margin-bottom:8px}
+.sub{font-size:18px;color:#86868b;margin-bottom:40px;line-height:1.7}
+p{font-size:15px;color:#333;margin-bottom:18px;line-height:1.8}
+h2{font-size:22px;font-weight:700;margin:44px 0 10px;letter-spacing:-.3px}
+h3{font-size:16px;font-weight:600;margin:28px 0 8px}
+ul,ol{padding-left:20px;margin-bottom:18px}
+li{font-size:14px;color:#444;margin-bottom:5px;line-height:1.7}
+a{color:#0066cc;text-decoration:none}
+a:hover{text-decoration:underline}
+.breadcrumb{font-size:12px;color:#86868b;padding-top:20px;margin-bottom:8px}
+.breadcrumb a{color:#0066cc}
+code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}
+@media(max-width:768px){h1{font-size:28px;padding-top:48px}}
+</style>
+<link href="https://carbide-tooling.com/es/guides/end-mill-geometry.html" rel="canonical"/><link href="https://carbide-tooling.com/guides/end-mill-geometry.html" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/guides/end-mill-geometry.html" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/guides/end-mill-geometry.html" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/guides/end-mill-geometry.html" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/guides/end-mill-geometry.html" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/guides/end-mill-geometry.html" hreflang="en" rel="alternate"/></head>
+<body>
+<nav>
+<div class="nav-inner">
+<div class="nav-left">
+<a href="../index.html class=" logo"=""><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="../products/">Productos</a>
+<div class="nav-drop">
+<span>Calculators &amp; Tools</span>
+<div class="mega-menu">
+<div class="mega-grid">
+<div class="mega-cat">CNC Machining Calculators</div>
+<a class="mega-item" href="https://speed-feed.carbide-tooling.com/"><span class="icon">⚙️</span> Velocidad de corte &amp; Avance Calculator</a>
+<a class="mega-item" href="#"><span class="icon">📐</span> Chip Load Calculator</a>
+<a class="mega-item" href="#"><span class="icon">🔄</span> RPM Converter</a>
+<a class="mega-item" href="#"><span class="icon">⏱️</span> Cycle Time Estimator</a>
+<div class="mega-cat">Material &amp; Reference</div>
+<a class="mega-item" href="../guides/carbide-grades.html"><span class="icon">🔩</span> Carbide Grade Selector</a>
+<a class="mega-item" href="../guides/coating-comparison.html"><span class="icon">🧪</span> Coating Comparison</a>
+<a class="mega-item" href="../guides/end-mill-geometry.html"><span class="icon">🔬</span> End Mill Geometry Guide</a>
+<a class="mega-item" href="#"><span class="icon">📊</span> Hardness Converter</a>
+</div>
+<div class="mega-btn"><a href="https://speed-feed.carbide-tooling.com/">Guías</a></div>
+</div>
+</div>
+<a href="../guides/">Sobre</a>
+<a href="../about.html">📩Obtener una cotización</a>
+</div>
+</div>
+<a href="../quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;transition:all .2s">Obtener una cita →</a>
+</div>
+</nav>
+<main>
+<div class="container" style="min-height:60vh">
+<main>
+<div class="container" style="min-height:60vh">
+<div class="container">
+<h1>Guía de geometría de fresas de extremo</h1>
+<p class="sub">Cómo el conteo de flautas, el ángulo de hélice, el radio de esquina y el recubrimiento afectan los resultados de su mecanizado.</p>
+<p>Elegir la geometría de fresado de extremo correcta es una de las decisiones más impactantes que puede tomar tanto para la vida útil de la herramienta como para el acabado de la superficie. Esta guía desglosa cada variable para que pueda tomar decisiones informadas.</p>
+<h2>Cuenta de la flauta</h2>
+<p>El recuento de flautas determina la evacuación de virutas, la rigidez y el acabado. Más flautas = núcleo más fuerte pero menos espacio de chip.</p>
+<ul>
+<li><strong>2-flute:</strong> Best for aluminum and non-ferrous materials. Large gullets for chip evacuation. Ideal for slotting and plunging.</li>
+<li><strong>3-flute:</strong> A compromise between 2 and 4. Good for aluminum with better finish than 2-flute. Less common but useful.</li>
+<li><strong>4-flute:</strong> The most versatile. Strong core, good finish. Best for steel, stainless steel, and general-purpose milling.</li>
+<li><strong>5/6-flute:</strong> High-performance for finishing. Excellent surface finish, but poor chip evacuation — never use for slotting.</li>
+</ul>
+<div class="tip"><strong>Rule of thumb:</strong> For aluminum use 2-3 flutes. For steel use 4 flutes. For finishing use 5-6 flutes. For titanium use variable helix.</div>
+<h2>Ángulo de hélice</h2>
+<p>El ángulo de hélice afecta la acción de corte, la evacuación de la viruta y las fuerzas axiales.</p>
+<ul>
+<li><strong>30° (Standard):</strong> Most common. Good balance of cutting action and tool strength. General-purpose.</li>
+<li><strong>35-40° (High Helix):</strong> Smoother cutting action, better chip evacuation. Ideal for aluminum and non-ferrous. Higher axial load.</li>
+<li><strong>45°+ (Ultra High Helix):</strong> Very aggressive cut, excellent for finishing. Weak core — not for heavy roughing.</li>
+<li><strong>Variable Helix:</strong> Designed to reduce chatter and harmonics. Essential for hard metals and long-reach applications.</li>
+</ul>
+<h2>Radio de esquina</h2>
+<p>También se llama chaflán de esquina o nariz de toro. El radio en el borde de corte donde la parte inferior se encuentra con el lado.</p>
+<ul>
+<li><strong>Sharp corner (0R):</strong> Maximum versatility — can cut square shoulders. Weakest point — chips easily.</li>
+<li><strong>Small radius (0.5-2mm):</strong> Reinforces the cutting edge. Reduces chipping. Better tool life. Slightly higher cutting forces.</li>
+<li><strong>Large radius (3mm+):</strong> Heavy roughing. Distributes cutting forces. Not suitable for sharp internal corners.</li>
+</ul>
+<h2>Recubrimientos</h2>
+<p>Los recubrimientos extienden la vida útil de la herramienta al reducir el calor y la fricción. Aquí están los tipos más comunes.</p>
+<ul>
+<li><strong>AlTiN (Aluminum Titanium Nitride):</strong> The most popular general-purpose coating. Good heat resistance (up to 800°C). Works well on steel and stainless.</li>
+<li><strong>TiSiN (Titanium Silicon Nitride):</strong> Higher hardness than AlTiN. Excellent for hardened materials (HRC 45+). Good for dry machining.</li>
+<li><strong>TiAlN (Titanium Aluminum Nitride):</strong> Similar to AlTiN but slightly lower aluminum content. Good for moderate temperatures.</li>
+<li><strong>Uncoated:</strong> For aluminum and non-ferrous (coatings can cause built-up edge). Lower cost but shorter tool life.</li>
+</ul>
+<h2>Seleccionar la herramienta correcta</h2>
+<p>Siga este flujo de decisión al elegir un molino de extremo para un nuevo trabajo:</p>
+<ul>
+<li><strong>Material:</strong> Determine workpiece material and hardness.</li>
+<li><strong>Operation:</strong> Roughing, finishing, or both?</li>
+<li><strong>Machine:</strong> Rigidity, spindle speed, and coolant capability.</li>
+<li><strong>Geometry:</strong> Based on the tables above, select flute count, helix, and radius.</li>
+<li><strong>Coating:</strong> Based on material and temperature.</li>
+<li><strong>Supplier:</strong> We can help connect you with appropriate Chinese manufacturers.</li>
+</ul>
+<div class="tip"><strong>Need help selecting?</strong> Tell us your material, operation, and machine specs. We'll recommend the right tool geometry and connect you with a suitable factory. <a href="/quote.html" style="color:#06c;">Fresas de extremo</a></div>
+</div>
+</div>
+</main>
+</div>
+</main>
+<footer>
+<div class="footer-grid">
+<div>
+<div class="brand"><span>◆</span> Carbide Tooling</div>
+<div class="tagline">Precision cutting tools sourced from China's best manufacturers. Engineering support, QC verification, factory-direct pricing.</div>
+</div>
+<div>
+<h4>Productos</h4>
+<a href="../products/end-mills.html">Insertos de torneado</a>
+<a href="../products/turning-inserts.html">Taladros</a>
+<a href="../products/drills.html">Portaherramientas</a>
+<a href="../products/tool-holders.html">Herramientas de perforación</a>
+<a href="../products/boring-tools.html">Herramientas de roscado</a>
+<a href="../products/threading-tools.html">Guías técnicas</a>
+</div>
+<div>
+<h4>Recursos</h4>
+<a href="../guides/">Calculadora de velocidad y avance</a>
+<a href="https://speed-feed.carbide-tooling.com/">Seleccionador de calificaciones</a>
+<a href="../guides/carbide-grades.html">Guía de recubrimiento</a>
+<a href="../guides/coating-comparison.html">Sobre nosotros</a>
+</div>
+<div>
+<h4>Empresa</h4>
+<a href="../about.html">Obtener una cotización</a>
+<a href="../quote.html">Contacto</a>
+<a href="mailto:info@carbide-tooling.com">Contact</a>
+</div>
+</div>
+<div class="bottom">© 2026 Carbide Tooling. Precision sourcing for precision machining.</div>
+</footer>
+</body>
+</html>

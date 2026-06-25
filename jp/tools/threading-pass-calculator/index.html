@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="ja"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Threading Pass 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Free online threading pass 計算機 for CNC lathes. 計算 number of passes, 切込み深さ per pass, and in送り method for external and internal thread cutting."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>スレッディングパス計算機 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="CNC旋盘用の无料オンラインスレッディングパス计算机。パス数、パスごとの深さ、および外部と内部のスレッド切断のインフィード方法を計算します。" name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:80px 0 60px}.hero .badge{display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px}.hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;margin-bottom:12px}.hero h1 .accent{color:#0066cc}.hero p{font-size:17px;color:#86868b;max-width:600px;margin:0 auto 32px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:28px 30px;margin-bottom:20px}.card h2{font-size:20px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:20px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}.seo{padding:60px 0}.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;margin-top:40px}.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}.seo ol{padding-left:20px;margin-bottom:14px}.seo ol li{font-size:14px;color:#444;margin-bottom:6px;line-height:1.7}.seo code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.card-row{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -13,204 +14,209 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Threading Pass 計算機 | 精密加工ツール"/>
-<meta property="og:description" content="Free online threading pass calculator for CNC lathes. 計算 number of passes, depth per pass, and infeed method for external and internal thread c"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/threading-pass-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Threading Pass 計算機 | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="スレッディングパス計算機 | 精密加工ツール" property="og:title"/>
+<meta content="CNC旋盘用の无料オンラインスレッディングパス计算机。外部および内部スレッドcのパス数、パスあたりの深さ、およびインフィード方法を計算します" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/threading-pass-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Threading Pass Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Threading Pass 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/threading-pass-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online threading pass calculator for CNC lathes. 計算 number of passes, depth per pass, and infeed method for external and internal thread cutting.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/threading-pass-calculator/",
-      "name": "Threading Pass 計算機",
-      "description": "Free online threading pass calculator for CNC lathes. 計算 number of passes, depth per pass, and infeed method for external and internal thread cutting.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do you calculate thread depth for CNC threading?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "External thread depth = 0.6134 × pitch. Internal thread depth = 0.5413 × pitch. These values come from the ISO 68-1 thread profile standard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many passes for a 2 mm pitch thread in steel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "7-8 passes. The first pass at approximately 0.4 mm depth, decreasing to 0.03 mm for the final finishing pass."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between G92 and G76 threading cycles?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "G92 is a simple pass-repeat cycle (same depth each pass). G76 is a multi-pass cycle with automatic depth decrease and compound infeed. Use G76 for all threading except very coarse pitches where G92 gives better control."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I use coolant for thread cutting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, for all materials except cast iron. Coolant prevents built-up edge on the threading insert, which degrades thread form accuracy. For carbide threading inserts, consistent coolant flow also prevents thermal cracking."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Threading Pass Calculator",
+ "url": "https://carbide-tooling.com/tools/threading-pass-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online threading pass calculator for CNC lathes. Calculate number of passes, depth per pass, and infeed method for external and internal thread cutting.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/threading-pass-calculator/",
+ "name": "Threading Pass Calculator",
+ "description": "Free online threading pass calculator for CNC lathes. Calculate number of passes, depth per pass, and infeed method for external and internal thread cutting.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How do you calculate thread depth for CNC threading?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "External thread depth = 0.6134 × pitch. Internal thread depth = 0.5413 × pitch. These values come from the ISO 68-1 thread profile standard."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How many passes for a 2 mm pitch thread in steel?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "7-8 passes. The first pass at approximately 0.4 mm depth, decreasing to 0.03 mm for the final finishing pass."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the difference between G92 and G76 threading cycles?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "G92 is a simple pass-repeat cycle (same depth each pass). G76 is a multi-pass cycle with automatic depth decrease and compound infeed. Use G76 for all threading except very coarse pitches where G92 gives better control."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Should I use coolant for thread cutting?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, for all materials except cast iron. Coolant prevents built-up edge on the threading insert, which degrades thread form accuracy. For carbide threading inserts, consistent coolant flow also prevents thermal cracking."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/threading-pass-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/threading-pass-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/threading-pass-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/threading-pass-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/threading-pass-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/threading-pass-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/threading-pass-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/threading-pass-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/threading-pass-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/threading-pass-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/threading-pass-calculator/">中</a></div></div></nav>
-<section class="hero"><div class="container"><div class="badge">🔧 Programming Tutorial</div><h1>Threading Pass <span class="accent">計算機</span></h1><p>For G76 cycles on CNC lathes. 計算 the depth per pass, number of passes, and infeed method for external and internal threading.</p><a class="btn" href="#calculator">計算 ↓</a></div></section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>🔧 Thread Cutting Passes</h2><p class="sub">For single-point threading on CNC lathes with G76 or G92 cycles.</p>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/threading-pass-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/threading-pass-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/threading-pass-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/threading-pass-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/threading-pass-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">ガイド</a><a href="https://carbide-tooling.com/about.html">について</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩見積もりを取得する</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/threading-pass-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/threading-pass-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/threading-pass-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/threading-pass-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/threading-pass-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<section class="hero"><div class="container"><div class="badge">🔧 Programming Tutorial</div><h1>スレッド通し計算機</h1><p>CNC旋盘のG76サイクルのため。パスごとの深さ、パス数、および外部スレッドと内部スレッドの入力方法を計算します。</p><a class="btn" href="#calculator">計算する ↓</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>🔧スレッド切断パス</h2><p class="sub">G76またはG92サイクルのCNC旋盤でのシングルポイントスレッディング用。</p>
 <div class="card-row">
-<div class="field"><label>🔩 被削材</label><select id="material" onchange="calc()"><option value="steel">Steel / Alloy</option><option value="ss">Stainless</option><option value="al">Aluminum</option></select></div>
-<div class="field"><label>📐 Thread Pitch (mm)</label><input type="number" id="pitch" value="1.5" min="0.2" max="8" step="0.1" oninput="calc()"/></div>
-<div class="field"><label>📏 Thread Major Dia (mm)</label><input type="number" id="major" value="20" min="3" max="200" step="0.5" oninput="calc()"/></div>
-<div class="field"><label>🔧 External / Internal</label><select id="type" onchange="calc()"><option value="ext">External (bolt)</option><option value="int">Internal (nut)</option></select></div>
+<div class="field"><label>🔩材料</label><select id="material" onchange="calc()"><option value="steel">Steel / Alloy</option><option value="ss">Stainless</option><option value="al">Aluminum</option></select></div>
+<div class="field"><label>📐糸ピッチ (mm)</label><input id="pitch" max="8" min="0.2" oninput="calc()" step="0.1" type="number" value="1.5"/></div>
+<div class="field"><label>📏スレッドメジャーDia (mm)</label><input id="major" max="200" min="3" oninput="calc()" step="0.5" type="number" value="20"/></div>
+<div class="field"><label>🔧外部/内部</label><select id="type" onchange="calc()"><option value="ext">External (bolt)</option><option value="int">Internal (nut)</option></select></div>
 </div>
 <div class="result-grid">
-<div class="result-item"><div class="label">Total Thread 切込み深さ</div><div class="value" id="r-depth">—</div><div class="unit">mm</div></div>
+<div class="result-item"><div class="label">Total Thread Depth</div><div class="value" id="r-depth">—</div><div class="unit">mm</div></div>
 <div class="result-item"><div class="label">Number of Passes</div><div class="value" id="r-passes">—</div><div class="unit">passes</div></div>
-<div class="result-item"><div class="label">First Pass 切込み深さ</div><div class="value" id="r-first">—</div><div class="unit">mm</div></div>
-<div class="result-item"><div class="label">Last Pass 切込み深さ</div><div class="value" id="r-last">—</div><div class="unit">mm</div></div>
+<div class="result-item"><div class="label">First Pass Depth</div><div class="value" id="r-first">—</div><div class="unit">mm</div></div>
+<div class="result-item"><div class="label">Last Pass Depth</div><div class="value" id="r-last">—</div><div class="unit">mm</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:20px 0"><a href="/jp/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← 全ツール</a></div>
+<div style="text-align:center;margin:20px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← すべてのツール</a></div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">ホーム</a>
+<a href="/tools/">すべてのツール</a>
+<a href="/products/">製品</a>
+<a href="/guides/">ガイド</a>
+<a href="/about.html">について</a>
+<a href="/quote.html">硬度変換器</a>
+<a href="/privacy.html">タップ穴径</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/threading-pass-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/threading-pass-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/threading-pass-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/threading-pass-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/threading-pass-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">MRR計算ツール</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">すべてのツール</a></p>
+<p style="font-size:11px;margin-bottom:6px">結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</p>
+<p style="font-size:11px">©2026年用超硬工具</p>
 </div>
 </footer>
 <script>
 function calc(){const m=document.getElementById('material').value;const p=parseFloat(document.getElementById('pitch').value)||1.5;const maj=parseFloat(document.getElementById('major').value)||20;const t=document.getElementById('type').value;const depth=t==='ext'?0.6134*p:0.5413*p;const passFactors={steel:[0.35,0.25,0.18,0.13,0.07,0.03],ss:[0.28,0.2,0.15,0.12,0.09,0.06,0.03,0.02],al:[0.4,0.28,0.18,0.08]};const factors=passFactors[m]||passFactors.steel;const firstPass=depth*factors[0];let remaining=depth;let passes=0;for(let f of factors){if(remaining<=0)break;const thisPass=depth*f;remaining-=thisPass;passes++;}if(remaining>0){passes+=Math.ceil(remaining/0.02);}const lastPass=depth*factors[factors.length-1];document.getElementById('r-depth').textContent=depth.toFixed(3);document.getElementById('r-passes').textContent=passes;document.getElementById('r-first').textContent=firstPass.toFixed(3);document.getElementById('r-last').textContent=lastPass.toFixed(3);}
 calc();</script><section class="seo-content"><div class="container">
-<h2>Programming G76: How Many Passes for a 1.5 mm Pitch Thread?</h2>
-<p>A 20 mm × 1.5 external thread on a steel shaft needs a total thread depth of approximately 0.92 mm (0.61 × pitch for standard 60° thread form). The G76 cycle needs to distribute this depth across multiple passes with decreasing depth per pass — the first pass takes the heaviest cut, and subsequent passes get progressively lighter.</p>
-<p>For a 1.5 mm pitch thread in steel, use 5-6 passes. The first pass removes about 0.35 mm, the second 0.25 mm, the third 0.15 mm, and so on down to a 0.03 mm finishing pass. In aluminum, the same thread can be cut in 3-4 passes because the material is more forgiving. In stainless, increase to 7-8 passes to distribute the cutting load and prevent work-hardening at the thread root.</p>
-<p>The infeed method — compound infeed at 29.5° for standard G76 cycles — creates a more favorable chip formation than straight infeed. The thread-cutting insert cuts on one edge only, forming the thread profile progressively with each pass. This calculator uses the standard decreasing depth formula from the Machinery's Handbook.</p>
+<h2>プログラミングG76: 1.5mmピッチスレッドのパス数は?</h2>
+<p>スチールシャフト上の20mm × 1.5の外部ねじは、約0.92mm (標準的な60 ° ねじ形状の0.61 × ピッチ) の総ねじ深さを必要とする。G76サイクルは、この深さを複数のパスに分散させ、パスごとに深さを減らす必要があります。最初のパスは最も重いカットを行い、その後のパスは徐々に軽くなります。</p>
+<p>スチールの1.5mmピッチの糸の場合は、5〜6パスを使用します。最初のパスは約0.35mm、2番目の0.25mm、3番目の0.15mmなどを除去して、0.03mmの仕上げパスになります。アルミニウムでは、材料がより寛容であるため、同じ糸を3-4パスで切断することができます。ステンレスでは、7-8パスに増やして、切断荷重を分散させ、糸の根元での加工硬化を防ぎます。</p>
+<p>インフィード法 (標準のG76サイクルで29.5 ° の複合インフィード) は、ストレートインフィードよりも有利なチップ形成を作成します。糸切断インサートは1つのエッジのみをカットし、パスごとにスレッドプロファイルを徐々に形成します。この計算機は、Machinery's Handbookの標準の減少深度式を使用します。</p>
 <ol>
-<li><strong>Step 1:</strong> 計算 total thread depth = 0.6134 × pitch (external) or 0.5413 × pitch (internal)</li>
+<li><strong>Step 1:</strong> Calculate total thread depth = 0.6134 × pitch (external) or 0.5413 × pitch (internal)</li>
 <li><strong>Step 2:</strong> Starting depth = total depth × 0.4 (reduced for material toughness)</li>
 <li><strong>Step 3:</strong> Each subsequent pass depth = previous depth × 0.65-0.75</li>
 <li><strong>Step 4:</strong> Minimum pass depth = 0.02-0.05 mm for finishing</li>
 </ol>
-
 <h2>よくある質問</h2>
 <p><strong>How do you calculate thread depth for CNC threading?</strong> External thread depth = 0.6134 × pitch. Internal thread depth = 0.5413 × pitch. These values come from the ISO 68-1 thread profile standard.</p>
 <p><strong>How many passes for a 2 mm pitch thread in steel?</strong> 7-8 passes. The first pass at approximately 0.4 mm depth, decreasing to 0.03 mm for the final finishing pass.</p>
 <p><strong>What is the difference between G92 and G76 threading cycles?</strong> G92 is a simple pass-repeat cycle (same depth each pass). G76 is a multi-pass cycle with automatic depth decrease and compound infeed. Use G76 for all threading except very coarse pitches where G92 gives better control.</p>
 <p><strong>Should I use coolant for thread cutting?</strong> Yes, for all materials except cast iron. Coolant prevents built-up edge on the threading insert, which degrades thread form accuracy. For carbide threading inserts, consistent coolant flow also prevents thermal cracking.</p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<div class="toolbox-widget"><h3>🔧精密工学ツールボックス</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">表面粗さ</a>
+<a href="/tools/hardness-converter/">チタンガイド</a>
+<a href="/tools/tap-drill-size-calculator/">グレード相互参照</a>
+<a href="/tools/mrr-calculator/">部品当たりのコスト</a>
+<a href="/tools/feed-converter/">トルクコンバーター</a>
+<a href="/tools/surface-roughness-calculator/">一括見積もりを依頼する →</a>
+<a href="/tools/titanium-machining-guide/">超硬ドリル</a>
+<a href="/tools/carbide-grade-cross-ref-2/">ねじ切り用リーマおよびタップ</a>
+<a href="/tools/cost-per-part-calculator/">ツールボックス整理箱</a>
+<a href="/tools/torque-unit-converter/">超硬合金グレードの相互参照表</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>専門的なツールが必要ですか？</h3>
+<p>工場直送価格、最適化された超硬材種、そして迅速な技術サポートを、すべてワンストップでご提供します。</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Gコードリファレンス</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">超硬ドリル</a><a href="/products/threading-tools.html">スレッドミル＆タップ</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">スロット加工計算ツール</a><a href="/products/threading-tools.html">表面粗さ計算ツール</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/toolbox-organizer/">Toolbox Organizer</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Reference</a>
-<a href="/jp/tools/gcode-reference/">G-Code Reference</a>
-<a href="/jp/tools/slot-milling-calculator/">Slot Milling 計算機</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness 計算機</a>
-<a href="/jp/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a>
-<a href="/jp/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a>
-<a href="/jp/tools/mcode-reference/">M-Code Reference</a>
-
-  </div>
+<h3>🔧100種類のプロ向け切削工具をチェック</h3>
+<div class="tool-grid">
+<a href="/tools/toolbox-organizer/">鋼の熱伝導率</a>
+<a href="/tools/carbide-grade-cross-ref-2/">冷却液のライフサイクルコスト</a>
+<a href="/tools/gcode-reference/">Mコードリファレンス</a>
+<a href="/tools/slot-milling-calculator/">リンクドイン</a>
+<a href="/tools/surface-roughness-calculator/">電子メール</a>
+<a href="/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a>
+<a href="/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a>
+<a href="/tools/mcode-reference/">M-Code Reference</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/threading-pass-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/threading-pass-calculator/&text=Threading Pass 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Threading Pass 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/threading-pass-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/threading-pass-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/threading-pass-calculator/&amp;text=Threading Pass Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Threading Pass Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/threading-pass-calculator/">Email</a>
 </div>
-
 </body></html>

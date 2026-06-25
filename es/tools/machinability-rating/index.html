@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Machinability Rating | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline."/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/machinability-rating/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Maquinabilidad | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Tabla de calificación de maquinabilidad libre para aceros AISI. Compare el índice de maquinabilidad de 1018, 4140, 4340, 8620 y más. B1112 = 100% basal." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{height:44px;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;margin-bottom:0}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:10px;margin-top:36px}.hero h1{font-size:30px;font-weight:800;letter-spacing:-.8px}.hero .accent{color:#0066cc}.hero p{font-size:14px;color:#86868b}.search{width:100%;padding:10px 14px;border:1.5px solid #e8e8ed;border-radius:12px;font-size:14px;font-family:inherit;outline:none;margin:16px 0}.search:focus{border-color:#0066cc}.rate-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}.rate-table th,.rate-table td{padding:8px 12px;text-align:left;border-bottom:1px solid #e8e8ed}.rate-table th{background:#f5f5f7;font-size:10px;font-weight:600}.bar{display:inline-block;height:8px;border-radius:4px;margin-right:6px}.good{background:#16a34a}.avg{background:#d97706}.poor{background:#dc2626}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,258 +12,262 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Machinability Rating | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/machinability-rating/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Machinability Rating | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rating de maquinabilidad | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Tabla de calificación de maquinabilidad libre para aceros AISI. Compare el índice de maquinabilidad de 1018, 4140, 4340, 8620 y más. B1112 = 100% basal." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/machinability-rating/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Machinability Rating | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Machinability Rating",
-      "url": "https://carbide-tooling.com/es/tools/machinability-rating/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/machinability-rating/",
-      "name": "Machinability Rating",
-      "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the most machinable steel grade?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AISI 1212 and 1215 leaded free-machining steels are the most machinable, with ratings of 100% and 130% respectively. However, these grades are not suitable for weldments or high-stress applications. For structural use, 12L14 (160% rating) offers excellent machinability with moderate strength."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does machinability rating apply to milling and drilling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The AISI machinability rating is based on turning tests. For milling and drilling operations, the relative ratings provide a useful guideline but the actual speed adjustments may differ. Drilling typically requires larger speed reductions for difficult materials than turning."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does material condition affect machinability?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Material condition significantly impacts machinability. Annealed materials are generally most machinable. Cold-drawn materials are 10–20% harder and correspondingly less machinable. Heat-treated materials above 40 HRC can have 50% or less of the machinability of the annealed state.\n⚡ Calculard for Carbide-Tooling.com High-Performance Series. Ver catálogo →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Machinability Rating",
+ "url": "https://carbide-tooling.com/tools/machinability-rating/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/machinability-rating/",
+ "name": "Machinability Rating",
+ "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the most machinable steel grade?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "AISI 1212 and 1215 leaded free-machining steels are the most machinable, with ratings of 100% and 130% respectively. However, these grades are not suitable for weldments or high-stress applications. For structural use, 12L14 (160% rating) offers excellent machinability with moderate strength."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does machinability rating apply to milling and drilling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The AISI machinability rating is based on turning tests. For milling and drilling operations, the relative ratings provide a useful guideline but the actual speed adjustments may differ. Drilling typically requires larger speed reductions for difficult materials than turning."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How does material condition affect machinability?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Material condition significantly impacts machinability. Annealed materials are generally most machinable. Cold-drawn materials are 10–20% harder and correspondingly less machinable. Heat-treated materials above 40 HRC can have 50% or less of the machinability of the annealed state.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rating de maquinabilidad | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Tabla de calificación de maquinabilidad libre para aceros AISI. Compare el índice de maquinabilidad de 1018, 4140, 4340, 8620 y más. B1112 = 100% basal." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/machinability-rating/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Machinability Rating | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Machinability Rating",
+ "url": "https://carbide-tooling.com/tools/machinability-rating/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/machinability-rating/",
+ "name": "Machinability Rating",
+ "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Rating de maquinabilidad | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Tabla de calificación de maquinabilidad libre para aceros AISI. Compare el índice de maquinabilidad de 1018, 4140, 4340, 8620 y más. B1112 = 100% basal." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/machinability-rating/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Machinability Rating | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Machinability Rating",
+ "url": "https://carbide-tooling.com/tools/machinability-rating/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/machinability-rating/",
+ "name": "Machinability Rating",
+ "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Machinability Rating | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/machinability-rating/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Machinability Rating | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Machinability Rating",
-      "url": "https://carbide-tooling.com/es/tools/machinability-rating/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/machinability-rating/",
-      "name": "Machinability Rating",
-      "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Machinability Rating | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/machinability-rating/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Machinability Rating | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Machinability Rating",
-      "url": "https://carbide-tooling.com/es/tools/machinability-rating/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/machinability-rating/",
-      "name": "Machinability Rating",
-      "description": "Free machinability rating chart for AISI steels. Compare machinability index of 1018, 4140, 4340, 8620 and more. B1112 = 100% baseline.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/machinability-rating/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/machinability-rating/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/machinability-rating/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/machinability-rating/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/machinability-rating/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/machinability-rating/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/machinability-rating"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/machinability-rating/">EN</a><span class="sep">|</span><a href="/de/tools/machinability-rating/">DE</a><span class="sep">|</span><a href="/jp/tools/machinability-rating/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/machinability-rating/">VI</a><span class="sep">|</span><a href="/zh/tools/machinability-rating/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Inicio</a> <span style="color:#d2d2d6">›</span> <a href="/es/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Machinability Rating</div>
-<div class="container"><div class="badge">📊 Rating Chart</div><h1 class="hero">Steel <span class="accent">Machinability Rating</span></h1><p class="hero" style="margin-bottom:16px">Baseline: AISI B1112 = 100%. Higher = easier to machine.</p>
-<input type="text" class="search" placeholder="Search grade (e.g. 4140, 1018)..." oninput="filter()"/>
+
+
+ 
+<link href="https://carbide-tooling.com/es/tools/machinability-rating/" rel="canonical"/><link href="https://carbide-tooling.com/tools/machinability-rating/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/machinability-rating/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/machinability-rating/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/machinability-rating/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/machinability-rating/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/machinability-rating/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪DE</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/machinability-rating/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/machinability-rating/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/machinability-rating/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/machinability-rating/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/machinability-rating/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">en</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Ver catálogo →</a> <span style="color:#d2d2d6">›</span> Machinability Rating</div>
+<div class="container"><div class="badge">📊 Rating Chart</div><h1 class="hero">Comprender el índice de maquinabilidad AISI</h1><p class="hero" style="margin-bottom:16px">El índice de maquinabilidad AISI clasifica los materiales en relación con el acero AISI 1212 (con una calificación del 100%). Los valores más altos indican un mecanizado más fácil. Puntos de referencia clave: 1212 = 100%, 1117 = 85%, 1018 = 70%, 4140 recocido = 60%, 316 inoxidable = 40%, e Inconel 718 = 15%. Este índice proporciona un punto de partida para los ajustes de velocidad y alimentación al cambiar materiales.</p>
+<input class="search" oninput="filter()" placeholder="Search grade (e.g. 4140, 1018)..." type="text"/>
 <div id="table-wrap"></div>
 <p id="count" style="font-size:12px;color:#86868b;text-align:center"></p>
-<div style="text-align:center;margin:24px 0"><a href="/es/tools/" style="color:#0066cc;font-size:13px">← Todas las herramientas</a></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Velocidad y avance</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">en</a>
+<a href="/tools/">Cómo la maquinabilidad afecta la velocidad y la selección de alimentación</a>
+<a href="/products/">🇩🇪DE</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Guía de titanio</a>
+<a href="/privacy.html">Referencia cruzada de calificaciones</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Costo por pieza</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Cómo la maquinabilidad afecta la velocidad y la selección de alimentación</a></p>
+<p style="font-size:11px;margin-bottom:6px">Un material con un 50% de maquinabilidad requiere aproximadamente la mitad de la velocidad de corte del acero 1212 al 100%. La relación es aproximadamente: Velocidad recomendada = Velocidad de referencia × (Maquinabilidad del material/100). Las velocidades de alimentación se reducen típicamente por la raíz cuadrada de la relación de maquinabilidad. Por ejemplo, el cambio de 1018 (70%) a 316 SS (40%) sugiere una reducción de velocidad del 43% y una reducción de alimentación del 24%.</p>
+<p style="font-size:11px">Factores que mejoran o degradan la maquinabilidad</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Understanding the AISI Machinability Index</h2><p>The AISI machinability index rates materials relative to AISI 1212 steel (rated 100%). Higher values indicate easier machining. Key reference points: 1212 = 100%, 1117 = 85%, 1018 = 70%, 4140 annealed = 60%, 316 stainless = 40%, and Inconel 718 = 15%. This index provides a starting point for speed and feed adjustments when switching materials.</p>
-<h2>How Machinability Affects Velocidad de corte and Avance Selection</h2><p>A material with 50% machinability requires approximately half the cutting speed of 1212 steel at 100%. The relationship is roughly: Recomendado Velocidad de corte = Baseline Velocidad de corte × (Material Machinability / 100). Avance rates are typically reduced by the square root of the machinability ratio. For example, switching from 1018 (70%) to 316SS (40%) suggests a 43% speed reduction and a 24% feed reduction.</p>
-<h2>Factors That Improve or Degrade Machinability</h2><p>Free-machining additives like sulfur (up to 0.35%), lead (up to 0.35%), and calcium improve machinability by modifying chip formation. Cold work reduces machinability by increasing hardness and strength. Heat treatment can dramatically change machinability: normalized 4140 machines better than annealed, but hardened 4140 above 40 HRC becomes significantly more difficult to machine.</p>
-<h2>Preguntas frecuentes</h2>
+<h2>Los aditivos de mecanizado libre como el azufre (hasta 0,35%), el plomo (hasta 0,35%) y el calcio mejoran la maquinabilidad al modificar la formación de virutas. El trabajo en frío reduce la maquinabilidad al aumentar la dureza y la resistencia. El tratamiento térmico puede cambiar drásticamente la maquinabilidad: las máquinas 4140 normalizadas son mejores que las recocidas, pero las 4140 endurecidas por encima de los 40 HRC se vuelven significativamente más difíciles de mecanizar.</h2><p>Preguntas frecuentes</p>
+<h2>¿Cuál es el grado de acero más mecanizable? Los aceros de mecanizado libre con plomo AISI 1212 y 1215 son los más mecanizables, con calificaciones de 100% y 130% respectivamente. Sin embargo, estos grados no son adecuados para soldaduras o aplicaciones de alto estrés. Para uso estructural, 12 L14 (160%) ofrece una excelente maquinabilidad con una resistencia moderada.</h2><p>¿La clasificación de maquinabilidad se aplica al fresado y taladrado? La clasificación de maquinabilidad AISI se basa en pruebas de torneado. Para las operaciones de fresado y perforación, las clasificaciones relativas proporcionan una guía útil, pero los ajustes de velocidad reales pueden diferir. La perforación generalmente requiere mayores reducciones de velocidad para materiales difíciles que el torneado.</p>
+<h2>¿Cómo afecta la condición del material a la maquinabilidad? La condición del material afecta significativamente a la maquinabilidad. Los materiales recocido son generalmente más mecanizables. Los materiales estirados en frío son 10-20% más duros y, en consecuencia, menos mecanizables. Los materiales tratados térmicamente por encima de 40 HRC pueden tener el 50% o menos de la maquinabilidad del estado recocido.</h2><p>⚡Calculado para la Serie de Alto Rendimiento de Carbide-Tooling.com. Ver catálogo →</p>
+<h2>🔧Caja de herramientas de ingeniería de precisión</h2>
 <p><strong>What is the most machinable steel grade?</strong> AISI 1212 and 1215 leaded free-machining steels are the most machinable, with ratings of 100% and 130% respectively. However, these grades are not suitable for weldments or high-stress applications. For structural use, 12L14 (160% rating) offers excellent machinability with moderate strength.</p>
 <p><strong>Does machinability rating apply to milling and drilling?</strong> The AISI machinability rating is based on turning tests. For milling and drilling operations, the relative ratings provide a useful guideline but the actual speed adjustments may differ. Drilling typically requires larger speed reductions for difficult materials than turning.</p>
 <p><strong>How does material condition affect machinability?</strong> Material condition significantly impacts machinability. Annealed materials are generally most machinable. Cold-drawn materials are 10–20% harder and correspondingly less machinable. Heat-treated materials above 40 HRC can have 50% or less of the machinability of the annealed state.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculard for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Ver catálogo →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Solicitar cotización por volumen →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/machinability-rating/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/machinability-rating/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/machinability-rating/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/machinability-rating/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/machinability-rating/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/machinability-rating/" class="lang-link">中</a>
-</div>
 </footer>
 <script>
 const DATA=[{g:'B1112',r:100,c:'Free-machining'},{g:'1215',r:98,c:'Free-machining'},{g:'12L14',r:105,c:'Highest leaded'},{g:'1018',r:70,c:'Low carbon'},{g:'1045',r:60,c:'Medium carbon'},{g:'1117',r:85,c:'Carburizing'},{g:'4140',r:55,c:'Alloy, annealed'},{g:'4140HT',r:35,c:'Hardened to 30HRC'},{g:'4340',r:45,c:'High-strength alloy'},{g:'8620',r:60,c:'Carburizing alloy'},{g:'316',r:35,c:'Stainless'},{g:'304',r:40,c:'Stainless'},{g:'440C',r:25,c:'Hardened stainless'},{g:'D2',r:25,c:'Tool steel'},{g:'A2',r:35,c:'Tool steel'},{g:'O1',r:40,c:'Tool steel'},{g:'H13',r:30,c:'Hot work'},{g:'Ti6Al4V',r:15,c:'Titanium alloy'}];function filter(){const q=document.querySelector('.search').value.toLowerCase();const rows=DATA.filter(d=>d.g.toLowerCase().includes(q));const e=document.getElementById('table-wrap');e.innerHTML='<table class="rate-table"><tr><th>Grade</th><th>Rating</th><th>Bar</th><th>Category</th></tr>'+rows.map(r=>`<tr><td><b>${r.g}</b></td><td>${r.r}%</td><td><span class="bar ${r.r>=70?'good':r.r>=40?'avg':'poor'}" style="width:${r.r*1.2}px"></span></td><td>${r.c}</td></tr>`).join('')+'</table>';document.getElementById('count').textContent=rows.length+' grades';}
 filter();
-</script><div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+</script><div class="toolbox-widget"><h3>Productos</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Guía de selección de grado</a>
+<a href="/tools/hardness-converter/">Insertar consulta de calificaciones</a>
+<a href="/tools/tap-drill-size-calculator/">Calculadora de caballos de fuerza</a>
+<a href="/tools/mrr-calculator/">Guía de mecanizado del titanio</a>
+<a href="/tools/feed-converter/">Calculadora de diseño de brocas escalonadas</a>
+<a href="/tools/surface-roughness-calculator/">Calculadora de fuerza</a>
+<a href="/tools/titanium-machining-guide/">Calculadora de expansión térmica</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Calculadora de carga por diente</a>
+<a href="/tools/cost-per-part-calculator/">Calculadora de fresado de ranuras</a>
+<a href="/tools/torque-unit-converter/">Calculadora de tamaño de broca para roscado</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Guías</h3>
+<p>Sobre</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Guía de selección de calidad</a><a href="/guides/insert-grade-selection.html">Consulta de calidad de inserto</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Correo electrónico</a><a href="/guides/insert-grade-selection.html">Grado de búsqueda (por ejemplo, 4140, 1018)...</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/horsepower-calculator/">Horsepower Calculadora</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Machining Guía</a>
-<a href="/es/tools/step-drill-design-calculator/">Step Drill Design Calculadora</a>
-<a href="/es/tools/force-calculator/">Force Calculadora</a>
-<a href="/es/tools/heat-expansion-calculator/">Heat Expansion Calculadora</a>
-<a href="/es/tools/chip-load/">Chip Load Calculadora</a>
-<a href="/es/tools/slot-milling-calculator/">Slot Milling Calculadora</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size Calculadora</a>
-
-  </div>
+<h3>📩Obtener una cotización</h3>
+<div class="tool-grid">
+<a href="/tools/horsepower-calculator/">Horsepower Calculator</a>
+<a href="/tools/titanium-machining-guide/">Titanium Machining Guide</a>
+<a href="/tools/step-drill-design-calculator/">Step Drill Design Calculator</a>
+<a href="/tools/force-calculator/">Force Calculator</a>
+<a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
+<a href="/tools/chip-load/">Chip Load Calculator</a>
+<a href="/tools/slot-milling-calculator/">Slot Milling Calculator</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/machinability-rating/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/machinability-rating/&text=Machinability Rating" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Machinability Rating&body=Check this out: https://carbide-tooling.com/es/tools/machinability-rating/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/machinability-rating/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/machinability-rating/&amp;text=Machinability Rating" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Machinability Rating&amp;body=Check this out: https://carbide-tooling.com/tools/machinability-rating/">Email</a>
 </div>
-
 </body></html>

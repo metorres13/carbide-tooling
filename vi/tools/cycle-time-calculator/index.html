@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cycle Time Máy tính | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" id="meta-desc" content="Free online turning cycle time calculator for CNC lathes. Estimate cutting time for OD turning, facing, boring, and parting operations. Optimize cycle time and cost per part." />
-<meta property="og:title" content="Turning Cycle Time Máy tính — Carbide Dụng cụing" />
-<meta property="og:description" content="Tính CNC turning cycle time for OD turning, facing, boring, and parting. Estimate parts per hour and optimize production." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" />
-<meta property="og:locale" content="en_US" />
-<meta name="theme-color" content="#0066cc" />
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Máy tính Thời gian chu kỳ | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Máy tính Thời gian xoay vòng trực tuyến miễn phí cho máy tiện CNC. Ước tính thời gian cắt cho các thao tác xoay, đối mặt, nhàm chán và chia tay. Tối ưu hóa thời gian chu kỳ và chi phí cho mỗi bộ phận." id="meta-desc" name="description"/>
+<meta content="Máy tính Thời gian chu kỳ xoay-Dụng cụ cacbua" property="og:title"/>
+<meta content="Tính thời gian chu kỳ quay CNC cho việc xoay, đối mặt, nhàm chán và chia tay. Ước tính phụ tùng mỗi giờ và tối ưu hóa sản xuất." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://carbide-tooling.com/tools/cycle-time-calculator/" property="og:url"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="#0066cc" name="theme-color"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -72,10 +73,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-
 footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0 32px;margin-top:60px;text-align:center;font-size:12px;color:#86868b}
 footer a{color:#0066cc;text-decoration:none}
 @media(max-width:768px){
-  .hero h1{font-size:32px}
-  .result-grid{grid-template-columns:1fr 1fr}
-  .card{padding:20px 16px}
-  .card-row,.seo .comparison{grid-template-columns:1fr}
+ .hero h1{font-size:32px}
+ .result-grid{grid-template-columns:1fr 1fr}
+ .card{padding:20px 16px}
+ .card-row,.seo .comparison{grid-template-columns:1fr}
 }
 .lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
@@ -86,412 +87,395 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Cycle Time Máy tính | Precision Machining Tool"/>
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/cycle-time-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Cycle Time Máy tính | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính Thời gian chu kỳ | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/cycle-time-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Cycle Time Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Cycle Time Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/cycle-time-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Cycle Time Máy tính for CNC machining",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/cycle-time-calculator/",
-      "name": "Cycle Time Máy tính",
-      "description": "Cycle Time Máy tính for CNC machining",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do you calculate cycle time for CNC turning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cutting time = length of cut ÷ (feed per revolution × v/ph). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the formula for turning time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (v/ph). For multiple passes, multiply by the number of passes and add non-cutting time between passes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does depth of cut affect cycle time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a good cycle time for CNC turning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does constant surface speed affect cycle time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant v/ph. Always use G96 for facing operations."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Cycle Time Calculator",
+ "url": "https://carbide-tooling.com/tools/cycle-time-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Cycle Time Calculator for CNC machining",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/cycle-time-calculator/",
+ "name": "Cycle Time Calculator",
+ "description": "Cycle Time Calculator for CNC machining",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How do you calculate cycle time for CNC turning?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Cutting time = length of cut ÷ (feed per revolution × RPM). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the formula for turning time?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (RPM). For multiple passes, multiply by the number of passes and add non-cutting time between passes."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How does depth of cut affect cycle time?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is a good cycle time for CNC turning?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does constant surface speed affect cycle time?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant RPM. Always use G96 for facing operations."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/cycle-time-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/cycle-time-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cycle-time-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cycle-time-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cycle-time-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/cycle-time-calculator"/>
-</head>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/cycle-time-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/cycle-time-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/cycle-time-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/cycle-time-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/cycle-time-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
 <nav>
 <div class="nav-inner">
-  <div class="nav-left">
-    <a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a>
-    <div class="nav-links">
-      <a href="https://carbide-tooling.com/products/">Sản phẩm</a>
-      <a href="https://carbide-tooling.com/guides/">Hướng dẫn kỹ thuật</a>
-      <a href="https://carbide-tooling.com/about.html">Về chúng tôi</a>
-    </div>
-  </div>
-  <a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/cycle-time-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/cycle-time-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/cycle-time-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/cycle-time-calculator/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/cycle-time-calculator/">中</a></div>
+<div class="nav-left">
+<a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="https://carbide-tooling.com/products/">Sản phẩm</a>
+<a href="https://carbide-tooling.com/guides/">Hướng dẫn</a>
+<a href="https://carbide-tooling.com/about.html">Về chúng tôi</a>
 </div>
-</nav>
-
+</div>
+<a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩Nhận báo giá</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/cycle-time-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/cycle-time-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/cycle-time-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/cycle-time-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/cycle-time-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
 <section class="hero">
 <div class="container">
-  <div class="badge">⏱️ Free Professional Dụng cụ</div>
-  <h1>Turning <span class="accent">Cycle Time</span> Máy tính</h1>
-  <p>Estimate cutting time for OD turning, facing, boring, and parting operations. Tính toán cost per part and optimize production throughput.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#calculator">Start Calculating ↓</a>
-    <a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩 Get a Precision Quote</a>
-  </div>
+<div class="badge">⏱️ Free Professional Tool</div>
+<h1>Máy tính Thời gian chu kỳ xoay</h1>
+<p>Ước tính thời gian cắt cho các nguyên công tiện ngoài, tiện mặt đầu, khoan lỗ và cắt đứt. Tính chi phí trên một phần và tối ưu hóa Thông lượng sản xuất.</p>
+<div class="hero-actions">
+<a class="btn" href="#calculator">Bắt đầu tính toán ↓</a>
+<a class="btn-outline" href="https://carbide-tooling.com/quote.html">📩Nhận báo giá chính xác</a>
+</div>
 </div>
 </section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
+<section class="container" id="calculator" style="padding-bottom:40px">
 <div class="card">
-  <h2>⏱️ Cycle Time Estimation</h2>
-  <p class="sub">For CNC lathe operations. Enter parameters below; results update in real time.</p>
-
-  <div class="card-row">
-    <div class="field"><label>🔧 Nguyên công Type</label>
-      <select id="op-type" onchange="calc()">
-        <option value="od">OD Turning (external)</option>
-        <option value="facing">Facing (face)</option>
-        <option value="boring">Boring (internal)</option>
-        <option value="parting">Parting / Cut-off</option>
-      </select>
-    </div>
-    <div class="field"><label>⚙️ Vật liệu</label>
-      <select id="material" onchange="calc()">
-        <option value="al6061">Aluminum 6061</option>
-        <option value="ss304" selected>Stainless Steel 304</option>
-        <option value="mild_steel">Mild Steel 1018</option>
-        <option value="ti6al4v">Titanium Grade 5</option>
-      </select>
-    </div>
-    <div class="field"><label>📐 Part Đường kính (mm)</label>
-      <input type="number" id="dia" value="50" min="1" max="500" step="1" oninput="calc()" />
-    </div>
-    <div class="field"><label>📏 Length of Cut (mm)</label>
-      <input type="number" id="length" value="100" min="1" max="2000" step="1" oninput="calc()" />
-    </div>
-    <div class="field"><label>⏬ Chiều sâu cắt of Cut (mm)</label>
-      <input type="number" id="doc" value="2" min="0.1" max="20" step="0.1" oninput="calc()" />
-    </div>
-    <div class="field"><label>📊 Lượng chạy dao Rate (mm/rev)</label>
-      <input type="number" id="feed" value="0.2" min="0.01" max="5" step="0.01" oninput="calc()" />
-    </div>
-    <div class="field"><label>⚡ Cutting Tốc độ cắt (Vc m/min)</label>
-      <input type="number" id="vc" value="180" min="10" max="2000" step="10" oninput="calc()" />
-    </div>
-    <div class="field"><label>🔄 Number of Passes</label>
-      <select id="passes" onchange="calc()"><option value="1">1</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-    </div>
-  </div>
-
-  <div class="card-row" style="grid-template-columns:1fr 1fr">
-    <div class="field"><label>📐 Final Đường kính (mm)</label>
-      <input type="number" id="final-dia" value="44" min="1" max="500" step="1" oninput="calc()" />
-      <span style="font-size:10px;color:#86868b">For facing: final = 0</span>
-    </div>
-    <div class="field"><label>⏱️ Non-Cutting Time (sec)</label>
-      <input type="number" id="noncut" value="15" min="0" max="300" step="1" oninput="calc()" />
-      <span style="font-size:10px;color:#86868b">Dụng cụ change + positioning</span>
-    </div>
-  </div>
-
-  <div class="result-grid">
-    <div class="result-item"><div class="label">Cutting Time</div><div class="value" id="r-cut">—</div><div class="unit">seconds</div></div>
-    <div class="result-item"><div class="label">Cycle Time per Part</div><div class="value" id="r-cycle">—</div><div class="unit">seconds</div></div>
-    <div class="result-item"><div class="label">Parts per Hour</div><div class="value" id="r-pph">—</div><div class="unit">parts/hr</div></div>
-    <div class="result-item"><div class="label">Spindle Tốc độ cắt</div><div class="value" id="r-rpm">—</div><div class="unit">Vòng/phút</div></div>
-  </div>
-
-  <div class="extra-info">
-    <span>Lượng chạy dao per minute: <span class="val" id="x-fpm">—</span> mm/min</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Vật liệu removed: <span class="val" id="x-removed">—</span> cm³</span>
-    <span style="color:#d2d2d6">|</span>
-    <span>Cost per part (est.): <span class="val" id="x-cost">—</span></span>
-  </div>
+<h2>⏱️ Ước lượng thời gian chu kỳ</h2>
+<p class="sub">Đối với thao tác máy tiện CNC. Nhập thông số dưới đây; kết quả cập nhật trong thời gian thực.</p>
+<div class="card-row">
+<div class="field"><label>🔧Loại hoạt động</label>
+<select id="op-type" onchange="calc()">
+<option value="od">OD Turning (external)</option>
+<option value="facing">Facing (face)</option>
+<option value="boring">Boring (internal)</option>
+<option value="parting">Parting / Cut-off</option>
+</select>
 </div>
-
+<div class="field"><label>⚙️ Chất liệu</label>
+<select id="material" onchange="calc()">
+<option value="al6061">Aluminum 6061</option>
+<option selected="" value="ss304">Stainless Steel 304</option>
+<option value="mild_steel">Mild Steel 1018</option>
+<option value="ti6al4v">Titanium Grade 5</option>
+</select>
+</div>
+<div class="field"><label>📐Đường kính phần (mm)</label>
+<input id="dia" max="500" min="1" oninput="calc()" step="1" type="number" value="50"/>
+</div>
+<div class="field"><label>📏Chiều dài cắt (mm)</label>
+<input id="length" max="2000" min="1" oninput="calc()" step="1" type="number" value="100"/>
+</div>
+<div class="field"><label>⏬Độ sâu cắt (mm)</label>
+<input id="doc" max="20" min="0.1" oninput="calc()" step="0.1" type="number" value="2"/>
+</div>
+<div class="field"><label>📊Tốc độ nạp (mm/Rev)</label>
+<input id="feed" max="5" min="0.01" oninput="calc()" step="0.01" type="number" value="0.2"/>
+</div>
+<div class="field"><label>⚡Tốc độ cắt (VC m/phút)</label>
+<input id="vc" max="2000" min="10" oninput="calc()" step="10" type="number" value="180"/>
+</div>
+<div class="field"><label>🔄Số lượt truy cập</label>
+<select id="passes" onchange="calc()"><option value="1">1</option><option value="2">2</option><option selected="" value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+</div>
+</div>
+<div class="card-row" style="grid-template-columns:1fr 1fr">
+<div class="field"><label>📐Đường kính cuối cùng (mm)</label>
+<input id="final-dia" max="500" min="1" oninput="calc()" step="1" type="number" value="44"/>
+<span style="font-size:10px;color:#86868b">For facing: final = 0</span>
+</div>
+<div class="field"><label>⏱️ Thời gian không cắt (giây)</label>
+<input id="noncut" max="300" min="0" oninput="calc()" step="1" type="number" value="15"/>
+<span style="font-size:10px;color:#86868b">Tool change + positioning</span>
+</div>
+</div>
+<div class="result-grid">
+<div class="result-item"><div class="label">Cutting Time</div><div class="value" id="r-cut">—</div><div class="unit">seconds</div></div>
+<div class="result-item"><div class="label">Cycle Time per Part</div><div class="value" id="r-cycle">—</div><div class="unit">seconds</div></div>
+<div class="result-item"><div class="label">Parts per Hour</div><div class="value" id="r-pph">—</div><div class="unit">parts/hr</div></div>
+<div class="result-item"><div class="label">Spindle Tốc độ cắt</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div>
+</div>
+<div class="extra-info">
+<span>Lượng chạy dao per minute: <span class="val" id="x-fpm">—</span> mm/min</span>
+<span style="color:#d2d2d6">|</span>
+<span>Material removed: <span class="val" id="x-removed">—</span> cm³</span>
+<span style="color:#d2d2d6">|</span>
+<span>Cost per part (est.): <span class="val" id="x-cost">—</span></span>
+</div>
+</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
-  <a href="/vi/tools/speed-feed/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
-    <div style="font-size:20px;margin-bottom:4px">⚙️</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Tốc độ cắt &amp; Lượng chạy dao Máy tính</h4>
-    <p style="font-size:12px;color:#86868b">Optimize cutting parameters before calculating cycle time.</p>
-  </a>
-  <a href="/vi/tools/mrr-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
-    <div style="font-size:20px;margin-bottom:4px">⚡</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">MRR Máy tính</h4>
-    <p style="font-size:12px;color:#86868b">Vật liệu removal rate affects cycle time directly.</p>
-  </a>
+<a href="/tools/speed-feed/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
+<div style="font-size:20px;margin-bottom:4px">⚙️</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Công cụ tính toán tốc độ và lượng ăn dao</h4>
+<p style="font-size:12px;color:#86868b">Tối ưu hóa các thông số cắt trước khi tính toán thời gian chu kỳ.</p>
+</a>
+<a href="/tools/mrr-calculator/" style="background:#f5f5f7;border-radius:16px;padding:20px 22px;text-decoration:none;color:#1d1d1f;transition:all .25s">
+<div style="font-size:20px;margin-bottom:4px">⚡</div><h4 style="font-size:14px;font-weight:600;margin-bottom:2px">Công cụ tính MRR</h4>
+<p style="font-size:12px;color:#86868b">Tỷ lệ loại bỏ vật liệu ảnh hưởng trực tiếp đến thời gian chu kỳ.</p>
+</a>
 </div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Trang chủ</a>
+<a href="/tools/">Tất cả công cụ</a>
+<a href="/products/">Sản phẩm</a>
+<a href="/guides/">Hướng dẫn</a>
+<a href="/about.html">Về chúng tôi</a>
+<a href="/quote.html">Máy tính lực</a>
+<a href="/privacy.html">Tốc độ và Lượng ăn dao</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/cycle-time-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/cycle-time-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/cycle-time-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/cycle-time-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/cycle-time-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Bộ chuyển đổi độ cứng</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
+<p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</p>
+<p style="font-size:11px">©Dụng cụ cắt gọt bằng cacbua năm 2026</p>
 </div>
 </footer>
-
 <script>
 const MATS = {
-  al6061:{label:'Aluminum 6061'},
-  ss304:{label:'Stainless 304'},
-  mild_steel:{label:'Mild Steel'},
-  ti6al4v:{label:'Titanium Gr5'},
+ al6061:{label:'Aluminum 6061'},
+ ss304:{label:'Stainless 304'},
+ mild_steel:{label:'Mild Steel'},
+ ti6al4v:{label:'Titanium Gr5'},
 };
 
 function calc() {
-  const op = document.getElementById('op-type').value;
-  const dia = parseFloat(document.getElementById('dia').value) || 50;
-  const len = parseFloat(document.getElementById('length').value) || 100;
-  const doc = parseFloat(document.getElementById('doc').value) || 2;
-  const feed = parseFloat(document.getElementById('feed').value) || 0.2;
-  const vc = parseFloat(document.getElementById('vc').value) || 180;
-  const passes = parseInt(document.getElementById('passes').value) || 3;
-  const finalDia = parseFloat(document.getElementById('final-dia').value) || 44;
-  const noncut = parseFloat(document.getElementById('noncut').value) || 15;
+ const op = document.getElementById('op-type').value;
+ const dia = parseFloat(document.getElementById('dia').value) || 50;
+ const len = parseFloat(document.getElementById('length').value) || 100;
+ const doc = parseFloat(document.getElementById('doc').value) || 2;
+ const feed = parseFloat(document.getElementById('feed').value) || 0.2;
+ const vc = parseFloat(document.getElementById('vc').value) || 180;
+ const passes = parseInt(document.getElementById('passes').value) || 3;
+ const finalDia = parseFloat(document.getElementById('final-dia').value) || 44;
+ const noncut = parseFloat(document.getElementById('noncut').value) || 15;
 
-  // Tính toán Vòng/phút from Vc
-  let effDia = op === 'facing' ? (dia + finalDia) / 2 : dia;
-  if (op === 'parting') effDia = dia;
-  const rpm = effDia > 0 ? (vc * 1000) / (Math.PI * effDia) : 1000;
+ // Calculate RPM from Vc
+ let effDia = op === 'facing' ? (dia + finalDia) / 2 : dia;
+ if (op === 'parting') effDia = dia;
+ const rpm = effDia > 0 ? (vc * 1000) / (Math.PI * effDia) : 1000;
 
-  // Lượng chạy dao per minute
-  const fpm = feed * rpm;
+ // Lượng chạy dao per minute
+ const fpm = feed * rpm;
 
-  // Tính toán travel distance based on operation
-  let travel = 0;
-  if (op === 'od' || op === 'boring') {
-    travel = len + 5; // +5mm approach/overrun
-  } else if (op === 'facing') {
-    travel = (dia - finalDia) / 2 + 3;
-  } else if (op === 'parting') {
-    travel = dia / 2 + 2;
-  }
+ // Calculate travel distance based on operation
+ let travel = 0;
+ if (op === 'od' || op === 'boring') {
+ travel = len + 5; // +5mm approach/overrun
+ } else if (op === 'facing') {
+ travel = (dia - finalDia) / 2 + 3;
+ } else if (op === 'parting') {
+ travel = dia / 2 + 2;
+ }
 
-  // Cutting time per pass
-  const cutPerPassSec = travel > 0 && fpm > 0 ? (travel / fpm) * 60 : 0;
-  
-  // Total cutting time
-  const totalCutSec = cutPerPassSec * passes;
-  
-  // Non-cutting between passes
-  const interPassSec = (passes - 1) * 3;
-  
-  // Total cycle
-  const cycleSec = totalCutSec + noncut + interPassSec;
-  
-  // Parts per hour
-  const pph = cycleSec > 0 ? 3600 / cycleSec : 0;
+ // Cutting time per pass
+ const cutPerPassSec = travel > 0 && fpm > 0 ? (travel / fpm) * 60 : 0;
+ 
+ // Total cutting time
+ const totalCutSec = cutPerPassSec * passes;
+ 
+ // Non-cutting between passes
+ const interPassSec = (passes - 1) * 3;
+ 
+ // Total cycle
+ const cycleSec = totalCutSec + noncut + interPassSec;
+ 
+ // Parts per hour
+ const pph = cycleSec > 0 ? 3600 / cycleSec : 0;
 
-  // Vật liệu removed
-  const singlePassDepth = (dia - finalDia) / 2 / passes;
-  const removedPerPass = op === 'od' || op === 'boring'
-    ? (Math.PI * (Math.pow(dia/10,2) - Math.pow((dia-2*singlePassDepth)/10,2)) * len/10) / 4
-    : 0;
-  const totalRemoved = removedPerPass * passes;
+ // Material removed
+ const singlePassDepth = (dia - finalDia) / 2 / passes;
+ const removedPerPass = op === 'od' || op === 'boring'
+ ? (Math.PI * (Math.pow(dia/10,2) - Math.pow((dia-2*singlePassDepth)/10,2)) * len/10) / 4
+ : 0;
+ const totalRemoved = removedPerPass * passes;
 
-  // Cost estimate
-  const shopRate = 85; // $/hour
-  const costPerPart = (cycleSec / 3600) * shopRate;
+ // Cost estimate
+ const shopRate = 85; // $/hour
+ const costPerPart = (cycleSec / 3600) * shopRate;
 
-  document.getElementById('r-cut').textContent = totalCutSec.toFixed(1);
-  document.getElementById('r-cycle').textContent = cycleSec.toFixed(1);
-  document.getElementById('r-pph').textContent = Math.round(pph);
-  document.getElementById('r-rpm').textContent = Math.round(rpm);
-  document.getElementById('x-fpm').textContent = Math.round(fpm);
-  document.getElementById('x-removed').textContent = totalRemoved.toFixed(1);
-  document.getElementById('x-cost').textContent = '$' + costPerPart.toFixed(2);
+ document.getElementById('r-cut').textContent = totalCutSec.toFixed(1);
+ document.getElementById('r-cycle').textContent = cycleSec.toFixed(1);
+ document.getElementById('r-pph').textContent = Math.round(pph);
+ document.getElementById('r-rpm').textContent = Math.round(rpm);
+ document.getElementById('x-fpm').textContent = Math.round(fpm);
+ document.getElementById('x-removed').textContent = totalRemoved.toFixed(1);
+ document.getElementById('x-cost').textContent = '$' + costPerPart.toFixed(2);
 }
 
 calc();
 </script>
 <section class="seo-content">
 <div class="container">
-
-  <h2>How Long Should Each Turning Nguyên công Take?</h2>
-  <p>A 304 stainless steel shaft, 50mm diameter × 200mm long, with three roughing passes and one finishing pass — is 4 minutes reasonable? Or should it be 2? Without a structured calculation, estimates vary by 100% or more between experienced programmers. This variation directly impacts quoting accuracy, production scheduling, and shop profitability. The turning cycle time formula eliminates guesswork by breaking each operation down into its geometric and kinematic components.</p>
-
-  <p>The difference between a well-optimized turning cycle and a conservative one is typically 30-50% of cycle time — which translates directly into cost per part. A job that runs 500 parts per year at $12 each versus $8 each represents a $2,000 annual difference for a single part number. Across an entire production schedule, the savings from accurate cycle time optimization fund significant investments in tooling and equipment.</p>
-
-  <h2>The Turning Time Formula</h2>
-  <p>For any single turning pass, the cutting time is derived from the fundamental relationship between tool travel distance and feed rate:</p>
-  <p><strong>Cutting time (min):</strong> <code>t = L / (f × n)</code><br/>
-  Where <strong>L</strong> = total tool travel including approach and overrun (mm), <strong>f</strong> = feed per revolution (mm/rev), and <strong>n</strong> = spindle speed (v/ph).</p>
-
-  <p>For <strong>OD turning</strong>, tool travel L = length of cut + approach distance. For <strong>facing</strong>, the average diameter is used: <code>L = (Dinitial + Dfinal) / 4</code> combined with the radial travel distance. For <strong>boring</strong>, the calculation is identical to OD turning but with internal diameter considerations. For <strong>parting</strong>, the travel distance equals the radius of the bar stock.</p>
-
-  <h2>Where Cycle Time Gets Lost: The Hidden Factors</h2>
-  <p>Cutting time is only part of the total cycle time. The non-cutting components — tool positioning, indexing, part loading/unloading, and inspection — often account for 30-60% of the total cycle on small parts. This calculator includes a non-cutting time parameter so you can model the total cycle accurately.</p>
-  <p>The most commonly overlooked factor is the <strong>number of passes</strong>. A single roughing pass at 3mm DOC removes more material per minute than two passes at 1.5mm each, but the cutting forces may exceed the insert's capability. The <a href="/vi/tools/force-calculator/" style="color:#0066cc">Milling Force Máy tính</a> can help determine the maximum DOC for your specific operation, enabling you to minimize pass count while staying within safe force limits.</p>
-
-  <h3>Cost Impact of Cycle Time Reduction</h3>
-  <p>Every second saved on cycle time reduces cost proportionally. At a shop rate of $85/hour, a 10-second reduction on a 3-minute cycle saves $0.47 per part. On a run of 10,000 parts, that's $4,700. The table below shows how small improvements compound:</p>
-
-  <div class="comparison">
-    <div><h4>🟢 Current: 180 sec/part</h4><p>200 parts/month → 10 hours machining → $850/month → $10,200/year</p></div>
-    <div><h4>🔵 Optimized: 120 sec/part</h4><p>200 parts/month → 6.7 hours → $567/month → $6,800/year<br/><strong>Save: $3,400/year</strong></p></div>
-  </div>
-
-  <h2>Operation-Specific Strategies to Reduce Cycle Time</h2>
-  <p><strong>OD Turning:</strong> The most direct lever is increasing DOC to reduce the number of passes. Each eliminated pass saves the full cutting time plus approach/retract motion. Verify force limits with the <a href="/vi/tools/force-calculator/" style="color:#0066cc">Force Máy tính</a> before increasing DOC.</p>
-  <p><strong>Facing:</strong> Constant surface speed (CSS) mode is essential. Without CSS, the Vòng/phút stays fixed and the cutting speed drops to zero at the center — dramatically increasing cycle time for facing operations. Always program facing with G96 (CSS) rather than G97 (constant v/ph).</p>
-  <p><strong>Boring:</strong> Internal boring cycles are limited by tool overhang and vibration. The cycle time is often determined by the need to take light passes to control chatter. Using a tuned boring bar with a higher natural frequency can allow deeper DOC and reduce pass count.</p>
-  <p><strong>Parting:</strong> Parting is feed-limited, not speed-limited. Increasing feed from 0.05 mm/rev to 0.12 mm/rev can cut cycle time by 60% on the parting operation. However, higher feeds increase the risk of jamming the insert in the cut. Use a parting tool with chip-forming geometry designed for high feed rates.</p>
-
-  <h2>How Cutting Parameters Affect Cycle Time vs. Dụng cụ Life</h2>
-  <p>There is a direct trade-off between cycle time and tool life. Increasing feed by 20% reduces cycle time by 17% but reduces tool life by approximately 35% (per the Taylor equation extended to feed rate effects). The optimal economic operating point balances the cost of increased tool consumption against the savings from reduced cycle time. For high-volume production (10,000+ parts), the optimal feed rate is typically higher than for low-volume runs, because tool change time is amortized across more parts.</p>
-  <p>Using the <a href="/vi/tools/speed-feed/" style="color:#0066cc">Tốc độ cắt &amp; Lượng chạy dao Máy tính</a> to find the material-specific recommended chip load ensures you operate in the efficient zone where small feed increases give large cycle time reductions without disproportionate tool life penalties.</p>
-
-  <div class="comparison">
-    <div><h4>⚡ High Lượng chạy dao Strategy</h4><p>f=0.4 mm/rev → 90 sec cycle<br/>Dụng cụ life: 80 parts/edge<br/>Cost: optimized for volume</p></div>
-    <div><h4>🎯 Balanced Strategy</h4><p>f=0.25 mm/rev → 125 sec cycle<br/>Dụng cụ life: 180 parts/edge<br/>Cost: optimized for mixed runs</p></div>
-  </div>
-
-  <h2>Câu hỏi thường gặp</h2>
-  <p><strong>How do you calculate cycle time for CNC turning?</strong> Cutting time = length of cut ÷ (feed per revolution × v/ph). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically.</p>
-  <p><strong>What is the formula for turning time?</strong> T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (v/ph). For multiple passes, multiply by the number of passes and add non-cutting time between passes.</p>
-  <p><strong>How does depth of cut affect cycle time?</strong> DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction.</p>
-  <p><strong>What is a good cycle time for CNC turning?</strong> For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count.</p>
-  <p><strong>Does constant surface speed affect cycle time?</strong> Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant v/ph. Always use G96 for facing operations.</p>
-  <p><strong>How do I reduce cycle time without reducing tool life?</strong> Increase Vòng/phút rather than feed — higher Vòng/phút reduces cycle time without increasing chip load (which is the primary driver of tool wear). Verify that the higher Vòng/phút stays within the recommended cutting speed range for the material using the <a href="/vi/tools/speed-feed/" style="color:#0066cc">Tốc độ cắt &amp; Lượng chạy dao Máy tính</a>.</p>
-
-  <div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
-    <p style="margin:0">Đến reduce cycle time without compromising quality, check our High-Performance End Mills</p>
-  </div>
+<h2>Mỗi thao tác xoay mất bao lâu?</h2>
+<p>Một trục thép không gỉ 304, đường kính 50mm x dài 200mm, với ba đường chuyền nhám và một đường chuyền hoàn thiện-Có hợp lý 4 phút không? Hay nó nên là 2? Không có tính toán có cấu trúc, ước tính thay đổi 100% hoặc nhiều hơn giữa các lập trình viên có kinh nghiệm. Sự thay đổi này tác động trực tiếp đến độ chính xác trích dẫn, lập kế hoạch sản xuất và khả năng sinh lời của cửa hàng. Công thức Turning cycle time giúp loại bỏ phỏng đoán bằng cách phá vỡ từng thao tác thành các thành phần hình học và động học của nó.</p>
+<p>Sự khác biệt giữa chu kỳ xoay được tối ưu hóa tốt và chu kỳ bảo thủ thường là 30-50% thời gian chu kỳ-chuyển trực tiếp thành chi phí trên một phần. Một công việc chạy 500 phần mỗi năm với giá $12 mỗi lần so với $8 mỗi lần đại diện cho chênh lệch hàng năm $2,000 cho một số bộ phận duy nhất. Trên toàn bộ lịch trình sản xuất, tiết kiệm từ quỹ tối ưu hóa thời gian chu kỳ chính xác đầu tư đáng kể vào dụng cụ và thiết bị.</p>
+<h2>Công thức thời gian quay</h2>
+<p>Đối với bất kỳ đường chuyền xoay nào, thời gian cắt được lấy từ mối quan hệ cơ bản giữa Khoảng cách di chuyển của dụng cụ và tốc độ nạp liệu:</p>
+<p><strong>Cutting time (min):</strong> <code>t = L / (f × n)</code><br/>
+ Where <strong>L</strong> = total tool travel including approach and overrun (mm), <strong>f</strong> = feed per revolution (mm/rev), and <strong>n</strong> = spindle speed (RPM).</p>
+<p>For <strong>OD turning</strong>, tool travel L = length of cut + approach distance. For <strong>facing</strong>, the average diameter is used: <code>L = (Dinitial + Dfinal) / 4</code> combined with the radial travel distance. For <strong>boring</strong>, the calculation is identical to OD turning but with internal diameter considerations. For <strong>parting</strong>, the travel distance equals the radius of the bar stock.</p>
+<h2>Mất thời gian chu kỳ ở đâu: các yếu tố ẩn giấu</h2>
+<p>Thời gian cắt chỉ là một phần của tổng thời gian chu kỳ. Các thành phần không cắt-Định vị dụng cụ, lập chỉ mục, xếp dỡ một phần và kiểm tra-thường chiếm 30-60% tổng chu kỳ cho các bộ phận nhỏ. Máy tính này bao gồm một thông số thời gian không cắt để bạn có thể mô hình chính xác tổng chu kỳ.</p>
+<p>The most commonly overlooked factor is the <strong>number of passes</strong>. A single roughing pass at 3mm DOC removes more material per minute than two passes at 1.5mm each, but the cutting forces may exceed the insert's capability. The <a href="/tools/force-calculator/" style="color:#0066cc">Trình chuyển đổi nguồn cấp dữ liệu</a> can help determine the maximum DOC for your specific operation, enabling you to minimize pass count while staying within safe force limits.</p>
+<h3>Tác động chi phí của việc giảm thời gian chu kỳ</h3>
+<p>Mỗi giây được tiết kiệm với thời gian chu kỳ giúp giảm chi phí tương ứng. Với tốc độ cửa hàng là $85/giờ, giảm 10 giây cho chu kỳ 3 phút giúp tiết kiệm $0.47 cho mỗi bộ phận. Với tổng cộng 10,000 linh kiện, giá là 4,700 đô la. Bảng dưới đây cho thấy sự cải tiến nhỏ như thế nào:</p>
+<div class="comparison">
+<div><h4>🟢Hiện tại: 180 giây/Phần</h4><p>200 linh kiện/tháng → gia công 10 giờ → $850/tháng → $10,200/năm</p></div>
+<div><h4>🔵Tối ưu hóa: 120 giây/Phần</h4><p>200 parts/month → 6.7 hours → $567/month → $6,800/year<br/><strong>Save: $3,400/year</strong></p></div>
+</div>
+<h2>Chiến Lược hoạt động cụ thể để giảm thời gian chu kỳ</h2>
+<p><strong>OD Turning:</strong> The most direct lever is increasing DOC to reduce the number of passes. Each eliminated pass saves the full cutting time plus approach/retract motion. Verify force limits with the <a href="/tools/force-calculator/" style="color:#0066cc">Độ nhám bề mặt</a> before increasing DOC.</p>
+<p><strong>Facing:</strong> Constant surface speed (CSS) mode is essential. Without CSS, the RPM stays fixed and the cutting speed drops to zero at the center — dramatically increasing cycle time for facing operations. Always program facing with G96 (CSS) rather than G97 (constant RPM).</p>
+<p><strong>Boring:</strong> Internal boring cycles are limited by tool overhang and vibration. The cycle time is often determined by the need to take light passes to control chatter. Using a tuned boring bar with a higher natural frequency can allow deeper DOC and reduce pass count.</p>
+<p><strong>Parting:</strong> Parting is feed-limited, not speed-limited. Increasing feed from 0.05 mm/rev to 0.12 mm/rev can cut cycle time by 60% on the parting operation. However, higher feeds increase the risk of jamming the insert in the cut. Use a parting tool with chip-forming geometry designed for high feed rates.</p>
+<h2>Các thông số cắt ảnh hưởng thế nào đến thời gian chu kỳ so với tuổi thọ của dụng cụ</h2>
+<p>Có sự trao đổi trực tiếp giữa thời gian chu kỳ và tuổi thọ công cụ. Tăng Nguồn cấp dữ liệu 20% làm giảm thời gian chu kỳ 17% nhưng giảm tuổi thọ công cụ Khoảng 35% (theo phương trình Taylor được mở rộng đến hiệu ứng tốc độ Nguồn cấp dữ liệu). Điểm vận hành kinh tế tối ưu cân bằng chi phí tiêu thụ dụng cụ tăng lên so với tiết kiệm từ thời gian chu kỳ giảm. Đối với sản xuất khối lượng lớn (hơn 10,000 bộ phận), tỷ lệ thức ăn tối ưu thường cao hơn so với chạy khối lượng thấp, bởi vì thời gian thay đổi công cụ được biến đổi qua nhiều bộ phận hơn.</p>
+<p>Using the <a href="/tools/speed-feed/" style="color:#0066cc">Công cụ tính toán tốc độ và lượng ăn dao</a> to find the material-specific recommended chip load ensures you operate in the efficient zone where small feed increases give large cycle time reductions without disproportionate tool life penalties.</p>
+<div class="comparison">
+<div><h4>⚡Chiến Lược Nguồn cấp dữ liệu cao</h4><p>f=0.4 mm/rev → 90 sec cycle<br/>Tool life: 80 parts/edge<br/>Cost: optimized for volume</p></div>
+<div><h4>🎯Chiến Lược cân bằng</h4><p>f=0.25 mm/rev → 125 sec cycle<br/>Tool life: 180 parts/edge<br/>Cost: optimized for mixed runs</p></div>
+</div>
+<h2>Câu hỏi thường gặp</h2>
+<p><strong>How do you calculate cycle time for CNC turning?</strong> Cutting time = length of cut ÷ (feed per revolution × RPM). Total cycle time = cutting time + non-cutting time (tool positioning, part loading, inspection). This calculator does both automatically.</p>
+<p><strong>What is the formula for turning time?</strong> T = L ÷ (f × n) where L = total tool travel (mm), f = feed per revolution (mm/rev), n = spindle speed (RPM). For multiple passes, multiply by the number of passes and add non-cutting time between passes.</p>
+<p><strong>How does depth of cut affect cycle time?</strong> DOC determines the number of passes required. Doubling DOC halves the number of passes, directly reducing cycle time. Example: removing 6mm of stock at 2mm DOC requires 3 passes; at 4mm DOC it requires 2 passes — a 33% cycle time reduction.</p>
+<p><strong>What is a good cycle time for CNC turning?</strong> For a typical shaft 50mm diameter × 100mm long in mild steel: 60-120 seconds per part is efficient. Under 60 seconds requires high-feed strategies with rigid setup. Over 180 seconds indicates conservative parameters or excessive pass count.</p>
+<p><strong>Does constant surface speed affect cycle time?</strong> Significantly for facing and large-diameter variations. CSS maintains optimal cutting speed throughout the operation, reducing cycle time by 20-40% on facing passes compared to constant RPM. Always use G96 for facing operations.</p>
+<p><strong>How do I reduce cycle time without reducing tool life?</strong> Increase RPM rather than feed — higher RPM reduces cycle time without increasing chip load (which is the primary driver of tool wear). Verify that the higher RPM stays within the recommended cutting speed range for the material using the <a href="/tools/speed-feed/" style="color:#0066cc">Công cụ tính toán tốc độ và lượng ăn dao</a>.</p>
+<div style="text-align:center;padding:32px 24px;font-size:15px;color:#1d1d1f;background:#f5f5f7;border-radius:16px;max-width:900px;margin:40px auto 0">
+<p style="margin:0">Để giảm thời gian chu kỳ mà không ảnh hưởng đến chất lượng, hãy kiểm tra các nhà máy cuối cùng hiệu suất cao của chúng tôi</p>
+</div>
 </div>
 </section>
-<div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<div class="toolbox-widget"><h3>🔧Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Chi phí trên mỗi bộ phận</a>
+<a href="/tools/hardness-converter/">Bộ biến mô</a>
+<a href="/tools/tap-drill-size-calculator/">Yêu cầu báo giá số lượng lớn →</a>
+<a href="/tools/mrr-calculator/">Công cụ tính MRR</a>
+<a href="/tools/feed-converter/">Giá đựng dụng cụ</a>
+<a href="/tools/surface-roughness-calculator/">Máy tính vát mép</a>
+<a href="/tools/titanium-machining-guide/">Công cụ tính nồng độ dung dịch làm mát</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Máy tính trọng lượng thanh tròn</a>
+<a href="/tools/cost-per-part-calculator/">Máy tính phay bước</a>
+<a href="/tools/torque-unit-converter/">Công cụ tính bước ren</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Bạn cần dụng cụ chuyên nghiệp?</h3>
+<p>Nhận giá trực tiếp từ nhà máy, các mác carbide được thiết kế chuyên dụng và dịch vụ hỗ trợ kỹ thuật nhanh nhạy – tất cả chỉ từ một nguồn cung duy nhất.</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Công cụ tính lãi suất kỹ thuật</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Dao phay hợp kim cứng</a><a href="/products/tool-holders.html">Đầu kẹp dao</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Hướng dẫn gia công titan</a><a href="/products/tool-holders.html">Máy tính mở rộng nhiệt</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/chamfer-calculator/">Chamfer Máy tính</a>
-<a href="/vi/tools/coolant-concentration/">Coolant Concentration Máy tính</a>
-<a href="/vi/tools/round-bar-weight/">Round Bar Weight Máy tính</a>
-<a href="/vi/tools/step-milling-calculator/">Step Milling Máy tính</a>
-<a href="/vi/tools/threading-pass-calculator/">Threading Pass Máy tính</a>
-<a href="/vi/tools/engineering-interest-calculator/">Engineering Interest Máy tính</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Machining Hướng dẫn</a>
-<a href="/vi/tools/heat-expansion-calculator/">Heat Expansion Máy tính</a>
-
-  </div>
+<h3>🔧Khám phá 100 công cụ gia công cơ khí chuyên nghiệp</h3>
+<div class="tool-grid">
+<a href="/tools/chamfer-calculator/">LinkedIn</a>
+<a href="/tools/coolant-concentration/">Thư điện tử</a>
+<a href="/tools/round-bar-weight/">Round Bar Weight Calculator</a>
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/threading-pass-calculator/">Threading Pass Calculator</a>
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/titanium-machining-guide/">Titanium Machining Guide</a>
+<a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/cycle-time-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/cycle-time-calculator/&text=Cycle Time Máy tính" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Cycle Time Máy tính&body=Check this out: https://carbide-tooling.com/vi/tools/cycle-time-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/cycle-time-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/cycle-time-calculator/&amp;text=Cycle Time Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Cycle Time Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/cycle-time-calculator/">Email</a>
 </div>
-
 </body>
 </html>

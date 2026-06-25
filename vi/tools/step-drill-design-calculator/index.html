@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Step Drill Design Máy tính | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Free online step drill design Máy tính. Tính Đếnán step lengths, Đường kínhs, and chamfer dimensions for cusĐếnm step drill design."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Máy tính thiết kế máy khoan bước | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Máy tính thiết kế khoan bước trực tuyến miễn phí. Tính Chiều Dài bước, đường kính và kích thước vát cho thiết kế khoan bước tùy chỉnh." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:36px;font-weight:800;letter-spacing:-1px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:18px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,260 +12,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Drill Design | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online step drill design Máy tính. Tính Đếnán step lengths, Đường kínhs, and chamfer dimensions for cusĐếnm step drill design."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Drill Design | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Thiết kế khoan bước | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính thiết kế khoan bước trực tuyến miễn phí. Tính Chiều Dài bước, đường kính và kích thước vát cho thiết kế khoan bước tùy chỉnh." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-drill-design-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Drill Design | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Drill Design",
-      "url": "https://carbide-tooling.com/vi/tools/step-drill-design-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step drill design calculator. Tính toán step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/step-drill-design-calculator/",
-      "name": "Step Drill Design",
-      "description": "Free online step drill design calculator. Tính toán step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I grind a standard drill into a step drill?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, on a universal tool and cutter grinder. Use a diamond wheel for carbide and avoid overheating during grinding. The step transitions must be concentric within 0.002 inches TIR. For critical step dimensions, use a CNC tool grinder for repeatable geometry."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the maximum number of steps for a single tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Practical limit is 3–4 steps for manual tool grinding and 5–7 steps for CNC-ground tools. Beyond this, chip evacuation becomes ineffective, and the tool's cross-sectional rigidity is compromised. For holes requiring more than 4 steps, consider using a step reamer instead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I prevent step drill chattering?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Chatter at step transitions is caused by interrupted cut forces. Reduce feed rate by 30% during step transitions. Ensure the toolholder has minimal runout (under 0.0005 inches TIR). Use a stub-length step drill where possible — a shorter tool is exponentially more rigid.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Drill Design",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "name": "Step Drill Design",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Can I grind a standard drill into a step drill?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, on a universal tool and cutter grinder. Use a diamond wheel for carbide and avoid overheating during grinding. The step transitions must be concentric within 0.002 inches TIR. For critical step dimensions, use a CNC tool grinder for repeatable geometry."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the maximum number of steps for a single tool?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Practical limit is 3–4 steps for manual tool grinding and 5–7 steps for CNC-ground tools. Beyond this, chip evacuation becomes ineffective, and the tool's cross-sectional rigidity is compromised. For holes requiring more than 4 steps, consider using a step reamer instead."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I prevent step drill chattering?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Chatter at step transitions is caused by interrupted cut forces. Reduce feed rate by 30% during step transitions. Ensure the toolholder has minimal runout (under 0.0005 inches TIR). Use a stub-length step drill where possible — a shorter tool is exponentially more rigid.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Thiết kế khoan bước | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính thiết kế khoan bước trực tuyến miễn phí. Tính Chiều Dài bước, đường kính và kích thước vát cho thiết kế khoan bước tùy chỉnh." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-drill-design-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Drill Design | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Drill Design",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "name": "Step Drill Design",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Khoan bước thiết kế cho mặt bàn và lỗ bậc. Tính toán chuyển đổi bước an toàn và giải phóng mặt bằng chip." property="og:title"/>
+<meta content="Máy tính thiết kế khoan bước trực tuyến miễn phí. Tính Chiều Dài bước, đường kính và kích thước vát cho thiết kế khoan bước tùy chỉnh." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-drill-design-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Drill Design Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Drill Design Calculator",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-drill-design-calculator/",
+ "name": "Step Drill Design Calculator",
+ "description": "Free online step drill design calculator. Calculate step lengths, diameters, and chamfer dimensions for custom step drill design.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Drill Design | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online step drill design Máy tính. Tính Đếnán step lengths, Đường kínhs, and chamfer dimensions for cusĐếnm step drill design."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Drill Design | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Drill Design",
-      "url": "https://carbide-tooling.com/vi/tools/step-drill-design-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step drill design calculator. Tính toán step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/step-drill-design-calculator/",
-      "name": "Step Drill Design",
-      "description": "Free online step drill design calculator. Tính toán step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Drill Design Máy tính | Precision Machining Tool"/>
-<meta property="og:description" content="Free online step drill design Máy tính. Tính Đếnán step lengths, Đường kínhs, and chamfer dimensions for cusĐếnm step drill design."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Drill Design Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Drill Design Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/step-drill-design-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step drill design calculator. Tính toán step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/step-drill-design-calculator/",
-      "name": "Step Drill Design Máy tính",
-      "description": "Free online step drill design calculator. Tính toán step lengths, diameters, and chamfer dimensions for custom step drill design.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/step-drill-design-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/step-drill-design-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Sản phẩm</a><a href="https://carbide-tooling.com/guides/">Hướng dẫn kỹ thuật</a><a href="https://carbide-tooling.com/about.html">Về chúng tôi</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/step-drill-design-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/step-drill-design-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/step-drill-design-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/step-drill-design-calculator/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/step-drill-design-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Step Drill Design Máy tính</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Design Hướng dẫn</div><h1>Step Drill <span class="accent">Design Máy tính</span></h1><p>Design step drills for counterbores and stepped holes. Tính toán safe step transitions and chip clearance.</p><a class="btn" href="#calculator">Tính toán ↓</a></div></section>
-<section id="calculator" class="container" style="padding-bottom:40px"><div class="card"><h2>📐 Step Drill Design</h2><p class="sub">Safe step depth is approximately 0.5-1× the step diameter per step.</p><div class="card-row"><div class="field"><label>📐 Small Đường kính (mm)</label><input type="number" id="d1" value="6" min="1" max="30" step="0.5" oninput="calc()"/></div><div class="field"><label>📐 Large Đường kính (mm)</label><input type="number" id="d2" value="12" min="1" max="50" step="0.5" oninput="calc()"/></div><div class="field"><label>📏 Total Chiều sâu cắt (mm)</label><input type="number" id="depth" value="25" min="1" max="100" step="1" oninput="calc()"/></div><div class="field"><label>🔧 Vật liệu</label><select id="mat" onchange="calc()"><option value="steel">Steel</option><option value="al">Aluminum</option></select></div></div><div class="result-grid"><div class="result-item"><div class="label">Max Step Chiều sâu cắt</div><div class="value" id="r-step">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chamfer Chiều rộng cắt</div><div class="value" id="r-chamfer">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Min Pilot Chiều sâu cắt</div><div class="value" id="r-pilot">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chip Clearance</div><div class="value" id="r-clear">—</div><div class="unit">mm</div></div></div></div><div style="text-align:center;margin:16px 0"><a href="/vi/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Tất cả công cụ</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/step-drill-design-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/step-drill-design-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/step-drill-design-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪Đức</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/step-drill-design-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/step-drill-design-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/step-drill-design-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/step-drill-design-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/step-drill-design-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Góc dẫn ren</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Công cụ tính ROI cho CNC</a> <span style="color:#d2d2d6">›</span> Step Drill Design Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Design Guide</div><h1>📐Đường kính nhỏ (mm)</h1><p>📐Đường kính lớn (mm)</p><a class="btn" href="#calculator">Độ sâu của rãnh then</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px"><div class="card"><h2>📏Tổng độ sâu (mm)</h2><p class="sub">🔧Vật liệu</p><div class="card-row"><div class="field"><label>🔧Khám phá 100 công cụ gia công cơ khí chuyên nghiệp</label><input id="d1" max="30" min="1" oninput="calc()" step="0.5" type="number" value="6"/></div><div class="field"><label>Tất cả công cụ</label><input id="d2" max="50" min="1" oninput="calc()" step="0.5" type="number" value="12"/></div><div class="field"><label>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</label><input id="depth" max="100" min="1" oninput="calc()" step="1" type="number" value="25"/></div><div class="field"><label>©Dụng cụ cắt gọt bằng cacbua năm 2026</label><select id="mat" onchange="calc()"><option value="steel">Steel</option><option value="al">Aluminum</option></select></div></div><div class="result-grid"><div class="result-item"><div class="label">Max Step Depth</div><div class="value" id="r-step">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chamfer Width</div><div class="value" id="r-chamfer">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Min Pilot Depth</div><div class="value" id="r-pilot">—</div><div class="unit">mm</div></div><div class="result-item"><div class="label">Chip Clearance</div><div class="value" id="r-clear">—</div><div class="unit">mm</div></div></div></div><div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Chiều dài mũi khoan</a></div></section>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a><a href="/vi/tools/thread-lead-angle-calculator/">Thread Lead Angle</a><a href="/vi/tools/cnc-roi-calculator/">CNC ROI Máy tính</a><a href="/vi/tools/keyway-depth-calculator/">Keyway Chiều sâu cắt</a><a href="/vi/tools/drill-point-length-calculator/">Drill Point Length</a><a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a><a href="/vi/tools/thread-depth-torque-calculator/">Thread Chiều sâu cắt & Torque</a><a href="/vi/tools/scrap-value-calculator/">Scrap Giá trị Máy tính</a>
-  </div>
+<h3>Bước khoan hình học: Thông số kỹ thuật đường kính và chiều dài</h3>
+<div class="tool-grid">
+<a href="/tools/surface-roughness-calculator/">Bộ chuyển đổi độ cứng</a><a href="/tools/thread-lead-angle-calculator/">Độ sâu ren &amp; Mô-men xoắn</a><a href="/tools/cnc-roi-calculator/">Công cụ tính giá trị phế liệu</a><a href="/tools/keyway-depth-calculator/">Nhận báo giá</a><a href="/tools/drill-point-length-calculator/">Quyền riêng tư</a><a href="/tools/hardness-converter/">trong</a><a href="/tools/thread-depth-torque-calculator/">Xem danh mục →</a><a href="/tools/scrap-value-calculator/">Tốc độ và Lượng ăn dao</a>
+</div>
 </section>
 <script>function calc(){const d1=parseFloat(document.getElementById('d1').value)||6;const d2=parseFloat(document.getElementById('d2').value)||12;const dep=parseFloat(document.getElementById('depth').value)||25;const mat=document.getElementById('mat').value;const step=Math.min(d2*0.5,dep);const chamfer=(d2-d1)*0.5;const pilot=Math.min(d1*1.5,dep*0.3);const clear=dep-pilot-step;document.getElementById('r-step').textContent=step.toFixed(1);document.getElementById('r-chamfer').textContent=chamfer.toFixed(1);document.getElementById('r-pilot').textContent=pilot.toFixed(1);document.getElementById('r-clear').textContent=clear.toFixed(1);}calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Góc dẫn ren</a>
+<a href="/tools/">Máy khoan bước kết hợp nhiều đường kính trong một công cụ duy nhất, giảm thay đổi công cụ và thời gian chu kỳ. Mỗi bước có ba kích thước quan trọng: Đường kính (D), chiều dài bước (L) và bán kính chuyển tiếp (r). Thực Hành Tiêu chuẩn: duy trì bán kính chuyển tiếp tối thiểu 0.015 inch để giảm nồng độ căng thẳng và ngăn ngừa vỡ bước. Tổng chiều dài sáo phải phù hợp với bước sâu nhất cộng với khoảng xả 20%.</a>
+<a href="/products/">🇩🇪Đức</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Chi phí trên mỗi bộ phận</a>
+<a href="/privacy.html">Bộ biến mô</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Yêu cầu báo giá số lượng lớn →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Máy khoan bước kết hợp nhiều đường kính trong một công cụ duy nhất, giảm thay đổi công cụ và thời gian chu kỳ. Mỗi bước có ba kích thước quan trọng: Đường kính (D), chiều dài bước (L) và bán kính chuyển tiếp (r). Thực Hành Tiêu chuẩn: duy trì bán kính chuyển tiếp tối thiểu 0.015 inch để giảm nồng độ căng thẳng và ngăn ngừa vỡ bước. Tổng chiều dài sáo phải phù hợp với bước sâu nhất cộng với khoảng xả 20%.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Khoảng cách bước và thiết kế góc chuyển tiếp</p>
+<p style="font-size:11px">Sự chuyển đổi giữa các bước phải bao gồm một vát hoặc bán kính chứ không phải là một góc 90 ° sắc nét. Góc chuyển tiếp được đề xuất: góc vát 30-45 ° đối với các lỗ Có bậc trong thép, 15-30 ° đối với nhôm để giảm sự hình thành gờ. Đối với các bước Xuyên Lỗ, quá trình chuyển đổi có thể tích cực hơn. Đối với các bước lỗ mù, đảm bảo Chiều dài bước bao gồm khoảng hở cho chiều dài điểm của đường kính phi công.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Step Drill Geometry: Đường kính and Length Specifications</h2><p>Step drills combine multiple diameters in a single tool, reducing tool changes and cycle times. Each step has three critical dimensions: diameter (D), step length (L), and transition radius (R). Standard practice: maintain a minimum 0.015-inch transition radius to reduce stress concentration and prevent step breakage. The overall flute length must accommodate the deepest step plus 20% clearance.</p>
-<h2>Step Spacing and Transition Angle Design</h2><p>The transition between steps should include a chamfer or radius rather than a sharp 90° corner. Đề xuất transition angle: 30–45° chamfer for stepped holes in steel, 15–30° for aluminum to reduce burr formation. For through-hole steps, the transition can be more aggressive. For blind hole steps, ensure the step length includes clearance for the pilot diameter's point length.</p>
-<h2>Dụng cụ Vật liệu Selection for Multi-Step Operations</h2><p>Step drills experience higher torsional loads than single-diameter drills due to the varying cutting action along the tool. For step drills, use micro-grain carbide grades (K20–K30) for toughness. For high-production step drilling in steel, TiAlN-coated carbide extends tool life 2–3× over uncoated. In aluminum, DLC-coated step drills prevent built-up edge on the step transitions.</p>
-<h2>Câu hỏi thường gặp</h2>
+<h2>Lựa chọn vật liệu dụng cụ cho các hoạt động nhiều bước</h2><p>Máy khoan bước có tải trọng xoắn cao hơn máy khoan Đường kính đơn do hành động cắt khác nhau dọc theo dụng cụ. Đối với máy khoan bước, hãy sử dụng các loại cacbua vi hạt (K20-K30) cho độ dẻo dai. Để khoan bước sản xuất cao bằng thép, cacbua ti AL n-coated kéo dài tuổi thọ dụng cụ 2-3 × không tráng. Bằng nhôm, máy khoan bước được phủ DLC ngăn không cho các bước chuyển tiếp tích hợp.</p>
+<h2>Câu hỏi thường gặp</h2><p>Tôi có thể mài Một mũi khoan tiêu chuẩn thành một mũi khoan không? Vâng, trên một dụng cụ đa năng và máy mài cắt. Sử dụng một bánh xe kim cương cho cacbua và tránh quá nóng trong quá trình MÀI. Các bước chuyển tiếp phải được đồng tâm trong vòng 0.002 inch tIR. Đối với các kích thước bước quan trọng, hãy sử dụng máy mài công cụ CNC để có thể lặp lại Hình học.</p>
+<h2>Số bước tối đa cho một công cụ duy nhất là gì? giới hạn thực tế là 3-4 bước để mài dụng cụ thủ công và 5-7 bước cho các công cụ nối đất CNC. Ngoài ra, việc di tản chip trở nên không hiệu quả, và độ cứng mặt cắt ngang của dụng cụ bị xâm phạm. Đối với các lỗ cần nhiều hơn 4 bước, hãy cân nhắc sử dụng một mũi khoan bước thay thế.</h2><p>Làm thế nào để ngăn chặn sự va chạm của máy khoan bước? tiếng nói tại các bước chuyển tiếp là do lực cắt bị gián đoạn. Giảm 30% tốc độ thức ăn trong quá trình chuyển đổi bước. Đảm bảo ngăn chứa dụng cụ có mức giảm tối thiểu (dưới 0.0005 inch tIR). Sử dụng một mũi khoan bước dài sơ khai nếu có thể-một công cụ ngắn hơn cứng nhắc hơn theo cấp số nhân.</p>
+<h2>⚡Được tính toán cho Dòng sản phẩm Hiệu suất Cao của Carbide-Tooling.com. Xem danh mục →</h2>
 <p><strong>Can I grind a standard drill into a step drill?</strong> Yes, on a universal tool and cutter grinder. Use a diamond wheel for carbide and avoid overheating during grinding. The step transitions must be concentric within 0.002 inches TIR. For critical step dimensions, use a CNC tool grinder for repeatable geometry.</p>
 <p><strong>What is the maximum number of steps for a single tool?</strong> Practical limit is 3–4 steps for manual tool grinding and 5–7 steps for CNC-ground tools. Beyond this, chip evacuation becomes ineffective, and the tool's cross-sectional rigidity is compromised. For holes requiring more than 4 steps, consider using a step reamer instead.</p>
 <p><strong>How do I prevent step drill chattering?</strong> Chatter at step transitions is caused by interrupted cut forces. Reduce feed rate by 30% during step transitions. Ensure the toolholder has minimal runout (under 0.0005 inches TIR). Use a stub-length step drill where possible — a shorter tool is exponentially more rigid.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Giá đựng dụng cụ</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/step-drill-design-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/step-drill-design-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/step-drill-design-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/step-drill-design-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<div class="toolbox-widget"><h3>Sản phẩm</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Máy tính khoan taro</a>
+<a href="/tools/hardness-converter/">trong</a>
+<a href="/tools/tap-drill-size-calculator/">Máy tính khoan Peck</a>
+<a href="/tools/mrr-calculator/">Công cụ tính giảm dần</a>
+<a href="/tools/feed-converter/">Hẹn giờ Pomodoro</a>
+<a href="/tools/surface-roughness-calculator/">Bộ chuyển đổi độ cứng</a>
+<a href="/tools/titanium-machining-guide/">Công cụ tính toán kích cỡ ISO</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Máy tính điểm tiếp tuyến</a>
+<a href="/tools/cost-per-part-calculator/">LinkedIn</a>
+<a href="/tools/torque-unit-converter/">Thư điện tử</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Hướng dẫn</h3>
+<p>Về chúng tôi</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Dao phay hợp kim cứng</a><a href="/products/tool-holders.html">Đầu kẹp dao</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/tool-holders.html">Tool Holders</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/form-tap-drill-calculator/">Form Tap Drill Máy tính</a>
-<a href="/vi/tools/tool-runout-calculator/">Dụng cụ Runout Máy tính</a>
-<a href="/vi/tools/peck-drilling-calculator/">Peck Drilling Máy tính</a>
-<a href="/vi/tools/taper-calculator/">Taper Máy tính</a>
-<a href="/vi/tools/pomodoro-timer/">Pomodoro Timer</a>
-<a href="/vi/tools/automation-vs-manual-calculator/">Automation vs Manual</a>
-<a href="/vi/tools/iso-fit-calculator/">ISO Fit Máy tính</a>
-<a href="/vi/tools/tangent-point-calculator/">Tangent Point Máy tính</a>
-
-  </div>
+<h3>Bước khoan hình học: Thông số kỹ thuật đường kính và chiều dài</h3>
+<div class="tool-grid">
+<a href="/tools/form-tap-drill-calculator/">Form Tap Drill Calculator</a>
+<a href="/tools/tool-runout-calculator/">Tool Runout Calculator</a>
+<a href="/tools/peck-drilling-calculator/">Peck Drilling Calculator</a>
+<a href="/tools/taper-calculator/">Taper Calculator</a>
+<a href="/tools/pomodoro-timer/">Pomodoro Timer</a>
+<a href="/tools/automation-vs-manual-calculator/">Automation vs Manual</a>
+<a href="/tools/iso-fit-calculator/">ISO Fit Calculator</a>
+<a href="/tools/tangent-point-calculator/">Tangent Point Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/step-drill-design-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/step-drill-design-calculator/&text=Step Drill Design Máy tính" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Step Drill Design Máy tính&body=Check this out: https://carbide-tooling.com/vi/tools/step-drill-design-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/step-drill-design-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/step-drill-design-calculator/&amp;text=Step Drill Design Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Step Drill Design Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/step-drill-design-calculator/">Email</a>
 </div>
-
 </body></html>

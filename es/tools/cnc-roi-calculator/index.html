@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Cnc Roi Calculadora | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="machine Herramienta roi, payback period Calculadora"/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Calculadora Cnc Roi | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Máquina herramienta roi, calculadora periodo de amortización" name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:750px;margin:0 auto;padding:0 20px}nav{height:44px;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{padding:28px 0 20px;text-align:center}.hero h1{font-size:26px;font-weight:800}.accent{color:#0066cc}.badge{display:inline-block;background:#f5f5f7;padding:2px 10px;border-radius:10px;font-size:10px;color:#86868b;margin-bottom:4px}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:4px auto}.panel{border:1px solid #e8e8ed;border-radius:14px;padding:14px 16px;margin:10px 0}.panel h3{font-size:14px;font-weight:700;margin-bottom:8px}.panel label{font-size:10px;font-weight:600;color:#86868b;display:block;margin-bottom:2px}.panel input,.panel select{width:100%;padding:6px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:6px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.res-item{background:#f5f5f7;border-radius:10px;padding:10px;text-align:center}.res-item .lbl{font-size:9px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.note{background:#fef3c7;border-left:3px solid #d97706;padding:10px 14px;margin:10px 0;font-size:12px;border-radius:6px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,265 +12,267 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="CNC ROI Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="machine Herramienta roi, payback period Calculadora"/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/cnc-roi-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CNC ROI Calculadora | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora CNC ROI | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Máquina herramienta roi, calculadora periodo de amortización" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/cnc-roi-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="CNC ROI Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "CNC ROI Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/cnc-roi-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "machine tool roi, payback period calculator",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/cnc-roi-calculator/",
-      "name": "CNC ROI Calculadora",
-      "description": "machine tool roi, payback period calculator",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is machine tool ROI calculated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a typical payback period for a CNC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What costs are often overlooked in ROI?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Calculard for Carbide-Tooling.com High-Performance Series. Ver catálogo →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "CNC ROI Calculator",
+ "url": "https://carbide-tooling.com/tools/cnc-roi-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "machine tool roi, payback period calculator",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/cnc-roi-calculator/",
+ "name": "CNC ROI Calculator",
+ "description": "machine tool roi, payback period calculator",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How is machine tool ROI calculated?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is a typical payback period for a CNC?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What costs are often overlooked in ROI?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora CNC ROI | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Máquina herramienta roi, calculadora periodo de amortización" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/cnc-roi-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="CNC ROI Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "CNC ROI Calculator",
+ "url": "https://carbide-tooling.com/tools/cnc-roi-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "machine tool roi, payback period calculator",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/cnc-roi-calculator/",
+ "name": "CNC ROI Calculator",
+ "description": "machine tool roi, payback period calculator",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora CNC ROI | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Máquina herramienta roi, calculadora periodo de amortización" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/cnc-roi-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="CNC ROI Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "CNC ROI Calculator",
+ "url": "https://carbide-tooling.com/tools/cnc-roi-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "machine tool roi, payback period calculator",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/cnc-roi-calculator/",
+ "name": "CNC ROI Calculator",
+ "description": "machine tool roi, payback period calculator",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="CNC ROI Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="machine Herramienta roi, payback period Calculadora"/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/cnc-roi-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CNC ROI Calculadora | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "CNC ROI Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/cnc-roi-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "machine tool roi, payback period calculator",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/cnc-roi-calculator/",
-      "name": "CNC ROI Calculadora",
-      "description": "machine tool roi, payback period calculator",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="CNC ROI Calculadora | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="machine Herramienta roi, payback period Calculadora"/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/cnc-roi-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CNC ROI Calculadora | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "CNC ROI Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/cnc-roi-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "machine tool roi, payback period calculator",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/cnc-roi-calculator/",
-      "name": "CNC ROI Calculadora",
-      "description": "machine tool roi, payback period calculator",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/cnc-roi-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/cnc-roi-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/cnc-roi-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/cnc-roi-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/cnc-roi-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/cnc-roi-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/cnc-roi-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/cnc-roi-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/cnc-roi-calculator/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/cnc-roi-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/cnc-roi-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Inicio</a> <span style="color:#d2d2d6">›</span> <a href="/es/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Cnc Roi Calculadora</div>
-<section class="hero"><div class="container"><div class="badge">📊 Business Herramienta</div><h1>PAGE_TITLE</h1><p>PAGE_DESC</p></div></section>
 
 
+
+ 
+<link href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/cnc-roi-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/cnc-roi-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/cnc-roi-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/cnc-roi-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/cnc-roi-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇯🇵JP</a><a href="https://carbide-tooling.com/guides/">🇪🇸ES</a><a href="https://carbide-tooling.com/about.html">🇻🇳VI</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">Inicio</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/cnc-roi-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/cnc-roi-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/cnc-roi-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/cnc-roi-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/cnc-roi-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Calculadora del taladro del golpecito de la forma</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Peso y envío</a> <span style="color:#d2d2d6">›</span> Cnc Roi Calculator</div>
+<section class="hero"><div class="container"><div class="badge">📊 Business Tool</div><h1>En las operaciones diarias de la tienda, la calculadora CNC Roi sirve como una referencia rápida para maquinistas, programadores e ingenieros de fabricación. Úselo durante la puesta en marcha, la programación o la inspección de calidad para verificar sus parámetros y garantizar resultados consistentes en todas las series de producción.</h1><p>Buenas prácticas para obtener resultados precisos</p></div></section>
 <section class="seo-content">
 <div class="container">
-<h2>How the CNC Roi Calculadora Works</h2>
-<p>The CNC Roi Calculadora provides instant, accurate results for CNC machining professionals. Whether you're programming a Haas, Mazak, or Okuma, having the right reference data helps you make better decisions on the shop floor. This tool eliminates guesswork and reduces setup time.</p>
-<h2>Practical Applications in CNC Machining</h2>
-<p>In daily shop operations, the CNC Roi Calculadora serves as a quick reference for machinists, programmers, and manufacturing engineers. Use it during setup, programming, or quality inspection to verify your parameters and ensure consistent results across production runs.</p>
-<h2>Best Practices for Accurate Resultados</h2>
-<p>For best results with the CNC Roi Calculadora, always verify your input values against known material specifications and machine capabilities. Document your settings in the setup sheet for repeatability. When in doubt, consult tool manufacturer recommendations for optimal performance.</p>
-<h2>Preguntas frecuentes</h2>
-<p><strong>How accurate is this tool?</strong> Resultados are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
+<h2>Para obtener los mejores resultados con la calculadora CNC Roi, siempre verifique sus valores de entrada contra especificaciones de materiales conocidas y capacidades de la máquina. Documente sus configuraciones en la hoja de configuración para garantizar la repetibilidad. En caso de duda, consulte las recomendaciones del fabricante de la herramienta para obtener un rendimiento óptimo.</h2>
+<p>Preguntas frecuentes</p>
+<h2>¿Qué tan precisa es esta herramienta? Los resultados se basan en fórmulas estándar de ingeniería y se proporcionan con fines informativos. Verifique siempre las dimensiones críticas con equipos de medición calibrados antes de iniciar la producción.</h2>
+<p>¿Puedo utilizar estos resultados para todos los materiales? Los cálculos se aplican a materiales estándar. Para aleaciones especializadas o condiciones no estándar, consulte al fabricante de la herramienta para obtener recomendaciones específicas.</p>
+<h2>¿Cómo puedo mejorar mi proceso de mecanizado con estos datos? Utilice estos datos de referencia como punto de partida y ajústelos según la combinación específica de su máquina, herramientas y material. Registre la configuración correcta para futuras consultas.</h2>
+<p>🔧Explore 100 herramientas de mecanizado profesionales</p>
+<h2>⚙️ Entrada</h2>
+<p><strong>How accurate is this tool?</strong> Results are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
 <p><strong>Can I use these results for all materials?</strong> The calculations apply to standard materials. For specialized alloys or non-standard conditions, consult the tool manufacturer for specific recommendations.</p>
 <p><strong>How do I improve my machining process with this data?</strong> Use this reference data as a starting point and adjust based on your specific machine, tooling, and material combination. Document successful settings for future reference.</p>
 </div>
 </section>
-
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/gcode-reference/">G-Code Reference</a><a href="/es/tools/thread-depth-torque-calculator/">Thread Profundidad & Torque</a><a href="/es/tools/batch-cost-calculator/">Batch Cost Calculadora</a><a href="/es/tools/tensile-strength-converter/">Tensile Strength Convertidor</a><a href="/es/tools/form-tap-drill-calculator/">Form Tap Drill Calculadora</a><a href="/es/tools/weight-shipping-calculator/">Weight & Shipping</a><a href="/es/tools/feed-rate-override-calculator/">Avance Rate Override</a><a href="/es/tools/sfm-m-min-converter/">m/min/m/min Convertidor</a>
-  </div>
+<h3>Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</h3>
+<div class="tool-grid">
+<a href="/tools/gcode-reference/">Anulación de velocidad de alimentación</a><a href="/tools/thread-depth-torque-calculator/">Conversor de SFM/m/min</a><a href="/tools/batch-cost-calculator/">← Todas las herramientas</a><a href="/tools/tensile-strength-converter/">Obtener una cotización</a><a href="/tools/form-tap-drill-calculator/">Privacidad</a><a href="/tools/weight-shipping-calculator/">en</a><a href="/tools/feed-rate-override-calculator/">Velocidad y avance</a><a href="/tools/sfm-m-min-converter/">Convertidor de dureza</a>
+</div>
 </section>
-<div class="container"><div class="panel"><h3>⚙️ Entrada</h3><div class="row2"><div><label>Entrada 1</label><input type="number" id="v1" value="50" oninput="calc()"/></div><div><label>Entrada 2</label><input type="number" id="v2" value="100" oninput="calc()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="res-item"><div class="lbl">Resultadoado</div><div class="val" id="r1">—</div></div><div class="res-item"><div class="lbl">Cost Impact</div><div class="val" id="r2">—</div></div></div></div>
-<div style="text-align:center;margin:20px 0"><a href="/es/tools/" style="color:#0066cc;font-size:13px">← Todas las herramientas</a></div></div>
+<div class="container"><div class="panel"><h3>©Herramientas de carburo 2026</h3><div class="row2"><div><label>🔧Caja de herramientas de ingeniería de precisión</label><input id="v1" oninput="calc()" type="number" value="50"/></div><div><label>¿Necesita herramientas profesionales?</label><input id="v2" oninput="calc()" type="number" value="100"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="res-item"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="res-item"><div class="lbl">Cost Impact</div><div class="val" id="r2">—</div></div></div></div>
+<div style="text-align:center;margin:20px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Tamaño del taladro de roscado</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Calculadora del taladro del golpecito de la forma</a>
+<a href="/tools/">Obtenga precios directos de fábrica, grados de carburo de ingeniería y soporte técnico ágil, todo desde una sola fuente.</a>
+<a href="/products/">🇯🇵JP</a>
+<a href="/guides/">🇪🇸ES</a>
+<a href="/about.html">🇻🇳VI</a>
+<a href="/quote.html">Costo por pieza</a>
+<a href="/privacy.html">Convertidor de par</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/cnc-roi-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/cnc-roi-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/cnc-roi-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/cnc-roi-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/cnc-roi-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Solicitar cotización por volumen →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Obtenga precios directos de fábrica, grados de carburo de ingeniería y soporte técnico ágil, todo desde una sola fuente.</a></p>
+<p style="font-size:11px;margin-bottom:6px">◆Herramientas de carburo</p>
+<p style="font-size:11px">Productos</p>
 </div>
 </footer>
-<script>function calc(){const a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent='$'+(a*b).toFixed(2);document.getElementById('r2').textContent='$'+(a*0.1+b*0.05).toFixed(2);}calc();</script><div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+<script>function calc(){const a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent='$'+(a*b).toFixed(2);document.getElementById('r2').textContent='$'+(a*0.1+b*0.05).toFixed(2);}calc();</script><div class="toolbox-widget"><h3>Guías</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Insertos de torneado</a>
+<a href="/tools/hardness-converter/">Calculadora de espesor de pared</a>
+<a href="/tools/tap-drill-size-calculator/">Calculadora de mecanizado de grafito</a>
+<a href="/tools/mrr-calculator/">Calculadora de costo por parte</a>
+<a href="/tools/feed-converter/">Estimador de derechos de aduana</a>
+<a href="/tools/surface-roughness-calculator/">Calculadora de mecanizado de hierro fundido</a>
+<a href="/tools/titanium-machining-guide/">Calculadora de intereses de ingeniería</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Calculadora de profundidad de avellanado</a>
+<a href="/tools/cost-per-part-calculator/">Temporizador Pomodoro</a>
+<a href="/tools/torque-unit-converter/">LinkedIn</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Sobre</h3>
+<p>📩Obtener una cotización</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Correo electrónico</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Fresas de carburo sólido</a><a href="/products/turning-inserts.html">Insertos de torneado</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/wall-thickness-calculator/">Wall Thickness Calculadora</a>
-<a href="/es/tools/graphite-machining/">Graphite Machining Calculadora</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part Calculadora</a>
-<a href="/es/tools/shipping-duty-estimator/">Shipping Duty Estimator</a>
-<a href="/es/tools/cast-iron-machining/">Cast Iron Machining Calculadora</a>
-<a href="/es/tools/engineering-interest-calculator/">Engineering Interest Calculadora</a>
-<a href="/es/tools/countersink-depth-calculator/">Countersink Profundidad Calculadora</a>
-<a href="/es/tools/pomodoro-timer/">Pomodoro Timer</a>
-
-  </div>
+<h3>Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</h3>
+<div class="tool-grid">
+<a href="/tools/wall-thickness-calculator/">Wall Thickness Calculator</a>
+<a href="/tools/graphite-machining/">Graphite Machining Calculator</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part Calculator</a>
+<a href="/tools/shipping-duty-estimator/">Shipping Duty Estimator</a>
+<a href="/tools/cast-iron-machining/">Cast Iron Machining Calculator</a>
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/countersink-depth-calculator/">Countersink Depth Calculator</a>
+<a href="/tools/pomodoro-timer/">Pomodoro Timer</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/cnc-roi-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/cnc-roi-calculator/&text=CNC ROI Calculadora" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=CNC ROI Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/cnc-roi-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/cnc-roi-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/cnc-roi-calculator/&amp;text=CNC ROI Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=CNC ROI Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/cnc-roi-calculator/">Email</a>
 </div>
-
 </body></html>

@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Thread Pitch Durchmesser Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Free online thread pitch Durchmesser Rechner. Berechnen PD Von wire measurement for external threads. Understand the 3-wire method for thread inspection."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Gewindedurchmesser-Rechner | Präzisionswerkzeug für die Zerspanung | Carbide-Tooling.com</title>
+<meta content="Kostenloser Online-Rechner für den Steigungsdurchmesser von Gewinden. Berechnen Sie die Kerndurchmesser aus der Drahtmessung für Außengewinde. Verstehen Sie das 3‑Draht‑Verfahren zur Gewindeprüfung." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:34px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:18px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,275 +12,278 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Pitch Durchmesser | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspect"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Pitch Durchmesser | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gewindedurchmesser | Präzisionsbearbeitungswerkzeug" property="og:title"/>
+<meta content="Kostenloser Online-Rechner für den Steigungsdurchmesser von Gewinden. Berechnen Sie die Kerndurchmesser aus der Drahtmessung für Außengewinde. Verstehen Sie das 3‑Draht‑Verfahren zur Gewindeprüfung." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Pitch Diameter | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Pitch Diameter",
-      "url": "https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/",
-      "name": "Thread Pitch Diameter",
-      "description": "Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the difference between pitch diameter and major diameter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Major diameter is the largest diameter of the thread (crest for external threads). Pitch diameter is the diameter where the thread width and space width are equal. For thread fit and strength, pitch diameter is the critical dimension — it determines how the internal and external threads engage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use a thread micrometer instead of three wires?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, thread micrometers with specialized anvils that contact the thread flanks provide direct pitch diameter measurement. They're faster than three-wire but less accurate (±0.0005 inches vs. ±0.0002 inches for three-wire). Thread micrometers are adequate for shop-floor inspection, while three-wire is preferred for calibration and certification."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I measure pitch diameter on a thread mill?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Threads produced by thread milling can be measured by the three-wire method. However, the cut thread will follow the tool path, so check at both ends and middle of the thread length. CMM with thread probes offers the most comprehensive inspection for thread-milled features.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Pitch Diameter",
+ "url": "https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread pitch diameter calculator. Calculate PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/",
+ "name": "Thread Pitch Diameter",
+ "description": "Free online thread pitch diameter calculator. Calculate PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the difference between pitch diameter and major diameter?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Major diameter is the largest diameter of the thread (crest for external threads). Pitch diameter is the diameter where the thread width and space width are equal. For thread fit and strength, pitch diameter is the critical dimension — it determines how the internal and external threads engage."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use a thread micrometer instead of three wires?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, thread micrometers with specialized anvils that contact the thread flanks provide direct pitch diameter measurement. They're faster than three-wire but less accurate (±0.0005 inches vs. ±0.0002 inches for three-wire). Thread micrometers are adequate for shop-floor inspection, while three-wire is preferred for calibration and certification."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I measure pitch diameter on a thread mill?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Threads produced by thread milling can be measured by the three-wire method. However, the cut thread will follow the tool path, so check at both ends and middle of the thread length. CMM with thread probes offers the most comprehensive inspection for thread-milled features.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gewindedurchmesser | Präzisionsbearbeitungswerkzeug" property="og:title"/>
+<meta content="Kostenloser Online-Rechner für den Steigungsdurchmesser von Gewinden. Berechnen Sie die Kerndurchmesser aus der Drahtmessung für Außengewinde. Verstehen Sie das 3‑Draht‑Verfahren zur Gewindeprüfung." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Pitch Diameter | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Pitch Diameter",
+ "url": "https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread pitch diameter calculator. Calculate PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/",
+ "name": "Thread Pitch Diameter",
+ "description": "Free online thread pitch diameter calculator. Calculate PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gewindedurchmesser-Rechner" property="og:title"/>
+<meta content="Kostenloser Online-Rechner für den Steigungsdurchmesser von Gewinden. Berechnen Sie die Kerndurchmesser aus der Drahtmessung für Außengewinde. Verstehen Sie das 3‑Draht‑Verfahren zur Gewindeprüfung." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Pitch Diameter Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Pitch Diameter Calculator",
+ "url": "https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread pitch diameter calculator. Calculate PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/",
+ "name": "Thread Pitch Diameter Calculator",
+ "description": "Free online thread pitch diameter calculator. Calculate PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Pitch Durchmesser | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspect"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Pitch Durchmesser | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Pitch Diameter",
-      "url": "https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/",
-      "name": "Thread Pitch Diameter",
-      "description": "Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Pitch Durchmesser Rechner | Precision Machining Tool"/>
-<meta property="og:description" content="Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspect"/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Pitch Durchmesser Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Pitch Durchmesser Rechner",
-      "url": "https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/",
-      "name": "Thread Pitch Durchmesser Rechner",
-      "description": "Free online thread pitch diameter calculator. Berechnen PD from wire measurement for external threads. Understand the 3-wire method for thread inspection.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/thread-pitch-diameter-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/thread-pitch-diameter-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/thread-pitch-diameter-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/thread-pitch-diameter-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Produkte</a><a href="https://carbide-tooling.com/guides/">Leitfäden</a><a href="https://carbide-tooling.com/about.html">Über uns</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/thread-pitch-diameter-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/thread-pitch-diameter-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/thread-pitch-diameter-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/thread-pitch-diameter-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/thread-pitch-diameter-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Startseite</a> <span style="color:#d2d2d6">›</span> <a href="/de/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Thread Pitch Durchmesser Rechner</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Metrology Werkzeug</div><h1>Thread Pitch Durchmesser <span class="accent">Rechner</span></h1><p>Pitch diameter determines thread fit. This calculator gives the basic PD per ISO 68-1 and suggests wire sizes for the 3-wire measurement method.</p><a class="btn" href="#calculator">Berechnen ↓</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/thread-pitch-diameter-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/thread-pitch-diameter-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/thread-pitch-diameter-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇬🇧EN</a><a href="https://carbide-tooling.com/guides/">🇩🇪DE</a><a href="https://carbide-tooling.com/about.html">🇯🇵JP</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇪🇸ES</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/thread-pitch-diameter-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/thread-pitch-diameter-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/thread-pitch-diameter-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/thread-pitch-diameter-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/thread-pitch-diameter-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Waffendrehrechner</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">M-Code-Referenz</a> <span style="color:#d2d2d6">›</span> Thread Pitch Diameter Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📐 Metrology Tool</div><h1>📐Teilkreisdurchmesser</h1><p>PD = Hauptdurchmesser D − (0,6495 × Steigung) für Standardgewinde mit 60°-Flankenwinkel.</p><a class="btn" href="#calculator">Bohrergröße für Gewindebohrungen</a></div></section>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/graphite-machining/">Graphite Machining</a><a href="/de/tools/gun-drill-calculator/">Gun Drill Rechner</a><a href="/de/tools/mcode-reference/">M-Code Reference</a><a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a><a href="/de/tools/ball-nose-effective-diameter/">Ball Nose Effective Durchmesser</a><a href="/de/tools/tool-life-economics/">Werkzeug Life Economics</a><a href="/de/tools/pressure-converter/">Pressure Umrechner</a><a href="/de/tools/tube-weight-calculator/">Tube Weight Rechner</a>
-  </div>
+<h3>🔩Faden</h3>
+<div class="tool-grid">
+<a href="/tools/graphite-machining/">Effektiver Durchmesser der Kugelkopffräse</a><a href="/tools/gun-drill-calculator/">Wirtschaftlichkeit der Werkzeugstandzeit</a><a href="/tools/mcode-reference/">Druckumrechner</a><a href="/tools/tap-drill-size-calculator/">Rohrgewichtsrechner</a><a href="/tools/ball-nose-effective-diameter/">← Alle Tools</a><a href="/tools/tool-life-economics/">Erhalten Sie ein Angebot</a><a href="/tools/pressure-converter/">Datenschutz</a><a href="/tools/tube-weight-calculator/">in</a>
+</div>
 </section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>📐 Pitch Durchmesser</h2><p class="sub">PD = MajorD − (0.6495 × Pitch) for standard 60° threads.</p>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>🔢Toleranzklasse</h2><p class="sub">Alle Werkzeuge</p>
 <div class="card-row">
-<div class="field"><label>🔩 Thread</label><select id="size" onchange="calc()"><option>M6×1.0</option><option>M8×1.25</option><option selected>M10×1.5</option><option>M12×1.75</option><option>M16×2.0</option><option>M20×2.5</option></select></div>
-<div class="field"><label>🔢 Tolerance Class</label><select id="tolerance" onchange="calc()"><option value="6g">6g (medium, external)</option><option value="6H">6H (medium, internal)</option><option value="4h">4h (precision, external)</option></select></div>
+<div class="field"><label>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</label><select id="size" onchange="calc()"><option>M6×1.0</option><option>M8×1.25</option><option selected="">M10×1.5</option><option>M12×1.75</option><option>M16×2.0</option><option>M20×2.5</option></select></div>
+<div class="field"><label>©2026 Hartmetallwerkzeuge</label><select id="tolerance" onchange="calc()"><option value="6g">6g (medium, external)</option><option value="6H">6H (medium, internal)</option><option value="4h">4h (precision, external)</option></select></div>
 </div>
 <div class="result-grid">
-<div class="result-item"><div class="label">Pitch Durchmesser</div><div class="value" id="r-pd">—</div><div class="unit">mm</div></div>
+<div class="result-item"><div class="label">Pitch Diameter</div><div class="value" id="r-pd">—</div><div class="unit">mm</div></div>
 <div class="result-item"><div class="label">Best Wire Size</div><div class="value" id="r-wire">—</div><div class="unit">mm</div></div>
 <div class="result-item"><div class="label">PD + Wire (M)</div><div class="value" id="r-m">—</div><div class="unit">mm (3-wire)</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:16px 0"><a href="/de/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Alle Werkzeuge</a></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Katalog ansehen →</a></div>
 </section>
 <script>
 function calc(){const val=document.getElementById('size').value;const dia=parseFloat(val.split('×')[0].replace('M',''));const pitch=parseFloat(val.split('×')[1]);const pd=dia-pitch*0.6495;const wire=0.57735*pitch;const m=pd+3*wire-0.86603*pitch;document.getElementById('r-pd').textContent=pd.toFixed(3);document.getElementById('r-wire').textContent=wire.toFixed(3);document.getElementById('r-m').textContent=m.toFixed(3);}
 calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Waffendrehrechner</a>
+<a href="/tools/">Die Drei‑Draht‑Methode zur Steigungsdurchmessermessung</a>
+<a href="/products/">🇬🇧EN</a>
+<a href="/guides/">🇩🇪DE</a>
+<a href="/about.html">🇯🇵JP</a>
+<a href="/quote.html">Titanführung</a>
+<a href="/privacy.html">Notenübereinstimmung</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Kosten pro Teil</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Die Drei‑Draht‑Methode zur Steigungsdurchmessermessung</a></p>
+<p style="font-size:11px;margin-bottom:6px">Das Dreidrahtverfahren ist die genaueste Methode zur Messung des Steigungsdurchmessers von Gewinden. Drei Präzisionsdrähte mit berechnetem Durchmesser werden in die Gewindegänge eingelegt, und der Drahtübermesswert (M) wird ermittelt. Der Steigungsdurchmesser (E) beträgt: E = M − (3 × Drahtdurchmesser) · (Drahtdurchmesser/(2 × sin(30°))) bei 60°-Gewinden. Die optimale Drahtgröße berührt die Gewindeflügel in der Steigungslinie, um eine maximale Genauigkeit zu gewährleisten.</p>
+<p style="font-size:11px">Auswahl des Fadendrahtquerschnitts für präzise Messungen</p>
+</div>
 <section class="seo"><div class="container">
-<h2>The Three-Wire Method for Pitch Durchmesser Measurement</h2><p>The three-wire method is the most accurate way to measure thread pitch diameter. Three precision wires of calculated diameter are placed in the thread grooves, and the measurement over wires (M) is taken. The pitch diameter (E) is: E = M − (3 × Wire Diameter) + (Wire Durchmesser / (2 × sin(30°))) for 60° threads. The optimal wire size contacts the thread flanks at the pitch line for maximum accuracy.</p>
-<h2>Thread Wire Size Selection for Accurate Measurement</h2><p>The correct wire diameter contacts the thread flanks at the pitch diameter. Formula: Wire Durchmesser = Pitch / (2 × cos(30°)) for 60° threads. For imperial threads: Wire Durchmesser = 0.57735 × Pitch. For M10×1.5: Wire = 1.5 × 0.57735 = 0.866 mm. Using undersized wires requires compensation calculations. Using oversized wires compromises contact point accuracy.</p>
-<h2>Pitch Durchmesser Tolerances and Class of Fit</h2><p>Pitch diameter tolerance determines the class of fit (1A/2A/3A for external, 1B/2B/3B for internal). Class 2 provides 75% of the tolerance of Class 1. Class 3A/3B provides the tightest fit, typically used for aerospace and precision applications where zero slop is required. The pitch diameter tolerance for a Class 2A 1/2-13 UNC thread is approximately 0.0058 inches.</p>
-<h2>Häufig gestellte Fragen</h2>
+<h2>Der korrekte Drahtdurchmesser berührt die Gewindeflügel am Steigungsdurchmesser. Formel: Drahtdurchmesser = Steigung/(2 × cos(30°)) für Gewinde mit 60°-Spitzenwinkel. Für Zollgewinde gilt: Drahtdurchmesser = 0,57735 × Steigung. Für M10×1,5 gilt: Gewindefaden = 1,5 × 0,57735 = 0,866 mm. Bei Verwendung von unterdimensionierten Gewindefäden sind Ausgleichsrechnungen erforderlich. Die Verwendung übergroßer Leitungen beeinträchtigt die Genauigkeit der Kontaktstellen.</h2><p>Toleranzen des Steigungsdurchmessers und Passungsgruppe</p>
+<h2>Die Steigungsdurchmesser-Toleranz bestimmt die Passungsklasse (1 A/2 A/3 A für Außengewinde, 1 B/2 B/3 B für Innengewinde). Klasse 2 weist 75% der Toleranz von Klasse 1 auf. Klasse 3 A/3 B bietet die engste Passung und wird in der Regel in Luft‑ und Raumfahrt sowie bei Präzisionsanwendungen eingesetzt, bei denen ein Spiel von null erforderlich ist. Die Steigungsdurchmessertoleranz für ein Gewinde der Klasse 2 A der Norm 1/2–13 UNC beträgt etwa 0,0058 Zoll.</h2><p>Häufig gestellte Fragen</p>
+<h2>Was ist der Unterschied zwischen dem Steigungsdurchmesser und dem Außendurchmesser? Der Außendurchmesser ist der größte Durchmesser des Gewindes (Kamm bei Außengewinden). Der Steigungsdurchmesser ist der Durchmesser, an dem die Gewindefußbreite und die Gewindegangbreite gleich groß sind. Für den Gewinde‑Passungs‑ und Festigkeitszustand ist der Steigungsdurchmesser die kritische Maßgröße – er bestimmt, wie das Innen‑ und Außengewinde miteinander in Eingriff treten.</h2><p>Kann ich anstelle der Drei-Draht-Methode ein Gewinde‑Mikrometer verwenden? Ja, Gewinde‑Mikrometer mit speziellen Anschlägen, die die Gewindeflügel berühren, ermöglichen die direkte Messung des Steigungsdurchmessers. Sie sind schneller als Dreidrahtmessgeräte, jedoch weniger genau (±0,0005 Zoll gegenüber ±0,0002 Zoll bei Dreidrahtmessgeräten). Gewindemikrometer eignen sich für die Inspektion am Arbeitsplatz, während die Drei-Draht-Methode für Kalibrierung und Zertifizierung bevorzugt wird.</p>
+<h2>Wie messe ich den Steigungsdurchmesser bei einem Gewindefräser? Durch Gewindefräsen hergestellte Gewinde können nach der Drei-Draht-Methode gemessen werden. Allerdings folgt das geschnittene Gewinde dem Werkzeugweg; prüfen Sie daher an beiden Enden sowie in der Mitte der Gewindelänge. Die Koordinatenmessmaschine mit Gewinde‑Tastern ermöglicht die umfassendste Prüfung fräsgewindefertiger Geometrien.</h2>
 <p><strong>What is the difference between pitch diameter and major diameter?</strong> Major diameter is the largest diameter of the thread (crest for external threads). Pitch diameter is the diameter where the thread width and space width are equal. For thread fit and strength, pitch diameter is the critical dimension — it determines how the internal and external threads engage.</p>
 <p><strong>Can I use a thread micrometer instead of three wires?</strong> Yes, thread micrometers with specialized anvils that contact the thread flanks provide direct pitch diameter measurement. They're faster than three-wire but less accurate (±0.0005 inches vs. ±0.0002 inches for three-wire). Thread micrometers are adequate for shop-floor inspection, while three-wire is preferred for calibration and certification.</p>
 <p><strong>How do I measure pitch diameter on a thread mill?</strong> Threads produced by thread milling can be measured by the three-wire method. However, the cut thread will follow the tool path, so check at both ends and middle of the thread length. CMM with thread probes offers the most comprehensive inspection for thread-milled features.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Berechnend for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Katalog anzeigen →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Massenanfrage stellen →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/thread-pitch-diameter-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/thread-pitch-diameter-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/thread-pitch-diameter-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/thread-pitch-diameter-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+<div class="toolbox-widget"><h3>◆Hartmetallwerkzeuge</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Hartmetallbohrer</a>
+<a href="/tools/hardness-converter/">Fadenfräser und Gewindebohrer</a>
+<a href="/tools/tap-drill-size-calculator/">Rohrgewichtsrechner</a>
+<a href="/tools/mrr-calculator/">Werkzeugverschleißkostenrechner</a>
+<a href="/tools/feed-converter/">Lochkreisrechner</a>
+<a href="/tools/surface-roughness-calculator/">Kostenpro-Teil-Rechner</a>
+<a href="/tools/titanium-machining-guide/">Rechner für den Gewindevorsprungswinkel</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Trochoide Fräsberechnung</a>
+<a href="/tools/cost-per-part-calculator/">Wanddickenrechner</a>
+<a href="/tools/torque-unit-converter/">Schwalbenschwanz-Rechner</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Produkte</h3>
+<p>Führer</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Hartmetallbohrer</a><a href="/products/threading-tools.html">Gewindefräser & -bohrer</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">E-Mail</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/heat-expansion-calculator/">Heat Expansion Rechner</a>
-<a href="/de/tools/tool-wear-cost-calculator/">Werkzeug Wear Cost Rechner</a>
-<a href="/de/tools/bolt-circle-calculator/">Bolt Circle Rechner</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part Rechner</a>
-<a href="/de/tools/thread-lead-angle-calculator/">Thread Lead Angle Rechner</a>
-<a href="/de/tools/trochoidal-milling-calculator/">Trochoidal Milling Rechner</a>
-<a href="/de/tools/wall-thickness-calculator/">Wall Thickness Rechner</a>
-<a href="/de/tools/dovetail-calculator/">Dovetail Rechner</a>
-
-  </div>
+<h3>🔩Faden</h3>
+<div class="tool-grid">
+<a href="/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
+<a href="/tools/tool-wear-cost-calculator/">Tool Wear Cost Calculator</a>
+<a href="/tools/bolt-circle-calculator/">Bolt Circle Calculator</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part Calculator</a>
+<a href="/tools/thread-lead-angle-calculator/">Thread Lead Angle Calculator</a>
+<a href="/tools/trochoidal-milling-calculator/">Trochoidal Milling Calculator</a>
+<a href="/tools/wall-thickness-calculator/">Wall Thickness Calculator</a>
+<a href="/tools/dovetail-calculator/">Dovetail Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/&text=Thread Pitch Durchmesser Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Thread Pitch Durchmesser Rechner&body=Check this out: https://carbide-tooling.com/de/tools/thread-pitch-diameter-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/&amp;text=Thread Pitch Diameter Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Thread Pitch Diameter Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/thread-pitch-diameter-calculator/">Email</a>
 </div>
-
 </body></html>

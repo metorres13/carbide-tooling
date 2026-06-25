@@ -1,11 +1,12 @@
-<!DOCTYPE html><html lang="ja"><head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Step Milling 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Free online step milling 計算機 for CNC shoulder milling. 計算 number of passes, optimal 切込み深さ per pass, and finish allowance for right-angle shoulder 加工s."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/step-milling-calculator/"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>ステップフライス計算機 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="CNCショルダーフライス用の无料オンラインステップフライス计算机。パスの数、パスごとの最適な深さ、および直角の肩の操作の仕上げ許容量を計算します。" name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links{display:flex;align-items:center;gap:0}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:80px 0 60px}.hero .badge{display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px}.hero h1{font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1.08;margin-bottom:12px}.hero h1 .accent{color:#0066cc}.hero p{font-size:17px;color:#86868b;max-width:600px;margin:0 auto 32px;line-height:1.7}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.btn:hover{background:#0055aa}.btn-outline{display:inline-flex;background:rgba(0,0,0,.04);color:#1d1d1f;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:28px 30px;margin-bottom:20px}.card h2{font-size:20px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:20px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2386868b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}.field input[type=number]{-moz-appearance:textfield}.field input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b;margin-top:1px}.seo{padding:60px 0}.seo h2{font-size:22px;font-weight:700;margin-bottom:8px;margin-top:40px;letter-spacing:-.3px}.seo h3{font-size:16px;font-weight:600;margin-top:28px;margin-bottom:6px}.seo p{font-size:15px;color:#333;margin-bottom:14px;line-height:1.8}.seo ul{padding-left:20px;margin-bottom:14px}.seo li{font-size:14px;color:#444;margin-bottom:4px}.seo code{background:#f5f5f7;padding:1px 6px;border-radius:4px;font-size:13px}.seo .tip-box{background:#f0f7ff;border-left:3px solid #0066cc;padding:16px 20px;border-radius:8px;margin:16px 0}.seo .tip-box p{margin:0;font-size:14px}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:40px 0;margin-top:60px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.hero h1{font-size:32px}.result-grid{grid-template-columns:1fr 1fr}.card{padding:20px 16px}.card-row{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -15,147 +16,153 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
-</style>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Step Milling 計算機 | 精密加工ツール"/>
-<meta property="og:description" content="Free online step milling calculator for CNC shoulder milling. 計算 number of passes, optimal depth per pass, and finish allowance for right-angle"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/step-milling-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Step Milling 計算機 | Precision Machining Tool"/>
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="ステップフライス計算機 | 精密加工ツール" property="og:title"/>
+<meta content="CNCショルダーフライス用の无料オンラインステップフライス计算机。パスの数、パスごとの最適な深さ、および直角の仕上げ許容量を計算します" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/step-milling-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Step Milling Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Step Milling 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/step-milling-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online step milling calculator for CNC shoulder milling. 計算 number of passes, optimal depth per pass, and finish allowance for right-angle shoulder operations.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/step-milling-calculator/",
-      "name": "Step Milling 計算機",
-      "description": "Free online step milling calculator for CNC shoulder milling. 計算 number of passes, optimal depth per pass, and finish allowance for right-angle shoulder operations.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do you calculate step milling passes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Passes = shoulder height / max safe depth per pass. The safe depth depends on material and tool diameter. This calculator does it automatically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between step milling and shoulder milling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Same operation. Step milling describes the axial passes; shoulder milling describes the feature geometry. A 90° shoulder is the most common form."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should I use climb or conventional milling for shoulders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Climb milling for shoulders whenever possible. The cutting forces push the tool into the workpiece rather than away from it, producing a better surface finish and reducing chatter."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does tool runout affect shoulder accuracy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Runout above 10 μm produces a visible step pattern on the shoulder wall. A quality holder with runout below 4 μm is essential for shoulders with tolerance under ±0.05 mm."
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Step Milling Calculator",
+ "url": "https://carbide-tooling.com/tools/step-milling-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online step milling calculator for CNC shoulder milling. Calculate number of passes, optimal depth per pass, and finish allowance for right-angle shoulder operations.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/step-milling-calculator/",
+ "name": "Step Milling Calculator",
+ "description": "Free online step milling calculator for CNC shoulder milling. Calculate number of passes, optimal depth per pass, and finish allowance for right-angle shoulder operations.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How do you calculate step milling passes?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Passes = shoulder height / max safe depth per pass. The safe depth depends on material and tool diameter. This calculator does it automatically."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the difference between step milling and shoulder milling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Same operation. Step milling describes the axial passes; shoulder milling describes the feature geometry. A 90° shoulder is the most common form."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Should I use climb or conventional milling for shoulders?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Climb milling for shoulders whenever possible. The cutting forces push the tool into the workpiece rather than away from it, producing a better surface finish and reducing chatter."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How does tool runout affect shoulder accuracy?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Runout above 10 μm produces a visible step pattern on the shoulder wall. A quality holder with runout below 4 μm is essential for shoulders with tolerance under ±0.05 mm."
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/step-milling-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/step-milling-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/step-milling-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/step-milling-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/step-milling-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/step-milling-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/step-milling-calculator"/>
-</head>
+
+
+
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/step-milling-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/step-milling-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/step-milling-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/step-milling-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/step-milling-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/step-milling-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/step-milling-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/step-milling-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/step-milling-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/step-milling-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/step-milling-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/step-milling-calculator/">中</a></div></div></nav>
-
-<section class="hero"><div class="container"><div class="badge">🔧 Shop Reference</div><h1>Step Milling <span class="accent">計算機</span></h1><p>Figure out how many passes you need to cut a shoulder, and at what depth. Straightforward numbers for the shop floor.</p><a class="btn" href="#calculator">Start ↓</a></div></section>
-
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>🔧 Shoulder / Step Milling</h2><p class="sub">For right-angle shoulder operations on a milling machine. Enter your shoulder height and let the calculator split it into optimal passes.</p>
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">ガイド</a><a href="https://carbide-tooling.com/about.html">について</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩見積もりを取得する</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/step-milling-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/step-milling-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/step-milling-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/step-milling-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/step-milling-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<section class="hero"><div class="container"><div class="badge">🔧 Shop Reference</div><h1>ステップミリング計算ツール</h1><p>あなたが肩を切るために必要なパスの数と、どのような深さを把握します。製造現場の簡単な番号。</p><a class="btn" href="#calculator">スタート →</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>🔧肩/ステップフライス加工</h2><p class="sub">フライス盤での直角ショルダー操作用。肩の高さを入力し、電卓がそれを最適なパスに分割します。</p>
 <div class="card-row">
-<div class="field"><label>🔩 被削材</label><select id="material" onchange="calc()"><option value="al6061">Aluminum 6061</option><option value="ss304" selected>Stainless Steel 304</option><option value="mild_steel">Mild Steel 1018</option><option value="ti6al4v">Titanium Grade 5</option></select></div>
-<div class="field"><label>📐 工具 直径 (mm)</label><input type="number" id="dia" value="12" min="1" max="50" step="0.5" oninput="calc()"/></div>
-<div class="field"><label>🦷 Flutes</label><select id="flutes" onchange="calc()"><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option><option value="5">5</option><option value="6">6</option></select></div>
-<div class="field"><label>📏 Shoulder Height (mm)</label><input type="number" id="height" value="20" min="1" max="100" step="1" oninput="calc()"/></div>
-<div class="field"><label>⚡ Cutting 切削速度 (Vc m/min)</label><input type="number" id="vc" value="150" min="10" max="2000" step="10" oninput="calc()"/></div>
-<div class="field"><label>📊 Chip Load fz (mm)</label><input type="number" id="fz" value="0.05" min="0.001" max="1" step="0.005" oninput="calc()"/></div>
+<div class="field"><label>🔩材料</label><select id="material" onchange="calc()"><option value="al6061">Aluminum 6061</option><option selected="" value="ss304">Stainless Steel 304</option><option value="mild_steel">Mild Steel 1018</option><option value="ti6al4v">Titanium Grade 5</option></select></div>
+<div class="field"><label>📐工具径（mm）</label><input id="dia" max="50" min="1" oninput="calc()" step="0.5" type="number" value="12"/></div>
+<div class="field"><label>🦷フルート</label><select id="flutes" onchange="calc()"><option value="2">2</option><option value="3">3</option><option selected="" value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
+<div class="field"><label>📏肩の高さ (mm)</label><input id="height" max="100" min="1" oninput="calc()" step="1" type="number" value="20"/></div>
+<div class="field"><label>⚡切削速度（Vc m/分）</label><input id="vc" max="2000" min="10" oninput="calc()" step="10" type="number" value="150"/></div>
+<div class="field"><label>📊チップ負荷fz（mm）</label><input id="fz" max="1" min="0.001" oninput="calc()" step="0.005" type="number" value="0.05"/></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Number of Passes</div><div class="value" id="r-passes">—</div><div class="unit">passes</div></div>
-<div class="result-item"><div class="label">切込み深さ Per Pass</div><div class="value" id="r-dpp">—</div><div class="unit">mm</div></div>
-<div class="result-item"><div class="label">回転数</div><div class="value" id="r-rpm">—</div><div class="unit">回転数</div></div>
+<div class="result-item"><div class="label">Depth Per Pass</div><div class="value" id="r-dpp">—</div><div class="unit">mm</div></div>
+<div class="result-item"><div class="label">RPM</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div>
 <div class="result-item"><div class="label">送り Rate</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div>
 </div>
 </div>
-<div style="text-align:center;margin-top:20px"><a href="/jp/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← 全ツール</a></div>
+<div style="text-align:center;margin-top:20px"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← すべてのツール</a></div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">ホーム</a>
+<a href="/tools/">すべてのツール</a>
+<a href="/products/">製品</a>
+<a href="/guides/">ガイド</a>
+<a href="/about.html">について</a>
+<a href="/quote.html">硬度変換器</a>
+<a href="/privacy.html">タップ穴径</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/step-milling-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/step-milling-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/step-milling-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/step-milling-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/step-milling-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/step-milling-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">MRR計算ツール</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">すべてのツール</a></p>
+<p style="font-size:11px;margin-bottom:6px">結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</p>
+<p style="font-size:11px">©2026年用超硬工具</p>
 </div>
 </footer>
 <script>
@@ -163,62 +170,56 @@ const MATS={al6061:{docMult:1.5,fzMult:1.0},ss304:{docMult:0.8,fzMult:0.7},mild_
 function calc(){const m=MATS[document.getElementById('material').value];const d=parseFloat(document.getElementById('dia').value)||12;const z=parseInt(document.getElementById('flutes').value)||4;const h=parseFloat(document.getElementById('height').value)||20;const vc=parseFloat(document.getElementById('vc').value)||150;const fz=parseFloat(document.getElementById('fz').value)||0.05;const rpm=d>0?(vc*1000)/(Math.PI*d):1000;const maxDpp=d*m.docMult;const passes=Math.ceil(h/maxDpp);const dpp=h/passes;const feed=rpm*z*fz*m.fzMult;document.getElementById('r-passes').textContent=passes;document.getElementById('r-dpp').textContent=dpp.toFixed(1);document.getElementById('r-rpm').textContent=Math.round(rpm);document.getElementById('r-feed').textContent=Math.round(feed);}
 calc();</script>
 <section class="seo-content"><div class="container">
-<h2>Shoulder Milling on a Haas or Mazak: What You Need to Know</h2>
-<p>Cutting a shoulder on a VF-2 or VC-5 means taking the right number of passes. Too few and you overload the spindle. Too many and you burn cycle time. The depth per pass for shoulder milling depends on the shoulder height, tool diameter, and material. For a 20 mm shoulder in 304 stainless with a 12 mm end mill, three passes at 6-7 mm each is the sweet spot on most 40-taper machines. On a lighter machine like a Mini Mill, you might need five passes. The calculator above adjusts for this automatically.</p>
-
+<h2>ハースまたはマザックの肩フライス: 知っておくべきこと</h2>
+<p>VF-2やVC-5で肩を切るということは、正しい数のパスを取ることを意味します。少なすぎると、スピンドルに過負荷がかかります。あまりにも多く、あなたはサイクルタイムを燃やす。肩フライス加工のパスあたりの深さは、肩の高さ、工具の直径、および材料によって異なります。12 mmエンドミルを備えた304ステンレスの20 mmショルダーの場合、それぞれ6〜7 mmで3回のパスが、ほとんどの40テーパーマシンのスイートスポットです。ミニミルのような軽いマシンでは、5つのパスが必要になる場合があります。上記の計算機はこれに対して自動的に調整されます。</p>
 <div class="tip-box"><p><strong>Shop Rule:</strong> Shoulder depth per pass should never exceed 1.5× tool diameter for aluminum, 1× for steel, and 0.5× for titanium. These limits prevent the tool from deflecting under side load.</p></div>
-
-<h2>Finish Pass Allowance for Shoulder Milling</h2>
-<p>When programming a shoulder, leave 0.3-0.5 mm per side for a finish pass. The roughing passes should stay inside this boundary. The finish pass runs at the same 回転数 but at 60-70% of the roughing feed rate to achieve the required surface finish. For a surface callout of 1.6 μm Ra or better, the final finish pass depth should not exceed 0.3 mm.</p>
-<p>On a Mazak with smooth acceleration, you can combine the rough and finish passes in a single toolpath using HSM-style contouring. Older machines with abrupt acceleration benefit from separate rough and finish programs to avoid leaving witness marks at the pass boundaries.</p>
-
+<h2>ショルダーフライス加工の仕上げパス手当</h2>
+<p>肩をプログラミングするときは、フィニッシュパスのために片面0.3〜0.5mmを残します。荒削りパスは、この境界内に留まるべきである。フィニッシュパスは同じRPMで実行されますが、必要な表面仕上げを達成するために粗送り速度の60〜70% で実行されます。1.6μm Ra以上の表面コールアウトの場合、最終的なフィニッシュパスの深さは0.3mmを超えてはならない。</p>
+<p>スムーズな加速を備えたMazakでは、HSMスタイルの輪郭を使用して、ラフパスとフィニッシュパスを1つのツールパスで組み合わせることができます。急激な加速を備えた古いマシンは、パス境界に証人マークを残さないように、別々のラフプログラムとフィニッシュプログラムの恩恵を受けます。</p>
 <h2>よくある質問</h2>
 <p><strong>How do you calculate step milling passes?</strong> Passes = shoulder height / max safe depth per pass. The safe depth depends on material and tool diameter. This calculator does it automatically.</p>
 <p><strong>What is the difference between step milling and shoulder milling?</strong> Same operation. Step milling describes the axial passes; shoulder milling describes the feature geometry. A 90° shoulder is the most common form.</p>
 <p><strong>Should I use climb or conventional milling for shoulders?</strong> Climb milling for shoulders whenever possible. The cutting forces push the tool into the workpiece rather than away from it, producing a better surface finish and reducing chatter.</p>
 <p><strong>How does tool runout affect shoulder accuracy?</strong> Runout above 10 μm produces a visible step pattern on the shoulder wall. A quality holder with runout below 4 μm is essential for shoulders with tolerance under ±0.05 mm.</p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<div class="toolbox-widget"><h3>🔧精密工学ツールボックス</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">表面粗さ</a>
+<a href="/tools/hardness-converter/">チタンガイド</a>
+<a href="/tools/tap-drill-size-calculator/">グレード相互参照</a>
+<a href="/tools/mrr-calculator/">部品当たりのコスト</a>
+<a href="/tools/feed-converter/">トルクコンバーター</a>
+<a href="/tools/surface-roughness-calculator/">一括見積もりを依頼する →</a>
+<a href="/tools/titanium-machining-guide/">ソリッドカーバイドエンドミル</a>
+<a href="/tools/carbide-grade-cross-ref-2/">工具ホルダー</a>
+<a href="/tools/cost-per-part-calculator/">リーミング余裕量計算ツール</a>
+<a href="/tools/torque-unit-converter/">鋳鉄加工用計算ツール</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>専門的なツールが必要ですか？</h3>
+<p>工場直送価格、最適化された超硬材種、そして迅速な技術サポートを、すべてワンストップでご提供します。</p>
+</div>
+<a class="b2b-btn" href="/quote.html">生産効率計算ツール</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/tool-holders.html">ツールホルダー</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">タップ穴径計算ツール</a><a href="/products/tool-holders.html">力の計算機</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/reaming-allowance-calculator/">Reaming Allowance 計算機</a>
-<a href="/jp/tools/cast-iron-machining/">Cast Iron Machining 計算機</a>
-<a href="/jp/tools/production-efficiency-calculator/">Production Efficiency 計算機</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size 計算機</a>
-<a href="/jp/tools/force-calculator/">Force 計算機</a>
-<a href="/jp/tools/pressure-converter/">Pressure 換算</a>
-<a href="/jp/tools/tool-runout-calculator/">工具 Runout 計算機</a>
-<a href="/jp/tools/drill-point-length-calculator/">Drill Point Length 計算機</a>
-
-  </div>
+<h3>🔧100種類のプロ向け切削工具をチェック</h3>
+<div class="tool-grid">
+<a href="/tools/reaming-allowance-calculator/">圧力変換器</a>
+<a href="/tools/cast-iron-machining/">工具オーバーラン計算ツール</a>
+<a href="/tools/production-efficiency-calculator/">ドリル先端長計算ツール</a>
+<a href="/tools/tap-drill-size-calculator/">リンクドイン</a>
+<a href="/tools/force-calculator/">電子メール</a>
+<a href="/tools/pressure-converter/">Pressure Converter</a>
+<a href="/tools/tool-runout-calculator/">Tool Runout Calculator</a>
+<a href="/tools/drill-point-length-calculator/">Drill Point Length Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/step-milling-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/step-milling-calculator/&text=Step Milling 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Step Milling 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/step-milling-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/step-milling-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/step-milling-calculator/&amp;text=Step Milling Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Step Milling Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/step-milling-calculator/">Email</a>
 </div>
-
 </body></html>

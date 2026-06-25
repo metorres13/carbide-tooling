@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Graphite Machining | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, 送りs, 工具 wear ratios, and dust extraction requirements for graphite milling."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/graphite-machining/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>グラファイト加工 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="EDM電極とるつぼのグラファイトと炭素加工パラメータ。グラファイトミリングの速度、フィード、工具摩耗率、およびダスト抽出要件。" name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.hero .accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:6px auto 0}.card{border:1px solid #e8e8ed;border-radius:14px;padding:18px 20px;margin:16px 0}.card h2{font-size:15px;font-weight:700;margin-bottom:10px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.card select:focus,.card input:focus{border-color:#0066cc}.res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.res-item{background:#f5f5f7;border-radius:10px;padding:12px;text-align:center}.res-item .lbl{font-size:10px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.res-item .unit{font-size:10px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.res{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,260 +13,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Graphite Machining | 精密加工ツール"/>
-<meta property="og:description" content="Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graph"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/graphite-machining/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Graphite Machining | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="グラファイト加工 | 精密加工ツール" property="og:title"/>
+<meta content="EDM電極とるつぼのグラファイトと炭素加工パラメータ。速度、フィード、ツール摩耗率、およびグラフのダスト抽出要件" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/graphite-machining/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Graphite Machining | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Graphite Machining",
-      "url": "https://carbide-tooling.com/jp/tools/graphite-machining/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/graphite-machining/",
-      "name": "Graphite Machining",
-      "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is graphite machining better performed dry or with coolant?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Graphite is always machined dry. Coolant soaks into the porous graphite structure, causing dimensional changes and potential outgassing in EDM applications. Dry machining with proper dust extraction is the established standard for graphite electrode manufacturing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What tool material lasts longest for graphite?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CVD diamond-coated carbide tools offer the longest tool life, typically 10–20× that of uncoated carbide. PCD-tipped tools are also excellent but limited to simple geometries. The diamond coating provides abrasion resistance against the hard graphite particles."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use standard carbide end mills for graphite?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, but expect rapid wear. Uncoated micro-grain carbide end mills can work for short-run graphite machining (50–100 electrodes). For production runs exceeding 200 parts, diamond-coated tools are more economical due to reduced tool change downtime.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Graphite Machining",
+ "url": "https://carbide-tooling.com/tools/graphite-machining/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/graphite-machining/",
+ "name": "Graphite Machining",
+ "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Is graphite machining better performed dry or with coolant?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Graphite is always machined dry. Coolant soaks into the porous graphite structure, causing dimensional changes and potential outgassing in EDM applications. Dry machining with proper dust extraction is the established standard for graphite electrode manufacturing."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What tool material lasts longest for graphite?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "CVD diamond-coated carbide tools offer the longest tool life, typically 10–20× that of uncoated carbide. PCD-tipped tools are also excellent but limited to simple geometries. The diamond coating provides abrasion resistance against the hard graphite particles."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use standard carbide end mills for graphite?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, but expect rapid wear. Uncoated micro-grain carbide end mills can work for short-run graphite machining (50–100 electrodes). For production runs exceeding 200 parts, diamond-coated tools are more economical due to reduced tool change downtime.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="グラファイト加工 | 精密加工ツール" property="og:title"/>
+<meta content="EDM電極とるつぼのグラファイトと炭素加工パラメータ。速度、フィード、ツール摩耗率、およびグラフのダスト抽出要件" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/graphite-machining/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Graphite Machining | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Graphite Machining",
+ "url": "https://carbide-tooling.com/tools/graphite-machining/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/graphite-machining/",
+ "name": "Graphite Machining",
+ "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="グラファイト加工計算ツール" property="og:title"/>
+<meta content="EDM電極とるつぼのグラファイトと炭素加工パラメータ。速度、フィード、ツール摩耗率、およびグラフのダスト抽出要件" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/graphite-machining/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Graphite Machining Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Graphite Machining Calculator",
+ "url": "https://carbide-tooling.com/tools/graphite-machining/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/graphite-machining/",
+ "name": "Graphite Machining Calculator",
+ "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. 切削速度s, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Graphite Machining | 精密加工ツール"/>
-<meta property="og:description" content="Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graph"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/graphite-machining/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Graphite Machining | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Graphite Machining",
-      "url": "https://carbide-tooling.com/jp/tools/graphite-machining/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/graphite-machining/",
-      "name": "Graphite Machining",
-      "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Graphite Machining 計算機 | Precision Machining Tool"/>
-<meta property="og:description" content="Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graph"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/graphite-machining/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Graphite Machining 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Graphite Machining 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/graphite-machining/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/graphite-machining/",
-      "name": "Graphite Machining 計算機",
-      "description": "Graphite and carbon machining parameters for EDM electrodes and crucibles. Speeds, feeds, tool wear ratios, and dust extraction requirements for graphite milling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/graphite-machining/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/graphite-machining/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/graphite-machining/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/graphite-machining/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/graphite-machining/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/graphite-machining/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/graphite-machining"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/graphite-machining/">EN</a><span class="sep">|</span><a href="/de/tools/graphite-machining/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/graphite-machining/">ES</a><span class="sep">|</span><a href="/vi/tools/graphite-machining/">VI</a><span class="sep">|</span><a href="/zh/tools/graphite-machining/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Graphite Machining</div>
-<section class="hero"><div class="container"><div class="badge">🧰 工具</div><h1>Graphite <span class="accent">Machining 計算機</span></h1><p>Graphite is abrasive — expect 2-5× tool wear versus steel. Carbide tooling is standard; diamond coating optional for high-volume EDM electrode production.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/graphite-machining/" rel="canonical"/><link href="https://carbide-tooling.com/tools/graphite-machining/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/graphite-machining/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/graphite-machining/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/graphite-machining/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/graphite-machining/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/graphite-machining/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇬🇧英語</a><a href="https://carbide-tooling.com/guides/">🇩🇪ドイツ</a><a href="https://carbide-tooling.com/about.html">🇯🇵ジェイピー</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇪🇸エスイー</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/graphite-machining/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/graphite-machining/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/graphite-machining/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/graphite-machining/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/graphite-machining/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">スレッドの割合</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">チップ負荷計算ツール</a> <span style="color:#d2d2d6">›</span> Graphite Machining</div>
+<section class="hero"><div class="container"><div class="badge">🧰 Tool</div><h1>⚙電卓</h1><p>グラファイトグレード</p></div></section>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/thread-lead-angle-calculator/">Thread Lead Angle</a><a href="/jp/tools/plastic-machining/">Plastic Machining ガイド</a><a href="/jp/tools/percentage-of-thread-calculator/">Thread Percentage</a><a href="/jp/tools/chip-load/">Chip Load 計算機</a><a href="/jp/tools/iso-fit-calculator/">ISO Fit 計算機</a><a href="/jp/tools/cycle-time-calculator/">Cycle Time 計算機</a><a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a><a href="/jp/tools/blind-hole-tapping-calculator/">Blind Hole Tapping</a>
-  </div>
+<h3>工具径（mm）</h3>
+<div class="tool-grid">
+<a href="/tools/thread-lead-angle-calculator/">ISOフィット計算機</a><a href="/tools/plastic-machining/">サイクルタイム計算機</a><a href="/tools/percentage-of-thread-calculator/">タップ穴径</a><a href="/tools/chip-load/">盲穴ねじ切り</a><a href="/tools/iso-fit-calculator/">← すべてのツール</a><a href="/tools/cycle-time-calculator/">見積もりを取得する</a><a href="/tools/tap-drill-size-calculator/">プライバシー</a><a href="/tools/blind-hole-tapping-calculator/">の中で</a>
+</div>
 </section>
-<div class="container"><div class="card"><h2>⚙️ 計算機</h2><label>Graphite Grade</label><select id="grade" onchange="calc()"><option value="fine">Fine grain (EDM-3, POCO)</option><option value="ultra">Ultra-fine (EDM-C3)</option><option value="high">High-strength (Isostatic)</option></select><label>工具 直径 (mm)</label><input type="number" id="i1" value="6" oninput="calc()"/><label>加工</label><select id="op" onchange="calc()"><option value="rough">Roughing</option><option value="finish">Finishing</option></select><input type="number" id="i2" value="100" oninput="calc()"/><div class="res"><div class="res-item"><div class="lbl">m/min</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">回転数</div><div class="val" id="r3">—</div></div><div class="res-item"><div class="lbl">送り</div><div class="val" id="r1">—</div></div></div></div>
-<div style="text-align:center;margin:24px 0"><a href="/jp/tools/" style="color:#0066cc;font-size:13px">← 全ツール</a></div></div>
+<div class="container"><div class="card"><h2>作戦</h2><label>すべてのツール</label><select id="grade" onchange="calc()"><option value="fine">Fine grain (EDM-3, POCO)</option><option value="ultra">Ultra-fine (EDM-C3)</option><option value="high">High-strength (Isostatic)</option></select><label>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</label><input id="i1" oninput="calc()" type="number" value="6"/><label>©2026年用超硬工具</label><select id="op" onchange="calc()"><option value="rough">Roughing</option><option value="finish">Finishing</option></select><input id="i2" oninput="calc()" type="number" value="100"/><div class="res"><div class="res-item"><div class="lbl">SFM</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">RPM</div><div class="val" id="r3">—</div></div><div class="res-item"><div class="lbl">送り</div><div class="val" id="r1">—</div></div></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">カタログを表示する →</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">スレッドの割合</a>
+<a href="/tools/">EDM電極のグラファイト加工速度とフィード</a>
+<a href="/products/">🇬🇧英語</a>
+<a href="/guides/">🇩🇪ドイツ</a>
+<a href="/about.html">🇯🇵ジェイピー</a>
+<a href="/quote.html">チタンガイド</a>
+<a href="/privacy.html">グレード相互参照</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">部品当たりのコスト</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">EDM電極のグラファイト加工速度とフィード</a></p>
+<p style="font-size:11px;margin-bottom:6px">グラファイトEDM電極加工には、材料の研磨性のため、チップ荷重が軽い高スピンドル速度 (10,000〜25,000 RPM) が必要です。仕上げには、チップ負荷が0.001〜0.003インチ/歯の300〜500 SFMのCVDダイヤモンドコーティングエンドミルを使用します。コーティングされていないカーバイドは、低速での荒削りに使用できますが、工具の摩耗は大幅に高くなります。</p>
+<p style="font-size:11px">機械保護のためのグラファイトダストの管理</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Graphite Machining Speeds and Feeds for EDM Electrodes</h2><p>Graphite EDM electrode machining requires high spindle speeds (10,000–25,000 rpm) with light chip loads due to the material's abrasive nature. Use CVD diamond-coated end mills at 300–500 m/min with chip loads of 0.001–0.003 in/tooth for finishing. Uncoated carbide can be used for roughing at reduced speeds, but tool wear will be significantly higher.</p>
-<h2>Managing Graphite Dust for Machine Protection</h2><p>Graphite dust is conductive and highly abrasive, making dust extraction critical. Use a dedicated vacuum system with HEPA filtration connected to the machine enclosure. Seal all machine ways and ball screws with positive-pressure covers. Without proper dust management, graphite particles can destroy machine spindle bearings and linear guides within months.</p>
-<h2>Part Geometry Strategies for Graphite Components</h2><p>Graphite is brittle and prone to edge chipping, especially on thin walls and sharp corners. Design radii of at least 0.020 inches at internal corners to prevent corner breakout. Use climb milling to reduce edge chipping on external profiles. For thin features below 0.040 inches, reduce feed rates by 50% and consider using a specialized graphite machining grade tool.</p>
-<h2>よくある質問</h2>
+<h2>グラファイト粉塵は導電性で研磨性が高いため、粉塵の抽出が重要です。機械エンクロージャに接続されたHEPAろ過を備えた専用の真空システムを使用します。すべてのマシンウェイとボールネジを正圧カバーでシールします。適切なダスト管理がなければ、グラファイト粒子は数か月以内に機械のスピンドルベアリングとリニアガイドを破壊する可能性があります。</h2><p>グラファイト成分の部分幾何学戦略</p>
+<h2>グラファイトは脆く、特に薄い壁や鋭い角でエッジが欠けやすい。コーナーブレイクアウトを防ぐために、内部コーナーで少なくとも0.020インチの設計半径。クライムミリングを使用して、外部プロファイルのエッジチッピングを減らします。0.040インチ未満の薄い機能の場合は、供給速度を50% 削減し、特殊なグラファイト加工グレードのツールの使用を検討してください。</h2><p>よくある質問</p>
+<h2>グラファイト加工はドライまたはクーラントでより適切に実行されますか?グラファイトは常に機械加工されています。クーラントは多孔質グラファイト構造に浸透し、EDMアプリケーションで寸法変化と潜在的なガス放出を引き起こします。適切なダスト抽出を伴う乾式加工は、グラファイト電極製造の確立された標準です。</h2><p>どの工具材料がグラファイトに対して最も長持ちしますか?CVDダイヤモンドコーティングされたカーバイド工具は、最も長い工具寿命を提供します。通常、コーティングされていないカーバイドの寿命は10〜20倍です。PCD先端のツールも優れていますが、単純な形状に限定されています。ダイヤモンドコーティングは、硬いグラファイト粒子に対して耐摩耗性を提供する。</p>
+<h2>グラファイトに標準のカーバイドエンドミルを使用できますか?はい、しかし急速な摩耗が予想されます。コーティングされていないマイクログレインカーバイカーエンドミルは、短期間のグラファイト加工 (50〜100個の電極) で機能します。200部品を超える生産作業では、工具交換のダウンタイムが短縮されるため、ダイヤモンドコーティングされた工具の方が経済的です。</h2>
 <p><strong>Is graphite machining better performed dry or with coolant?</strong> Graphite is always machined dry. Coolant soaks into the porous graphite structure, causing dimensional changes and potential outgassing in EDM applications. Dry machining with proper dust extraction is the established standard for graphite electrode manufacturing.</p>
 <p><strong>What tool material lasts longest for graphite?</strong> CVD diamond-coated carbide tools offer the longest tool life, typically 10–20× that of uncoated carbide. PCD-tipped tools are also excellent but limited to simple geometries. The diamond coating provides abrasion resistance against the hard graphite particles.</p>
 <p><strong>Can I use standard carbide end mills for graphite?</strong> Yes, but expect rapid wear. Uncoated micro-grain carbide end mills can work for short-run graphite machining (50–100 electrodes). For production runs exceeding 200 parts, diamond-coated tools are more economical due to reduced tool change downtime.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ 計算d for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">カタログを見る →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">一括見積もりを依頼する →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/graphite-machining/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/graphite-machining/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/graphite-machining/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/graphite-machining/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/graphite-machining/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/graphite-machining/" class="lang-link">中</a>
-</div>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>◆超硬工具</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">成績選択ガイド</a>
+<a href="/tools/hardness-converter/">成績照会を挿入する</a>
+<a href="/tools/tap-drill-size-calculator/">プライバシー</a>
+<a href="/tools/mrr-calculator/">NPTパイプねじ計算ツール</a>
+<a href="/tools/feed-converter/">バッチコスト計算機</a>
+<a href="/tools/surface-roughness-calculator/">工具摩耗コスト計算ツール</a>
+<a href="/tools/titanium-machining-guide/">AQLサンプリング計算機</a>
+<a href="/tools/carbide-grade-cross-ref-2/">ボルトサークル計算ツール</a>
+<a href="/tools/cost-per-part-calculator/">ねじピッチ径計算ツール</a>
+<a href="/tools/torque-unit-converter/">リンクドイン</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>製品</h3>
+<p>ガイド</p>
+</div>
+<a class="b2b-btn" href="/quote.html">電子メール</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">グレード選択ガイド</a><a href="/guides/insert-grade-selection.html">インサートグレードのお問い合わせ</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Grade Selection Guide</a><a href="/guides/insert-grade-selection.html">Insert Grade Inquiry</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/gdt-symbols-reference/">GD&T Symbols Reference</a>
-<a href="/jp/tools/npt-pipe-thread-calculator/">NPT Pipe Thread 計算機</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/batch-cost-calculator/">Batch Cost 計算機</a>
-<a href="/jp/tools/tool-wear-cost-calculator/">工具 Wear Cost 計算機</a>
-<a href="/jp/tools/aql-sampling-calculator/">AQL Sampling 計算機</a>
-<a href="/jp/tools/bolt-circle-calculator/">Bolt Circle 計算機</a>
-<a href="/jp/tools/thread-pitch-diameter-calculator/">Thread Pitch 直径 計算機</a>
-
-  </div>
+<h3>工具径（mm）</h3>
+<div class="tool-grid">
+<a href="/tools/gdt-symbols-reference/">GD&amp;T Symbols Reference</a>
+<a href="/tools/npt-pipe-thread-calculator/">NPT Pipe Thread Calculator</a>
+<a href="/tools/hardness-converter/">成績照会を挿入する</a>
+<a href="/tools/batch-cost-calculator/">Batch Cost Calculator</a>
+<a href="/tools/tool-wear-cost-calculator/">Tool Wear Cost Calculator</a>
+<a href="/tools/aql-sampling-calculator/">AQL Sampling Calculator</a>
+<a href="/tools/bolt-circle-calculator/">Bolt Circle Calculator</a>
+<a href="/tools/thread-pitch-diameter-calculator/">Thread Pitch Diameter Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/graphite-machining/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/graphite-machining/&text=Graphite Machining 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Graphite Machining 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/graphite-machining/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/graphite-machining/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/graphite-machining/&amp;text=Graphite Machining Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Graphite Machining Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/graphite-machining/">Email</a>
 </div>
-
 </body></html>

@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="ja"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Keyway 切込み深さ 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="Free online keyway 切込み深さ 計算機 for CNC machinists and quality inspecへrs. 計算 square vs. rectangular keyways, keyseat 切込み深さ: botへm flat measurement."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Keyway Depth Calculator | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="CNC機械工と品質検査官のための無料のオンラインキーウェイ深度計算機。正方形と長方形のキーウェイ、キーシートの深さを計算します: 下部フラットの測定。" name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}
 nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}
@@ -36,337 +37,334 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Keyway 切込み深さ | 精密加工ツール"/>
-<meta property="og:description" content="Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat me"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Keyway 切込み深さ | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="キーウェイの深さ | 精密加工ツール" property="og:title"/>
+<meta content="CNC機械工と品質検査官のための無料のオンラインキーウェイ深度計算機。正方形と長方形のキーウェイ、キーシートの深さを計算します: ボトムフラットme" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/keyway-depth-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Keyway Depth | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Keyway Depth",
-      "url": "https://carbide-tooling.com/jp/tools/keyway-depth-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/keyway-depth-calculator/",
-      "name": "Keyway Depth",
-      "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Keyway Depth",
+ "url": "https://carbide-tooling.com/tools/keyway-depth-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. Calculate square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/keyway-depth-calculator/",
+ "name": "Keyway Depth",
+ "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. Calculate square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="キーウェイの深さ | 精密加工ツール" property="og:title"/>
+<meta content="CNC機械工と品質検査官のための無料のオンラインキーウェイ深度計算機。正方形と長方形のキーウェイ、キーシートの深さを計算します: ボトムフラットme" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/keyway-depth-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Keyway Depth | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Keyway Depth",
+ "url": "https://carbide-tooling.com/tools/keyway-depth-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. Calculate square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/keyway-depth-calculator/",
+ "name": "Keyway Depth",
+ "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. Calculate square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Keyway電卓" property="og:title"/>
+<meta content="CNC機械工と品質検査官のための無料のオンラインキーウェイ深度計算機。正方形と長方形のキーウェイ、キーシートの深さを計算します: ボトムフラットme" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/keyway-depth-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Keyway Depth Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Keyway Depth Calculator",
+ "url": "https://carbide-tooling.com/tools/keyway-depth-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. Calculate square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/keyway-depth-calculator/",
+ "name": "Keyway Depth Calculator",
+ "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. Calculate square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Keyway 切込み深さ | 精密加工ツール"/>
-<meta property="og:description" content="Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat me"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Keyway 切込み深さ | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Keyway Depth",
-      "url": "https://carbide-tooling.com/jp/tools/keyway-depth-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/keyway-depth-calculator/",
-      "name": "Keyway Depth",
-      "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Keyway 切込み深さ 計算機 | Precision Machining Tool"/>
-<meta property="og:description" content="Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat me"/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Keyway 切込み深さ 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Keyway 切込み深さ 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/keyway-depth-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/keyway-depth-calculator/",
-      "name": "Keyway 切込み深さ 計算機",
-      "description": "Free online keyway depth calculator for CNC machinists and quality inspectors. 計算 square vs. rectangular keyways, keyseat depth: bottom flat measurement.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/keyway-depth-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/keyway-depth-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/keyway-depth-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/keyway-depth-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/keyway-depth-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/keyway-depth-calculator"/>
-</head>
+
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/keyway-depth-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/keyway-depth-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/keyway-depth-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/keyway-depth-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/keyway-depth-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">製品</a><a href="/guides/">技術ガイド</a><a href="/about.html">会社概要</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/keyway-depth-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/keyway-depth-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/keyway-depth-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/keyway-depth-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/keyway-depth-calculator/">中</a></div></div></nav>
-
-<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc">Tools</a> <span style="color:#d2d2d6">›</span> Keyway 切込み深さ 計算機</div>
-
-<section class="hero"><div class="container"><h1><span class="accent">Keyway</span> 計算機</h1><p>A 10 mm shaft with a 3 mm keyway requires a keyseat depth of approximately 3.5 mm. Going too deep weakens the shaft hub, too shallow and the key does not transmit full torque.</p></div></section>
-
-<div class="container"><div class="card"><h3>⚙️ 計算機</h3><div class="row2"><div><label>入力 値</label><input type="number" id="v1" value="10" oninput="go()"/></div><div><label>Parameter</label><input type="number" id="v2" value="20" oninput="go()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">結果</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
-
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">🇯🇵ジェイピー</a><a href="/guides/">🇪🇸エスイー</a><a href="/about.html">🇻🇳VI</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">ホーム</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/keyway-depth-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/keyway-depth-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/keyway-depth-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/keyway-depth-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/keyway-depth-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">マイクロインチ変換器</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc">チューブ重量計算ツール</a> <span style="color:#d2d2d6">›</span> Keyway Depth Calculator</div>
+<section class="hero"><div class="container"><h1>入力値</h1><p>パラメーター</p></div></section>
+<div class="container"><div class="card"><h3>専門的なツールが必要ですか？</h3><div class="row2"><div><label>工場直送価格、最適化された超硬材種、そして迅速な技術サポートを、すべてワンストップでご提供します。</label><input id="v1" oninput="go()" type="number" value="10"/></div><div><label>🔧100種類のプロ向け切削工具をチェック</label><input id="v2" oninput="go()" type="number" value="20"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>すべてのツール</h3>
+<p>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</p>
+</div>
+<a class="b2b-btn" href="/quote.html">フィードコンバーター</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/turning-inserts.html">旋削インサート</a></div>
-
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">表面粗さ</a><a href="/products/turning-inserts.html">段付きドリルの設計</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/torque-unit-converter/">Torque 単位 換算</a><a href="/jp/tools/micron-inch-converter/">Micron/Inch 換算</a><a href="/jp/tools/tube-weight-calculator/">Tube Weight 計算機</a><a href="/jp/tools/feed-converter/">送り 換算</a><a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a><a href="/jp/tools/step-drill-design-calculator/">Step Drill Design</a><a href="/jp/tools/ramping-angle-calculator/">Ramping Angle</a><a href="/jp/tools/pressure-converter/">Pressure 換算</a>
-  </div>
+<h3>©2026年用超硬工具</h3>
+<div class="tool-grid">
+<a href="/tools/torque-unit-converter/">ランプの角度</a><a href="/tools/micron-inch-converter/">圧力変換器</a><a href="/tools/tube-weight-calculator/">見積もりを取得する</a><a href="/tools/feed-converter/">プライバシー</a><a href="/tools/surface-roughness-calculator/">の中で</a><a href="/tools/step-drill-design-calculator/">カタログを表示する →</a><a href="/tools/ramping-angle-calculator/">速度と送り量</a><a href="/tools/pressure-converter/">硬度変換器</a>
+</div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">マイクロインチ変換器</a>
+<a href="/tools/">正方形対長方形のキーウェイ</a>
+<a href="/products/">🇯🇵ジェイピー</a>
+<a href="/guides/">🇪🇸エスイー</a>
+<a href="/about.html">🇻🇳VI</a>
+<a href="/quote.html">トルクコンバーター</a>
+<a href="/privacy.html">ペック掘削計算機</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/keyway-depth-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/keyway-depth-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/keyway-depth-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/keyway-depth-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/keyway-depth-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">鋳鉄加工用計算ツール</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">正方形対長方形のキーウェイ</a></p>
+<p style="font-size:11px;margin-bottom:6px">10 mm径の軸に3 mm幅のキー溝を設ける場合、キー溝の深さはおおよそ3.5 mmとします。溝を深くしすぎると軸の強度が低下し、浅すぎるとキーが十分なトルクを伝達できなくなります。この計算機はプロセスを簡略化するので、現場で手動で三角関数の計算をする必要がなくなり、部品製作に集中できます。</p>
+<p style="font-size:11px">キーシートの深さ: ボトムフラット測定</p>
 </div>
 </footer>
-
 <script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script>
 <section class="seo-content"><div class="container">
-<h2>Square vs. Rectangular Keyways</h2>
-<p>A 10 mm shaft with a 3 mm keyway requires a keyseat depth of approximately 3.5 mm. Going too deep weakens the shaft hub, too shallow and the key does not transmit full torque. This calculator simplifies the process so you can focus on making parts, not doing manual trig on the shop floor.</p>
-<h2>Keyseat Depth: Bottom Flat Measurement</h2>
-<p>Whether you work on a Haas VF-2, a Mazak Integrex, or an Okuma MB-5000, understanding this calculation is essential for consistent quality. Many CAM systems handle it automatically, but knowing how to verify the output prevents costly programming errors.</p>
-<h2>ANSI B17.1 Standard Key Sizing</h2>
-<p>The practical application varies by shop environment. For job shops running short runs, a quick reference is sufficient. For production shops with repeat orders, documenting these parameters in the setup sheet saves time on every rerun.</p>
-<h2>よくある質問</h2>
+<h2>Haas VF-2、Mazak Integrex、あるいはOkuma MB-5000のいずれで作業する場合でも、一貫した品質を確保するためには、この計算を理解することが不可欠です。多くのCAMシステムでは自動的に処理されますが、出力結果を確認する方法を知っておくことで、高コストなプログラミングミスを防ぐことができます。</h2>
+<p>ANSI B17.1標準キーサイジング</p>
+<h2>実際の適用は、店舗の環境によって異なります。小ロット生産を手がける受託加工工場では、簡易な参照資料で十分です。繰り返し発注がある製造現場では、これらのパラメーターをセットアップシートに記録しておくことで、毎回の再実行時の作業時間を短縮できます。</h2>
+<p>よくある質問</p>
+<h2>この計算の精度はどの程度ですか？その式は、入力値の精度の範囲内では正確です。重要な寸法は、常に校正済みの測定工具で確認してください。</h2>
+<p>これはマザックやハースのCNC装置で使えますか？数学的な原理は普遍的です。CAMシステムは内部で同じ計算式を使用しています。この計算ツールは、その検算用です。</p>
+<h2>機械工が犯しがちな間違いは何でしょうか。工具の半径やゲージピンの直径を考慮し忘れる、という点です。印刷物がどの基準点を採用しているかは、必ず再確認してください。</h2>
 <p><strong>How accurate is this calculation?</strong> The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools.</p>
 <p><strong>Can I use this on a Mazak or Haas control?</strong> The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check.</p>
 <p><strong>What is the common mistake machinists make?</strong> Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ 計算d for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">カタログを見る →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">グラファイト加工計算ツール</a></p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<div class="toolbox-widget"><h3>ガイド</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">引張強度変換器</a>
+<a href="/tools/hardness-converter/">らせん補間計算機</a>
+<a href="/tools/tap-drill-size-calculator/">送料・関税の見積もりツール</a>
+<a href="/tools/mrr-calculator/">リンクドイン</a>
+<a href="/tools/feed-converter/">プライバシー</a>
+<a href="/tools/surface-roughness-calculator/">の中で</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guide</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>すべてのツール</h3>
+<p>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</p>
+</div>
+<a class="b2b-btn" href="/quote.html">フィードコンバーター</a>
 
-
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
-</aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/turning-inserts.html">旋削インサート</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">表面粗さ</a><a href="/products/turning-inserts.html">段付きドリルの設計</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/peck-drilling-calculator/">Peck Drilling 計算機</a>
-<a href="/jp/tools/tube-weight-calculator/">Tube Weight 計算機</a>
-<a href="/jp/tools/cast-iron-machining/">Cast Iron Machining 計算機</a>
-<a href="/jp/tools/reaming-allowance-calculator/">Reaming Allowance 計算機</a>
-<a href="/jp/tools/graphite-machining/">Graphite Machining 計算機</a>
-<a href="/jp/tools/tensile-strength-converter/">Tensile Strength 換算</a>
-<a href="/jp/tools/helical-interpolation-calculator/">Helical Interpolation 計算機</a>
-<a href="/jp/tools/shipping-duty-estimator/">Shipping Duty Estimator</a>
-
-  </div>
+<h3>©2026年用超硬工具</h3>
+<div class="tool-grid">
+<a href="/tools/peck-drilling-calculator/">Peck Drilling Calculator</a>
+<a href="/tools/tube-weight-calculator/">見積もりを取得する</a>
+<a href="/tools/cast-iron-machining/">Cast Iron Machining Calculator</a>
+<a href="/tools/reaming-allowance-calculator/">Reaming Allowance Calculator</a>
+<a href="/tools/graphite-machining/">Graphite Machining Calculator</a>
+<a href="/tools/tensile-strength-converter/">Tensile Strength Converter</a>
+<a href="/tools/helical-interpolation-calculator/">Helical Interpolation Calculator</a>
+<a href="/tools/shipping-duty-estimator/">Shipping Duty Estimator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/keyway-depth-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/keyway-depth-calculator/&text=Keyway 切込み深さ 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Keyway 切込み深さ 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/keyway-depth-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/keyway-depth-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/keyway-depth-calculator/&amp;text=Keyway Depth Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Keyway Depth Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/keyway-depth-calculator/">Email</a>
 </div>
-
 </body></html>

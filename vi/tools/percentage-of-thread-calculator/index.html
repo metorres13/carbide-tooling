@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Percentage Of Thread Máy tính | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Free online thread percentage Máy tính. Tính Đếnán the % of thread engagement Từ your tap drill choice. Optimize thread strength vs tapping difficulty."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Tỷ lệ phần trăm máy tính sợi | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Máy tính phần trăm chủ đề trực tuyến miễn phí. Tính % độ tương tác của ren từ lựa chọn máy khoan của bạn. Tối ưu hóa độ bền ren so với độ khó khai thác." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:38px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,180 +12,197 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Percentage | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficu"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Percentage | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Phần trăm ren | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính phần trăm chủ đề trực tuyến miễn phí. Tính % độ tương tác của ren từ lựa chọn máy khoan của bạn. Tối ưu hóa sức mạnh ren so với khó xử khai thác" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Percentage | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Percentage",
-      "url": "https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/",
-      "name": "Thread Percentage",
-      "description": "Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the minimum thread engagement for structural bolts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For structural steel connections, 100% thread engagement is standard per ASTM A325/A490. However, '100%' in this context means full thread depth in the nut, not 100% of the screw thread height. For tapped holes in machine components, 65–75% is adequate for 90% of applications per machinery handbook guidelines."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does thread percentage affect class of fit (6H vs 6g)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Thread percentage is determined by the tap drill size and affects the internal thread minor diameter, which is part of the 6H classification. The 6H tolerance band has upper and lower limits — a higher thread percentage uses the lower portion of the band. The pitch diameter (which determines fit quality) is determined by the tap's geometry, not the drill size."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why do smaller threads need higher engagement percentage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Small diameters (\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Percentage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "name": "Thread Percentage",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the minimum thread engagement for structural bolts?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For structural steel connections, 100% thread engagement is standard per ASTM A325/A490. However, '100%' in this context means full thread depth in the nut, not 100% of the screw thread height. For tapped holes in machine components, 65–75% is adequate for 90% of applications per machinery handbook guidelines."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does thread percentage affect class of fit (6H vs 6g)?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Thread percentage is determined by the tap drill size and affects the internal thread minor diameter, which is part of the 6H classification. The 6H tolerance band has upper and lower limits — a higher thread percentage uses the lower portion of the band. The pitch diameter (which determines fit quality) is determined by the tap's geometry, not the drill size."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Why do smaller threads need higher engagement percentage?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Small diameters (\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Phần trăm ren | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính phần trăm chủ đề trực tuyến miễn phí. Tính % độ tương tác của ren từ lựa chọn máy khoan của bạn. Tối ưu hóa sức mạnh ren so với khó xử khai thác" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Percentage | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Percentage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "name": "Thread Percentage",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Công cụ tính tỷ lệ phần trăm theo luồng" property="og:title"/>
+<meta content="Máy tính phần trăm chủ đề trực tuyến miễn phí. Tính % độ tương tác của ren từ lựa chọn máy khoan của bạn. Tối ưu hóa sức mạnh ren so với khó xử khai thác" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Percentage Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Percentage Calculator",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "name": "Thread Percentage Calculator",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Percentage | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficu"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Percentage | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Percentage",
-      "url": "https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/",
-      "name": "Thread Percentage",
-      "description": "Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Percentage Máy tính | Precision Machining Tool"/>
-<meta property="og:description" content="Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficu"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Percentage Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Percentage Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/",
-      "name": "Thread Percentage Máy tính",
-      "description": "Free online thread percentage calculator. Tính toán the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/percentage-of-thread-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Sản phẩm</a><a href="https://carbide-tooling.com/guides/">Hướng dẫn kỹ thuật</a><a href="https://carbide-tooling.com/about.html">Về chúng tôi</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/percentage-of-thread-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/percentage-of-thread-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/percentage-of-thread-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/percentage-of-thread-calculator/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/percentage-of-thread-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Percentage Of Thread Máy tính</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📊 Optimization Dụng cụ</div><h1>Thread Percentage <span class="accent">Máy tính</span></h1><p>Enter your drill size and thread dimensions to calculate the actual thread engagement percentage.</p><a class="btn" href="#calculator">Tính toán ↓</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/percentage-of-thread-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇬🇧Tiếng Anh</a><a href="https://carbide-tooling.com/guides/">🇩🇪Đức</a><a href="https://carbide-tooling.com/about.html">🇯🇵JP</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇪🇸ES</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/percentage-of-thread-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/percentage-of-thread-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/percentage-of-thread-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/percentage-of-thread-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/percentage-of-thread-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Trình chuyển đổi nguồn cấp dữ liệu</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Công cụ tính chi phí theo lô</a> <span style="color:#d2d2d6">›</span> Percentage Of Thread Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📊 Optimization Tool</div><h1>📊Đính hôn ren %</h1><p>Công thức: % Thread = (Major D-Drill D) / (0.013 × Pitch)</p><a class="btn" href="#calculator">Độ dày thành ống</a></div></section>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/horsepower-calculator/">Horsepower Máy tính</a><a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a><a href="/vi/tools/batch-cost-calculator/">Batch Cost Máy tính</a><a href="/vi/tools/wall-thickness-calculator/">Wall Thickness</a><a href="/vi/tools/gdt-symbols-reference/">GD&T Symbols Reference</a><a href="/vi/tools/metal-weight-calculator/">Metal Weight Máy tính</a><a href="/vi/tools/tool-steel-heat-treat/">Dụng cụ Steel Heat Treat</a><a href="/vi/tools/pomodoro-timer/">Pomodoro Timer</a>
-  </div>
+<h3>🔩Kích thước ren</h3>
+<div class="tool-grid">
+<a href="/tools/horsepower-calculator/">Tham khảo các ký hiệu GD&amp;T</a><a href="/tools/feed-converter/">Công cụ tính trọng lượng kim loại</a><a href="/tools/batch-cost-calculator/">Nhiệt luyện thép dụng cụ</a><a href="/tools/wall-thickness-calculator/">Hẹn giờ Pomodoro</a><a href="/tools/gdt-symbols-reference/">← Tất cả công cụ</a><a href="/tools/metal-weight-calculator/">Nhận báo giá</a><a href="/tools/tool-steel-heat-treat/">Quyền riêng tư</a><a href="/tools/pomodoro-timer/">trong</a>
+</div>
 </section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>📊 Thread Engagement %</h2><p class="sub">The formula: %Thread = (MajorD − DrillD) / (0.013 × Pitch)</p>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>📐Đường kính mũi khoan (mm)</h2><p class="sub">Tất cả công cụ</p>
 <div class="card-row">
-<div class="field"><label>🔩 Thread Size</label><select id="size" onchange="calc()"><option value="6">M6</option><option value="8">M8</option><option value="10" selected>M10</option><option value="12">M12</option></select></div>
-<div class="field"><label>📐 Drill Đường kính (mm)</label><input type="number" id="drill" value="8.5" min="1" max="30" step="0.1" oninput="calc()"/></div>
+<div class="field"><label>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</label><select id="size" onchange="calc()"><option value="6">M6</option><option value="8">M8</option><option selected="" value="10">M10</option><option value="12">M12</option></select></div>
+<div class="field"><label>©Dụng cụ cắt gọt bằng cacbua năm 2026</label><input id="drill" max="30" min="1" oninput="calc()" step="0.1" type="number" value="8.5"/></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Thread Percentage</div><div class="value" id="r-pct">—</div><div class="unit">%</div></div>
@@ -192,7 +210,7 @@
 <div class="result-item"><div class="label">Torque Factor</div><div class="value" id="r-torque">—</div><div class="unit">× nominal</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:16px 0"><a href="/vi/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Tất cả công cụ</a></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Xem danh mục →</a></div>
 </section>
 <script>
 const PITCHES={6:1.0,8:1.25,10:1.5,12:1.75};
@@ -200,87 +218,73 @@ function calc(){const sz=parseInt(document.getElementById('size').value);const d
 calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Trình chuyển đổi nguồn cấp dữ liệu</a>
+<a href="/tools/">Ứng dụng của bạn cần tỷ lệ phần trăm chủ đề nào?</a>
+<a href="/products/">🇬🇧Tiếng Anh</a>
+<a href="/guides/">🇩🇪Đức</a>
+<a href="/about.html">🇯🇵JP</a>
+<a href="/quote.html">Hướng dẫn về Titan</a>
+<a href="/privacy.html">Phân loại tham chiếu</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Chi phí trên mỗi bộ phận</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Ứng dụng của bạn cần tỷ lệ phần trăm chủ đề nào?</a></p>
+<p style="font-size:11px;margin-bottom:6px">Phần trăm tương tác với ren xác định kích thước mũi khoan. Khuyến nghị tiêu chuẩn: 65% cho nhôm và đồng thau, 75% cho thép và thép không gỉ, 55% cho vật liệu cứng (trên 40 HRC), và 60% cho gang và đồng. Tỷ lệ phần trăm cao hơn cung cấp cường độ ren cao hơn một chút nhưng tăng đáng kể mô-men xoắn khai thác và nguy cơ vỡ vòi.</p>
+<p style="font-size:11px">Tính kích thước mũi khoan dựa trên tỷ lệ phần trăm ren</p>
+</div>
 <section class="seo"><div class="container">
-<h2>What Percentage of Thread Does Your Application Need?</h2><p>Thread engagement percentage determines the tap drill size. Standard recommendations: 65% for aluminum and brass, 75% for steel and stainless steel, 55% for hardened materials (above 40 HRC), and 60% for cast iron and bronze. Higher percentages provide marginally more thread strength but significantly increase tapping torque and the risk of tap breakage.</p>
-<h2>Calculating Tap Drill Size Based on Thread Percentage</h2><p>The formula for tap drill diameter: Drill Ø = Nominal Ø − (Thread % × Pitch) / 76.98 (for imperial threads) or Drill Ø = Nominal Ø − Thread % × Pitch × 0.013 (for metric). For M10×1.5 at 70% thread: Drill = 10 − (70 × 1.5 × 0.013) = 8.64 mm. For 3/8-16 UNC at 70%: Drill = 0.375 − (70 × 0.01299) / 76.98 = 0.332 inches (about a 'Q' drill).</p>
-<h2>Trade-offs: Thread Strength vs. Tapping Difficulty</h2><p>Increasing thread percentage from 60% to 80% only improves pull-out strength by about 10%, but tapping torque increases by 25–30%. Above 80% engagement, the strength gain is negligible while breakage risk rises sharply. For production tapping, target 65–70% for most materials. This provides 95% of maximum thread strength with significantly lower tool stress.</p>
-<h2>Câu hỏi thường gặp</h2>
+<h2>Công thức cho Đường kính mũi khoan: Mũi khoan = danh nghĩa Ø-(Ren % × cao độ)/76.98 (đối với ren đế Quốc) hoặc khoan Ø = danh nghĩa Ø-Thread % × Pitch × 0.013 (đối với hệ mét). Đối với M10 × 1.5 tại ren 70%: Mũi khoan = 10-(70 × 1.5 × 0.013) = 8.64mm. cho 3/8-16 UNC tại 70%: Khoan = 0.375-(70 × 0.01299) / 76.98 = 0.332 inch (khoảng Máy khoan 'q').</h2><p>Giao dịch: độ bền của sợi so với độ khó của sợi</p>
+<h2>Tăng tỷ lệ phần trăm ren từ 60% đến 80% chỉ cải thiện cường độ kéo ra khoảng 10%, nhưng mô-men xoắn Tăng 25-30%. Trên mức độ tương tác 80%, mức tăng sức mạnh không đáng kể trong khi Rủi Ro vỡ tăng mạnh. Đối với khai thác sản xuất, mục tiêu 65-70% cho hầu hết các vật liệu. Điều này cung cấp 95% cường độ sợi tối đa với ứng suất công cụ thấp hơn đáng kể.</h2><p>Câu hỏi thường gặp</p>
+<h2>Gắn ren tối thiểu cho bu lông kết cấu là gì? đối với các kết nối thép kết cấu, độ tương tác ren 100% là tiêu chuẩn cho mỗi ASTM A325/a490. Tuy nhiên, '100% 'trong ngữ cảnh này có nghĩa là độ sâu ren đầy đủ trong đai ốc, không phải 100% Chiều cao ren vít. Đối với các lỗ được khai thác trong linh kiện máy, 65-75% là đủ cho 90% ứng dụng cho mỗi hướng dẫn Sổ tay máy móc.</h2><p>Tỷ lệ phần trăm ren có ảnh hưởng đến lớp phù hợp (6 H so với 6g) không? tỷ lệ phần trăm ren được xác định bởi kích thước mũi khoan và ảnh hưởng đến đường kính nhỏ của ren trong, là một phần của phân loại 6 h. Dải dung sai 6 h có giới hạn trên và dưới-Tỷ lệ phần trăm sợi cao hơn sử dụng phần dưới của dải. Đường kính cao độ (xác định chất lượng phù hợp) được xác định bằng hình học của vòi nước, không phải Kích thước mũi khoan.</p>
+<h2>Tại Sao Chỉ nhỏ hơn cần tỷ lệ phần trăm tương tác cao hơn? đường kính nhỏ (&lt; 1/4 inch hoặc m6) có diện tích sườn ren nhỏ hơn tương ứng. Tăng tỷ lệ phần trăm ren lên 75% cho các ốc vít nhỏ bù đắp cho khu vực chịu tải giảm. Đối với các luồng lớn hơn (trên 1/2 inch), 60% thường đủ cho hầu hết các ứng dụng.</h2>
 <p><strong>What is the minimum thread engagement for structural bolts?</strong> For structural steel connections, 100% thread engagement is standard per ASTM A325/A490. However, '100%' in this context means full thread depth in the nut, not 100% of the screw thread height. For tapped holes in machine components, 65–75% is adequate for 90% of applications per machinery handbook guidelines.</p>
 <p><strong>Does thread percentage affect class of fit (6H vs 6g)?</strong> Thread percentage is determined by the tap drill size and affects the internal thread minor diameter, which is part of the 6H classification. The 6H tolerance band has upper and lower limits — a higher thread percentage uses the lower portion of the band. The pitch diameter (which determines fit quality) is determined by the tap's geometry, not the drill size.</p>
-<p><strong>Why do smaller threads need higher engagement percentage?</strong> Small diameters (< 1/4 inch or M6) have proportionally less thread flank area. Increasing the thread percentage to 75% for small fasteners compensates for the reduced load-bearing area. For larger threads (over 1/2 inch), 60% is usually sufficient for most applications.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p><strong>Why do smaller threads need higher engagement percentage?</strong> Small diameters (&lt; 1/4 inch or M6) have proportionally less thread flank area. Increasing the thread percentage to 75% for small fasteners compensates for the reduced load-bearing area. For larger threads (over 1/2 inch), 60% is usually sufficient for most applications.</p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Yêu cầu báo giá số lượng lớn →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/percentage-of-thread-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/percentage-of-thread-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<div class="toolbox-widget"><h3>◆Dụng cụ cắt gọt bằng cacbua</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Mũi khoan cacbua</a>
+<a href="/tools/hardness-converter/">Dao phay ren &amp; Tarô</a>
+<a href="/tools/tap-drill-size-calculator/">Máy tính phay bước</a>
+<a href="/tools/mrr-calculator/">Tham chiếu điểm số</a>
+<a href="/tools/feed-converter/">Công cụ tính trọng lượng kim loại</a>
+<a href="/tools/surface-roughness-calculator/">Bù trừ bán kính mũi dao</a>
+<a href="/tools/titanium-machining-guide/">Công cụ tính độ sâu ren &amp; mô-men xoắn</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Đường kính hiệu dụng của đầu tròn</a>
+<a href="/tools/cost-per-part-calculator/">Máy tính Tốc độ bề mặt (SFM)</a>
+<a href="/tools/torque-unit-converter/">Công cụ tính thời gian chu kỳ</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Sản phẩm</h3>
+<p>Hướng dẫn</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Mũi khoan hợp kim</a><a href="/products/threading-tools.html">Dao phay ren & tarô</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Thư điện tử</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/step-milling-calculator/">Step Milling Máy tính</a>
-<a href="/vi/tools/grade-reference/">Grade Reference</a>
-<a href="/vi/tools/round-bar-weight/">Round Bar Weight Máy tính</a>
-<a href="/vi/tools/nose-radius-compensation/">Nose Radius Compensation</a>
-<a href="/vi/tools/thread-depth-torque-calculator/">Thread Chiều sâu cắt & Torque Máy tính</a>
-<a href="/vi/tools/ball-nose-effective-diameter/">Ball Nose Effective Đường kính</a>
-<a href="/vi/tools/surface-speed/">Surface Tốc độ cắt (m/phút) Máy tính</a>
-<a href="/vi/tools/cycle-time-calculator/">Cycle Time Máy tính</a>
-
-  </div>
+<h3>🔩Kích thước ren</h3>
+<div class="tool-grid">
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/grade-reference/">Grade Reference</a>
+<a href="/tools/round-bar-weight/">Round Bar Weight Calculator</a>
+<a href="/tools/nose-radius-compensation/">Nose Radius Compensation</a>
+<a href="/tools/thread-depth-torque-calculator/">Thread Depth &amp; Torque Calculator</a>
+<a href="/tools/ball-nose-effective-diameter/">Ball Nose Effective Diameter</a>
+<a href="/tools/surface-speed/">Surface Tốc độ cắt (SFM) Calculator</a>
+<a href="/tools/cycle-time-calculator/">Cycle Time Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/&text=Thread Percentage Máy tính" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Thread Percentage Máy tính&body=Check this out: https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/percentage-of-thread-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/percentage-of-thread-calculator/&amp;text=Thread Percentage Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Thread Percentage Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/percentage-of-thread-calculator/">Email</a>
 </div>
-
 </body></html>

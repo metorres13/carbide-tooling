@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Flatness Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Free flatness and straightness Rechner. Berechnen flatness error Von height gauge readings. Convert flatness Nach straightness per ASME Y14.5."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/flatness-calculator/"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Flachheit rechner | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Freie Ebenheit und Geradheit Rechner. Berechnen Sie den Ebenheit fehler aus den Messwerten des Höhen messgeräts. Wandeln Sie Flachheit in Geradheit pro ASME Y14,5 um." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:720px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{padding:32px 0 20px;text-align:center}.hero h1{font-size:26px;font-weight:800}.accent{color:#0066cc}.hero p{font-size:13px;color:#86868b}.panel{border:1px solid #e8e8ed;border-radius:14px;padding:14px 16px;margin:12px 0}.panel h3{font-size:14px;font-weight:700;margin-bottom:8px}.panel label{font-size:11px;display:block;font-weight:600;color:#86868b;margin-bottom:2px}.panel input{width:100%;padding:6px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:6px}.res-item{background:#f5f5f7;border-radius:10px;padding:10px;text-align:center}.res-item .lbl{font-size:9px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,275 +12,271 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Flatness Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free flatness and straightness Rechner. Berechnen flatness error Von height gauge readings. Convert flatness Nach straightness per ASME Y14.5."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/flatness-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Flatness Rechner | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Flachheit rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Freie Ebenheit und Geradheit Rechner. Berechnen Sie den Ebenheit fehler aus den Messwerten des Höhen messgeräts. Wandeln Sie Flachheit in Geradheit pro ASME Y14,5 um." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/flatness-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Flatness Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Flatness Rechner",
-      "url": "https://carbide-tooling.com/de/tools/flatness-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free flatness and straightness calculator. Berechnen flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/flatness-calculator/",
-      "name": "Flatness Rechner",
-      "description": "Free flatness and straightness calculator. Berechnen flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How many data points do I need for flatness?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between flatness and parallelism?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use a CMM for flatness measurement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Flatness Calculator",
+ "url": "https://carbide-tooling.com/tools/flatness-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free flatness and straightness calculator. Calculate flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/flatness-calculator/",
+ "name": "Flatness Calculator",
+ "description": "Free flatness and straightness calculator. Calculate flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How many data points do I need for flatness?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the difference between flatness and parallelism?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use a CMM for flatness measurement?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This tool provides the reference data you need. Always verify critical dimensions with calibrated measurement equipment. For production runs, document your settings in the setup sheet for repeatability.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Flachheit rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Freie Ebenheit und Geradheit Rechner. Berechnen Sie den Ebenheit fehler aus den Messwerten des Höhen messgeräts. Wandeln Sie Flachheit in Geradheit pro ASME Y14,5 um." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/flatness-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Flatness Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Flatness Calculator",
+ "url": "https://carbide-tooling.com/tools/flatness-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free flatness and straightness calculator. Calculate flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/flatness-calculator/",
+ "name": "Flatness Calculator",
+ "description": "Free flatness and straightness calculator. Calculate flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Flachheit rechner | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Freie Ebenheit und Geradheit Rechner. Berechnen Sie den Ebenheit fehler aus den Messwerten des Höhen messgeräts. Wandeln Sie Flachheit in Geradheit pro ASME Y14,5 um." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/flatness-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Flatness Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Flatness Calculator",
+ "url": "https://carbide-tooling.com/tools/flatness-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free flatness and straightness calculator. Calculate flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/flatness-calculator/",
+ "name": "Flatness Calculator",
+ "description": "Free flatness and straightness calculator. Calculate flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Flatness Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free flatness and straightness Rechner. Berechnen flatness error Von height gauge readings. Convert flatness Nach straightness per ASME Y14.5."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/flatness-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Flatness Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Flatness Rechner",
-      "url": "https://carbide-tooling.com/de/tools/flatness-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free flatness and straightness calculator. Berechnen flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/flatness-calculator/",
-      "name": "Flatness Rechner",
-      "description": "Free flatness and straightness calculator. Berechnen flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Flatness Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free flatness and straightness Rechner. Berechnen flatness error Von height gauge readings. Convert flatness Nach straightness per ASME Y14.5."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/flatness-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Flatness Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Flatness Rechner",
-      "url": "https://carbide-tooling.com/de/tools/flatness-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free flatness and straightness calculator. Berechnen flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/flatness-calculator/",
-      "name": "Flatness Rechner",
-      "description": "Free flatness and straightness calculator. Berechnen flatness error from height gauge readings. Convert flatness to straightness per ASME Y14.5.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/flatness-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/flatness-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/flatness-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/flatness-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/flatness-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/flatness-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/flatness-calculator"/>
-</head>
-<body><nav>...</nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Startseite</a> <span style="color:#d2d2d6">›</span> <a href="/de/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Flatness Rechner</div>
-<section class="hero"><div class="container"><div class="badge">📐 Metrology — ASME Y14.5</div><h1>Flatness & Straightness <span class="accent">Rechner</span></h1><p>Enter height gauge readings across a surface. Flatness error = max reading − min reading.</p></div></section>
 
 
+
+ 
+<link href="https://carbide-tooling.com/de/tools/flatness-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/flatness-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/flatness-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/flatness-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/flatness-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/flatness-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/flatness-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav>...</nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">M-Code-Referenz</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Metall Gewichts rechner</a> <span style="color:#d2d2d6">›</span> Flatness Calculator</div>
+<section class="hero"><div class="container"><div class="badge">📐 Metrology — ASME Y14.5</div><h1>Im täglichen Shop-Betrieb dient der Flatness-Rechner als Kurz referenz für Maschinisten, Programmierer und Fertigungs ingenieure. Verwenden Sie es während der Einrichtung, der Programmierung oder der Qualitätsprüfung, um Ihre Parameter zu überprüfen und konsistente Ergebnisse über alle Produktionsdurchläufe hinweg sicherzustellen.</h1><p>Bewährte Verfahren für präzise Ergebnisse</p></div></section>
 <section class="seo-content">
 <div class="container">
-<h2>How the Flatness Rechner Works</h2>
-<p>The Flatness Rechner provides instant, accurate results for CNC machining professionals. Whether you're programming a Haas, Mazak, or Okuma, having the right reference data helps you make better decisions on the shop floor. This tool eliminates guesswork and reduces setup time.</p>
-<h2>Practical Applications in CNC Machining</h2>
-<p>In daily shop operations, the Flatness Rechner serves as a quick reference for machinists, programmers, and manufacturing engineers. Use it during setup, programming, or quality inspection to verify your parameters and ensure consistent results across production runs.</p>
-<h2>Best Practices for Accurate Ergebniss</h2>
-<p>For best results with the Flatness Rechner, always verify your input values against known material specifications and machine capabilities. Document your settings in the setup sheet for repeatability. When in doubt, consult tool manufacturer recommendations for optimal performance.</p>
-<h2>Häufig gestellte Fragen</h2>
-<p><strong>How accurate is this tool?</strong> Ergebniss are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
+<h2>Um die besten Ergebnisse mit dem Flachheit rechner zu erzielen, überprüfen Sie Ihre Eingabe werte immer anhand bekannter Materials pezifi kationen und Maschinen funktionen. Dokumentieren Sie Ihre Einstellungen im Setup-Blatt, um die Wiederholgenauigkeit sicherzustellen. Im Zweifelsfall beachten Sie die Empfehlungen des Werkzeugherstellers, um eine optimale Leistung zu gewährleisten.</h2>
+<p>Häufig gestellte Fragen</p>
+<h2>Wie genau ist dieses Werkzeug? Die Ergebnisse beruhen auf gängigen ingenieurtechnischen Formeln und dienen ausschließlich als Orientierungshilfe. Kritische Abmessungen vor Beginn der Produktion stets mit geeichten Messgeräten überprüfen.</h2>
+<p>Kann ich diese Ergebnisse für alle Materialien verwenden? Die Berechnungen gelten für Standardwerkstoffe. Bei speziellen Legierungen oder nicht standardmäßigen Einsatzbedingungen wenden Sie sich bitte an den Werkzeughersteller, um konkrete Empfehlungen zu erhalten.</p>
+<h2>Wie kann ich meinen Bearbeitungsprozess mithilfe dieser Daten optimieren? Verwenden Sie diese Referenzdaten als Ausgangspunkt und passen Sie sie an Ihre konkrete Maschine, Werkzeugausstattung und Materialkombination an. Speichern Sie die erfolgreichen Einstellungen zur späteren Verwendung.</h2>
+<p>🔧Entdecken Sie 100 professionelle Zerspanungswerkzeuge</p>
+<h2>📏Höhen lesungen (mm)</h2>
+<p><strong>How accurate is this tool?</strong> Results are based on standard engineering formulas and are provided for reference. Always verify critical dimensions with calibrated measurement equipment before production.</p>
 <p><strong>Can I use these results for all materials?</strong> The calculations apply to standard materials. For specialized alloys or non-standard conditions, consult the tool manufacturer for specific recommendations.</p>
 <p><strong>How do I improve my machining process with this data?</strong> Use this reference data as a starting point and adjust based on your specific machine, tooling, and material combination. Document successful settings for future reference.</p>
 </div>
 </section>
-
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/ball-nose-effective-diameter/">Ball Nose Effective Durchmesser</a><a href="/de/tools/arc-r-to-ij-converter/">Arc R to IJ Umrechner</a><a href="/de/tools/grade-reference/">Grade Reference</a><a href="/de/tools/reaming-allowance-calculator/">Reaming Allowance</a><a href="/de/tools/mcode-reference/">M-Code Reference</a><a href="/de/tools/metal-weight-calculator/">Metal Weight Rechner</a><a href="/de/tools/mrr-calculator/">MRR Rechner</a><a href="/de/tools/gcode-reference/">G-Code Reference</a>
-  </div>
+<h3>Punkt 4</h3>
+<div class="tool-grid">
+<a href="/tools/ball-nose-effective-diameter/">MRR-Rechner</a><a href="/tools/arc-r-to-ij-converter/">G-Code-Referenz</a><a href="/tools/grade-reference/">← Alle Tools</a><a href="/tools/reaming-allowance-calculator/">Produkte</a><a href="/tools/mcode-reference/">Führer</a><a href="/tools/metal-weight-calculator/">Über</a><a href="/tools/mrr-calculator/">Erhalten Sie ein Angebot</a><a href="/tools/gcode-reference/">Datenschutz</a>
+</div>
 </section>
-<div class="container"><div class="panel"><h3>📏 Height Readings (mm)</h3>
-<label>Point 1</label><input type="number" id="p1" value="0.010" step="0.001" oninput="calc()"/>
-<label>Point 2</label><input type="number" id="p2" value="0.015" step="0.001" oninput="calc()"/>
-<label>Point 3</label><input type="number" id="p3" value="0.008" step="0.001" oninput="calc()"/>
-<label>Point 4</label><input type="number" id="p4" value="0.012" step="0.001" oninput="calc()"/>
-<label>Point 5</label><input type="number" id="p5" value="0.020" step="0.001" oninput="calc()"/>
+<div class="container"><div class="panel"><h3>Punkt 5</h3>
+<label>Alle Werkzeuge</label><input id="p1" oninput="calc()" step="0.001" type="number" value="0.010"/>
+<label>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</label><input id="p2" oninput="calc()" step="0.001" type="number" value="0.015"/>
+<label>©2026 Hartmetallwerkzeuge</label><input id="p3" oninput="calc()" step="0.001" type="number" value="0.008"/>
+<label>🔧Werkzeugkasten der Präzisionstechnik</label><input id="p4" oninput="calc()" step="0.001" type="number" value="0.012"/>
+<label>Benötigen Sie professionelle Werkzeuge?</label><input id="p5" oninput="calc()" step="0.001" type="number" value="0.020"/>
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px">
 <div class="res-item"><div class="lbl">Flatness Error</div><div class="val" id="r-f">—</div><div class="unit">mm</div></div>
 <div class="res-item"><div class="lbl">Mean Height</div><div class="val" id="r-m">—</div><div class="unit">mm</div></div>
 <div class="res-item"><div class="lbl">Reading Spread</div><div class="val" id="r-s">—</div><div class="unit">mm</div></div></div></div>
-<div style="text-align:center;margin:20px 0"><a href="/de/tools/" style="color:#0066cc;font-size:13px">← Alle Werkzeuge</a></div></div>
+<div style="text-align:center;margin:20px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">in</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/flatness-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/flatness-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/flatness-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/flatness-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/flatness-calculator/">中</a></div>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">M-Code-Referenz</a>
+<a href="/tools/">Erhalten Sie werkseitige Direktpreise, speziell entwickelte Hartmetallqualitäten und eine schnelle technische Unterstützung – alles aus einer Hand.</a>
+<a href="/products/">Bohrergröße für Gewindebohrungen</a>
+<a href="/guides/">Vorschub-Konverter</a>
+<a href="/about.html">Oberflächenrauheit</a>
+<a href="/quote.html">Titanführung</a>
+<a href="/privacy.html">Notenübereinstimmung</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/flatness-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/flatness-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/flatness-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/flatness-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/flatness-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/flatness-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Kosten pro Teil</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Erhalten Sie werkseitige Direktpreise, speziell entwickelte Hartmetallqualitäten und eine schnelle technische Unterstützung – alles aus einer Hand.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Startseite</p>
+<p style="font-size:11px">Werkzeuge</p>
 </div>
 </footer>
 <script>function calc(){const v=[1,2,3,4,5].map(i=>parseFloat(document.getElementById('p'+i).value)||0);const mx=Math.max(...v),mn=Math.min(...v),avg=v.reduce((a,b)=>a+b,0)/v.length;document.getElementById('r-f').textContent=(mx-mn).toFixed(3);document.getElementById('r-m').textContent=avg.toFixed(3);document.getElementById('r-s').textContent=(mx-mn).toFixed(3);}
-calc();</script><div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+calc();</script><div class="toolbox-widget"><h3>Effektiver Durchmesser der Kugelkopffräse</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Massenanfrage stellen →</a>
+<a href="/tools/hardness-converter/">Vollhartmetall-Schaftfräser</a>
+<a href="/tools/tap-drill-size-calculator/">Drehplatten</a>
+<a href="/tools/mrr-calculator/">Erhalten Sie ein Angebot</a>
+<a href="/tools/feed-converter/">Beschichtungsauswahl</a>
+<a href="/tools/surface-roughness-calculator/">Wirtschaftlichkeit der Werkzeugstandzeit</a>
+<a href="/tools/titanium-machining-guide/">Schwalbenschwanz-Rechner</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Koordinatenrotationsrechner</a>
+<a href="/tools/cost-per-part-calculator/">Tangent-Punkt-Rechner</a>
+<a href="/tools/torque-unit-converter/">Oberflächenrauheitsrechner</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Bogen R zu IJ Konverter</h3>
+<p>Notenreferenz</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Vollhartmetall-Fräser</a><a href="/products/turning-inserts.html">Drehwendeschneidplatten</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">E-Mail</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/dia-circ-calculator/">Durchmesser & Circumference Rechner</a>
-<a href="/de/tools/coating-selector/">Coating Selector</a>
-<a href="/de/tools/tool-life-economics/">Werkzeug Life Economics</a>
-<a href="/de/tools/dovetail-calculator/">Dovetail Rechner</a>
-<a href="/de/tools/coord-rotation-calculator/">Coordinate Rotation Rechner</a>
-<a href="/de/tools/mcode-reference/">M-Code Reference</a>
-<a href="/de/tools/tangent-point-calculator/">Tangent Point Rechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness Rechner</a>
-
-  </div>
+<h3>Punkt 4</h3>
+<div class="tool-grid">
+<a href="/tools/dia-circ-calculator/">Diameter &amp; Circumference Calculator</a>
+<a href="/tools/coating-selector/">Coating Selector</a>
+<a href="/tools/tool-life-economics/">Tool Life Economics</a>
+<a href="/tools/dovetail-calculator/">Dovetail Calculator</a>
+<a href="/tools/coord-rotation-calculator/">Coordinate Rotation Calculator</a>
+<a href="/tools/mcode-reference/">Führer</a>
+<a href="/tools/tangent-point-calculator/">Tangent Point Calculator</a>
+<a href="/tools/surface-roughness-calculator/">Surface Roughness Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/flatness-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/flatness-calculator/&text=Flatness Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Flatness Rechner&body=Check this out: https://carbide-tooling.com/de/tools/flatness-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/flatness-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/flatness-calculator/&amp;text=Flatness Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Flatness Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/flatness-calculator/">Email</a>
 </div>
-
+<script>
+function toggleLang(e){e.stopPropagation();var m=document.getElementById('lang-menu');if(m)m.classList.toggle('show')}
+document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});
+</script>
 </body></html>

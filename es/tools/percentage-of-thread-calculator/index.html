@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Percentage Of Thread Calculadora | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="Free online thread percentage Calculadora. Calcular the % of thread engagement De your tap drill choice. Optimize thread strength vs tapping difficulty."/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Porcentaje de calculadora de hilo | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Calculadora de porcentaje de hilo en línea gratuita. Calcule el % de compromiso de rosca de su elección de taladro de grifo. Optimizar la fuerza del hilo vs dificultad de tapping." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:38px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:20px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,180 +12,197 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Percentage | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficu"/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Percentage | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Porcentaje de rosca | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calculadora de porcentaje de hilo en línea gratuita. Calcule el % de compromiso de rosca de su elección de taladro de grifo. Optimizar la fuerza del hilo vs tapping difficiu" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Percentage | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Percentage",
-      "url": "https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/",
-      "name": "Thread Percentage",
-      "description": "Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the minimum thread engagement for structural bolts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For structural steel connections, 100% thread engagement is standard per ASTM A325/A490. However, '100%' in this context means full thread depth in the nut, not 100% of the screw thread height. For tapped holes in machine components, 65–75% is adequate for 90% of applications per machinery handbook guidelines."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does thread percentage affect class of fit (6H vs 6g)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Thread percentage is determined by the tap drill size and affects the internal thread minor diameter, which is part of the 6H classification. The 6H tolerance band has upper and lower limits — a higher thread percentage uses the lower portion of the band. The pitch diameter (which determines fit quality) is determined by the tap's geometry, not the drill size."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why do smaller threads need higher engagement percentage?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Small diameters (\n⚡ Calculard for Carbide-Tooling.com High-Performance Series. Ver catálogo →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Percentage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "name": "Thread Percentage",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the minimum thread engagement for structural bolts?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "For structural steel connections, 100% thread engagement is standard per ASTM A325/A490. However, '100%' in this context means full thread depth in the nut, not 100% of the screw thread height. For tapped holes in machine components, 65–75% is adequate for 90% of applications per machinery handbook guidelines."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does thread percentage affect class of fit (6H vs 6g)?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Thread percentage is determined by the tap drill size and affects the internal thread minor diameter, which is part of the 6H classification. The 6H tolerance band has upper and lower limits — a higher thread percentage uses the lower portion of the band. The pitch diameter (which determines fit quality) is determined by the tap's geometry, not the drill size."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Why do smaller threads need higher engagement percentage?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Small diameters (\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Porcentaje de rosca | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calculadora de porcentaje de hilo en línea gratuita. Calcule el % de compromiso de rosca de su elección de taladro de grifo. Optimizar la fuerza del hilo vs tapping difficiu" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Percentage | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Percentage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "name": "Thread Percentage",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Calculadora de porcentaje de hilos" property="og:title"/>
+<meta content="Calculadora de porcentaje de hilo en línea gratuita. Calcule el % de compromiso de rosca de su elección de taladro de grifo. Optimizar la fuerza del hilo vs tapping difficiu" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Thread Percentage Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Thread Percentage Calculator",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/percentage-of-thread-calculator/",
+ "name": "Thread Percentage Calculator",
+ "description": "Free online thread percentage calculator. Calculate the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Percentage | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficu"/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Percentage | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Percentage",
-      "url": "https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/",
-      "name": "Thread Percentage",
-      "description": "Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Thread Percentage Calculadora | Precision Machining Tool"/>
-<meta property="og:description" content="Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficu"/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Thread Percentage Calculadora | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Thread Percentage Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/",
-      "name": "Thread Percentage Calculadora",
-      "description": "Free online thread percentage calculator. Calcular the % of thread engagement from your tap drill choice. Optimize thread strength vs tapping difficulty.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/percentage-of-thread-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/percentage-of-thread-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/percentage-of-thread-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/percentage-of-thread-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/percentage-of-thread-calculator/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/percentage-of-thread-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/percentage-of-thread-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Inicio</a> <span style="color:#d2d2d6">›</span> <a href="/es/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Percentage Of Thread Calculadora</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📊 Optimization Herramienta</div><h1>Thread Percentage <span class="accent">Calculadora</span></h1><p>Enter your drill size and thread dimensions to calculate the actual thread engagement percentage.</p><a class="btn" href="#calculator">Calcular ↓</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/percentage-of-thread-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/percentage-of-thread-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇬🇧EN</a><a href="https://carbide-tooling.com/guides/">🇩🇪DE</a><a href="https://carbide-tooling.com/about.html">🇯🇵JP</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇪🇸ES</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/percentage-of-thread-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/percentage-of-thread-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/percentage-of-thread-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/percentage-of-thread-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/percentage-of-thread-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Convertidor de feeds</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Calculadora de costos por lote</a> <span style="color:#d2d2d6">›</span> Percentage Of Thread Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">📊 Optimization Tool</div><h1>📊% De participación del hilo</h1><p>La fórmula: % Hilo = (Mayor D − Taladro D) / (0.013 × Paso)</p><a class="btn" href="#calculator">Espesor de la pared</a></div></section>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/horsepower-calculator/">Horsepower Calculadora</a><a href="/es/tools/feed-converter/">Avance Convertidor</a><a href="/es/tools/batch-cost-calculator/">Batch Cost Calculadora</a><a href="/es/tools/wall-thickness-calculator/">Wall Thickness</a><a href="/es/tools/gdt-symbols-reference/">GD&T Symbols Reference</a><a href="/es/tools/metal-weight-calculator/">Metal Weight Calculadora</a><a href="/es/tools/tool-steel-heat-treat/">Herramienta Steel Heat Treat</a><a href="/es/tools/pomodoro-timer/">Pomodoro Timer</a>
-  </div>
+<h3>🔩Tamaño de la rosca</h3>
+<div class="tool-grid">
+<a href="/tools/horsepower-calculator/">Referencia de símbolos de GD&amp;T</a><a href="/tools/feed-converter/">Calculadora de peso del metal</a><a href="/tools/batch-cost-calculator/">Tratamiento térmico del acero para herramientas</a><a href="/tools/wall-thickness-calculator/">Temporizador Pomodoro</a><a href="/tools/gdt-symbols-reference/">← Todas las herramientas</a><a href="/tools/metal-weight-calculator/">Obtener una cotización</a><a href="/tools/tool-steel-heat-treat/">Privacidad</a><a href="/tools/pomodoro-timer/">en</a>
+</div>
 </section>
-<section id="calculator" class="container" style="padding-bottom:40px">
-<div class="card"><h2>📊 Thread Engagement %</h2><p class="sub">The formula: %Thread = (MajorD − DrillD) / (0.013 × Pitch)</p>
+<section class="container" id="calculator" style="padding-bottom:40px">
+<div class="card"><h2>📐Diámetro de la broca (mm)</h2><p class="sub">Todas las herramientas</p>
 <div class="card-row">
-<div class="field"><label>🔩 Thread Size</label><select id="size" onchange="calc()"><option value="6">M6</option><option value="8">M8</option><option value="10" selected>M10</option><option value="12">M12</option></select></div>
-<div class="field"><label>📐 Drill Diámetro (mm)</label><input type="number" id="drill" value="8.5" min="1" max="30" step="0.1" oninput="calc()"/></div>
+<div class="field"><label>Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</label><select id="size" onchange="calc()"><option value="6">M6</option><option value="8">M8</option><option selected="" value="10">M10</option><option value="12">M12</option></select></div>
+<div class="field"><label>©Herramientas de carburo 2026</label><input id="drill" max="30" min="1" oninput="calc()" step="0.1" type="number" value="8.5"/></div>
 </div>
 <div class="result-grid">
 <div class="result-item"><div class="label">Thread Percentage</div><div class="value" id="r-pct">—</div><div class="unit">%</div></div>
@@ -192,7 +210,7 @@
 <div class="result-item"><div class="label">Torque Factor</div><div class="value" id="r-torque">—</div><div class="unit">× nominal</div></div>
 </div>
 </div>
-<div style="text-align:center;margin:16px 0"><a href="/es/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Todas las herramientas</a></div>
+<div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Ver catálogo →</a></div>
 </section>
 <script>
 const PITCHES={6:1.0,8:1.25,10:1.5,12:1.75};
@@ -200,87 +218,73 @@ function calc(){const sz=parseInt(document.getElementById('size').value);const d
 calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Convertidor de feeds</a>
+<a href="/tools/">¿Qué porcentaje de hilo necesita su aplicación?</a>
+<a href="/products/">🇬🇧EN</a>
+<a href="/guides/">🇩🇪DE</a>
+<a href="/about.html">🇯🇵JP</a>
+<a href="/quote.html">Guía de titanio</a>
+<a href="/privacy.html">Referencia cruzada de calificaciones</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Costo por pieza</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">¿Qué porcentaje de hilo necesita su aplicación?</a></p>
+<p style="font-size:11px;margin-bottom:6px">El porcentaje de acoplamiento de la rosca determina el tamaño del taladro de derivación. Recomendaciones estándar: 65% para aluminio y latón, 75% para acero y acero inoxidable, 55% para materiales endurecidos (por encima de 40 HRC) y 60% para hierro fundido y bronce. Los porcentajes más altos proporcionan marginalmente más resistencia de la rosca, pero aumentan significativamente el par de roscado y el riesgo de rotura del grifo.</p>
+<p style="font-size:11px">Cálculo del tamaño del taladro de grifo basado en el porcentaje de rosca</p>
+</div>
 <section class="seo"><div class="container">
-<h2>What Percentage of Thread Does Your Application Need?</h2><p>Thread engagement percentage determines the tap drill size. Standard recommendations: 65% for aluminum and brass, 75% for steel and stainless steel, 55% for hardened materials (above 40 HRC), and 60% for cast iron and bronze. Higher percentages provide marginally more thread strength but significantly increase tapping torque and the risk of tap breakage.</p>
-<h2>Calculating Tap Drill Size Based on Thread Percentage</h2><p>The formula for tap drill diameter: Drill Ø = Nominal Ø − (Thread % × Pitch) / 76.98 (for imperial threads) or Drill Ø = Nominal Ø − Thread % × Pitch × 0.013 (for metric). For M10×1.5 at 70% thread: Drill = 10 − (70 × 1.5 × 0.013) = 8.64 mm. For 3/8-16 UNC at 70%: Drill = 0.375 − (70 × 0.01299) / 76.98 = 0.332 inches (about a 'Q' drill).</p>
-<h2>Trade-offs: Thread Strength vs. Tapping Difficulty</h2><p>Increasing thread percentage from 60% to 80% only improves pull-out strength by about 10%, but tapping torque increases by 25–30%. Above 80% engagement, the strength gain is negligible while breakage risk rises sharply. For production tapping, target 65–70% for most materials. This provides 95% of maximum thread strength with significantly lower tool stress.</p>
-<h2>Preguntas frecuentes</h2>
+<h2>La fórmula para el diámetro del taladro del golpecito: Taladro Ø = Nominal Ø − (Rosca % × Paso)/76,98 (para roscas imperiales) o Taladro Ø = Nominal − Rosca % × Paso × 0.013 (para métrica). Para M10 × 1,5 a 70% de rosca: Taladro = 10 − (70 × 1,5 × 0.013) = 8,64mm. Para 3/8-16 UNC a 70%: Taladro = 0.375 − (70 × 0,01299)/76,98 = 0.332 pulgadas (aproximadamente un taladro 'Q').</h2><p>Intercambios: Fuerza del hilo vs. Dificultad de tapping</p>
+<h2>Aumentar el porcentaje de rosca del 60% al 80% solo mejora la resistencia a la extracción en aproximadamente un 10%, pero el par de golpeteo aumenta en un 25-30%. Por encima del 80% de compromiso, la ganancia de fuerza es insignificante, mientras que el riesgo de rotura aumenta considerablemente. Para la producción de tapping, objetivo 65-70% para la mayoría de los materiales. Esto proporciona el 95% de la resistencia máxima de la rosca con una tensión de herramienta significativamente menor.</h2><p>Preguntas frecuentes</p>
+<h2>Para conexiones de acero estructural, el compromiso de rosca 100% es estándar según ASTM A325/A490. ¿Cuál es el compromiso mínimo de la rosca para los pernos estructurales? Sin embargo, «100%» en este contexto significa profundidad de rosca completa en la tuerca, no el 100% de la altura de la rosca del tornillo. Para orificios roscados en componentes de máquinas, el 65-75% es adecuado para el 90% de las aplicaciones según las pautas del manual de maquinaria.</h2><p>¿El porcentaje de rosca afecta a la clase de ajuste (6 H vs 6g)? El porcentaje de rosca está determinado por el tamaño del taladro de derivación y afecta al diámetro menor de la rosca interna, que forma parte de la clasificación 6 H. La banda de tolerancia 6 H tiene límites superior e inferior: un porcentaje de rosca más alto utiliza la parte inferior de la banda. El diámetro de paso (que determina la calidad del ajuste) está determinado por la geometría del grifo, no por el tamaño del taladro.</p>
+<h2>¿Por qué las roscas más pequeñas necesitan un porcentaje de enganche más alto? Los diámetros pequeños (&lt; 1/4 pulgada o M6) tienen proporcionalmente menos área de flanco de rosca. Aumentar el porcentaje de rosca al 75% para sujetadores pequeños compensa el área de carga reducida. Para hilos más grandes (más de 1/2 pulgada), el 60% suele ser suficiente para la mayoría de las aplicaciones.</h2>
 <p><strong>What is the minimum thread engagement for structural bolts?</strong> For structural steel connections, 100% thread engagement is standard per ASTM A325/A490. However, '100%' in this context means full thread depth in the nut, not 100% of the screw thread height. For tapped holes in machine components, 65–75% is adequate for 90% of applications per machinery handbook guidelines.</p>
 <p><strong>Does thread percentage affect class of fit (6H vs 6g)?</strong> Thread percentage is determined by the tap drill size and affects the internal thread minor diameter, which is part of the 6H classification. The 6H tolerance band has upper and lower limits — a higher thread percentage uses the lower portion of the band. The pitch diameter (which determines fit quality) is determined by the tap's geometry, not the drill size.</p>
-<p><strong>Why do smaller threads need higher engagement percentage?</strong> Small diameters (< 1/4 inch or M6) have proportionally less thread flank area. Increasing the thread percentage to 75% for small fasteners compensates for the reduced load-bearing area. For larger threads (over 1/2 inch), 60% is usually sufficient for most applications.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculard for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Ver catálogo →</a></p>
+<p><strong>Why do smaller threads need higher engagement percentage?</strong> Small diameters (&lt; 1/4 inch or M6) have proportionally less thread flank area. Increasing the thread percentage to 75% for small fasteners compensates for the reduced load-bearing area. For larger threads (over 1/2 inch), 60% is usually sufficient for most applications.</p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Solicitar cotización por volumen →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/percentage-of-thread-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/percentage-of-thread-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/percentage-of-thread-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/percentage-of-thread-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+<div class="toolbox-widget"><h3>◆Herramientas de carburo</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Brocas de carburo</a>
+<a href="/tools/hardness-converter/">Fresas de roscar y machos de roscar</a>
+<a href="/tools/tap-drill-size-calculator/">Calculadora de fresado por pasos</a>
+<a href="/tools/mrr-calculator/">Referencia de calificación</a>
+<a href="/tools/feed-converter/">Calculadora de peso del metal</a>
+<a href="/tools/surface-roughness-calculator/">Compensación del radio de la punta de la herramienta</a>
+<a href="/tools/titanium-machining-guide/">Calculadora de profundidad de rosca y par de torsión</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Diámetro efectivo de la punta esférica</a>
+<a href="/tools/cost-per-part-calculator/">Calculadora de velocidad de corte (SFM)</a>
+<a href="/tools/torque-unit-converter/">Calculadora del tiempo de ciclo</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Productos</h3>
+<p>Guías</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Brocas de carburo</a><a href="/products/threading-tools.html">Fresas de roscar y machos</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Correo electrónico</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/step-milling-calculator/">Step Milling Calculadora</a>
-<a href="/es/tools/grade-reference/">Grade Reference</a>
-<a href="/es/tools/round-bar-weight/">Round Bar Weight Calculadora</a>
-<a href="/es/tools/nose-radius-compensation/">Nose Radius Compensation</a>
-<a href="/es/tools/thread-depth-torque-calculator/">Thread Profundidad & Torque Calculadora</a>
-<a href="/es/tools/ball-nose-effective-diameter/">Ball Nose Effective Diámetro</a>
-<a href="/es/tools/surface-speed/">Surface Velocidad de corte (m/min) Calculadora</a>
-<a href="/es/tools/cycle-time-calculator/">Cycle Time Calculadora</a>
-
-  </div>
+<h3>🔩Tamaño de la rosca</h3>
+<div class="tool-grid">
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/grade-reference/">Grade Reference</a>
+<a href="/tools/round-bar-weight/">Round Bar Weight Calculator</a>
+<a href="/tools/nose-radius-compensation/">Nose Radius Compensation</a>
+<a href="/tools/thread-depth-torque-calculator/">Thread Depth &amp; Torque Calculator</a>
+<a href="/tools/ball-nose-effective-diameter/">Ball Nose Effective Diameter</a>
+<a href="/tools/surface-speed/">Surface Velocidad de corte (SFM) Calculator</a>
+<a href="/tools/cycle-time-calculator/">Cycle Time Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/&text=Thread Percentage Calculadora" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Thread Percentage Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/percentage-of-thread-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/percentage-of-thread-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/percentage-of-thread-calculator/&amp;text=Thread Percentage Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Thread Percentage Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/percentage-of-thread-calculator/">Email</a>
 </div>
-
 </body></html>

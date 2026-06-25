@@ -1,73 +1,563 @@
-<!DOCTYPE html><html lang="de">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Carbide Tooling — Deutsch</title>
-<meta name="description" content="Carbide Tooling — CNC Zerspanungswerkzeuge in Präzisionsqualität."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/"/>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="alternate" hreflang="en" href="https://carbide-tooling.com/"/>
-<link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/"/>
-<link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/"/>
-<link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/"/>
-<link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/"/>
-<link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/"/>
-<style>body{font-family:'Inter',sans-serif;padding:40px 24px;text-align:center}h1{font-size:28px;font-weight:800}nav{height:44px;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;gap:20px;position:sticky;top:0;z-index:100;margin:-40px -24px 32px;padding:0 24px}nav a{font-size:12px;color:#1d1d1f;text-decoration:none;font-weight:500}nav a:hover{color:#0066cc}.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;max-width:800px;margin:24px auto;text-align:left}a{color:#0066cc;text-decoration:none;font-size:13px;padding:6px 10px;border-radius:8px;background:#f5f5f7;display:block}a:hover{background:#e8f0fe}.lang-bar{display:flex;justify-content:center;gap:8px;margin:20px 0}.lang-bar a{display:inline-flex;width:32px;height:32px;border-radius:50%;align-items:center;justify-content:center;font-size:11px;font-weight:600;padding:0}.lang-bar a.active{background:#0066cc;color:#fff}footer{margin-top:40px;font-size:11px;color:#86868b}
-</style></head><body>
-<nav><a href="/de/">Home</a><a href="/de/tools/">Werkzeuge</a><a href="/products/">Produkte</a><a href="/about.html">Über uns</a><a href="/quote.html" style="background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px">Angebot</a></nav>
-<h1>Carbide Tooling — <span style="color:#0066cc">Deutsch</span></h1>
-<p style="color:#86868b;max-width:500px;margin:8px auto 24px">Präzisions-Zerspanungswerkzeuge und kostenlose CNC-Rechner.</p>
-<div class="lang-bar"><a href="/">EN</a><a href="/de/" class="active">DE</a><a href="/jp/">JP</a><a href="/es/">ES</a><a href="/vi/">VI</a><a href="/zh/">中</a></div>
-<div class="tools"><a href="/de/tools/aluminum-alloy-table/">Aluminum Alloy Table</a>
-<a href="/de/tools/aql-sampling-calculator/">Aql Sampling Calculator</a>
-<a href="/de/tools/arc-r-to-ij-converter/">Arc R To Ij Converter</a>
-<a href="/de/tools/automation-vs-manual-calculator/">Automation Vs Manual Calculator</a>
-<a href="/de/tools/ball-nose-effective-diameter/">Ball Nose Effective Diameter</a>
-<a href="/de/tools/batch-cost-calculator/">Batch Cost Calculator</a>
-<a href="/de/tools/blind-hole-tapping-calculator/">Blind Hole Tapping Calculator</a>
-<a href="/de/tools/bolt-circle-calculator/">Bolt Circle Calculator</a>
-<a href="/de/tools/brass-machining-parameters/">Brass Machining Parameters</a>
-<a href="/de/tools/bulk-discount-calculator/">Bulk Discount Calculator</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Ref 2</a>
-<a href="/de/tools/cast-iron-machining/">Cast Iron Machining</a>
-<a href="/de/tools/chamfer-calculator/">Chamfer Calculator</a>
-<a href="/de/tools/chip-load/">Chip Load</a>
-<a href="/de/tools/cnc-roi-calculator/">Cnc Roi Calculator</a>
-<a href="/de/tools/coating-selector/">Coating Selector</a>
-<a href="/de/tools/coolant-concentration/">Coolant Concentration</a>
-<a href="/de/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a>
-<a href="/de/tools/coord-rotation-calculator/">Coord Rotation Calculator</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part Calculator</a>
-<a href="/de/tools/countersink-depth-calculator/">Countersink Depth Calculator</a>
-<a href="/de/tools/cycle-time-calculator/">Cycle Time Calculator</a>
-<a href="/de/tools/dia-circ-calculator/">Dia Circ Calculator</a>
-<a href="/de/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a>
-<a href="/de/tools/dovetail-calculator/">Dovetail Calculator</a>
-<a href="/de/tools/drill-point-length-calculator/">Drill Point Length Calculator</a>
-<a href="/de/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
-<a href="/de/tools/feed-converter/">Feed Converter</a>
-<a href="/de/tools/feed-rate-override-calculator/">Feed Rate Override Calculator</a>
-<a href="/de/tools/flatness-calculator/">Flatness Calculator</a>
-<a href="/de/tools/force-calculator/">Force Calculator</a>
-<a href="/de/tools/form-tap-drill-calculator/">Form Tap Drill Calculator</a>
-<a href="/de/tools/gcode-reference/">Gcode Reference</a>
-<a href="/de/tools/gdt-symbols-reference/">Gdt Symbols Reference</a>
-<a href="/de/tools/gear-parameter-calculator/">Gear Parameter Calculator</a>
-<a href="/de/tools/grade-reference/">Grade Reference</a>
-<a href="/de/tools/graphite-machining/">Graphite Machining</a>
-<a href="/de/tools/gun-drill-calculator/">Gun Drill Calculator</a>
-<a href="/de/tools/hardness-converter/">Hardness Converter</a>
-<a href="/de/tools/heat-expansion-calculator/">Heat Expansion Calculator</a>
-<a href="/de/tools/helical-interpolation-calculator/">Helical Interpolation Calculator</a>
-<a href="/de/tools/horsepower-calculator/">Horsepower Calculator</a>
-<a href="/de/tools/inventory-turnover-calculator/">Inventory Turnover Calculator</a>
-<a href="/de/tools/iso-fit-calculator/">Iso Fit Calculator</a>
-<a href="/de/tools/keyway-depth-calculator/">Keyway Depth Calculator</a>
-<a href="/de/tools/machinability-rating/">Machinability Rating</a>
-<a href="/de/tools/machine-power-calculator/">Machine Power Calculator</a>
-<a href="/de/tools/mcode-reference/">Mcode Reference</a>
-<a href="/de/tools/metal-cost-calculator/">Metal Cost Calculator</a>
-<a href="/de/tools/metal-weight-calculator/">Metal Weight Calculator</a>
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carbid Tooling-Präzisions-CNC-Schneide werkzeuge aus China | Schaftfräser, Einsätze, Werkzeug halter</title>
+<meta content="Premium-Hartmetall-Schaftfräser, Wende einsätze, Bohrer und Werkzeug halter stammen von Chinas führenden Herstellern. Fabrik-direkte Preis gestaltung, ISO-Qualität, technische Unterstützung." name="description"/>
+
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22&gt;&lt;rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%2306c%22/&gt;&lt;text x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22white%22&gt;◆&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<meta content="https://carbide-tooling.com/images/hero.jpg" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="Premium-Hartmetall-Schneidwerk zeuge von Chinas besten Herstellern bezogen. Direkte Fabrik preise, ISO-Qualität, technische Unterstützung-keine Zwischenhändler." property="og:description"/>
+<meta content="Hartmetall-Werkzeuge-Präzisions-CNC-Schneidwerk zeuge" property="og:title"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--nav-h:44px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.container{max-width:1060px;margin:0 auto;padding:0 24px}
+@media(max-width:768px){.container{padding:0 18px}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:var(--nav-h)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px;letter-spacing:-0.01em}
+.nav-left{display:flex;align-items:center;gap:32px}
+.logo{font-size:14px;font-weight:700;letter-spacing:-0.3px;display:flex;align-items:center;gap:6px;text-decoration:none;color:#1d1d1f}
+.logo span{font-weight:800;color:#0066cc}
+.nav-links{display:flex;align-items:center;gap:0}
+.nav-links>a,.nav-links>.nav-drop{color:#1d1d1f;text-decoration:none;padding:0 18px;transition:color .2s;cursor:pointer;height:44px;display:flex;align-items:center;font-weight:500;position:relative}
+.nav-links>a:hover,.nav-links>.nav-drop:hover{color:#0066cc}
+
+/* Mega Menu */
+.mega-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.98);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border:1px solid rgba(0,0,0,.06);border-radius:16px;box-shadow:0 22px 40px -12px rgba(0,0,0,.15);padding:28px 32px;width:600px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease;pointer-events:none}
+.nav-drop:hover .mega-menu{opacity:1;visibility:visible;pointer-events:auto}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mega-cat{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#86868b;padding:12px 0 4px;grid-column:1/-1}
+.mega-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;transition:background .15s;text-decoration:none;color:#1d1d1f;font-size:12px;font-weight:500}
+.mega-item:hover{background:#f5f5f7}
+.mega-item .icon{font-size:16px;width:24px;text-align:center}
+.mega-btn{grid-column:1/-1;text-align:center;margin-top:12px;padding-top:12px;border-top:1px solid #f0f0f0}
+.mega-btn a{color:#0066cc;text-decoration:none;font-size:12px;font-weight:600}
+.mega-btn a:hover{text-decoration:underline}
+
+/* ===== HERO ===== */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:100px 0 80px;position:relative}
+.hero-text h1{font-size:52px;font-weight:800;letter-spacing:-1.2px;line-height:1.05;margin-bottom:18px;color:#1d1d1f}
+.hero-text h1 .accent{background:linear-gradient(135deg,#0066cc,#0055aa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-text p{font-size:17px;color:#86868b;margin-bottom:36px;line-height:1.7;max-width:480px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:#0066cc;color:#fff;padding:10px 22px;border-radius:24px;font-size:13px;font-weight:600;text-decoration:none;transition:all .25s;box-shadow:0 2px 8px rgba(0,102,204,.2),0 1px 2px rgba(0,0,0,.04)}
+.btn-primary:hover{background:#0055aa;transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,102,204,.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.05);color:#1d1d1f;padding:10px 22px;border-radius:24px;font-size:13px;font-weight:500;text-decoration:none;transition:all .25s}
+.btn-secondary:hover{background:rgba(0,0,0,.1)}
+.hero-img img{width:100%;border-radius:24px;background:#f5f5f7;object-fit:cover;aspect-ratio:1/1;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+
+/* ===== SECTION ===== */
+.section{padding:100px 0}
+.section-title{max-width:600px;margin-bottom:56px}
+.section-title .label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#0066cc;margin-bottom:8px}
+.section-title h2{font-size:40px;font-weight:700;letter-spacing:-.5px;margin-bottom:8px;line-height:1.15}
+.section-title p{font-size:17px;color:#86868b;max-width:480px;line-height:1.7}
+
+/* Industrial Intelligence Hub */
+.hub-featured{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.hub-card{position:relative;border-radius:20px;padding:32px 28px;text-decoration:none;color:#1d1d1f;overflow:hidden;transition:all .3s;min-height:200px;display:flex;gap:20px;align-items:center}
+.hub-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.hub-primary{grid-column:1/-1;background:linear-gradient(135deg,#f0f7ff,#e3efff);border:1px solid rgba(0,102,204,.12)}
+.hub-secondary{background:#f5f5f7;border:1px solid #e8e8ed}
+.hub-secondary:hover{background:#eeeef0}
+.hub-card-bg{position:absolute;right:-20px;top:-20px;width:160px;height:160px;background:radial-gradient(circle,rgba(0,102,204,.06) 0%,transparent 70%);border-radius:50%}
+.hub-icon{font-size:36px;flex-shrink:0;width:60px;height:60px;background:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.hub-info{flex:1;position:relative;z-index:1}
+.hub-info h3{font-size:18px;font-weight:700;margin-bottom:4px;letter-spacing:-.3px}
+.hub-info p{font-size:13px;color:#86868b;line-height:1.6;margin-bottom:8px}
+.hub-cta{font-size:12px;font-weight:600;color:#0066cc}
+.hub-categories{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.hub-cat{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 14px;background:#f5f5f7;border-radius:16px;text-decoration:none;color:#1d1d1f;transition:all .2s;text-align:center}
+.hub-cat:hover{background:#eeeef0;transform:translateY(-2px)}
+.hub-cat-icon{font-size:24px}
+.hub-cat-name{font-size:12px;font-weight:600}
+.hub-cat-count{font-size:10px;color:#86868b}
+
+/* Cards */
+.card{background:#f5f5f7;border-radius:18px;overflow:hidden;transition:all .25s;cursor:default}
+.card:hover{background:#eeeef0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.card img{width:100%;height:170px;object-fit:cover;display:block}
+.card-body{padding:18px 22px 22px}
+.card-body h3{font-size:17px;font-weight:600;margin-bottom:6px;letter-spacing:-.2px}
+.card-body p{font-size:13px;color:#86868b;line-height:1.6}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card-link{text-decoration:none;color:inherit;display:block}
+
+/* ===== TOOLBOX ===== */
+.toolbox{background:#f5f5f7;border-radius:28px;padding:60px 56px;margin:60px 0}
+.toolbox-title{text-align:center;margin-bottom:44px}
+.toolbox-title .label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#0066cc;margin-bottom:8px}
+.toolbox-title h2{font-size:34px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px}
+.toolbox-title p{font-size:15px;color:#86868b}
+.toolbox-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.toolbox-card{background:#fff;border-radius:16px;padding:20px 22px;display:flex;align-items:center;gap:16px;text-decoration:none;color:#1d1d1f;transition:all .25s;border:1px solid transparent}
+.toolbox-card:hover{background:#fff;border-color:rgba(0,102,204,.15);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.toolbox-card .icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#0066cc,#004999);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;flex-shrink:0}
+.toolbox-card .info h3{font-size:15px;font-weight:600;margin-bottom:2px}
+.toolbox-card .info p{font-size:12px;color:#86868b;line-height:1.5}
+
+/* ===== TRUST MODULE ===== */
+.trust-section{padding:80px 0;overflow:hidden}
+.trust-title{text-align:center;margin-bottom:48px}
+.trust-title .label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#0066cc;margin-bottom:8px}
+.trust-title h2{font-size:34px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px}
+.trust-title p{font-size:15px;color:#86868b;max-width:500px;margin:0 auto}
+.trust-scroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
+.trust-scroll::-webkit-scrollbar{height:4px}
+.trust-scroll::-webkit-scrollbar-thumb{background:#d2d2d6;border-radius:2px}
+.trust-scroll::-webkit-scrollbar-track{background:transparent}
+.trust-card{flex:0 0 240px;background:#f5f5f7;border-radius:18px;padding:28px 22px;text-align:center;scroll-snap-align:start;transition:all .25s}
+.trust-card:hover{background:#eeeef0;transform:translateY(-2px)}
+.trust-card .equip-icon{width:64px;height:64px;border-radius:16px;background:#fff;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.trust-card h3{font-size:14px;font-weight:600;margin-bottom:4px}
+.trust-card p{font-size:12px;color:#86868b;line-height:1.5}
+
+/* ===== CTA ===== */
+.cta-block{background:linear-gradient(135deg,#f5f5f7,#eeeef0);border-radius:28px;padding:72px 56px;text-align:center;margin:40px 0 80px}
+.cta-block h2{font-size:36px;font-weight:700;letter-spacing:-.4px;margin-bottom:10px}
+.cta-block p{font-size:17px;color:#86868b;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-block .btn-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ===== FOOTER ===== */
+footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:48px 0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1060px;margin:0 auto;padding:0 24px}
+footer h4{font-size:12px;font-weight:600;margin-bottom:16px;letter-spacing:-.1px}
+footer a{display:block;font-size:12px;color:#86868b;text-decoration:none;margin-bottom:8px;transition:color .2s}
+footer a:hover{color:#1d1d1f}
+footer .brand{font-size:14px;font-weight:700;margin-bottom:4px}
+footer .brand span{font-weight:800;color:#0066cc}
+footer .tagline{font-size:12px;color:#86868b;margin-bottom:16px;max-width:280px;line-height:1.6}
+footer .bottom{border-top:1px solid #e8e8ed;margin-top:32px;padding-top:20px;text-align:center;font-size:11px;color:#86868b;max-width:1060px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
+
+@media(max-width:768px){
+ .hero{grid-template-columns:1fr;gap:32px;padding:60px 0 40px;text-align:center}
+ .hero-text h1{font-size:34px}
+ .hero-text p{max-width:100%}
+ .hero-text .hero-actions{justify-content:center}
+ .section{padding:60px 0}
+ .section-title h2{font-size:28px}
+ .section-title p{max-width:100%}
+	 .hub-featured{grid-template-columns:1fr}
+	 .hub-categories{grid-template-columns:repeat(2,1fr)}
+	 .hub-info h3{font-size:16px}
+	 .hub-card{padding:22px 18px;min-height:auto}
+	 .grid3,.grid2,.toolbox-grid{grid-template-columns:1fr}
+	 .toolbox{padding:40px 24px;border-radius:20px;margin:40px 0}
+	 .toolbox-title h2{font-size:26px}
+ .cta-block{padding:48px 24px;border-radius:20px}
+ .cta-block h2{font-size:24px}
+ .footer-grid{grid-template-columns:1fr;gap:24px}
+ .nav-links>a,.nav-links>.nav-drop{font-size:11px;padding:0 10px}
+ .mega-menu{width:90vw;left:5%;transform:none;padding:20px}
+}
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
+</style>
+<script type="application/ld+json">
+[{
+ "@context":"https://schema.org","@type":"Organization","name":"Carbide Tooling","url":"https://carbide-tooling.com"
+},{
+ "@context":"https://schema.org","@type":"WebSite","name":"Carbide Tooling","url":"https://carbide-tooling.com"
+}]
+</script>
+<link href="https://carbide-tooling.com/de/" rel="canonical"/><link href="https://carbide-tooling.com/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/" hreflang="en" rel="alternate"/></head>
+<body>
+<!-- ===== NAV ===== -->
+<nav>
+<div class="nav-inner">
+<div class="nav-left">
+<a class="logo" href="/"><span>◆</span> Carbide Tooling</a>
+<div class="nav-links">
+<a href="/products/">◆Hartmetallwerkzeuge</a>
+<div class="nav-drop">
+<span>Calculators &amp; Tools</span>
+<div class="mega-menu">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;min-width:620px">
+<!-- Category 1 -->
+<div class="mega-cat-block">
+<div class="mega-cat" onclick="toggleCat(this)" style="cursor:pointer">
+		 ⚡ Cutting Parameters <span style="float:right;font-size:14px;opacity:0.5">▶</span>
 </div>
-<footer><p style="font-size:11px;color:#86868b">© 2026 Carbide Tooling</p></footer>
-</body></html>
+<div class="mega-sub" style="display:none">
+<a class="mega-item" href="/tools/speed-feed/"><span class="icon">⚙️</span> Schnittgeschwindigkeit &amp; Vorschub</a>
+<a class="mega-item" href="/tools/chip-load/"><span class="icon">📐</span> Chip Load</a>
+<a class="mega-item" href="/tools/surface-speed/"><span class="icon">🔄</span> SFM / Surface Schnittgeschwindigkeit</a>
+<a class="mega-item" href="/tools/mrr-calculator/"><span class="icon">⚡</span> MRR Calculator</a>
+<a class="mega-item" href="/tools/horsepower-calculator/"><span class="icon">🔌</span> Spindle Horsepower</a>
+<a class="mega-item" href="/tools/force-calculator/"><span class="icon">💪</span> Milling Force</a>
+<a class="mega-item" href="/tools/cycle-time-calculator/"><span class="icon">⏱️</span> Cycle Time</a>
+<a class="mega-item" href="/tools/surface-roughness-calculator/"><span class="icon">🔬</span> Surface Roughness</a>
+<a class="mega-item" href="/tools/nose-radius-compensation/"><span class="icon">📐</span> Nose Radius Comp</a>
+<a class="mega-item" href="/tools/ramping-angle-calculator/"><span class="icon">📐</span> Ramping Angle</a>
+<a class="mega-item" href="/tools/trochoidal-milling-calculator/"><span class="icon">🌀</span> Trochoidal Milling</a>
+<a class="mega-item" href="/tools/slot-milling-calculator/"><span class="icon">🔧</span> Slot Milling</a>
+<a class="mega-item" href="/tools/step-milling-calculator/"><span class="icon">🔧</span> Step Milling</a>
+<a class="mega-item" href="/tools/ball-nose-effective-diameter/"><span class="icon">🔘</span> Ball Nose Eff Dia</a>
+<a class="mega-item" href="/tools/helical-interpolation-calculator/"><span class="icon">🔄</span> Helical Interp</a>
+<a class="mega-item" href="/tools/heat-expansion-calculator/"><span class="icon">🌡️</span> Heat Expansion</a>
+<a class="mega-item" href="/tools/tool-runout-calculator/"><span class="icon">🔍</span> Tool Runout</a>
+<a class="mega-item" href="/tools/feed-rate-override-calculator/"><span class="icon">📊</span> Vorschub Override</a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="mega-cat-block">
+<div class="mega-cat" onclick="toggleCat(this)" style="cursor:pointer">
+		 🔧 Drilling, Tapping &amp; Threads <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+</div>
+<div class="mega-sub" style="display:none">
+<a class="mega-item" href="/tools/tap-drill-size-calculator/"><span class="icon">🔧</span> Tap Drill Size</a>
+<a class="mega-item" href="/tools/tapping-feed-rate-calculator/"><span class="icon">⚡</span> Tapping Vorschub Rate</a>
+<a class="mega-item" href="/tools/drill-point-length-calculator/"><span class="icon">📐</span> Drill Point Length</a>
+<a class="mega-item" href="/tools/thread-depth-torque-calculator/"><span class="icon">🔩</span> Thread Depth &amp; Torque</a>
+<a class="mega-item" href="/tools/metric-imperial-thread-converter/"><span class="icon">🔄</span> Metric-Imperial Thread</a>
+<a class="mega-item" href="/tools/npt-pipe-thread-calculator/"><span class="icon">🔧</span> NPT Pipe Thread</a>
+<a class="mega-item" href="/tools/percentage-of-thread-calculator/"><span class="icon">📊</span> Thread Percentage</a>
+<a class="mega-item" href="/tools/form-tap-drill-calculator/"><span class="icon">🔄</span> Form Tap Drill</a>
+<a class="mega-item" href="/tools/thread-lead-angle-calculator/"><span class="icon">📐</span> Thread Lead Angle</a>
+<a class="mega-item" href="/tools/thread-pitch-diameter-calculator/"><span class="icon">📐</span> Thread Pitch Dia</a>
+<a class="mega-item" href="/tools/step-drill-design-calculator/"><span class="icon">🔧</span> Step Drill Design</a>
+<a class="mega-item" href="/tools/countersink-depth-calculator/"><span class="icon">📐</span> Countersink Depth</a>
+<a class="mega-item" href="/tools/reaming-allowance-calculator/"><span class="icon">🔩</span> Reaming Allowance</a>
+<a class="mega-item" href="/tools/gun-drill-calculator/"><span class="icon">🕳️</span> Gun Drill</a>
+<a class="mega-item" href="/tools/blind-hole-tapping-calculator/"><span class="icon">⚠️</span> Blind Hole Tapping</a>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="mega-cat-block">
+<div class="mega-cat" onclick="toggleCat(this)" style="cursor:pointer">
+		 🔩 Materials &amp; Grades <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+</div>
+<div class="mega-sub" style="display:none">
+<a class="mega-item" href="/tools/grade-reference/"><span class="icon">🔩</span> Grade Cross Reference</a>
+<a class="mega-item" href="/tools/carbide-grade-cross-ref-2/"><span class="icon">🔩</span> Full Grade Chart</a>
+<a class="mega-item" href="/tools/metal-weight-calculator/"><span class="icon">⚖️</span> Carbide Weight</a>
+<a class="mega-item" href="/tools/metal-cost-calculator/"><span class="icon">💰</span> Metal Weight &amp; Cost</a>
+<a class="mega-item" href="/tools/hardness-converter/"><span class="icon">📊</span> Hardness Converter</a>
+<a class="mega-item" href="/tools/machinability-rating/"><span class="icon">📊</span> Machinability Rating</a>
+<a class="mega-item" href="/tools/stainless-properties/"><span class="icon">🔩</span> Stainless Properties</a>
+<a class="mega-item" href="/tools/titanium-machining-guide/"><span class="icon">⚡</span> Titanium Guide</a>
+<a class="mega-item" href="/tools/aluminum-alloy-table/"><span class="icon">📋</span> Aluminum Alloys</a>
+<a class="mega-item" href="/tools/tool-steel-heat-treat/"><span class="icon">🔥</span> Tool Steel Heat Treat</a>
+<a class="mega-item" href="/tools/cast-iron-machining/"><span class="icon">🔩</span> Cast Iron Machining</a>
+<a class="mega-item" href="/tools/coating-selector/"><span class="icon">🧪</span> Coating Selector</a>
+<a class="mega-item" href="/tools/tensile-strength-converter/"><span class="icon">📊</span> Tensile Converter</a>
+<a class="mega-item" href="/tools/plastic-machining/"><span class="icon">🧩</span> Plastic Machining</a>
+<a class="mega-item" href="/tools/graphite-machining/"><span class="icon">✏️</span> Graphite Machining</a>
+<a class="mega-item" href="/tools/brass-machining-parameters/"><span class="icon">🟨</span> Brass/Copper</a>
+<a class="mega-item" href="/tools/superalloy-tool-life/"><span class="icon">🔥</span> Superalloy Life</a>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="mega-cat-block">
+<div class="mega-cat" onclick="toggleCat(this)" style="cursor:pointer">
+		 📊 Cost, Tolerances &amp; Reference <span style="float:right;font-size:14px;opacity:0.5">▶</span>
+</div>
+<div class="mega-sub" style="display:none">
+<a class="mega-item" href="/tools/cost-per-part-calculator/"><span class="icon">💰</span> Cost Per Part</a>
+<a class="mega-item" href="/tools/tool-life-economics/"><span class="icon">📊</span> Tool Life Economics</a>
+<a class="mega-item" href="/tools/cnc-roi-calculator/"><span class="icon">📈</span> CNC ROI</a>
+<a class="mega-item" href="/tools/batch-cost-calculator/"><span class="icon">📦</span> Batch Cost</a>
+<a class="mega-item" href="/tools/iso-fit-calculator/"><span class="icon">📐</span> ISO Fit</a>
+<a class="mega-item" href="/tools/bolt-circle-calculator/"><span class="icon">⭕</span> Bolt Circle</a>
+<a class="mega-item" href="/tools/flatness-calculator/"><span class="icon">📐</span> Flatness</a>
+<a class="mega-item" href="/tools/sine-bar-calculator/"><span class="icon">📐</span> Sine Bar</a>
+<a class="mega-item" href="/tools/coord-rotation-calculator/"><span class="icon">🔄</span> Coord Rotation</a>
+<a class="mega-item" href="/tools/chamfer-calculator/"><span class="icon">📐</span> Chamfer</a>
+<a class="mega-item" href="/tools/taper-calculator/"><span class="icon">📐</span> Taper</a>
+<a class="mega-item" href="/tools/gdt-symbols-reference/"><span class="icon">📐</span> GD&amp;T Symbols</a>
+<a class="mega-item" href="/tools/keyway-depth-calculator/"><span class="icon">🔧</span> Keyway Depth</a>
+<a class="mega-item" href="/tools/dovetail-calculator/"><span class="icon">📐</span> Dovetail</a>
+<a class="mega-item" href="/tools/pythagorean-calculator/"><span class="icon">◢</span> Pythagorean</a>
+<a class="mega-item" href="/tools/gear-parameter-calculator/"><span class="icon">⚙️</span> Gear Parameters</a>
+<a class="mega-item" href="/tools/gcode-reference/"><span class="icon">💻</span> G-Code Ref</a>
+<a class="mega-item" href="/tools/pressure-converter/"><span class="icon">📊</span> Pressure Converter</a>
+<a class="mega-item" href="/tools/ultimate-unit-converter/"><span class="icon">🔄</span> Unit Converter</a>
+<a class="mega-item" href="/tools/aql-sampling-calculator/"><span class="icon">📋</span> AQL Sampling</a>
+</div>
+</div>
+</div>
+<div class="mega-btn" style="clear:both"><a href="/tools/">🇬🇧EN</a></div>
+</div>
+</div>
+<a href="/guides/">🇩🇪DE</a>
+<a href="/about.html">🇯🇵JP</a>
+</div>
+</div>
+<a href="/quote.html" style="display:inline-flex;align-items:center;gap:6px;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;transition:all .2s">🇪🇸ES</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<!-- ===== HERO ===== -->
+<section class="hero">
+<div class="container" style="display:contents;">
+<div class="hero-text">
+<h1>Wir verbinden Präzisions maschinen werkstätten mit Chinas besten Hartmetall werkzeug herstellern. Technische Spezifikationen, ISO-Qualität, Fabrik-direkte Preise-Null Zwischenhändler.</h1>
+<p>Intelligente Werkzeuge für die intelligente Bearbeitung.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="/products/">🔩Karbid-Quer verweis vergleichen ISO P/M/K/S/H-Qualitäten in Sandvik, Kenna metal, Iscar und mehr. Übereinstimmung grade →</a>
+<a class="btn-secondary" href="/about.html">📊Härte konverter Instant HRC, HB, HV und Zug festigkeit umwandlungen für alle technischen Materialien. Jetzt konvertieren →</a>
+<a class="btn-secondary" href="/tools/speed-feed/">⚡Schneide parameter18 Werkzeuge</a>
+</div>
+</div>
+<div class="hero-img">
+<img alt="Precision carbide cutting tools" loading="lazy" src="/images/hero.jpg"/>
+</div>
+</div>
+</section>
+<!-- ===== INDUSTRIAL INTELLIGENCE HUB ===== -->
+<section class="section" style="padding-bottom:40px">
+<div class="container">
+<div class="section-title">
+<div class="label">🤖 Industrial Intelligence Hub</div>
+<h2>Kostenlose, profession elle Taschen rechner und Referenzen, die täglich von Ingenieuren in Fortune 500-Geschäften verwendet werden.</h2>
+<p>Geschwindigkeits- und Vorschubrechner</p>
+</div>
+<!-- Featured 3 large tiles -->
+<div class="hub-featured">
+<a class="hub-card hub-primary" href="/tools/speed-feed/">
+<div class="hub-card-bg"></div>
+<div class="hub-icon">⚙️</div>
+<div class="hub-info">
+<h3>Drehzahl, IPM, Spanbelastung, MRR-optimiert für jede Werkzeug-Material-Kombination.</h3>
+<p>Hartmetall-Sorten-Querverweis</p>
+<span class="hub-cta">Calculate now →</span>
+</div>
+</a>
+<a class="hub-card hub-secondary" href="/tools/carbide-grade-cross-ref-2/">
+<div class="hub-icon">🔩</div>
+<div class="hub-info">
+<h3>Vergleichen Sie die ISO P/M/K/S/H-Noten in Sandvik, Kenna metal, Iscar und mehr.</h3>
+<p>Härtekonverter</p>
+<span class="hub-cta">Match grades →</span>
+</div>
+</a>
+<a class="hub-card hub-secondary" href="/tools/hardness-converter/">
+<div class="hub-icon">📊</div>
+<div class="hub-info">
+<h3>Sofortige HRC-, HB-, HV-und Zug festigkeit umwandlungen für alle technischen Materialien.</h3>
+<p>Engineering-Werkzeuge, direkt vor Ort.</p>
+<span class="hub-cta">Convert now →</span>
+</div>
+</a>
+</div>
+<!-- Category grid -->
+<div class="hub-categories">
+<a class="hub-cat" href="/tools/">
+<span class="hub-cat-icon">⚡</span>
+<span class="hub-cat-name">Cutting Parameters</span>
+<span class="hub-cat-count">18 tools</span>
+</a>
+<a class="hub-cat" href="/tools/">
+<span class="hub-cat-icon">🔧</span>
+<span class="hub-cat-name">Drilling &amp; Threading</span>
+<span class="hub-cat-count">15 tools</span>
+</a>
+<a class="hub-cat" href="/tools/">
+<span class="hub-cat-icon">🔩</span>
+<span class="hub-cat-name">Materials &amp; Grades</span>
+<span class="hub-cat-count">17 tools</span>
+</a>
+<a class="hub-cat" href="/tools/">
+<span class="hub-cat-icon">📊</span>
+<span class="hub-cat-name">Cost, Tolerances &amp; Ref</span>
+<span class="hub-cat-count">22+ tools</span>
+</a>
+</div>
+<div style="text-align:center;margin-top:24px">
+<a class="btn-secondary" href="/tools/" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:24px;font-size:13px;font-weight:500;text-decoration:none;color:#1d1d1f;background:rgba(0,0,0,.05)">📊Härte wandler sofort zwischen HRC, HB, HV und Zug festigkeit konvertieren.</a>
+</div>
+</div>
+</section>
+<!-- ===== TOOLBOX ===== -->
+<section class="section">
+<div class="container">
+<div class="toolbox">
+<div class="toolbox-title">
+<div class="label">🧰 The Tooling Toolbox</div>
+<h2>Beschleunigen Sie Ihre Ziting-und Bearbeitungs entscheidungen mit diesen kostenlosen profession ellen Werkzeugen.</h2>
+<p>Berechnen Sie RPM, IPM, Chip-Ladung für Karbid-Schaftfräser über 10 Material gruppen.</p>
+</div>
+<div class="toolbox-grid">
+<a class="toolbox-card" href="/tools/speed-feed/">
+<div class="icon">⚙️</div>
+<div class="info"><h3>Drehzahl, IPM, Spanbelastung, MRR-optimiert für jede Werkzeug-Material-Kombination.</h3><p>Optimieren Sie das Vorschub pro Zahn für maximale MRR-und Werkzeug lebensdauer.</p></div>
+</a>
+<a class="toolbox-card" href="/tools/chip-load/">
+<div class="icon">📐</div>
+<div class="info"><h3>Karbid qualität Kreuz Ref</h3><p>Vergleich der ISO P/M/K/S/H-Qualität aller großen Marken.</p></div>
+</a>
+<a class="toolbox-card" href="/tools/carbide-grade-cross-ref-2/">
+<div class="icon">🔩</div>
+<div class="info"><h3>Konvertieren Sie sofort zwischen HRC, HB, HV und Zug festigkeit.</h3><p>Was wir abdecken.</p></div>
+</a>
+<a class="toolbox-card" href="/tools/hardness-converter/">
+<div class="icon">📊</div>
+<div class="info"><h3>Sofortige HRC-, HB-, HV-und Zug festigkeit umwandlungen für alle technischen Materialien.</h3><p>Hartmetall-Schaftfräser</p></div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PRODUCTS ===== -->
+<section class="section">
+<div class="container">
+<div class="section-title">
+<div class="label">Products</div>
+<h2>Voll karbid, 2-Flöte bis 6-Flöte, Al Ti N/Ti Si N-Beschichtungen, Eck radius &amp; Kugelnase. HRC bis zu 65.</h2>
+<p>Drehplatten</p>
+</div>
+<div class="grid3">
+<div class="card"><img alt="Carbide end mills" loading="lazy" src="/images/endmills.jpg"/><div class="card-body"><h3>CNMG, WNMG, TNMG, DCMT-alle Qualitäten für Stahl, Edelstahl, Aluminium und Super legierungen.</h3><p>Hartmetallbohrer</p></div></div>
+<div class="card"><img alt="Turning inserts" loading="lazy" src="/images/inserts.jpg"/><div class="card-body"><h3>Voll karbid und indexbare Bohrer für die Schnur ung von bis zu 20 × D. Beschichtete und unbeschichtete Optionen.</h3><p>Werkzeughalter</p></div></div>
+<div class="card"><img alt="Carbide drills" loading="lazy" src="/images/drills.jpg"/><div class="card-body"><h3>BT40, BT30, HSK, SK-Spann zangen futter, Schaftfräser halter, ER-Spann zangen, Klopf halter.</h3><p>Langweilig &amp; Reaming</p></div></div>
+<div class="card"><img alt="Tool holders" loading="lazy" src="/images/holders.jpg"/><div class="card-body"><h3>Feine Bohr köpfe, Karbid reimer, Bohr stangen im Patronen stil für enge Toleranzen.</h3><p>Gewinde werkzeuge</p></div></div>
+<div class="card"><img alt="Boring and reaming tools" loading="lazy" src="/images/boring.jpg"/><div class="card-body"><h3>Faden mühlen, Hartmetall hähne, Gewinde drehe in sätze für einheitliche und metrische Gewindes tandards.</h3><p>Ingenieur führer.</p></div></div>
+<div class="card"><img alt="Threading tools" loading="lazy" src="/images/boring.jpg"/><div class="card-body"><h3>Detaillierte Aufschlüsse lungen der Werkzeug geometrie, der Beschichtung swiss schaft, der Material metallurgie und der Bearbeitungs optimierung.</h3><p>Leitfaden für die Mühlen geometrie</p></div></div>
+</div>
+</div>
+</section>
+<!-- ===== GUIDES ===== -->
+<section class="section" style="padding-top:0">
+<div class="container">
+<div class="section-title">
+<div class="label">Technical Library</div>
+<h2>Flöten zahl, Helix winkel, Eck radius, Kern durchmesser-wie sich jede Variable auf die Schnitt leistung, die Chip-Evakuierung und die Werkzeug lebensdauer auswirkt.</h2>
+<p>Karbid-Grade erklärt</p>
+</div>
+<div class="grid2">
+<a class="card card-link" href="/guides/end-mill-geometry.html"><div class="card-body"><h3>Sub mikron, ultra fine, konventionelle Korngröße und Bindemittel zusammensetzung für Stahl, Aluminium, Titan und gehärtete Materialien.</h3><p>Beschichtung vergleich</p></div></a>
+<a class="card card-link" href="/guides/carbide-grades.html"><div class="card-body"><h3>Al Ti N, Ti Si N, Ti Al N, Al Cr N, diamant ähnlicher Kohlenstoff-wenn es auf jede Beschichtung ankommt, welchen Temperatur bereich sie behandelt und was sie kostet.</h3><p>Beschaffung aus China</p></div></a>
+<a class="card card-link" href="/guides/coating-comparison.html"><div class="card-body"><h3>Schritt für Schritt: Überprüfung von Lieferanten, Anfordern von Proben, Aushandeln von MOQs, Verwaltung von QC-Inspektionen und Logistik.</h3><p>Inspektion &amp; Messtechnik.</p></div></a>
+<a class="card card-link" href="/guides/sourcing-from-china.html"><div class="card-body"><h3>Jede Charge wird vor dem Versand verifiziert. Unsere Partner fabriken sind mit ISO-konformen Inspektions systemen ausgestattet.</h3><p>Zeiss CMM</p></div></a>
+</div>
+</div>
+</section>
+<!-- ===== TRUST MODULE ===== -->
+<section class="trust-section">
+<div class="container">
+<div class="trust-title">
+<div class="label">Quality Assurance</div>
+<h2>3 D-Koordinaten messung für Maß genauigkeit bis ± 2 μm bei kritischen Geometrien.</h2>
+<p>SEM EDS</p>
+</div>
+<div class="trust-scroll">
+<div class="trust-card"><div class="equip-icon">📐</div><h3>Raster elektronen mikroskopie für Schichtdicke, Korns truktur und Elementaranalyse.</h3><p>Härte-Tester</p></div>
+<div class="trust-card"><div class="equip-icon">🔬</div><h3>Rockwell-und Vickers-Härte verifizierung in jeder Produktions charge.</h3><p>Werkzeug-Vorsetzer</p></div>
+<div class="trust-card"><div class="equip-icon">⚖️</div><h3>Zoller-und Parlec-Voreinsetzer für modernste Geometrie und Durchlauf verifikation.</h3><p>Beschichtung labor</p></div>
+<div class="trust-card"><div class="equip-icon">🔍</div><h3>In-house PVD-und CVD-Beschichtung mit Dicke, Haftung und Härte Validierung.</h3><p>ISO 9001:2025</p></div>
+<div class="trust-card"><div class="equip-icon">🌡️</div><h3>Zertifiziertes Qualitäts managements ystem. Volle Batch-Rück verfolgbar keit mit Co C-Dokumentation.</h3><p>Brauchen Sie ein Präzisions zitat?</p></div>
+<div class="trust-card"><div class="equip-icon">📋</div><h3>Sagen Sie uns, was Sie laufen-Material, Betrieb, Mengen, Ziel toleranzen. Wir verbinden Sie mit der richtigen Fabrik innerhalb von 48 Stunden.</h3><p>Produkte</p></div>
+</div>
+<div style="text-align:center;margin-top:32px;font-size:13px;color:#86868b">Swipe to see all equipment →</div>
+</div>
+</section>
+<!-- ===== CTA ===== -->
+<div class="container">
+<div class="cta-block">
+<h2>Ressourcen</h2>
+<p>Unternehmen</p>
+<div class="btn-group">
+<a class="btn-primary" href="/quote.html">Bohr werkzeuge</a>
+<a class="btn-secondary" href="mailto:info@carbide-tooling.com">Technische Leitfäden</a>
+</div>
+</div>
+</div>
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-grid">
+<div>
+<div class="brand"><span>◆</span> Carbide Tooling</div>
+<div class="tagline">Precision cutting tools sourced from China's best manufacturers. Engineering support, QC verification, factory-direct pricing.</div>
+</div>
+<div>
+<h4>◆Hartmetallwerkzeuge</h4>
+<a href="/products/end-mills.html">Notenauswahl</a>
+<a href="/products/turning-inserts.html">Voll karbid und indexbare Bohrer für die Schnur ung von bis zu 20 × D. Beschichtete und unbeschichtete Optionen.</a>
+<a href="/products/drills.html">Über uns</a>
+<a href="/products/tool-holders.html">Feine Bohr köpfe, Karbid reimer, Bohr stangen im Patronen stil für enge Toleranzen.</a>
+<a href="/products/boring-tools.html">Kontakt</a>
+<a href="/products/threading-tools.html">Detaillierte Aufschlüsse lungen der Werkzeug geometrie, der Beschichtung swiss schaft, der Material metallurgie und der Bearbeitungs optimierung.</a>
+</div>
+<div>
+<h4>⚙️ Geschwindigkeit &amp; Vorschub</h4>
+<a href="/guides/">Hartmetall-Schaftfräser</a>
+<a href="/tools/speed-feed/">Drehzahl, IPM, Spanbelastung, MRR-optimiert für jede Werkzeug-Material-Kombination.</a>
+<a href="/guides/carbide-grades.html">Hartmetall bohrer</a>
+<a href="/guides/coating-comparison.html">Werkzeug halter</a>
+</div>
+<div>
+<h4>📐Spanbelastung</h4>
+<a href="/about.html">Bohr-und Reaming-Werkzeuge</a>
+<a href="/quote.html">Gewinde werkzeuge</a>
+<a href="mailto:info@carbide-tooling.com">Contact</a>
+</div>
+</div>
+<div class="bottom">© 2026 Carbide Tooling. Precision sourcing for precision machining.</div>
+</footer>
+<script>
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', function() {
+ // Close mega menu on click outside
+ document.addEventListener('click', function(e) {
+ if (!e.target.closest('.nav-drop')) {
+ document.querySelectorAll('.mega-menu').forEach(m => {
+ m.style.opacity = '0';
+ m.style.visibility = 'hidden';
+ m.style.pointerEvents = 'none';
+ });
+ }
+ });
+ // Re-trigger hover for desktop
+});
+
+// Toggle category expand in mega menu
+function toggleCat(el) {
+ const sub = el.nextElementSibling;
+ if (!sub) return;
+ const isOpen = sub.style.display === 'block';
+ // Close all others
+ document.querySelectorAll('.mega-sub').forEach(s => s.style.display = 'none');
+ document.querySelectorAll('.mega-cat span').forEach(s => s.textContent = '▶');
+ // Toggle this one
+ if (!isOpen) {
+ sub.style.display = 'block';
+ el.querySelector('span').textContent = '▼';
+ }
+}
+</script>
+<script>
+function toggleLang(e){e.stopPropagation();var m=document.getElementById('lang-menu');if(m)m.classList.toggle('show')}
+document.addEventListener('click',function(){var m=document.getElementById('lang-menu');if(m)m.classList.remove('show')});
+</script>
+</body>
+</html>

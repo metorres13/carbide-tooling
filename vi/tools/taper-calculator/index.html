@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="vi"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Taper Máy tính | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Free online taper Máy tính for CNC machinists and quality inspecĐếnrs. Tính Đếnán taper per foot explained, converting taper Đến lathe compound angle."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/taper-calculator/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Máy tính côn | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Máy tính côn trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính toán độ côn trên mỗi chân được giải thích, chuyển đổi độ côn sang góc hợp chất của máy tiện." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}
 nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}
@@ -36,337 +37,334 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Taper Máy tính | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online taper Máy tính for CNC machinists and quality inspecĐếnrs. Tính Đếnán taper per foot explained, converting taper Đến lathe compound angle."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/taper-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Taper Máy tính | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính côn | công cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính côn trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính toán độ côn trên mỗi chân được giải thích, chuyển đổi độ côn sang góc hợp chất của máy tiện." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/taper-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Taper Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Taper Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/taper-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online taper calculator for CNC machinists and quality inspectors. Tính toán taper per foot explained, converting taper to lathe compound angle.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/taper-calculator/",
-      "name": "Taper Máy tính",
-      "description": "Free online taper calculator for CNC machinists and quality inspectors. Tính toán taper per foot explained, converting taper to lathe compound angle.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Taper Calculator",
+ "url": "https://carbide-tooling.com/tools/taper-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online taper calculator for CNC machinists and quality inspectors. Calculate taper per foot explained, converting taper to lathe compound angle.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/taper-calculator/",
+ "name": "Taper Calculator",
+ "description": "Free online taper calculator for CNC machinists and quality inspectors. Calculate taper per foot explained, converting taper to lathe compound angle.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính côn | công cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính côn trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính toán độ côn trên mỗi chân được giải thích, chuyển đổi độ côn sang góc hợp chất của máy tiện." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/taper-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Taper Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Taper Calculator",
+ "url": "https://carbide-tooling.com/tools/taper-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online taper calculator for CNC machinists and quality inspectors. Calculate taper per foot explained, converting taper to lathe compound angle.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/taper-calculator/",
+ "name": "Taper Calculator",
+ "description": "Free online taper calculator for CNC machinists and quality inspectors. Calculate taper per foot explained, converting taper to lathe compound angle.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính côn | công cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính côn trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính toán độ côn trên mỗi chân được giải thích, chuyển đổi độ côn sang góc hợp chất của máy tiện." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/taper-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Taper Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Taper Calculator",
+ "url": "https://carbide-tooling.com/tools/taper-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online taper calculator for CNC machinists and quality inspectors. Calculate taper per foot explained, converting taper to lathe compound angle.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/taper-calculator/",
+ "name": "Taper Calculator",
+ "description": "Free online taper calculator for CNC machinists and quality inspectors. Calculate taper per foot explained, converting taper to lathe compound angle.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Taper Máy tính | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online taper Máy tính for CNC machinists and quality inspecĐếnrs. Tính Đếnán taper per foot explained, converting taper Đến lathe compound angle."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/taper-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Taper Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Taper Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/taper-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online taper calculator for CNC machinists and quality inspectors. Tính toán taper per foot explained, converting taper to lathe compound angle.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/taper-calculator/",
-      "name": "Taper Máy tính",
-      "description": "Free online taper calculator for CNC machinists and quality inspectors. Tính toán taper per foot explained, converting taper to lathe compound angle.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Taper Máy tính | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online taper Máy tính for CNC machinists and quality inspecĐếnrs. Tính Đếnán taper per foot explained, converting taper Đến lathe compound angle."/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/taper-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Taper Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Taper Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/taper-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online taper calculator for CNC machinists and quality inspectors. Tính toán taper per foot explained, converting taper to lathe compound angle.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/taper-calculator/",
-      "name": "Taper Máy tính",
-      "description": "Free online taper calculator for CNC machinists and quality inspectors. Tính toán taper per foot explained, converting taper to lathe compound angle.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/taper-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/taper-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/taper-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/taper-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/taper-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/taper-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/taper-calculator"/>
-</head>
+
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/taper-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/taper-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/taper-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/taper-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/taper-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/taper-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/taper-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">Sản phẩm</a><a href="/guides/">Hướng dẫn kỹ thuật</a><a href="/about.html">Về chúng tôi</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/taper-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/taper-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/taper-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/taper-calculator/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/taper-calculator/">中</a></div></div></nav>
-
-<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc">Tools</a> <span style="color:#d2d2d6">›</span> Taper Máy tính</div>
-
-<section class="hero"><div class="container"><h1><span class="accent">Taper</span> Máy tính</h1><p>A 3° taper per side sounds small, but over 200 mm of length it produces a diameter change of over 10 mm. On a Haas lathe, setting the compound rest to the correct angle is a common source of scrap.</p></div></section>
-
-<div class="container"><div class="card"><h3>⚙️ Máy tính</h3><div class="row2"><div><label>Đầu vào Giá trị</label><input type="number" id="v1" value="10" oninput="go()"/></div><div><label>Parameter</label><input type="number" id="v2" value="20" oninput="go()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Kết quả</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
-
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">🇻🇳VI</a><a href="/guides/">Trang chủ</a><a href="/about.html">Công cụ</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">Yêu cầu báo giá số lượng lớn →</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/taper-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/taper-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/taper-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/taper-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/taper-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Công cụ tính trọng lượng ống</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc">Tài liệu tham khảo G-Code</a> <span style="color:#d2d2d6">›</span> Taper Calculator</div>
+<section class="hero"><div class="container"><h1>Bạn cần dụng cụ chuyên nghiệp?</h1><p>Nhận giá trực tiếp từ nhà máy, các mác carbide được thiết kế chuyên dụng và dịch vụ hỗ trợ kỹ thuật nhanh nhạy – tất cả chỉ từ một nguồn cung duy nhất.</p></div></section>
+<div class="container"><div class="card"><h3>🔧Khám phá 100 công cụ gia công cơ khí chuyên nghiệp</h3><div class="row2"><div><label>Tất cả công cụ</label><input id="v1" oninput="go()" type="number" value="10"/></div><div><label>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</label><input id="v2" oninput="go()" type="number" value="20"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>©Dụng cụ cắt gọt bằng cacbua năm 2026</h3>
+<p>Giải Thích côn trên mỗi chân</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Tham chiếu điểm số</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Mũi khoan hợp kim & Tap Holders</a><a href="/products/threading-tools.html">Dao phay ren & tarô</a></div>
-
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Trình phân tích thời gian thay dao</a><a href="/products/threading-tools.html">Công cụ tính toán thông số bánh răng</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/superalloy-tool-life/">Superalloy Dụng cụ Life</a><a href="/vi/tools/helical-interpolation-calculator/">Helical Interpolation</a><a href="/vi/tools/aluminum-alloy-table/">Aluminum Alloy Table</a><a href="/vi/tools/tube-weight-calculator/">Tube Weight Máy tính</a><a href="/vi/tools/gcode-reference/">G-Code Reference</a><a href="/vi/tools/grade-reference/">Grade Reference</a><a href="/vi/tools/tool-change-time-analyzer/">Dụng cụ Change Time Analyzer</a><a href="/vi/tools/gear-parameter-calculator/">Gear Parameter Máy tính</a>
-  </div>
+<h3>Độ côn 3° cho mỗi bên nghe có vẻ nhỏ, nhưng trên chiều dài 200 mm, nó tạo ra sự thay đổi đường kính hơn 10 mm. Trên máy tiện Haas, việc chỉnh bàn dao phụ đến đúng góc là một trong những nguyên nhân phổ biến dẫn đến phế phẩm. Máy tính này giúp đơn giản hóa quy trình, để bạn có thể tập trung vào việc gia công chi tiết thay vì phải thực hiện các phép toán lượng giác thủ công ngay tại xưởng.</h3>
+<div class="tool-grid">
+<a href="/tools/superalloy-tool-life/">Nhận báo giá</a><a href="/tools/helical-interpolation-calculator/">Quyền riêng tư</a><a href="/tools/aluminum-alloy-table/">trong</a><a href="/tools/tube-weight-calculator/">Xem danh mục →</a><a href="/tools/gcode-reference/">Tốc độ và Lượng ăn dao</a><a href="/tools/grade-reference/">Bộ chuyển đổi độ cứng</a><a href="/tools/tool-change-time-analyzer/">Kích thước mũi khoan taro</a><a href="/tools/gear-parameter-calculator/">Công cụ tính MRR</a>
+</div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Công cụ tính trọng lượng ống</a>
+<a href="/tools/">Chuyển đổi côn sang góc hợp chất máy tiện</a>
+<a href="/products/">🇻🇳VI</a>
+<a href="/guides/">Trang chủ</a>
+<a href="/about.html">Công cụ</a>
+<a href="/quote.html">Bộ biến mô</a>
+<a href="/privacy.html">Mũi khoan cacbua</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/taper-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/taper-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/taper-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/taper-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/taper-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/taper-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Tham số gia công đồng thau</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Chuyển đổi côn sang góc hợp chất máy tiện</a></p>
+<p style="font-size:11px;margin-bottom:6px">Dù bạn làm việc trên một chiếc Haas VF-2, một chiếc Mazak Integrex hay một chiếc Okuma MB-5000, việc nắm vững phép tính này là điều thiết yếu để đảm bảo chất lượng đồng nhất. Nhiều hệ thống CAM xử lý tự động, nhưng việc biết cách kiểm tra đầu ra sẽ giúp ngăn ngừa các lỗi lập trình tốn kém.</p>
+<p style="font-size:11px">Băng keo tiêu chuẩn: morse, Brown &amp; sharpe, Jarno</p>
 </div>
 </footer>
-
 <script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script>
 <section class="seo-content"><div class="container">
-<h2>Taper Per Foot Explained</h2>
-<p>A 3° taper per side sounds small, but over 200 mm of length it produces a diameter change of over 10 mm. On a Haas lathe, setting the compound rest to the correct angle is a common source of scrap. This calculator simplifies the process so you can focus on making parts, not doing manual trig on the shop floor.</p>
-<h2>Converting Taper to Lathe Compound Angle</h2>
-<p>Whether you work on a Haas VF-2, a Mazak Integrex, or an Okuma MB-5000, understanding this calculation is essential for consistent quality. Many CAM systems handle it automatically, but knowing how to verify the output prevents costly programming errors.</p>
-<h2>Standard Tapers: Morse, Brown & Sharpe, Jarno</h2>
-<p>The practical application varies by shop environment. For job shops running short runs, a quick reference is sufficient. For production shops with repeat orders, documenting these parameters in the setup sheet saves time on every rerun.</p>
-<h2>Câu hỏi thường gặp</h2>
+<h2>Việc áp dụng thực tiễn thay đổi tùy theo môi trường của từng cửa hàng. Đối với các xưởng gia công theo đơn hàng nhỏ, một bảng tra cứu nhanh là đủ. Đối với các xưởng sản xuất có đơn hàng lặp lại, việc ghi chú các thông số này vào phiếu thiết lập sẽ giúp tiết kiệm thời gian cho mỗi lần chạy lại.</h2>
+<p>Câu hỏi thường gặp</p>
+<h2>Phép tính này chính xác đến mức nào? Công thức là chính xác trong phạm vi độ chính xác của dữ liệu đầu vào mà bạn cung cấp. Luôn kiểm tra các kích thước quan trọng bằng dụng cụ đo đã được hiệu chuẩn.</h2>
+<p>Tôi có thể sử dụng nó trên hệ điều khiển Mazak hoặc Haas không? Các phép toán thì mang tính phổ quát. Các hệ thống CAM sử dụng cùng một công thức ở cấp độ nội bộ; công cụ tính toán này chỉ mang tính chất đối chiếu, kiểm tra.</p>
+<h2>Sai lầm phổ biến mà thợ cơ khí hay mắc phải là gì? Đó là quên bù trừ bán kính dao hoặc đường kính chốt đo. Luôn kiểm tra kỹ xem bản in sử dụng điểm tham chiếu nào.</h2>
+<p>⚡Được tính toán cho Dòng sản phẩm Hiệu suất Cao của Carbide-Tooling.com. Xem danh mục →</p>
+<h2>🔧Hộp công cụ kỹ thuật chính xác</h2>
 <p><strong>How accurate is this calculation?</strong> The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools.</p>
 <p><strong>Can I use this on a Mazak or Haas control?</strong> The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check.</p>
 <p><strong>What is the common mistake machinists make?</strong> Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Độ dẫn nhiệt của thép dụng cụ</a></p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<div class="toolbox-widget"><h3>📩Nhận báo giá</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Đường kính hiệu dụng của đầu tròn</a>
+<a href="/tools/hardness-converter/">Tham chiếu Mã M</a>
+<a href="/tools/tap-drill-size-calculator/">Công cụ tính chi phí theo lô</a>
+<a href="/tools/mrr-calculator/">Công cụ tính toán tốc độ và lượng ăn dao</a>
+<a href="/tools/feed-converter/">LinkedIn</a>
+<a href="/tools/surface-roughness-calculator/">Thư điện tử</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guide</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>©Dụng cụ cắt gọt bằng cacbua năm 2026</h3>
+<p>Giải Thích côn trên mỗi chân</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Tham chiếu điểm số</a>
 
-
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
-</aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Mũi khoan hợp kim</a><a href="/products/threading-tools.html">Dao phay ren & tarô</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Carbide Drills</a><a href="/products/threading-tools.html">Công cụ tính toán thông số bánh răng</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/brass-machining-parameters/">Brass Machining Parameters</a>
-<a href="/vi/tools/micron-inch-converter/">Micron to Inch Bộ chuyển đổi</a>
-<a href="/vi/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a>
-<a href="/vi/tools/ball-nose-effective-diameter/">Ball Nose Effective Đường kính</a>
-<a href="/vi/tools/mcode-reference/">M-Code Reference</a>
-<a href="/vi/tools/batch-cost-calculator/">Batch Cost Máy tính</a>
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao Máy tính</a>
-<a href="/vi/tools/tube-weight-calculator/">Tube Weight Máy tính</a>
-
-  </div>
+<h3>Độ côn 3° cho mỗi bên nghe có vẻ nhỏ, nhưng trên chiều dài 200 mm, nó tạo ra sự thay đổi đường kính hơn 10 mm. Trên máy tiện Haas, việc chỉnh bàn dao phụ đến đúng góc là một trong những nguyên nhân phổ biến dẫn đến phế phẩm. Máy tính này giúp đơn giản hóa quy trình, để bạn có thể tập trung vào việc gia công chi tiết thay vì phải thực hiện các phép toán lượng giác thủ công ngay tại xưởng.</h3>
+<div class="tool-grid">
+<a href="/tools/brass-machining-parameters/">Brass Machining Parameters</a>
+<a href="/tools/micron-inch-converter/">Micron to Inch Converter</a>
+<a href="/tools/die-steel-thermal-conductivity/">Die Steel Thermal Conductivity</a>
+<a href="/tools/ball-nose-effective-diameter/">Ball Nose Effective Diameter</a>
+<a href="/tools/mcode-reference/">M-Code Reference</a>
+<a href="/tools/batch-cost-calculator/">Batch Cost Calculator</a>
+<a href="/tools/speed-feed/">Tốc độ cắt &amp; Lượng chạy dao Calculator</a>
+<a href="/tools/tube-weight-calculator/">Xem danh mục →</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/taper-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/taper-calculator/&text=Taper Máy tính" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Taper Máy tính&body=Check this out: https://carbide-tooling.com/vi/tools/taper-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/taper-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/taper-calculator/&amp;text=Taper Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Taper Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/taper-calculator/">Email</a>
 </div>
-
 </body></html>

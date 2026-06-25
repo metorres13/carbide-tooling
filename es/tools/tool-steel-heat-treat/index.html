@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Herramienta Steel Heat Treat | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
-<meta name="description" content="Calcular dimensional change during heat treatment of Herramienta steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method."/>
-<link rel="canonical" href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Herramienta de acero de tratamiento térmico | Herramienta de mecanizado de precisión | Carbide-Tooling.com</title>
+<meta content="Calcular el cambio dimensional durante el tratamiento térmico de los aceros para herramientas (D2, A2, O1, H13, S7). Predecir el crecimiento o contracción basado en el grado y el método de enfriamiento." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.hero .accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:6px auto 0}.card{border:1px solid #e8e8ed;border-radius:14px;padding:18px 20px;margin:16px 0}.card h2{font-size:15px;font-weight:700;margin-bottom:10px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.card select:focus,.card input:focus{border-color:#0066cc}.res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.res-item{background:#f5f5f7;border-radius:10px;padding:12px;text-align:center}.res-item .lbl{font-size:10px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.res-item .unit{font-size:10px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.res{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,260 +13,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Herramienta Steel Heat Treat | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Calcular dimensional change during heat treatment of Herramienta steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tool Steel Heat Treat | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Herramienta Acero Heat Treat | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calcular el cambio dimensional durante el tratamiento térmico de los aceros para herramientas (D2, A2, O1, H13, S7). Predecir el crecimiento o contracción basado en el grado y el método de enfriamiento." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tool-steel-heat-treat/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tool Steel Heat Treat | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tool Steel Heat Treat",
-      "url": "https://carbide-tooling.com/es/tools/tool-steel-heat-treat/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Calcular dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/tool-steel-heat-treat/",
-      "name": "Tool Steel Heat Treat",
-      "description": "Calcular dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does tool steel shrink or grow during hardening?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most tool steels grow 0.0005–0.002 inches per inch during hardening due to the transformation of ferrite to martensite. High-speed steels (M2, M42) may shrink slightly. Always consult the steel manufacturer's data sheet for your specific grade, as growth varies with hardening temperature and section thickness."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I machine tool steel in the hardened state?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, using CBN or ceramic tooling for turned surfaces and EDM for complex geometries. Hard machining (45–68 HRC) is an established process for mold and die manufacture. Modern machines with sufficient rigidity can achieve surface finishes below 16 μin Ra on hardened tool steel."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does stress relief annealing reduce distortion?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Stress relief annealing at 600–700°C before rough machining reduces residual stresses from mill processing. Rough machine, then stress relieve again at 600°C before finish machining and heat treatment. This double stress relief cycle can reduce final distortion by 50–70%.\n⚡ Calculard for Carbide-Tooling.com High-Performance Series. Ver catálogo →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tool Steel Heat Treat",
+ "url": "https://carbide-tooling.com/tools/tool-steel-heat-treat/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tool-steel-heat-treat/",
+ "name": "Tool Steel Heat Treat",
+ "description": "Calculate dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How much does tool steel shrink or grow during hardening?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Most tool steels grow 0.0005–0.002 inches per inch during hardening due to the transformation of ferrite to martensite. High-speed steels (M2, M42) may shrink slightly. Always consult the steel manufacturer's data sheet for your specific grade, as growth varies with hardening temperature and section thickness."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I machine tool steel in the hardened state?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, using CBN or ceramic tooling for turned surfaces and EDM for complex geometries. Hard machining (45–68 HRC) is an established process for mold and die manufacture. Modern machines with sufficient rigidity can achieve surface finishes below 16 μin Ra on hardened tool steel."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does stress relief annealing reduce distortion?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. Stress relief annealing at 600–700°C before rough machining reduces residual stresses from mill processing. Rough machine, then stress relieve again at 600°C before finish machining and heat treatment. This double stress relief cycle can reduce final distortion by 50–70%.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Herramienta Acero Heat Treat | Herramienta de mecanizado de precisión" property="og:title"/>
+<meta content="Calcular el cambio dimensional durante el tratamiento térmico de los aceros para herramientas (D2, A2, O1, H13, S7). Predecir el crecimiento o contracción basado en el grado y el método de enfriamiento." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tool-steel-heat-treat/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tool Steel Heat Treat | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tool Steel Heat Treat",
+ "url": "https://carbide-tooling.com/tools/tool-steel-heat-treat/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tool-steel-heat-treat/",
+ "name": "Tool Steel Heat Treat",
+ "description": "Calculate dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Los aceros para herramientas cambian de tamaño durante el tratamiento térmico. D2 crece ~ 0.15%, A2 crece ~ 0.1%, O1 crece ~ 0.08%." property="og:title"/>
+<meta content="Calcular el cambio dimensional durante el tratamiento térmico de los aceros para herramientas (D2, A2, O1, H13, S7). Predecir el crecimiento o contracción basado en el grado y el método de enfriamiento." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tool-steel-heat-treat/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tool Steel Heat Treat Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tool Steel Heat Treat Calculator",
+ "url": "https://carbide-tooling.com/tools/tool-steel-heat-treat/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tool-steel-heat-treat/",
+ "name": "Tool Steel Heat Treat Calculator",
+ "description": "Calculate dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Herramienta Steel Heat Treat | Herramienta de mecanizado de precisión"/>
-<meta property="og:description" content="Calcular dimensional change during heat treatment of Herramienta steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tool Steel Heat Treat | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tool Steel Heat Treat",
-      "url": "https://carbide-tooling.com/es/tools/tool-steel-heat-treat/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Calcular dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/tool-steel-heat-treat/",
-      "name": "Tool Steel Heat Treat",
-      "description": "Calcular dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Tool Steel Heat Treat Calculadora | Precision Machining Tool"/>
-<meta property="og:description" content="Calcular dimensional change during heat treatment of Herramienta steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method."/>
-<meta property="og:url" content="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tool Steel Heat Treat Calculadora | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tool Steel Heat Treat Calculadora",
-      "url": "https://carbide-tooling.com/es/tools/tool-steel-heat-treat/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Calcular dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/es/tools/tool-steel-heat-treat/",
-      "name": "Tool Steel Heat Treat Calculadora",
-      "description": "Calcular dimensional change during heat treatment of tool steels (D2, A2, O1, H13, S7). Predict growth or shrinkage based on grade and quench method.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/tool-steel-heat-treat/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/tool-steel-heat-treat/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tool-steel-heat-treat/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tool-steel-heat-treat/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tool-steel-heat-treat/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/tool-steel-heat-treat"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Productos</a><a href="https://carbide-tooling.com/guides/">Guías técnicas</a><a href="https://carbide-tooling.com/about.html">Nosotros</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Solicitar cotización</a><div class="lang-nav"><a href="/es/tools/tool-steel-heat-treat/">EN</a><span class="sep">|</span><a href="/de/tools/tool-steel-heat-treat/">DE</a><span class="sep">|</span><a href="/jp/tools/tool-steel-heat-treat/">JP</a><span class="sep">|</span><a href="#" class="active" onclick="return false">ES</a><span class="sep">|</span><a href="/vi/tools/tool-steel-heat-treat/">VI</a><span class="sep">|</span><a href="/zh/tools/tool-steel-heat-treat/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Inicio</a> <span style="color:#d2d2d6">›</span> <a href="/es/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Herramienta Steel Heat Treat</div>
-<section class="hero"><div class="container"><div class="badge">🧰 Herramienta</div><h1>Herramienta Steel <span class="accent">Heat Treat Change</span></h1><p>Herramienta steels change size during heat treatment. D2 grows ~0.15%, A2 grows ~0.1%, O1 grows ~0.08%.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/" rel="canonical"/><link href="https://carbide-tooling.com/tools/tool-steel-heat-treat/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/tool-steel-heat-treat/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/tool-steel-heat-treat/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/tool-steel-heat-treat/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/tool-steel-heat-treat/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪DE</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/tool-steel-heat-treat/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/tool-steel-heat-treat/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/tool-steel-heat-treat/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/tool-steel-heat-treat/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/tool-steel-heat-treat/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Fresado por pasos</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Calculadora de círculo de tornillos</a> <span style="color:#d2d2d6">›</span> Tool Steel Heat Treat</div>
+<section class="hero"><div class="container"><div class="badge">🧰 Tool</div><h1>Grado de acero</h1><p>Longitud de la pieza (mm)</p></div></section>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/toolbox-organizer/">Toolbox Organizer</a><a href="/es/tools/feed-rate-override-calculator/">Avance Rate Override</a><a href="/es/tools/inventory-turnover-calculator/">Inventory Turnover</a><a href="/es/tools/step-milling-calculator/">Step Milling</a><a href="/es/tools/bolt-circle-calculator/">Bolt Circle Calculadora</a><a href="/es/tools/batch-cost-calculator/">Batch Cost Calculadora</a><a href="/es/tools/speed-feed/">Velocidad de corte & Avance Calculadora</a><a href="/es/tools/countersink-depth-calculator/">Countersink Profundidad</a>
-  </div>
+<h3>Entrada 2</h3>
+<div class="tool-grid">
+<a href="/tools/toolbox-organizer/">Calculadora de costos por lote</a><a href="/tools/feed-rate-override-calculator/">Calculadora de velocidad y avance</a><a href="/tools/inventory-turnover-calculator/">Profundidad del avellanado</a><a href="/tools/step-milling-calculator/">← Todas las herramientas</a><a href="/tools/bolt-circle-calculator/">Obtener una cotización</a><a href="/tools/batch-cost-calculator/">Privacidad</a><a href="/tools/speed-feed/">en</a><a href="/tools/countersink-depth-calculator/">Ver catálogo →</a>
+</div>
 </section>
-<div class="container"><div class="card"><h2>⚙️ Calculadora</h2><label>Steel Grade</label><select id="grade" onchange="calc()"><option value="D2">D2 — grows 0.15%</option><option value="A2">A2 — grows 0.10%</option><option value="O1">O1 — grows 0.08%</option><option value="H13">H13 — grows 0.05%</option></select><label>Part Length (mm)</label><input type="number" id="i1" value="100" oninput="calc()"/><label>Entrada 2</label><input type="number" id="i2" value="100" value="100" oninput="calc()"/><div class="res" style="grid-template-columns:repeat(4,1fr)"><div class="res-item"><div class="lbl">Growth (mm)</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">Final Size</div><div class="val" id="r1">—</div></div></div></div>
-<div style="text-align:center;margin:24px 0"><a href="/es/tools/" style="color:#0066cc;font-size:13px">← Todas las herramientas</a></div></div>
+<div class="container"><div class="card"><h2>Todas las herramientas</h2><label>Los resultados son únicamente de referencia. Consulte a los fabricantes de herramientas para aplicaciones específicas.</label><select id="grade" onchange="calc()"><option value="D2">D2 — grows 0.15%</option><option value="A2">A2 — grows 0.10%</option><option value="O1">O1 — grows 0.08%</option><option value="H13">H13 — grows 0.05%</option></select><label>©Herramientas de carburo 2026</label><input id="i1" oninput="calc()" type="number" value="100"/><label>Cambios dimensionales durante el tratamiento térmico del acero de herramienta</label><input id="i2" oninput="calc()" type="number" value="100"/><div class="res" style="grid-template-columns:repeat(4,1fr)"><div class="res-item"><div class="lbl">Growth (mm)</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">Final Size</div><div class="val" id="r1">—</div></div></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Velocidad y avance</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Inicio</a>
-    <a href="/es/tools/">Todas las herramientas</a>
-    <a href="/products/">Productos</a>
-    <a href="/guides/">Guías técnicas</a>
-    <a href="/about.html">Nosotros</a>
-    <a href="/quote.html">Solicitar cotización</a>
-    <a href="/privacy.html">Privacidad</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/es/tools/" style="color:#0066cc">Todas las herramientas</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Los resultados son solo de referencia. Consulte a los fabricantes para aplicaciones específicas.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Fresado por pasos</a>
+<a href="/tools/">El acero para herramientas experimenta cambios dimensionales volumétricos durante el tratamiento térmico debido a transformaciones de fase. Intervalos de crecimiento típicos: A2: 0.001 in/in, D2: 0.002 in/in, O1: 0,0015 in/in, S7: 0,0005 in/in. Estos cambios predecibles pueden compensarse mecanizando sobredimensionados y luego terminando después del tratamiento térmico hasta las dimensiones finales.</a>
+<a href="/products/">🇩🇪DE</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Guía de titanio</a>
+<a href="/privacy.html">Referencia cruzada de calificaciones</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Costo por pieza</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">El acero para herramientas experimenta cambios dimensionales volumétricos durante el tratamiento térmico debido a transformaciones de fase. Intervalos de crecimiento típicos: A2: 0.001 in/in, D2: 0.002 in/in, O1: 0,0015 in/in, S7: 0,0005 in/in. Estos cambios predecibles pueden compensarse mecanizando sobredimensionados y luego terminando después del tratamiento térmico hasta las dimensiones finales.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Mecanizado de tratamiento previo al calentamiento: asignaciones y estrategias</p>
+<p style="font-size:11px">Deje 0.010-0.020 pulgadas por superficie para el rectificado posterior al tratamiento térmico para la mayoría de los aceros para herramientas. Para A2 y D2, agregue 0.003 pulgadas por pulgada para el crecimiento anticipado. Para los componentes de precisión, mecanizar un cupón de prueba del mismo material y tratarlo térmicamente con las piezas de producción para verificar el cambio dimensional real. El mecanizado EDM se realiza mejor en el estado endurecido para una máxima estabilidad.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Dimensional Changes During Herramienta Steel Heat Treatment</h2><p>Herramienta steel undergoes volumetric dimensional changes during heat treatment due to phase transformations. Typical growth ranges: A2: +0.001 in/in, D2: +0.002 in/in, O1: +0.0015 in/in, S7: +0.0005 in/in. These predictable changes can be compensated for by machining oversized and then finishing after heat treatment to the final dimensions.</p>
-<h2>Pre-heat Treat Machining: Allowances and Strategies</h2><p>Leave 0.010–0.020 inches per surface for post-heat treat grinding for most tool steels. For A2 and D2, add 0.003 inches per inch for anticipated growth. For precision components, machine a test coupon of the same material and heat treat it with the production parts to verify actual dimensional change. EDM machining is best performed in the hardened state for maximum stability.</p>
-<h2>Stabilization Cycles for Minimizing Distortion</h2><p>Thermal stabilization cycles (sub-zero treatment + tempering) reduce retained austenite and stabilize dimensions. For A2 and D2, a cryogenic treatment at −75°C to −120°C after hardening, followed by double tempering, reduces dimensional drift during service. Precision gages and tooling benefit from triple tempering cycles to ensure absolute dimensional stability over years of use.</p>
-<h2>Preguntas frecuentes</h2>
+<h2>Ciclos de estabilización para minimizar la distorsión</h2><p>Los ciclos de estabilización térmica (templado de tratamiento bajo cero) reducen la austenita retenida y estabilizan las dimensiones. Para A2 y D2, un tratamiento criogénico a-75 °C a-120 °C después del endurecimiento, seguido de un doble templado, reduce la deriva dimensional durante el servicio. Los instrumentos y los instrumentos de precisión se benefician de ciclos de templado triples para asegurar estabilidad dimensional absoluta durante años de uso.</p>
+<h2>Preguntas frecuentes</h2><p>La mayoría de los aceros para herramientas crecen 0,0005-0.002 pulgadas por pulgada durante el endurecimiento debido a la transformación de la ferrita a la martensita. Los aceros de alta velocidad (M2, M42) pueden encogerse ligeramente. Siempre consulte la hoja de datos del fabricante del acero para su grado específico, ya que el crecimiento varía con la temperatura de endurecimiento y el grosor de la sección.</p>
+<h2>Sí, utilizando CBN o herramientas de cerámica para superficies giradas y EDM para geometrías complejas. El mecanizado duro (45-68 HRC) es un proceso establecido para la fabricación de moldes y matrices. Las máquinas modernas con suficiente rigidez pueden lograr acabados superficiales por debajo de 16 μin Ra en acero para herramientas endurecido.</h2><p>¿El recocido de alivio de tensión reduce la distorsión? El recocido de alivio de tensión a 600-700 °C antes del mecanizado en bruto reduce las tensiones residuales del procesamiento del molino. Máquina áspera, luego el estrés alivia nuevamente a 600 ° C antes de terminar el mecanizado y el tratamiento térmico. Este ciclo de alivio de tensión doble puede reducir la distorsión final en un 50-70%.</p>
+<h2>⚡Calculado para la Serie de Alto Rendimiento de Carbide-Tooling.com. Ver catálogo →</h2>
 <p><strong>How much does tool steel shrink or grow during hardening?</strong> Most tool steels grow 0.0005–0.002 inches per inch during hardening due to the transformation of ferrite to martensite. High-speed steels (M2, M42) may shrink slightly. Always consult the steel manufacturer's data sheet for your specific grade, as growth varies with hardening temperature and section thickness.</p>
 <p><strong>Can I machine tool steel in the hardened state?</strong> Yes, using CBN or ceramic tooling for turned surfaces and EDM for complex geometries. Hard machining (45–68 HRC) is an established process for mold and die manufacture. Modern machines with sufficient rigidity can achieve surface finishes below 16 μin Ra on hardened tool steel.</p>
 <p><strong>Does stress relief annealing reduce distortion?</strong> Yes. Stress relief annealing at 600–700°C before rough machining reduces residual stresses from mill processing. Rough machine, then stress relieve again at 600°C before finish machining and heat treatment. This double stress relief cycle can reduce final distortion by 50–70%.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculard for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Ver catálogo →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Solicitar cotización por volumen →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/tool-steel-heat-treat/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/tool-steel-heat-treat/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/tool-steel-heat-treat/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/tool-steel-heat-treat/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/tool-steel-heat-treat/" class="lang-link">中</a>
-</div>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 Caja de herramientas de precisión</h3><div class="toolbox-links">
-<a href="/es/tools/speed-feed/">Velocidad de corte & Avance</a>
-<a href="/es/tools/hardness-converter/">Hardness Convertidor</a>
-<a href="/es/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/es/tools/mrr-calculator/">MRR Calculadora</a>
-<a href="/es/tools/feed-converter/">Avance Convertidor</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/es/tools/titanium-machining-guide/">Titanium Guía</a>
-<a href="/es/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/es/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/es/tools/torque-unit-converter/">Torque Convertidor</a>
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>Productos</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Guía de selección de grado</a>
+<a href="/tools/hardness-converter/">Insertar consulta de calificaciones</a>
+<a href="/tools/tap-drill-size-calculator/">Calculadora de brocas para roscar con machos de formar</a>
+<a href="/tools/mrr-calculator/">Calculadora del diámetro de paso de rosca</a>
+<a href="/tools/feed-converter/">Calculadora de espesor de pared</a>
+<a href="/tools/surface-roughness-calculator/">Calculadora de rugosidad de la superficie</a>
+<a href="/tools/titanium-machining-guide/">Calculadora de valor de chatarra</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Calculadora de la profundidad de chaveta</a>
+<a href="/tools/cost-per-part-calculator/">Calculadora de desalineación de herramientas</a>
+<a href="/tools/torque-unit-converter/">Calculadora de muestreo AQL</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>¿Necesita herramientas profesionales?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Solicitar cotización por volumen →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Guías</h3>
+<p>Sobre</p>
+</div>
+<a class="b2b-btn" href="/quote.html">LinkedIn</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Guía de selección de calidad</a><a href="/guides/insert-grade-selection.html">Consulta de calidad de inserto</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Correo electrónico</a><a href="/guides/insert-grade-selection.html">Insert Grade Inquiry</a></div>
 <section class="more-tools">
-  <h3>🔧 Explore 100+ herramientas de mecanizado profesionales</h3>
-  <div class="tool-grid">
-<a href="/es/tools/form-tap-drill-calculator/">Form Tap Drill Calculadora</a>
-<a href="/es/tools/thread-pitch-diameter-calculator/">Thread Pitch Diámetro Calculadora</a>
-<a href="/es/tools/wall-thickness-calculator/">Wall Thickness Calculadora</a>
-<a href="/es/tools/surface-roughness-calculator/">Surface Roughness Calculadora</a>
-<a href="/es/tools/scrap-value-calculator/">Scrap Valor Calculadora</a>
-<a href="/es/tools/keyway-depth-calculator/">Keyway Profundidad Calculadora</a>
-<a href="/es/tools/tool-runout-calculator/">Herramienta Runout Calculadora</a>
-<a href="/es/tools/aql-sampling-calculator/">AQL Sampling Calculadora</a>
-
-  </div>
+<h3>Entrada 2</h3>
+<div class="tool-grid">
+<a href="/tools/form-tap-drill-calculator/">Form Tap Drill Calculator</a>
+<a href="/tools/thread-pitch-diameter-calculator/">Thread Pitch Diameter Calculator</a>
+<a href="/tools/wall-thickness-calculator/">Wall Thickness Calculator</a>
+<a href="/tools/surface-roughness-calculator/">Surface Roughness Calculator</a>
+<a href="/tools/scrap-value-calculator/">Scrap Value Calculator</a>
+<a href="/tools/keyway-depth-calculator/">Keyway Depth Calculator</a>
+<a href="/tools/tool-runout-calculator/">Tool Runout Calculator</a>
+<a href="/tools/aql-sampling-calculator/">AQL Sampling Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Compartir con ingenieros</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/es/tools/tool-steel-heat-treat/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/es/tools/tool-steel-heat-treat/&text=Tool Steel Heat Treat Calculadora" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Tool Steel Heat Treat Calculadora&body=Check this out: https://carbide-tooling.com/es/tools/tool-steel-heat-treat/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/tool-steel-heat-treat/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/tool-steel-heat-treat/&amp;text=Tool Steel Heat Treat Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Tool Steel Heat Treat Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/tool-steel-heat-treat/">Email</a>
 </div>
-
 </body></html>

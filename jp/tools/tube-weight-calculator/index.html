@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Tube Weight 計算機 | 精密加工ツール | Carbide-Tooling.com</title>
-<meta name="description" content="計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece."/>
-<link rel="canonical" href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>チューブ重量計算機 | 精密加工ツール | Carbide-Tooling.com</title>
+<meta content="中空の丸いバー、チューブ、およびパイプセクションの重量を計算します。1メートルあたり、1ピースあたりのスチール、ステンレス、アルミニウムチューブの重量。" name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.hero .accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:6px auto 0}.card{border:1px solid #e8e8ed;border-radius:14px;padding:18px 20px;margin:16px 0}.card h2{font-size:15px;font-weight:700;margin-bottom:10px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.card select:focus,.card input:focus{border-color:#0066cc}.res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.res-item{background:#f5f5f7;border-radius:10px;padding:12px;text-align:center}.res-item .lbl{font-size:10px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.res-item .unit{font-size:10px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.res{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,260 +13,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Tube Weight 計算機 | 精密加工ツール"/>
-<meta property="og:description" content="計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/tube-weight-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tube Weight 計算機 | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="チューブ重量計算機 | 精密加工ツール" property="og:title"/>
+<meta content="中空の丸いバー、チューブ、およびパイプセクションの重量を計算します。1メートルあたり、1ピースあたりのスチール、ステンレス、アルミニウムチューブの重量。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tube-weight-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tube Weight Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tube Weight 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/tube-weight-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/tube-weight-calculator/",
-      "name": "Tube Weight 計算機",
-      "description": "計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I account for tube wall thickness tolerance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ASTM specifications allow ±10% wall thickness variation. For conservative weight estimates, use nominal wall thickness. For maximum weight (shipping), use nominal wall + 10%. For minimum weight (structural design), use nominal wall − 10%. Request mill test reports for actual measured wall thickness on critical orders."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does tube weight affect machining parameters?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Heavy tubes require more support to prevent chatter during turning. As a rule of thumb, tubes with wall thickness below 1/8 of OD require steady rests or filler material during machining to prevent vibration. Light-gauge tubes (wall"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I calculate remaining tube length from weight?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Weigh the tube, subtract the weight of any attachments or end caps, and divide by the weight per foot for the specific OD and wall thickness. A 5-ft piece of 2-inch Schedule 40 steel pipe weighs approximately 5 × 3.65 = 18.25 lbs. If you have 12.4 lbs remaining: 12.4 / 3.65 = 3.4 feet remaining.\n⚡ 計算d for Carbide-Tooling.com High-Performance Series. カタログを見る →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tube Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/tube-weight-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tube-weight-calculator/",
+ "name": "Tube Weight Calculator",
+ "description": "Calculate weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How do I account for tube wall thickness tolerance?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "ASTM specifications allow ±10% wall thickness variation. For conservative weight estimates, use nominal wall thickness. For maximum weight (shipping), use nominal wall + 10%. For minimum weight (structural design), use nominal wall − 10%. Request mill test reports for actual measured wall thickness on critical orders."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does tube weight affect machining parameters?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. Heavy tubes require more support to prevent chatter during turning. As a rule of thumb, tubes with wall thickness below 1/8 of OD require steady rests or filler material during machining to prevent vibration. Light-gauge tubes (wall"
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I calculate remaining tube length from weight?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Weigh the tube, subtract the weight of any attachments or end caps, and divide by the weight per foot for the specific OD and wall thickness. A 5-ft piece of 2-inch Schedule 40 steel pipe weighs approximately 5 × 3.65 = 18.25 lbs. If you have 12.4 lbs remaining: 12.4 / 3.65 = 3.4 feet remaining.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="チューブ重量計算機 | 精密加工ツール" property="og:title"/>
+<meta content="中空の丸いバー、チューブ、およびパイプセクションの重量を計算します。1メートルあたり、1ピースあたりのスチール、ステンレス、アルミニウムチューブの重量。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tube-weight-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tube Weight Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tube Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/tube-weight-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tube-weight-calculator/",
+ "name": "Tube Weight Calculator",
+ "description": "Calculate weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="チューブ重量計算機 | 精密加工ツール" property="og:title"/>
+<meta content="中空の丸いバー、チューブ、およびパイプセクションの重量を計算します。1メートルあたり、1ピースあたりのスチール、ステンレス、アルミニウムチューブの重量。" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/tube-weight-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Tube Weight Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Tube Weight Calculator",
+ "url": "https://carbide-tooling.com/tools/tube-weight-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Calculate weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/tube-weight-calculator/",
+ "name": "Tube Weight Calculator",
+ "description": "Calculate weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Tube Weight 計算機 | 精密加工ツール"/>
-<meta property="og:description" content="計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/tube-weight-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tube Weight 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tube Weight 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/tube-weight-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/tube-weight-calculator/",
-      "name": "Tube Weight 計算機",
-      "description": "計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Tube Weight 計算機 | 精密加工ツール"/>
-<meta property="og:description" content="計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece."/>
-<meta property="og:url" content="https://carbide-tooling.com/jp/tools/tube-weight-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tube Weight 計算機 | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Tube Weight 計算機",
-      "url": "https://carbide-tooling.com/jp/tools/tube-weight-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/jp/tools/tube-weight-calculator/",
-      "name": "Tube Weight 計算機",
-      "description": "計算 weight of hollow round bar, tube, and pipe sections. Steel, stainless, aluminum tube weight per meter and per piece.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/tube-weight-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/tube-weight-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/tube-weight-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/tube-weight-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/tube-weight-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/tube-weight-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">製品</a><a href="https://carbide-tooling.com/guides/">技術ガイド</a><a href="https://carbide-tooling.com/about.html">会社概要</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 見積もりを取得</a><div class="lang-nav"><a href="/jp/tools/tube-weight-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/tube-weight-calculator/">DE</a><span class="sep">|</span><a href="#" class="active" onclick="return false">JP</a><span class="sep">|</span><a href="/es/tools/tube-weight-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/tube-weight-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/tube-weight-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">ホーム</a> <span style="color:#d2d2d6">›</span> <a href="/jp/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Tube Weight 計算機</div>
-<section class="hero"><div class="container"><div class="badge">🧰 工具</div><h1>Steel Tube <span class="accent">Weight 計算機</span></h1><p>Hollow section weight calculation for tubes and pipes.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/tube-weight-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/tube-weight-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/tube-weight-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/tube-weight-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/tube-weight-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇯🇵ジェイピー</a><a href="https://carbide-tooling.com/guides/">🇪🇸エスイー</a><a href="https://carbide-tooling.com/about.html">🇻🇳VI</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">ホーム</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/tube-weight-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/tube-weight-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/tube-weight-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/tube-weight-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/tube-weight-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">コーティングセレクター</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">鋳鉄加工</a> <span style="color:#d2d2d6">›</span> Tube Weight Calculator</div>
+<section class="hero"><div class="container"><div class="badge">🧰 Tool</div><h1>OD (mm)</h1><p>壁 (mm)</p></div></section>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a><a href="/jp/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Reference</a><a href="/jp/tools/grade-reference/">Grade Reference</a><a href="/jp/tools/heat-expansion-calculator/">Heat Expansion</a><a href="/jp/tools/coating-selector/">Coating Selector</a><a href="/jp/tools/cast-iron-machining/">Cast Iron Machining</a><a href="/jp/tools/aluminum-alloy-table/">Aluminum Alloy Table</a><a href="/jp/tools/form-tap-drill-calculator/">Form Tap Drill 計算機</a>
-  </div>
+<h3>すべてのツール</h3>
+<div class="tool-grid">
+<a href="/tools/cost-per-part-calculator/">アルミ合金製テーブル</a><a href="/tools/carbide-grade-cross-ref-2/">成形タップ用穴あけドリル計算ツール</a><a href="/tools/grade-reference/">← すべてのツール</a><a href="/tools/heat-expansion-calculator/">見積もりを取得する</a><a href="/tools/coating-selector/">プライバシー</a><a href="/tools/cast-iron-machining/">の中で</a><a href="/tools/aluminum-alloy-table/">カタログを表示する →</a><a href="/tools/form-tap-drill-calculator/">速度と送り量</a>
+</div>
 </section>
-<div class="container"><div class="card"><h2>⚙️ 計算機</h2><label>被削材</label><select id="mat" onchange="calc()"><option value="7.85">Steel</option><option value="8.0">Stainless</option></select><label>OD (mm)</label><input type="number" id="i1" value="10" oninput="calc()"/><label>Wall (mm)</label><input type="number" id="i2" value="3" oninput="calc()"/><div class="res" style="grid-template-columns:repeat(3,1fr)"><div class="res-item"><div class="lbl">kg/meter</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">kg/length</div><div class="val" id="r1">—</div></div></div></div>
-<div style="text-align:center;margin:24px 0"><a href="/jp/tools/" style="color:#0066cc;font-size:13px">← 全ツール</a></div></div>
+<div class="container"><div class="card"><h2>結果は参考としてのみご使用ください。具体的な用途については、工具メーカーにご相談ください。</h2><label>©2026年用超硬工具</label><select id="mat" onchange="calc()"><option value="7.85">Steel</option><option value="8.0">Stainless</option></select><label>中空バー重量計算 :( OD ² − ID ²) 式</label><input id="i1" oninput="calc()" type="number" value="10"/><label>チューブ/ホローバーの重量は、次のように計算されます。単位長あたりの重量 = (π/4) × (OD ²-ID ²) × 密度。鋼の場合: 重量 (lbs/ft) = (OD ²-ID ²) × 2.672、寸法はインチ単位です。メートル法の場合: 重量 (kg/m) = (OD ²-ID ²) × 0.00617、寸法はmmです。3インチOD × 2インチID鋼管の重量は (9-4) × 2.672 = 13.36ポンド/フィートです。</label><input id="i2" oninput="calc()" type="number" value="3"/><div class="res" style="grid-template-columns:repeat(3,1fr)"><div class="res-item"><div class="lbl">kg/meter</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">kg/length</div><div class="val" id="r1">—</div></div></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">硬度変換器</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">ホーム</a>
-    <a href="/jp/tools/">全ツール</a>
-    <a href="/products/">製品</a>
-    <a href="/guides/">技術ガイド</a>
-    <a href="/about.html">会社概要</a>
-    <a href="/quote.html">見積もりを取得</a>
-    <a href="/privacy.html">プライバシー</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/jp/tools/" style="color:#0066cc">全ツール</a></p>
-  <p style="font-size:11px;margin-bottom:6px">結果は参考値です. 具体的な用途については工具メーカーにご相談ください.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">コーティングセレクター</a>
+<a href="/tools/">スケジュールパイプの重み: 標準対エクストラストロング対ダブルエクストラストロング</a>
+<a href="/products/">🇯🇵ジェイピー</a>
+<a href="/guides/">🇪🇸エスイー</a>
+<a href="/about.html">🇻🇳VI</a>
+<a href="/quote.html">グレード相互参照</a>
+<a href="/privacy.html">トルクコンバーター</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">一括見積もりを依頼する →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">スケジュールパイプの重み: 標準対エクストラストロング対ダブルエクストラストロング</a></p>
+<p style="font-size:11px;margin-bottom:6px">パイプスケジュールは、与えられた公称パイプサイズ (NPS) の壁厚を定義します。スケジュール40 (標準): 3インチNPSの壁は0.216インチ × 8.63ポンド/フィートです。スケジュール80 (XS): 3インチNPSの壁は0.300インチ × 11.68ポンド/フィートです。スケジュール160 (XXS): 3インチNPSの壁は0.438インチ × 17.22 lbs/ftです。公称寸法から計算するのではなく、標準パイプを使用するときはスケジュール表を使用します。</p>
+<p style="font-size:11px">チューブ重量の材料密度の違い</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Hollow Bar Weight Calculation: (OD² − ID²) Formula</h2><p>The weight of a tube/hollow bar is calculated as: Weight per unit length = (π/4) × (OD² − ID²) × Density. For steel: Weight (lbs/ft) = (OD² − ID²) × 2.672, where dimensions are in inches. For metric: Weight (kg/m) = (OD² − ID²) × 0.00617, where dimensions are in mm. A 3-inch OD × 2-inch ID steel tube weighs (9 − 4) × 2.672 = 13.36 lbs/ft.</p>
-<h2>Schedule Pipe Weights: Standard vs. Extra Strong vs. Double Extra Strong</h2><p>Pipe schedules define wall thickness for a given nominal pipe size (NPS). Schedule 40 (standard): 3-inch NPS has 0.216-inch wall × 8.63 lbs/ft. Schedule 80 (XS): 3-inch NPS has 0.300-inch wall × 11.68 lbs/ft. Schedule 160 (XXS): 3-inch NPS has 0.438-inch wall × 17.22 lbs/ft. Use the schedule table when working with standard pipe rather than calculating from nominal dimensions.</p>
-<h2>被削材 Density Differences in Tube Weight</h2><p>Carbon steel tube: 0.284 lbs/in³ (default factor). Stainless 304/316: 0.289 lbs/in³ (+1.8%). Aluminum 6061: 0.098 lbs/in³ (−65.5%). Brass: 0.307 lbs/in³ (+8.1%). When calculating tube weight for cost estimation, using the correct density factor is critical — a 50% error in density causes a 50% error in material cost. Always verify the material specification before calculating.</p>
-<h2>よくある質問</h2>
+<h2>炭素鋼管: 0.284 lbs/in ³ (デフォルトファクター)。ステンレス304/316: 0.289 lbs/in ³ (+ 1.8%)。アルミニウム6061: 0.098 lbs/in ³ (-65.5%)。真鍮: 0.307 lbs/in ³ (8.1%)。コスト推定のためにチューブ重量を計算する場合、正しい密度係数を使用することが重要です。密度の50% の誤差は、材料コストの50% の誤差を引き起こします。計算する前に、常に材料仕様を確認してください。</h2><p>よくある質問</p>
+<h2>チューブの壁厚公差をどのように考慮すればよいですか?ASTM仕様では、壁厚の ± 10% の変動が可能です。控えめな重量推定には、公称壁厚を使用します。最大重量 (出荷) のために、公称壁 + 10% を使用してください。最小重量 (構造設計) には、公称壁-10% を使用します。重要な注文で実際に測定された壁の厚さのミルテストレポートをリクエストします。</h2><p>チューブの重量は加工パラメータに影響しますか?はい。重いチューブは、回転中のチャタリングを防ぐためにより多くのサポートが必要です。経験則として、ODの1/8未満の壁厚のチューブは、振動を防ぐために、機械加工中に安定したレストまたはフィラー材料を必要とします。ライトゲージチューブ (壁 &lt;1/16インチ) は、半径方向のたわみのためにねじ切断に特に挑戦的です。</p>
+<h2>残りのチューブの長さを重量から計算するにはどうすればよいですか?チューブの重量を量り、アタッチメントまたはエンドキャップの重量を差し引き、特定のODと壁の厚さを1フィートあたりの重量で割ってください。5フィートの2インチスケジュール40鋼管の重量は約5 × 3.65 = 18.25ポンドです。残り12.4ポンドの場合: 12.4 / 3.65 = 残り3.4フィート。</h2><p>⚡カーバイド・ツーリング・ドットコムの高性能シリーズ用に算出済み。カタログを表示する →</p>
+<h2>🔧精密工学ツールボックス</h2>
 <p><strong>How do I account for tube wall thickness tolerance?</strong> ASTM specifications allow ±10% wall thickness variation. For conservative weight estimates, use nominal wall thickness. For maximum weight (shipping), use nominal wall + 10%. For minimum weight (structural design), use nominal wall − 10%. Request mill test reports for actual measured wall thickness on critical orders.</p>
-<p><strong>Does tube weight affect machining parameters?</strong> Yes. Heavy tubes require more support to prevent chatter during turning. As a rule of thumb, tubes with wall thickness below 1/8 of OD require steady rests or filler material during machining to prevent vibration. Light-gauge tubes (wall < 1/16 inch) are particularly challenging for thread cutting due to radial deflection.</p>
+<p><strong>Does tube weight affect machining parameters?</strong> Yes. Heavy tubes require more support to prevent chatter during turning. As a rule of thumb, tubes with wall thickness below 1/8 of OD require steady rests or filler material during machining to prevent vibration. Light-gauge tubes (wall &lt; 1/16 inch) are particularly challenging for thread cutting due to radial deflection.</p>
 <p><strong>How do I calculate remaining tube length from weight?</strong> Weigh the tube, subtract the weight of any attachments or end caps, and divide by the weight per foot for the specific OD and wall thickness. A 5-ft piece of 2-inch Schedule 40 steel pipe weighs approximately 5 × 3.65 = 18.25 lbs. If you have 12.4 lbs remaining: 12.4 / 3.65 = 3.4 feet remaining.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ 計算d for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">カタログを見る →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">旋削用インサート</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/tube-weight-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/tube-weight-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/tube-weight-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/tube-weight-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/tube-weight-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 精密加工ツールボックス</h3><div class="toolbox-links">
-<a href="/jp/tools/speed-feed/">切削速度 & 送り</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/jp/tools/mrr-calculator/">MRR 計算機</a>
-<a href="/jp/tools/feed-converter/">送り 換算</a>
-<a href="/jp/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/jp/tools/titanium-machining-guide/">Titanium ガイド</a>
-<a href="/jp/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/jp/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/jp/tools/torque-unit-converter/">Torque 換算</a>
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>ガイド</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">エンジニアリング利子計算機</a>
+<a href="/tools/hardness-converter/">馬力計算機</a>
+<a href="/tools/tap-drill-size-calculator/">真鍮の切削加工条件</a>
+<a href="/tools/mrr-calculator/">キー溝の深さ計算ツール</a>
+<a href="/tools/feed-converter/">送り速度オーバーライド計算機</a>
+<a href="/tools/surface-roughness-calculator/">面取り計算機</a>
+<a href="/tools/titanium-machining-guide/">NPTパイプねじ計算ツール</a>
+<a href="/tools/carbide-grade-cross-ref-2/">リンクドイン</a>
+<a href="/tools/cost-per-part-calculator/">アルミ合金製テーブル</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>プロ用工具が必要ですか？</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">大口見積もりを依頼 →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>について</h3>
+<p>📩見積もりを取得する</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">超硬ソリッドエンドミル</a><a href="/products/turning-inserts.html">旋削インサート</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Solid Carbide End Mills</a><a href="/products/turning-inserts.html">Turning Inserts</a></div>
 <section class="more-tools">
-  <h3>🔧 100以上のプロ用加工ツールを見る</h3>
-  <div class="tool-grid">
-<a href="/jp/tools/engineering-interest-calculator/">Engineering Interest 計算機</a>
-<a href="/jp/tools/horsepower-calculator/">Horsepower 計算機</a>
-<a href="/jp/tools/brass-machining-parameters/">Brass Machining Parameters</a>
-<a href="/jp/tools/keyway-depth-calculator/">Keyway 切込み深さ 計算機</a>
-<a href="/jp/tools/hardness-converter/">Hardness 換算</a>
-<a href="/jp/tools/feed-rate-override-calculator/">送り Rate Override 計算機</a>
-<a href="/jp/tools/chamfer-calculator/">Chamfer 計算機</a>
-<a href="/jp/tools/npt-pipe-thread-calculator/">NPT Pipe Thread 計算機</a>
-
-  </div>
+<h3>すべてのツール</h3>
+<div class="tool-grid">
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/horsepower-calculator/">Horsepower Calculator</a>
+<a href="/tools/brass-machining-parameters/">Brass Machining Parameters</a>
+<a href="/tools/keyway-depth-calculator/">Keyway Depth Calculator</a>
+<a href="/tools/hardness-converter/">馬力計算機</a>
+<a href="/tools/feed-rate-override-calculator/">送り Rate Override Calculator</a>
+<a href="/tools/chamfer-calculator/">Chamfer Calculator</a>
+<a href="/tools/npt-pipe-thread-calculator/">NPT Pipe Thread Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ エンジニアと共有</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/jp/tools/tube-weight-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/jp/tools/tube-weight-calculator/&text=Tube Weight 計算機" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Tube Weight 計算機&body=Check this out: https://carbide-tooling.com/jp/tools/tube-weight-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/tube-weight-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/tube-weight-calculator/&amp;text=Tube Weight Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Tube Weight Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/tube-weight-calculator/">Email</a>
 </div>
-
 </body></html>

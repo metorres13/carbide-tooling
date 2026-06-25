@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="vi"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Chamfer Máy tính | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Free online chamfer Máy tính for CNC machinists and quality inspecĐếnrs. Tính Đếnán chamfer geometry: Chiều rộng cắt vs. Chiều sâu cắt vs. angle, cnc chamfer programming with g01."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/chamfer-calculator/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Máy tính chamfer | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Máy tính vát trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính Toán Hình Học vát: chiều rộng so với chiều sâu so với góc, lập trình vát CNC với g01." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}
 nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}
@@ -36,337 +37,334 @@ footer a{color:#0066cc;text-decoration:none}
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Chamfer Máy tính | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programmi"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/chamfer-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Chamfer Máy tính | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính vát cạnh | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính vát trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính Toán Hình Học vát: chiều rộng so với chiều sâu so với góc, lập trình vát CNC" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/chamfer-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Chamfer Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Chamfer Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/chamfer-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/chamfer-calculator/",
-      "name": "Chamfer Máy tính",
-      "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Chamfer Calculator",
+ "url": "https://carbide-tooling.com/tools/chamfer-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Calculate chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/chamfer-calculator/",
+ "name": "Chamfer Calculator",
+ "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Calculate chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính vát cạnh | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính vát trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính Toán Hình Học vát: chiều rộng so với chiều sâu so với góc, lập trình vát CNC" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/chamfer-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Chamfer Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Chamfer Calculator",
+ "url": "https://carbide-tooling.com/tools/chamfer-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Calculate chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/chamfer-calculator/",
+ "name": "Chamfer Calculator",
+ "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Calculate chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Máy tính vát cạnh | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Máy tính vát trực tuyến miễn phí cho máy CNC và thanh tra chất lượng. Tính Toán Hình Học vát: chiều rộng so với chiều sâu so với góc, lập trình vát CNC" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/chamfer-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Chamfer Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Chamfer Calculator",
+ "url": "https://carbide-tooling.com/tools/chamfer-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Calculate chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/chamfer-calculator/",
+ "name": "Chamfer Calculator",
+ "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Calculate chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How accurate is this calculation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use this on a Mazak or Haas control?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the common mistake machinists make?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Chamfer Máy tính | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programmi"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/chamfer-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Chamfer Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Chamfer Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/chamfer-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/chamfer-calculator/",
-      "name": "Chamfer Máy tính",
-      "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Chamfer Máy tính | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programmi"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/chamfer-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Chamfer Máy tính | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Chamfer Máy tính",
-      "url": "https://carbide-tooling.com/vi/tools/chamfer-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/chamfer-calculator/",
-      "name": "Chamfer Máy tính",
-      "description": "Free online chamfer calculator for CNC machinists and quality inspectors. Tính toán chamfer geometry: width vs. depth vs. angle, cnc chamfer programming with g01.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How accurate is this calculation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this on a Mazak or Haas control?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the common mistake machinists make?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/chamfer-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/chamfer-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/chamfer-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/chamfer-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/chamfer-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/chamfer-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/chamfer-calculator"/>
-</head>
+
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/chamfer-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/chamfer-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/chamfer-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/chamfer-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/chamfer-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/chamfer-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/chamfer-calculator/" hreflang="en" rel="alternate"/></head>
 <body>
-<nav><div class="nav-inner"><div class="nav-left"><a href="/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">Sản phẩm</a><a href="/guides/">Hướng dẫn kỹ thuật</a><a href="/about.html">Về chúng tôi</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/chamfer-calculator/">EN</a><span class="sep">|</span><a href="/de/tools/chamfer-calculator/">DE</a><span class="sep">|</span><a href="/jp/tools/chamfer-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/chamfer-calculator/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/chamfer-calculator/">中</a></div></div></nav>
-
-<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc">Tools</a> <span style="color:#d2d2d6">›</span> Chamfer Máy tính</div>
-
-<section class="hero"><div class="container"><h1><span class="accent">Chamfer</span> Máy tính</h1><p>A 0.5 mm chamfer on a print sounds simple until you realize the inspector will measure it with an optical comparator. Getting the chamfer right requires understanding the geometry: for a 45° chamfer, width equals depth. For 30° or 60°, the ratio changes.</p></div></section>
-
-<div class="container"><div class="card"><h3>⚙️ Máy tính</h3><div class="row2"><div><label>Đầu vào Giá trị</label><input type="number" id="v1" value="10" oninput="go()"/></div><div><label>Parameter</label><input type="number" id="v2" value="20" oninput="go()"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Kết quả</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
-
+<nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="/products/">🇪🇸ES</a><a href="/guides/">🇻🇳VI</a><a href="/about.html">Trang chủ</a></div></div><a href="/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">Công cụ</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/chamfer-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/chamfer-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/chamfer-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/chamfer-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/chamfer-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav>
+<div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc">Đánh giá khả năng gia công</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc">Trình chuyển đổi đơn vị tối ưu</a> <span style="color:#d2d2d6">›</span> Chamfer Calculator</div>
+<section class="hero"><div class="container"><h1>Tham số</h1><p>Bạn cần dụng cụ chuyên nghiệp?</p></div></section>
+<div class="container"><div class="card"><h3>Nhận giá trực tiếp từ nhà máy, các mác carbide được thiết kế chuyên dụng và dịch vụ hỗ trợ kỹ thuật nhanh nhạy – tất cả chỉ từ một nguồn cung duy nhất.</h3><div class="row2"><div><label>🔧Khám phá 100 công cụ gia công cơ khí chuyên nghiệp</label><input id="v1" oninput="go()" type="number" value="10"/></div><div><label>Tất cả công cụ</label><input id="v2" oninput="go()" type="number" value="20"/></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px"><div class="out"><div class="lbl">Result</div><div class="val" id="r1">—</div></div><div class="out"><div class="lbl">Derived</div><div class="val" id="r2">—</div></div></div></div></div>
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</h3>
+<p>©Dụng cụ cắt gọt bằng cacbua năm 2026</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Độ sâu của lỗ vát mép</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Dao phay hợp kim cứng</a><a href="/products/turning-inserts.html">Mảnh cắt tiện</a></div>
-
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Công cụ tính toán kích cỡ ISO</a><a href="/products/turning-inserts.html">Hướng dẫn gia công nhựa</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/aluminum-alloy-table/">Aluminum Alloy Table</a><a href="/vi/tools/batch-cost-calculator/">Batch Cost Máy tính</a><a href="/vi/tools/machinability-rating/">Machinability Rating</a><a href="/vi/tools/ultimate-unit-converter/">Ultimate Đơn vị Bộ chuyển đổi</a><a href="/vi/tools/countersink-depth-calculator/">Countersink Chiều sâu cắt</a><a href="/vi/tools/iso-fit-calculator/">ISO Fit Máy tính</a><a href="/vi/tools/plastic-machining/">Plastic Machining Hướng dẫn</a><a href="/vi/tools/tool-steel-heat-treat/">Dụng cụ Steel Heat Treat</a>
-  </div>
+<h3>Hình Học vát: chiều rộng so với chiều sâu so với góc</h3>
+<div class="tool-grid">
+<a href="/tools/aluminum-alloy-table/">Dụng cụ xử lý nhiệt bằng thép</a><a href="/tools/batch-cost-calculator/">Nhận báo giá</a><a href="/tools/machinability-rating/">Quyền riêng tư</a><a href="/tools/ultimate-unit-converter/">trong</a><a href="/tools/countersink-depth-calculator/">Xem danh mục →</a><a href="/tools/iso-fit-calculator/">Tốc độ và Lượng ăn dao</a><a href="/tools/plastic-machining/">Bộ chuyển đổi độ cứng</a><a href="/tools/tool-steel-heat-treat/">Kích thước mũi khoan taro</a>
+</div>
 </section>
-
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Đánh giá khả năng gia công</a>
+<a href="/tools/">Một góc vát 0,5mm trên bản vẽ nghe có vẻ đơn giản, cho đến khi bạn nhận ra rằng nhân viên kiểm tra sẽ đo nó bằng máy soi quang học. Để tạo đúng góc vát, cần nắm vững các yếu tố hình học: với góc vát 45°, chiều rộng bằng chiều sâu. Đối với 30° hoặc 60°, tỷ lệ thay đổi. Máy tính này đơn giản hóa quá trình để bạn có thể tập trung vào việc chế tạo các bộ phận, không thực hiện trig thủ công trên sàn cửa hàng.</a>
+<a href="/products/">🇪🇸ES</a>
+<a href="/guides/">🇻🇳VI</a>
+<a href="/about.html">Trang chủ</a>
+<a href="/quote.html">Chi phí trên mỗi bộ phận</a>
+<a href="/privacy.html">Bộ biến mô</a>
 </div>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/chamfer-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/chamfer-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/chamfer-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/chamfer-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/chamfer-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/chamfer-calculator/" class="lang-link">中</a>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Công cụ tính toán tốc độ và lượng ăn dao</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Một góc vát 0,5mm trên bản vẽ nghe có vẻ đơn giản, cho đến khi bạn nhận ra rằng nhân viên kiểm tra sẽ đo nó bằng máy soi quang học. Để tạo đúng góc vát, cần nắm vững các yếu tố hình học: với góc vát 45°, chiều rộng bằng chiều sâu. Đối với 30° hoặc 60°, tỷ lệ thay đổi. Máy tính này đơn giản hóa quá trình để bạn có thể tập trung vào việc chế tạo các bộ phận, không thực hiện trig thủ công trên sàn cửa hàng.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Lập trình vát CNC với G01</p>
+<p style="font-size:11px">Cho dù bạn làm việc trên một VF-2 Haas, một mazak integrex, hoặc một MB-5000 Okuma, hiểu được tính toán này là điều cần thiết cho chất lượng nhất quán. Nhiều hệ thống cam tự động xử lý nó, nhưng biết làm thế nào để xác minh đầu ra ngăn ngừa lỗi lập trình tốn kém.</p>
 </div>
 </footer>
-
 <script>function go(){var a=parseFloat(document.getElementById('v1').value)||0,b=parseFloat(document.getElementById('v2').value)||0;document.getElementById('r1').textContent=(a*b).toFixed(3);document.getElementById('r2').textContent=(a+b).toFixed(3);}go();</script>
 <section class="seo-content"><div class="container">
-<h2>Chamfer Geometry: Chiều rộng cắt vs. Chiều sâu cắt vs. Angle</h2>
-<p>A 0.5 mm chamfer on a print sounds simple until you realize the inspector will measure it with an optical comparator. Getting the chamfer right requires understanding the geometry: for a 45° chamfer, width equals depth. For 30° or 60°, the ratio changes. This calculator simplifies the process so you can focus on making parts, not doing manual trig on the shop floor.</p>
-<h2>CNC Chamfer Programming with G01</h2>
-<p>Whether you work on a Haas VF-2, a Mazak Integrex, or an Okuma MB-5000, understanding this calculation is essential for consistent quality. Many CAM systems handle it automatically, but knowing how to verify the output prevents costly programming errors.</p>
-<h2>Chamfer vs. Break Edge — When Each Matters</h2>
-<p>The practical application varies by shop environment. For job shops running short runs, a quick reference is sufficient. For production shops with repeat orders, documenting these parameters in the setup sheet saves time on every rerun.</p>
+<h2>Chamfer vs. Break Edge-khi mỗi vấn đề</h2>
+<p>Ứng dụng thiết thực thay đổi tùy theo môi trường cửa hàng. Đối với các cửa hàng việc làm đang chạy rất ngắn, một tài liệu tham khảo nhanh là đủ. Đối với các cửa hàng sản xuất có đơn đặt hàng lặp lại, ghi lại các thông số này trong bảng thiết lập giúp tiết kiệm thời gian cho mỗi lần tái sử dụng.</p>
 <h2>Câu hỏi thường gặp</h2>
+<p>Tính toán này chính xác như thế nào? công thức chính xác trong giới hạn độ chính xác đầu vào của bạn. Luôn xác minh kích thước quan trọng với các công cụ đo được hiệu chỉnh.</p>
+<h2>Tôi có thể sử dụng sản phẩm này trên mazak hoặc Haas Control không? Môn Toán là phổ biến. Hệ thống cam sử dụng cùng một công thức bên trong-máy tính này là một kiểm tra chéo.</h2>
+<p>Máy móc lỗi thông thường là gì? quên tính đến bán kính dụng cụ hoặc Đường kính chốt đo. Luôn kiểm tra kỹ điểm tham chiếu mà bản in sử dụng.</p>
+<h2>⚡Được tính toán cho Dòng sản phẩm Hiệu suất Cao của Carbide-Tooling.com. Xem danh mục →</h2>
 <p><strong>How accurate is this calculation?</strong> The formula is exact within the limits of your input precision. Always verify critical dimensions with calibrated measurement tools.</p>
 <p><strong>Can I use this on a Mazak or Haas control?</strong> The math is universal. CAM systems use the same formulas internally — this calculator is a cross-check.</p>
 <p><strong>What is the common mistake machinists make?</strong> Forgetting to account for tool radius or gage pin diameter. Always double-check which reference point the print uses.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Máy tính tra kích thước mũi khoan taro</a></p>
 </div></section>
-<div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<div class="toolbox-widget"><h3>Về chúng tôi</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Máy tính kỹ thuật quan tâm</a>
+<a href="/tools/hardness-converter/">Tự động hóa so với thủ công</a>
+<a href="/tools/tap-drill-size-calculator/">Bù trừ bán kính mũi dao</a>
+<a href="/tools/mrr-calculator/">Công cụ tính độ dày thành ống</a>
+<a href="/tools/feed-converter/">LinkedIn</a>
+<a href="/tools/surface-roughness-calculator/">Thư điện tử</a>
+<a href="/tools/titanium-machining-guide/">Titanium Guide</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</h3>
+<p>©Dụng cụ cắt gọt bằng cacbua năm 2026</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Độ sâu của lỗ vát mép</a>
 
-
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
-</aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Dao phay hợp kim cứng</a><a href="/products/turning-inserts.html">Mảnh cắt tiện</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/end-mills.html">Công cụ tính toán kích cỡ ISO</a><a href="/products/turning-inserts.html">Hướng dẫn gia công nhựa</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao Máy tính</a>
-<a href="/vi/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size Máy tính</a>
-<a href="/vi/tools/batch-cost-calculator/">Batch Cost Máy tính</a>
-<a href="/vi/tools/engineering-interest-calculator/">Engineering Interest Máy tính</a>
-<a href="/vi/tools/automation-vs-manual-calculator/">Automation vs Manual</a>
-<a href="/vi/tools/nose-radius-compensation/">Nose Radius Compensation</a>
-<a href="/vi/tools/wall-thickness-calculator/">Wall Thickness Máy tính</a>
-
-  </div>
+<h3>Hình Học vát: chiều rộng so với chiều sâu so với góc</h3>
+<div class="tool-grid">
+<a href="/tools/speed-feed/">Tốc độ cắt &amp; Lượng chạy dao Calculator</a>
+<a href="/tools/coolant-lifecycle-cost/">Coolant Lifecycle Cost</a>
+<a href="/tools/tap-drill-size-calculator/">Tap Drill Size Calculator</a>
+<a href="/tools/batch-cost-calculator/">Nhận báo giá</a>
+<a href="/tools/engineering-interest-calculator/">Engineering Interest Calculator</a>
+<a href="/tools/automation-vs-manual-calculator/">Automation vs Manual</a>
+<a href="/tools/nose-radius-compensation/">Nose Radius Compensation</a>
+<a href="/tools/wall-thickness-calculator/">Wall Thickness Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/chamfer-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/chamfer-calculator/&text=Chamfer Máy tính" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Chamfer Máy tính&body=Check this out: https://carbide-tooling.com/vi/tools/chamfer-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/chamfer-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/chamfer-calculator/&amp;text=Chamfer Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Chamfer Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/chamfer-calculator/">Email</a>
 </div>
-
 </body></html>

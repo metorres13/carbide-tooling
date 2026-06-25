@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Gun Drill Rechner | Präzisions-Zerspanungswerkzeug | Carbide-Tooling.com</title>
-<meta name="description" content="Free gun drill Schnittgeschwindigkeit and Vorschub Rechner for deep hole drilling. Berechnen U/min, Vorschub rate, and coolant pressure for single-flute and BTA gun drilling."/>
-<link rel="canonical" href="https://carbide-tooling.com/de/tools/gun-drill-calculator/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Gun Drill Calculator | Präzisions bearbeitungs werkzeug | Carbide-Tooling.com</title>
+<meta content="Kostenloser Pistolen bohr geschwindigkeit-und Vorschub rechner für Tiefloch bohrungen. Berechnen Sie die Drehzahl, die Vorschub geschwindigkeit und den Kühlmittel druck für das Bohren von Einzel flöten-und BTA-Kanonen." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.6}.container{max-width:900px;margin:0 auto;padding:0 24px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:44px;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.nav-left{display:flex;align-items:center;gap:32px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;height:44px;display:flex;align-items:center;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:60px 0 40px}.hero h1{font-size:36px;font-weight:800;letter-spacing:-1px}.hero h1 .accent{color:#0066cc}.hero p{font-size:16px;color:#86868b;max-width:600px;margin:0 auto 24px}.btn{display:inline-flex;background:#0066cc;color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none}.card{background:#f5f5f7;border-radius:20px;padding:24px 28px;margin-bottom:16px}.card h2{font-size:18px;font-weight:700;margin-bottom:4px}.card .sub{font-size:13px;color:#86868b;margin-bottom:16px}.card-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}.field label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase}.field select,.field input{width:100%;padding:8px 12px;border:1px solid #e8e8ed;border-radius:10px;font-size:13px;font-weight:500;font-family:inherit;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:#0066cc}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.result-item{background:#fff;border-radius:14px;padding:16px;text-align:center;border:1px solid #e8e8ed}.result-item .label{font-size:10px;font-weight:600;text-transform:uppercase;color:#86868b;margin-bottom:4px}.result-item .value{font-size:18px;font-weight:700;color:#0066cc}.result-item .unit{font-size:11px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:32px 0;margin-top:40px;text-align:center;font-size:12px;color:#86868b}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.result-grid{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -11,260 +12,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Gun Drill Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free gun drill Schnittgeschwindigkeit and Vorschub Rechner for deep hole drilling. Berechnen U/min, Vorschub rate, and coolant pressure for single-flute and BTA gun drilling."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/gun-drill-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gun Drill Rechner | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gun Drill Calculator | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Pistolen bohr geschwindigkeit-und Vorschub rechner für Tiefloch bohrungen. Berechnen Sie die Drehzahl, die Vorschub geschwindigkeit und den Kühlmittel druck für das Bohren von Einzel flöten-und BTA-Kanonen." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/gun-drill-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Gun Drill Calculator | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Gun Drill Rechner",
-      "url": "https://carbide-tooling.com/de/tools/gun-drill-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free gun drill speed and feed calculator for deep hole drilling. Berechnen U/min, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/gun-drill-calculator/",
-      "name": "Gun Drill Rechner",
-      "description": "Free gun drill speed and feed calculator for deep hole drilling. Berechnen U/min, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What materials can be gun drilled?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Gun drilling is suitable for most machinable materials: carbon steel, alloy steel, stainless steel, cast iron, aluminum, titanium, and nickel alloys. Materials with high abrasiveness (hard-facing alloys) or extreme brittleness (ceramics) are not suitable for conventional gun drilling."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I choose between gun drilling and BTA drilling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Gun drilling is preferred for diameters under 1.0 inch and depths under 100 inches. BTA (Boring and Trepanning Association) drilling is more efficient for larger diameters above 1.0 inch. BTA also provides faster material removal rates at the cost of higher initial tooling investment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What causes gun drill walk (hole straightness deviation)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Primary causes include: dull or chipped cutting edge, worn guide pads, misaligned bushing, inconsistent coolant flow, and incorrect feed-to-speed ratio. Check bushing alignment first; it accounts for 60% of straightness issues.\n⚡ Berechnend for Carbide-Tooling.com High-Performance Series. Katalog anzeigen →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Gun Drill Calculator",
+ "url": "https://carbide-tooling.com/tools/gun-drill-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free gun drill speed and feed calculator for deep hole drilling. Calculate RPM, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/gun-drill-calculator/",
+ "name": "Gun Drill Calculator",
+ "description": "Free gun drill speed and feed calculator for deep hole drilling. Calculate RPM, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What materials can be gun drilled?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Gun drilling is suitable for most machinable materials: carbon steel, alloy steel, stainless steel, cast iron, aluminum, titanium, and nickel alloys. Materials with high abrasiveness (hard-facing alloys) or extreme brittleness (ceramics) are not suitable for conventional gun drilling."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I choose between gun drilling and BTA drilling?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Gun drilling is preferred for diameters under 1.0 inch and depths under 100 inches. BTA (Boring and Trepanning Association) drilling is more efficient for larger diameters above 1.0 inch. BTA also provides faster material removal rates at the cost of higher initial tooling investment."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What causes gun drill walk (hole straightness deviation)?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Primary causes include: dull or chipped cutting edge, worn guide pads, misaligned bushing, inconsistent coolant flow, and incorrect feed-to-speed ratio. Check bushing alignment first; it accounts for 60% of straightness issues.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gun Drill Calculator | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Pistolen bohr geschwindigkeit-und Vorschub rechner für Tiefloch bohrungen. Berechnen Sie die Drehzahl, die Vorschub geschwindigkeit und den Kühlmittel druck für das Bohren von Einzel flöten-und BTA-Kanonen." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/gun-drill-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Gun Drill Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Gun Drill Calculator",
+ "url": "https://carbide-tooling.com/tools/gun-drill-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free gun drill speed and feed calculator for deep hole drilling. Calculate RPM, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/gun-drill-calculator/",
+ "name": "Gun Drill Calculator",
+ "description": "Free gun drill speed and feed calculator for deep hole drilling. Calculate RPM, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Gun Drill Calculator | Präzisions bearbeitungs werkzeug" property="og:title"/>
+<meta content="Kostenloser Pistolen bohr geschwindigkeit-und Vorschub rechner für Tiefloch bohrungen. Berechnen Sie die Drehzahl, die Vorschub geschwindigkeit und den Kühlmittel druck für das Bohren von Einzel flöten-und BTA-Kanonen." property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/gun-drill-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Gun Drill Calculator | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Gun Drill Calculator",
+ "url": "https://carbide-tooling.com/tools/gun-drill-calculator/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Free gun drill speed and feed calculator for deep hole drilling. Calculate RPM, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/gun-drill-calculator/",
+ "name": "Gun Drill Calculator",
+ "description": "Free gun drill speed and feed calculator for deep hole drilling. Calculate RPM, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Gun Drill Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free gun drill Schnittgeschwindigkeit and Vorschub Rechner for deep hole drilling. Berechnen U/min, Vorschub rate, and coolant pressure for single-flute and BTA gun drilling."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/gun-drill-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gun Drill Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Gun Drill Rechner",
-      "url": "https://carbide-tooling.com/de/tools/gun-drill-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free gun drill speed and feed calculator for deep hole drilling. Berechnen U/min, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/gun-drill-calculator/",
-      "name": "Gun Drill Rechner",
-      "description": "Free gun drill speed and feed calculator for deep hole drilling. Berechnen U/min, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Gun Drill Rechner | Präzisions-Zerspanungswerkzeug"/>
-<meta property="og:description" content="Free gun drill Schnittgeschwindigkeit and Vorschub Rechner for deep hole drilling. Berechnen U/min, Vorschub rate, and coolant pressure for single-flute and BTA gun drilling."/>
-<meta property="og:url" content="https://carbide-tooling.com/de/tools/gun-drill-calculator/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gun Drill Rechner | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Gun Drill Rechner",
-      "url": "https://carbide-tooling.com/de/tools/gun-drill-calculator/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Free gun drill speed and feed calculator for deep hole drilling. Berechnen U/min, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/de/tools/gun-drill-calculator/",
-      "name": "Gun Drill Rechner",
-      "description": "Free gun drill speed and feed calculator for deep hole drilling. Berechnen U/min, feed rate, and coolant pressure for single-flute and BTA gun drilling.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/gun-drill-calculator/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/gun-drill-calculator/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/gun-drill-calculator/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/gun-drill-calculator/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/gun-drill-calculator/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/gun-drill-calculator/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/gun-drill-calculator"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Produkte</a><a href="https://carbide-tooling.com/guides/">Leitfäden</a><a href="https://carbide-tooling.com/about.html">Über uns</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Angebot anfordern</a><div class="lang-nav"><a href="/de/tools/gun-drill-calculator/">EN</a><span class="sep">|</span><a href="#" class="active" onclick="return false">DE</a><span class="sep">|</span><a href="/jp/tools/gun-drill-calculator/">JP</a><span class="sep">|</span><a href="/es/tools/gun-drill-calculator/">ES</a><span class="sep">|</span><a href="/vi/tools/gun-drill-calculator/">VI</a><span class="sep">|</span><a href="/zh/tools/gun-drill-calculator/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Startseite</a> <span style="color:#d2d2d6">›</span> <a href="/de/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Gun Drill Rechner</div>
-<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">🕳️ Deep Hole Werkzeug</div><h1>Gun Drill <span class="accent">Rechner</span></h1><p>Deep hole drilling requires low U/min, high coolant pressure, and controlled feed rates. Berechnen parameters for single-flute gun drilling and BTA systems.</p><a class="btn" href="#calculator">Berechnen ↓</a></div></section>
-<section id="calculator" class="container" style="padding-bottom:40px"><div class="card"><h2>🕳️ Gun Drilling Parameters</h2><p class="sub">For deep holes (L/D > 5), reduce feed by 20% for every additional 10×D depth.</p><div class="card-row"><div class="field"><label>📐 Drill Durchmesser (mm)</label><input type="number" id="dia" value="10" min="1" max="50" step="0.5" oninput="calc()"/></div><div class="field"><label>📏 Hole Schnitttiefe (mm)</label><input type="number" id="depth" value="200" min="10" max="2000" step="10" oninput="calc()"/></div><div class="field"><label>🔩 Werkstoff</label><select id="mat" onchange="calc()"><option value="steel">Steel (160 m/min)</option><option value="ss">Stainless (100 m/min)</option><option value="al">Aluminum (300 m/min)</option></select></div></div><div class="result-grid"><div class="result-item"><div class="label">U/min</div><div class="value" id="r-rpm">—</div><div class="unit">U/min</div></div><div class="result-item"><div class="label">Vorschub Rate</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div><div class="result-item"><div class="label">Coolant Pressure</div><div class="value" id="r-cool">—</div><div class="unit">bar</div></div><div class="result-item"><div class="label">Cycle Time</div><div class="value" id="r-time">—</div><div class="unit">minutes</div></div></div></div><div style="text-align:center;margin:16px 0"><a href="/de/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">← Alle Werkzeuge</a></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/de/tools/gun-drill-calculator/" rel="canonical"/><link href="https://carbide-tooling.com/tools/gun-drill-calculator/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/gun-drill-calculator/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/gun-drill-calculator/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/gun-drill-calculator/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/gun-drill-calculator/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/gun-drill-calculator/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇯🇵JP</a><a href="https://carbide-tooling.com/guides/">🇪🇸ES</a><a href="https://carbide-tooling.com/about.html">🇻🇳VI</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">Startseite</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/gun-drill-calculator/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/gun-drill-calculator/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/gun-drill-calculator/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/gun-drill-calculator/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/gun-drill-calculator/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Kraftrechner</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Peck bohren</a> <span style="color:#d2d2d6">›</span> Gun Drill Calculator</div>
+<section class="hero"><div class="container"><div class="badge" style="display:inline-flex;background:#f5f5f7;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;color:#86868b;margin-bottom:16px">🕳️ Deep Hole Tool</div><h1>📏Loch tiefe (mm)</h1><p>🔩Material</p><a class="btn" href="#calculator">Tisch aus Aluminiumlegierung</a></div></section>
+<section class="container" id="calculator" style="padding-bottom:40px"><div class="card"><h2>🔧Entdecken Sie 100 professionelle Zerspanungswerkzeuge</h2><p class="sub">Alle Werkzeuge</p><div class="card-row"><div class="field"><label>Die Ergebnisse dienen ausschließlich als Referenz. Wenden Sie sich bei spezifischen Anwendungen an die Hersteller der Werkzeuge.</label><input id="dia" max="50" min="1" oninput="calc()" step="0.5" type="number" value="10"/></div><div class="field"><label>©2026 Hartmetallwerkzeuge</label><input id="depth" max="2000" min="10" oninput="calc()" step="10" type="number" value="200"/></div><div class="field"><label>Pistolen bohr parameter für Tiefloch anwendungen</label><select id="mat" onchange="calc()"><option value="steel">Steel (160 SFM)</option><option value="ss">Stainless (100 SFM)</option><option value="al">Aluminum (300 SFM)</option></select></div></div><div class="result-grid"><div class="result-item"><div class="label">RPM</div><div class="value" id="r-rpm">—</div><div class="unit">RPM</div></div><div class="result-item"><div class="label">Vorschub Rate</div><div class="value" id="r-feed">—</div><div class="unit">mm/min</div></div><div class="result-item"><div class="label">Coolant Pressure</div><div class="value" id="r-cool">—</div><div class="unit">bar</div></div><div class="result-item"><div class="label">Cycle Time</div><div class="value" id="r-time">—</div><div class="unit">minutes</div></div></div></div><div style="text-align:center;margin:16px 0"><a href="/tools/" style="color:#0066cc;text-decoration:none;font-size:13px">Druckumrechner</a></div></section>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a><a href="/de/tools/nose-radius-compensation/">Nose Radius Compensation</a><a href="/de/tools/force-calculator/">Force Rechner</a><a href="/de/tools/peck-drilling-calculator/">Peck Drilling</a><a href="/de/tools/aluminum-alloy-table/">Aluminum Alloy Table</a><a href="/de/tools/pressure-converter/">Pressure Umrechner</a><a href="/de/tools/superalloy-tool-life/">Superalloy Werkzeug Life</a><a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub Rechner</a>
-  </div>
+<h3>Das Pistolen bohren erzeugt hochwertige Löcher mit einem Verhältnis von Tiefe zu Durchmesser von mehr als 100:1. Typische Parameter für Stahl: Schnitt geschwindigkeit 80-150 SFM, Vorschub geschwindigkeit 0,0002-0,0006 in/rev, mit Kühlmittel druck von 800-1. 500 PSI. Die Einlippen-Bohr geometrie erfordert eine präzise Ausrichtung-Spindel-zu-Buchse-Konzen trizität innerhalb von 0,001 Zoll TIR ist für die Geradheit der Löcher unerlässlich.</h3>
+<div class="tool-grid">
+<a href="/tools/hardness-converter/">Standzeit von Superlegierungswerkzeugen</a><a href="/tools/nose-radius-compensation/">Geschwindigkeits- und Vorschubrechner</a><a href="/tools/force-calculator/">Erhalten Sie ein Angebot</a><a href="/tools/peck-drilling-calculator/">Datenschutz</a><a href="/tools/aluminum-alloy-table/">in</a><a href="/tools/pressure-converter/">Katalog ansehen →</a><a href="/tools/superalloy-tool-life/">Geschwindigkeit &amp; Vorschub</a><a href="/tools/speed-feed/">Bohrergröße für Gewindebohrungen</a>
+</div>
 </section>
-<script>function calc(){const d=parseFloat(document.getElementById('dia').value)||10;const dep=parseFloat(document.getElementById('depth').value)||200;const mat=document.getElementById('mat').value;const sfms={steel:160,ss:100,al:300};const sfm=sfms[mat];const rpm=d>0?(sfm*12*25.4)/(Math.PI*d):1000;const baseFeed=d*0.003*rpm;const ld=dep/d;const feedRed=Math.max(0.3,1-(ld-5)*0.02);const feed=baseFeed*feedRed;const coolant={steel:80,ss:100,al:50}[mat];const time=feed>0?dep/feed:0;document.getElementById('r-rpm').textContent=Math.round(rpm);document.getElementById('r-feed').textContent=Math.round(feed);document.getElementById('r-cool').textContent=coolant;document.getElementById('r-time').textContent=time.toFixed(1);}calc();</script>
+<script>function calc(){const d=parseFloat(document.getElementById('dia').value)||10;const dep=parseFloat(document.getElementById('depth').value)||200;const mat=document.getElementById('mat').value;const sfms={steel:160,ss:100,al:300};const sfm=sfms[mat];const rpm=d>0?(sfm*12*25.4)/(Math.PI*d):1000;const baseVorschub=d*0.003*rpm;const ld=dep/d;const feedRed=Math.max(0.3,1-(ld-5)*0.02);const feed=baseVorschub*feedRed;const coolant={steel:80,ss:100,al:50}[mat];const time=feed>0?dep/feed:0;document.getElementById('r-rpm').textContent=Math.round(rpm);document.getElementById('r-feed').textContent=Math.round(feed);document.getElementById('r-cool').textContent=coolant;document.getElementById('r-time').textContent=time.toFixed(1);}calc();</script>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Startseite</a>
-    <a href="/de/tools/">Alle Werkzeuge</a>
-    <a href="/products/">Produkte</a>
-    <a href="/guides/">Leitfäden</a>
-    <a href="/about.html">Über uns</a>
-    <a href="/quote.html">Angebot anfordern</a>
-    <a href="/privacy.html">Datenschutz</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/de/tools/" style="color:#0066cc">Alle Werkzeuge</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Ergebnisse dienen nur zur Referenz. Konsultieren Sie Werkzeughersteller für spezifische Anwendungen.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Kraftrechner</a>
+<a href="/tools/">Kühlmittel druck und Durchfluss anforderungen</a>
+<a href="/products/">🇯🇵JP</a>
+<a href="/guides/">🇪🇸ES</a>
+<a href="/about.html">🇻🇳VI</a>
+<a href="/quote.html">Kosten pro Teil</a>
+<a href="/privacy.html">Drehmomentwandler</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Massenanfrage stellen →</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">Kühlmittel druck und Durchfluss anforderungen</a></p>
+<p style="font-size:11px;margin-bottom:6px">Hochdruck kühlmittel ist für das Pistolen bohren von entscheidender Bedeutung und bietet Span-Evakuierung, Werkzeug kühlung und Schmierung in der Schneid zone. Für Durchmesser unter 0,250 Zoll sind mindestens 1.000 PSI bei 2-5 GPM erforderlich. Größere Durchmesser (0.500-1.000 Zoll) benötigen 500-800 PSI bei 5-15 GPM. Ein unzureichender Kühlmittel druck ist die häufigste Ursache für einen Ausfall des Pistolen bohrers aufgrund der Chip verpackung.</p>
+<p style="font-size:11px">Fehler behebung bei gängigen Waffen bohr fehlern</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Gun Drilling Parameters for Deep Hole Applications</h2><p>Gun drilling produces high-quality holes with depth-to-diameter ratios exceeding 100:1. Typical parameters for steel: cutting speed 80–150 m/min, feed rate 0.0002–0.0006 in/rev, with coolant pressure of 800–1,500 PSI. The single-lip gun drill geometry requires precise alignment — spindle-to-bushing concentricity within 0.001 inches TIR is essential for hole straightness.</p>
-<h2>Coolant Pressure and Flow Requirements</h2><p>High-pressure coolant is critical for gun drilling, providing chip evacuation, tool cooling, and lubrication at the cutting zone. For diameters under 0.250 inches, minimum 1,000 PSI at 2–5 GPM is required. Larger diameters (0.500–1.000 inches) need 500–800 PSI at 5–15 GPM. Insufficient coolant pressure is the leading cause of gun drill failure due to chip packing.</p>
-<h2>Troubleshooting Common Gun Drilling Defects</h2><p>Common quality issues include spiral marks (check bushing alignment), bell-mouth entrance (reduce feed at entry), and drill breakage (increase coolant pressure or reduce peck increment). Exit burns can be minimized by reducing feed rate during the last 0.100 inches of breakthrough. Regular inspection of the carbide tip — looking for micro-chipping — helps prevent catastrophic failure.</p>
-<h2>Häufig gestellte Fragen</h2>
+<h2>Häufige Qualitäts probleme sind Spiral markierungen (Kontroll buchsen ausrichtung), Glocken mund eingang (Reduzierung der Zuführung beim Eintritt) und Bohr bruch (Erhöhung des Kühlmittel drucks oder Verringerung des Peck-Inkrements). Exit-Verbrennungen können minimiert werden, indem die Vorschub rate während des letzten Durchbruchs von 0,100 Zoll verringert wird. Regelmäßige Inspektion der Hartmetall spitze-Suche nach Mikros chips-hilft, ein katastrophales Versagen zu verhindern.</h2><p>Häufig gestellte Fragen</p>
+<h2>Welche Materialien können mit einer Pistole gebohrt werden? Das Pistolen bohren eignet sich für die meisten bearbeitbaren Materialien: Kohlenstoffs tahl, legierter Stahl, Edelstahl, Gusseisen, Aluminium, Titan und Nickel legierungen. Materialien mit hoher Abrasivität (hart versetzte Legierungen) oder extremer Sprödigkeit (Keramik) eignen sich nicht für das herkömmliche Pistolen bohren.</h2><p>Wie wähle ich zwischen Waffen bohrungen und BTA-Bohrungen? Das Pistolen bohren wird für Durchmesser unter 1,0 Zoll und Tiefen unter 100 Zoll bevorzugt. Das Bohren von BTA (Boring and Trep anning Association) ist bei größeren Durchmessern über 1,0 Zoll effizienter. BTA bietet auch schnellere Materialen tfernungs raten auf Kosten höherer anfänglicher Werkzeug investitionen.</p>
+<h2>Was verursacht einen Pistolen bohr gang (Abweichung der Loch geradheit)? Hauptursachen sind: stumpfe oder abgebrochene Schneide, abgenutzte Führungs pads, falsch ausgerichtete Buchse, inkonsistenter Kühlmittel fluss und falsches Vorschub-Geschwindigkeit-Verhältnis. Überprüfen Sie zuerst die Ausrichtung der Buchse. Es macht 60% der Geradheit probleme aus.</h2><p>⚡Berechnet für die Hochleistungsserie von Carbide-Tooling.com. Katalog anzeigen →</p>
+<h2>🔧Werkzeugkasten der Präzisionstechnik</h2>
 <p><strong>What materials can be gun drilled?</strong> Gun drilling is suitable for most machinable materials: carbon steel, alloy steel, stainless steel, cast iron, aluminum, titanium, and nickel alloys. Materials with high abrasiveness (hard-facing alloys) or extreme brittleness (ceramics) are not suitable for conventional gun drilling.</p>
 <p><strong>How do I choose between gun drilling and BTA drilling?</strong> Gun drilling is preferred for diameters under 1.0 inch and depths under 100 inches. BTA (Boring and Trepanning Association) drilling is more efficient for larger diameters above 1.0 inch. BTA also provides faster material removal rates at the cost of higher initial tooling investment.</p>
 <p><strong>What causes gun drill walk (hole straightness deviation)?</strong> Primary causes include: dull or chipped cutting edge, worn guide pads, misaligned bushing, inconsistent coolant flow, and incorrect feed-to-speed ratio. Check bushing alignment first; it accounts for 60% of straightness issues.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Berechnend for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Katalog anzeigen →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Fadenfräser und Gewindebohrer</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/de/tools/gun-drill-calculator/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/gun-drill-calculator/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/gun-drill-calculator/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/gun-drill-calculator/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/gun-drill-calculator/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/gun-drill-calculator/" class="lang-link">中</a>
-</div>
 </footer>
-<div class="toolbox-widget"><h3>🔧 Präzisionswerkzeugkasten</h3><div class="toolbox-links">
-<a href="/de/tools/speed-feed/">Schnittgeschwindigkeit & Vorschub</a>
-<a href="/de/tools/hardness-converter/">Hardness Umrechner</a>
-<a href="/de/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/de/tools/mrr-calculator/">MRR Rechner</a>
-<a href="/de/tools/feed-converter/">Vorschub Umrechner</a>
-<a href="/de/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/de/tools/titanium-machining-guide/">Titanium Leitfaden</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/de/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/de/tools/torque-unit-converter/">Torque Umrechner</a>
+<div class="toolbox-widget"><h3>Führer</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Stufenfräsrechner</a>
+<a href="/tools/hardness-converter/">Standzeit von Superlegierungswerkzeugen</a>
+<a href="/tools/tap-drill-size-calculator/">Faden-Führungs winkel-Rechner</a>
+<a href="/tools/mrr-calculator/">Hartmetall-Sorten-Querverweis</a>
+<a href="/tools/feed-converter/">Gewindegangrechner</a>
+<a href="/tools/surface-roughness-calculator/">Gewindebohrer-Bohrlochrechner</a>
+<a href="/tools/titanium-machining-guide/">LinkedIn</a>
+<a href="/tools/carbide-grade-cross-ref-2/">E-Mail</a>
+<a href="/tools/cost-per-part-calculator/">Cost Per Part</a>
+<a href="/tools/torque-unit-converter/">Torque Converter</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Professionelle Werkzeuge benötigt?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Mengenangebot anfordern →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Über</h3>
+<p>📩Erhalten Sie ein Angebot</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Hartmetallbohrer</a><a href="/products/threading-tools.html">Gewindefräser & -bohrer</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/drills.html">Carbide Drills</a><a href="/products/threading-tools.html">Thread Mills &amp; Taps</a></div>
 <section class="more-tools">
-  <h3>🔧 100+ professionelle Zerspanungswerkzeuge entdecken</h3>
-  <div class="tool-grid">
-<a href="/de/tools/step-milling-calculator/">Step Milling Rechner</a>
-<a href="/de/tools/aluminum-alloy-table/">Aluminum Alloy Table</a>
-<a href="/de/tools/production-efficiency-calculator/">Production Efficiency Rechner</a>
-<a href="/de/tools/thread-lead-angle-calculator/">Thread Lead Angle Rechner</a>
-<a href="/de/tools/pressure-converter/">Pressure Umrechner</a>
-<a href="/de/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Reference</a>
-<a href="/de/tools/threading-pass-calculator/">Threading Pass Rechner</a>
-<a href="/de/tools/form-tap-drill-calculator/">Form Tap Drill Rechner</a>
-
-  </div>
+<h3>Das Pistolen bohren erzeugt hochwertige Löcher mit einem Verhältnis von Tiefe zu Durchmesser von mehr als 100:1. Typische Parameter für Stahl: Schnitt geschwindigkeit 80-150 SFM, Vorschub geschwindigkeit 0,0002-0,0006 in/rev, mit Kühlmittel druck von 800-1. 500 PSI. Die Einlippen-Bohr geometrie erfordert eine präzise Ausrichtung-Spindel-zu-Buchse-Konzen trizität innerhalb von 0,001 Zoll TIR ist für die Geradheit der Löcher unerlässlich.</h3>
+<div class="tool-grid">
+<a href="/tools/step-milling-calculator/">Step Milling Calculator</a>
+<a href="/tools/aluminum-alloy-table/">in</a>
+<a href="/tools/production-efficiency-calculator/">Production Efficiency Calculator</a>
+<a href="/tools/thread-lead-angle-calculator/">Thread Lead Angle Calculator</a>
+<a href="/tools/pressure-converter/">Katalog ansehen →</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Carbide Grade Cross Reference</a>
+<a href="/tools/threading-pass-calculator/">Threading Pass Calculator</a>
+<a href="/tools/form-tap-drill-calculator/">Form Tap Drill Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Mit Ingenieuren teilen</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/de/tools/gun-drill-calculator/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/de/tools/gun-drill-calculator/&text=Gun Drill Rechner" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Gun Drill Rechner&body=Check this out: https://carbide-tooling.com/de/tools/gun-drill-calculator/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/gun-drill-calculator/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/gun-drill-calculator/&amp;text=Gun Drill Calculator" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Gun Drill Calculator&amp;body=Check this out: https://carbide-tooling.com/tools/gun-drill-calculator/">Email</a>
 </div>
-
 </body></html>

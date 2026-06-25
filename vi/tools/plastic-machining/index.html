@@ -1,8 +1,9 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Plastic Machining | Công cụ gia công chính xác | Carbide-Tooling.com</title>
-<meta name="description" content="Machining parameters for plastic Vật liệus: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting Tốc độ cắts and Lượng chạy daos for plastics on CNC machines."/>
-<link rel="canonical" href="https://carbide-tooling.com/vi/tools/plastic-machining/"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Gia công nhựa | công cụ gia công chính xác | Carbide-Tooling.com</title>
+<meta content="Các thông số gia công cho vật liệu nhựa: Delrin (POM), nylon (pa6), Acrylic (PMMA), PTFE, uhmwpe, PVC. Tốc độ cắt và nguồn cấp dữ liệu cho nhựa trên máy CNC." name="description"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&amp;display=swap" rel="stylesheet"/>
 <style>body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}.container{max-width:800px;margin:0 auto;padding:0 20px}nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.06);height:44px;display:flex;align-items:center}.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1060px;margin:0 auto;padding:0 24px;font-size:12px}.logo{font-size:14px;font-weight:700;text-decoration:none;color:#1d1d1f;display:flex;align-items:center;gap:6px}.logo span{font-weight:800;color:#0066cc}.nav-links>a{color:#1d1d1f;text-decoration:none;padding:0 18px;font-weight:500;font-size:12px}.nav-links>a:hover{color:#0066cc}.hero{text-align:center;padding:32px 0 24px}.hero .badge{display:inline-block;background:#f5f5f7;padding:3px 12px;border-radius:16px;font-size:10px;font-weight:600;color:#86868b;margin-bottom:8px}.hero h1{font-size:28px;font-weight:800;letter-spacing:-.6px}.hero .accent{color:#0066cc}.hero p{font-size:13px;color:#86868b;max-width:500px;margin:6px auto 0}.card{border:1px solid #e8e8ed;border-radius:14px;padding:18px 20px;margin:16px 0}.card h2{font-size:15px;font-weight:700;margin-bottom:10px}.card label{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:3px}.card select,.card input{width:100%;padding:7px 10px;border:1px solid #e8e8ed;border-radius:8px;font-size:13px;font-family:inherit;outline:none;margin-bottom:8px}.card select:focus,.card input:focus{border-color:#0066cc}.res{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.res-item{background:#f5f5f7;border-radius:10px;padding:12px;text-align:center}.res-item .lbl{font-size:10px;font-weight:600;color:#86868b}.res-item .val{font-size:18px;font-weight:700;color:#0066cc}.res-item .unit{font-size:10px;color:#86868b}footer{background:#f5f5f7;border-top:1px solid #e8e8ed;padding:24px 0;text-align:center;font-size:11px;color:#86868b;margin-top:40px}footer a{color:#0066cc;text-decoration:none}@media(max-width:768px){.res{grid-template-columns:1fr 1fr}}.lang-switcher{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;margin:8px 0;border-top:1px solid #e8e8ed;font-size:11px}.lang-switcher .lang-label{font-size:13px;margin-right:4px}.lang-switcher .lang-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid #e8e8ed;color:#86868b;text-decoration:none;font-size:10px;font-weight:600;transition:all .15s}.lang-switcher .lang-link:hover{background:#0066cc;color:#fff;border-color:#0066cc}.lang-switcher .lang-link.active{background:#0066cc;color:#fff;border-color:#0066cc}
 
 /* Language Switcher - Apple Style */
@@ -12,260 +13,263 @@
 .lang-nav a.active{color:#0066cc;font-weight:600}
 .lang-nav .sep{color:#d2d2d6;font-size:10px;margin:0 1px}
 
+
+/* Language Switcher - Dropdown with Flags */
+.lang-btn{display:inline-flex;align-items:center;gap:4px;background:none;border:1px solid #e8e8ed;border-radius:8px;padding:3px 8px;cursor:pointer;font-size:13px;line-height:1;transition:all .15s;margin-left:8px}
+.lang-btn:hover{background:#f5f5f7;border-color:#d2d2d6}
+.lang-btn .arrow{font-size:8px;color:#86868b;margin-left:2px}
+.lang-dropdown{position:relative;display:inline-flex;align-items:center}
+.lang-menu{display:none;position:absolute;top:100%;right:0;margin-top:4px;background:#fff;border:1px solid #e8e8ed;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:4px;z-index:200;min-width:100px}
+.lang-menu.show{display:block}
+.lang-menu a{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;color:#1d1d1f;transition:background .1s;white-space:nowrap}
+.lang-menu a:hover{background:#f5f5f7}
+.lang-menu a.active{color:#0066cc;font-weight:600;background:#f0f7ff}
+.lang-menu a .flag{font-size:16px}
 </style>
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Plastic Machining Hướng dẫn | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/plastic-machining/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Plastic Machining Hướng dẫn | Precision Machining Tool"/>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Hướng dẫn gia công nhựa | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Các thông số gia công cho vật liệu nhựa: Delrin (POM), nylon (pa6), Acrylic (PMMA), PTFE, uhmwpe, PVC. Tốc độ cắt và nguồn cấp dữ liệu cho nhựa trên CNC" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/plastic-machining/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Plastic Machining Guide | Precision Machining Tool" name="twitter:title"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Plastic Machining Guide",
-      "url": "https://carbide-tooling.com/vi/tools/plastic-machining/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/plastic-machining/",
-      "name": "Plastic Machining Guide",
-      "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do plastics require coolant during machining?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Generally, yes for production work. Coolant prevents heat buildup that causes melting, dimensional expansion, and poor surface finish. For prototype or short runs, air blast can suffice for materials like Delrin. Nylon and acrylic benefit significantly from flood coolant to prevent heat-related issues."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best tool coating for plastic machining?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Uncoated polished carbide is generally preferred for plastic machining. The polished surface reduces friction and prevents material adhesion. DLC (Diamond-Like Carbon) coatings further reduce friction but add cost. Avoid TiAlN coatings for plastics — they increase friction and generate more heat."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I prevent white lines or stress marks in machined acrylic?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "White lines occur from micro-cracking caused by tool exit stresses. Use sharp, polished tools with zero or slightly negative rake. Reduce feed rate on the final pass by 50%. Annealing the acrylic after machining at 80°C for 2 hours can relieve internal stresses and reduce visible stress marks.\n⚡ Tínhd for Carbide-Tooling.com High-Performance Series. Xem danh mục →"
-          }
-        }
-      ]
-    }
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Plastic Machining Guide",
+ "url": "https://carbide-tooling.com/tools/plastic-machining/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/plastic-machining/",
+ "name": "Plastic Machining Guide",
+ "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ },
+ {
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Do plastics require coolant during machining?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Generally, yes for production work. Coolant prevents heat buildup that causes melting, dimensional expansion, and poor surface finish. For prototype or short runs, air blast can suffice for materials like Delrin. Nylon and acrylic benefit significantly from flood coolant to prevent heat-related issues."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the best tool coating for plastic machining?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Uncoated polished carbide is generally preferred for plastic machining. The polished surface reduces friction and prevents material adhesion. DLC (Diamond-Like Carbon) coatings further reduce friction but add cost. Avoid TiAlN coatings for plastics — they increase friction and generate more heat."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I prevent white lines or stress marks in machined acrylic?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "White lines occur from micro-cracking caused by tool exit stresses. Use sharp, polished tools with zero or slightly negative rake. Reduce feed rate on the final pass by 50%. Annealing the acrylic after machining at 80°C for 2 hours can relieve internal stresses and reduce visible stress marks.\n⚡ Calculated for Carbide-Tooling.com High-Performance Series. View Catalog →"
+ }
+ }
+ ]
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Hướng dẫn gia công nhựa | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Các thông số gia công cho vật liệu nhựa: Delrin (POM), nylon (pa6), Acrylic (PMMA), PTFE, uhmwpe, PVC. Tốc độ cắt và nguồn cấp dữ liệu cho nhựa trên CNC" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/plastic-machining/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Plastic Machining Guide | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Plastic Machining Guide",
+ "url": "https://carbide-tooling.com/tools/plastic-machining/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/plastic-machining/",
+ "name": "Plastic Machining Guide",
+ "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
+}
+</script>
+<link href="/css/tool-style.css" rel="stylesheet"/>
+<meta content="#0066cc" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="Hướng dẫn gia công nhựa | dụng cụ gia công chính xác" property="og:title"/>
+<meta content="Các thông số gia công cho vật liệu nhựa: Delrin (POM), nylon (pa6), Acrylic (PMMA), PTFE, uhmwpe, PVC. Tốc độ cắt và nguồn cấp dữ liệu cho nhựa trên CNC" property="og:description"/>
+<meta content="https://carbide-tooling.com/tools/plastic-machining/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="vi_VN" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Plastic Machining Guide | Precision Machining Tool" name="twitter:title"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "SoftwareApplication",
+ "name": "Plastic Machining Guide",
+ "url": "https://carbide-tooling.com/tools/plastic-machining/",
+ "applicationCategory": "EngineeringApplication",
+ "operatingSystem": "Web",
+ "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ }
+ },
+ {
+ "@type": "WebPage",
+ "url": "https://carbide-tooling.com/tools/plastic-machining/",
+ "name": "Plastic Machining Guide",
+ "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
+ "isPartOf": {
+ "@type": "WebSite",
+ "url": "https://carbide-tooling.com/"
+ }
+ }
+ ]
 }
 </script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Plastic Machining Hướng dẫn | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/plastic-machining/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Plastic Machining Hướng dẫn | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Plastic Machining Guide",
-      "url": "https://carbide-tooling.com/vi/tools/plastic-machining/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/plastic-machining/",
-      "name": "Plastic Machining Guide",
-      "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
 
-<link rel="stylesheet" href="/css/tool-style.css"/>
-<meta name="theme-color" content="#0066cc"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066cc'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-weight='800' fill='%23fff'%3E◆%3C/text%3E%3C/svg%3E"/>
-<meta property="og:title" content="Plastic Machining Hướng dẫn | Công cụ gia công chính xác"/>
-<meta property="og:description" content="Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC"/>
-<meta property="og:url" content="https://carbide-tooling.com/vi/tools/plastic-machining/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Plastic Machining Hướng dẫn | Precision Machining Tool"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Plastic Machining Guide",
-      "url": "https://carbide-tooling.com/vi/tools/plastic-machining/",
-      "applicationCategory": "EngineeringApplication",
-      "operatingSystem": "Web",
-      "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://carbide-tooling.com/vi/tools/plastic-machining/",
-      "name": "Plastic Machining Guide",
-      "description": "Machining parameters for plastic materials: Delrin (POM), Nylon (PA6), Acrylic (PMMA), PTFE, UHMWPE, PVC. Cutting speeds and feeds for plastics on CNC machines.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://carbide-tooling.com/"
-      }
-    }
-  ]
-}
-</script>
-  <link rel="alternate" hreflang="en" href="https://carbide-tooling.com/tools/plastic-machining/"/>
-  <link rel="alternate" hreflang="de" href="https://carbide-tooling.com/de/tools/plastic-machining/"/>
-  <link rel="alternate" hreflang="ja" href="https://carbide-tooling.com/jp/tools/plastic-machining/"/>
-  <link rel="alternate" hreflang="es" href="https://carbide-tooling.com/es/tools/plastic-machining/"/>
-  <link rel="alternate" hreflang="vi" href="https://carbide-tooling.com/vi/tools/plastic-machining/"/>
-  <link rel="alternate" hreflang="zh" href="https://carbide-tooling.com/zh/tools/plastic-machining/"/>
-  <link rel="alternate" hreflang="x-default" href="https://carbide-tooling.com/tools/plastic-machining"/>
-</head>
-<body><nav><div class="nav-inner"><div class="nav-left"><a href="https://carbide-tooling.com/" class="logo"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">Sản phẩm</a><a href="https://carbide-tooling.com/guides/">Hướng dẫn kỹ thuật</a><a href="https://carbide-tooling.com/about.html">Về chúng tôi</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">📩 Yêu cầu báo giá</a><div class="lang-nav"><a href="/vi/tools/plastic-machining/">EN</a><span class="sep">|</span><a href="/de/tools/plastic-machining/">DE</a><span class="sep">|</span><a href="/jp/tools/plastic-machining/">JP</a><span class="sep">|</span><a href="/es/tools/plastic-machining/">ES</a><span class="sep">|</span><a href="#" class="active" onclick="return false">VI</a><span class="sep">|</span><a href="/zh/tools/plastic-machining/">中</a></div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Trang chủ</a> <span style="color:#d2d2d6">›</span> <a href="/vi/tools/" style="color:#0066cc;text-decoration:none">Tools</a> <span style="color:#d2d2d6">›</span> Plastic Machining</div>
-<section class="hero"><div class="container"><div class="badge">🧰 Dụng cụ</div><h1>Plastic <span class="accent">Machining Máy tính</span></h1><p>Plastics are soft but thermally sensitive — sharp tools and low chip loads prevent melting.</p></div></section>
 
+
+ 
+<link href="https://carbide-tooling.com/vi/tools/plastic-machining/" rel="canonical"/><link href="https://carbide-tooling.com/tools/plastic-machining/" hreflang="x-default" rel="alternate"/><link href="https://carbide-tooling.com/de/tools/plastic-machining/" hreflang="de" rel="alternate"/><link href="https://carbide-tooling.com/jp/tools/plastic-machining/" hreflang="ja" rel="alternate"/><link href="https://carbide-tooling.com/es/tools/plastic-machining/" hreflang="es" rel="alternate"/><link href="https://carbide-tooling.com/vi/tools/plastic-machining/" hreflang="vi" rel="alternate"/><link href="https://carbide-tooling.com/tools/plastic-machining/" hreflang="en" rel="alternate"/></head>
+<body><nav><div class="nav-inner"><div class="nav-left"><a class="logo" href="https://carbide-tooling.com/"><span>◆</span> Carbide Tooling</a><div class="nav-links"><a href="https://carbide-tooling.com/products/">🇩🇪Đức</a><a href="https://carbide-tooling.com/guides/">🇯🇵JP</a><a href="https://carbide-tooling.com/about.html">🇪🇸ES</a></div></div><a href="https://carbide-tooling.com/quote.html" style="display:inline-flex;background:#0066cc;color:#fff;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none">🇻🇳VI</a>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLang(event)"><span id="cf">🇬🇧</span><span class="arrow">▼</span></button>
+<div class="lang-menu" id="lang-menu">
+<a class="active" href="/tools/plastic-machining/"><span class="flag">🇬🇧</span> EN</a>
+<a href="/de/tools/plastic-machining/"><span class="flag">🇩🇪</span> DE</a>
+<a href="/jp/tools/plastic-machining/"><span class="flag">🇯🇵</span> JP</a>
+<a href="/es/tools/plastic-machining/"><span class="flag">🇪🇸</span> ES</a>
+<a href="/vi/tools/plastic-machining/"><span class="flag">🇻🇳</span> VI</a>
+</div>
+</div></div></nav><div style="font-size:12px;color:#86868b;padding:12px 24px;max-width:900px;margin:0 auto"><a href="/" style="color:#0066cc;text-decoration:none">Bộ chuyển đổi cực/chính xác</a> <span style="color:#d2d2d6">›</span> <a href="/tools/" style="color:#0066cc;text-decoration:none">Hiệu quả sản xuất</a> <span style="color:#d2d2d6">›</span> Plastic Machining</div>
+<section class="hero"><div class="container"><div class="badge">🧰 Tool</div><h1>Loại nhựa</h1><p>Hoạt động</p></div></section>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/pomodoro-timer/">Pomodoro Timer</a><a href="/vi/tools/inventory-turnover-calculator/">Inventory Turnover</a><a href="/vi/tools/surface-speed/">Surface Tốc độ cắt (m/phút)</a><a href="/vi/tools/polar-rect-converter/">Polar/Rect Bộ chuyển đổi</a><a href="/vi/tools/production-efficiency-calculator/">Production Efficiency</a><a href="/vi/tools/tangent-point-calculator/">Tangent Point</a><a href="/vi/tools/gun-drill-calculator/">Gun Drill Máy tính</a><a href="/vi/tools/cnc-roi-calculator/">CNC ROI Máy tính</a>
-  </div>
+<h3>Vật liệu dụng cụ</h3>
+<div class="tool-grid">
+<a href="/tools/pomodoro-timer/">Điểm tiếp xúc</a><a href="/tools/inventory-turnover-calculator/">Máy tính khoan súng</a><a href="/tools/surface-speed/">Công cụ tính ROI cho CNC</a><a href="/tools/polar-rect-converter/">← Tất cả công cụ</a><a href="/tools/production-efficiency-calculator/">Nhận báo giá</a><a href="/tools/tangent-point-calculator/">Quyền riêng tư</a><a href="/tools/gun-drill-calculator/">trong</a><a href="/tools/cnc-roi-calculator/">Xem danh mục →</a>
+</div>
 </section>
-<div class="container"><div class="card"><h2>⚙️ Máy tính</h2><label>Plastic Type</label><select id="grade" onchange="calc()"><option value="POM">POM / Delrin / Acetal</option><option value="PA6">Nylon 6 / PA6</option><option value="PMMA">Acrylic / PMMA</option><option value="PTFE">PTFE / Teflon</option><option value="UHMW">UHMWPE</option></select><label>Nguyên công</label><select id="op" onchange="calc()"><option value="turning">Turning</option><option value="milling">Milling</option></select><input type="number" id="i1" value="10" oninput="calc()"/><label>Dụng cụ Vật liệu</label><select id="tool" onchange="calc()"><option value="carbide">Carbide</option><option value="hss">HSS (polished)</option></select><input type="number" id="i2" value="100" oninput="calc()"/><div class="res"><div class="res-item"><div class="lbl">m/phút</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">fz (mm)</div><div class="val" id="r3">—</div></div><div class="res-item"><div class="lbl">Tip</div><div class="val" id="r1">—</div></div></div></div>
-<div style="text-align:center;margin:24px 0"><a href="/vi/tools/" style="color:#0066cc;font-size:13px">← Tất cả công cụ</a></div></div>
+<div class="container"><div class="card"><h2>Tất cả công cụ</h2><label>Kết quả chỉ mang tính tham khảo. Hãy tham khảo ý kiến của các nhà sản xuất dụng cụ để biết thông tin về các ứng dụng cụ thể.</label><select id="grade" onchange="calc()"><option value="POM">POM / Delrin / Acetal</option><option value="PA6">Nylon 6 / PA6</option><option value="PMMA">Acrylic / PMMA</option><option value="PTFE">PTFE / Teflon</option><option value="UHMW">UHMWPE</option></select><label>©Dụng cụ cắt gọt bằng cacbua năm 2026</label><select id="op" onchange="calc()"><option value="turning">Turning</option><option value="milling">Milling</option></select><input id="i1" oninput="calc()" type="number" value="10"/><label>Gia công POM (Delrin): tốc độ, thức ăn và thực hành tốt nhất</label><select id="tool" onchange="calc()"><option value="carbide">Carbide</option><option value="hss">HSS (polished)</option></select><input id="i2" oninput="calc()" type="number" value="100"/><div class="res"><div class="res-item"><div class="lbl">SFM</div><div class="val" id="r2">—</div></div><div class="res-item"><div class="lbl">fz (mm)</div><div class="val" id="r3">—</div></div><div class="res-item"><div class="lbl">Tip</div><div class="val" id="r1">—</div></div></div></div>
+<div style="text-align:center;margin:24px 0"><a href="/tools/" style="color:#0066cc;font-size:13px">Tốc độ và Lượng ăn dao</a></div></div>
 <footer class="tool-footer">
 <div class="container">
-  <div class="footer-links">
-    <a href="/">Trang chủ</a>
-    <a href="/vi/tools/">Tất cả công cụ</a>
-    <a href="/products/">Sản phẩm</a>
-    <a href="/guides/">Hướng dẫn kỹ thuật</a>
-    <a href="/about.html">Về chúng tôi</a>
-    <a href="/quote.html">Yêu cầu báo giá</a>
-    <a href="/privacy.html">Quyền riêng tư</a>
-  </div>
-  <div class="footer-social">
-    <a href="https://www.linkedin.com/company/carbide-tooling" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-    <a href="https://twitter.com/carbidetooling" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
-    <a href="mailto:sales@carbide-tooling.com" aria-label="Email">✉</a>
-  </div>
-  <p style="margin-bottom:4px"><a href="/vi/tools/" style="color:#0066cc">Tất cả công cụ</a></p>
-  <p style="font-size:11px;margin-bottom:6px">Kết quả chỉ mang tính tham khảo. Tham khảo nhà sản xuất dụng cụ.</p>
-  <p style="font-size:11px">© 2026 Carbide Tooling</p>
+<div class="footer-links">
+<a href="/">Bộ chuyển đổi cực/chính xác</a>
+<a href="/tools/">POM (Acetal/Delrin) là một trong những loại nhựa được gia công nhiều nhất, tạo ra các vết cắt sạch với độ ổn định kích thước tuyệt vời. Sử dụng các công cụ cacbua ở tần số 500-1,000 sfm với tốc độ nạp 0.003-0.008 in/Rev để xoay. Dụng cụ sắc bén với cào dương (10-15 °) ngăn ngừa tan chảy và tạo ra bề mặt quang học rõ ràng. Đối với các bộ phận vách mỏng, giảm tốc độ để tránh sự tích tụ nhiệt gây ra sự giãn nở kích thước.</a>
+<a href="/products/">🇩🇪Đức</a>
+<a href="/guides/">🇯🇵JP</a>
+<a href="/about.html">🇪🇸ES</a>
+<a href="/quote.html">Hướng dẫn về Titan</a>
+<a href="/privacy.html">Phân loại tham chiếu</a>
 </div>
-
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/carbide-tooling" rel="noopener" target="_blank">Chi phí trên mỗi bộ phận</a>
+<a aria-label="X (Twitter)" href="https://twitter.com/carbidetooling" rel="noopener" target="_blank">𝕏</a>
+<a aria-label="Email" href="mailto:sales@carbide-tooling.com">✉</a>
+</div>
+<p style="margin-bottom:4px"><a href="/tools/" style="color:#0066cc">POM (Acetal/Delrin) là một trong những loại nhựa được gia công nhiều nhất, tạo ra các vết cắt sạch với độ ổn định kích thước tuyệt vời. Sử dụng các công cụ cacbua ở tần số 500-1,000 sfm với tốc độ nạp 0.003-0.008 in/Rev để xoay. Dụng cụ sắc bén với cào dương (10-15 °) ngăn ngừa tan chảy và tạo ra bề mặt quang học rõ ràng. Đối với các bộ phận vách mỏng, giảm tốc độ để tránh sự tích tụ nhiệt gây ra sự giãn nở kích thước.</a></p>
+<p style="font-size:11px;margin-bottom:6px">Gia công nylon: Quản lý Độ ẩm và nhiệt</p>
+<p style="font-size:11px">Nylon (pa6, PA66) hấp thụ độ ẩm từ không khí, ảnh hưởng đến sự ổn định kích thước trong quá trình gia công. Nên sấy trước ở 80 ° C trong 2-4 giờ cho các bộ phận chính xác. Sử dụng chất làm mát hoặc luồng không khí để quản lý nhiệt-nylon có độ dẫn nhiệt kém và tích tụ nhiệt có thể gây tan chảy cục bộ. Duy trì dụng cụ sắc bén và Máy Nghiền để giảm nhiệt độ ma sát.</p>
+</div>
 <section class="seo"><div class="container">
-<h2>Machining POM (Delrin): Speeds, Feeds, and Best Practices</h2><p>POM (acetal/Delrin) is one of the most machinable plastics, producing clean cuts with excellent dimensional stability. Use carbide tools at 500–1,000 m/phút with feed rates of 0.003–0.008 in/rev for turning. Sharp tooling with positive rake (10–15°) prevents melting and produces optically clear surfaces. For thin-walled parts, reduce speeds to prevent heat buildup that causes dimensional expansion.</p>
-<h2>Nylon Machining: Managing Moisture and Heat</h2><p>Nylon (PA6, PA66) absorbs moisture from the air, which affects dimensional stability during machining. Pre-drying at 80°C for 2–4 hours is recommended for precision parts. Use coolant or air blast to manage heat — nylon has poor thermal conductivity and heat buildup can cause localized melting. Maintain sharp tools and climb mill to reduce frictional heating.</p>
-<h2>Machining PTFE (Teflon): Deformation Prevention</h2><p>PTFE's low coefficient of friction and high thermal expansion makes it challenging to hold tight tolerances. Use extremely sharp tools with high rake angles (15–20°). Light cuts (0.010–0.030 inches depth) with high feed rates minimize heat generation. The material's softness means clamping pressure must be carefully controlled to prevent deformation during machining.</p>
-<h2>Câu hỏi thường gặp</h2>
+<h2>Gia công PTFE (Teflon): chống biến dạng</h2><p>Hệ số ma sát thấp và giãn nở nhiệt cao của PTFE khiến việc giữ dung sai chặt chẽ trở nên khó khăn. Sử dụng các công cụ cực kỳ sắc nét với góc cào cao (15-20 °). Cắt ánh sáng (độ sâu 0.010-0.030 inch) với tốc độ thức ăn cao giảm thiểu sinh nhiệt. Độ mềm của vật liệu có nghĩa là Áp lực kẹp phải được kiểm soát cẩn thận để tránh biến dạng trong quá trình gia công.</p>
+<h2>Câu hỏi thường gặp</h2><p>Nhựa có cần chất làm mát trong quá trình gia công không? nói chung, có cho công việc sản xuất. Chất làm mát ngăn ngừa sự tích tụ nhiệt gây ra sự nóng chảy, giãn nở kích thước và bề mặt kém. Đối với nguyên mẫu hoặc chạy ngắn, Vụ Nổ không khí có thể đủ cho các vật liệu như Delrin. Nylon và Acrylic được hưởng lợi đáng kể từ chất làm mát Lũ lụt để ngăn ngừa các vấn đề liên quan đến nhiệt.</p>
+<h2>Lớp phủ dụng cụ tốt nhất cho gia công nhựa là gì? cacbua đánh bóng không tráng thường được ưu tiên cho gia công nhựa. Bề mặt được đánh bóng làm giảm ma sát và ngăn ngừa sự bám dính của vật liệu. Lớp phủ DLC (Carbon giống kim cương) làm giảm thêm ma sát nhưng tăng thêm chi phí. Tránh lớp phủ ti AL N cho nhựa-Chúng làm tăng ma sát và tạo ra nhiều nhiệt hơn.</h2><p>Làm thế nào để ngăn chặn các đường trắng hoặc dấu căng thẳng trong Acrylic gia công? các đường trắng xảy ra do nứt nhỏ gây ra bởi ứng suất thoát dụng cụ. Sử dụng các công cụ sắc bén, được đánh bóng với cào không hoặc hơi âm. Giảm tỷ lệ thức ăn chăn nuôi vào năm 50% cuối cùng. Ủ Acrylic sau khi gia công ở 80 ° C trong 2 giờ có thể làm giảm căng thẳng bên trong và giảm các dấu hiệu căng thẳng có thể nhìn thấy.</p>
+<h2>⚡Được tính toán cho Dòng sản phẩm Hiệu suất Cao của Carbide-Tooling.com. Xem danh mục →</h2>
 <p><strong>Do plastics require coolant during machining?</strong> Generally, yes for production work. Coolant prevents heat buildup that causes melting, dimensional expansion, and poor surface finish. For prototype or short runs, air blast can suffice for materials like Delrin. Nylon and acrylic benefit significantly from flood coolant to prevent heat-related issues.</p>
 <p><strong>What is the best tool coating for plastic machining?</strong> Uncoated polished carbide is generally preferred for plastic machining. The polished surface reduces friction and prevents material adhesion. DLC (Diamond-Like Carbon) coatings further reduce friction but add cost. Avoid TiAlN coatings for plastics — they increase friction and generate more heat.</p>
 <p><strong>How do I prevent white lines or stress marks in machined acrylic?</strong> White lines occur from micro-cracking caused by tool exit stresses. Use sharp, polished tools with zero or slightly negative rake. Reduce feed rate on the final pass by 50%. Annealing the acrylic after machining at 80°C for 2 hours can relieve internal stresses and reduce visible stress marks.</p>
-<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Tínhd for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Xem danh mục →</a></p>
+<p style="text-align:center;font-size:12px;color:#86868b;margin:14px 0">⚡ Calculated for Carbide-Tooling.com High-Performance Series. <a href="/products/end-mills.html" style="color:#0066cc;font-weight:600">Yêu cầu báo giá số lượng lớn →</a></p>
 </div></section>
-
-<div class="lang-switcher">
-  <span class="lang-label">🌐</span>
-  <a href="https://carbide-tooling.com/vi/tools/plastic-machining/" class="lang-link active">EN</a>
-  <a href="https://carbide-tooling.com/de/tools/plastic-machining/" class="lang-link">DE</a>
-  <a href="https://carbide-tooling.com/jp/tools/plastic-machining/" class="lang-link">JP</a>
-  <a href="https://carbide-tooling.com/es/tools/plastic-machining/" class="lang-link">ES</a>
-  <a href="https://carbide-tooling.com/vi/tools/plastic-machining/" class="lang-link">VI</a>
-  <a href="https://carbide-tooling.com/zh/tools/plastic-machining/" class="lang-link">中</a>
-</div>
 </footer>
-<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>🔧 Hộp công cụ kỹ thuật chính xác</h3><div class="toolbox-links">
-<a href="/vi/tools/speed-feed/">Tốc độ cắt & Lượng chạy dao</a>
-<a href="/vi/tools/hardness-converter/">Hardness Bộ chuyển đổi</a>
-<a href="/vi/tools/tap-drill-size-calculator/">Tap Drill Size</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/feed-converter/">Lượng chạy dao Bộ chuyển đổi</a>
-<a href="/vi/tools/surface-roughness-calculator/">Surface Roughness</a>
-<a href="/vi/tools/titanium-machining-guide/">Titanium Hướng dẫn</a>
-<a href="/vi/tools/carbide-grade-cross-ref-2/">Grade Cross Ref</a>
-<a href="/vi/tools/cost-per-part-calculator/">Cost Per Part</a>
-<a href="/vi/tools/torque-unit-converter/">Torque Bộ chuyển đổi</a>
+<script>function calc(){document.getElementById('r1').textContent=parseFloat(document.getElementById('i1').value)*parseFloat(document.getElementById('i2').value);}calc();</script><div class="toolbox-widget"><h3>Sản phẩm</h3><div class="toolbox-links">
+<a href="/tools/speed-feed/">Hướng dẫn lựa chọn lớp học</a>
+<a href="/tools/hardness-converter/">Chèn yêu cầu tra cứu điểm</a>
+<a href="/tools/tap-drill-size-calculator/">Công cụ ước tính thuế vận chuyển</a>
+<a href="/tools/mrr-calculator/">Công cụ tính vòng quay hàng tồn kho</a>
+<a href="/tools/feed-converter/">Tài liệu tham khảo G-Code</a>
+<a href="/tools/surface-roughness-calculator/">Công cụ tính giảm dần</a>
+<a href="/tools/titanium-machining-guide/">Công cụ tính toán kích cỡ ISO</a>
+<a href="/tools/carbide-grade-cross-ref-2/">Công cụ tính toán nhiệt luyện thép dụng cụ</a>
+<a href="/tools/cost-per-part-calculator/">LinkedIn</a>
+<a href="/tools/torque-unit-converter/">Thư điện tử</a>
 </div></div>
-
 <aside class="b2b-card">
-  <div class="b2b-icon">📦</div>
-  <div class="b2b-body">
-    <h3>Cần dụng cụ chuyên nghiệp?</h3>
-    <p>Get factory-direct pricing, engineered carbide grades, and responsive technical support — all from one source.</p>
-  </div>
-  <a href="/quote.html" class="b2b-btn">Yêu cầu báo giá số lượng lớn →</a>
+<div class="b2b-icon">📦</div>
+<div class="b2b-body">
+<h3>Hướng dẫn</h3>
+<p>Về chúng tôi</p>
+</div>
+<a class="b2b-btn" href="/quote.html">Request Bulk Quote →</a>
 </aside>
-<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Hướng dẫn chọn cấp độ</a><a href="/guides/insert-grade-selection.html">Yêu cầu cấp độ mảnh cắt</a></div>
+<div class="product-links"><span>🔗 Recommended:</span><a href="/products/carbide-grades.html">Grade Selection Guide</a><a href="/guides/insert-grade-selection.html">Insert Grade Inquiry</a></div>
 <section class="more-tools">
-  <h3>🔧 Khám phá 100+ công cụ gia công chuyên nghiệp</h3>
-  <div class="tool-grid">
-<a href="/vi/tools/shipping-duty-estimator/">Shipping Duty Estimator</a>
-<a href="/vi/tools/inventory-turnover-calculator/">Inventory Turnover Máy tính</a>
-<a href="/vi/tools/gun-drill-calculator/">Gun Drill Máy tính</a>
-<a href="/vi/tools/gcode-reference/">G-Code Reference</a>
-<a href="/vi/tools/taper-calculator/">Taper Máy tính</a>
-<a href="/vi/tools/mrr-calculator/">MRR Máy tính</a>
-<a href="/vi/tools/iso-fit-calculator/">ISO Fit Máy tính</a>
-<a href="/vi/tools/tool-steel-heat-treat/">Dụng cụ Steel Heat Treat Máy tính</a>
-
-  </div>
+<h3>Vật liệu dụng cụ</h3>
+<div class="tool-grid">
+<a href="/tools/shipping-duty-estimator/">Shipping Duty Estimator</a>
+<a href="/tools/inventory-turnover-calculator/">Inventory Turnover Calculator</a>
+<a href="/tools/gun-drill-calculator/">trong</a>
+<a href="/tools/gcode-reference/">G-Code Reference</a>
+<a href="/tools/taper-calculator/">Taper Calculator</a>
+<a href="/tools/mrr-calculator/">Công cụ tính vòng quay hàng tồn kho</a>
+<a href="/tools/iso-fit-calculator/">ISO Fit Calculator</a>
+<a href="/tools/tool-steel-heat-treat/">Tool Steel Heat Treat Calculator</a>
+</div>
 </section>
 <div class="share-bar">
-  <span class="share-label">↗ Chia sẻ với kỹ sư</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carbide-tooling.com/vi/tools/plastic-machining/" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/vi/tools/plastic-machining/&text=Plastic Machining Guide" target="_blank" rel="noopener">𝕏</a>
-  <a href="mailto:subject=Plastic Machining Guide&body=Check this out: https://carbide-tooling.com/vi/tools/plastic-machining/">Email</a>
+<span class="share-label">↗ Share with Engineers</span>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://carbide-tooling.com/tools/plastic-machining/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://twitter.com/intent/tweet?url=https://carbide-tooling.com/tools/plastic-machining/&amp;text=Plastic Machining Guide" rel="noopener" target="_blank">𝕏</a>
+<a href="mailto:subject=Plastic Machining Guide&amp;body=Check this out: https://carbide-tooling.com/tools/plastic-machining/">Email</a>
 </div>
-
 </body></html>
